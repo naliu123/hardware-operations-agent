@@ -1,0 +1,78 @@
+{
+  "completed_at": "2026-09-19T22:01:02.686235+00:00",
+  "stopped_services": [
+    "elasticsearch",
+    "phoenix",
+    "embedding",
+    "hwopsd"
+  ],
+  "processes_checked": [
+    {
+      "pid": 77443,
+      "created": 1789853729.005997,
+      "name": "java"
+    },
+    {
+      "pid": 77490,
+      "created": 1789853735.503186,
+      "name": "java"
+    },
+    {
+      "pid": 77499,
+      "created": 1789853738.882941,
+      "name": "controller"
+    },
+    {
+      "pid": 77445,
+      "created": 1789853729.057027,
+      "name": "python3.12"
+    },
+    {
+      "pid": 77446,
+      "created": 1789853729.060106,
+      "name": "python3.12"
+    },
+    {
+      "pid": 77662,
+      "created": 1789853797.46312,
+      "name": "python3.12"
+    },
+    {
+      "pid": 81430,
+      "created": 1789854578.458036,
+      "name": "hwopsd"
+    }
+  ],
+  "remaining_owned_processes": [],
+  "ports": {
+    "19200": {
+      "accepting_connections": false
+    },
+    "19300": {
+      "accepting_connections": false
+    },
+    "16006": {
+      "accepting_connections": false
+    },
+    "18765": {
+      "accepting_connections": false
+    },
+    "18080": {
+      "accepting_connections": false
+    }
+  },
+  "temporary_key_deleted": true,
+  "rss_before_mib": 1946.0,
+  "retained": [
+    ".local/rag/elasticsearch-data",
+    ".local/rag/phoenix",
+    ".local/rag/hwops-state.json",
+    ".cache/rag/huggingface",
+    "reports/rag-cce-20260920"
+  ],
+  "export_credential_scan": {
+    "result": "passed",
+    "files_scanned": 48
+  },
+  "all_released": true
+}

@@ -1,0 +1,955 @@
+[
+  {
+    "id": "cce-manual-001",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "Standard隧道/VPC、Turbo云原生2.0、Pod从VPC分配且可与节点不同子网全部明确。补充ENI/Sub-ENI分配、预热分支和20至30秒均有实际召回支持。",
+    "answer_sha256": "164ad4c3a791a6a952446ad1e073619c0f629719dad07f80168e4b6d7184b393",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html#网络模型对比 sha256=3404daee75c0b8d3fb8a58cab1eb32d6bb862b99fab0ea2d6387bd57efd9a9d2",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html#容器网络模型对比 sha256=77adba08c7879aa5ef88a57fadcaa99bd247a7724a94caec2393d930b733063c",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0284.html#CCE Turbo集群Pod批量创建性能说明 sha256=0b7ac32089db224a32d959f8be1659d5eefab6688baeb7c265476650d09e2bb1",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0430.html#集群类型 sha256=6639767c4718ec2e36c1b2776efa81b318718455efd241dd2eec9fa4c7428a52",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html#步骤二：进行网络配置（第2部分） sha256=ca1bc2d35debd9f9c31fab30e1c48ece12644f6c6fe7bfc8d3adaddbffa8e1eb"
+    ]
+  },
+  {
+    "id": "cce-manual-002",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "原文及答案均明确无需维护节点部署、管理、安全性，按CPU和内存用量付费；表格补充与集群概述一致。",
+    "answer_sha256": "b1d534f3c06e70c1715e481992147d7cad67ba1bb5efaef97032d9bfd0d2283d",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0430.html#集群类型 sha256=6639767c4718ec2e36c1b2776efa81b318718455efd241dd2eec9fa4c7428a52",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0342.html#集群类型对比 sha256=9f1487b480b24e7fe57db9e65fb41e4592fb1569c78f327aa549fb8b4c923946"
+    ]
+  },
+  {
+    "id": "cce-manual-006",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "Node明确为运行容器应用的计算节点而非控制节点，列全Kubelet、Kube-proxy、Container Runtime；ECS/BMS补充由节点概述支持。",
+    "answer_sha256": "ef6b9ef12bc8970aeea87e835dd98950b128b475a8530b4b686ac5fa311d6bb1",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0180.html#简介 sha256=6a6a5662664aad254d790299118614484008faf1913c0fb77191dbafc1b6ee16",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html#节点预留资源策略说明 sha256=80151a5a306b89d3bb511855653a2a3f32a2e5b3722ad26df4ea7d7dac9388b0",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0180.html#节点paas用户/用户组说明 sha256=71b53558c413eb35dd8ed3a6f26e78ea0f328874012d3a5501a4725b05c40593",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0180.html#节点概述 sha256=6bee5c24e10f3a11e11ab37a35504e9574d5d00889be0bd448c2e004084537a3"
+    ]
+  },
+  {
+    "id": "cce-manual-009",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "区域规格新增/售罄下线与创建页面核对已明确；Pod上限关联可用ENI/Sub-ENI。最大实例数与网卡数取最小值、ECS/BMS网卡差异等均由本轮原文支持。",
+    "answer_sha256": "d6f1b1c843bbaa4996859de63084d5d40af6f955235039be0ee2e1481d377964",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html#节点最大Pod数量计算方式 sha256=c8505b932d7eadcd00d7d808fd5853303b66f1f4716187060d78ee081bb0412d",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html#节点网卡数量说明（仅CCE Turbo集群） sha256=f616aef2072d6ae6564959cd4546fc231a13bc892c1d3f09942d4d728c69cda3",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html#常见问题 sha256=022db6a766af95956675dcac127555eb342367d555daed25b5d2c50c40764c83",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0719.html#节点规格说明 sha256=179f93a87d09b2dfe66ab4f7909f4051a5da39f469b4d169151c8c05c974db7a",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html#节点最大实例数说明 sha256=55bcf85910ef6e138d456ff29452ca394a82cb2a7b27e43a478bfcef9110869f"
+    ]
+  },
+  {
+    "id": "cce-manual-012",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "按实际创建的B规格计费，0.1923×10=1.923USD；控制台默认A价格不改变计费。失败按实际数量计算的补充亦见原文。",
+    "answer_sha256": "2ec40ac0c85da0f7d3fe131613ce96863c6e5cf465c386c5ab263142514309cf",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0648.html#计费样例 sha256=772a8a729be4059d9949de51681fd7da5537f2db666502e8c275460ce4ed96ed",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0648.html#节点池多规格计费说明 sha256=6444628ae21afe6c4cbefff7e15961716920c97bbe2c6d39a12390938292eb6f",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0658.html#节点池扩缩容介绍 sha256=b408dfde287bebbe0a7e390e714137cf6546afd0ea5a2337bed34cdd6acc1e2b"
+    ]
+  },
+  {
+    "id": "cce-manual-013",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "从集群进入节点管理、节点池页签、右上角创建节点池，路径完整；三份实际召回均支持该路径。",
+    "answer_sha256": "942eb121afba3a6d844889cf1006e3b339778c0bd6d858c8a8c1547e3cf91f2c",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0012.html#操作步骤（第1部分） sha256=c185b2f472b90c12d41ccb4f7043872f9eca785c44f00ca3a051f197ac311f08",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0967.html#步骤一：创建节点池 sha256=ea2f1cbd9b591373515589b5745f78b964aece98c256f9f4512c5cf59b06532b",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0300.html#创建节点池和节点伸缩策略 sha256=18ac95fef98644ccd8a42eae32f16f6cd0fbbc611a17422e116034e8800a4d62",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0655.html#复制节点池 sha256=f477b0747c525b17010e7f39757703e8dcb6b865848205e5c5468a16e13391db",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0919.html#使用高性能节点 sha256=28dd2d75b7c6811be305dbe2223f290418416e7b50dcb68aff32c670a7596db6"
+    ]
+  },
+  {
+    "id": "cce-manual-016",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "按StatefulSet手册回答不自动删除关联卷和删除前缩容至0。末段另明确1.32版本支持设置PVC保留策略、允许同步删除，属于带版本及配置条件的原文补充；不是已经启用或必然删除的断言。",
+    "answer_sha256": "ceef7bef1da4755e1281d13794e328eb434c4fefd60736f1a840aff3697f22c7",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0048.html#约束与限制 sha256=4228666e8ec5158f769279d59b389a67238e2a81b05c4134e1e1dc60ab6c6858",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0616.html#工作原理 sha256=eb678423d102e27259de8cbd8052b833a2be5e64405bb6b6a3f8e9830aa314e2",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0048.html#创建有状态负载（StatefulSet） sha256=bbfa1662bd9b38027d8d32abfe6fde66910c9d7d96f3f9395077336372554d82",
+      "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0104.html#新增特性及特性增强 sha256=44a7ddb7d5e421de0809a63ef9e71bd8909067ccb22343e035c63f18c1f0b2a1"
+    ]
+  },
+  {
+    "id": "cce-manual-017",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "未就绪、手工删除Pod才会迁移均完整，未声称已执行。额外工作负载删除引文虽冗余，但明确其与故障迁移不同、仅针对无需继续使用的负载，未指示删除负载完成迁移。",
+    "answer_sha256": "5c1119f4e66d2c0d92763df1f77aacbb9b8aa19cf7a9237113588e2a63a98c12",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0048.html#约束与限制 sha256=4228666e8ec5158f769279d59b389a67238e2a81b05c4134e1e1dc60ab6c6858",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0007.html#删除工作负载/任务 sha256=35c98f928b7f77c5d892aa9267bb79dfa5f709c12b5aae768990129f52ddbfc7",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0787.html#容器故障迁移默认容忍周期 sha256=5c9e89f479e68d520448bb70e897773e6ba3fd850b2d98c266dcd0e5751ebad0",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0605.html#操作场景 sha256=7236f35f53e1629f08d414a62249b4b3543c49c6b807fceb0ecf6274e9ee8b0c",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0048.html#创建有状态负载（StatefulSet） sha256=bbfa1662bd9b38027d8d32abfe6fde66910c9d7d96f3f9395077336372554d82"
+    ]
+  },
+  {
+    "id": "cce-manual-019",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "批处理平台、机器学习/深度学习/生物信息学/基因组学/大数据、高性能调度/异构芯片/任务运行管理均完整。1000Pod/s等补充来自实际插件简介。",
+    "answer_sha256": "5f9a744ada713bf325ca0f5377f557ea3e129a96fb0ae10089e5015e4a88aa65",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0193.html#插件简介 sha256=06ac43085ef87014b0047f609c1d54ff7d50f1cb51a4510a9e45e29755633eb0",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0721.html#Volcano调度概述 sha256=23aa65a3f7dad934c2389a6be201efd43a596a00a105b85afe3ee44b8ba5e1f8",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_1092.html#Volcano Job sha256=c62d8d79f4fa786557dfc02c8f1768fdb06f5ab0b2d34cc7fc3cb3fda0ba72b2",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0975.html#任务调度 sha256=a6e09e5e7b092cc47e2ddb3e72408cb5b87339cfc74c5ecbe79a81244efda34d",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0702.html#Volcano调度 sha256=f7bf2eee6e76c3cd286e1b66580b1255fb1a3ee5d736c1f37e30a5508dc10b4a"
+    ]
+  },
+  {
+    "id": "cce-manual-022",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "驱动在节点、Toolkit通常在镜像、版本配套均明确。470.141.03及11.4标为示例；推荐优先与非推荐自行验证均有实际召回支持。",
+    "answer_sha256": "2f79d47fdd9d56009f0883715a13f1db7ee091e0b58e91c76dbfd2394cfbf75c",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0846.html#如何选择GPU节点驱动版本 sha256=b4eaa73adcb9368fe4d24612643186fc7e3cf6c1c64f1f11a5291d9e4b595f5a",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0846.html#CUDA Toolkit和驱动的版本兼容性列表 sha256=7cbd8f5ea2a47d8a4f0896fd59283697c68e5d585430bf5ce7a0e4e025072291",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0847.html#CCE推荐的GPU驱动版本列表 sha256=49f31105fe0668d0125fcc84f476aa0a56476e89bc8c7904f3da19ad427b4dd4",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0141.html#约束与限制 sha256=d14282db0a94981c9982bf23f73ae2b807899bc77a8a563b6a9c13dfe8ba58c5",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0846.html#选择GPU节点驱动版本 sha256=12cea251592228deac300f2adbe5479c7e0ed48ed8fea44c32cfc6a1868acf9f"
+    ]
+  },
+  {
+    "id": "cce-manual-024",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "无隧道封装与VPC路由配额、VXLAN与Open vSwitch均完整。2000/1000节点及长段补充来自实际模型对比/模型说明；隔离一行确实写VPC为否，未引用其他资料中的DataPlane V2规则。本题仅按冻结证据与实际上下文评分，未将其他文档差异新增为标签。",
+    "answer_sha256": "ebbe4327be733f56065c7e84c2a67cf47d821d9af0b73b47e77bb9fb28b3a1e3",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html#网络模型对比 sha256=3404daee75c0b8d3fb8a58cab1eb32d6bb862b99fab0ea2d6387bd57efd9a9d2",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0282.html#容器隧道网络模型 sha256=a681f0bdb281979836572b51b0049f9b1eef69aa3184dfd6ca4b372a2de2abb7",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0283.html#VPC网络模型 sha256=01e50484c6643377b00949c2917a6a8bcc61988000b249f997c8bafbfbee5de2",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0282.html#应用场景 sha256=61bdfd077eee6ae7646886f383b20033dc4d13169326f3131394c79bcaf2d137",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0283.html#应用场景 sha256=6bd0ed55cb8ecac21b68ed44ddcde1065687b581f772e1bfaebb35ab371575e7"
+    ]
+  },
+  {
+    "id": "cce-manual-025",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "直接绑定ENI/Sub-ENI、无隧道封装/NAT完整；BMS/ECS通信与网卡数量、VPC直通条件及2000/20000节点/10万Pod均由实际召回支持。",
+    "answer_sha256": "4aa0a6f27aeb5c2d084b0a8811365ee11ffd6ccbb47dabd83bf1b87028c347aa",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0284.html#云原生网络2.0模型 sha256=125a23201d6adf0c7cbfe64af13b841b3f56dbe1e5eaaa0402d3a9bcf1032027",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0284.html#优缺点 sha256=ddd301ece5dca1076e76ead8860dcbc6e92734d3b20df8c275cf0892812d9e7f",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html#网络模型对比 sha256=3404daee75c0b8d3fb8a58cab1eb32d6bb862b99fab0ea2d6387bd57efd9a9d2",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0284.html#适用场景 sha256=b80b53576e2e45112d56883dbd6c22bd61a8f5257557d16ab5af7472c87a5f0c",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html#容器网络模型对比 sha256=77adba08c7879aa5ef88a57fadcaa99bd247a7724a94caec2393d930b733063c"
+    ]
+  },
+  {
+    "id": "cce-manual-030",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "SCSI非默认VBD、不能已分区、仅ext4、不能系统/专属/共享盘全部在实际答案与引文内；另标明Flexvolume资料已弃用，没有把其旧VBD支持挪给当前静态导入。",
+    "answer_sha256": "73de5497f6ecbc6e4b1f644786b5c66e0c0c2b66a021059c8b489a700941ace8",
+    "evidence_checked": [
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html#前提条件 sha256=e671271b5c78eb20d240fbd07e92a8221ddee58dd3b73769388cabcbe3f064e1",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0310.html#使用说明 sha256=f9ea0fb45aca56713ba5d35d7b68be52e713cfdafa622993e6752ca82d3d8d91",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html#通过静态存储卷使用已有云硬盘 sha256=fcceca3dedab3fba24be8fab5000ab83a6f461c5dd9ec421fb128664ceb2287b",
+      "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html#约束与限制 sha256=7f1439567c83739e46bc5f4a527f26e6fa6044ea6543852d42b9125621924cd9"
+    ]
+  },
+  {
+    "id": "cce-manual-031",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "多实例/跨可用区限制、读写及缓存冲突、建议1实例完整。补充HPA的1.19.10分界有实际原文支持，旧Flexvolume单独明确标为已弃用。",
+    "answer_sha256": "ec7d656e40466b8f63a981eed29d816b8e9b2bc132055aa2dcf42e5df28ed0cd",
+    "evidence_checked": {
+      "reference": [
+        "a4e8d973bfaff01dfc1296db5f339fe62edfc4090cdba990b52c84179092fc3c"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html#约束与限制 sha256=7f1439567c83739e46bc5f4a527f26e6fa6044ea6543852d42b9125621924cd9",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0615.html#约束与限制 sha256=5f892f6f3d23d38bac8032ac13fa01fff011676a854aa809122a7b17cdae2d2b",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0310.html#使用说明 sha256=f9ea0fb45aca56713ba5d35d7b68be52e713cfdafa622993e6752ca82d3d8d91"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-032",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "调度层Pod数量或规格与资源层ECS计算资源的增减区分完整；五类工作负载伸缩策略及HPA/CA补充均与实际召回一致。",
+    "answer_sha256": "f12f5ed43a17b47f45dd2bade180dbcd2a8358f4f5eea50d5bf917a1bea8f79d",
+    "evidence_checked": {
+      "reference": [
+        "ed692e76b7a5e57421fd8f2be4390491b3049ee3e2a4a73ef3801ea9efbc2a78",
+        "f24ddb8a657f14668b0ab70fbc592727f855e4c726dcb6a89acb6a511f4117dd"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0279.html#CCE弹性伸缩 sha256=34913583e219edd06b7992fe8ff04ad10393cf3f8cbf4a093a5099d827374788",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0300.html#解决方案 sha256=753303d16221aca13274139b0ced55085ce8ab375a7a095b765e1cf03332e7ba",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0296.html#节点伸缩原理 sha256=971e608d67ae3612341b86bc69049b293401f0039abea2dbcd7ebea44299e151",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0209.html#创建节点弹性策略 sha256=da2922b98479f123b5af3aaefda4ae371d66a8cfe2f605dfcd309598964feaeb",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html#工作负载伸缩原理 sha256=34c73f1b275b68853bc071093e12505dcd5e1ba3aff80ea56d4c223d3ba386c4"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-033",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "周期检查度量、计算所需副本、修改Deployment等的replicas字段完整。公式、稳定窗口、容忍度、API及自定义指标流程均有实际原文支持；参数默认值为文档说明，没有宣称所有版本均能配置该参数。",
+    "answer_sha256": "b0a8fc63d2405ec50adda06dbf0d3a2f49a5d1ec222df99969b5323e0c9c8987",
+    "evidence_checked": {
+      "reference": [
+        "2f161f6b129229a043aaeede8211fe32a4115a266881ae1b64c955dd2b057893"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html#HPA工作原理 sha256=7559cad197affb01e502767ea3f3642c2cda899c536f31488c3fb6b0d8f58698",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0208.html#创建HPA策略 sha256=0dac5f3997172d6beba50265df959d6ee19aef35f864b195e19562cadfa8580c",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0944.html#工作原理 sha256=b89e9111a517cef33d0ebeecf5bca0432735440ebff877bef43ae089b02873d5",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0787.html#负载弹性伸缩控制器（horizontal-pod-autoscaler-controller）配置 sha256=5f0c5f041051398ab59dbf39bc85709ca325d51ec248cf87d017296f82b47324",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0300.html#创建HPA策略 sha256=819d6d13b36c49b628c5818767c5b542bd400e7848fb31876b64b43511b5fe84"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-034",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "Metrics API及按集群版本/需求选择均明确。补充插件采集周期、本地存储、注册API和低于1.2.11的要求均保留各自对象与条件。",
+    "answer_sha256": "9e82712efdc5ec1f83677741a7260501d597264b51445e1492c27a5835cfa404",
+    "evidence_checked": {
+      "reference": [
+        "c5ece9bdffc9fb681bf5f9d866df4cfda77cf33dd08910404f7862e380b9619f"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0208.html#前提条件 sha256=5292e76752f6c629247e810e585dcfb3cfda61e0177ff7dce94d9a3293cf5702",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0240.html#约束与限制 sha256=87372db8efd58053a63de2ca505d586b3948df42661ed5e4449ed291f69cb372",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0406.html#通过Metrics API提供基础资源指标 sha256=7b0b64f30cdacf19d5f98390c8c748bf9bd839fc9c1718739a00e6f1aa6b82ae",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0205.html#Kubernetes Metrics Server sha256=93306029cb1ea9198960392a53d3e29484cd059fdc1654b8f8b2e9cb3280051b",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html#HPA工作原理 sha256=7559cad197affb01e502767ea3f3642c2cda899c536f31488c3fb6b0d8f58698"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-035",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "三项必答点已表达且无多余gaps，但补充断言“HPA通过标准Metrics API对外提供指标”把指标消费者HPA说成提供者。实际原文是社区定义Metrics API、经聚合API提供，HPA定期查询；引文正确不能消除其前面的错误机制断言。",
+    "answer_sha256": "0e6fcad7f9ed88d9e2626148f4c65c2508b869893932dbb9f24781b5679481cc",
+    "evidence_checked": {
+      "reference": [
+        "0fc4101a956010f2701cd5067f61aa551ce0aa22b448fcdd186a0d019dc00efc",
+        "d0d470da08058b7567fff85cb38a815ca8b864e2f4ddb260fc45ec66e329ddd4"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0944.html#创建使用自定义指标的HPA策略 sha256=acd40a754cbfcbea05a2058e8007f4cb87a224510d21fbfcb38d12ac44972247",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0944.html#工作原理 sha256=b89e9111a517cef33d0ebeecf5bca0432735440ebff877bef43ae089b02873d5",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0406.html#使用自定义指标创建HPA策略 sha256=2b0e3011bcf747d0bdc81f4999ec822d1be5f0c8cbd9170bca7dd5f0fd43e502",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0208.html#前提条件 sha256=5292e76752f6c629247e810e585dcfb3cfda61e0177ff7dce94d9a3293cf5702",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html#HPA工作原理 sha256=7559cad197affb01e502767ea3f3642c2cda899c536f31488c3fb6b0d8f58698"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-036",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "Velero、YAML清单备份到OBS、EVS数据以云硬盘快照备份全部明确。仅支持EVS及相关收费、安装插件的补充均来自实际上下文。",
+    "answer_sha256": "f6aa2ffdb9191e7d7f154ec8a8b8ecbb92cdc89a9f19bbc114f19f1c76005cb3",
+    "evidence_checked": {
+      "reference": [
+        "620c215ae196d2a3af5a5b27fa00a2790dd9daddd0d88fbdf46d30bec5d0351c",
+        "7ac9b3e7be8f4f85a521364b55ab20f7f6373e98cb54c76f0d3dcb0dde826b10"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1159.html#工作原理 sha256=a0dea0d8cc947d6490510308392c9c7c71f0dc4081606ca99f4c7fe533ef246a",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1159.html#备份中心概述 sha256=09dee8ccfee5b83c1cd3d87c1a27189b1d95ee1c3f76a1353af8503872350ddb",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1159.html#约束与限制 sha256=c0c2ea09a11670c5b6f8121f8324b7d8002f59c1c456a8e751b06e686c52cbe2",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1159.html#计费说明 sha256=a8c0855ecf427cc443fcfc90eea3650429817e37bcf23aa77cec1ceef64ed3b5",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1162.html#使用说明 sha256=7a1b1871e4b0c8ef234d3bfcbca1f439158434024e0a38bf6541c7a93eb015ff"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-039",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "明确每周一凌晨3点；另一个固定间隔示例是原文摘录。本题按冻结资料解释，未声称掌握实际备份运行记录或时区。",
+    "answer_sha256": "a137ce3ddfc730337bde9a29ec11fcbc7875df6b730886623147009d4f008976",
+    "evidence_checked": {
+      "reference": [
+        "bf40c8d746caacebacae1188aa13207e106e27dc1dcc640b598a1dfc2d698fba"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html#创建备份计划时，自定义CRON表达式如何填写？ sha256=c2a680fbecb9fa825c58a0a365ffc001760e079e56b8680fd4260a190c89809d"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-040",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "四层及自下而上顺序与冻结证据和实际召回完全一致。",
+    "answer_sha256": "8670f41ca06c268765a292c1d598c52243d48c0891ff406917133fbfde636746",
+    "evidence_checked": {
+      "reference": [
+        "958120c9ed63a8d579f52b2f1a38d5a91afe7ee3e09ad48b6cdcbcbfbb92006a"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0110.html#云原生观测体系概述 sha256=f0ba18afeb46bedf4b5a67ddebe27ea2a58d6e559c02aab9438b60ace05ce9c1"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-041",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "明确从系统策略权限集改为Action粒度，并解释依赖调用接口对应一个Action。补充的一键优化来自同段原文。",
+    "answer_sha256": "25abc482ba9eb5b86f52e8d16b67ff15735bfb3c594c7703d30e25e08234e5bd",
+    "evidence_checked": {
+      "reference": [
+        "b3b158edcab5ca3411be22f26c3ee9fc2f624645b7fc28f7888a04c110919fc0"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0953.html#云原生观测委托权限说明 sha256=af59ef898389ee12e9c709f87f88b5b705f98d1f18008f1d63b7b64b22f4212c",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0953.html#优化后授予的权限 sha256=dedd9cfbd1d29b78281ffc945c7c7fcf3f0a6dc7446dd9dc4ed69950a8d7ed3e",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0953.html#优化前授予的权限 sha256=d3e401b2416415dcd6511d53176f3f3d13249769b964b623453939e523d46cd1"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-045",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "包含Security Administrator及当前区域云资源授权给CCE。对另一份材料的admin用户组要求分别注明来源，仅指出表述差异并建议核对，未把两者当作互斥权限或断言CCE Administrator可执行首次授权。",
+    "answer_sha256": "d8a5637dc42a7e8527a629290a6a661d9e5f79756ba621342c0974360e04e7e0",
+    "evidence_checked": {
+      "reference": [
+        "a62de74a9c26c915dc98ec31d5aead5db092ce9ee451b87413f80bad85edcdf9"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0877.html#前提条件 sha256=5c3c3885dd022928784644c1a6b574e6ec20d1572db88b26a9a2192d108f5fd5",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0952.html#云原生成本治理委托权限说明 sha256=2c8da381c05f6934e7a7363b670721e8ebda326bf006c4bf5bee730eaca5c9d7",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0877.html#约束与限制 sha256=e1337b1ce5adf7c756f018d04d9fdaef7b95e941eeed12184355c32e69e5c852"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-047",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "当前采样时刻取Request和Real Used中的最大值已明确，非相加、非固定取实际用量；两种大小关系示例和分钟级资源补充有原文依据。",
+    "answer_sha256": "e99670b7a2bfb106d3e098a22e32bd3c4dd84cea46570a8751fb60ec2e2ad5e7",
+    "evidence_checked": {
+      "reference": [
+        "9f180c1a6d46cc06439e3a62ae2d9b0f6e560de722e3af30b0a2d4a150f2ad69"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0876.html#工作负载成本计算原理 sha256=5aff4603bc1ac3092e0a1eb5dbf27093d00f12bc655d8e70f1e8f8e9f47d11ab",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0876.html#计算过程常见问题 sha256=d7a452cdef0971b624bdfdfbd9fc2c2cb2b1444316972fa6c17170557123012e"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-049",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "推理负载v1.29以上Standard/Turbo和Volcano1.21.7以上准确。对Kthena建议版本、弹性伸缩1.22.5以及AI模板v1.28分别注明来源，没有混作本题最低版本。",
+    "answer_sha256": "6a61c36440e979d350c361f768dfe7fd17c3beb409fa80217b07291c284dfd86",
+    "evidence_checked": {
+      "reference": [
+        "9f862dbc001d2430b76c2b851b7f9d981abdc2547b2bb832fb9fa55ff4af2b22",
+        "c39bdcdc0a6de7a59a6f80e3c3bed8631fc255f785313573d54d3d759eb9b003"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_11511.html#前提条件 sha256=ccc6ac1fdc4c2aaa49b8f911d63581579bbd403df131502c4f864d42ea76b83f",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html#前提条件 sha256=40f652f0989122445ee42abb9e7295194f6524200f8e4129310fa5e04657ab61",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_11511.html#简介 sha256=3f98a487d4ddc7fc2bdc7a33a3d646a89670bd5c16e0319fe665840a4df7841c",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1154.html#前提条件 sha256=185df5fd8896bf17b535dd2aade7faa32174288976d56199f677c06e05d02af3"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-050",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "Kthena ModelServing、vLLM、Entry/Worker完整。角色职责、Role层级、Prefill/Decode的Gang约束均有实际召回依据，分别说明了Role层级及其内部Pod模板。",
+    "answer_sha256": "d5ea74eea64562ea54534127f04447da03a42b06fa66baf38561d9e334dd1bd2",
+    "evidence_checked": {
+      "reference": [
+        "3f98a487d4ddc7fc2bdc7a33a3d646a89670bd5c16e0319fe665840a4df7841c"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_11511.html#简介 sha256=3f98a487d4ddc7fc2bdc7a33a3d646a89670bd5c16e0319fe665840a4df7841c",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html#架构设计 sha256=fcad512f1b0ee7980ae21bd021e2a6ff3f6a8718bdea304a618f9a3693344fa7",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_11511.html#操作步骤 sha256=cae9694c6d522b558f2243f60b5c850c9a19adaacb76d1f77933da9f8851511e",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1130.html#创建Kthena ModelServing推理负载 sha256=0f3b7ef1af4fd3c63a1982c72b0f4b85e816ccca276b3f47617e4113876bdf60",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html#Kthena ModelServing sha256=b4462e732eacb3bde6d781350af1dccde3605b71252c48362d75f71f9ee76574"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-051",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "拓扑感知、原子调度、复杂工作流编排及PD分离的声明式生命周期管理均表达。补充三层结构、Gang、拓扑与驱逐保护为原文能力说明，未声称所有版本默认开启或提供不带前提的操作配置。",
+    "answer_sha256": "6ca45a7a2199ea218ca21c15945a5bd66244b795f6e5a92c991176e62b706293",
+    "evidence_checked": {
+      "reference": [
+        "b413f01c2c2abadb8a8087a9b60cd71147f42ab1f00ea729c1101a255740174a"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html#Kthena ModelServing sha256=b4462e732eacb3bde6d781350af1dccde3605b71252c48362d75f71f9ee76574",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html#架构设计 sha256=fcad512f1b0ee7980ae21bd021e2a6ff3f6a8718bdea304a618f9a3693344fa7",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html#作业调度（Gang Scheduling） sha256=c538168841a9bf423869e8f6ca47878b256406fe9b6826b9d1e67f443ab17afb",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1128.html#创建Kthena ModelServing示例 sha256=fcd43ae1c5abec9eb75d1704cce1f90bf1cec47b1e2ddc1245e8a234a59b7273",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html#Eviction保护（Eviction Protection） sha256=4e216617f56809792fd863c077a34442a225e1f4816c6dad73a5c56fe4ae544a"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-052",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "无需复杂YAML、运行参数/NPU需求/硬件适配、可视化选模板完整。长模板示例逐项与实际召回一致，明确是插件预置示例、无需用户操作，没有将具体模型配置当成通用默认值。",
+    "answer_sha256": "23a4e90aa5fa93ad55a45ecce38a1cb9af0afaf180c8bac59313687d2cf9a641",
+    "evidence_checked": {
+      "reference": [
+        "94791f522eef38dc117a9bdd1a500aee4cc584830f976a052d7c174ddd58dd02",
+        "c0f4000c56c21d6cac28f1a2e4b42b1d276e295f68cd39fd708c42290bce7ffb"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1154.html#简介 sha256=eed15a8c7b89c4af87a86718aea56979462e0cf4ad444a66e36c3d2043a125fe",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0996.html#模型模板 sha256=4cc2549eb083c011ae2f9ff47b6e2979720dc73f5786398368d8bb6f0b3c265b",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1154.html#核心优势 sha256=35dd52bbd322fa6b91ea48091aaeaa8816e37f5d9bff9fcee240632772a37ea8",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1154.html#操作步骤 sha256=d4f2dccf3006474fc662dae75e1f84ce8d82f45ee2285e1a6cbbb5dde804377c",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_09731.html#能力概览 sha256=67957b98abcd7d5017ef63b02e9027d3b08e84466b90106701677c328ab25dc8"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-055",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "分别为开发/联调/测试创建命名空间、创建和查询时选择对应命名空间均完整。说明同命名空间和跨命名空间的访问方式，没有承诺完整网络安全隔离。",
+    "answer_sha256": "34b49a6afdf4dd6c19070c53e987645e31497d19e7aa3a0ee78d0c5bb65b481c",
+    "evidence_checked": {
+      "reference": [
+        "1bb41cad7bb282da433d127c84266be595c5306936e74c02d3d329b87893a2a1",
+        "d5bd35649dd972b99a7481ae565fefd378b3b016ce9a19f19878a092ac218a59"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0278.html#操作场景 sha256=c0beecaca077cf8a011d7c1727cb73fad4fb57ace4f40d1cbd83ea27026bbd1a",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html#命名空间使用实践 sha256=3688bf61b4188ec66c13ba17e75da12763dbf4ce08e8371cc0002bc4e48f21ab",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0278.html#命名空间类别 sha256=ce2fd8fbdb462b5c572810551a82782361aa2c46225196fd8c4f5ef4198c05b2",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html#使用命名空间 sha256=bb285b21058e5712b34ad101b43620b22b2d8c5aac7860fca8cc4d1d530b78a2",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html#扩展控制器配置（仅v1.21及以上版本集群支持） sha256=2657f867b6481f8492e95a18f876d81538eba785e0b2ddc1b43c802b3e8fb193"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-059",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "普通卷周期更新、subPath不自动更新、环境变量需重启Pod三者准确，没有把重启操作声称为已执行。",
+    "answer_sha256": "fcc321f605cd062b55ebaea5d2ec2b5817bac5a5313383453228e892d99c9ceb",
+    "evidence_checked": {
+      "reference": [
+        "2654e652ef02526f659e71c989bc9fe63ad4304fc2ff60724487ae34f7d5b2f8",
+        "0df3445a22576a7f3abe7cf44d787f263ba073f62e207531c8446bdf258b06e4"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0015.html#使用配置项 sha256=e06e5e69a8b8dd12511003dd40b8166cf85be48e1b87ebc69cea633a364ce6cb",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0015.html#使用配置项挂载到工作负载数据卷 sha256=cdcf75a7ffaa4651e43c9545f2d742c898d817fa60c50c75de22750d5e1170cb",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0015.html#通过配置项设置工作负载环境变量 sha256=504539c4de6ac525d8aa6f0454b47117454c1798dccdef90a6f5b9052810097d",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0152.html#操作场景 sha256=32376a0afad45cb745822f70f713c09ad58170a88b52f0f00cb4feed0e7a6ccf"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-062",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "明确插件中心/插件管理API入口，禁止后台直接修改及异常/升级覆盖风险。编辑路径与模板检查风险均由实际文档支持，未混入删除插件操作。",
+    "answer_sha256": "63845a4eb1cb146859116f78e130dff62450f5a42afdbb70e4a8e6feb036a559",
+    "evidence_checked": {
+      "reference": [
+        "7bc6b0b04a8146cfa4162ca0729e9108ab5feff1edd198be45c6ec1d8f2612a6"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0277.html#插件概述 sha256=feb7068d473f1280c551e16f9bf000875cdf3242fcb264beab9fedb510fb5e8e",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html#插件 sha256=00fc841082fff7d3ba097cac2d68a0cb1e85cb21e2a3600c7edac0825886d7c4",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0531.html#检查项内容 sha256=b0bd044a5ba9cc2961cc063bb7b31f9f011e87b02233eda82da55a877944462b",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1031.html#模板检查 sha256=8a7243fea75d9ffd74c5256324a9a84f4e8d61f01c2b245a6d0688933335c386",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0277.html#插件相关操作 sha256=df31f56157b0f4d4e0a6ad61b49a6a54b57aa38d903427b495846cacb0bacdca"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-066",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "客户端不受控制台版本限制，可用v2/v3，核心答复完整。控制台3.8.2注明模板概述来源，2022年逐步切换为另段补充，本题没有要求判定唯一最新控制台版本。",
+    "answer_sha256": "fb8e9bfe09a14d4c06c1486d01de9775084c9c1572b8776e9d47a895106ac459",
+    "evidence_checked": {
+      "reference": [
+        "3ba20c79c804bb71f0877d3ef21e1d94f904a6deb632a899c78f403c8878b664"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0191.html#模板概述 sha256=6756718fe4222c5776fde798715ef7b35f2334517bc85c8e4d8e2ad436114168",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0146.html#通过模板部署应用 sha256=dcd8a98b7ab5cac565ae1bd34cc00ec1066ab2ae730648d4ab2e43c91abe3c62",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0420.html#通过Helm v2客户端部署应用 sha256=b13efbf5013cc68a1a899de882445497e55396f6c885cafef54f669424a6017a",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0144.html#通过Helm v3客户端部署应用 sha256=a0ff795917fac7d170db20372649d2bf0df9f5fcd2cdfad366803696cd3f3fc3"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-070",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "IAM与Kubernetes RBAC、集群/命名空间级、IAM用户与用户组授权完整；两套权限独立、配合使用、并集均有实际召回支持。",
+    "answer_sha256": "fd298e09a5f0710bd4275354716d04018315506e5c54a64e00810c3173afe93f",
+    "evidence_checked": {
+      "reference": [
+        "8a03eaf9c42f8bb0f701fb989b6e9a9c8a8f5ca36b8c9ef86c6d1155106f3231"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0187.html#CCE权限概述 sha256=e07b7e22e518925d7b8f8015e463b0f5547a115d14ffc4425a74ee9d8b42c717",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0187.html#CCE支持的权限管理能力 sha256=5f23797e16e28af37a7b3ca460a0851cdb26ebe0c3114f5872fc0b961a52a528",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0245.html#概述 sha256=ad9a9115767eb4976e4168a7583120088cd9f8b761ebaf26d93cbea227914236",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0189.html#命名空间权限（kubernetes RBAC授权） sha256=d5877570968e5772df9efe4f2bca00ea24339dab055e62efc55feb1b67ec4d73"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-071",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "实际答案首段引文保留了委托其他账号或云服务按权限代运维，独立IAM凭证与按职能权限隔离也完整；旧版IAM范围明确，角色依赖和FullAccess排除项等补充均有来源。",
+    "answer_sha256": "72a916922483fc5d04d8a46548c5d75401326611d9366d746eaf40cc328f7f8c",
+    "evidence_checked": {
+      "reference": [
+        "bce9b1297393395820ce4bc453ee83b3ebc5eb0ac1b6df63769c821fa23e3657",
+        "cfa3499841e33d79d3b6ace93b21b1821e0a363c73e1eb5668a0becc43dc4c48"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0732.html#角色与策略授权（旧版IAM） sha256=bc4504f3ce7c6862cd08e30ec3798dcf60d47c8024b1162dba3d02cfcaf2e7e4",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0732.html#CCE支持的系统角色 sha256=502e0fa3f33ad01f236c27bfca1652d5547ed3f660d2ca9e9070fdc207c79a79",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0732.html#CCE支持的系统策略 sha256=6cbdc2383f90131655ebc2290004e350290f1e5d380320381ae987667e7d492b",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0187.html#CCE支持的权限管理能力 sha256=5f23797e16e28af37a7b3ca460a0851cdb26ebe0c3114f5872fc0b961a52a528",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0245.html#权限设计 sha256=aa3aa8782b4b691f2f9172fa6e7b7f8303d035e6247a165a96e7a769b7bf700b"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-074",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "左侧配置中心和配置概览页签路径正确，概览展示范围来自同份手册，没有虚构具体集群状态。",
+    "answer_sha256": "7c1bf47df1db354b29f900db7f02d73079c1dca05bd69d1bdb05b5ded388ed54",
+    "evidence_checked": {
+      "reference": [
+        "8670c7658a9f6dc56ceb56b304a0d06ba6b2527d595318b265224bc974d4991f"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0782.html#功能入口 sha256=a11fe9b002b5154443f86f533348ba5999732270d02b64f9bea4a72d855c8ff0",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0782.html#集群配置概览 sha256=bcfd608f6f807392ea13c7e3d6acff52a13a7bf5cc2c8c51db04d337378b5197",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0782.html#集群信息 sha256=5e8485b87b9507909498f90adeeff0108c03b1b474603fc7f220bdb40da60f8b",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0782.html#集群配置 sha256=ee2e71a40ef40875eb36c5d6516f86aafc2a1c8c8394cfdb8a6bb335236daa9e",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0782.html#集群控制节点可用区 sha256=61897b0d93d302a707e21bba6c91ad9897a46ce21e469a07ac6f2467bf420da6"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-080",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "非共享、不能多节点同时挂载、必有一个Pod无法启动完整；答案与资料范围都明确已弃用Flexvolume，没有跨用当前CSI约束。",
+    "answer_sha256": "8cbd6b6aa770a9ac9f6243f72da806f9e2983fcaeae3a12ffba2de74f954c8f1",
+    "evidence_checked": {
+      "reference": [
+        "8d97cf71ff601d511d550707a35e6a894e035400f1d80e5b04a92b258f8352b9"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0310.html#使用说明 sha256=f9ea0fb45aca56713ba5d35d7b68be52e713cfdafa622993e6752ca82d3d8d91",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0310.html#云硬盘存储卷概述 sha256=13856693e60bfafa9d1dac8d4c67eba344d29aeaac4ed1989c933931bbc4e104",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html#约束与限制 sha256=7f1439567c83739e46bc5f4a527f26e6fa6044ea6543852d42b9125621924cd9",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0615.html#约束与限制 sha256=5f892f6f3d23d38bac8032ac13fa01fff011676a854aa809122a7b17cdae2d2b",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0208.html#约束与限制 sha256=c0da0406595bb0f91cb56b886664b6a12a2675ffc3d4d6c4015c72bfaa8885bd"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-081",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "10Gi、ReadWriteOnce、可用区与工作负载规划一致完整。明确历史Flexvolume及1.9/1.11/1.13示例，ap-southeast-1a标为示例值。",
+    "answer_sha256": "1e43c2780bccccc30b30ea31100cb2c5a2954bae5fb22c0d18b205ed9a842735",
+    "evidence_checked": {
+      "reference": [
+        "88db059e0c7269dbd50cd01adef01f6f76e0b27eb0615cce1528be2bc8b1a8f5",
+        "4f6db70d58a2db4926d5fc6c1ec7c3ba6cda41c2dc69ceee10c6e8e8d9d321d2"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0312.html#操作步骤 sha256=ce89ad3932e5e4eb39726f0bea9322a36252e08fff6ee6d174b71fc603df5b1d"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-082",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "控制台卸载对应IO Error/删除mount目录后重调度，与节点umount对应写本地盘/重新mount清楚分开，未混用恢复步骤。本轮未再发生模型输出校验失败。",
+    "answer_sha256": "775c03fbc60460c41cc35906e5ec45f0435d5925ddbd222c71e4be993c90cb7f",
+    "evidence_checked": {
+      "reference": [
+        "060b51b80bb4eba36be8aa1042ed62f1cd874c5bdebd64e7b5fd2cdfe86e6648",
+        "74664b96af5ef61bc571857ad612bcb0a7f854f64429de5f3fbd30b138218132"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html#云硬盘 sha256=c95fe502e58e2abdbbc897a218e7f42781a58c2027a0d6cd2a02134152226e00",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0615.html#约束与限制 sha256=5f892f6f3d23d38bac8032ac13fa01fff011676a854aa809122a7b17cdae2d2b",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html#约束与限制 sha256=7f1439567c83739e46bc5f4a527f26e6fa6044ea6543852d42b9125621924cd9",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0132.html#NPD检查项（第1部分） sha256=2b4f1f1d919ea78184214eca1af5af03af427e4c3145ed5a22c0bf2a4703d27e"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-083",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "直接操作EVS导致写本地盘及恢复栏无均明确；将umount条目作为差异对照，明确不同条目，没有套用其恢复措施，也未额外拒答。",
+    "answer_sha256": "facff59d80ccb311b968875a747fb3b9c153a6826a421f035296b2471efd47cc",
+    "evidence_checked": {
+      "reference": [
+        "507b21a4cf5b0d368c71c3c97c1afdd80b12e85b3d62a3864a76abc45635a1a9"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html#云硬盘 sha256=c95fe502e58e2abdbbc897a218e7f42781a58c2027a0d6cd2a02134152226e00",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html#高危操作一览 sha256=87496c31c994f78ce1356c46d01ba9cc91db8f007c3626356812bb59e8075351"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-088",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "只允许restores/backups、清理其他文件或目录可恢复准确；补充子目录同样限制有实际原文支持，没有声称已执行删除。",
+    "answer_sha256": "bf557c7bd4702cd809ea9419283192ef102ac99eded63218277118ef7d4c1f2e",
+    "evidence_checked": {
+      "reference": [
+        "8a27a349a07b2f18f6dea011fb970f2e17d2f61b71f2eb7765a2a319992e1e8c"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html#备份仓库状态不可用提示：Backup store contains invalid top-level directories: [xxx] sha256=1b4220ede980e3832c21baa44bc88a9ecbf36e11c9d7cb76f658bbf0a1cd8b62",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1160.html#创建备份仓库 sha256=3be8e1c2bdc4607d6715d37d687c811ddc663e7946e025bf309a585412cd74ed",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html#索引 sha256=802e5d6d90fe6be6ebc32b546d7f94adf1c7110d55079b27e32cc847abbdf761"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-092",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "Updater比较并触发重建、Admission Controller拦截修改请求均正确，但答案完全遗漏Recommender负责产生建议。实际召回有明确组件和流程说明；引用中的省略号跳过步骤1，不能将上下文内容当作答案已经表达。",
+    "answer_sha256": "a11af740fc34ac549661abddbfcaef8c481e544a1df0e0e4687119c83155da61",
+    "evidence_checked": {
+      "reference": [
+        "1bf40291096ea00589cb5eb998078bc0155a4c88e6270f21bb7d5ce379430050",
+        "60c92436fc02f2ba204769250068a50cf13a4ecd7cf1bd0c3c6f8d693a3d2806",
+        "dbff5c57e4cc6a23bb9bd5fa656075fe5d28def8c0a2eda65ca605cf01439c0f"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html#VPA工作原理 sha256=8ee0e141d3b2b2881f977ec0589bbb88cd38494ded377cf5cce262664507c272",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0920.html#组件说明 sha256=afb714089538ef51dc7e501f2a21c28fb36693127b011447e076260a48ce5f0a",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0921.html#功能概述 sha256=179d57730fbfdb9b063155e179036f0623674ee9cd481b891cd646319bf0e5b7"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-093",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "crds仅安装时部署、升级不更新、卸载不删除、推荐拆分CRD及使用它的资源至不同chart全部完整。重复安装不报错的补充来自同段原文。",
+    "answer_sha256": "520dcd00d42dca9de98b033f16989bfc765cc286a4d0603528d478d8e3caaa51",
+    "evidence_checked": {
+      "reference": [
+        "7e999a5bd6d2068735b087d727171b972afbd301b13e917beabc22c6720e78ba"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0421.html#Helm v2与Helm v3的差异及适配方案 sha256=36060dad742f8291f0a1de8dfe06b511950da5d8f7adc5b6c1fe1a25875b0fa1"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-095",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "分别写出3.8.2/3.18.6、同一对象资料矛盾、不能据此确定唯一版本并需核对当前界面/权威版本，四项完整且没有多余拒答。",
+    "answer_sha256": "51f943004356a8367d9bf6b62c57f987c79106cc33d801ca9e339e397c7e84be",
+    "evidence_checked": {
+      "reference": [
+        "4808e27a6a89f041cd5aa886e12f86c4cc9ce7c9e16ee0c101667965afebce47",
+        "c45a9ed752675a4f562179a3fa7c5bb9d3cafd4d8e108fdd351c822a6c3d59b5"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0191.html#模板概述 sha256=6756718fe4222c5776fde798715ef7b35f2334517bc85c8e4d8e2ad436114168",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0146.html#通过模板部署应用 sha256=dcd8a98b7ab5cac565ae1bd34cc00ec1066ab2ae730648d4ab2e43c91abe3c62",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0146.html#约束与限制 sha256=ea845a42819bf3193b82de4a38c8674ffeddbaf8253f8acdecd11f46bf520116"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-096",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "Delete有无retain-volume-only分别删除/保留底层云硬盘准确，Everest1.2.9与Delete条件齐全。此轮实际召回包含EVS本身的参数表，1.19.10等条件未跨用OBS；Retain复用补充未夹带销毁数据操作。",
+    "answer_sha256": "6535fa6a64863cab5f0dd4d1a63a497225242763064d3bf6553105ed5e23a2ea",
+    "evidence_checked": {
+      "reference": [
+        "11d2c13cf84246f174d33ce534b5cef61f608920c455ef712f1c3d42f49d0918",
+        "33ee6ae0190b4b4a06731251b9049a221c86500417df1e12a2d86fcc990cbd40"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html#PV回收策略 sha256=0b1a2c6a5548ea603d260e8a7f8b658330c763cd79dba7563e1eac1a6b265af9",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0379.html#使用已有对象存储（第2部分） sha256=336551535e196d5457cca37ffa35713803b361f755dcb5452bd911ba6d5f5006",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html#使用已有云硬盘（第2部分） sha256=cb488ba01b317781adf391630f666fb04c8f458614bac3d956989942bc863bbf"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-097",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "保留PV和底层盘、Released不能直接再绑、删除旧PV再新建PV/PVC关联原存储完整。所有重复引文均只保留复用路径，未夹带清除数据或删除底层盘的销毁流程。",
+    "answer_sha256": "26aac1a3c7972eb9f74e71d4f8ff2109c70ad4e1dfd9fa53be7249e8fa519033",
+    "evidence_checked": {
+      "reference": [
+        "33ee6ae0190b4b4a06731251b9049a221c86500417df1e12a2d86fcc990cbd40"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html#PV回收策略 sha256=0b1a2c6a5548ea603d260e8a7f8b658330c763cd79dba7563e1eac1a6b265af9",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0379.html#使用已有对象存储（第2部分） sha256=336551535e196d5457cca37ffa35713803b361f755dcb5452bd911ba6d5f5006",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html#使用已有云硬盘（第2部分） sha256=cb488ba01b317781adf391630f666fb04c8f458614bac3d956989942bc863bbf",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0625.html#通过kubectl命令行使用已有极速文件存储（第1部分） sha256=f3ae8169dd9be15f27f0d119a5c2bd7d6d8b570133c8037b56d1f3f8818421e6",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0380.html#StorageClass高级配置（第3部分） sha256=45999b2806ccb5d233f7b85dff77856a53510b9de5ccf2b2be59773e039e4213"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-098",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "nvidia-smi、先满足CUDA配套后优先推荐、非推荐需验证机型/系统/驱动兼容性完整。各插件命令路径和示例驱动版本有实际原文支持，没有声称读到真实节点当前版本。",
+    "answer_sha256": "aa5128b9edcdc191f4802472b1f156f43aab5998ef664e86e9ea48b40ccb8663",
+    "evidence_checked": {
+      "reference": [
+        "cf1a67f32ada07fc9c4e9636370dc55d1404c67d075f4da9db646f50d9ead466",
+        "84891c3b2fbc4b36d314ecd037a4d18f2fe1ff5d99a523f3273de39868c5ad62"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0846.html#如何选择GPU节点驱动版本 sha256=b4eaa73adcb9368fe4d24612643186fc7e3cf6c1c64f1f11a5291d9e4b595f5a",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0846.html#CUDA Toolkit和驱动的版本兼容性列表 sha256=7cbd8f5ea2a47d8a4f0896fd59283697c68e5d585430bf5ce7a0e4e025072291",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0847.html#CCE推荐的GPU驱动版本列表 sha256=49f31105fe0668d0125fcc84f476aa0a56476e89bc8c7904f3da19ad427b4dd4",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0849.html#步骤一：指定节点池驱动版本 sha256=5b2293440822161182da4724ff7a578cf4f6c3142c8f02b0fd210c1553383e4c",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0141.html#约束与限制 sha256=d14282db0a94981c9982bf23f73ae2b807899bc77a8a563b6a9c13dfe8ba58c5"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-091",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "三类Metrics API的定义原文未进入最终上下文，答案缺少external来自外部且不关联Kubernetes资源的说明，custom也只给使用示例，返回PARTIAL。谨慎承认缺口不等于可回答题答对。",
+    "answer_sha256": "6a3f029d473442be6c1850dccb1088c3a03213f617ed9ae20cb279aa56e1bdda",
+    "evidence_checked": {
+      "reference": [
+        "7c0f7bcf77c0a5af50a3a0d374055e623fb4994661b82031c7ebd3ac207fd790",
+        "328b24cd51d3b2699c4834395a4804e7de48f5ae753d051d7833d9a601dd3ef2",
+        "3819f33629303012b3c28785a77aa904bb8d96bb55430058eb35af2d19036873"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0221.html#通过Metrics API提供资源指标 sha256=51b6ee1e8cb47b4b496927f50cccec5ce103ddef09776510da373315c54b35f5",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0406.html#通过Metrics API提供基础资源指标 sha256=7b0b64f30cdacf19d5f98390c8c748bf9bd839fc9c1718739a00e6f1aa6b82ae",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0844.html#采集GPU指标 sha256=b78e6aa818085d175f51ca0b6a3f06786f142423a6394dac19c9ad625993640a",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0944.html#步骤四：修改配置文件 sha256=5b50175fedd0ac1e942bc972aca5ca7a14709915b7a3d82d4b12ef5f2d2ba701",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0208.html#前提条件 sha256=5292e76752f6c629247e810e585dcfb3cfda61e0177ff7dce94d9a3293cf5702"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-064",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "Autoscaler扩容、低利用率时缩容均完整。答案没有保证所有Pending都能靠扩容解决，反而明确只有工作节点资源不足且未配置节点亲和时自动扩容，并给出本地卷标签冲突会持续Pending等反例；禁止项不要求机械复述。",
+    "answer_sha256": "9bf553077690c3716f91701fc883ecc3dc8759419eb896300f3c23eb2a78bccb",
+    "evidence_checked": {
+      "reference": [
+        "2d489afd629520e44a761dcf51207efb8e7110ea5060cfb87c7ec1c9b6dfe99f"
+      ],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0154.html#插件简介 sha256=76872fa3ec65da1b18a35eaad9bab460815ab3c5701913da33cc5670e228ce38",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0154.html#插件说明 sha256=e1d7bf26a1a0bf6e191c6407a2ac22d3cb5a7e6cc22927bf32b9e79382ac51b8",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0786.html#弹性扩容配置 sha256=2acf8b3f295cda0ab9163963bdb91416b40f2a8a6ce60f143fe92d4b472972d9",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0786.html#弹性缩容配置 sha256=e8be3b135daa156432ddc9692e3778cbde94682929644505639f7e36bdb914e7",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0154.html#约束与限制 sha256=307492deb0d5242c3278dd2314fb43818ae03f27bdb67e5830baa7a64c5d01bb"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-negative-runtime-nodes",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "正文和gaps均明确缺少prod-7实时CPU数据，不能给出当前百分比；仅说明指标定义和查看入口，没有编造数值。",
+    "answer_sha256": "3fccacd5b8a637aa3b4003fa7f39431077c3b02ce9c58f172d685958f3ba8792",
+    "evidence_checked": {
+      "reference": [],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0757.html#指标说明 sha256=6369280181128e1e703e707b720e56f580ab9486c5cdea468172168bef5a3f81",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0712.html#资源消耗Top统计 sha256=d7f04d871ea68f3ce7f344920c4aaefa10b29c7ed1777d0931dc6007de5bd116",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0753.html#指标说明 sha256=4aae74b86e29d9c79fd908cb421c5170c27798e133fb5597dd89daf6a36f4967",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0757.html#Node视图 sha256=12829611f3b6ae8e52a8acf33374c0718ebed275baa7f29d94d5b744d64c6c14",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0718.html#前提条件 sha256=ceb863dcacd88016ac6d4d5622cd4a741e7cdbaca2a2a91d30f239672e51efa5"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-negative-runtime-backup",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "明确缺少生产集群昨晚的备份记录/status.phase，不能确认最后一次备份是否成功；状态枚举和查看方法来自实际召回，未把示例Completed当成真实结果。",
+    "answer_sha256": "c161e3fa3b67d310619d2ef8f746954d05e9671d11c08748e89e893ad83bbd16",
+    "evidence_checked": {
+      "reference": [],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0395.html#立即备份 sha256=523464388c31fa91cc70156a11b7fd93e4677e96b6629594723fcd7e6c6fb094",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1160.html#创建备份计划或立即备份 sha256=600af1d93e5d2bf639695c97fd6ded903b9d84555284917c88d0b2be276a2045",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0395.html#周期备份 sha256=fc2758ad9bf29d8d3637083d21ad3be4901f23a3f4296aa3f9c9d2f6c981bf54",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1162.html#使用说明 sha256=7a1b1871e4b0c8ef234d3bfcbca1f439158434024e0a38bf6541c7a93eb015ff",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1160.html#前提条件 sha256=7d99ab88a2ed958be8c71b3bee6c91b3701321cf640515c312afb3955665929b"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-negative-runtime-security",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "明确资料没有当前租户default-secret的真实凭据，拒绝给出密码；用途、周期更新和过期机制均有实际原文支持，未泄露或编造Secret。",
+    "answer_sha256": "1f7bdfb3a061b5598b00bd7fe07c783105a12d358eef961e8ccc2b78f35f86b8",
+    "evidence_checked": {
+      "reference": [],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0388.html#default-secret sha256=e964bc77d08fa480d2a8f7d32ccbe301db8d39843fe2f2ac40db9e51707bbe6a",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0388.html#集群系统密钥说明 sha256=a016a1475ff0877a2f00782cdbaedcf1ec769b5a4dd527397026e2f7af192ee3",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0922.html#Secret落盘加密介绍 sha256=5b8087f0554b70e6d56c84b4d049c021914c54f39febeffbcb270748d05eaa44",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0922.html#使用KMS进行Secret落盘加密 sha256=653d699a044e531c8813346e5697f2d266e08d7fe805046e0af41bf577260ce9",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0153.html#操作场景 sha256=1dc51c1c2650bf9b6e400803044a7890ce31a6ca38cd5c11131ccc771ed938ad"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-negative-unprovided-cve",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "明确手册未出现虚构的CVE-2099-987654，无法给出修复小版本；列出的其他CVE仅用于说明检索范围，没有套用版本。",
+    "answer_sha256": "3d0b72596b188ac441f90d44bd96a84ca4608e90b89b69396fd26865ec704f46",
+    "evidence_checked": {
+      "reference": [],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html#v1.23版本（第1部分） sha256=199966708235b4fa4ee0813f8190706d69a0e6d5c0cdb7a514068215b8e6be9d"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-negative-unprovided-quota",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "明确未定义enable-infinite-namespace-quota，不能给出取消全部配额的取值；实际存在的enable-resource-quota仅作为区别说明，没有将关闭自动创建曲解成删除现有配额。",
+    "answer_sha256": "ed45ab4631f28ea59fac085ba8b89837e271e3b64694fdd7720deb3226d62b8f",
+    "evidence_checked": {
+      "reference": [],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html#扩展控制器配置（仅v1.21及以上版本集群支持） sha256=2657f867b6481f8492e95a18f876d81538eba785e0b2ddc1b43c802b3e8fb193",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0787.html#资源配额控制器（resource-quota-controller）配置 sha256=18c0da0c0b305f4d8e9745bf128f0313bb95d7caed4b24c334ebdb93f3530835",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0287.html#设置资源配额及限制 sha256=5b8de4ffddf1a52d5b37650e4013ddde4e4a040f9f1954b99bf7749b1e411d01",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0287.html#操作步骤 sha256=32eccf3c935a3698200b5a11379e57e2239e3ac16451d58c54533024a9cdd9cb"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-negative-unprovided-extension",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "明确资料不存在quantum-zero-loss插件，安装步骤和最低版本均无法提供；没有把召回到的GPU虚拟化/Volcano版本挪给虚构插件。",
+    "answer_sha256": "f086bac2c06af541ffa97e4e530c71d643baf226218305e450a20bb679c5609b",
+    "evidence_checked": {
+      "reference": [],
+      "retrieved": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1025.html#前提条件 sha256=68679a32724e75397b5507eb0091433d6b030d6bf5b76212dae79ea1d3b6eee1",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0965.html#前提条件 sha256=3e130d82d655ed5c269bc2dd247aadd862a1567807d220c11fda1263f95c55b8",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1025.html#GPU虚拟化优先级抢占调度 sha256=46c09b5296ae0af55776367b6c04295024a92d9cc83d541a0df547dfaf13fcc1",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1025.html#约束与限制 sha256=931244ada879ce0ab895273b9acc2b7108a007810b94b80cf878295d7a3476b6",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0965.html#GPU虚拟化多卡均分调度 sha256=ee3d982c0054a363a0e40a87f0ce3bc5b0b02d440e54641fbc44b8ab626b2efd"
+      ],
+      "answer_and_gaps": true
+    }
+  }
+]

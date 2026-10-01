@@ -1,0 +1,17 @@
+WORK=/Users/bytedance/code/.cache/tmp/go-build3517825745
+?   	hwops/cmd/hwops-demo	[no test files]
+?   	hwops/cmd/hwopsd	[no test files]
+?   	hwops/internal/adapters/chatmodel	[no test files]
+?   	hwops/internal/adapters/elasticsearch	[no test files]
+?   	hwops/internal/adapters/filestore	[no test files]
+?   	hwops/internal/adapters/postgres	[no test files]
+?   	hwops/internal/application	[no test files]
+?   	hwops/internal/devices	[no test files]
+?   	hwops/internal/domain	[no test files]
+?   	hwops/internal/einoflow	[no test files]
+?   	hwops/internal/knowledge	[no test files]
+?   	hwops/internal/observability	[no test files]
+?   	hwops/internal/transport/httpapi	[no test files]
+?   	hwops/migrations	[no test files]
+ok  	hwops/test/acceptance	7.733s
+ok  	hwops/test/contracts	1.997s

@@ -1,0 +1,783 @@
+[
+  {
+    "id": "cce-manual-001",
+    "passed": false,
+    "reason": "PARTIAL，缺Turbo网络选择及Pod地址分配实际依据，Standard背景不能替代。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0430.md:11-11 sha256:80ac443d3f561750b3a077f1eb94967f12362923ebefb3d4f4c4822bebf48e05",
+      "documents/cce_10_0430.md:12-12 sha256:55167b03f6b3b749f19e4d67de9587897dd94680a60938aa15f33b15bbad65e0"
+    ],
+    "answer_sha256": "6a668e7bd18c0b351aea0974d4ba3a4cb6599b6e0e994d5ca2015fb4bd0a3a5b"
+  },
+  {
+    "id": "cce-manual-002",
+    "passed": true,
+    "reason": "无需维护节点部署/管理/安全、按CPU和内存资源用量计费，均与原文一致。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0430.md:13-13 sha256:4711d32c52d902893460461ca8ae7e6a5f1e5b081fe8427f619be7c16140efb5"
+    ],
+    "answer_sha256": "c9a328e572ea6b5c34c9da572c66242e18c645e17d8d8321f180e40a125be271"
+  },
+  {
+    "id": "cce-manual-006",
+    "passed": true,
+    "reason": "Node为计算而非控制节点，三项组件齐全；ECS/BMS背景有原文依据。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0180.md:13-13 sha256:4aa3da22e745fd38e4c19822dc03bbc9e9ff3c4a67ba0f8b35d6e7d502941669",
+      "documents/cce_10_0180.md:9-9 sha256:6b6ff91452b0c6e22b39d0fa054f36eeeb632a9f97fbc73a4fdb81f82a7e6986"
+    ],
+    "answer_sha256": "2abb860ece6731802f286324e967a583a6d54a66a37bcbd0ee3b974621940848"
+  },
+  {
+    "id": "cce-manual-008",
+    "passed": true,
+    "reason": "1.35采用nftables需内核>=5.13、EulerOS2.10不满足、kata仅适配该系统三步因果完整。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0476.md:22-22 sha256:d3f847431b945facd7e4796f6f8ef669351f05956facb1f705c0064eac2e9ae1"
+    ],
+    "answer_sha256": "58bd1a011a47414f290fa7ea949e210680572f0703bc5e85a7228fae0069de7f"
+  },
+  {
+    "id": "cce-manual-009",
+    "passed": false,
+    "reason": "PARTIAL，缺区域规格新增/售罄/下线及创建页面核对，实际召回缺该段。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0719.md:11-11 sha256:052a137fccf9990cf63aed1847dd5340919edeeb7a03eebfbe53d77f188cb7b9",
+      "documents/cce_10_0719.md:13-13 sha256:95489cc36d8b16a6ff2b29b69f1b25074438603f8cd373c9e5ccc330f04a8891"
+    ],
+    "answer_sha256": "f371aa46e6f085c3004e0783b496dc3bdc41fd1f3340b97df3811a18e17f37e2"
+  },
+  {
+    "id": "cce-manual-012",
+    "passed": true,
+    "reason": "默认A仅展示、实际B计费、10台一小时1.923USD均齐全；按实际创建数量计费的补充不矛盾。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0648.md:7-7 sha256:4103eaac536dfe43250b110b131c3e0fb576b7977442ed2c7a6ef402418418b6",
+      "documents/cce_10_0648.md:17-17 sha256:4e15d39251218113ce70c261e1089b1e7767b09cd46c9fabaef2fd59565af3da"
+    ],
+    "answer_sha256": "baf4c9524531f3278ff3d392b25d02d88cb8f5c3b301d9b1e1e5b8e8fb94fef4"
+  },
+  {
+    "id": "cce-manual-013",
+    "passed": true,
+    "reason": "节点管理→节点池→右上角创建节点池顺序完整。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0012.md:14-14 sha256:3b0f6ae683d1c5f27b98d4fbc349699d3327a85e5bcbef44be7cec53108e67b6"
+    ],
+    "answer_sha256": "eb8748b5b3043c92120e828e2c6a3f91e4d31a3a9df13eb9f79aa13f387bde9d"
+  },
+  {
+    "id": "cce-manual-016",
+    "passed": false,
+    "reason": "答案已说明关联卷不删和先缩0，但把未问的例外/额外配置列缺口而返回PARTIAL；状态按冻结标准失败。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0048.md:15-15 sha256:432f4617369a710fc54747b4fa7f283697bb0692b38377b597e3b0ccc6a3d219",
+      "documents/cce_10_0048.md:16-16 sha256:b916963f9dba7be89bbe8e680e389fa3b3a564dcf78283900e07f8b141f58671"
+    ],
+    "answer_sha256": "69132e4e137bcdd9c49332f94ea8bdc7a8898e1988d277a1bbc697c992b78d19"
+  },
+  {
+    "id": "cce-manual-017",
+    "passed": false,
+    "reason": "手工删除Pod以迁移已回答，却因未问的详细命令和迁移检查返回PARTIAL；还加入删除整个负载缩0的不同层级建议。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0048.md:18-18 sha256:b65076cddabf1d0c680c66fc9ce99eb56c57669f9d153cbdb84f5f2330e05806"
+    ],
+    "answer_sha256": "aab0e1cad652573a6187076611b9eb4268a4bcbb504175ad301ef5889dabbe5c"
+  },
+  {
+    "id": "cce-manual-018",
+    "passed": false,
+    "reason": "DaemonSet与日志/节点监控已答，未问的插件、目标、版本细节导致多余gaps和PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0216.md:13-13 sha256:92ceaa619a03bdd0a89ee83ea595e5ce282f5ab3de667e38933aab93c475af73",
+      "documents/cce_10_0216.md:14-14 sha256:83499ee4e434e61ed2fc6c92b3ae5f618bae885e51c0a82c68b9805594938b32"
+    ],
+    "answer_sha256": "f399c5f5d929f711a086551c1280c7637f6e2a69c6c654b9cbb3cc382a17d902"
+  },
+  {
+    "id": "cce-manual-019",
+    "passed": true,
+    "reason": "批处理/HPC、机器学习/深度学习/生物与基因组/大数据、作业调度与运行管理及异构GPU/NPU能力均有表达；作业管理为任务运行管理的等义表达。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0702.md:44-44 sha256:a53e45f161e46d8400159e1a3adbdda5115ee942b758836d5e1da6ef99673564"
+    ],
+    "answer_sha256": "324e495a34ec81aaabea9977a4bef7a0f6bb3adcfad383a987d18ccb118601a8"
+  },
+  {
+    "id": "cce-manual-022",
+    "passed": false,
+    "reason": "驱动在节点、Toolkit在镜像和版本配套已齐全，却因未问的完整版本表返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0846.md:18-18 sha256:838f82cbcac48789f4529030dd9152e7cc5ff8dd6d6738b4a2e0a64513410053"
+    ],
+    "answer_sha256": "f0979f8d4057e10c54b503d4bdfc73027afbebc8a96200bf0a566367986886aa"
+  },
+  {
+    "id": "cce-manual-023",
+    "passed": true,
+    "reason": "节点互通、Pod独立IP无需NAT、Service稳定内部访问三层职责齐全；网段不重叠的补充有原文依据。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0010.md:12-12 sha256:b7f8914796b6ab3159f01a3faae1ebe3f6929eff3680987480d634d15b55b942",
+      "documents/cce_10_0010.md:14-14 sha256:c79ac44489553085d619657943ddb261811caf5c83d26d4b2cf221a0e2b46024"
+    ],
+    "answer_sha256": "93e522a63c3e055870eff831200f438222d24b83d75ad68c2ab23fe20a4e802d"
+  },
+  {
+    "id": "cce-manual-024",
+    "passed": true,
+    "reason": "VPC无隧道封装且受路由配额限制、隧道VXLAN/Open vSwitch均齐全。模型评审拆为三个支持摘录曾格式失败，但不影响实际答案完整性。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0281.md:10-10 sha256:d479cec29342cee8019e979fd149d743b3a3fa39bc8d5e8d66be4c31a735deb5",
+      "documents/cce_10_0281.md:13-13 sha256:c47292a532a08dc6f239859e4428d77909e466656cb923c7c895066c6f21a5d3"
+    ],
+    "answer_sha256": "04060ea139165972c71dff83736f853863c1e1e88c49d90c8225d333be9480f4"
+  },
+  {
+    "id": "cce-manual-025",
+    "passed": true,
+    "reason": "ENI/Sub-ENI独立IP、无隧道和NAT完整，ECS/BMS差异及地址空间消耗有网络说明支持。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0284.md:9-9 sha256:858cb06b2159582a79c173e2f2149681b307de631427fd5e7b49f25e938beb0c"
+    ],
+    "answer_sha256": "98fe1afcaab19eac00773a26b61276476a39e56ee15fa19e97b572570fbe8cd5"
+  },
+  {
+    "id": "cce-manual-029",
+    "passed": false,
+    "reason": "保留数据及同可用区前提已回答，却把旧文档省略条件当成冲突并返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0613.md:7-7 sha256:fb5a371c47adf97f8854452a5f2e2d710578b05921bc3fdeee6de3d23c3e02ee"
+    ],
+    "answer_sha256": "51c62330b0c7e2a2891f505e9d65c39ab621973f95f2564b33b0046e2ace1bb1"
+  },
+  {
+    "id": "cce-manual-030",
+    "passed": false,
+    "reason": "PARTIAL，仍缺非系统/非专属/非共享盘；混入历史旧卷VBD兼容条件以回答现行静态导入，范围不清。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0614.md:14-14 sha256:4fe30979d5004c2c03bc3c4d0f05e6fc4d3d12aebc1989c7f96d2fa0876db008",
+      "documents/cce_10_0614.md:19-19 sha256:d698a32402362812a692ef8f659c9ba18f2333fcef10ff76090affd9edd3e27c"
+    ],
+    "answer_sha256": "ada17abfe15c7aee81a0d0631f853f3572a81e408f55569eb5d90422c84618d5"
+  },
+  {
+    "id": "cce-manual-031",
+    "passed": true,
+    "reason": "非共享/跨可用区限制、读写缓存冲突、无状态负载建议单实例齐全；HPA在1.19.10前后表现有原文依据。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0614.md:24-24 sha256:a4e8d973bfaff01dfc1296db5f339fe62edfc4090cdba990b52c84179092fc3c"
+    ],
+    "answer_sha256": "0ffa28641650a2d1b821134e3c856d7148f7e5d77430b14103b5b51d0f32c752"
+  },
+  {
+    "id": "cce-manual-032",
+    "passed": true,
+    "reason": "调度层调整Pod数量或规格、资源层调整ECS计算资源齐全。组件补充区分了CCE突发引擎扩展至CCI且无需关心节点。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0279.md:20-20 sha256:ed692e76b7a5e57421fd8f2be4390491b3049ee3e2a4a73ef3801ea9efbc2a78",
+      "documents/cce_10_0279.md:21-21 sha256:f24ddb8a657f14668b0ab70fbc592727f855e4c726dcb6a89acb6a511f4117dd"
+    ],
+    "answer_sha256": "547c37e0be77085bbf909b9d51662b90c38924cc10d730666aef68ce0aed0eb3"
+  },
+  {
+    "id": "cce-manual-033",
+    "passed": true,
+    "reason": "周期度量、计算目标副本、调整Deployment等replicas齐全，Metrics API、公式、冷却与HPA注解补充有实际召回依据。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0290.md:20-20 sha256:2f161f6b129229a043aaeede8211fe32a4115a266881ae1b64c955dd2b057893"
+    ],
+    "answer_sha256": "27df74d9544823d98f534ec6b15b29cc8d0e836416dbb453603e13f53be32b91"
+  },
+  {
+    "id": "cce-manual-034",
+    "passed": true,
+    "reason": "需要Metrics API，并按各集群版本及基础/自定义指标需求列出插件选择，满足两个必答点。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0208.md:13-13 sha256:c5ece9bdffc9fb681bf5f9d866df4cfda77cf33dd08910404f7862e380b9619f"
+    ],
+    "answer_sha256": "bdc88ee8c2839a9f8458129808b35d544ed858ad1c5bd072b4560e53110c9083"
+  },
+  {
+    "id": "cce-manual-035",
+    "passed": false,
+    "reason": "自定义HPA和Prometheus已回答，却要求核实用户业务前提及未问的版本/配置细节，返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0944.md:7-7 sha256:0fc4101a956010f2701cd5067f61aa551ce0aa22b448fcdd186a0d019dc00efc",
+      "documents/cce_10_0944.md:13-13 sha256:d0d470da08058b7567fff85cb38a815ca8b864e2f4ddb260fc45ec66e329ddd4"
+    ],
+    "answer_sha256": "e79cfc3b03f1c368edf963c91ca991c760c17a54c82c0cc05da7101985adbe58"
+  },
+  {
+    "id": "cce-manual-036",
+    "passed": false,
+    "reason": "Velero、YAML到OBS、EVS快照三点齐全；未问Velero版本和快照文件物理位置造成多余缺口，PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_1159.md:19-19 sha256:620c215ae196d2a3af5a5b27fa00a2790dd9daddd0d88fbdf46d30bec5d0351c",
+      "documents/cce_10_1159.md:20-20 sha256:7ac9b3e7be8f4f85a521364b55ab20f7f6373e98cb54c76f0d3dcb0dde826b10"
+    ],
+    "answer_sha256": "092c2c770060ff96bd871b812e8f9a291eac58d002926a7a483335b9fa7d5c0d"
+  },
+  {
+    "id": "cce-manual-039",
+    "passed": true,
+    "reason": "明确每周一03:00，五字段解释不改变原文执行时间。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_1164.md:17-17 sha256:bf40c8d746caacebacae1188aa13207e106e27dc1dcc640b598a1dfc2d698fba"
+    ],
+    "answer_sha256": "6fdc337b4ebd05107f72fced37872f18be9f7968c807b515cf5656fd8e11b003"
+  },
+  {
+    "id": "cce-manual-040",
+    "passed": true,
+    "reason": "算力底座→数据采集→监控与日志→云原生观测，顺序和四层名称完整。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0110.md:12-12 sha256:958120c9ed63a8d579f52b2f1a38d5a91afe7ee3e09ad48b6cdcbcbfbb92006a"
+    ],
+    "answer_sha256": "e2f80bdb2c06bc4c97ab8f3de96ede1bed21e652144c75031595c7e5144f979e"
+  },
+  {
+    "id": "cce-manual-041",
+    "passed": false,
+    "reason": "问题只问权限粒度变化，答案却因缺少所有Action清单返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0953.md:9-9 sha256:b3b158edcab5ca3411be22f26c3ee9fc2f624645b7fc28f7888a04c110919fc0"
+    ],
+    "answer_sha256": "e290abd4f73418822a52262f07fa0da18f9ac08ad697c76b531714160edefdd3"
+  },
+  {
+    "id": "cce-manual-045",
+    "passed": false,
+    "reason": "PARTIAL，另页admin用户组说明与Security Administrator混杂为未解冲突；未形成冻结要求的明确授权回答。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0952.md:7-7 sha256:a62de74a9c26c915dc98ec31d5aead5db092ce9ee451b87413f80bad85edcdf9"
+    ],
+    "answer_sha256": "122ac5a4acda59e389e0c718dfaf24c05db2f8eda2cf41441c63e57426bc22d8"
+  },
+  {
+    "id": "cce-manual-047",
+    "passed": true,
+    "reason": "当前采样Request与Real Used取最大、不相加，CPU/内存及PVC成本补充有依据。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0876.md:15-15 sha256:9f180c1a6d46cc06439e3a62ae2d9b0f6e560de722e3af30b0a2d4a150f2ad69"
+    ],
+    "answer_sha256": "8a81175d6a7712cf7e4570bca5fe0b3634649ff8a0e478e3dd721749c2d9ace8"
+  },
+  {
+    "id": "cce-manual-049",
+    "passed": false,
+    "reason": "集群v1.29和Volcano1.21.7已回答，却因片段丢标题无法确定另一前提所属插件而返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_11511.md:15-15 sha256:9f862dbc001d2430b76c2b851b7f9d981abdc2547b2bb832fb9fa55ff4af2b22",
+      "documents/cce_10_11511.md:16-16 sha256:c39bdcdc0a6de7a59a6f80e3c3bed8631fc255f785313573d54d3d759eb9b003"
+    ],
+    "answer_sha256": "500f04310604ff4d98efd4a8141bed465ce1c081a2dcbe81bc8275148b240718"
+  },
+  {
+    "id": "cce-manual-050",
+    "passed": true,
+    "reason": "Kthena ModelServing、vLLM、Entry/Worker完整；三层控制结构及Prefill/Decode/Gang补充有实际召回依据。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_11511.md:9-9 sha256:3f98a487d4ddc7fc2bdc7a33a3d646a89670bd5c16e0319fe665840a4df7841c"
+    ],
+    "answer_sha256": "5e9e06b0656b8573274684b1307832f105ddaea0742d113327ccc55a9fa914bc"
+  },
+  {
+    "id": "cce-manual-051",
+    "passed": false,
+    "reason": "PARTIAL，未问的版本和部署要求造成缺口；仍未明确声明式生命周期管理。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_1123.md:13-13 sha256:b413f01c2c2abadb8a8087a9b60cd71147f42ab1f00ea729c1101a255740174a"
+    ],
+    "answer_sha256": "d7426e5bd67a48dbf52a661310a368f9e340b6831141555b8c6e407b542df6a3"
+  },
+  {
+    "id": "cce-manual-052",
+    "passed": false,
+    "reason": "免YAML、参数/NPU/硬件预置与可视化入口均已答，但额外完整模板清单和版本门槛缺口令结果为PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_1154.md:18-18 sha256:94791f522eef38dc117a9bdd1a500aee4cc584830f976a052d7c174ddd58dd02",
+      "documents/cce_10_1154.md:13-13 sha256:c0f4000c56c21d6cac28f1a2e4b42b1d276e295f68cd39fd708c42290bce7ffb"
+    ],
+    "answer_sha256": "1cee00094d810c3fa3bc1a31119a712aa59859c0ff991031bace7ef773f95550"
+  },
+  {
+    "id": "cce-manual-053",
+    "passed": false,
+    "reason": "Service上限已答，却追问假设例外和与Pod换算关系，返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0278.md:19-19 sha256:887464e7080aa27e7586352daad1bd95cb33a15f95f85f2dd1e59c6cbb2ed61c"
+    ],
+    "answer_sha256": "07aec5e721bae4bd02e7c4cc94667e2369a0b3bd202dc3ae423f555d2097ef66"
+  },
+  {
+    "id": "cce-manual-054",
+    "passed": true,
+    "reason": "节点定期更新对应Lease作为心跳、更轻量及规模/性能收益均齐全，1.13历史依据一致。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0278.md:29-29 sha256:caf4b80f53092b1eadc936d3aa83750103cfe30a9ad1d535f27694d02a5a0686"
+    ],
+    "answer_sha256": "9858fa3fd09b5fec3242b6396b91c0b8cb564fcdf63a06624e8f03c7262c8c66"
+  },
+  {
+    "id": "cce-manual-055",
+    "passed": false,
+    "reason": "PARTIAL，缺创建/查询工作负载选命名空间，且将FlexNPU的v1.29前提错误套给命名空间。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0285.md:9-9 sha256:1bb41cad7bb282da433d127c84266be595c5306936e74c02d3d329b87893a2a1",
+      "documents/cce_10_0285.md:21-21 sha256:d5bd35649dd972b99a7481ae565fefd378b3b016ce9a19f19878a092ac218a59"
+    ],
+    "answer_sha256": "d702d97de2c305aa2b6588eef900511b8a4e3425c50c635547c84cfa0ce324b6"
+  },
+  {
+    "id": "cce-manual-058",
+    "passed": true,
+    "reason": "非敏感配置、密码用Secret、文件挂载及环境变量两种读取完整。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0152.md:9-9 sha256:e40a83f67e818e2aeedf453934beeecbf19bd1ba2a5ad868c97361d6d265456a"
+    ],
+    "answer_sha256": "2d6ee038734705dd54ee25be0538d6d534b4c8b8824c46e84971baaa8659d5f5"
+  },
+  {
+    "id": "cce-manual-059",
+    "passed": false,
+    "reason": "未问的刷新周期数值与替代方案造成多余缺口，返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0015.md:28-28 sha256:2654e652ef02526f659e71c989bc9fe63ad4304fc2ff60724487ae34f7d5b2f8",
+      "documents/cce_10_0015.md:30-30 sha256:0df3445a22576a7f3abe7cf44d787f263ba073f62e207531c8446bdf258b06e4"
+    ],
+    "answer_sha256": "2eef82379e767752dc57a4457bf48842f01cc292d021ecf300f1e14abc77b441"
+  },
+  {
+    "id": "cce-manual-062",
+    "passed": false,
+    "reason": "问一般插件修改入口，却要求未知插件身份、API详细参数和Dashboard步骤，返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0277.md:16-16 sha256:7bc6b0b04a8146cfa4162ca0729e9108ab5feff1edd198be45c6ec1d8f2612a6"
+    ],
+    "answer_sha256": "0b248ad9cd57574dd6d30039b15cebf67192ccb39007ef3372ed855abb893e4e"
+  },
+  {
+    "id": "cce-manual-064",
+    "passed": true,
+    "reason": "Autoscaler资源不足扩节点及低利用率删节点完整；限定了资源不足/亲和条件，没有保证其他Pending均能扩容解决。禁止项不要求复述，纠正LLM误判。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0154.md:9-9 sha256:2d489afd629520e44a761dcf51207efb8e7110ea5060cfb87c7ec1c9b6dfe99f"
+    ],
+    "answer_sha256": "22ed1ecdfa011be24fc91f3fa03d2e3b9bbc3261742aa1b8f665846dfd95a4f5"
+  },
+  {
+    "id": "cce-manual-065",
+    "passed": false,
+    "reason": "副本而非节点、CronHPA/CustomedHPA已答；把另处提到AHPA视为冲突并返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0240.md:7-7 sha256:eaca94dadc27c5215fe20af643a00e9118e57b02b20f125f5c995c296001d5bc",
+      "documents/cce_10_0240.md:9-9 sha256:cdf47c3d3e93c0b2025b916a6eb870e75b370726acb3cda6d1f5e6ef9c552571"
+    ],
+    "answer_sha256": "e8af2007e6d9c10f5e7ce0dcc9690f1b22db5efa44981029905d961148abdf30"
+  },
+  {
+    "id": "cce-manual-066",
+    "passed": false,
+    "reason": "客户端可v2/v3不受控制台版本限制已答，却追问用户未要求的小版本对应表，PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0191.md:9-9 sha256:3ba20c79c804bb71f0877d3ef21e1d94f904a6deb632a899c78f403c8878b664"
+    ],
+    "answer_sha256": "8dd962911f2cde5e9b6e46572669ef194a0380ac6e47f84b7dcea1868f39f0e9"
+  },
+  {
+    "id": "cce-manual-067",
+    "passed": true,
+    "reason": "各版本消耗配额、name-version.tgz和三段版本格式齐全，修订可选及0..99是实际模板包规范的原文。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0146.md:17-17 sha256:e0341f98a2da82b70d941cad6166d1a836d5ad0812f410eddef8019d055a4645",
+      "documents/cce_10_0146.md:26-26 sha256:4b59443ec5a621c54dd49805718a75ee382a0aededadf10a2fa01ca19172f40e"
+    ],
+    "answer_sha256": "1f88deb5ed331d0614726873d59fb92e570903329f0995fd1afc3b2024952a91"
+  },
+  {
+    "id": "cce-manual-068",
+    "passed": false,
+    "reason": "PARTIAL，额外认证/RBAC/路径机制缺口并非问题所需。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0421.md:13-13 sha256:c6be97900c2e50dbb91ac16201a3ed5710436e2af45cd1255cd9e0f753070eb7"
+    ],
+    "answer_sha256": "3a5b1f4b238d20458e86246bda1758852c351f23e985f7c1cf3d02ee819c82f8"
+  },
+  {
+    "id": "cce-manual-069",
+    "passed": true,
+    "reason": "v2到v3转换原因与页面再次删除操作完整，ConfigMap/Secret补充有来源。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0420.md:17-17 sha256:64c6885e8f5994ece3a1b65d4150444d96bb7e3c69090c2a1891f359a8e28ea2"
+    ],
+    "answer_sha256": "3203012a51099aa281dab2be9b4693243735d2f2edef1efd7c03d7e732d6fbb0"
+  },
+  {
+    "id": "cce-manual-070",
+    "passed": true,
+    "reason": "IAM/RBAC、集群/命名空间、IAM用户/用户组权限均齐全；两套权限需配合的说明与原文一致。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0187.md:7-7 sha256:8a03eaf9c42f8bb0f701fb989b6e9a9c8a8f5ca36b8c9ef86c6d1155106f3231"
+    ],
+    "answer_sha256": "b1c00ba981d764d668bc96ef91951bf7a01a6e3392e8f585ea9afabccd1eac45"
+  },
+  {
+    "id": "cce-manual-071",
+    "passed": false,
+    "reason": "PARTIAL，未问的操作清单等造成缺口，同时仍遗漏委托其他账号/云服务代运维。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0732.md:9-9 sha256:bce9b1297393395820ce4bc453ee83b3ebc5eb0ac1b6df63769c821fa23e3657",
+      "documents/cce_10_0732.md:11-11 sha256:cfa3499841e33d79d3b6ace93b21b1821e0a363c73e1eb5668a0becc43dc4c48"
+    ],
+    "answer_sha256": "1f8e0ec8feb9037c5168590a52464ebbdf51c6dd314803191d4894146826a29b"
+  },
+  {
+    "id": "cce-manual-072",
+    "passed": true,
+    "reason": "身份策略为新版、旧版角色与策略完整；Tenant Guest及额外操作权限有新版配置原文依据。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0733.md:9-9 sha256:567bea02fd36511b10c3a43a8907c99527176d57adc70a7e191db86ab1d521a7",
+      "documents/cce_10_0733.md:9-9 sha256:567bea02fd36511b10c3a43a8907c99527176d57adc70a7e191db86ab1d521a7"
+    ],
+    "answer_sha256": "a27a9467bc1b331e3b6d0547d036445c1fcd109220305476996d4f1d9d2f1cb2"
+  },
+  {
+    "id": "cce-manual-074",
+    "passed": true,
+    "reason": "配置中心和配置概览入口齐全，展示信息及监控跳转在实际同页资料。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0782.md:12-12 sha256:8670c7658a9f6dc56ceb56b304a0d06ba6b2527d595318b265224bc974d4991f"
+    ],
+    "answer_sha256": "4664910e52b7bbab7ab246bc193ba4da4c0dcc67fca620c764c961e297a58379"
+  },
+  {
+    "id": "cce-manual-076",
+    "passed": false,
+    "reason": "问题只问模型与最低版本，因额外详细步骤缺失而PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0784.md:44-44 sha256:9f91369328bed1d7c1b065e2ab317e55ec379f5c36dc4e35225def93d555823a"
+    ],
+    "answer_sha256": "5b4f6de51c60d33e2f55e339c2308f90a00c314a54e1c6e20867bd506c1fed9a"
+  },
+  {
+    "id": "cce-manual-080",
+    "passed": false,
+    "reason": "跨节点共用EVS后果正确，未标注历史Flexvolume范围；新旧HPA版本补充不代替该范围说明。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0310.md:19-19 sha256:8d97cf71ff601d511d550707a35e6a894e035400f1d80e5b04a92b258f8352b9"
+    ],
+    "answer_sha256": "aacaaccd2409e3a7acd53b8506793055641ba00b725f6fa35379d0a8b762c8ab"
+  },
+  {
+    "id": "cce-manual-081",
+    "passed": true,
+    "reason": "明确历史Flexvolume示例、10Gi、ReadWriteOnce和可用区一致，且限定1.9/1.11/1.13集群。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0312.md:23-38 sha256:88db059e0c7269dbd50cd01adef01f6f76e0b27eb0615cce1528be2bc8b1a8f5",
+      "documents/cce_10_0312.md:47-47 sha256:4f6db70d58a2db4926d5fc6c1ec7c3ba6cda41c2dc69ceee10c6e8e8d9d321d2"
+    ],
+    "answer_sha256": "c4d6c55d5eadecc9c0940c01f9782771d9d1a03666e7aacd9bb3117dc8602ca2"
+  },
+  {
+    "id": "cce-manual-082",
+    "passed": true,
+    "reason": "控制台卸载IO Error→删mount目录/重调度，节点umount写本地→重新mount，两行方案区分准确。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0054.md:107-107 sha256:060b51b80bb4eba36be8aa1042ed62f1cd874c5bdebd64e7b5fd2cdfe86e6648",
+      "documents/cce_10_0054.md:108-108 sha256:74664b96af5ef61bc571857ad612bcb0a7f854f64429de5f3fbd30b138218132"
+    ],
+    "answer_sha256": "cfe2b0a654e9f14b487aa1645daaa02dd80ffa04938a5410e7cbf29e9c0e6f01"
+  },
+  {
+    "id": "cce-manual-083",
+    "passed": false,
+    "reason": "已答恢复栏无，却把无恢复路径本身作为缺口返回PARTIAL；问题并非要求找新恢复方案。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0054.md:109-109 sha256:507b21a4cf5b0d368c71c3c97c1afdd80b12e85b3d62a3864a76abc45635a1a9"
+    ],
+    "answer_sha256": "fe5aab7c54362dac51900ecb685086be40855c04e3914ac8ee222f10c6bdcbaa"
+  },
+  {
+    "id": "cce-manual-084",
+    "passed": true,
+    "reason": "控制节点不可恢复与Node可重置准确区分，组件删除后果齐全。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0054.md:18-18 sha256:2ff4ec90e7efcab53451593181ed86b278e494dfa316c053499e550068f6901b",
+      "documents/cce_10_0054.md:28-28 sha256:95df11dbbc1000590064d7e96fed5b3b44896be89611acb88f306e621f3c5186"
+    ],
+    "answer_sha256": "3523034859e4daf3e879fdc84ecf77fa527527e5a500615bbb61a149840f66c9"
+  },
+  {
+    "id": "cce-manual-085",
+    "passed": false,
+    "reason": "问题指定高危操作表口径，答复混入其他文档口径及未问环境变量后返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0054.md:99-99 sha256:bde212f0c228b1059031c127e335d88f16e43b7c821eb9317a9bf3c84db9a6a5"
+    ],
+    "answer_sha256": "720f41883e48f6ae3ce0491be89f75b9739a7e90e5f02e84834092cac13f278c"
+  },
+  {
+    "id": "cce-manual-086",
+    "passed": false,
+    "reason": "因未问的底层检查实现、版本和完整重置步骤返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0054.md:40-40 sha256:55878763b4deb0b842c6dc4504524cd4bedfdf2270f0ac971e781c3ef116f73d"
+    ],
+    "answer_sha256": "fce2523e63f8ecd62c1fd92c26925c09d27a471938ae0a34139e366f467f935d"
+  },
+  {
+    "id": "cce-manual-087",
+    "passed": false,
+    "reason": "因未问的枚举全集、具体命令/同步时间与成因返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_1164.md:50-50 sha256:f9dfbf547190a945e474ede93c5770a4484a88381f48a91b49bff8f14bf1df62"
+    ],
+    "answer_sha256": "467a90f13927c94d4f8f96d438cab4821149899c0e2e46bfd66d0fecb0293e01"
+  },
+  {
+    "id": "cce-manual-088",
+    "passed": true,
+    "reason": "restores/backups、删除多余文件恢复及未声称已执行三项满足；子目录说明也有召回依据。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_1164.md:62-62 sha256:8a27a349a07b2f18f6dea011fb970f2e17d2f61b71f2eb7765a2a319992e1e8c"
+    ],
+    "answer_sha256": "a553ac849eb26a8630876e4ba504be2d5bedb02cd23e81c5db8a7d5de8e98d29"
+  },
+  {
+    "id": "cce-manual-089",
+    "passed": true,
+    "reason": "先删等待绑定PVC再恢复、未处理遗留未绑定PV、清理PV及EVS三点齐全。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_1164.md:72-72 sha256:bd406148fd92abb4916739bd91a1bd50f3ef644e744374b88f63d730d92e22d7"
+    ],
+    "answer_sha256": "2d97de113fb462eecccadf8338ae335c9ad8e4e6107cc73460dcc4ecac1c1d34"
+  },
+  {
+    "id": "cce-manual-090",
+    "passed": false,
+    "reason": "问句已排除冷却/限额，回答仍因这些未提供条件返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0290.md:47-47 sha256:a7584a090cb3269615e7b5d1517f0edf075e79bcfece4d414f4a11d6b3d078c9"
+    ],
+    "answer_sha256": "80680be5eb1ace0a03f455a4d9c77ab094f905c90c0aa550cbc236871f133b18"
+  },
+  {
+    "id": "cce-manual-091",
+    "passed": true,
+    "reason": "metrics为Pod/Node CPU内存，custom关联Kubernetes对象，external不关联资源，三项齐全。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0290.md:40-40 sha256:7c0f7bcf77c0a5af50a3a0d374055e623fb4994661b82031c7ebd3ac207fd790",
+      "documents/cce_10_0290.md:41-41 sha256:328b24cd51d3b2699c4834395a4804e7de48f5ae753d051d7833d9a601dd3ef2",
+      "documents/cce_10_0290.md:42-42 sha256:3819f33629303012b3c28785a77aa904bb8d96bb55430058eb35af2d19036873"
+    ],
+    "answer_sha256": "898a9145c75c3c9739d8d41d12867b9463c3a947b72d4755d66d7bb843d0e75b"
+  },
+  {
+    "id": "cce-manual-092",
+    "passed": true,
+    "reason": "Updater/Admission职责及Recommender建议均齐全，新版原地升级限制确实存在于实际召回资料。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0290.md:91-91 sha256:1bf40291096ea00589cb5eb998078bc0155a4c88e6270f21bb7d5ce379430050",
+      "documents/cce_10_0290.md:92-92 sha256:60c92436fc02f2ba204769250068a50cf13a4ecd7cf1bd0c3c6f8d693a3d2806",
+      "documents/cce_10_0290.md:90-90 sha256:dbff5c57e4cc6a23bb9bd5fa656075fe5d28def8c0a2eda65ca605cf01439c0f"
+    ],
+    "answer_sha256": "da6abbc1167c3689483b5a25bf7e3959ab3b2148a45075b9d2e17ac90f2df54f"
+  },
+  {
+    "id": "cce-manual-093",
+    "passed": true,
+    "reason": "crds仅安装部署、升级不更新、删除不卸载及拆chart管理均齐全。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0421.md:34-34 sha256:7e999a5bd6d2068735b087d727171b972afbd301b13e917beabc22c6720e78ba"
+    ],
+    "answer_sha256": "e24bf8dc2a28bff0eca5bba68b726c285e357c4fd6742473aa0a00cea56af73c"
+  },
+  {
+    "id": "cce-manual-094",
+    "passed": true,
+    "reason": "v2 ConfigMap、v3 Secret和跨命名空间重用名称完整。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0421.md:23-23 sha256:8c02d862c944da842a43b8d5a7966b414c6496070dd9c47879ff4f82f9e8024c",
+      "documents/cce_10_0421.md:26-26 sha256:d74b7885eb81787b36304dae9f1e7962dc5f6b02b94731bdc1f4d30810e3e0ef"
+    ],
+    "answer_sha256": "7d7875748815804000dd10f94048acbbd1c5eec25143a82295d85d9579ba060f"
+  },
+  {
+    "id": "cce-manual-095",
+    "passed": false,
+    "reason": "两个版本与冲突均答，gaps中给出核对当前Region/权威说明；但问的正是资料冲突，仍返回PARTIAL，冻结规则不能通过。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0191.md:7-7 sha256:4808e27a6a89f041cd5aa886e12f86c4cc9ce7c9e16ee0c101667965afebce47",
+      "documents/cce_10_0146.md:16-16 sha256:c45a9ed752675a4f562179a3fa7c5bb9d3cafd4d8e108fdd351c822a6c3d59b5"
+    ],
+    "answer_sha256": "14a0b678225e83eda331e68cc1d76235b9e1afc6532d29321a1e6a979f698376"
+  },
+  {
+    "id": "cce-manual-096",
+    "passed": false,
+    "reason": "PARTIAL，EVS版本门槛仍缺，不能从对象/文件存储参数中移用条件。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0614.md:128-128 sha256:11d2c13cf84246f174d33ce534b5cef61f608920c455ef712f1c3d42f49d0918",
+      "documents/cce_10_0614.md:141-141 sha256:33ee6ae0190b4b4a06731251b9049a221c86500417df1e12a2d86fcc990cbd40"
+    ],
+    "answer_sha256": "fbc50b3a6e59fb28fa08973c40ede11df79a32b060bbe0088f7485ce445d542d"
+  },
+  {
+    "id": "cce-manual-097",
+    "passed": false,
+    "reason": "正确说明Retain与Released后，又将复用原卷步骤同手动删除底层存储的回收流程连在一起，可能导致原数据丢失，不能视为正确复用指导。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0614.md:141-141 sha256:33ee6ae0190b4b4a06731251b9049a221c86500417df1e12a2d86fcc990cbd40"
+    ],
+    "answer_sha256": "154ca27821e2464fd541a98e5009bde8a3ffd738f5ad8e1fa64c0e64e5224a44"
+  },
+  {
+    "id": "cce-manual-098",
+    "passed": false,
+    "reason": "nvidia-smi、版本配套及优先推荐/自验均答，却因用户未问的具体型号版本列表返回PARTIAL。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0846.md:20-20 sha256:cf1a67f32ada07fc9c4e9636370dc55d1404c67d075f4da9db646f50d9ead466",
+      "documents/cce_10_0846.md:31-31 sha256:84891c3b2fbc4b36d314ecd037a4d18f2fe1ff5d99a523f3273de39868c5ad62"
+    ],
+    "answer_sha256": "44a0d92e918c976d4cfe5ccb6b8142aba429ec02d029e6ffee9de4353470dc24"
+  },
+  {
+    "id": "cce-manual-099",
+    "passed": true,
+    "reason": "空闲成本不直摊工作负载/命名空间、可公共成本摊部门、比例可配置三点完整。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "documents/cce_10_0876.md:51-51 sha256:5c03de0dc8cfbb0643ae473a5254e15c327d2eb2026fe86615ed7174b273ae20"
+    ],
+    "answer_sha256": "06ef7285f63dab30db5d7facb3796ff4e8c36a9e783267d837414ef9ce1c9a71"
+  },
+  {
+    "id": "cce-negative-runtime-nodes",
+    "passed": true,
+    "reason": "明确prod-7缺实时CPU监控，不能确认实际百分比，没有编造数值。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "实际answer/gaps、召回资料与冻结具体缺口要求"
+    ],
+    "answer_sha256": "3af0885179cc04b6e4a3bee900ab46a28619f4eea7c8390eb0dfc7040294cbfe"
+  },
+  {
+    "id": "cce-negative-runtime-backup",
+    "passed": true,
+    "reason": "明确缺生产集群真实备份记录，不能确认结果，查看phase/日志的补充为原文支持的方法说明。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "实际answer/gaps、召回资料与冻结具体缺口要求"
+    ],
+    "answer_sha256": "edd860be1d742c7b51c449737915c4156d1661b97806c1d6d1ea3fa4e4c2208c"
+  },
+  {
+    "id": "cce-negative-runtime-security",
+    "passed": false,
+    "reason": "虽然明确未取得真实密码，但将手册示例的347 bytes写成default-secret data固定属性，未标示示例范围；数值不能作为当前租户事实。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "实际answer/gaps、召回资料与冻结具体缺口要求"
+    ],
+    "answer_sha256": "ee39df71119b202b988eca27543ffcc77b3a86c51a37837ee99aeafe9e08a4fa"
+  },
+  {
+    "id": "cce-negative-unprovided-cve",
+    "passed": true,
+    "reason": "明确所有片段均没有所问CVE及修复版本依据，未编造版本。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "实际answer/gaps、召回资料与冻结具体缺口要求"
+    ],
+    "answer_sha256": "65796cb92ad6b0e6e0c6ca819436b4f12f8007f08f1ad8e918f164771ee52efc"
+  },
+  {
+    "id": "cce-negative-unprovided-quota",
+    "passed": true,
+    "reason": "明确未定义虚构参数且不能确认取消所有配额方案；另一个参数说明没有替代成答案或声称取消配额。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "实际answer/gaps、召回资料与冻结具体缺口要求"
+    ],
+    "answer_sha256": "3909a9ce45eafac3a653ac0c84d84bfacbc3a1d0523776eb425672013f395fd1"
+  },
+  {
+    "id": "cce-negative-unprovided-extension",
+    "passed": true,
+    "reason": "明确插件安装与最低版本均无依据，未套用已召回其他插件的版本。",
+    "reviewer": "GPT-6 agent evidence review; not human certification",
+    "evidence_checked": [
+      "实际answer/gaps、召回资料与冻结具体缺口要求"
+    ],
+    "answer_sha256": "df8bbe674ba1749099cc0665cf40bd32b949b5bc153abb6eabbf3edfde979a21"
+  }
+]

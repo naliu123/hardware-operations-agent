@@ -1,0 +1,13 @@
+{
+  "version": "cce-v1",
+  "sha256": "c08c4b67938d20506a1e58aa278778ab65e907871ac95cb10bab41981ee2cc10",
+  "total": 66,
+  "development": 25,
+  "heldout": 41,
+  "answerable": 61,
+  "primary_metric": "macro Recall@5 on answerable heldout questions",
+  "target": 0.6,
+  "provenance": "Agent-authored questions grounded in captured official source rows; not production traffic or human-expert-certified labels.",
+  "split_policy": "Deterministic source-evidence groups; every multi-evidence comparison stays in its source group's split.",
+  "optimization_policy": "Inspect development bad cases only; freeze retrieval configuration before heldout evaluation."
+}

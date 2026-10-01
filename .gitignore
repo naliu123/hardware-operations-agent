@@ -1,0 +1,15 @@
+.tools/
+.cache/
+.local/
+bin/
+.env
+.env.*
+!.env.example
+!.env.*.example
+.venv/
+venv/
+.DS_Store
+*.test
+coverage.out
+__pycache__/
+*.pyc

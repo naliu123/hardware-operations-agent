@@ -1,0 +1,858 @@
+[
+  {
+    "case": {
+      "id": "cce-manual-019",
+      "group": "cce_10_0702",
+      "category": "调度",
+      "question_type": "concept",
+      "question": "Volcano主要弥补Kubernetes在哪类计算场景的调度能力？",
+      "answerable": true,
+      "required_facts": [
+        "批处理平台",
+        "面向机器学习、深度学习、生物信息学/基因组学和大数据",
+        "提供高性能任务调度、异构芯片管理和任务运行管理"
+      ],
+      "reference_answer": "批处理平台；面向机器学习、深度学习、生物信息学/基因组学和大数据；提供高性能任务调度、异构芯片管理和任务运行管理",
+      "evidence": [
+        {
+          "document_id": "cce_10_0702",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0702.html",
+          "title": "调度概述",
+          "file": "documents/cce_10_0702.md",
+          "content_sha256": "03863a57247c52c23d144e29ec9e0ae8f0d899e9f34394734795baaeb067b19c",
+          "start_line": 44,
+          "end_line": 44,
+          "section": "Volcano调度",
+          "anchor": "Volcano是一个基于Kubernetes的批处理平台",
+          "quote": "Volcano是一个基于Kubernetes的批处理平台，提供了机器学习、深度学习、生物信息学、基因组学及其他大数据应用所需要而Kubernetes当前缺失的一系列特性，提供了高性能任务调度引擎、高性能异构芯片管理、高性能任务运行管理等通用计算能力。",
+          "quote_sha256": "a53e45f161e46d8400159e1a3adbdda5115ee942b758836d5e1da6ef99673564"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-019",
+      "question": "Volcano主要弥补Kubernetes在哪类计算场景的调度能力？",
+      "answerable": true,
+      "question_type": "concept",
+      "category": "调度",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "PUAZZIEXBGU7LCMHBUXF2B4RW5",
+          "revision_id": "G7RRVJ2FNYEUCBTALFLH2QTERN",
+          "section": "插件简介",
+          "start_line": 8,
+          "end_line": 24,
+          "content": "[Volcano](https://volcano.sh/)是一个基于Kubernetes的批处理平台，提供了机器学习、深度学习、生物信息学、基因组学及其他大数据应用所需要而Kubernetes当前缺失的一系列特性。\n\nVolcano提供了高性能任务调度引擎、高性能异构芯片管理、高性能任务运行管理等通用计算能力，通过接入AI、大数据、基因、渲染等诸多行业计算框架服务终端用户，最大支持1000Pod/s的调度并发数，轻松应对各种规模的工作负载，大大提高调度效率和资源利用率。\n\nVolcano针对计算型应用提供了作业调度、作业管理、队列管理等多项功能，主要特性包括：\n\n- 丰富的计算框架支持：通过CRD提供了批量计算任务的通用API，通过提供丰富的插件及作业生命周期高级管理，支持TensorFlow，MPI，Spark等计算框架容器化运行在Kubernetes上。\n- 高级调度：面向批量计算、高性能计算场景提供丰富的高级调度能力，包括成组调度，优先级抢占、装箱、资源预留、任务拓扑关系等。\n- 队列管理：支持分队列调度，提供队列优先级、多级队列等复杂任务调度能力。\n\n目前Volcano项目已经在Github开源，项目开源地址：<https://github.com/volcano-sh/volcano>\n\n本文介绍如何在CCE集群中安装及配置Volcano插件，具体使用方法请参见[Volcano调度](https://support.huaweicloud.com/usermanual-cce/cce_10_0423.html)。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n在使用Volcano作为调度器时，建议将集群中所有工作负载都使用Volcano进行调度，以避免多调度器同时工作导致的一些调度资源冲突问题。",
+          "content_hash": "06ac43085ef87014b0047f609c1d54ff7d50f1cb51a4510a9e45e29755633eb0",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0193.html",
+          "title": "Volcano调度器",
+          "score": 0.03252247488101534
+        },
+        {
+          "id": "22OFL2DSUTFHF4BR6EVSR4NCZM",
+          "revision_id": "QYONJANRADZRGXKGXQJZXRYJDH",
+          "section": "Volcano Job",
+          "start_line": 2,
+          "end_line": 13,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_1092.html\n目录：用户指南 > AI容器 > 训练任务 > Volcano Job\n更新时间：2026-09-20 GMT+08:00\n\n随着人工智能、大数据分析和高性能计算（HPC）等场景的快速发展，传统Kubernetes Job在复杂任务调度、资源保障、任务依赖等方面逐渐显现出局限性。为解决这些问题，CCE Standard/Turbo 集群基于**Volcano**提供了 **Volcano Job（简称 vcjob）** 功能。Volcano是一个面向批处理与高性能计算场景的Kubernetes原生调度系统，提供了比原生Job更强大的作业管理能力。\n\n通过 Volcano Job，用户可以：\n\n- 定义包含多个任务类型的复杂作业（如 MPI、Spark、TensorFlow 等）。\n- 设置最小成功 Pod 数（minAvailable），保障作业执行的可靠性。\n- 指定专用调度器（如 volcano）进行资源调度。\n- 支持任务间依赖关系、索引型任务（Indexed Job）等高级特性。",
+          "content_hash": "c62d8d79f4fa786557dfc02c8f1768fdb06f5ab0b2d34cc7fc3cb3fda0ba72b2",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1092.html",
+          "title": "Volcano Job",
+          "score": 0.029827662395050816
+        },
+        {
+          "id": "IDLW7XD74DXZAOGGJUIJAHPF7Z",
+          "revision_id": "FLA6PWTPEKXRH63T7DPYOC3B4R",
+          "section": "任务调度",
+          "start_line": 20,
+          "end_line": 27,
+          "content": "Volcano调度器为批量计算的任务提供了公平调度（DRF）和组调度（Gang）的能力。\n\n**表2** 任务调度\n\n| 功能 | 描述 |\n| --- | --- |\n| [公平调度（DRF）](https://support.huaweicloud.com/usermanual-cce/cce_10_0777.html) | Volcano调度器支持公平调度（DRF），该功能基于最大最小化公平分配算法（max-min fairness share），旨在确保多用户环境下资源的公平分配。DRF通过为每个用户计算其主导资源（如CPU、内存、存储等）和资源占用比例，从而在调度时尽量保证每个用户根据其需求获得公平的资源份额。  该能力常应用于大批量提交AI训练和大数据作业的场景，可增强集群业务的吞吐量，整体缩短业务执行时间，提高训练性能。 |\n| [组调度（Gang）](https://support.huaweicloud.com/usermanual-cce/cce_10_0778.html) | Volcano调度器支持组调度（Gang），满足调度过程中“All or nothing”的调度需求，从而避免Pod的任意调度导致集群资源的浪费。其核心思想为检查Job下的Pod已调度数量是否满足了最小运行数量，当Job的最小运行数量得到满足时，为Job下的所有Pod执行调度动作，否则不执行。  该能力启用后，可以优先解决分布式训练任务之间的资源忙等待和死锁等痛点问题，大幅度提升整体训练性能。 |",
+          "content_hash": "a6e09e5e7b092cc47e2ddb3e72408cb5b87339cfc74c5ecbe79a81244efda34d",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0975.html",
+          "title": "AI负载调度",
+          "score": 0.02862400327131466
+        },
+        {
+          "id": "H4T4INMUDABZKTWHOCEIZLX44H",
+          "revision_id": "FLA6PWTPEKXRH63T7DPYOC3B4R",
+          "section": "异构资源调度",
+          "start_line": 31,
+          "end_line": 40,
+          "content": "Volcano调度器为CPU、GPU、NPU等异构资源提供了GPU共享调度、NUMA拓扑感知调度、NPU拓扑调度等能力。\n\n**表3** 异构资源调度\n\n| 功能 | 描述 |\n| --- | --- |\n| [GPU虚拟化调度](https://support.huaweicloud.com/usermanual-cce/cce_10_0645.html) | Volcano调度器支持在GPU节点上实现GPU虚拟化调度和隔离能力，并提供两种调度策略用于GPU虚拟化负载的管理：   - **Spread**：在GPU节点配置相同的情况下，优先选择运行容器数量最少的节点，从而实现GPU虚拟化负载的均匀分配。 - **Binpack**：尽可能将GPU虚拟化负载调度到同一节点，以减少节点使用数量，避免资源碎片化。 |\n| [NUMA亲和性调度](https://support.huaweicloud.com/usermanual-cce/cce_10_0425.html) | Volcano调度器支持NUMA亲和性调度能力，该功能优先将Pod调度至跨NUMA节点访问最少的工作节点，从而有减少数据传输开销，优化资源利用率，并提升系统整体性能。 |\n| [节点内NPU拓扑亲和调度](https://support.huaweicloud.com/usermanual-cce/cce_10_0980.html) | Volcano调度器支持节点内NPU拓扑感知调度，该功能是一种基于昇腾AI处理器硬件拓扑特性的智能资源管理技术，通过优化资源分配和网络路径选择，有效减少计算资源碎片和网络拥塞，最大化提升NPU算力利用率。该技术可显著提升AI训练和推理任务的执行效率，实现昇腾计算资源的高效调度与管理。 |\n| [超节点拓扑亲和调度](https://support.huaweicloud.com/usermanual-cce/cce_10_0982.html) | Volcano调度器支持使用超节点拓扑亲和调度能力。超节点由48个节点组成，其内部NPU采用特定网络连接方式形成一种超平面网络，可以提供更快的网络传输速率。超节点拓扑亲和调度可以将关联度高的Pod调度至同一超节点内，从而有效减少跨节点通信，降低网络延迟，并提高数据传输速度。 |",
+          "content_hash": "ec4b1f6167ba4c457f9f77c946ab0f67256e61e09b40e2464dcb9273d94a3b3c",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0975.html",
+          "title": "AI负载调度",
+          "score": 0.02631578947368421
+        },
+        {
+          "id": "XM4QNWCQ6XBRKC6YOM7NOGJHQ2",
+          "revision_id": "HHKXL7W4XI5Q7X2T7DTBVPGOV4",
+          "section": "配置组调度策略",
+          "start_line": 65,
+          "end_line": 74,
+          "content": "安装Volcano后，您可通过“配置中心 > 调度配置”选择开启或关闭Gang调度能力，默认开启。\n\n1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群。\n2. 在左侧选择“配置中心”，在右侧选择“调度配置”页签。\n3. 选择Volcano调度器，在“AI任务性能增强调度”配置中，选择是否开启“组调度 (Gang) ”。\n\n   启用该能力后，可增强集群业务的吞吐量，提高业务运行性能。\n4. 修改完成后，单击“确认配置”。\n\n   配置完成后，可以在工作负载或Volcano Job中使用Gang调度能力。",
+          "content_hash": "fce307bab32593d57803e581124abe3081013bf9bfc5a9144fada5ced15b8e16",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1130.html",
+          "title": "多维组调度（Gang）",
+          "score": 0.025645240835114255
+        }
+      ],
+      "result": {
+        "trace_id": "bff2a0c49365954e157ed808ad7009ef"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1175.918166001793
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-024",
+      "group": "family:cce_10_0010",
+      "category": "网络",
+      "question_type": "comparison",
+      "question": "CCE的VPC网络与容器隧道网络，在封装和节点规模方面有何区别？",
+      "answerable": true,
+      "required_facts": [
+        "VPC网络无隧道封装但节点数量受VPC路由配额限制",
+        "容器隧道网络使用VXLAN和Open vSwitch"
+      ],
+      "reference_answer": "VPC网络无隧道封装但节点数量受VPC路由配额限制；容器隧道网络使用VXLAN和Open vSwitch",
+      "evidence": [
+        {
+          "document_id": "cce_10_0281",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html",
+          "title": "容器网络模型对比",
+          "file": "documents/cce_10_0281.md",
+          "content_sha256": "4e4bbb934ee97c13b84e2c32a7f4b46c78794bd70ccabcae6ea1a25b20404854",
+          "start_line": 10,
+          "end_line": 10,
+          "section": "容器网络模型对比",
+          "anchor": "节点数量受限于虚拟私有云VPC的路由配额",
+          "quote": "- [VPC网络模型](https://support.huaweicloud.com/usermanual-cce/cce_10_0283.html)将虚拟私有云VPC的路由方式与底层网络深度整合，适用于性能要求较高的场景，但节点数量受限于虚拟私有云VPC的路由配额，适合中小规模组网。",
+          "quote_sha256": "d479cec29342cee8019e979fd149d743b3a3fa39bc8d5e8d66be4c31a735deb5"
+        },
+        {
+          "document_id": "cce_10_0281",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html",
+          "title": "容器网络模型对比",
+          "file": "documents/cce_10_0281.md",
+          "content_sha256": "4e4bbb934ee97c13b84e2c32a7f4b46c78794bd70ccabcae6ea1a25b20404854",
+          "start_line": 13,
+          "end_line": 13,
+          "section": "容器网络模型对比",
+          "anchor": "CCE集群容器隧道网络使用了VXLAN",
+          "quote": "- [容器隧道网络模型](https://support.huaweicloud.com/usermanual-cce/cce_10_0282.html)是在主机网络平面的基础上，通过隧道封装技术来构建一个独立的容器网络平面。CCE集群容器隧道网络使用了VXLAN作为隧道封装协议，并使用了Open vSwitch作为后端虚拟交换机。VXLAN是一种将以太网报文封装成UDP报文进行隧道传输的协议，而Open vSwitch是一款开源的虚拟交换机软件，提供网络隔离和数据转发等功能。",
+          "quote_sha256": "c47292a532a08dc6f239859e4428d77909e466656cb923c7c895066c6f21a5d3"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-024",
+      "question": "CCE的VPC网络与容器隧道网络，在封装和节点规模方面有何区别？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "网络",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "L4QTUGLUIMTKO24QDK4ZZLEEEE",
+          "revision_id": "3Q2BD7DYVSQLKOTYL27JABVUMA",
+          "section": "应用场景",
+          "start_line": 37,
+          "end_line": 38,
+          "content": "- 对性能要求不高：由于需要额外的VXLAN隧道封装，相对于另外两种容器网络模式，性能存在一定的损耗（约5%-15%）。所以容器隧道网络适用于对性能要求不是特别高的业务场景，比如：Web应用、访问量不大的数据中台、后台服务等。\n- 大规模组网：相比VPC路由网络受限于VPC路由条目配额的限制，容器隧道网络没有网络基础设施的任何限制；同时容器隧道网络把广播域控制到了节点级别，容器隧道网络最大可支持2000节点规模。",
+          "content_hash": "61bdfd077eee6ae7646886f383b20033dc4d13169326f3131394c79bcaf2d137",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0282.html",
+          "title": "容器隧道网络模型说明",
+          "score": 0.03278688524590164
+        },
+        {
+          "id": "POGF2C4ABCMCGQ7LBVXT74TYTR",
+          "revision_id": "24FXARY6GKNPFBXXA6GVRUYK2R",
+          "section": "网络模型对比",
+          "start_line": 18,
+          "end_line": 37,
+          "content": "[表1](https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html)主要介绍CCE所支持的网络模型，您可根据实际业务需求进行选择。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/caution_3.0-zh-cn.png)\n\n集群创建成功后，网络模型不可更改，请谨慎选择。\n\n**表1** 网络模型对比\n\n| **对比维度** | **容器隧道网络** | **VPC网络** | **云原生网络2.0** |\n| --- | --- | --- | --- |\n| 适用场景 | - 对性能要求不高：由于需要额外的VXLAN隧道封装，相对于另外两种容器网络模式，性能存在一定的损耗（约5%-15%）。所以容器隧道网络适用于对性能要求不是特别高的业务场景，比如：Web应用、访问量不大的数据中台、后台服务等。 - 大规模组网：相比VPC路由网络受限于VPC路由条目配额的限制，容器隧道网络没有网络基础设施的任何限制；同时容器隧道网络把广播域控制到了节点级别，容器隧道网络最大可支持2000节点规模。 | - 性能要求较高：由于没有额外的隧道封装，相比于容器隧道网络模式，VPC网络模型集群的容器网络性能接近于VPC网络性能，所以适用于对性能要求较高的业务场景，比如：AI计算、大数据计算等。 - 中小规模组网：由于VPC路由网络受限于VPC路由表条目配额的限制，建议集群规模为1000节点及以下。 | - 性能要求高：由于云原生网络2.0直接使用VPC网络构建容器网络，容器通信不需要进行隧道封装和NAT转换，所以适用于对带宽、时延要求极高的业务场景，比如：线上直播、电商抢购等。 - 大规模组网：云原生网络2.0当前默认可支持2000个节点（最大支持20000节点），10万个Pod。 |\n| 核心技术 | OVS | IPVlan，VPC路由 | VPC弹性网卡/弹性辅助网卡 |\n| 适用集群 | CCE Standard集群 | CCE Standard集群 | CCE Turbo集群 |\n| 容器网络隔离 | Pod支持Kubernetes原生NetworkPolicy | 否 | Pod支持使用安全组隔离 |\n| ELB对接Pod | ELB对接Pod需要通过节点NodePort转发 | ELB对接Pod需要通过节点NodePort转发 | 使用独享型ELB时可直接对接Pod  使用共享型ELB对接Pod需要通过节点NodePort转发 |\n| Pod IP地址管理 | - 需设置单独的容器网段。容器网段独立于VPC网段，不能与之重叠。 - 集群创建完成后不支持容器网段扩容。为避免IP地址不足，建议将容器网段掩码最大设置为19位。 | - 需设置单独的容器网段。容器网段独立于VPC网段，不能与之重叠。 - 支持添加多个容器网段。 - 集群创建完成后支持添加容器网段，详情请参见[扩展VPC网络集群的容器网段](https://support.huaweicloud.com/usermanual-cce/cce_10_0680.html)。 - 分配Pod IP地址时，会先从容器网段中为每个节点配置一个固定的子网网段，节点内所有Pod的IP地址从该网段中分配。 | - 直接指定VPC子网作为容器网段。 - 集群创建完成后支持添加容器网段，详情请参见[添加/删除CCE Turbo集群的默认容器子网](https://support.huaweicloud.com/usermanual-cce/cce_10_0906.html)。 - Pod IP地址直接在VPC中分配，因此对VPC的地址消耗较高，建议在使用前规划较大的VPC网段。 |\n| 每个节点上可运行的Pod数量 | 取决于**节点可以创建的最大实例数**，由kubelet的配置参数**maxPods**决定，详情请参见[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 | 由**节点可以创建的最大实例数**和**每个节点预留的Pod IP数**中的最小值决定：   - 节点可以创建的最大实例数，即kubelet的配置参数**maxPods**，详情请参见[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 - 每个节点预留的Pod IP数，详情请参见[每个节点预留的Pod IP数说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 | 由**节点可以创建的最大实例数**和**每个节点预留的Pod IP数**中的最小值决定：   - 节点可以创建的最大实例数，即kubelet的配置参数**maxPods**，详情请参见[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 - 节点的网卡数量，详情请参见[CCE Turbo集群节点网卡数量](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 |\n| 网络性能 | 基于VxLAN隧道封装，有一定性能损耗。 | 无隧道封装，跨节点通过VPC路由器转发，性能较好，可媲美主机网络，但存在NAT转换损耗。 | 容器网络与VPC网络融合，性能无损耗。 |\n| 组网规模 | 最大可支持2000节点 | 受限于VPC路由表能力，适合中小规模组网，建议规模为1000节点及以下。  VPC网络模式下，集群每添加一个节点，会在VPC的路由表中添加一条路由（包括默认路由表和自定义路由表），因此集群本身规模受VPC路由表上限限制，创建前请提前评估集群规模。路由表配额请参见[使用限制](https://support.huaweicloud.com/intl/zh-cn/productdesc-vpc/overview_0003.html)。 | 默认支持2000节点，最大支持20000节点  由于云原生网络2.0集群中的容器从VPC网段内分配IP地址，消耗VPC的地址空间，实际支持规模受限于VPC子网网段大小，因此创建前请提前评估集群规模。 |\n| IPv4/IPv6双栈 | 支持创建IPv4/IPv6双栈集群 | 不支持 | 支持创建IPv4/IPv6双栈集群 |",
+          "content_hash": "3404daee75c0b8d3fb8a58cab1eb32d6bb862b99fab0ea2d6387bd57efd9a9d2",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html",
+          "title": "容器网络模型对比",
+          "score": 0.03225806451612903
+        },
+        {
+          "id": "I6265MP3TATG5ZAXM5HHVBRB7U",
+          "revision_id": "3Q2BD7DYVSQLKOTYL27JABVUMA",
+          "section": "优缺点",
+          "start_line": 22,
+          "end_line": 33,
+          "content": "**优点**\n\n- 容器网络和节点网络解耦，不受VPC配额规格、响应速度的限制（如VPC路由条目数、弹性网卡数、创建速度限制）。\n- 支持网络隔离，具体请参见[配置网络策略（NetworkPolicy）限制Pod访问的对象](https://support.huaweicloud.com/usermanual-cce/cce_10_0059.html)。\n- 支持带宽限制。\n- 支持大规模组网，最大可支持2000节点规模。\n\n**缺点**\n\n- 由于隧道封装，网络问题排查难度较大，整体性能较低。\n- Pod无法直接利用EIP、安全组等能力。\n- 不支持外部网络与Pod IP直接进行网络通信。",
+          "content_hash": "d06f867055ca65680f3efe52775c3830fda8b1881511968d45da5d25977627ac",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0282.html",
+          "title": "容器隧道网络模型说明",
+          "score": 0.03125
+        },
+        {
+          "id": "656G5GK5MA4VTOB2JKPHSTKBMU",
+          "revision_id": "EYF5TBG4UHDG7LMUAEPCROTA77",
+          "section": "集群网络构成",
+          "start_line": 18,
+          "end_line": 33,
+          "content": "集群网络是Kubernetes的核心部分，确保集群内部的容器能够相互通信，同时也能够与外部通信。其核心构成如下：\n\n- **节点网络**：CCE使用VPC中的子网作为集群的节点网络，在子网内为集群内主机（即节点）分配IP地址，子网的可用IP数量作为关键因素直接限制集群中可以创建的节点数量上限（如掩码为/24的子网最多可分配254个节点IP），且集群中可创建节点数量还受容器网络的影响，在容器网络模型中会进一步说明。\n- **容器网络**：为集群内Pod分配独立的IP地址，集群内所有Pod都在一个直接连通的扁平网络中，无需NAT可直接通过Pod的IP地址访问。Kubernetes通过[容器网络接口（CNI）](https://github.com/containernetworking/cni)对容器间的网络做出了标准化的定义，通过网络模型插件为Pod分配独立IP，不同网络模型的可以有不同分配原则，实现集群内扁平网络通信。\n\n  **图1** 容器网络\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002378161257.png \"点击放大\")\n\n  当前CCE支持如下容器网络模型：\n\n  - [容器隧道网络模型](https://support.huaweicloud.com/usermanual-cce/cce_10_0282.html)：容器隧道网络在节点网络基础上通过隧道封装构建的独立于节点网络平面的容器网络平面，CCE集群容器隧道网络使用的封装协议为VXLAN，后端虚拟交换机采用的是openvswitch，VXLAN是将以太网报文封装成UDP报文进行隧道传输。\n  - [VPC网络模型](https://support.huaweicloud.com/usermanual-cce/cce_10_0283.html)：VPC网络采用VPC路由方式与底层网络深度整合，适用于高性能场景，节点数量受限于虚拟私有云VPC的路由配额。每个节点将会被分配固定大小的IP地址段。VPC网络由于没有隧道封装的消耗，容器网络性能相对于容器隧道网络有一定优势。VPC网络集群由于VPC路由中配置有容器网段与节点IP的路由，可以支持集群外直接访问容器实例等特殊场景。\n  - [云原生网络2.0模型](https://support.huaweicloud.com/usermanual-cce/cce_10_0284.html)：云原生网络2.0是自研的新一代容器网络模型，深度整合了虚拟私有云VPC的弹性网卡（Elastic Network Interface，简称ENI）和辅助弹性网卡（Sub Network Interface，简称Sub-ENI）的能力，直接从VPC网段内分配Pod IP地址，支持ELB直通容器，Pod绑定安全组，Pod绑定弹性公网IP，享有高性能。\n\n  不同容器网络模型，容器网络的性能、组网规模、适用场景各不相同，在[容器网络模型对比](https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html)章节，将会详细介绍不同容器网络模型的功能特性，了解这些有助于您选择容器网络模型。\n- **服务网络**：服务（Service）是Kubernetes内的概念，每个Service都有一个固定的IP地址，Kubernetes通过Service机制为Pod提供稳定的访问入口。在CCE上创建集群时，可以指定Service的地址段（即服务网段）。服务网段不能和节点网段、容器网段重叠，且只在集群内使用，不能在集群外使用。",
+          "content_hash": "3b60debe794b323b13788d311d2f4a9963620a69a9ea9c6be1beb4532db0c38b",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0010.html",
+          "title": "网络概述",
+          "score": 0.030536130536130537
+        },
+        {
+          "id": "JUFRXYPUSKRACAKIQYBZF6CT3D",
+          "revision_id": "U2G4EURAI2WC3NI4CNSFGSXBWE",
+          "section": "应用场景",
+          "start_line": 46,
+          "end_line": 47,
+          "content": "- 性能要求较高：由于没有额外的隧道封装，相比于容器隧道网络模式，VPC网络模型集群的容器网络性能接近于VPC网络性能，所以适用于对性能要求较高的业务场景，比如：AI计算、大数据计算等。\n- 中小规模组网：由于VPC路由网络受限于VPC路由表条目配额的限制，建议集群规模为1000节点及以下。",
+          "content_hash": "6bd0ed55cb8ecac21b68ed44ddcde1065687b581f772e1bfaebb35ab371575e7",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0283.html",
+          "title": "VPC网络模型说明",
+          "score": 0.030536130536130537
+        }
+      ],
+      "result": {
+        "trace_id": "d428fd45355c36198f1993499eb45017"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1149.7205000050599
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-055",
+      "group": "cce_10_0285",
+      "category": "命名空间",
+      "question_type": "scenario",
+      "question": "想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？",
+      "answerable": true,
+      "required_facts": [
+        "为不同环境建立对应命名空间",
+        "创建和查询工作负载时选择对应命名空间",
+        "不要宣称这等同于完整网络安全隔离"
+      ],
+      "reference_answer": "为不同环境建立对应命名空间；创建和查询工作负载时选择对应命名空间；不要宣称这等同于完整网络安全隔离",
+      "evidence": [
+        {
+          "document_id": "cce_10_0285",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "file": "documents/cce_10_0285.md",
+          "content_sha256": "d0eaed4dded12d85d8eac6419e236f92048a9e8661f35deffb2e18f2013e6cb5",
+          "start_line": 9,
+          "end_line": 9,
+          "section": "使用命名空间",
+          "anchor": "创建工作负载时，您可以选择对应的命名空间",
+          "quote": "- 创建工作负载时，您可以选择对应的命名空间，实现资源或租户的隔离。",
+          "quote_sha256": "1bb41cad7bb282da433d127c84266be595c5306936e74c02d3d329b87893a2a1"
+        },
+        {
+          "document_id": "cce_10_0285",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "file": "documents/cce_10_0285.md",
+          "content_sha256": "d0eaed4dded12d85d8eac6419e236f92048a9e8661f35deffb2e18f2013e6cb5",
+          "start_line": 21,
+          "end_line": 21,
+          "section": "命名空间使用实践",
+          "anchor": "不同环境创建对应命名空间",
+          "quote": "  - 不同环境创建对应命名空间。",
+          "quote_sha256": "d5bd35649dd972b99a7481ae565fefd378b3b016ce9a19f19878a092ac218a59"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-055",
+      "question": "想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？",
+      "answerable": true,
+      "question_type": "scenario",
+      "category": "命名空间",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "LM22IS5IY2IAU5A4WLND4CWAFJ",
+          "revision_id": "HS62WBISREKMYS7EWPCAPBOVRH",
+          "section": "前提条件",
+          "start_line": 41,
+          "end_line": 41,
+          "content": "已创建v1.29及以上版本的CCE Standard/Turbo集群。",
+          "content_hash": "824eadabea778bd337919a89cf47f904cf9691625733774077710a0b5bc834ad",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11112.html",
+          "title": "使用FlexNPU实现NPU资源虚拟化与隔离",
+          "score": 0.01639344262295082
+        },
+        {
+          "id": "VBZJTFQXG4BYKZ3H5W6OKHF6RZ",
+          "revision_id": "UNFNWLOOIDLBEX5JLEXI6O6WHG",
+          "section": "操作场景",
+          "start_line": 8,
+          "end_line": 10,
+          "content": "命名空间（Namespace）是对一组资源和对象的抽象整合。在同一个集群内可创建不同的命名空间，不同命名空间中的数据彼此隔离。使得它们既可以共享同一个集群的服务，也能够互不干扰。\n\n例如可以将开发环境、测试环境的业务分别放在不同的命名空间。",
+          "content_hash": "c0beecaca077cf8a011d7c1727cb73fad4fb57ace4f40d1cbd83ea27026bbd1a",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0278.html",
+          "title": "创建命名空间",
+          "score": 0.01639344262295082
+        },
+        {
+          "id": "HYRERI4KEBKD4MQV4RT5ZF5P7X",
+          "revision_id": "7HOYRTJCDJUR63BBOMBFEPPAAD",
+          "section": "命名空间使用实践",
+          "start_line": 13,
+          "end_line": 33,
+          "content": "- **按照不同环境划分命名空间**\n\n  一般情况下，工作负载发布会经历开发环境、联调环境、测试环境，最后到生产环境的过程。这个过程中不同环境部署的工作负载相同，只是在逻辑上进行了定义。分为两种做法：\n\n  - 分别创建不同集群。\n\n    不同集群之间，资源不能共享。同时，不同环境中的服务互访需要通过负载均衡才能实现。\n  - 不同环境创建对应命名空间。\n\n    同个命名空间下，通过服务名称（Service name）可直接访问。跨命名空间的可以通过服务名称、命名空间名称访问。\n\n    例如下图，开发环境/联调环境/测试环境分别创建了命名空间。\n\n    **图1** 不同环境创建对应命名空间\n     ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001199021298.png \"点击放大\")\n- **按照应用划分命名空间**\n\n  对于同个环境中，应用数量较多的情况，建议进一步按照工作负载类型划分命名空间。例如下图中，按照APP1和APP2划分不同命名空间，将不同工作负载在逻辑上当做一个工作负载组进行管理。且同一个命名空间内的工作负载可以通过服务名称访问，不同命名空间下的通过服务名称、命名空间名称访问。\n\n  **图2** 按照工作负载划分命名空间\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001243981147.png \"点击放大\")",
+          "content_hash": "3688bf61b4188ec66c13ba17e75da12763dbf4ce08e8371cc0002bc4e48f21ab",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "score": 0.016129032258064516
+        },
+        {
+          "id": "RMNINLV3WW2T7VBCGDKD7OBIEO",
+          "revision_id": "B4TRPMQBRBOUSTLF74HH2MXLCA",
+          "section": "网络组件配置（canal-controller）（仅容器隧道网络模型的集群支持）",
+          "start_line": 189,
+          "end_line": 191,
+          "content": "| 名称 | 参数 | 详情 | 取值 | 配置方式 |\n| --- | --- | --- | --- | --- |\n| 容器隧道网络集群开启NetworkPolicy | enable-canal-network-policy | 容器隧道集群开启NetworkPolicy能力。  **仅支持新建集群时配置，存量集群不支持修改**。 | 默认：true | 仅支持通过API配置 |",
+          "content_hash": "e73ed3ef312efa9e4bb6ba1495947ed11136db4a6b36409a9ebc481380dab5c3",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html",
+          "title": "修改CCE集群配置",
+          "score": 0.016129032258064516
+        },
+        {
+          "id": "2WFPINTVUHUKHHRWFXWQUIKCE3",
+          "revision_id": "LW7FSSIE4QSYD3MLKXDFNCY3K2",
+          "section": "Volcano队列",
+          "start_line": 2,
+          "end_line": 16,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_11521.html\n目录：用户指南 > AI容器 > 训练任务 > Volcano队列\n更新时间：2026-09-20 GMT+08:00\n\n在共享异构算力资源（GPU/NPU） 集群中，算法开发、模型调优和生产训练等业务通常由不同团队共同使用同一批计算资源。如果所有训练任务都提交到同一个默认队列，容易出现以下问题：某个团队一次提交大量任务长期占用GPU/NPU，其他团队的任务无法及时运行；开发调试任务与生产训练任务相互竞争，关键训练缺少稳定的资源保障；某个队列空闲时，已分配给该队列的资源无法被其他队列利用，降低集群利用率。\n\n通过Volcano队列（Queue），可以为不同团队或训练环境创建独立队列，并按CPU、内存、GPU/NPU等资源维度配置预留资源、应得资源和使用上限。队列空闲时可借出资源，资源所有者需要时可通过reclaim回收，兼顾资源保障与集群利用率。\n\n典型使用场景如下：\n\n- **多团队共享训练集群**：按部门、租户或项目划分队列，避免单个团队无上限地消耗集群资源。\n- **开发与生产训练分级**：为生产队列配置更高的队列优先级或更多应得资源，使关键任务更容易获得资源。\n- **异构资源弹性共享**：允许繁忙队列借用其他队列的空闲资源，并在资源所有者需要时回收借出的资源。\n- **多维异构资源配额**：分别配置CPU、内存、nvidia.com/gpu或集群实际注册的其他扩展资源。\n- **分层组织管理**：启用分层队列后，可按业务层级组织队列结构，例如“部门 > 项目 > 环境”组织队列，并在父子队列之间继承和约束资源。",
+          "content_hash": "24a0a2d1d9b1f30ac5e44608175bae7f9c1b2d3b204f861c9808cf0674fd75df",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11521.html",
+          "title": "Volcano队列",
+          "score": 0.015873015873015872
+        }
+      ],
+      "result": {
+        "trace_id": "85117313c9ed194bc80a0208d4a0924d"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1160.6832920078887
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-081",
+      "group": "family:cce_10_0613",
+      "category": "存储管理-Flexvolume（已弃用）",
+      "question_type": "command",
+      "question": "历史Flexvolume示例pvc-evs-auto-example.yaml申请容量与访问模式分别是什么，可用区有什么要求？",
+      "answerable": true,
+      "required_facts": [
+        "10Gi",
+        "ReadWriteOnce",
+        "可用区必须与工作负载规划一致",
+        "仅说明历史Flexvolume示例，不作为当前CSI YAML"
+      ],
+      "reference_answer": "10Gi；ReadWriteOnce；可用区必须与工作负载规划一致；仅说明历史Flexvolume示例，不作为当前CSI YAML",
+      "evidence": [
+        {
+          "document_id": "cce_10_0312",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0312.html",
+          "title": "使用kubectl自动创建云硬盘",
+          "file": "documents/cce_10_0312.md",
+          "content_sha256": "6f4eb30eeca6ef273d395e87678b089ab747edd2e809b92bf24f184135cdad20",
+          "start_line": 23,
+          "end_line": 38,
+          "section": "操作步骤",
+          "anchor": "apiVersion: v1",
+          "quote": "   apiVersion: v1\n   kind: PersistentVolumeClaim\n   metadata:\n     name: pvc-evs-auto-example\n     namespace: default\n     annotations:\n       volume.beta.kubernetes.io/storage-class: sas\n     labels:\n       failure-domain.beta.kubernetes.io/region: ap-southeast-1\n       failure-domain.beta.kubernetes.io/zone: ap-southeast-1a\n   spec:\n     accessModes:\n     - ReadWriteOnce\n     resources:\n       requests:\n         storage: 10Gi",
+          "quote_sha256": "88db059e0c7269dbd50cd01adef01f6f76e0b27eb0615cce1528be2bc8b1a8f5"
+        },
+        {
+          "document_id": "cce_10_0312",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0312.html",
+          "title": "使用kubectl自动创建云硬盘",
+          "file": "documents/cce_10_0312.md",
+          "content_sha256": "6f4eb30eeca6ef273d395e87678b089ab747edd2e809b92bf24f184135cdad20",
+          "start_line": 47,
+          "end_line": 47,
+          "section": "操作步骤",
+          "anchor": "创建云硬盘所在的可用区，必须和工作负载规划的可用区保持一致",
+          "quote": "   | failure-domain.beta.kubernetes.io/zone | 创建云硬盘所在的可用区，必须和工作负载规划的可用区保持一致。 |",
+          "quote_sha256": "4f6db70d58a2db4926d5fc6c1ec7c3ba6cda41c2dc69ceee10c6e8e8d9d321d2"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-081",
+      "question": "历史Flexvolume示例pvc-evs-auto-example.yaml申请容量与访问模式分别是什么，可用区有什么要求？",
+      "answerable": true,
+      "question_type": "command",
+      "category": "存储管理-Flexvolume（已弃用）",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "XOJ6WEAGMMBEVLRITRHNI54RFA",
+          "revision_id": "MYDI3O5H3JUWMM2IM2ROT73MTI",
+          "section": "操作步骤",
+          "start_line": 16,
+          "end_line": 175,
+          "content": "1. 登录OBS控制台，创建对象存储桶，记录桶名称和存储类型。\n2. 请参见[通过kubectl连接集群](https://support.huaweicloud.com/usermanual-cce/cce_10_0107.html)，使用kubectl连接集群。\n3. 新建两个yaml文件，用于创建PersistentVolume（PV）、PersistentVolumeClaim（PVC），假设文件名为**pv-obs-example.yaml、pvc-obs-example.yaml。**\n\n   **touch pv-obs-example.yaml** **pvc-obs-example.yaml**\n\n   | K8s集群版本（K8s version） | 说明 | yaml示例 |\n   | --- | --- | --- |\n   | 1.11 ≤ K8s version ≤ 1.13 | 1.11以上及1.13版本集群 | 请参见[1.11~1.13 yaml文件配置示例](https://support.huaweicloud.com/usermanual-cce/cce_10_0326.html) |\n   | K8s version = 1.9 | 1.9版本集群 | 请参见[1.9 yaml文件配置示例](https://support.huaweicloud.com/usermanual-cce/cce_10_0326.html) |\n\n   **1.11 ≤ K8s version ≤ 1.13（1.11以上及1.13版本集群）**\n\n   - **PV yaml文件配置示例：**\n\n     ```\n     apiVersion: v1\n     kind: PersistentVolume\n     metadata:\n       name: pv-obs-example\n       annotations:\n         pv.kubernetes.io/provisioned-by: flexvolume-huawei.com/fuxiobs\n     spec:\n       accessModes:\n       - ReadWriteMany\n       capacity:\n         storage: 1Gi\n       claimRef:\n         apiVersion: v1\n         kind: PersistentVolumeClaim\n         name: pvc-obs-example\n         namespace: default\n       flexVolume:\n         driver: huawei.com/fuxiobs\n         fsType: obs\n         options:\n           fsType: obs\n           region: ap-southeast-1\n           storage_class: STANDARD\n           volumeID: test-obs\n       persistentVolumeReclaimPolicy: Delete\n       storageClassName: obs-standard\n     ```\n\n     **表1** 关键参数说明\n\n     | 参数 | 描述 |\n     | --- | --- |\n     | driver | 挂载依赖的存储驱动，对象存储配置为“huawei.com/fuxiobs”。 |\n     | storage\\_class | 存储类型，包括STANDARD（标准桶）、STANDARD\\_IA（低频访问桶）。 |\n     | region | 集群所在的region。 |\n     | volumeID | 对象存储的桶名称。  获取方法：在CCE控制台，单击左侧栏目树中的“资源管理-存储管理”，在“对象存储卷”页签下单击PVC的名称，在PVC详情页的“PV详情”页签下复制“PV名称”后的内容即可。 |\n     | storage | 存储容量，单位为Gi。此处配置为固定值1Gi。 |\n     | storageClassName | 对象存储支持的存储类型，包括obs-standard（标准）、obs-standard-ia（低频）。 |\n     | spec.claimRef.apiVersion | 固定值\"v1\"。 |\n     | spec.claimRef.kind | 固定值\"PersistentVolumeClaim\"。 |\n     | spec.claimRef.name | 与下一步创建的pvc的name一致。 |\n     | spec.claimRef.namespace | 与下一步创建的pvc的namespace一致。 |\n   - **PVC yaml文件配置示例：**\n\n     ```\n     apiVersion: v1\n     kind: PersistentVolumeClaim\n     metadata:\n       annotations:\n         volume.beta.kubernetes.io/storage-class: obs-standard\n         volume.beta.kubernetes.io/storage-provisioner: flexvolume-huawei.com/fuxiobs\n       name: pvc-obs-example\n       namespace: default\n     spec:\n       accessModes:\n       - ReadWriteMany\n       resources:\n         requests:\n           storage: 1Gi\n       volumeName: pv-obs-example\n     ```\n\n     **表2** 关键参数说明\n\n     | 参数 | 描述 |\n     | --- | --- |\n     | volume.beta.kubernetes.io/storage-class | 对象存储支持的存储类型，包括obs-standard、obs-standard-ia。 |\n     | volume.beta.kubernetes.io/storage-provisioner | 必须使用flexvolume-huawei.com/fuxiobs。 |\n     | volumeName | PV的名称。 |\n     | storage | 存储容量，单位为Gi。此处配置为固定值1Gi。 |\n\n   **K8s version = 1.9（1.9版本集群）**\n\n   - **PV yaml文件配置示例：**\n\n     ```\n     apiVersion: v1\n     kind: PersistentVolume\n     metadata:\n       name: pv-obs-example\n       namespace: default\n     spec:\n       accessModes:\n       - ReadWriteMany\n       capacity:\n         storage: 1Gi\n       flexVolume:\n         driver: huawei.com/fuxiobs\n         fsType: obs\n         options:\n           fsType: obs\n           kubernetes.io/namespace: default\n           region: ap-southeast-1\n           storage_class: STANDARD\n           volumeID: test-obs\n       persistentVolumeReclaimPolicy: Delete\n       storageClassName: obs-standard\n     ```\n\n     **表3** 关键参数说明\n\n     | 参数 | 描述 |\n     | --- | --- |\n     | driver | 挂载依赖的存储驱动，对象存储配置为“huawei.com/fuxiobs”。 |\n     | storage\\_class | 存储类型，包括STANDARD（标准桶）、STANDARD\\_IA（低频访问桶）。 |\n     | region | 集群所在的region。 |\n     | volumeID | 对象存储的桶名称。  获取方法：在CCE控制台，单击左侧栏目树中的“资源管理-存储管理”，在“对象存储卷”页签下单击PVC的名称，在PVC详情页的“PV详情”页签下复制“PV名称”后的内容即可。 |\n     | storage | 存储容量，单位为Gi。此处配置为固定值1Gi。 |\n     | storageClassName | 对象存储支持的存储类型，包括obs-standard（标准）、obs-standard-ia（低频）。 |\n   - **PVC yaml文件配置示例：**\n\n     ```\n     apiVersion: v1\n     kind: PersistentVolumeClaim\n     metadata:\n       annotations:\n         volume.beta.kubernetes.io/storage-class: obs-standard\n         volume.beta.kubernetes.io/storage-provisioner: flexvolume-huawei.com/fuxiobs\n       name: pvc-obs-example\n       namespace: default\n     spec:\n       accessModes:\n       - ReadWriteMany\n       resources:\n         requests:\n           storage: 1Gi\n       volumeName: pv-obs-example\n       volumeNamespace: default\n     ```\n\n     **表4** 关键参数说明\n\n     | 参数 | 描述 |\n     | --- | --- |\n     | volume.beta.kubernetes.io/storage-class | 对象存储支持的存储类型，包括obs-standard、obs-standard-ia。 |\n     | volume.beta.kubernetes.io/storage-provisioner | 必须使用flexvolume-huawei.com/fuxiobs。 |\n     | volumeName | PV的名称。 |\n     | storage | 存储容量，单位为Gi。此处配置为固定值1Gi。 |\n4. 创建PV。\n\n   **kubectl create -f pv-obs-example.yaml**\n5. 创建PVC。\n\n   **kubectl create -f pvc-obs-example.yaml**",
+          "content_hash": "dee58b2afd80a402c7986a55b9d6e49ff58ce5f7028915eef596327f002fe824",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0326.html",
+          "title": "使用kubectl对接已有对象存储",
+          "score": 0.030536130536130537
+        },
+        {
+          "id": "BZEBJ6XGWHVI3JT6TXBI3SLDYU",
+          "revision_id": "WJUFUDHDBVQ2SAATJRGCNWZQKN",
+          "section": "操作步骤",
+          "start_line": 16,
+          "end_line": 53,
+          "content": "1. 请参见[通过kubectl连接集群](https://support.huaweicloud.com/usermanual-cce/cce_10_0107.html)，使用kubectl连接集群。\n2. 执行如下命令，配置名为“pvc-obs-auto-example.yaml”的创建PVC的yaml文件。\n\n   **touch pvc-obs-auto-example.yaml**\n\n   **vi pvc-obs-auto-example.yaml**\n\n   **yaml****示例如下：**\n\n   ```\n   apiVersion: v1\n   kind: PersistentVolumeClaim\n   metadata:\n     annotations:\n       volume.beta.kubernetes.io/storage-class: obs-standard  # 对象存储桶类型，当前支持标准（obs-standard）和低频（obs-standard-ia）\n     name: pvc-obs-auto-example  # PVC名称\n     namespace: default\n   spec:\n     accessModes:\n     - ReadWriteMany\n     resources:\n       requests:\n         storage: 1Gi   # 存储容量，单位为Gi，对OBS桶来说，此处仅为校验需要（不能为空和0），设置的大小不起作用，此处设定为固定值1Gi\n   ```\n\n   **表1** 关键参数说明\n\n   | 参数 | 描述 |\n   | --- | --- |\n   | volume.beta.kubernetes.io/storage-class | 桶类型，当前支持标准（obs-standard）和低频（obs-standard-ia）两种桶。 |\n   | name | 创建的PVC名称。 |\n   | accessModes | 只支持ReadWriteMany，不支持ReadWriteOnce。 |\n   | storage | 存储容量，单位为Gi，对OBS桶来说，此处仅为校验需要（不能为空和0），设置的大小不起作用，此处设定为固定值1Gi。 |\n3. 执行如下命令创建PVC。\n\n   **kubectl create -f pvc-obs-auto-example.yaml**\n\n   命令执行完成后会在集群所在VPC内创建一个对象存储桶，您可以在“存储管理 > 对象存储卷”中单击桶名称查看该桶，也可以在OBS的控制台查看该桶。",
+          "content_hash": "3afc84a0c37d74dab79ceba539c4c5fbb408ec9a6f5ad2f1cdba7722ed836bb9",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0325.html",
+          "title": "使用kubectl自动创建对象存储",
+          "score": 0.029910714285714284
+        },
+        {
+          "id": "J6E5PBI6RMFWCNXW46FQFHJC63",
+          "revision_id": "MJ3KD6IM2UOHW2H2GER743TXBJ",
+          "section": "操作步骤",
+          "start_line": 16,
+          "end_line": 53,
+          "content": "1. 请参见[通过kubectl连接集群](https://support.huaweicloud.com/usermanual-cce/cce_10_0107.html)，使用kubectl连接集群。\n2. 执行如下命令，配置名为“pvc-sfs-auto-example.yaml”的创建PVC的yaml文件。\n\n   **touch pvc-sfs-auto-example.yaml**\n\n   **vi pvc-sfs-auto-example.yaml**\n\n   **yaml文件配置示例如下：**\n\n   ```\n   apiVersion: v1\n   kind: PersistentVolumeClaim\n   metadata:\n     annotations:\n       volume.beta.kubernetes.io/storage-class: nfs-rw\n     name: pvc-sfs-auto-example\n     namespace: default\n   spec:\n     accessModes:\n     - ReadWriteMany\n     resources:\n       requests:\n         storage: 10Gi\n   ```\n\n   **表1** 关键参数说明\n\n   | 参数 | 描述 |\n   | --- | --- |\n   | volume.beta.kubernetes.io/storage-class | 文件存储类型，当前支持标准文件协议类型（nfs-rw）。 |\n   | name | 创建的PVC名称。 |\n   | accessModes | 只支持ReadWriteMany，不支持ReadWriteOnce。 |\n   | storage | 存储容量，单位为Gi。 |\n3. 执行如下命令创建PVC。\n\n   **kubectl create -f pvc-sfs-auto-example.yaml**\n\n   命令执行完成后会在集群所在VPC内创建一个文件存储，您可以在“存储管理 > 文件存储卷”中查看该文件系统，也可以在SFS的控制台查看该文件系统。",
+          "content_hash": "eb6994c6274cd089042758b8aa73c7b89556c3ffc8d2e1620ab92851fcf46419",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0318.html",
+          "title": "使用kubectl自动创建文件存储",
+          "score": 0.02919863597612958
+        },
+        {
+          "id": "ESKLNZEXG6N53NBGQQO7LT2BG2",
+          "revision_id": "HYPF6KYQ2ANYZSCBEWD6BCG5PZ",
+          "section": "操作步骤",
+          "start_line": 12,
+          "end_line": 174,
+          "content": "1. 登录SFS控制台，创建一个文件存储，记录文件存储的ID、共享路径和容量。\n2. 请参见[通过kubectl连接集群](https://support.huaweicloud.com/usermanual-cce/cce_10_0107.html)，使用kubectl连接集群。\n3. 新建两个yaml文件，用于创建PersistentVolume（PV）、PersistentVolumeClaim（PVC）。假设文件名分别为**pv-sfs-example.yaml**、**pvc-sfs-example.yaml**。\n\n   **touch pv-sfs-example.yaml** **pvc-sfs-example.yaml**\n\n   | K8s集群版本（K8s version） | 说明 | yaml示例 |\n   | --- | --- | --- |\n   | 1.11 ≤ K8s version < 1.13 | 1.11以上及1.13版本集群 | 请参见[1.11~1.13 yaml文件配置示例](https://support.huaweicloud.com/usermanual-cce/cce_10_0319.html) |\n   | K8s version = 1.9 | 1.9版本集群 | 请参见[1.9 yaml文件配置示例](https://support.huaweicloud.com/usermanual-cce/cce_10_0319.html) |\n\n   **1.11 ≤ K8s version ≤ 1.13（1.11以上及1.13版本集群）**\n\n   - **PV yaml文件配置示例：**\n\n     ```\n     apiVersion: v1\n     kind: PersistentVolume\n     metadata:\n       name: pv-sfs-example\n       annotations:\n         pv.kubernetes.io/provisioned-by: flexvolume-huawei.com/fuxinfs\n     spec:\n       accessModes:\n       - ReadWriteMany\n       capacity:\n         storage: 10Gi\n       claimRef:\n         apiVersion: v1\n         kind: PersistentVolumeClaim\n         name: pvc-sfs-example\n         namespace: default\n       flexVolume:\n         driver: huawei.com/fuxinfs\n         fsType: nfs\n         options:\n           deviceMountPath: <your_deviceMountPath>  #您的文件存储共享路径\n           fsType: nfs\n           volumeID: f6976f9e-2493-419b-97ca-d7816008d91c\n       persistentVolumeReclaimPolicy: Delete\n       storageClassName: nfs-rw\n     ```\n\n     **表1** 关键参数说明\n\n     | 参数 | 描述 |\n     | --- | --- |\n     | driver | 挂载依赖的存储驱动，文件存储配置为“huawei.com/fuxinfs”。 |\n     | deviceMountPath | 文件存储的共享路径。  获取方法：在CCE控制台，单击顶部的“服务列表 > 存储 > 弹性文件服务”，在弹性文件服务列表中可以看到“挂载地址”列，即为文件存储的共享路径，如[图1](https://support.huaweicloud.com/usermanual-cce/cce_10_0319.html)。 |\n     | volumeID | 文件存储的ID。  获取方法：在CCE控制台，单击左侧栏目树中的“资源管理-存储管理”，在“文件存储卷”页签下单击PVC的名称，在PVC详情页中复制“PVC UID”后的内容即可。 |\n     | storage | 文件存储的大小。 |\n     | storageClassName | 文件存储支持的读写方式，当前支持nfs-rw、nfs-ro。 |\n     | spec.claimRef.apiVersion | 固定值\"v1\"。 |\n     | spec.claimRef.kind | 固定值\"PersistentVolumeClaim\"。 |\n     | spec.claimRef.name | 与下一步创建的pvc的name一致。 |\n     | spec.claimRef.namespace | pvc的namespace；是下一步创建的pvc的namespace一致。 |\n   - **PVC yaml文件配置示例：**\n\n     ```\n     apiVersion: v1\n     kind: PersistentVolumeClaim\n     metadata:\n       annotations:\n         volume.beta.kubernetes.io/storage-class: nfs-rw\n         volume.beta.kubernetes.io/storage-provisioner: flexvolume-huawei.com/fuxinfs\n       name: pvc-sfs-example\n       namespace: default\n     spec:\n       accessModes:\n       - ReadWriteMany\n       resources:\n         requests:\n           storage: 10Gi\n       volumeName: pv-sfs-example\n     ```\n\n     **表2** 关键参数说明\n\n     | 参数 | 描述 |\n     | --- | --- |\n     | volume.beta.kubernetes.io/storage-class | 文件存储支持的读写方式，支持nfs-rw 、nfs-ro。必须和已有PV保持一致。 |\n     | volume.beta.kubernetes.io/storage-provisioner | 必须使用flexvolume-huawei.com/fuxinfs。 |\n     | storage | 存储容量，单位Gi，必须和已有pv的storage大小保持一致。 |\n     | volumeName | PV的名称。 |\n\n   **K8s version = 1.9（1.9版本集群）**\n\n   - **PV yaml文件配置示例：**\n\n     ```\n     apiVersion: v1\n     kind: PersistentVolume\n     metadata:\n       name: pv-sfs-example\n       namespace: default\n     spec:\n       accessModes:\n       - ReadWriteMany\n       capacity:\n         storage: 10Gi\n       flexVolume:\n         driver: huawei.com/fuxinfs\n         fsType: nfs\n         options:\n           deviceMountPath: <your_deviceMountPath>  #您的文件存储共享路径\n           fsType: nfs\n           kubernetes.io/namespace: default\n           volumeID: f6976f9e-2493-419b-97ca-d7816008d91c\n       persistentVolumeReclaimPolicy: Delete\n       storageClassName: nfs-rw\n     ```\n\n     **表3** 关键参数说明\n\n     | 参数 | 描述 |\n     | --- | --- |\n     | driver | 挂载依赖的存储驱动，文件存储配置为“huawei.com/fuxinfs”。 |\n     | deviceMountPath | 文件存储的共享路径。  获取方法：在CCE控制台，单击顶部的“服务列表 > 存储 > 弹性文件服务”，在弹性文件服务列表中可以看到“挂载地址”列，即为文件存储的共享路径，如[图1](https://support.huaweicloud.com/usermanual-cce/cce_10_0319.html)。 |\n     | volumeID | 文件存储的ID。  获取方法：在CCE控制台，单击左侧栏目树中的“资源管理-存储管理”，在“文件存储卷”页签下单击PVC的名称，在PVC详情页中复制“PVC UID”后的内容即可。 |\n     | storage | 文件存储的大小。 |\n     | storageClassName | 文件存储支持的读写方式，当前支持nfs-rw、nfs-ro。 |\n   - **PVC yaml文件配置示例：**\n\n     ```\n     apiVersion: v1\n     kind: PersistentVolumeClaim\n     metadata:\n       annotations:\n         volume.beta.kubernetes.io/storage-class: nfs-rw\n         volume.beta.kubernetes.io/storage-provisioner: flexvolume-huawei.com/fuxinfs\n       name: pvc-sfs-example\n       namespace: default\n     spec:\n       accessModes:\n       - ReadWriteMany\n       resources:\n         requests:\n           storage: 10Gi\n       volumeName: pv-sfs-example\n       volumeNamespace: default\n     ```\n\n     **表4** 关键参数说明\n\n     | 参数 | 描述 |\n     | --- | --- |\n     | volume.beta.kubernetes.io/storage-class | 文件存储支持的读写方式，支持nfs-rw 、nfs-ro。必须和已有PV保持一致。 |\n     | volume.beta.kubernetes.io/storage-provisioner | 必须使用flexvolume-huawei.com/fuxinfs。 |\n     | storage | 存储容量，单位Gi，必须和已有pv的storage大小保持一致。 |\n     | volumeName | PV的名称。 |\n\n   **图1** 弹性文件存储-共享路径\n    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001244261151.png \"点击放大\")\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n   文件存储所在VPC必须与工作负载规划部署的ECS虚拟机的VPC保持一致。\n4. 创建PV。\n\n   **kubectl create -f pv-sfs-example.yaml**\n5. 创建PVC。\n\n   **kubectl create -f pvc-sfs-example.yaml**",
+          "content_hash": "6c82604f81f7f82295eb3779996780cf05deb9803a9cc4c855d8c17f8949198b",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0319.html",
+          "title": "使用kubectl对接已有文件存储",
+          "score": 0.02900988017658188
+        },
+        {
+          "id": "XWLYHR3ZYJXMURZVI4HNW23KD3",
+          "revision_id": "J73PO5MTA7AIRNK3C65CTV4ZHI",
+          "section": "操作步骤（第1部分）",
+          "start_line": 16,
+          "end_line": 322,
+          "content": "1. 数据备份（可选，主要防止异常情况下数据丢失）。\n2. 根据FlexVolume格式的PV，准备CSI格式的PV的yaml文件关联已有存储。\n\n   执行如下命令，配置名为“pv-example.yaml”的创建PV的yaml文件。\n\n   **touch pv-example.yaml**\n\n   **vi pv-example.yaml**\n\n   **云硬盘存储卷PV**的配置示例如下：\n\n   ```\n   apiVersion: v1\n   kind: PersistentVolume\n   metadata:\n     labels:\n       failure-domain.beta.kubernetes.io/region: ap-southeast-1\n       failure-domain.beta.kubernetes.io/zone: <zone name>\n     annotations:\n       pv.kubernetes.io/provisioned-by: everest-csi-provisioner\n     name: pv-evs-example\n   spec:\n     accessModes:\n     - ReadWriteOnce\n     capacity:\n       storage: 10Gi\n     csi:\n       driver: disk.csi.everest.io\n       fsType: ext4\n       volumeAttributes:\n         everest.io/disk-mode: SCSI\n         everest.io/disk-volume-type: SAS\n         storage.kubernetes.io/csiProvisionerIdentity: everest-csi-provisioner\n       volumeHandle: 0992dbda-6340-470e-a74e-4f0db288ed82\n     persistentVolumeReclaimPolicy: Delete\n     storageClassName: csi-disk\n   ```\n\n   加粗标红字段需要重点关注，其中参数说明如下：\n\n   **表1** 云硬盘存储卷PV配置参数说明\n\n   | 参数 | 描述 |\n   | --- | --- |\n   | failure-domain.beta.kubernetes.io/region | 云硬盘所在region，可参考FlexVolume PV的相同字段。 |\n   | failure-domain.beta.kubernetes.io/zone | 云硬盘所在可用区，可参考FlexVolume PV的相同字段。 |\n   | name | PV资源的名称，集群下唯一。 |\n   | storage | 云硬盘的容量，单位为Gi。可参考FlexVolume PV的spec.capacity.storage。 |\n   | driver | 挂载依赖的存储驱动，EVS云硬盘配置为“disk.csi.everest.io”。 |\n   | volumeHandle | 云硬盘的volumeID，可参考FlexVolume PV的spec.flexVolume.options.volumeID。 |\n   | everest.io/disk-mode | 云硬盘磁盘模式，可参考FlexVolume PV的spec.flexVolume.options.disk-mode。 |\n   | everest.io/disk-volume-type | 云硬盘类型，当前支持高I/O（SAS）、超高I/O（SSD）。可参考FlexVolume PV的spec.storageClassName对应的sc中的parameters.\"kubernetes.io/volumetype\"。 |\n   | storageClassName | 存储卷动态供应关联的K8s storage class名称；云硬盘需使用“csi-disk”。 |\n\n   **文件存储卷****PV**配置示例如下：\n\n   ```\n   apiVersion: v1\n   kind: PersistentVolume\n   metadata:\n     name: pv-sfs-example\n     annotations:\n       pv.kubernetes.io/provisioned-by: everest-csi-provisioner\n   spec:\n     accessModes:\n     - ReadWriteMany\n     capacity:\n       storage: 10Gi\n     csi:\n       driver: nas.csi.everest.io\n       fsType: nfs\n       volumeAttributes:\n         everest.io/share-export-location: sfs-nas01.ap-southeast-1.myhuaweicloud.com:/share-436304e8\n         storage.kubernetes.io/csiProvisionerIdentity: everest-csi-provisioner\n       volumeHandle: 682f00bb-ace0-41d8-9b3e-913c9aa6b695\n     persistentVolumeReclaimPolicy: Delete\n     storageClassName: csi-nas\n   ```\n\n   加粗标红字段需要重点关注，其中参数说明如下：\n\n   **表2** 文件存储卷PV配置参数说明\n\n   | 参数 | 描述 |\n   | --- | --- |\n   | name | PV资源的名称，集群下唯一。 |\n   | storage | 文件存储的大小，单位为Gi。可参考FlexVolume PV的spec.capacity.storage。 |\n   | driver | 挂载依赖的存储驱动，文件存储配置为“nas.csi.everest.io”。 |\n   | everest.io/share-export-location | 文件存储的共享路径。可参考FlexVolume PV的spec.flexVolume.options.deviceMountPath。 |\n   | volumeHandle | 文件存储的ID。可参考FlexVolume PV的spec.flexVolume.options.volumeID。 |\n   | storageClassName | K8s storage class名称；需配置为\"csi-nas\"。 |\n\n   **对象存储卷PV**配置示例如下：\n\n   ```\n   apiVersion: v1\n   kind: PersistentVolume\n   metadata:\n     name: pv-obs-example\n     annotations:\n       pv.kubernetes.io/provisioned-by: everest-csi-provisioner\n   spec:\n     accessModes:\n     - ReadWriteMany\n     capacity:\n       storage: 1Gi\n     csi:\n       driver: obs.csi.everest.io\n       fsType: s3fs\n       volumeAttributes:\n         everest.io/obs-volume-type: STANDARD\n         everest.io/region: ap-southeast-1\n         storage.kubernetes.io/csiProvisionerIdentity: everest-csi-provisioner\n       volumeHandle: obs-normal-static-pv\n     persistentVolumeReclaimPolicy: Delete\n     storageClassName: csi-obs\n   ```\n\n   加粗标红字段需要重点关注，其中参数说明如下：\n\n   **表3** 对象存储卷PV配置参数说明\n\n   | 参数 | 描述 |\n   | --- | --- |\n   | name | PV资源的名称，集群下唯一。 |\n   | storage | 存储容量，单位为Gi。此处配置为固定值1Gi。 |\n   | driver | 挂载依赖的存储驱动，对象存储配置为“obs.csi.everest.io”。 |\n   | fsType | 文件类型，支持“obsfs”与“s3fs”，取值为s3fs时创建是obs对象桶，配套使用s3fs挂载；取值为obsfs时创建的是obs并行文件系统，配套使用obsfs挂载。可参考FlexVolume PV的spec.flexVolume.options.posix的对应关系：true（obsfs）、false/空值（s3fs）。 |\n   | everest.io/obs-volume-type | 存储类型，包括STANDARD（标准桶）、WARM（低频访问桶）。可参考FlexVolume PV的spec.flexVolume.options.storage\\_class的对应关系：standard（标准桶）、standard\\_ia（低频访问桶）。 |\n   | everest.io/region | 对象存储所在的region。可参考FlexVolume PV的spec.flexVolume.options.region。 |\n   | volumeHandle | 对象存储的桶名称。可参考FlexVolume PV的spec.flexVolume.options.volumeID。 |\n   | storageClassName | K8s storage class名称；需配置为“csi-obs”。 |\n\n   **极速文件存储卷PV**配置示例如下：\n\n   ```\n   apiVersion: v1\n   kind: PersistentVolume\n   metadata:\n     name: pv-efs-example\n     annotations:\n       pv.kubernetes.io/provisioned-by: everest-csi-provisioner\n   spec:\n     accessModes:\n     - ReadWriteMany\n     capacity:\n       storage: 10Gi\n     csi:\n       driver: sfsturbo.csi.everest.io\n       fsType: nfs\n       volumeAttributes:\n         everest.io/share-export-location: 192.168.0.169:/\n         storage.kubernetes.io/csiProvisionerIdentity: everest-csi-provisioner\n       volumeHandle: 8962a2a2-a583-4b7f-bb74-fe76712d8414\n     persistentVolumeReclaimPolicy: Delete\n     storageClassName: csi-sfsturbo\n   ```\n\n   加粗标红字段需要重点关注，其中参数说明如下：\n\n   **表4** 极速文件存储卷PV配置参数说明\n\n   | 参数 | 描述 |\n   | --- | --- |\n   | name | PV资源的名称，集群下唯一。 |\n   | storage | 文件存储的大小。可参考FlexVolume PV的spec.capacity.storage。 |\n   | driver | 挂载依赖的存储驱动，极速文件存储配置为“sfsturbo.csi.everest.io”。 |\n   | everest.io/share-export-location | 极速文件存储的共享路径。可参考FlexVolume PV的spec.flexVolume.options.deviceMountPath。 |\n   | volumeHandle | 极速文件存储的ID。可参考FlexVolume PV的spec.flexVolume.options.volumeID。 |\n   | storageClassName | 指定K8s storage class名称；极速文件存储卷需配置为“csi-sfsturbo”。 |\n3. 根据FlexVolume格式的PVC，准备CSI格式的PVC的yaml文件关联上述步骤准备的静态PV。\n\n   执行如下命令，配置名为“pvc-example.yaml”的创建PVC的yaml文件。\n\n   **touch pvc-example.yaml**\n\n   **vi pvc-example.yaml**\n\n   **云硬盘存储卷PVC**的配置示例如下：\n\n   ```\n   apiVersion: v1\n   kind: PersistentVolumeClaim\n   metadata:\n     labels:\n       failure-domain.beta.kubernetes.io/region: ap-southeast-1\n       failure-domain.beta.kubernetes.io/zone: <zone name>\n     annotations:\n       everest.io/disk-volume-type: SAS\n       volume.beta.kubernetes.io/storage-provisioner: everest-csi-provisioner\n     name: pvc-evs-example\n     namespace: default\n   spec:\n     accessModes:\n     - ReadWriteOnce\n     resources:\n       requests:\n         storage: 10Gi\n     volumeName:  pv-evs-example\n     storageClassName: csi-disk\n   ```\n\n   加粗标红字段需要重点关注，其中参数说明如下：\n\n   **表5** 云硬盘存储卷PVC配置参数说明\n\n   | 参数 | 描述 |\n   | --- | --- |\n   | failure-domain.beta.kubernetes.io/region | 集群所在region。可参考FlexVolume PVC的相同字段。 |\n   | failure-domain.beta.kubernetes.io/zone | EVS云硬盘所在可用区。可参考FlexVolume PVC的相同字段。 |\n   | everest.io/disk-volume-type | 云硬盘存储类型，支持SAS、SSD。和上述步骤的PV保持一致。 |\n   | name | PVC资源名称，同namespace下唯一。保证在namespace下唯一即可。（若PVC是由有状态应用动态创建，则保持和FlexVolume PVC的name一致）。 |\n   | namespace | PVC资源命名空间。可参考FlexVolume PVC的相同字段。 |\n   | storage | PVC申请容量，必须和已有PV的storage大小保持一致。 |\n   | volumeName | PV的名称。使用上述步骤的静态PV的名称。 |\n   | storageClassName | 指定K8s storage class名称；云硬盘需使用“csi-disk”。 |\n\n   **文件存储卷PVC**配置示例如下：\n\n   ```\n   apiVersion: v1\n   kind: PersistentVolumeClaim\n   metadata:\n     annotations:\n       volume.beta.kubernetes.io/storage-provisioner: everest-csi-provisioner\n     name: pvc-sfs-example\n     namespace: default\n   spec:\n     accessModes:\n     - ReadWriteMany\n     resources:\n       requests:\n         storage: 10Gi\n     storageClassName: csi-nas\n     volumeName: pv-sfs-example\n   ```\n\n   加粗标红字段需要重点关注，其中参数说明如下：\n\n   **表6** 文件存储卷PVC配置参数说明\n\n   | 参数 | 描述 |\n   | --- | --- |\n   | name | PVC资源名称，同namespace下唯一。保证在namespace下唯一即可。（若PVC是由有状态应用动态创建，则保持和FlexVolume PVC的name一致）。 |\n   | namespace | PVC资源命名空间。可参考FlexVolume PVC的相同字段。 |\n   | storage | 存储容量，单位Gi，必须和已有pv的storage大小保持一致。 |\n   | storageClassName | 需配置为\"csi-nas\"。 |\n   | volumeName | PV的名称。参考上述步骤的静态PV的名称。 |\n\n   **对象存储卷PVC**配置示例如下：\n\n   ```\n   apiVersion: v1\n   kind: PersistentVolumeClaim\n   metadata:\n     annotations:\n       volume.beta.kubernetes.io/storage-provisioner: everest-csi-provisioner\n       everest.io/obs-volume-type: STANDARD\n       csi.storage.k8s.io/fstype: s3fs\n     name: pvc-obs-example\n     namespace: default\n   spec:\n     accessModes:\n     - ReadWriteMany\n     resources:\n       requests:\n         storage: 1Gi\n     storageClassName: csi-obs\n     volumeName: pv-obs-example\n   ```\n\n   加粗标红字段需要重点关注，其中参数说明如下：\n\n   **表7** 对象存储卷PVC配置参数说明\n\n   | 参数 | 描述 |\n   | --- | --- |\n   | everest.io/obs-volume-type | obs存储类型；当前支持标准（STANDARD）和低频（WARM）两种存储类型。和上述步骤的PV保持一致。 |\n   | csi.storage.k8s.io/fstype | 指定文件类型，支持“obsfs”与“s3fs”。与上述步骤中静态obs存储的PV的fsType保持一致。 |\n   | name | PVC资源名称，同namespace下唯一。保证在namespace下唯一即可。（若PVC是由有状态应用动态创建，则保持和FlexVolume PVC的name一致）。 |\n   | namespace | PVC资源命名空间。可参考FlexVolume PVC的相同字段。 |\n   | storage | 存储容量，单位为Gi。此处配置为固定值1Gi。 |\n   | storageClassName | K8s storage class名称；需配置为“csi-obs”。 |\n   | volumeName | PV的名称。参考上述步骤创建的静态PV的名称。 |\n\n   **极速文件存储卷PVC**配置示例如下：\n\n   ```\n   apiVersion: v1\n   kind: PersistentVolumeClaim\n   metadata:\n     annotations:\n       volume.beta.kubernetes.io/storage-provisioner: everest-csi-provisioner\n     name: pvc-efs-example\n     namespace: default\n   spec:\n     accessModes:\n     - ReadWriteMany\n     resources:\n       requests:\n         storage: 10Gi\n     storageClassName: csi-sfsturbo\n     volumeName: pv-efs-example\n   ```\n\n   加粗标红字段需要重点关注，其中参数说明如下：",
+          "content_hash": "f2f12fd5f9e8658af436e520c4f688ca888f922495e352ebe9f6f74b6b6b9a3f",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html",
+          "title": "1.15集群如何从Flexvolume存储类型迁移到CSI Everest存储类型",
+          "score": 0.028531243721117136
+        }
+      ],
+      "result": {
+        "trace_id": "291d5b01071af58b1bd9d1d7b58a7127"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1193.0905420013005
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-084",
+      "group": "cce_10_0054",
+      "category": "高危操作一览",
+      "question_type": "comparison",
+      "question": "重装CCE控制节点和Node节点操作系统后，手册给出的恢复结论相同吗？",
+      "answerable": true,
+      "required_facts": [
+        "控制节点重装后组件删除，不可恢复",
+        "Node节点重装后可按文档重置节点"
+      ],
+      "reference_answer": "控制节点重装后组件删除，不可恢复；Node节点重装后可按文档重置节点",
+      "evidence": [
+        {
+          "document_id": "cce_10_0054",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+          "title": "高危操作一览",
+          "file": "documents/cce_10_0054.md",
+          "content_sha256": "74606d65851002a616dc9b9dc58670e72fa4a6370f23b4bb59ffe9b650fbe352",
+          "start_line": 18,
+          "end_line": 18,
+          "section": "集群/节点",
+          "anchor": "控制节点组件被删除",
+          "quote": "| 重装操作系统 | 控制节点组件被删除 | 不可恢复。 |",
+          "quote_sha256": "2ff4ec90e7efcab53451593181ed86b278e494dfa316c053499e550068f6901b"
+        },
+        {
+          "document_id": "cce_10_0054",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+          "title": "高危操作一览",
+          "file": "documents/cce_10_0054.md",
+          "content_sha256": "74606d65851002a616dc9b9dc58670e72fa4a6370f23b4bb59ffe9b650fbe352",
+          "start_line": 28,
+          "end_line": 28,
+          "section": "集群/节点",
+          "anchor": "节点组件被删除，节点不可用",
+          "quote": "| 重装操作系统 | 节点组件被删除，节点不可用 | 重置节点，具体请参见[重置节点](https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html)。 |",
+          "quote_sha256": "95df11dbbc1000590064d7e96fed5b3b44896be89611acb88f306e621f3c5186"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-084",
+      "question": "重装CCE控制节点和Node节点操作系统后，手册给出的恢复结论相同吗？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "高危操作一览",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "WR3F5VWDJA2USFTETWYAXIUONK",
+          "revision_id": "2FAFH7GEGOSU62ZOHURIVJD7AD",
+          "section": "解决方案",
+          "start_line": 17,
+          "end_line": 59,
+          "content": "- **检查到节点状态异常，请优先恢复**\n\n  若检查发现节点不可用，请登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群控制台，前往“节点管理”页面并切换至“节点”页签查看节点状态，请确保节点处于“运行中”状态。节点处于“安装中”、“删除中”状态时，均不支持升级。\n\n  若节点状态异常，请参考 [集群可用，但节点状态为“不可用”](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00120.html)修复节点后，重试检查任务。\n\n  **图1** 查看节点状态\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002516936739.png \"点击放大\")\n- **检查到节点操作系统不支持升级**\n\n  当前集群升级支持的节点操作系统范围如下表所示，若您的节点OS不在支持列表之内，暂时无法升级。您可将节点重置为列表中可用的操作系统。\n\n  **表1** 节点OS支持列表\n\n  | 操作系统 | 限制 |\n  | --- | --- |\n  | EulerOS 2.x | 目标版本为v1.27以下时，无限制  目标版本为v1.27及以上时，仅支持EulerOS 2.9、EulerOS 2.10 |\n  | CentOS 7.x | 无限制 |\n  | Ubuntu | 目标版本为v1.27及以上时，仅支持Ubuntu 22.04。 |\n  | Huawei Cloud EulerOS 1.1 | 无限制 |\n  | Huawei Cloud EulerOS 2.0 | 无限制 |\n- **检查到节点属于默认节点池，但是含有普通节点池标签，将影响升级流程**\n\n  由节点池迁移至默认节点池的节点，\"cce.cloud.com/cce-nodepool\"该标签影响集群升级。请确认该节点上的负载调度是否依赖该标签：\n\n  - 若无依赖，请删除该标签。\n  - 若存在依赖，请修改负载调度策略，解除依赖后再删除该标签。\n- **检查到节点含有CNIProblem污点，请优先恢复**\n\n  检查到节点含有key为node.cloudprovider.kubernetes.io/cni-problem，效果为不可调度（NoSchedule）的污点。该污点由NPD插件检查添加，建议您优先升级NPD插件至最新版本，再重新检查，若仍然有问题，请联系支持人员。\n- **检查到节点对应的k8s node资源不存在，该节点可能正在删除中，请稍后重试**\n\n  等待节点删除完全后，在升级前检查界面重新检查。\n- **检查控制节点操作系统为EulerOS 2.5，不支持升级到v1.27.5-r0版本**\n\n  您可选择升级至1.25或1.28。如果您选择升级至1.28版本，升级过程中EulerOS 2.5将会被滚动升级成Huawei Cloud EulerOS 2.0。如果您有其他需求，请提交工单联系技术支持人员。\n- **检查到使用Snt3NPU卡的节点操作系统为EulerOS 2.8 arm，不支持升级至****v1.28及以上版本****集群**\n\n  Standard/Turbo集群v1.28及以上版本不再支持EulerOS 2.8 arm（已EOS），但Snt3 ARM机型最高支持至EulerOS 2.8 arm，因此集群无法直接对节点操作系统进行升级，进而引发升级失败。如果需要继续升级，请参考以下步骤：\n\n  1. 如果需要继续使用NPU资源，请参考[集群版本与操作系统对应关系](https://support.huaweicloud.com/intl/zh-cn/bulletin-cce/cce_bulletin_0004.html#section1)和[NPU卡与操作系统对应关系](https://support.huaweicloud.com/intl/zh-cn/resmgmt-modelarts/umn-cluster-modelarts-0004.html)，选择合适的NPU机型和操作系统，具体购买流程请参见[轻量算力集群使用流程](https://support.huaweicloud.com/intl/zh-cn/resmgmt-modelarts/umn-cluster-modelarts-0002.html)。\n  2. 将问题节点中的相关业务迁移至[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0431.html)中购买的节点中，具体操作请参见[节点排水](https://support.huaweicloud.com/usermanual-cce/cce_10_0605.html)。\n  3. 删除问题节点，重新进行集群升级。",
+          "content_hash": "ced95aa9ebf57e239b653d32f903155d27fec534b8627fb99ad089d15d7815f2",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0431.html",
+          "title": "节点限制检查异常处理",
+          "score": 0.03128054740957967
+        },
+        {
+          "id": "T4NT7BJZHHLSXUPNW2CO2K5E2S",
+          "revision_id": "IVDWYOR2OM5TBVQP77Q7OJIGJQ",
+          "section": "节点重启后故障未恢复",
+          "start_line": 101,
+          "end_line": 118,
+          "content": "- 失败信息示例\n\n  ```\n  auto repair for read-only filesystem failed: node not recovered in 15m0s\n  auto repair for kubelet PLEG failed: node not recovered in 15m0s\n  ```\n- 原因分析\n\n  节点重启后故障依然存在，说明问题并非由临时性异常引起，而是存在更底层的系统性故障（如磁盘损坏、内核异常、系统文件损坏等），单纯重启无法修复。\n- 处理步骤\n  1. 对故障节点执行**重置节点**操作，将节点操作系统重装为初始状态并重新加入集群。详情请参见[重置节点](https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html)。\n\n     ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/caution_3.0-zh-cn.png)\n\n     - 确认节点上无不可迁移的有状态数据，或已完成数据备份；\n     - 重置会销毁节点上所有Pod，请确保业务已具备高可用部署或已做好驱逐准备。\n  2. 重置完成后，确认节点正常加入集群且Pod可正常调度运行。\n  3. 若重置后故障依旧，说明底层硬件可能存在不可逆损坏，请提交工单联系技术支持人员。",
+          "content_hash": "a4f0a47edd315f69ed06477217dc3160965f3492b93d0d76f85a652f36a5c360",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+          "title": "节点自愈功能",
+          "score": 0.03076923076923077
+        },
+        {
+          "id": "KCJTXNDZ3NO3SDQDSYYMLRUNGE",
+          "revision_id": "2DB5H64MTS7ZDE6D4GCJZ4WBFO",
+          "section": "操作场景",
+          "start_line": 8,
+          "end_line": 10,
+          "content": "您可以通过重置节点修改节点的配置，比如修改节点操作系统、登录方式等。\n\n重置节点会重装节点操作系统，并重新安装节点上Kubernetes软件。如果您在使用过程中修改了节点上的配置等操作导致节点不可用，可以通过重置节点进行修复。",
+          "content_hash": "acbb5d3dbd85ccdf3ec13dc0dcf47c2ea769f6dff841e960909d69314e540cf7",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html",
+          "title": "重置节点",
+          "score": 0.02976190476190476
+        },
+        {
+          "id": "KBVRDSS5W2VRZ3LECRV4CLGXYU",
+          "revision_id": "EGS6ZAGAO4ZHH4VFTHTS433S3R",
+          "section": "约束限制",
+          "start_line": 16,
+          "end_line": 17,
+          "content": "- 若节点在CCE集群移除后重装操作系统失败，请手动完成失败节点的操作系统重装，并在重装后登录节点执行清理脚本完成CCE组件清理，具体步骤参见[重装操作系统失败如何处理](https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html)。\n- 移除节点会导致与节点关联的[本地持久卷](https://support.huaweicloud.com/usermanual-cce/cce_10_0391.html)类型的PVC/PV数据丢失，无法恢复，且PVC/PV无法再正常使用。移除节点时使用了本地持久存储卷的Pod会从移除的节点上驱逐，并重新创建Pod，Pod会一直处于pending状态，因为Pod使用的PVC带有节点标签，由于冲突无法调度成功。",
+          "content_hash": "6a4a47db15ae8235f4720550b8ac0d7858bf468f2b989fb52f06f114263e7b67",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html",
+          "title": "移除节点",
+          "score": 0.029138513513513514
+        },
+        {
+          "id": "A4LGLJWSOGX2KZ5LAWYP6MGS57",
+          "revision_id": "5UJGFA2M6KFJJEZHDNTESEFRVX",
+          "section": "操作系统内核更新信息",
+          "start_line": 232,
+          "end_line": 232,
+          "content": "关于CCE发布的最新操作系统内核信息，请参见[操作系统镜像版本说明](https://support.huaweicloud.com/intl/zh-cn/bulletin-cce/cce_bulletin_0036.html)。",
+          "content_hash": "5950ddd76844930f4ce7c0918a7b8053377325b56ac9630d81e91d05180a4acd",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0476.html",
+          "title": "节点操作系统说明",
+          "score": 0.02900988017658188
+        }
+      ],
+      "result": {
+        "trace_id": "2aac8700495536930e0294bb778b4f7a"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1261.6077920101816
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-093",
+      "group": "family:cce_10_0191",
+      "category": "模板（Helm Chart）",
+      "question_type": "constraint",
+      "question": "Helm v3 chart的crds目录，升级release会更新CRD吗，删除release会删CRD吗？",
+      "answerable": true,
+      "required_facts": [
+        "crds目录仅安装release时部署",
+        "升级不更新",
+        "删除不卸载",
+        "推荐分离CRD和使用CRD资源的chart管理"
+      ],
+      "reference_answer": "crds目录仅安装release时部署；升级不更新；删除不卸载；推荐分离CRD和使用CRD资源的chart管理",
+      "evidence": [
+        {
+          "document_id": "cce_10_0421",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0421.html",
+          "title": "Helm v2与Helm v3的差异及适配方案",
+          "file": "documents/cce_10_0421.md",
+          "content_sha256": "a536d66454b5f46899d03d6e9703738b111aae9759f2d0e2510df75a950474b5",
+          "start_line": 34,
+          "end_line": 34,
+          "section": "Helm v2与Helm v3的差异及适配方案",
+          "anchor": "crds目录中的资源只有在release安装时会部署",
+          "quote": "   Helm v3删除了crd-install hook， 并用chart中的crds目录替换。需要注意的是，crds目录中的资源只有在release安装时会部署，升级时不会更新，删除时不会卸载crds目录中的资源。若crd已存在，则重复安装不会报错。",
+          "quote_sha256": "7e999a5bd6d2068735b087d727171b972afbd301b13e917beabc22c6720e78ba"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-093",
+      "question": "Helm v3 chart的crds目录，升级release会更新CRD吗，删除release会删CRD吗？",
+      "answerable": true,
+      "question_type": "constraint",
+      "category": "模板（Helm Chart）",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "APPITJOCNWCC3VG5RRTR3TH4YA",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "Helm v2 Release转换成Helm v3 Release",
+          "start_line": 2,
+          "end_line": 4,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html\n目录：用户指南 > 模板（Helm Chart） > Helm v2 Release转换成Helm v3 Release\n更新时间：2026-05-26 GMT+08:00",
+          "content_hash": "5abd8b33d76c6bf05845e71dbde670ecca1a3ac02b7ecac8efccb62366b6d6e6",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.03200204813108039
+        },
+        {
+          "id": "MO4IKMCZKEVMGP4NLY55Z42Y53",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "注意事项：",
+          "start_line": 14,
+          "end_line": 15,
+          "content": "- Helm v2 release信息存储在configmap中，Helm v3 release信息存储在secrets中。\n- 若用户通过前端console操作，在获取实例、更新实例等操作中CCE会自动尝试转换v2模板实例到v3模板实例。若用户仅在后台操作实例，需通过该指南进行转换操作。",
+          "content_hash": "c7760f810e735efeabd888c0852285896007f1e6556ded8863a4cbf03ab548c0",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.03177805800756621
+        },
+        {
+          "id": "GXWXVJVXDCNCVHPALFWKXXKYK6",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "背景介绍",
+          "start_line": 8,
+          "end_line": 10,
+          "content": "当前CCE已全面支持Helm v3版本，用户可通过本指南将已创建的v2 release转换成v3 release，从而更好地使用v3的特性。因Helm v3底层相对于Helm v2来说，一些功能已被弃用或重构，因此转换会有一定风险，需转换前进行模拟转换。\n\n该指南参考社区文档：<https://github.com/helm/helm-2to3>",
+          "content_hash": "e44fb88acb57c4adbafa0241d9e7ca5e97b4a7cb262679616723e2f6ea763ede",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.03128054740957967
+        },
+        {
+          "id": "DQTDDCME772PPTBDUJ7VVCVKPN",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "转换流程（使用Helm v3客户端）",
+          "start_line": 87,
+          "end_line": 164,
+          "content": "1. 安装Helm v3客户端，参见[安装Helm v3](https://support.huaweicloud.com/usermanual-cce/cce_10_0144.html)。\n2. 安装转换插件。\n\n   ```\n   # helm plugin install https://github.com/helm/helm-2to3\n   Downloading and installing helm-2to3 v0.10.2 ...\n   https://github.com/helm/helm-2to3/releases/download/v0.10.2/helm-2to3_0.10.2_linux_amd64.tar.gz\n   Installed plugin: 2to3\n   ```\n3. 查看已安装的插件，确认插件已安装。\n\n   ```\n   # helm plugin list\n   NAME VERSION DESCRIPTION\n   2to3  0.10.2      migrate and cleanup Helm v2 configuration and releases in-place to Helm v3\n   ```\n4. 模拟转换。\n\n   以test-convert实例为例，执行以下命令进行转换的模拟。若出现以下相关提示，说明模拟转换成功。\n\n   ```\n   # helm 2to3 convert --dry-run --tiller-out-cluster -s configmaps test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   ```\n5. 执行正式转换。若出现以下提示，说明转换成功。\n\n   ```\n   # helm 2to3 convert --tiller-out-cluster -s configmaps test-convert\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" created.\n   [Helm 3] Release \"test-convert\" created.\n   Release \"test-convert\" was converted successfully from Helm v2 to Helm v3.\n   Note: The v2 release information still remains and should be removed to avoid conflicts with the migrated v3 release.\n   v2 release information should only be removed using `helm 2to3` cleanup and when all releases have been migrated over.\n   ```\n6. 正式转换成功后，用户可通过helm list查看已转换成功的模板实例。\n\n   ```\n   # helm list\n   NAME                NAMESPACE    REVISION UPDATED                           STATUS      CHART              APP VERSION\n   test-convert      default   1                2022-08-29 06:56:28.166918487 +0000 UTC       deployed    test-helmold-1\n   ```\n7. 转换完成后进行V2 release资源的清理，同样先进行模拟清理，成功后正式清理V2 release资源。\n\n   模拟清理：\n\n   ```\n   # helm 2to3 cleanup --dry-run --tiller-out-cluster -s configmaps --name test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   ```\n\n   正式清理：\n\n   ```\n   # helm 2to3 cleanup --tiller-out-cluster -s configmaps --name test-convert\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" deleted.\n   [Helm 2] Release 'test-convert' deleted.\n   Helm v2 data was cleaned up successfully.\n   ```",
+          "content_hash": "b7d93c20931e8e03d62d5eff246a7bf14949e59c44c27b4c72d067b23aaab1a9",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.03125763125763126
+        },
+        {
+          "id": "AAWPLNXNSGPA4CTQBTRTSYNFMC",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "转换流程（不使用Helm v3客户端）",
+          "start_line": 19,
+          "end_line": 83,
+          "content": "1. 在CCE节点上下载[helm 2to3](https://github.com/helm/helm-2to3/releases/download/v0.10.2/helm-2to3_0.10.2_linux_amd64.tar.gz)转换插件。\n\n   ```\n   wget https://github.com/helm/helm-2to3/releases/download/v0.10.2/helm-2to3_0.10.2_linux_amd64.tar.gz\n   ```\n\n2. 解压插件包。\n\n   ```\n   tar -xzvf helm-2to3_0.10.2_linux_amd64.tar.gz\n   ```\n\n3. 模拟转换。\n\n   以test-convert实例为例，执行以下命令进行转换的模拟。若出现以下提示，说明模拟转换成功。\n\n   ```\n   # ./2to3 convert --dry-run --tiller-out-cluster -s configmaps test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   ```\n4. 执行正式转换。若出现以下提示，说明转换成功。\n\n   ```\n   # ./2to3 convert --tiller-out-cluster -s configmaps test-convert\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" created.\n   [Helm 3] Release \"test-convert\" created.\n   Release \"test-convert\" was converted successfully from Helm v2 to Helm v3.\n   Note: The v2 release information still remains and should be removed to avoid conflicts with the migrated v3 release.\n   v2 release information should only be removed using `helm 2to3` cleanup and when all releases have been migrated over.\n   ```\n5. 转换完成后进行v2 release资源的清理，同样先进行模拟清理，成功后正式清理v2 release资源。\n\n   模拟清理：\n\n   ```\n   # ./2to3 cleanup --dry-run --tiller-out-cluster -s configmaps --name test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   ```\n\n   正式清理：\n\n   ```\n   # ./2to3 cleanup --tiller-out-cluster -s configmaps --name test-convert\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" d\n   ```",
+          "content_hash": "85b2aa66309d47422d664ca9e2203d9456e390900935fd4a1ad4d67e9aa82bae",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.03125
+        }
+      ],
+      "result": {
+        "trace_id": "04acc9685afbb5b1ff714a224de2fb04"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1144.8909580067266
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-096",
+      "group": "family:cce_10_0613",
+      "category": "存储",
+      "question_type": "comparison",
+      "question": "EVS静态PV回收策略Delete下，设置与不设置everest.io/reclaim-policy=retain-volume-only，删除PVC结果有何不同？",
+      "answerable": true,
+      "required_facts": [
+        "不设置时PV和云硬盘都删除",
+        "设置retain-volume-only时PV删除、底层云硬盘保留",
+        "该参数要求Everest至少1.2.9且Delete策略"
+      ],
+      "reference_answer": "不设置时PV和云硬盘都删除；设置retain-volume-only时PV删除、底层云硬盘保留；该参数要求Everest至少1.2.9且Delete策略",
+      "evidence": [
+        {
+          "document_id": "cce_10_0614",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html",
+          "title": "通过静态存储卷使用已有云硬盘",
+          "file": "documents/cce_10_0614.md",
+          "content_sha256": "5f837c83554b1ea305241a0d41e097971199ef0ebab9655cffe1bb6becbcbc81",
+          "start_line": 128,
+          "end_line": 128,
+          "section": "使用已有云硬盘",
+          "anchor": "everest.io/reclaim-policy: retain-volume-only | 否",
+          "quote": "      | everest.io/reclaim-policy: retain-volume-only | 否 | 目前仅支持配置“retain-volume-only”  everest插件版本需 >= 1.2.9且回收策略为Delete时生效。如果回收策略是Delete且当前值设置为“retain-volume-only”删除PVC回收逻辑为：删除PV，保留底层存储卷。 |",
+          "quote_sha256": "11d2c13cf84246f174d33ce534b5cef61f608920c455ef712f1c3d42f49d0918"
+        },
+        {
+          "document_id": "cce_10_0614",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html",
+          "title": "通过静态存储卷使用已有云硬盘",
+          "file": "documents/cce_10_0614.md",
+          "content_sha256": "5f837c83554b1ea305241a0d41e097971199ef0ebab9655cffe1bb6becbcbc81",
+          "start_line": 141,
+          "end_line": 141,
+          "section": "使用已有云硬盘",
+          "anchor": "Delete且不设置everest.io/reclaim-policy",
+          "quote": "      | persistentVolumeReclaimPolicy | 是 | 集群版本号>=1.19.10且everest插件版本>=1.2.9时正式开放回收策略支持。  支持Delete、Retain回收策略，详情请参见[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)。如果数据安全性要求较高，建议使用**Retain**以免误删数据。  **Delete**:  - Delete且不设置everest.io/reclaim-policy：删除PVC，PV资源与云硬盘均被删除。 - Delete且设置everest.io/reclaim-policy=retain-volume-only：删除PVC，PV资源被删除，云硬盘资源会保留。 **Retain**：删除PVC，PV资源与底层存储资源均不会被删除，需要手动删除回收。PVC删除后PV资源状态为“已释放（Released）”，不能直接再次被PVC绑定使用。若希望继续使用该底层存储资源，需先删除PV，再新建PV、PVC和底层存储关联。 |",
+          "quote_sha256": "33ee6ae0190b4b4a06731251b9049a221c86500417df1e12a2d86fcc990cbd40"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-096",
+      "question": "EVS静态PV回收策略Delete下，设置与不设置everest.io/reclaim-policy=retain-volume-only，删除PVC结果有何不同？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "存储",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "O6YLVQREKBQMT3LYD7ICE3KI5E",
+          "revision_id": "2LI6ETCVHPH4ANPKEIW5DOMCLI",
+          "section": "PV回收策略",
+          "start_line": 85,
+          "end_line": 153,
+          "content": "PV回收策略用于指定删除PVC时，底层卷的回收策略，支持设定Delete、Retain回收策略。\n\n- Delete：删除PVC的动作会将PV对象从Kubernetes中移除，同时也会从外部基础设施中移除所关联的底层存储资产。\n\n  ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n  包周期云硬盘资源支持通过Delete回收策略进行级联删除，而其他类型的包周期资源则无法通过Delete回收策略实现级联删除。\n- Retain：当PVC对象被删除时，PV对象与底层存储资源均不会被删除，需要手动删除回收。PVC删除后PV资源状态为“已释放（Released）”，且不能直接再次被PVC绑定使用。\n\n  您可以通过以下步骤来手动删除回收：\n\n  1. 手动删除PersistentVolume对象。\n  2. 根据情况，手动清除所关联的底层存储资源上的数据。\n  3. 手动删除所关联的底层存储资源。\n\n  若希望继续使用该底层存储资源，需先删除PV，再新建PV、PVC和底层存储关联。\n\nCCE还支持一种删除PVC时不删除底层存储资源的使用方法，当前仅支持使用YAML创建：PV回收策略设置为Delete，并添加annotations“everest.io/reclaim-policy: retain-volume-only”。这样在删除PVC时，PV会被删除，但底层存储资源会保留。\n\n以云硬盘为例，YAML示例如下：\n\n```\napiVersion: v1\nkind: PersistentVolumeClaim\nmetadata:\n  name: test\n  namespace: default\n  annotations:\n    volume.beta.kubernetes.io/storage-provisioner: everest-csi-provisioner\n    everest.io/disk-volume-type: SAS\n  labels:\n    failure-domain.beta.kubernetes.io/region: <your_region>   # 替换为您待部署应用的节点所在的区域\n    failure-domain.beta.kubernetes.io/zone: <your_zone>       # 替换为您待部署应用的节点所在的可用区\nspec:\n  accessModes:\n    - ReadWriteOnce\n  resources:\n    requests:\n      storage: 10Gi\n  storageClassName: csi-disk\n  volumeName: pv-evs-test\n\n---\napiVersion: v1\nkind: PersistentVolume\nmetadata:\n  annotations:\n    pv.kubernetes.io/provisioned-by: everest-csi-provisioner\n    everest.io/reclaim-policy: retain-volume-only\n  name: pv-evs-test\n  labels:\n    failure-domain.beta.kubernetes.io/region: <your_region>   # 替换为您待部署应用的节点所在的区域\n    failure-domain.beta.kubernetes.io/zone: <your_zone>       # 替换为您待部署应用的节点所在的可用区\nspec:\n  accessModes:\n    - ReadWriteOnce\n  capacity:\n    storage: 10Gi\n  csi:\n    driver: disk.csi.everest.io\n    fsType: ext4\n    volumeHandle: 2af98016-6082-4ad6-bedc-1a9c673aef20   #云硬盘ID\n    volumeAttributes:\n      storage.kubernetes.io/csiProvisionerIdentity: everest-csi-provisioner\n      everest.io/disk-mode: SCSI\n      everest.io/disk-volume-type: SAS\n  persistentVolumeReclaimPolicy: Delete\n  storageClassName: csi-disk\n```",
+          "content_hash": "0b1a2c6a5548ea603d260e8a7f8b658330c763cd79dba7563e1eac1a6b265af9",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html",
+          "title": "存储基础知识",
+          "score": 0.03252247488101534
+        },
+        {
+          "id": "FJ3NHGP5M5GC7L7K4FYI2B75QN",
+          "revision_id": "42CHS7CIIWNYZYG6NLGQULMQEC",
+          "section": "使用已有对象存储（第2部分）",
+          "start_line": 134,
+          "end_line": 221,
+          "content": "| persistentVolumeReclaimPolicy | 是 | 集群版本号>=1.19.10且everest插件版本>=1.2.9时正式开放回收策略支持。  支持Delete、Retain回收策略，详情请参见[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)。多个PV使用同一个对象存储时建议使用**Retain**，避免级联删除底层卷。  **Delete**:  - Delete且不设置everest.io/reclaim-policy：删除PVC，PV资源与存储均被删除。 - Delete且设置everest.io/reclaim-policy=retain-volume-only：删除PVC，PV资源被删除，存储资源会保留。 **Retain**：删除PVC，PV资源与底层存储资源均不会被删除，需要手动删除回收。PVC删除后PV资源状态为“已释放（Released）”，不能直接再次被PVC绑定使用。若希望继续使用该底层存储资源，需先删除PV，再新建PV、PVC和底层存储关联。 |\n      | storage | 是 | 存储容量，单位为Gi。  对于对象存储来说，此处仅为校验需要（不能为空和0），设置的大小不起作用，此处设定为固定值1Gi。 |\n      | storageClassName | 是 | 对象存储对应的存储类名称为csi-obs。 |\n   2. 执行以下命令，创建PV。\n\n      ```\n      kubectl apply -f pv-obs.yaml\n      ```\n3. 创建PVC。\n   1. 创建pvc-obs.yaml文件。\n\n      ```\n      apiVersion: v1\n      kind: PersistentVolumeClaim\n      metadata:\n        name: pvc-obs\n        namespace: default\n        annotations:\n          volume.beta.kubernetes.io/storage-provisioner: everest-csi-provisioner\n          everest.io/obs-volume-type: STANDARD\n          csi.storage.k8s.io/fstype: obsfs\n          csi.storage.k8s.io/node-publish-secret-name: <your_secret_name>  # 自定义密钥的名称\n          csi.storage.k8s.io/node-publish-secret-namespace: <your_namespace>        # 自定义密钥的命名空间\n          everest.io/enterprise-project-id: <your_enterprise_project_id>     # 可选字段，填写对象存储对应的企业项目ID，同时注意创建PVC时填写的企业项目ID要和PV中的一致，否则PVC无法绑定PV\n      spec:\n        accessModes:\n        - ReadWriteMany                  # 对象存储必须为ReadWriteMany\n        resources:\n          requests:\n            storage: 1Gi\n        storageClassName: csi-obs       # 存储类名称，必须与PV的存储类一致。\n        volumeName: pv-obs    # PV的名称\n      ```\n\n      **表3** 关键参数说明\n\n      | 参数 | 是否必填 | 描述 |\n      | --- | --- | --- |\n      | csi.storage.k8s.io/node-publish-secret-name | 否 | PV中指定的自定义密钥的名称。 |\n      | csi.storage.k8s.io/node-publish-secret-namespace | 否 | PV中指定的自定义密钥的命名空间。 |\n      | everest.io/enterprise-project-id | 否 | 填写对象存储对应的企业项目ID，仅限于已开通企业项目的企业客户账号使用。了解更多企业项目相关信息，请查看[企业管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-em/zh-cn_topic_0123692049.html)。  获取方法：在对象存储服务控制台，单击左侧栏目树中的“桶列表”或“并行文件系统”，单击要对接的对象存储名称进入详情页，在“概览 > 基本信息”页签下找到企业项目，单击并进入对应的企业项目控制台，复制对应的ID值即可获取对象存储所属的企业项目的ID。 |\n      | storage | 是 | PVC申请容量，单位为Gi。  对于对象存储来说，此处仅为校验需要（不能为空和0），设置的大小不起作用，此处设定为固定值1Gi。 |\n      | storageClassName | 是 | 存储类名称，必须与[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0379.html)中PV的存储类一致。  对象存储对应的存储类名称为csi-obs。 |\n      | volumeName | 是 | PV的名称，必须与[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0379.html)中PV名称一致。 |\n   2. 执行以下命令，创建PVC。\n\n      ```\n      kubectl apply -f pvc-obs.yaml\n      ```\n4. 创建应用。\n   1. 创建web-demo.yaml文件，本示例中将对象存储挂载至/data路径。\n\n      ```\n      apiVersion: apps/v1\n      kind: Deployment\n      metadata:\n        name: web-demo\n        namespace: default\n      spec:\n        replicas: 2\n        selector:\n          matchLabels:\n            app: web-demo\n        template:\n          metadata:\n            labels:\n              app: web-demo\n          spec:\n            containers:\n            - name: container-1\n              image: nginx:latest\n              volumeMounts:\n              - name: pvc-obs-volume    #卷名称，需与volumes字段中的卷名称对应\n                mountPath: /data  #存储卷挂载的位置\n            imagePullSecrets:\n              - name: default-secret\n            volumes:\n              - name: pvc-obs-volume    #卷名称，可自定义\n                persistentVolumeClaim:\n                  claimName: pvc-obs    #已创建的PVC名称\n      ```\n   2. 执行以下命令，创建一个挂载对象存储的应用。\n\n      ```\n      kubectl apply -f web-demo.yaml\n      ```\n\n      工作负载创建成功后，您可以尝试[验证数据持久化及共享性](https://support.huaweicloud.com/usermanual-cce/cce_10_0379.html)。",
+          "content_hash": "336551535e196d5457cca37ffa35713803b361f755dcb5452bd911ba6d5f5006",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0379.html",
+          "title": "通过静态存储卷使用已有对象存储",
+          "score": 0.032018442622950824
+        },
+        {
+          "id": "GR7JE72S75LNGSHVBEUL4ZJYYP",
+          "revision_id": "UVXHHWIXJQMCWEVTY5ZD2JIK6M",
+          "section": "通过kubectl命令行使用已有文件存储（第2部分）",
+          "start_line": 276,
+          "end_line": 458,
+          "content": "- ReadWriteMany                  # 文件存储必须为ReadWriteMany\n        resources:\n          requests:\n            storage: 1Gi               # 文件存储大小\n        storageClassName: csi-sfs     # 存储类名称，必须与PV的存储类一致\n        volumeName: pv-sfs    # PV的名称\n      ```\n\n      **表5** 关键参数说明\n\n      | 参数 | 是否必选 | 描述 |\n      | --- | --- | --- |\n      | everest.io/csi.volume-as | 是 | 固定取值为“absolute-path”，表示使用动态创建SFS子目录。  集群中需安装2.4.41及以上版本的Everest插件。 |\n      | everest.io/csi.path | 是 | 请填写子目录的绝对路径。  - 当Everest插件版本在2.4.176及以上，且非安全容器场景时，如果子目录不存在，系统将自动创建。 - 在上述情况以外，需确保子目录已存在且可用。 |\n      | everest.io/csi.sfs30-name | 是 | 仅动态创建SFS子目录时使用，参数值为SFS实例的名称。 |\n      | everest.io/csi.reclaim-policy | 是 | 仅动态创建SFS子目录时使用，表示删除PVC时是否保留子目录，该参数需与[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)配合使用。仅当PV回收策略为\"Delete\"时生效，取值如下：  - retain-volume-only：表示删除PVC时，PV会被删除，但**PV关联的子目录会被保留**。 - delete：表示删除PVC，**PV及其关联的子目录均会被删除**。 说明：  删除子目录时，仅删除PVC参数中设置的子目录绝对路径，不会级联删除上层目录。 |\n      | storage | 是 | PVC申请容量，单位为Gi。  必须和已有PV的storage大小保持一致。 |\n      | storageClassName | 是 | 存储类名称，填写csi-sfs，必须与[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html)中PV的存储类一致，表示使用通用文件系统（原SFS 3.0 容量型）。 |\n      | volumeName | 是 | PV的名称，必须与[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html)中PV的名称一致。 |\n   2. 执行以下命令，创建PVC。\n\n      ```\n      kubectl apply -f pvc-sfs.yaml\n      ```\n4. 创建应用。\n   1. 创建web-demo.yaml文件，本示例中将文件存储挂载至/data路径。\n\n      ```\n      apiVersion: apps/v1\n      kind: Deployment\n      metadata:\n        name: web-demo\n        namespace: default\n      spec:\n        replicas: 2\n        selector:\n          matchLabels:\n            app: web-demo\n        template:\n          metadata:\n            labels:\n              app: web-demo\n          spec:\n            containers:\n            - name: container-1\n              image: nginx:latest\n              volumeMounts:\n              - name: pvc-sfs-volume    #卷名称，需与volumes字段中的卷名称对应\n                mountPath: /data  #存储卷挂载的位置\n            imagePullSecrets:\n              - name: default-secret\n            volumes:\n              - name: pvc-sfs-volume    #卷名称，可自定义\n                persistentVolumeClaim:\n                  claimName: pvc-sfs    #已创建的PVC名称\n      ```\n   2. 执行以下命令，创建一个挂载文件存储的应用。\n\n      ```\n      kubectl apply -f web-demo.yaml\n      ```\n\n      工作负载创建成功后，容器挂载目录下的数据将会持久化保持，您可以参考[验证数据持久化及共享性](https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html)中的步骤进行验证。\n\n1. 使用kubectl连接集群。\n2. 创建PV。\n   1. 创建pv-sfs.yaml文件。\n\n      示例如下：\n\n      ```\n      apiVersion: v1\n      kind: PersistentVolume\n      metadata:\n        annotations:\n          pv.kubernetes.io/provisioned-by: everest-csi-provisioner\n          everest.io/reclaim-policy: retain-volume-only      # 可选字段，删除PV，保留底层存储卷\n        name: pv-sfs    # PV的名称\n      spec:\n        accessModes:\n        - ReadWriteMany      # 访问模式，文件存储必须为ReadWriteMany\n        capacity:\n          storage: 1Gi       # 存储容量大小，此处仅为校验需要（不能为空和0），设置的大小不起作用\n        csi:\n          driver: nas.csi.everest.io    # 挂载依赖的存储驱动\n          fsType: nfs\n          volumeHandle: <your_volume_id>   # SFS容量型文件存储的ID\n          volumeAttributes:\n            everest.io/share-export-location: <your_location>  #文件存储的共享路径\n            storage.kubernetes.io/csiProvisionerIdentity: everest-csi-provisioner\n        persistentVolumeReclaimPolicy: Retain    # 回收策略\n        storageClassName: csi-nas               # 存储类名称，csi-nas表示使用SFS容量型\n        mountOptions: []                         # 挂载参数\n      ```\n\n      **表6** 关键参数说明\n\n      | 参数 | 是否必选 | 描述 |\n      | --- | --- | --- |\n      | everest.io/reclaim-policy | 否 | 目前仅支持配置“retain-volume-only”  everest插件版本需 >= 1.2.9且回收策略为Delete时生效。如果回收策略是Delete且当前值设置为“retain-volume-only”删除PVC回收逻辑为：删除PV，保留底层存储卷。 |\n      | volumeHandle | 是 | 使用SFS容量型文件存储时，填写文件存储的ID。  获取方法：在CCE控制台，单击顶部的“服务列表 > 存储 > 弹性文件服务”，并选择SFS容量型。在列表中单击对应的弹性文件存储名称，在详情页中复制“ID”后的内容即可。 |\n      | everest.io/share-export-location | 是 | 文件存储的共享路径。  获取方法：在CCE控制台，单击顶部的“服务列表 > 存储 > 弹性文件服务”，在弹性文件服务列表中可以看到“挂载地址”列，即为文件存储的共享路径。 |\n      | mountOptions | 否 | 挂载参数。  不设置时默认配置为如下配置，具体说明请参见[设置文件存储挂载参数](https://support.huaweicloud.com/usermanual-cce/cce_10_0337.html)。   ``` mountOptions: - vers=3 - timeo=600 - nolock - hard ``` |\n      | persistentVolumeReclaimPolicy | 是 | 集群版本号>=1.19.10且everest插件版本>=1.2.9时正式开放回收策略支持。  支持Delete、Retain回收策略，详情请参见[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)。多个PV使用同一个文件存储时建议使用**Retain**，避免级联删除底层卷。  **Retain**：PVC删除时，PV和关联的底层存储资源均会保留，其中PV状态被设置为“已释放（Released）”，不能直接再次被PVC绑定使用。若希望继续使用该底层存储资源，需先删除PV，再新建PV、PVC和底层存储关联。  **Delete**：PVC删除时，会将关联的底层存储资源删除，并同步移除PV资源，请谨慎使用。 |\n      | storage | 是 | PVC申请容量，单位为Gi，需与已有SFS容量型存储实例一致。 |\n      | storageClassName | 是 | 存储类名称csi-nas，表示使用SFS 1.0容量型文件存储。 |\n   2. 执行以下命令，创建PV。\n\n      ```\n      kubectl apply -f pv-sfs.yaml\n      ```\n3. 创建PVC。\n   1. 创建pvc-sfs.yaml文件。\n\n      ```\n      apiVersion: v1\n      kind: PersistentVolumeClaim\n      metadata:\n        name: pvc-sfs\n        namespace: default\n        annotations:\n          volume.beta.kubernetes.io/storage-provisioner: everest-csi-provisioner\n      spec:\n        accessModes:\n        - ReadWriteMany                  # 文件存储必须为ReadWriteMany\n        resources:\n          requests:\n            storage: 1Gi               # 文件存储大小\n        storageClassName: csi-nas     # 存储类名称，必须与PV的存储类一致\n        volumeName: pv-sfs    # PV的名称\n      ```\n\n      **表7** 关键参数说明\n\n      | 参数 | 是否必选 | 描述 |\n      | --- | --- | --- |\n      | storage | 是 | PVC申请容量，单位为Gi。  必须和已有PV的storage大小保持一致。 |\n      | storageClassName | 是 | 存储类名称，填写csi-nas，必须与[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html)中PV的存储类一致，表示使用SFS 1.0容量型文件存储。 |\n      | volumeName | 是 | PV的名称，必须与[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html)中PV的名称一致。 |\n   2. 执行以下命令，创建PVC。\n\n      ```\n      kubectl apply -f pvc-sfs.yaml\n      ```\n4. 创建应用。\n   1. 创建web-demo.yaml文件，本示例中将文件存储挂载至/data路径。\n\n      ```\n      apiVersion: apps/v1\n      kind: Deployment\n      metadata:\n        name: web-demo\n        namespace: default\n      spec:\n        replicas: 2\n        selector:\n          matchLabels:\n            app: web-demo\n        template:\n          metadata:\n            labels:\n              app: web-demo\n          spec:\n            containers:\n            - name: container-1\n              image: nginx:latest\n              volumeMounts:\n              - name: pvc-sfs-volume    #卷名称，需与volumes字段中的卷名称对应\n                mountPath: /data  #存储卷挂载的位置\n            imagePullSecrets:\n              - name: default-secret\n            volumes:\n              - name: pvc-sfs-volume    #卷名称，可自定义\n                persistentVolumeClaim:\n                  claimName: pvc-sfs    #已创建的PVC名称\n      ```\n   2. 执行以下命令，创建一个挂载文件存储的应用。\n\n      ```\n      kubectl apply -f web-demo.yaml\n      ```\n\n      工作负载创建成功后，容器挂载目录下的数据将会持久化保持，您可以参考[验证数据持久化及共享性](https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html)中的步骤进行验证。",
+          "content_hash": "9d9bef72e5fc4334d167afad04a8ba8b211bc3978a208e3cf1a3ccbecc7d58bc",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html",
+          "title": "通过静态存储卷使用已有文件存储",
+          "score": 0.03125763125763126
+        },
+        {
+          "id": "NZTK2D5YDRWQY3GRBRO3QMRKXO",
+          "revision_id": "ZTBYNTZX7JSF2HOFBMUB6SBXKH",
+          "section": "StorageClass高级配置（第3部分）",
+          "start_line": 393,
+          "end_line": 499,
+          "content": "| reclaimPolicy | 用于指定删除PVC时底层存储的回收策略，详情请参见[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)。该参数未指定时，默认为**Delete**。  - **Delete**：存储卷声明PVC删除时，会将关联的底层存储资源删除，并同步移除PV资源，请谨慎使用。 - **Retain**：存储卷声明PVC删除时，PV和关联的底层存储资源均会保留，需要手动删除。 |\n   | allowVolumeExpansion | 表示由该存储类创建的PV是否支持动态扩容，即是否允许通过修改PVC的方式动态扩容其绑定的存储卷，默认为false。  该参数仅为开启动态扩容的开关，动态扩容能否生效取决于底层存储插件的支持情况。若底层存储插件不支持，即使该参数设置为true，仍无法实现扩容。**目前仅云硬盘、SFS Turbo(无子目录或子目录有限额)支持动态扩容**。 |\n   | volumeBindingMode | 表示卷绑定模式，即动态创建PV的时间，分为立即创建（Immediate）和延迟创建（WaitForFirstConsumer）。  - **Immediate**：PVC创建后，会立即创建底层存储资源及存储卷PV，并与PVC绑定。 - **WaitForFirstConsumer**：PVC创建后，不会立即与存储卷PV绑定，而是等需要挂载该PVC的Pod被调度后，再创建底层存储资源及存储卷PV，并与PVC绑定。 |\n\n   **表10** parameters参数说明\n\n   | 参数 | 是否必选 | 描述 |\n   | --- | --- | --- |\n   | csi.storage.k8s.io/csi-driver-name | 是 | 表示驱动类型，使用专属存储类型时，参数取值固定为“disk.csi.everest.io”。 |\n   | csi.storage.k8s.io/fstype | 是 | 用于设置文件系统类型，仅支持设置为ext4。 |\n   | everest.io/disk-volume-type | 是 | 表示专属存储类型，全大写。 - SAS：高I/O - SSD：超高I/O |\n   | everest.io/passthrough | 是 | 参数取值固定为“true”，表示专属存储的设备类型为SCSI类型，不允许设置为其他值。 |\n   | everest.io/resource-type | 是 | 表示资源类型，专属存储固定为“dss”。 |\n   | everest.io/enterprise-project-id | 否 | 用于指定底层存储资源的企业项目ID，仅限于已开通企业项目的企业客户账号使用。建议设置为集群所属的企业项目或default企业项目**，**以便资源统一管理。了解更多企业项目相关信息，请查看[企业管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-em/zh-cn_topic_0123692049.html)。  **获取方法**：在企业项目管理控制台，单击要对接的企业项目名称，复制企业项目ID值即可。  说明：  该功能需要everest插件升级到1.2.33及以上版本。 |\n3. 执行以下命令，创建上述StorageClass。\n\n   ```\n   kubectl apply -f dss-storageclass.yaml\n   ```\n\n   回显结果如下：\n\n   ```\n   storageclass.storage.k8s.io/csi-disk-dsstest created\n   ```\n4. 执行以下命令，可以查看csi-disk-dsstest的详细信息。\n\n   ```\n   kubectl describe sc csi-disk-dsstest\n   ```\n\n   回显结果如下：\n\n   ```\n   Name:            csi-disk-dsstest\n   IsDefaultClass:  No\n   Annotations:     kubectl.kubernetes.io/last-applied-configuration={\"apiVersion\":\"storage.k8s.io/v1\",\"kind\":\"StorageClass\",\"metadata\":{\"annotations\":{\"storageclass.kubernetes.io/is-default-class\":\"false\"},...\n   ```\n\n**本地持久卷**\n\n1. [通过kubectl连接集群](https://support.huaweicloud.com/usermanual-cce/cce_10_0107.html)。\n2. 执行以下命令，创建StorageClass的YAML文件，文件名支持自定义。\n\n   ```\n   vim local-storageclass.yaml\n   ```\n\n   文件内容如下：\n\n   ```\n   kind: StorageClass\n   apiVersion: storage.k8s.io/v1\n   metadata:\n     name: csi-local-test\n     annotations:\n       storageclass.kubernetes.io/is-default-class: \"false\"   # 非必选项，指定集群中默认的StorageClass，一个集群中只能有一个默认的StorageClass\n   provisioner: everest-csi-provisioner\n   parameters:\n     csi.storage.k8s.io/csi-driver-name: local.csi.everest.io\n     csi.storage.k8s.io/fstype: ext4\n     volume-type: persistent\n   reclaimPolicy: Delete\n   volumeBindingMode: WaitForFirstConsumer\n   ```\n\n   **表11** 参数说明\n\n   | 参数 | 说明 |\n   | --- | --- |\n   | metadata.annotations.storageclass.kubernetes.io/is-default-class | 用于指定默认StorageClass，一个集群中建议只设置一个默认的StorageClass。如果存在多个默认StorageClass，CCE不会报错，但行为可能不确定。  - **true**：表示该StorageClass为默认StorageClass。创建PVC时，如果未显式指定StorageClassName，系统将自动使用默认StorageClass。 - **false或不设置该参数**：表示该StorageClass为非默认StorageClass。 |\n   | provisioner | 表示存储资源提供商。CCE均由Everest插件提供，此处只能填写everest-csi-provisioner。 |\n   | parameters | 用于定义存储类的具体配置参数，详情请参见[表12](https://support.huaweicloud.com/usermanual-cce/cce_10_0380.html)。 |\n   | reclaimPolicy | 用于指定删除PVC时底层存储的回收策略，详情请参见[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)。该参数未指定时，默认为**Delete**。  - **Delete**：存储卷声明PVC删除时，会将关联的底层存储资源删除，并同步移除PV资源，请谨慎使用。 - **Retain**：存储卷声明PVC删除时，PV和关联的底层存储资源均会保留，需要手动删除。 |\n   | volumeBindingMode | 表示卷绑定模式，即动态创建PV的时间，分为立即创建（Immediate）和延迟创建（WaitForFirstConsumer）。**本地持久卷仅支持****WaitForFirstConsumer****模式**。  - **Immediate**：PVC创建后，会立即创建底层存储资源及存储卷PV，并与PVC绑定。 - **WaitForFirstConsumer**：PVC创建后，不会立即与存储卷PV绑定，而是等需要挂载该PVC的Pod被调度后，再创建底层存储资源及存储卷PV，并与PVC绑定。 |\n\n   **表12** parameters参数说明\n\n   | 参数 | 是否必选 | 描述 |\n   | --- | --- | --- |\n   | csi.storage.k8s.io/csi-driver-name | 是 | 表示驱动类型，使用本地持久卷类型时，参数取值固定为“local.csi.everest.io”。 |\n   | csi.storage.k8s.io/fstype | 是 | 表示文件系统类型，仅支持设置为“ext4”。 |\n   | volume-type | 是 | 表示卷类型，仅支持设置为“persistent”。 |\n3. 执行以下命令，创建上述StorageClass。\n\n   ```\n   kubectl apply -f dss-storageclass.yaml\n   ```\n\n   回显结果如下：\n\n   ```\n   storageclass.storage.k8s.io/csi-local-test created\n   ```\n4. 执行以下命令，可以查看csi-local-test的详细信息。\n\n   ```\n   kubectl describe sc csi-local-test\n   ```\n\n   回显结果如下：\n\n   ```\n   Name:            csi-local-test\n   IsDefaultClass:  No\n   Annotations:     kubectl.kubernetes.io/last-applied-configuration={\"apiVersion\":\"storage.k8s.io/v1\",\"kind\":\"StorageClass\",\"metadata\":{\"annotations\":{\"storageclass.kubernetes.io/is-default-class\":\"false\"},...\n   ```",
+          "content_hash": "45999b2806ccb5d233f7b85dff77856a53510b9de5ccf2b2be59773e039e4213",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0380.html",
+          "title": "自定义存储类（StorageClass）",
+          "score": 0.029571646010002173
+        },
+        {
+          "id": "KT6V6XVHA4FKH5RUBEUODR6WR4",
+          "revision_id": "ZTBYNTZX7JSF2HOFBMUB6SBXKH",
+          "section": "StorageClass基础配置",
+          "start_line": 29,
+          "end_line": 41,
+          "content": "1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群。\n2. 在左侧导航栏选择“存储”，在右侧选择“存储类”页签。单击右上角“创建存储类”，在弹出的窗口中填写存储类参数。\n\n   **图1** 创建存储类\n    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002370263414.png \"点击放大\")\n\n   | 参数 | 描述 |\n   | --- | --- |\n   | 存储类类型 | 选择底层存储类型。 |\n   | 名称 | 输入存储类的名称，同一集群的存储类名称需唯一。 |\n   | 回收策略 | 用于指定删除PVC时底层存储的回收策略，详情请参见[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)。  - **Delete**：存储卷声明PVC删除时，会将关联的底层存储资源删除，并同步移除PV资源，请谨慎使用。 - **Retain**：存储卷声明PVC删除时，PV和关联的底层存储资源均会保留，需要手动删除。 |\n   | 绑定模式 | 动态创建PV的时间，分为立即创建和延迟创建。  - **Immediate**：PVC创建后，会立即创建底层存储资源及存储卷PV，并与PVC绑定。本地持久卷类型不支持设置为Immediate。 - **WaitForFirstConsumer**：PVC创建后，不会立即与存储卷PV绑定，而是等需要挂载该PVC的Pod被调度后，再创建底层存储资源及存储卷PV，并与PVC绑定。对象存储、文件存储、极速文件存储类型不支持设置为WaitForFirstConsumer。 |\n3. 单击“创建”。您可以在“存储类”页签下查看已经创建的存储类及相关信息。",
+          "content_hash": "681ccddce9c713427578250a61e30f15c533136fa84c3aa694897e87025056b7",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0380.html",
+          "title": "自定义存储类（StorageClass）",
+          "score": 0.02690501986276634
+        }
+      ],
+      "result": {
+        "trace_id": "7d2e9af8837eb4eca0fb0ed6693d560b"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1131.6954170033569
+    }
+  }
+]

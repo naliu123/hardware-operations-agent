@@ -1,0 +1,100 @@
+document	kind	question	required_facts	anchors
+cce_10_0430	comparison	CCE Standard和Turbo的网络选择有什么区别，Turbo的Pod地址如何分配？	Standard可选择容器隧道或VPC网络||Turbo采用云原生网络2.0||Turbo的Pod直接从VPC网段分配IP，可与节点在不同子网	CCE Standard集群||CCE Turbo集群
+cce_10_0430	scope	CCE Autopilot是否需要用户自行部署、管理节点，它按什么资源付费？	无需维护节点的部署管理和安全性||按CPU和内存资源用量按需付费	CCE Autopilot集群
+cce_bulletin_0131	version	Kubernetes 1.36里Kubelet细粒度API授权新增了哪些独立RBAC子资源，旧nodes/proxy还保留吗？	configz、healthz、pods||保留nodes/proxy以向下兼容||该特性在1.36达到GA	该特性Kubelet API新增configz
+cce_bulletin_0117	version	Kubernetes 1.35希望服务流量优先走同节点端点，应使用哪个traffic distribution策略？	PreferSameNode||优先转发到与客户端同一节点的端点||该特性在1.35达到GA	在Kubernetes 1.35中，PreferSameNode
+cce_bulletin_0108	version	Kubernetes 1.34里上次PVC扩容没有完成，能否下调请求的大小？	RecoverVolumeExpansionFailure在1.34达到GA||之前扩展尚未完成时可减少PVC请求大小||Kubernetes会自动修正	在Kubernetes 1.34中，RecoverVolumeExpansionFailure
+cce_10_0180	concept	CCE用户指南中节点章节所说的Node节点是控制节点吗，需要运行哪些基本组件？	特指运行容器化应用的计算节点，不是控制节点||包括Kubelet、Kube-proxy和Container Runtime	Node节点是集群的计算节点||每个节点都包含运行Pod所需要
+cce_10_0462	comparison	CCE的容器运行时如何与kubelet交互，Containerd相比Docker有什么特点？	通过CRI交互管理镜像和容器||Containerd调用链短、组件少、稳定且资源占用少	Kubelet通过Container Runtime Interface||其中Containerd调用链更短
+cce_10_0476	version	为什么CCE 1.35及以上不再支持EulerOS 2.10和kata安全运行时？	1.35默认nftables要求内核至少5.13||EulerOS 2.10内核不满足||kata仅适配EulerOS 2.10所以也不再支持	v1.35及以上版本的集群默认采用nftables
+cce_10_0719	constraint	为什么不能给所有区域的CCE Turbo节点承诺同一个可用规格和最大Pod数？	区域规格可能新增、售罄或下线，需看创建节点页面||Turbo最大Pod数量与节点可用弹性网卡/辅助弹性网卡数量有关	不同区域支持的节点规格||每个节点可以创建最大Pod数量
+cce_10_0081	scope	CCE节点池里能只改一个节点的配置而不影响其他节点吗？	同一节点池是一组相同配置的节点||不能在节点池中单独配置某个节点||配置变更影响该池全部节点	您无法在节点池中配置单个节点
+cce_10_0918	constraint	切换新版节点池后，包周期节点可以被弹性缩容或手动缩容吗？	不支持手动缩容，仅退订或移除||弹性伸缩默认作用于按需节点，不会缩容包周期节点	新版节点池中的包周期节点不再支持
+cce_10_0648	numeric	节点池默认规格A为0.0993USD/小时，但手动新增10台规格B为0.1923USD/小时，新增节点一小时按哪个价格算，总额多少？	以实际创建的B规格计费||新增10台一小时为1.923USD||控制台展示默认A价格不改变实际计费	将以实际创建的规格进行计费||新增10个节点并指定节点规格为B
+cce_10_0012	procedure	在CCE控制台从集群页面开始，创建节点池要进入什么菜单和页签？	选择节点管理||选择节点池页签||单击右上角创建节点池	在右侧选择“节点池”页签
+cce_10_0006	concept	一个Kubernetes Pod是否只能装一个容器？它还封装哪些资源？	可包含一个或多个容器||包含存储资源Volume||独立网络IP||管理容器运行方式的策略选项	一个Pod封装一个或多个容器
+cce_10_0047	procedure	CCE集群里还没有可用节点，可以直接创建并运行Deployment吗？应先满足哪些基础条件？	需有可用集群||工作负载运行需要集群中有可用节点||没有节点应先创建节点	集群中需要包含可用节点
+cce_10_0048	constraint	删除或缩容StatefulSet时关联卷会自动删除吗？想让Pod有序停止，删除前应怎么做？	不会自动删除关联存储卷||删除前先把副本数缩容到0	当您删除或扩缩有状态负载时||在删除之前将副本数缩容到0
+cce_10_0048	procedure	CCE有状态负载所在节点不可用，Pod未就绪时要如何让实例迁移到正常节点？	节点不可用时Pod变为未就绪||需手工删除有状态负载的Pod才会迁移||不声称已经执行删除	Pod实例才会迁移到正常节点上
+cce_10_0216	scenario	我想在集群每个节点部署日志采集器和节点监控，应选择哪类工作负载？	DaemonSet守护进程集||日志采集进程和节点监控进程适合逐节点部署	日志采集进程||监控进程
+cce_10_0702	concept	Volcano主要弥补Kubernetes在哪类计算场景的调度能力？	批处理平台||面向机器学习、深度学习、生物信息学/基因组学和大数据||提供高性能任务调度、异构芯片管理和任务运行管理	Volcano是一个基于Kubernetes的批处理平台
+cce_10_0351	scenario	应用对CPU上下文切换和跨Socket内存访问敏感，CCE文档建议用什么策略改善？	使用CPU管理策略分配独占CPU核/绑核||减少调度延迟||CPU manager优先同Socket和完整物理核	对上下文切换敏感||CPU manager会优先在一个Socket上分配资源
+cce_10_0552	constraint	enhanced-static相比static新增支持哪种Burstable Pod，CPU requests和limits需满足什么条件？	兼容static绑核能力||新增符合条件的Burstable Pod优先使用CPU||requests和limits均为正整数||不应凭空要求两者必须相等	要求CPU的requests和limits参数值都是正整数
+cce_10_0846	comparison	GPU驱动和CUDA Toolkit在CCE容器场景分别装在哪里，版本能随意组合吗？	GPU驱动安装在节点||CUDA Toolkit通常在容器镜像预装||驱动和Toolkit版本需要配套	在容器使用场景下，GPU驱动是安装在节点上的
+cce_10_0010	concept	CCE节点网络、容器网络和服务网络各解决什么通信问题？	节点网络用于节点互通||容器网络用于Pod直接IP互通无需NAT||服务网络提供稳定虚拟IP用于集群内部服务通信	节点网络||服务网络
+cce_10_0281	comparison	CCE的VPC网络与容器隧道网络，在封装和节点规模方面有何区别？	VPC网络无隧道封装但节点数量受VPC路由配额限制||容器隧道网络使用VXLAN和Open vSwitch	节点数量受限于虚拟私有云VPC的路由配额||CCE集群容器隧道网络使用了VXLAN
+cce_10_0284	concept	云原生网络2.0为什么能让Pod在VPC里有独立IP，为什么网络性能较好？	Pod直接绑定ENI或Sub-ENI||无需容器隧道封装和NAT地址转换	将Pod直接绑定弹性网卡或辅助弹性网卡
+cce_10_0906	procedure	给CCE Turbo新增默认容器子网后，新子网Pod无法访问apiserver，还需手动改哪里？	手动修改Controller安全组||放通新增容器子网网段	需要手动修改Controller安全组放通新增的容器子网
+cce_10_0307	concept	CSI相比把存储插件直接编进Kubernetes核心，有什么解耦作用？CCE对应哪个插件？	CSI通过统一gRPC接口允许out-of-tree插件独立构建发布||无需把存储插件源码嵌入Kubernetes核心||CCE对应Everest	容器存储接口（CSI） |
+cce_10_0378	concept	Kubernetes的Volume能像Pod一样单独创建吗？同一个Pod多个容器怎样共享它？	Volume是Pod的一部分，不能独立创建||在Pod中定义||各容器挂载到自己的目录后使用共享Volume	Volume不是单独的对象
+cce_10_0613	constraint	使用EVS保存容器数据时，删掉容器会丢失卷中数据吗，迁移有何可用区前提？	删除容器后卷数据仍在存储系统||随容器迁移要求同一可用区	当容器在同一可用区内迁移时
+cce_10_0614	constraint	已有云硬盘要静态导入CCE，VBD盘、已分区盘或非ext4盘能直接用吗？	模式需SCSI不是默认VBD||不支持已分区盘||仅支持ext4||不能是系统盘、专属盘或共享盘	云硬盘模式需选择SCSI||仅支持使用ext4类型的云硬盘
+cce_10_0614	scenario	无状态负载多个副本跨节点共享一个EVS卷有什么风险，文档建议几个实例？	EVS不支持该多实例共享和跨可用区挂载||可能读写或缓存冲突||使用EVS的无状态负载建议只选一个实例	建议工作负载只选择一个实例
+cce_10_0279	comparison	工作负载弹性伸缩与节点弹性伸缩分别调整什么资源？	工作负载伸缩在调度层调整Pod数量或规格||节点伸缩在资源层增加或减少ECS等计算资源	即调度层弹性||即资源层弹性
+cce_10_0290	concept	HPA怎样把监控到的负载变化转为副本数变化？	周期检查Pod度量数据||计算达到目标数值所需副本数||调整Deployment等目标资源的replicas字段	HPA周期性检查Pod的度量数据
+cce_10_0208	procedure	在CCE使用HPA前，监控插件需要提供什么API？	需要安装能够提供Metrics API的插件||按集群版本和需求选择	使用HPA需要安装能够提供Metrics API的插件
+cce_10_0944	scenario	业务指标比CPU和内存更能反映流量，CCE能用自定义指标驱动HPA吗？	支持自定义指标HPA||对接开源Prometheus生态暴露和监控自定义指标||不局限默认CPU内存指标	仅使用CPU和内存使用率指标||支持使用自定义指标实现弹性伸缩
+cce_10_1159	concept	CCE备份中心用什么工具，应用资源和持久卷数据分别存到哪里？	基于Velero||应用资源YAML备份到OBS桶||EVS持久卷使用云硬盘快照	集群资源备份||持久卷数据备份
+cce_10_1160	constraint	集群刚发生变更能马上跑备份吗？单次备份EVS PVC/PV数量上限是多少？	备份恢复时保持稳态不要增删改||变更后建议等15分钟||单次所选命名空间EVS PVC/PV数量不能超过10000	若集群发生变更，建议等15分钟后||PVC/PV数量不能超过10000个
+cce_10_1160	scenario	从备份恢复时会覆盖已有资源吗？还原PV没绑PVC，删除PV会顺带删除EVS吗？	自动跳过已存在资源||未绑定PVC的还原PV删除不会删除EVS||需前往EVS控制台删除云硬盘	恢复功能会自动跳过已存在的资源||直接删除PV并不会删除云硬盘
+cce_10_1164	numeric	CCE备份计划CRON示例0 3 * * 1是什么时间执行？	每周一凌晨3点运行	表示此任务计划于每周一凌晨3点运行
+cce_10_0110	concept	CCE云原生可观测性从下到上分哪四层？	算力底座||数据采集||监控与日志||云原生观测	CCE可观测性分为四个层次
+cce_10_0953	scope	CCE云原生观测授权的细粒度改造，是从什么粒度改为什么粒度？	从系统策略粒度权限集改为Action粒度||Action对应依赖调用的接口	将由系统策略为粒度的权限集
+cce_10_0740	constraint	没开通监控中心能用CCE健康中心做基础诊断吗，与全量检查有什么区别？	可不开监控中心进行基础健康诊断||全量集群运行状况检查需要开通监控中心	可以在不开通监控中心情况下||开通监控中心后
+cce_10_0717	procedure	CCE一键集群诊断对集群版本、运行状态和授权有什么要求？	已获取资源权限||版本高于v1.17||集群处于运行中	集群版本高于v1.17
+cce_10_0748	concept	CCE云原生成本治理遵循什么理念，成本洞察的成本拆分依据是什么？	FinOps理念||真实账单和集群资源用量统计||成本画像算法做成本拆分	基于FinOps理念||成本洞察基于真实账单
+cce_10_0952	procedure	首次开通CCE云原生成本治理，什么权限的账户需要做授权？	具有Security Administrator权限的账户||授权当前区域云资源权限给CCE	需要具有Security Administrator权限的账户完成授权
+cce_10_0875	numeric	CCE成本洞察支持多长时间的历史成本分析，覆盖哪些主要资源费用？	最长2年||CCE集群管理费用以及关联ECS和EVS资源费用	最大支持长达2年的成本分析||CCE集群管理费用
+cce_10_0876	numeric	CCE成本模型计算Pod使用量时，Request和实际使用量是相加还是取其中一个？	取当前采样时刻Request与Real Used的最大值||不是相加也不是仅实际用量	申请量（Request）和实际使用量（Real Used）中的最大值
+cce_10_09731	concept	CCE AI容器以什么为底座和核心调度引擎，适合哪些典型场景？	CCE容器集群为底座||Volcano为核心||大规模LLM分布式训练、PD分离推理、多租户GPU/NPU管理	以高性能工作负载调度引擎Volcano为核心||AI容器适用于大规模LLM分布式训练
+cce_10_11511	version	通过CCE推理负载部署LLM服务，对集群和Volcano插件最低版本有什么要求？	v1.29及以上CCE Standard或Turbo||Volcano 1.21.7及以上	已创建v1.29及以上版本||已安装1.21.7及以上版本
+cce_10_11511	concept	CCE推理负载基于什么控制器和推理引擎，多角色分布式推理有哪些角色？	Kthena ModelServing||vLLM||Entry和Worker	该能力基于Kthena ModelServing构建
+cce_10_1123	concept	Kthena ModelServing要补足Deployment/StatefulSet处理LLM推理时的哪些局限？	拓扑感知||原子调度||复杂推理工作流编排||为PD分离等模式提供声明式生命周期管理	Kthena ModelServing专为云原生环境下的LLM推理设计
+cce_10_1154	scope	CCE AI应用预置模板能免去手写YAML吗，主要预置了哪些模型部署配置？	无需编写复杂Kubernetes YAML||预置模型运行参数、NPU资源需求及硬件适配||通过可视化界面选模板配置	无需编写复杂的Kubernetes YAML文件||涵盖运行参数、NPU资源需求及硬件适配
+cce_10_0278	numeric	CCE一个命名空间最多允许创建多少个Service？这里说的是Pod数吗？	Service不超过6000个||指Kubernetes service资源，不是Pod数	每个命名空间下，创建的服务数量不能超过6000个
+cce_10_0278	concept	kube-node-lease中Lease是谁更新的，相比NodeStatus有什么优势？	每个节点有对应Lease，由节点定期更新||用于节点心跳||更轻量，有利于集群规模扩展和性能	每个节点在该命名空间中都有一个关联的“Lease”对象
+cce_10_0285	scenario	想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？	为不同环境建立对应命名空间||创建和查询工作负载时选择对应命名空间||不要宣称这等同于完整网络安全隔离	创建工作负载时，您可以选择对应的命名空间||不同环境创建对应命名空间
+cce_10_0287	constraint	CCE同一命名空间里有多个ResourceQuota时，实际资源限制取最大值还是最小值？	多个配额中配置的最小值生效	系统将以多个配额中配置的最小值
+cce_10_0287	version	从哪个CCE集群版本起，开启哪个参数可在新建命名空间时自动创建默认资源配额？	从1.21起||enable-resource-quota||按集群规格创建默认配额，可按需求修改	从1.21版本集群开始
+cce_10_0152	concept	ConfigMap适合保存敏感密码吗，应用可以用哪两种方式读取？	用于非敏感配置，密码应使用Secret等适当机制||文件挂载||环境变量注入	用于存储非敏感配置信息的资源类型
+cce_10_0015	comparison	ConfigMap更新后，普通卷挂载、subPath挂载和环境变量三种用法会如何刷新？	普通数据卷周期性自动更新||subPath不会自动更新||环境变量不会自动更新，需要重启Pod	当ConfigMap被更新||对于以[subPath]
+cce_10_0153	concept	CCE Secret创建后有哪些给工作负载使用的方式，为什么不把敏感值直接烘进镜像？	文件挂载和环境变量注入||与镜像解耦，降低敏感信息泄露风险	支持以文件挂载或环境变量注入两种方式||借助Secret
+cce_10_0016	constraint	CCE哪些系统Secret不应操作，default-secret和paas.elb各有什么用途？	kube-system下secrets不要操作||任何命名空间的default-secret和paas.elb不要操作||前者用于SWR私有镜像拉取，后者用于服务对接ELB	请不要操作kube-system下的secrets||default-secret用于SWR的私有镜像拉取
+cce_10_0277	procedure	修改CCE插件能直接在后台编辑资源吗，正确入口是什么？	从插件中心或插件管理API操作||不要后台直接修改资源||可能导致插件异常或升级覆盖参数	CCE插件采用Helm模板方式部署
+cce_10_0193	numeric	Volcano调度器文档给出的最大调度并发是多少，支持哪些高级调度能力？	最大1000Pod/s||成组调度、优先级抢占、装箱、资源预留和任务拓扑关系	最大支持1000Pod/s的调度并发数||高级调度
+cce_10_0154	scenario	集群Pod因工作节点资源不足而调度失败，CCE集群弹性引擎会怎样处理，利用率低时呢？	基于Autoscaler扩容新节点||扩容节点资源利用率很低时自动删除节点||不保证其他原因导致的Pending都能靠扩容解决	当集群中的Pod因为资源不足无法调度时
+cce_10_0240	comparison	CCE容器弹性引擎调整的是节点数还是无状态负载副本，安装后可创建哪些策略？	面向无状态工作负载弹性扩缩容||可创建CronHPA定时和CustomedHPA策略	对无状态工作负载进行弹性扩缩容||可创建CronHPA定时策略及CustomedHPA策略
+cce_10_0191	scope	CCE模板控制台受Helm版本约束时，直接用Helm客户端部署是否也只能用同一版本？	客户端部署不受控制台版本约束||可以使用Helm v2或v3	使用Helm客户端部署应用不受版本控制
+cce_10_0146	constraint	同一Helm模板上传多个版本只算一个模板配额吗？模板包命名规则是什么？	每个版本消耗对应模板配额||name-version.tgz||version为主版本号.次版本号.修订号	模板若存在多个版本||模板包命名格式为
+cce_10_0421	comparison	Helm v3相较v2是否还需要Tiller，它如何连接apiserver？	移除Tiller||直接通过kubeconfig连接apiserver||简化架构与安全模块	移除了 tiller，直接通过kubeconfig连接apiserver
+cce_10_0420	scenario	后台用Helm v2删除实例后，CCE模板管理仍显示实例信息，文档建议怎么办？	CCE会尝试把v2实例转换为v3||在CCE模板管理页面再单击删除	删除实例后，发现CCE 模板管理页面仍有实例信息
+cce_10_0187	concept	CCE细粒度权限控制结合了哪两套权限体系，支持哪些资源层级？	IAM和Kubernetes RBAC||集群级和命名空间级||可给IAM用户或用户组设置权限	IAM）与Kubernetes的角色访问控制（RBAC）
+cce_10_0732	scope	旧版IAM中一个账号要给不同部门分别设置CCE权限，可以如何组织身份？	给部门员工创建有唯一安全凭证的IAM用户||按用户职能配置不同权限以隔离||可委托其他账号或云服务代运维	给企业中不同职能部门的员工创建IAM用户||将CCE资源委托给更专业
+cce_10_0733	version	CCE身份策略授权对应IAM哪版控制台，仍用旧版IAM应参考哪类授权？	身份策略授权是新版IAM能力||旧版参考角色与策略授权	身份策略授权是IAM新版控制台提供的能力||如果您继续使用IAM旧版控制台
+cce_10_0190	constraint	已有所有命名空间view权限，能在CCE控制台读取Secret吗，还需什么权限？	view不包括Secret读取||Secret需要命名空间admin或edit权限	密钥 ( Secret )需要在命名空间权限下设置admin或者edit权限才能查看
+cce_10_0782	procedure	从CCE集群详情页哪里能查看集群配置概览？	左侧配置中心||配置概览页签	在左侧导航栏中选择“配置中心”
+cce_10_0783	procedure	给CCE API Server绑定EIP有哪些即时影响，安全组应该加固哪个端口？	增加公网访问风险||加固控制节点安全组5443入方向||短暂重启kube-apiserver并更新kubeconfig||期间避免操作集群	建议为控制节点安全组加固5443端口||此操作将会短暂重启
+cce_10_0784	version	CCE网络配置里扩展VPC网络容器网段，要求什么网络模型和最低集群版本？	VPC网络模型||v1.19.16-r0及以上	仅支持v1.19.16-r0及以上版本的“VPC网络”模型集群
+cce_10_0785	comparison	CCE必须用Volcano完全替换kube-scheduler吗，能否配合使用？	可以单独用kube-scheduler或Volcano||也可二者配合使用	您可以选择将kube-scheduler调度器和Volcano调度器配合使用
+cce_10_0306	version	历史CCE 1.13及以下和1.15及以上默认云存储接口有什么区别？	1.13及以下使用Flexvolume/storage-driver||1.15及以上默认CSI/Everest||Flexvolume已非官方推荐扩展方式	1.13及以下版本||在1.15及以上版本的CCE集群中默认安装CSI
+cce_10_0343	procedure	Flexvolume迁移到CSI Everest的核心迁移方法是什么，是否要更换原有底层存储？	创建CSI静态PV关联原有底层存储||创建新PVC绑定新PV||升级应用挂新PVC到原挂载路径||复用原底层存储	迁移的主要原理是通过创建静态PV
+cce_10_0310	constraint	已弃用Flexvolume云硬盘文档中，两个Pod用同一EVS却调度到不同节点会怎样？	云硬盘非共享，不能同时被多个节点挂载||必有一个Pod无法挂载而不能启动||需指出这是历史Flexvolume文档范围	当这两个Pod被调度到不同的节点时
+cce_10_0312	command	历史Flexvolume示例pvc-evs-auto-example.yaml申请容量与访问模式分别是什么，可用区有什么要求？	10Gi||ReadWriteOnce||可用区必须与工作负载规划一致||仅说明历史Flexvolume示例，不作为当前CSI YAML	apiVersion: v1||创建云硬盘所在的可用区，必须和工作负载规划的可用区保持一致
+cce_10_0054	comparison	在控制台解除EVS挂载与节点上umount磁盘分别导致什么写入问题，恢复措施有何区别？	控制台解除挂载导致IO Error，删除节点mount目录后重新调度Pod||节点umount会写本地盘，应重新mount对应目录到Pod||不混用两种方案	控制台手动解除挂载EVS||节点上umount磁盘挂载路径
+cce_10_0054	scope	直接在节点上操作EVS导致Pod写入本地磁盘，高危操作表给了具体恢复办法吗？	该操作会导致Pod写本地磁盘||对应恢复栏为无||不能套用控制台卸载或umount行的恢复措施	节点上直接操作EVS
+cce_10_0054	comparison	重装CCE控制节点和Node节点操作系统后，手册给出的恢复结论相同吗？	控制节点重装后组件删除，不可恢复||Node节点重装后可按文档重置节点	控制节点组件被删除||节点组件被删除，节点不可用
+cce_10_0054	numeric	150个节点的CCE集群，按高危操作表建议监控采集分片数应是多少，配太多有什么风险？	每50节点1分片，150节点建议3片||过多消耗资源，控制节点内存负载高影响稳定性	建议每50个节点配置一个采集分片
+cce_10_0054	procedure	删除/usr/local/bin/crictl后containerd持续重启，文档给出的原因与恢复方法是什么？	crictl丢失使containerd健康检查异常||按文档重置节点恢复二进制和配置文件	删除/usr/local/bin/crictl会导致containerd健康检查异常
+cce_10_1164	procedure	删除备份时报backup storage location is currently in read-only mode，应改哪个字段为什么值？	检查仓库访问模式为只读||用kubectl把spec.accessMode改为ReadWrite||再重试删除	spec.accessMode为“ReadWrite”
+cce_10_1164	procedure	Velero仓库提示invalid top-level directories，OBS桶根目录只允许哪些目录？	只允许restores和backups||清理根目录其他文件或文件夹后可恢复||不声称已执行删除	根目录中禁止包含除restores、 backups之外的文件或文件夹
+cce_10_1164	scenario	备份恢复时PVAction失败，PVC一直等待绑定，重试前该怎么处理，未处理会有什么残留风险？	先手动删除等待绑定的PVC，再重新立即恢复||否则可能残留未绑定PV||需清理相关PV及EVS云硬盘避免残留	PVC恢复成功但是关联的PV恢复失败
+cce_10_0290	numeric	按HPA文档公式，当前3副本、指标150m、目标100m，不考虑冷却和限额，应建议几个副本？	ceil(3×150/100)=5||向上取整，不是4	期望实例数 = 向上取整
+cce_10_0290	comparison	metrics.k8s.io、custom.metrics.k8s.io和external.metrics.k8s.io分别提供什么指标？	metrics提供Pod/Node的CPU内存||custom提供Kubernetes对象关联的自定义指标||external来自外部、不关联Kubernetes资源	metrics.k8s.io：||custom.metrics.k8s.io：||external.metrics.k8s.io：
+cce_10_0290	procedure	VPA建议值与Pod当前资源值不同，哪个组件重建Pod，哪个组件在重建时修改资源请求？	VPA Updater对比并重建||VPA Admission Controller拦截重建并修改资源请求||Recommender负责给建议	VPA Updater：||VPA Admission Controller：||VPA Recommender：
+cce_10_0421	constraint	Helm v3 chart的crds目录，升级release会更新CRD吗，删除release会删CRD吗？	crds目录仅安装release时部署||升级不更新||删除不卸载||推荐分离CRD和使用CRD资源的chart管理	crds目录中的资源只有在release安装时会部署
+cce_10_0421	comparison	Helm v2与v3默认用什么存release信息，v3允许跨命名空间重用release名字吗？	v2默认ConfigMap||v3默认Secret||v3可在不同命名空间重用release名称	Helm v2 默认情况下使用 ConfigMaps||release名称可在不同命名空间重用
+cce_10_0191+cce_10_0146	conflict	《模板概述》和《通过模板部署应用》对CCE控制台Helm版本说法是否一致？能只凭这些资料确定唯一版本吗？	模板概述写v3.8.2||通过模板部署应用写v3.18.6||明确存在资料冲突||不能据此断言所有区域唯一版本，需要核对当前控制台或权威版本说明	cce_10_0191::CCE使用的Helm版本为v3.8.2||cce_10_0146::CCE使用的Helm版本为v3.18.6
+cce_10_0614	comparison	EVS静态PV回收策略Delete下，设置与不设置everest.io/reclaim-policy=retain-volume-only，删除PVC结果有何不同？	不设置时PV和云硬盘都删除||设置retain-volume-only时PV删除、底层云硬盘保留||该参数要求Everest至少1.2.9且Delete策略	everest.io/reclaim-policy: retain-volume-only | 否||Delete且不设置everest.io/reclaim-policy
+cce_10_0614	constraint	EVS的Retain回收策略删除PVC后，原PV能直接绑定另一个PVC吗？	PV和底层存储均保留||PV变Released不能直接再绑定||若复用底层存储，需删除PV后新建PV/PVC与原存储关联	PVC删除后PV资源状态为“已释放（Released）”
+cce_10_0846	procedure	如何查看GPU节点驱动版本，若CCE推荐驱动与CUDA版本不配套应注意什么？	nvidia-smi查看||先满足驱动与CUDA配套优先推荐版本||必须选非推荐版本时需自行验证机型、系统与驱动兼容性	您可以使用nvidia-smi命令||必须使用非推荐的驱动版本
+cce_10_0876	scope	CCE节点的空闲成本会直接摊进工作负载或命名空间成本吗？	不会直接分摊到工作负载或命名空间||可作为集群公共成本分摊到部门||分摊比例可配置	节点中的空闲成本不会被分摊到工作负载或者命名空间成本中

@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "created_at": "2026-09-25T12:20:20.915323+00:00",
+  "development_run": "asset-v3-r1-dev-answers-v3-r01",
+  "development_dataset_sha256": "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3",
+  "heldout_dataset_sha256": "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3",
+  "config": {
+    "strategy": "hybrid",
+    "answers": true,
+    "top_k": 5,
+    "candidate_k": 20,
+    "context_bytes": 49152,
+    "rrf": 1,
+    "evidence_selection": false,
+    "query_rewrite": true,
+    "multi_vector": true,
+    "selection_extra_candidates": 0,
+    "selection_input_bytes_limit": 0,
+    "temperature": 0,
+    "binary_sha256": "b8bfbfce1144b3dfd49fa3a3077760eff7d0b1413920665e86598ce7b35e584e",
+    "index": "hwops-cce-manual-v3-r1",
+    "state_path": ".local/rag/hwops-cce-manual-v3-r1-state.json",
+    "corpus_sha256": "527101b5c146ec9b3961f4b4252b2ab009bc7b9209b16abc6f8e9d3ce0d41559",
+    "code_sha256": "14629965e692e396b5a230b52b123a692d145c5bc2196d4a62f03d9fc5ec9208",
+    "model": "deepseek-v4.1-flash",
+    "model_endpoint": "https://opencode.ai/zen/go/v1/chat/completions",
+    "rewrite_model": "deepseek-v4.1-flash",
+    "mode": "LIVE_ANSWERS"
+  }
+}

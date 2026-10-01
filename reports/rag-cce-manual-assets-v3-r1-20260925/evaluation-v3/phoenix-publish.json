@@ -1,0 +1,818 @@
+{
+  "schema_version": 1,
+  "phoenix_url": "http://127.0.0.1:16006",
+  "datasets": {
+    "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3:development": {
+      "name": "hwops-cce-manual-assets-eval-v3-development",
+      "id": "RGF0YXNldDoz",
+      "version_id": "RGF0YXNldFZlcnNpb246Mw==",
+      "dataset_sha256": "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3",
+      "examples": {
+        "cce-asset-table-data-001": "RGF0YXNldEV4YW1wbGU6Njc=",
+        "cce-asset-table-data-002": "RGF0YXNldEV4YW1wbGU6Njg=",
+        "cce-asset-table-data-003": "RGF0YXNldEV4YW1wbGU6Njk=",
+        "cce-asset-table-data-006": "RGF0YXNldEV4YW1wbGU6NzA=",
+        "cce-asset-table-data-008": "RGF0YXNldEV4YW1wbGU6NzE=",
+        "cce-asset-table-data-009": "RGF0YXNldEV4YW1wbGU6NzI=",
+        "cce-asset-table-data-010": "RGF0YXNldEV4YW1wbGU6NzM=",
+        "cce-asset-table-explanatory-011": "RGF0YXNldEV4YW1wbGU6NzQ=",
+        "cce-asset-table-explanatory-013": "RGF0YXNldEV4YW1wbGU6NzU=",
+        "cce-asset-table-explanatory-014": "RGF0YXNldEV4YW1wbGU6NzY=",
+        "cce-asset-table-explanatory-017": "RGF0YXNldEV4YW1wbGU6Nzc=",
+        "cce-asset-table-explanatory-018": "RGF0YXNldEV4YW1wbGU6Nzg=",
+        "cce-asset-table-explanatory-021": "RGF0YXNldEV4YW1wbGU6Nzk=",
+        "cce-asset-table-explanatory-023": "RGF0YXNldEV4YW1wbGU6ODA=",
+        "cce-asset-table-explanatory-024": "RGF0YXNldEV4YW1wbGU6ODE=",
+        "cce-asset-table-explanatory-026": "RGF0YXNldEV4YW1wbGU6ODI=",
+        "cce-asset-table-explanatory-027": "RGF0YXNldEV4YW1wbGU6ODM=",
+        "cce-asset-table-explanatory-028": "RGF0YXNldEV4YW1wbGU6ODQ=",
+        "cce-asset-table-explanatory-029": "RGF0YXNldEV4YW1wbGU6ODU=",
+        "cce-asset-table-explanatory-030": "RGF0YXNldEV4YW1wbGU6ODY=",
+        "cce-asset-image-032": "RGF0YXNldEV4YW1wbGU6ODc=",
+        "cce-asset-image-033": "RGF0YXNldEV4YW1wbGU6ODg=",
+        "cce-asset-image-034": "RGF0YXNldEV4YW1wbGU6ODk=",
+        "cce-asset-image-036": "RGF0YXNldEV4YW1wbGU6OTA=",
+        "cce-asset-image-037": "RGF0YXNldEV4YW1wbGU6OTE=",
+        "cce-asset-image-038": "RGF0YXNldEV4YW1wbGU6OTI=",
+        "cce-asset-image-039": "RGF0YXNldEV4YW1wbGU6OTM=",
+        "cce-asset-image-041": "RGF0YXNldEV4YW1wbGU6OTQ=",
+        "cce-asset-image-043": "RGF0YXNldEV4YW1wbGU6OTU=",
+        "cce-asset-image-044": "RGF0YXNldEV4YW1wbGU6OTY=",
+        "cce-asset-image-046": "RGF0YXNldEV4YW1wbGU6OTc=",
+        "cce-asset-image-047": "RGF0YXNldEV4YW1wbGU6OTg=",
+        "cce-asset-image-051": "RGF0YXNldEV4YW1wbGU6OTk=",
+        "cce-asset-image-053": "RGF0YXNldEV4YW1wbGU6MTAw",
+        "cce-asset-image-054": "RGF0YXNldEV4YW1wbGU6MTAx",
+        "cce-asset-image-055": "RGF0YXNldEV4YW1wbGU6MTAy",
+        "cce-asset-image-056": "RGF0YXNldEV4YW1wbGU6MTAz",
+        "cce-asset-image-057": "RGF0YXNldEV4YW1wbGU6MTA0",
+        "cce-asset-image-059": "RGF0YXNldEV4YW1wbGU6MTA1",
+        "cce-asset-image-060": "RGF0YXNldEV4YW1wbGU6MTA2"
+      }
+    },
+    "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3:heldout": {
+      "name": "hwops-cce-manual-assets-eval-v3-heldout",
+      "id": "RGF0YXNldDo0",
+      "version_id": "RGF0YXNldFZlcnNpb246NA==",
+      "dataset_sha256": "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3",
+      "examples": {
+        "cce-asset-table-data-004": "RGF0YXNldEV4YW1wbGU6MTA3",
+        "cce-asset-table-data-005": "RGF0YXNldEV4YW1wbGU6MTA4",
+        "cce-asset-table-data-007": "RGF0YXNldEV4YW1wbGU6MTA5",
+        "cce-asset-table-explanatory-012": "RGF0YXNldEV4YW1wbGU6MTEw",
+        "cce-asset-table-explanatory-015": "RGF0YXNldEV4YW1wbGU6MTEx",
+        "cce-asset-table-explanatory-016": "RGF0YXNldEV4YW1wbGU6MTEy",
+        "cce-asset-table-explanatory-019": "RGF0YXNldEV4YW1wbGU6MTEz",
+        "cce-asset-table-explanatory-020": "RGF0YXNldEV4YW1wbGU6MTE0",
+        "cce-asset-table-explanatory-022": "RGF0YXNldEV4YW1wbGU6MTE1",
+        "cce-asset-table-explanatory-025": "RGF0YXNldEV4YW1wbGU6MTE2",
+        "cce-asset-image-031": "RGF0YXNldEV4YW1wbGU6MTE3",
+        "cce-asset-image-035": "RGF0YXNldEV4YW1wbGU6MTE4",
+        "cce-asset-image-040": "RGF0YXNldEV4YW1wbGU6MTE5",
+        "cce-asset-image-042": "RGF0YXNldEV4YW1wbGU6MTIw",
+        "cce-asset-image-045": "RGF0YXNldEV4YW1wbGU6MTIx",
+        "cce-asset-image-048": "RGF0YXNldEV4YW1wbGU6MTIy",
+        "cce-asset-image-049": "RGF0YXNldEV4YW1wbGU6MTIz",
+        "cce-asset-image-050": "RGF0YXNldEV4YW1wbGU6MTI0",
+        "cce-asset-image-052": "RGF0YXNldEV4YW1wbGU6MTI1",
+        "cce-asset-image-058": "RGF0YXNldEV4YW1wbGU6MTI2"
+      }
+    }
+  },
+  "experiments": {
+    "asset-v3-r1-dev-answers-v3-r01": {
+      "id": "RXhwZXJpbWVudDo3",
+      "dataset_key": "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3:development",
+      "config_sha256": "5ded0e2ed4a5639d4d722a22448596cdfb256b2a3f444f01d27139e82cffce97",
+      "runs": {
+        "cce-asset-table-data-001": {
+          "id": "RXhwZXJpbWVudFJ1bjoxODM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-data-002": {
+          "id": "RXhwZXJpbWVudFJ1bjoxODQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-data-003": {
+          "id": "RXhwZXJpbWVudFJ1bjoxODU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-data-006": {
+          "id": "RXhwZXJpbWVudFJ1bjoxODY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-data-008": {
+          "id": "RXhwZXJpbWVudFJ1bjoxODc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-data-009": {
+          "id": "RXhwZXJpbWVudFJ1bjoxODg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-data-010": {
+          "id": "RXhwZXJpbWVudFJ1bjoxODk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-011": {
+          "id": "RXhwZXJpbWVudFJ1bjoxOTA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-013": {
+          "id": "RXhwZXJpbWVudFJ1bjoxOTE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-014": {
+          "id": "RXhwZXJpbWVudFJ1bjoxOTI=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-017": {
+          "id": "RXhwZXJpbWVudFJ1bjoxOTM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-018": {
+          "id": "RXhwZXJpbWVudFJ1bjoxOTQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-021": {
+          "id": "RXhwZXJpbWVudFJ1bjoxOTU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-023": {
+          "id": "RXhwZXJpbWVudFJ1bjoxOTY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-024": {
+          "id": "RXhwZXJpbWVudFJ1bjoxOTc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-026": {
+          "id": "RXhwZXJpbWVudFJ1bjoxOTg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-027": {
+          "id": "RXhwZXJpbWVudFJ1bjoxOTk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-028": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMDA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-029": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMDE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-030": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMDI=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-032": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMDM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-033": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMDQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-034": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMDU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-036": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMDY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-037": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMDc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-038": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMDg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-039": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMDk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-041": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMTA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-043": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMTE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-044": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMTI=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-046": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMTM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-047": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMTQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-051": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMTU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-053": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMTY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-054": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMTc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-055": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMTg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-056": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMTk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-057": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMjA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-059": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMjE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-060": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMjI=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        }
+      }
+    },
+    "asset-v3-r1-heldout-answers-v3-final": {
+      "id": "RXhwZXJpbWVudDo4",
+      "dataset_key": "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3:heldout",
+      "config_sha256": "1b00f2c39329d1aee1a4eb94d94a0e07f13aa7ab94abfea8dedd801723e4e4f7",
+      "runs": {
+        "cce-asset-table-data-004": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMjM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-data-005": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMjQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-data-007": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMjU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-012": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMjY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-015": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMjc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-016": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMjg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-019": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMjk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-020": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMzA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-022": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMzE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-table-explanatory-025": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMzI=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-031": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMzM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-035": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMzQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-040": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMzU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-042": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMzY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-045": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMzc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-048": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMzg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-049": {
+          "id": "RXhwZXJpbWVudFJ1bjoyMzk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-050": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNDA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-052": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNDE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        },
+        "cce-asset-image-058": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNDI=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity",
+            "llm_judged_answer_pass",
+            "final_answer_pass"
+          ]
+        }
+      }
+    }
+  }
+}

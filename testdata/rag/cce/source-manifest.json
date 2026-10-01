@@ -1,0 +1,10 @@
+{
+  "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+  "title": "高危操作一览_用户指南_云容器引擎 CCE-华为云",
+  "fetched_at": "2026-09-19T18:31:19.160Z",
+  "document_updated_at": "2026-03-30 GMT+08:00",
+  "source_sha256": "b31b339bf36e783839857336dec4312abad573656e6cf201c05b966b7c7dab9a",
+  "evidence_count": 55,
+  "table_count": 8,
+  "extraction": "Visible browser DOM table cells with rowspan/colspan expansion"
+}

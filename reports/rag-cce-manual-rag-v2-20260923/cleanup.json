@@ -1,0 +1,41 @@
+{
+  "stopped_at": "2026-09-22T20:58:00Z",
+  "stopped_services": [
+    "local_qwen",
+    "hwopsd",
+    "embedding",
+    "elasticsearch",
+    "phoenix"
+  ],
+  "remaining_processes": [],
+  "port_checks": [
+    {
+      "checked_at": "2026-09-22T20:58:00Z",
+      "released_ports": [
+        18080,
+        18766,
+        18765,
+        19200,
+        19300,
+        16006
+      ]
+    },
+    {
+      "checked_at": "2026-09-22T20:58:10Z",
+      "released_ports": [
+        18080,
+        18766,
+        18765,
+        19200,
+        19300,
+        16006
+      ]
+    }
+  ],
+  "retained": {
+    "elasticsearch_data": ".local/rag/elasticsearch-data",
+    "phoenix_data": ".local/rag/phoenix",
+    "report": "reports/rag-cce-manual-rag-v2-20260923"
+  },
+  "status": "complete"
+}

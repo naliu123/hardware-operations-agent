@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-01T13:41:28.887408+00:00",
+  "datasets": 10,
+  "experiments": 33,
+  "runs": 1633,
+  "evaluations": 9987,
+  "published": 33,
+  "pending": 0,
+  "items": [
+    {
+      "name": "dev-bm25-baseline",
+      "local_report": "reports/rag-cce-20260920/dev-bm25-baseline.json",
+      "split": "development",
+      "runs": 25,
+      "evaluations": 186,
+      "state": "published"
+    },
+    {
+      "name": "dev-dense-answers",
+      "local_report": "reports/rag-cce-20260920/dev-dense-answers.json",
+      "split": "development",
+      "runs": 25,
+      "evaluations": 403,
+      "state": "published"
+    },
+    {
+      "name": "dev-dense-v1",
+      "local_report": "reports/rag-cce-20260920/dev-dense-v1.json",
+      "split": "development",
+      "runs": 25,
+      "evaluations": 186,
+      "state": "published"
+    },
+    {
+      "name": "dev-hybrid-v1",
+      "local_report": "reports/rag-cce-20260920/dev-hybrid-v1.json",
+      "split": "development",
+      "runs": 25,
+      "evaluations": 186,
+      "state": "published"
+    },
+    {
+      "name": "heldout-dense-answers",
+      "local_report": "reports/rag-cce-20260920/heldout-dense-answers.json",
+      "split": "heldout",
+      "runs": 41,
+      "evaluations": 662,
+      "state": "published"
+    },
+    {
+      "name": "heldout-dense-final",
+      "local_report": "reports/rag-cce-20260920/heldout-dense-final.json",
+      "split": "heldout",
+      "runs": 41,
+      "evaluations": 307,
+      "state": "published"
+    },
+    {
+      "name": "asset-v2-baseline",
+      "dataset_sha256": "0831cba954957a20cf588da7864c6b03c1a7133adc28f3274a710593c5987fe5",
+      "split": "development",
+      "runs": 40,
+      "evaluations": 200,
+      "local_report": "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v2-baseline.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval",
+      "state": "published"
+    },
+    {
+      "name": "asset-v3-dev-answers-r00",
+      "dataset_sha256": "0831cba954957a20cf588da7864c6b03c1a7133adc28f3274a710593c5987fe5",
+      "split": "development",
+      "runs": 40,
+      "evaluations": 280,
+      "local_report": "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v3-dev-answers-r00.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval",
+      "state": "published"
+    },
+    {
+      "name": "asset-v3-dev-r00",
+      "dataset_sha256": "0831cba954957a20cf588da7864c6b03c1a7133adc28f3274a710593c5987fe5",
+      "split": "development",
+      "runs": 40,
+      "evaluations": 80,
+      "local_report": "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v3-dev-r00.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval",
+      "state": "published"
+    },
+    {
+      "name": "asset-v3-dev-r01-no-rewrite",
+      "dataset_sha256": "0831cba954957a20cf588da7864c6b03c1a7133adc28f3274a710593c5987fe5",
+      "split": "development",
+      "runs": 40,
+      "evaluations": 200,
+      "local_report": "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v3-dev-r01-no-rewrite.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval",
+      "state": "published"
+    },
+    {
+      "name": "asset-v3-dev-r02-query-rewrite",
+      "dataset_sha256": "0831cba954957a20cf588da7864c6b03c1a7133adc28f3274a710593c5987fe5",
+      "split": "development",
+      "runs": 40,
+      "evaluations": 200,
+      "local_report": "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v3-dev-r02-query-rewrite.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval",
+      "state": "published"
+    },
+    {
+      "name": "asset-v3-heldout-answers-final",
+      "dataset_sha256": "0831cba954957a20cf588da7864c6b03c1a7133adc28f3274a710593c5987fe5",
+      "split": "heldout",
+      "runs": 20,
+      "evaluations": 120,
+      "local_report": "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v3-heldout-answers-final.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval",
+      "state": "published"
+    },
+    {
+      "name": "asset-v3-heldout-final",
+      "dataset_sha256": "0831cba954957a20cf588da7864c6b03c1a7133adc28f3274a710593c5987fe5",
+      "split": "heldout",
+      "runs": 20,
+      "evaluations": 100,
+      "local_report": "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v3-heldout-final.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval",
+      "state": "published"
+    },
+    {
+      "name": "manual-v3-regression",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 357,
+      "local_report": "reports/rag-cce-manual-assets-v3-20260925/evaluation/manual-v3-regression.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "asset-v3-r1-dev-retrieval",
+      "dataset_sha256": "0af6479128adb9bd240c23b1be6d4aeca6f20db54b3b1d202b06c66631417d69",
+      "split": "development",
+      "runs": 40,
+      "evaluations": 200,
+      "local_report": "reports/rag-cce-manual-assets-v3-r1-20260925/evaluation/asset-v3-r1-dev-retrieval.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval-v2",
+      "state": "published"
+    },
+    {
+      "name": "asset-v3-r1-heldout-retrieval-final",
+      "dataset_sha256": "0af6479128adb9bd240c23b1be6d4aeca6f20db54b3b1d202b06c66631417d69",
+      "split": "heldout",
+      "runs": 20,
+      "evaluations": 100,
+      "local_report": "reports/rag-cce-manual-assets-v3-r1-20260925/evaluation/asset-v3-r1-heldout-retrieval-final.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval-v2",
+      "state": "published"
+    },
+    {
+      "name": "asset-v3-r1-dev-answers-v3-r01",
+      "dataset_sha256": "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3",
+      "split": "development",
+      "runs": 40,
+      "evaluations": 280,
+      "local_report": "reports/rag-cce-manual-assets-v3-r1-20260925/evaluation-v3/asset-v3-r1-dev-answers-v3-r01.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval-v3",
+      "state": "published"
+    },
+    {
+      "name": "asset-v3-r1-dev-answers-v3",
+      "dataset_sha256": "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3",
+      "split": "development",
+      "runs": 40,
+      "evaluations": 200,
+      "local_report": "reports/rag-cce-manual-assets-v3-r1-20260925/evaluation-v3/asset-v3-r1-dev-answers-v3.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval-v3",
+      "state": "published"
+    },
+    {
+      "name": "asset-v3-r1-dev-v3",
+      "dataset_sha256": "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3",
+      "split": "development",
+      "runs": 40,
+      "evaluations": 200,
+      "local_report": "reports/rag-cce-manual-assets-v3-r1-20260925/evaluation-v3/asset-v3-r1-dev-v3.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval-v3",
+      "state": "published"
+    },
+    {
+      "name": "asset-v3-r1-heldout-answers-v3-final",
+      "dataset_sha256": "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3",
+      "split": "heldout",
+      "runs": 20,
+      "evaluations": 140,
+      "local_report": "reports/rag-cce-manual-assets-v3-r1-20260925/evaluation-v3/asset-v3-r1-heldout-answers-v3-final.json",
+      "data_dir": "testdata/rag/cce-manual-assets-eval-v3",
+      "state": "published"
+    },
+    {
+      "name": "manual-v3-r1-regression-final",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 357,
+      "local_report": "reports/rag-cce-manual-assets-v3-r1-20260925/regression/manual-v3-r1-regression-final.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "final-heldout-r04",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "heldout",
+      "runs": 36,
+      "evaluations": 234,
+      "local_report": "reports/rag-cce-manual-eval-20260920/final-heldout-r04.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "live-r00-dev-hybrid60",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 507,
+      "local_report": "reports/rag-cce-manual-eval-20260920/live-r00-dev-hybrid60.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "live-r01-dev-hybrid1",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 507,
+      "local_report": "reports/rag-cce-manual-eval-20260920/live-r01-dev-hybrid1.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "live-r02-dev-completeness",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 507,
+      "local_report": "reports/rag-cce-manual-eval-20260920/live-r02-dev-completeness.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "live-r03-dev-scope-title",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 507,
+      "local_report": "reports/rag-cce-manual-eval-20260920/live-r03-dev-scope-title.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "live-r04-dev-evidence-selection",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 507,
+      "local_report": "reports/rag-cce-manual-eval-20260920/live-r04-dev-evidence-selection.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "live-r05-dev-reliability",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 507,
+      "local_report": "reports/rag-cce-manual-eval-20260920/live-r05-dev-reliability.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "r00-dev-bm25",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 357,
+      "local_report": "reports/rag-cce-manual-eval-20260920/r00-dev-bm25.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "r00-dev-dense",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 357,
+      "local_report": "reports/rag-cce-manual-eval-20260920/r00-dev-dense.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "r00-dev-hybrid",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 357,
+      "local_report": "reports/rag-cce-manual-eval-20260920/r00-dev-hybrid.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "r01-dev-hybrid-rrf1",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 357,
+      "local_report": "reports/rag-cce-manual-eval-20260920/r01-dev-hybrid-rrf1.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    },
+    {
+      "name": "rag-v2-development-once",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "split": "development",
+      "runs": 75,
+      "evaluations": 339,
+      "local_report": "reports/rag-cce-manual-rag-v2-20260923/rag-v2-development-once.json",
+      "data_dir": "testdata/rag/cce-manual-eval",
+      "state": "published"
+    }
+  ]
+}

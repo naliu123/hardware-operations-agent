@@ -1,0 +1,66 @@
+[
+  {
+    "id": "cce-asset-table-explanatory-014",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "回答明确说明kubernetes.io/elb.class创建后不可修改，补充的类型和取值也由同一原表行支持。",
+    "evidence_checked": ["原始表格行", "TABLE_TEXT派生文本", "引用哈希"],
+    "answer_sha256": "603b2cc7730e744e06401756ee90bf12f7287f54832f408e54c3fd25d6d35021"
+  },
+  {
+    "id": "cce-asset-table-explanatory-017",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "HTTPRoute及RequestHeaderModifier过滤器与目标表格行一致。",
+    "evidence_checked": ["原始表格行", "TABLE_TEXT派生文本", "引用哈希"],
+    "answer_sha256": "3543a8620507f4cf87699ede5f6f962bebdb22f3b2c5332f13cff69f4743471f"
+  },
+  {
+    "id": "cce-asset-table-explanatory-028",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "命名空间名称用途及唯一性限制完整覆盖原始表格行。",
+    "evidence_checked": ["原始表格行", "TABLE_TEXT派生文本", "引用哈希"],
+    "answer_sha256": "0443aa6925e8dc4d9f368431d6383a14225fbedf789de3d125433fd2298cad2a"
+  },
+  {
+    "id": "cce-asset-image-038",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "“极速文件存储”与目标截图描述和相邻迁移步骤一致。",
+    "evidence_checked": ["IMAGE视觉描述", "图片位置标记", "相邻原文", "引用哈希"],
+    "answer_sha256": "6a0ad4f877ba41f0d79b6569f19d71799b99b80cbf12b96530dfd1a160710f64"
+  },
+  {
+    "id": "cce-asset-image-043",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "Untitled.ipynb及Modified 57m ago均由目标截图视觉描述直接支持。",
+    "evidence_checked": ["IMAGE视觉描述", "图片位置标记", "引用哈希"],
+    "answer_sha256": "672107a992d9979c1ae096ee9b5b2fedafc5677564cb53ee6ff402abc61eda9f"
+  },
+  {
+    "id": "cce-asset-image-044",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "节点192.168.0.42对应的2/3值与目标截图描述一致。",
+    "evidence_checked": ["IMAGE视觉描述", "节点限定", "图片位置标记", "引用哈希"],
+    "answer_sha256": "38d88e66afc6eb2ad089b3b63d38e4b39bd85c0501b00977e2693af244387767"
+  },
+  {
+    "id": "cce-asset-image-051",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "Grafana UID 4xFqwVNNk与目标截图视觉描述一致。",
+    "evidence_checked": ["IMAGE视觉描述", "页面与字段限定", "图片位置标记", "引用哈希"],
+    "answer_sha256": "02492259bd20deaaadfa51039bde87b119e519027090d277be0f93bb3142bd74"
+  },
+  {
+    "id": "cce-asset-image-059",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "挂载路径/data同时由截图视觉描述和相邻原文支持。",
+    "evidence_checked": ["IMAGE视觉描述", "相邻原文", "图片位置标记", "引用哈希"],
+    "answer_sha256": "9ae5d1c25f880005c26153127080b01e17e1193cf2fed97c8b7afc7780bbc40a"
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "name": "elasticsearch",
+    "pid": 77443,
+    "created": 1789853729.005997,
+    "alive": true,
+    "rss_mib": 979.8,
+    "listeners": [
+      "::127.0.0.1:19300",
+      "::127.0.0.1:19200"
+    ]
+  },
+  {
+    "name": "phoenix",
+    "pid": 77445,
+    "created": 1789853729.057027,
+    "alive": true,
+    "rss_mib": 548.0,
+    "listeners": [
+      "127.0.0.1:16006"
+    ]
+  },
+  {
+    "name": "embedding",
+    "pid": 77446,
+    "created": 1789853729.060106,
+    "alive": true,
+    "rss_mib": 539.0,
+    "listeners": [
+      "127.0.0.1:18765"
+    ]
+  }
+]

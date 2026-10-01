@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-25T11:25:33.536558+00:00",
+  "status": "complete",
+  "candidate_sha256": "2060522dd2c3e7c32834b05bc3fbf70230b42ff5668ef5357c7affbcbfd4004b",
+  "prompt_sha256": "a07f213fee84e9d46d9ab0effa722733534d5440c5bbcd91a458f2539037d8dc",
+  "review_prompt_sha256": "2cf923d9446d28dcb6984973f0eb063a5e6c35cc8d94be9efd78a9132fc1af72",
+  "model": "deepseek-v4.1-flash",
+  "cases": {
+    "cce_10_0066:table-001-p01": {
+      "question": "在《CCE容器存储（Everest）》的“安装插件”章节中，当节点数量为50、PV/PVC数量为1000时，everest-csi-controller组件的CPU和内存限制值分别是多少？",
+      "required_facts": [
+        "everest-csi-controller组件的CPU限制值为250m",
+        "everest-csi-controller组件的内存限制值为600Mi"
+      ]
+    },
+    "cce_10_0132:table-010-p01": {
+      "question": "在CCE节点故障检测插件的版本记录中，插件版本1.19.33对应的更新特性是什么？",
+      "required_facts": [
+        "修复部分问题"
+      ]
+    },
+    "cce_10_1142:table-001-p01": {
+      "question": "在CCE增强集群弹性引擎插件的大规模场景内存建议表中，当Pod数量为30000时，建议的内存申请值和内存限制值分别是多少？",
+      "required_facts": [
+        "30000个Pod时建议内存申请值为8Gi",
+        "30000个Pod时建议内存限制值为10Gi"
+      ]
+    },
+    "cce_10_0923:table-001-p01": {
+      "question": "在《监控中心FAQ》的‘为什么监控中心的工作负载/节点CPU使用率超过100%？’表格中，CPU用量为250000时对应的时间点是什么？",
+      "required_facts": [
+        "CPU用量为250000",
+        "对应的时间点是18:30:28"
+      ]
+    },
+    "cce_10_0348:table-002-p01": {
+      "question": "在《节点可创建的最大Pod数量说明》的“节点最大实例数说明”中，节点内存为64G及以上时，节点默认最大实例数是多少？",
+      "required_facts": [
+        "节点内存为64G及以上时，节点默认最大实例数为110。"
+      ]
+    },
+    "cce_10_0462:table-008-p01": {
+      "question": "在集群版本v1.36、架构x86下，Huawei Cloud EulerOS 2.0对应的最新containerd版本是什么？",
+      "required_facts": [
+        "containerd-2.2.1-26.04.130941168.gitb72de14b.x86_64"
+      ]
+    },
+    "cce_10_0154:table-001-p01": {
+      "question": "在CCE集群弹性引擎插件的大规模场景内存建议值表中，当Pod数量为80000时，建议内存申请值和建议内存限制值分别是多少？",
+      "required_facts": [
+        "建议内存申请值为24Gi",
+        "建议内存限制值为26Gi"
+      ]
+    },
+    "cce_10_0129:table-001-p01": {
+      "question": "在《CoreDNS域名解析》的“安装插件”表格中，节点数量为2000时，CoreDNS插件的实例数和内存限制值分别是多少？",
+      "required_facts": [
+        "实例数为4",
+        "内存限制值为2048Mi"
+      ]
+    },
+    "cce_10_0870:table-001-p01": {
+      "question": "在专属存储性能规格表中，高IO和超高IO的IOPS分别是多少？",
+      "required_facts": [
+        "高IO的IOPS为1500 IOPS/TB",
+        "超高IO的IOPS为8000 IOPS/TB"
+      ]
+    },
+    "cce_10_1112:table-001-p01": {
+      "question": "在《不同集群规格的资源数据量说明》的表格中，Secret（平均资源大小不超过15K）在2000节点规格下的理论上限是多少？",
+      "required_facts": [
+        "Secret（平均资源大小不超过15K）在2000节点规格下的理论上限是10000。"
+      ]
+    },
+    "cce_10_0554:image-003": {
+      "question": "在《采集控制面组件日志》的“查看集群控制面组件日志”截图中，日志统计区域显示的日志条数是多少？",
+      "required_facts": [
+        "日志条数为579。"
+      ]
+    },
+    "cce_10_0646:image-002": {
+      "question": "在《使用GPU虚拟化》的“创建GPU虚拟化应用”截图中，GPU配额下展开的“显存”字段显示的值和单位分别是什么？",
+      "required_facts": [
+        "显存值为5,120，单位为1MiB。"
+      ]
+    },
+    "cce_10_1141:image-004": {
+      "question": "在《Notebook》的“使用示例”截图中，代码单元格[3]执行后输出的第二行结果是什么？",
+      "required_facts": [
+        "输出结果为“2. Tensor located on device: cuda:0”。"
+      ]
+    },
+    "cce_10_1129:image-003": {
+      "question": "在《多级网络拓扑装箱调度》的“使用示例”截图中，“设置集群默认调度器”界面中哪个调度器选项处于选中状态？",
+      "required_facts": [
+        "“Volcano 调度器”为蓝色选中状态。"
+      ]
+    },
+    "cce_10_1023:image-003": {
+      "question": "在《故障GPU的Pod自动驱逐功能》的“步骤三：验证Pod是否能够被驱逐”截图中，告警事件显示的时间是什么？",
+      "required_facts": [
+        "时间为2025/06/13 16:45:25。"
+      ]
+    },
+    "cce_10_0834:image-004": {
+      "question": "在《监控CCE Turbo集群容器网络扩展指标》的“通过Prometheus查看指标”截图中，查询结果表格中两条时间序列的指标值均为多少？",
+      "required_facts": [
+        "两条序列的值均为0。"
+      ]
+    },
+    "cce_10_0141:image-014": {
+      "question": "在《CCE AI套件（NVIDIA GPU）》的“获取驱动链接”截图中，驱动信息展示页面显示的Driver Version是多少？",
+      "required_facts": [
+        "Driver Version为535.161.08。"
+      ]
+    },
+    "cce_10_0401:image-001": {
+      "question": "在《修改节点进程 ID数量上限kernel.pid_max》的“配置节点池kernel.pid_max”截图中，“安装后执行脚本”输入框中的内容是什么？",
+      "required_facts": [
+        "输入框内容为“echo kernel.pid_max = 4194304 >> /etc/sysctl.conf && sysctl -p”。"
+      ]
+    },
+    "cce_10_0059:image-012": {
+      "question": "在《配置网络策略（NetworkPolicy）限制Pod访问的对象》的“场景二：限制Pod只能被带有特定标签的Pod访问，且只能访问指定Pod”截图中，入方向规则中源对象Pod标签的值是什么？",
+      "required_facts": [
+        "源对象Pod标签为role = frontend。"
+      ]
+    },
+    "cce_10_0683:image-001": {
+      "question": "在《为负载均衡类型的Service配置HTTP/HTTPS协议》的“步骤二：创建负载均衡并配置HTTP/HTTPS协议”截图中，访问类型中哪个选项处于选中状态？",
+      "required_facts": [
+        "“负载均衡”选项当前选中，蓝色边框。"
+      ]
+    },
+    "cce_10_0953:table-002-p01": {
+      "question": "在云原生观测委托权限说明的“优化前授予的权限”中，表2 aom_admin_trust优化前权限里，授权类型为AOM的权限名称LTS FullAccess的描述是什么？",
+      "required_facts": [
+        "AOM支持访问LTS数据，因此需要获得该权限。"
+      ]
+    },
+    "cce_10_0028:table-009-p01": {
+      "question": "在购买Standard/Turbo集群的“步骤四：进行安全服务配置”中，表9安全服务配置里“安全服务”参数开启后，系统会自动将集群管理权限授权给哪个委托？",
+      "required_facts": [
+        "hss_policy_trust"
+      ]
+    },
+    "cce_10_0380:table-011-p01": {
+      "question": "在自定义存储类（StorageClass）的“StorageClass高级配置”中，表10 parameters参数说明里，everest.io/enterprise-project-id参数需要everest插件升级到哪个版本及以上？",
+      "required_facts": [
+        "1.2.33及以上版本"
+      ]
+    },
+    "cce_10_0178:table-004-p01": {
+      "question": "在节点预留资源策略说明的“CCE对节点内存的预留规则v2”中，表3节点内存预留规则v2里，Kubernetes内存预留的浮动预留（随节点Pod数量）对Docker和Containerd分别是多少？",
+      "required_facts": [
+        "Docker：20MiB/Pod",
+        "Containerd：5MiB/Pod"
+      ]
+    },
+    "cce_10_0405:table-009-p01": {
+      "question": "在CCE补丁版本发布记录的“v1.28版本”中，表9 v1.28补丁版本发布说明里，CCE集群补丁版本v1.28.15-r94对应哪个Kubernetes社区版本？",
+      "required_facts": [
+        "v1.28.15"
+      ]
+    },
+    "cce_10_1133:table-002-p01": {
+      "question": "在AgentCube插件的“组件说明”中，表2 AgentCube组件里，volcano-agent-scheduler组件的资源类型是什么？",
+      "required_facts": [
+        "Deployment"
+      ]
+    },
+    "cce_10_0765:table-002-p01": {
+      "question": "在Prometheus Agent视图的“指标清单”中，表2 Prometheus Agent指标说明里，指标vmagent_remotewrite_duration_seconds_sum的类型是什么？",
+      "required_facts": [
+        "Summary"
+      ]
+    },
+    "cce_10_0955:table-009-p01": {
+      "question": "在GPU监控指标说明的“DCGM提供的GPU监控指标”中，表9 BAR1里，DCGM_FI_DEV_BAR1_FREE指标的单位是什么？",
+      "required_facts": [
+        "MB"
+      ]
+    },
+    "cce_10_1107:table-001-p01": {
+      "question": "在为负载均衡类型的Service配置后端为QUIC协议的UDP监听器的“步骤一：部署支持处理QUIC协议请求的应用”中，配置项“镜像名称”的配置示例要求搜索并选择哪个镜像？",
+      "required_facts": [
+        "http3-server"
+      ]
+    },
+    "cce_10_0764:table-001-p02": {
+      "question": "在Prometheus Server视图的“指标说明”中，表1 Prometheus Server图表说明里，“最大队列数”指标的单位是什么？",
+      "required_facts": [
+        "个"
+      ]
+    },
+    "cce_10_0193:table-004-p01": {
+      "question": "在Volcano调度器的基础调度功能中，参数default_scheduler_conf.tier.plugin的详细实现细节和参数值分别在哪里可以找到？",
+      "required_facts": [
+        "详细实现细节请参见Plugins",
+        "支持的参数值请参见表5"
+      ]
+    },
+    "cce_10_0004:table-001-p01": {
+      "question": "在CCE管理节点标签的节点固有标签中，键为kubernetes.io/hostname表示什么？",
+      "required_facts": [
+        "表示节点名称"
+      ]
+    },
+    "cce_10_0634:table-002-p01": {
+      "question": "在动态创建本地持久卷时，存储卷声明（PVC）参数应如何选择，以及本地持久卷能否被多个工作负载重复挂载？",
+      "required_facts": [
+        "选择已有的本地持久卷",
+        "本地持久卷无法被多个工作负载重复挂载"
+      ]
+    },
+    "cce_10_0949:table-008-p01": {
+      "question": "在ELB Ingress高级转发动作注解中，参数kubernetes.io/elb.actions.*${svc_name}*的类型是什么，其最大长度是多少个字符？",
+      "required_facts": [
+        "类型为String",
+        "最大长度为51个字符"
+      ]
+    },
+    "cce_10_0652:table-006-p01": {
+      "question": "在容器运行时Containerd配置中，参数default-ulimit-nofile的默认值是多少，以及该值的大小限制是什么？",
+      "required_facts": [
+        "默认值为1048576",
+        "该值大小不可超过节点内核参数nr_open的值，且不能是负数"
+      ]
+    },
+    "cce_10_0047:table-002-p02": {
+      "question": "在创建无状态负载（Deployment）的容器配置中，初始化容器（可选）参数的作用是什么，以及初始化（Init）容器是否支持设置健康检查？",
+      "required_facts": [
+        "用于选择容器是否作为初始化（Init）容器",
+        "初始化（Init）容器不支持设置健康检查"
+      ]
+    },
+    "cce_10_0964:table-001-p01": {
+      "question": "在弹性公网IP计费及生命周期说明中，当节点计费方式为按需计费、弹性公网IP带宽计费方式为按带宽计费时，弹性公网IP的计费方式和释放策略是什么？",
+      "required_facts": [
+        "弹性公网IP按需计费",
+        "默认随实例释放"
+      ]
+    },
+    "cce_10_0034:table-016-p01": {
+      "question": "NGINX Ingress控制器插件版本1.2.6支持哪些集群版本，其更新特性和对应的社区版本分别是什么？",
+      "required_facts": [
+        "支持集群版本v1.15、v1.17和v1.19",
+        "更新特性为配置seccomp默认规则",
+        "对应的社区版本为0.46.0"
+      ]
+    },
+    "cce_10_0187:table-012-p01": {
+      "question": "在CCE权限概述的IAM支持的授权项中，创建访问策略权限对应的API接口和授权项分别是什么，以及它支持哪些项目类型？",
+      "required_facts": [
+        "API接口为POST /api/v3/access-policies",
+        "授权项为cce:accessPolicy:post",
+        "支持IAM项目(Project)但不支持企业项目(Enterprise Project)"
+      ]
+    },
+    "cce_10_0615:table-001-p02": {
+      "question": "在通过动态存储卷使用云硬盘时，参数“资源标签”的描述是什么，以及云硬盘类型的动态存储卷创建完成后是否支持在CCE侧更新资源标签？",
+      "required_facts": [
+        "通过为资源添加标签，可以对资源进行自定义标记，实现资源的分类",
+        "云硬盘类型的动态存储卷创建完成后，不支持在CCE侧更新资源标签"
+      ]
+    },
+    "cce_10_0084:image-001": {
+      "question": "在《健康检查使用UDP协议的安全组规则说明》的“操作步骤”截图中，安全组“添加入方向规则”对话框右侧表单里，协议端口下拉框提供了哪两类选项？",
+      "required_facts": [
+        "协议端口下拉框提供“基本协议/ICMP”和“全部”两类选项。"
+      ]
+    },
+    "cce_10_11112:image-002": {
+      "question": "在《使用FlexNPU实现NPU资源虚拟化与隔离》的“核心架构”截图中，flexnpud向下连接哪个组件，并向左连接什么？",
+      "required_facts": [
+        "flexnpud向下连接flexnpu-smi。",
+        "flexnpud向左连接flexnpu server。"
+      ]
+    },
+    "cce_10_0741:image-004": {
+      "question": "在《实现GPU基础、虚拟化及Pod级资源指标的全面监控》的“访问Prometheus”截图中，Status下拉菜单中被红框标注的菜单项是哪一个？",
+      "required_facts": [
+        "被红框标注的菜单项是Targets。"
+      ]
+    },
+    "cce_10_0436:image-001": {
+      "question": "在《节点池检查异常处理》的“解决方案”截图中，节点池列表里哪个节点池的状态显示为“伸缩中”？",
+      "required_facts": [
+        "名为cce-test-nodepool-cost的节点池状态显示为“伸缩中”。"
+      ]
+    },
+    "cce_10_0415:image-008": {
+      "question": "在《创建CronHPA定时策略》的“使用控制台创建”截图中，工作负载nginx的“更多”下拉菜单里哪个选项被红框标注？",
+      "required_facts": [
+        "“更多”下拉菜单中被红框标注的选项是弹性伸缩。"
+      ]
+    },
+    "cce_10_0792:image-003": {
+      "question": "在《采集Kubernetes审计日志》的“查看集群Kubernetes审计日志”截图中，展开的content字段里auditID的值是什么？",
+      "required_facts": [
+        "auditID的值是b72a16bc-7399-484c-b9d7-008117a2a83e。"
+      ]
+    },
+    "cce_10_0715:image-002": {
+      "question": "在《Pod监控》的“概览”截图中，Pod监控区域右上角时间范围选择中当前选中的是哪个选项？",
+      "required_facts": [
+        "当前选中的时间范围选项是“近1小时”。"
+      ]
+    },
+    "cce_10_0905:image-010": {
+      "question": "在《Prometheus插件平滑迁移实践》的“采集配置迁移”截图中，红框标注的配置项内容是什么？",
+      "required_facts": [
+        "红框标注的配置项内容是- drop:--no-collector.arp。"
+      ]
+    },
+    "cce_10_00356:image-004": {
+      "question": "在《登录容器实例》的“使用CloudShell登录容器”截图中，实例列表表格中第一行实例的所在节点IP是什么？",
+      "required_facts": [
+        "第一行实例的所在节点IP是192.168.20.79。"
+      ]
+    },
+    "cce_10_0931:image-002": {
+      "question": "在《为ELB Ingress配置跨域访问》的“验证跨域访问配置是否生效”截图中，跨域配置里“允许的响应头部”的值是什么？",
+      "required_facts": [
+        "“允许的响应头部”的值是fake-header-2。"
+      ]
+    },
+    "cce_10_0196:image-008": {
+      "question": "在《使用容器网络配置为命名空间/工作负载绑定子网及安全组》的“创建工作负载类型的容器网络配置”截图中，“指定容器网络配置名”下拉框当前显示的值是什么？",
+      "required_facts": [
+        "network2"
+      ]
+    },
+    "cce_10_0712:image-001": {
+      "question": "在《集群监控》的“集群健康度”截图中，雷达图中心显示的健康评分是多少分？",
+      "required_facts": [
+        "72分"
+      ]
+    },
+    "cce_10_0556:image-004": {
+      "question": "在《系统委托说明》的“cce\\_cluster\\_agency委托说明”截图中，浅蓝色提示条最右侧的按钮文字是什么？",
+      "required_facts": [
+        "立即授权"
+      ]
+    },
+    "cce_10_0689:image-003": {
+      "question": "在《为ELB Ingress配置多个转发策略》的“Ingress路由到多个服务”截图中，表格第三行转发策略的路径是什么？",
+      "required_facts": [
+        "/"
+      ]
+    },
+    "cce_10_0142:image-002": {
+      "question": "在《节点访问（NodePort）》的“创建NodePort类型Service”截图中，服务“nodeport”的访问端口“31919 / TCP”对应的容器端口和协议是什么？",
+      "required_facts": [
+        "80 / TCP"
+      ]
+    },
+    "cce_10_1128:image-001": {
+      "question": "在《多维多级网络拓扑调度》的“开启网络拓扑”截图中，“默认调度器（default-scheduler）”字段下方哪个调度器选项为蓝色选中状态？",
+      "required_facts": [
+        "Volcano 调度器"
+      ]
+    },
+    "cce_10_0820:image-007": {
+      "question": "在《开通监控中心》的“常见问题”截图中，实例“prometheus-serve”的状态显示为什么？",
+      "required_facts": [
+        "实例异常"
+      ]
+    },
+    "cce_10_0830:image-003": {
+      "question": "在《监控NGINX Ingress控制器指标》的“监控NGINX Ingress控制器指标”截图中，表达式输入框右侧的按钮文字是什么？",
+      "required_facts": [
+        "Execute"
+      ]
+    },
+    "cce_10_1013:image-003": {
+      "question": "在《云原生监控插件负载OOM处理》的“prometheus-lightweight负载出现OOM”截图中，被红框标注标题的图表名称是什么？",
+      "required_facts": [
+        "远程写Pending字节数"
+      ]
+    },
+    "cce_10_0601:image-006": {
+      "question": "在《将节点容器运行时从Docker迁移到Containerd》的“自定义节点池迁移方案一：滚动更新原Docker节点池”截图中，“容器运行时”字段下哪个选项被红框标注并选中？",
+      "required_facts": [
+        "Containerd"
+      ]
+    }
+  },
+  "usage": {
+    "calls": 30,
+    "prompt_tokens": 52542,
+    "completion_tokens": 9183,
+    "total_tokens": 61725
+  },
+  "completed_at": "2026-09-25T11:26:35.357601+00:00"
+}

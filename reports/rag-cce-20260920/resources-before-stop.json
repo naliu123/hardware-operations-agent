@@ -1,0 +1,44 @@
+[
+  {
+    "name": "elasticsearch",
+    "pid": 77443,
+    "created": 1789853729.005997,
+    "alive": true,
+    "rss_mib": 848.9,
+    "listeners": [
+      "::127.0.0.1:19300",
+      "::127.0.0.1:19200"
+    ]
+  },
+  {
+    "name": "phoenix",
+    "pid": 77445,
+    "created": 1789853729.057027,
+    "alive": true,
+    "rss_mib": 489.7,
+    "listeners": [
+      "127.0.0.1:16006"
+    ]
+  },
+  {
+    "name": "embedding",
+    "pid": 77446,
+    "created": 1789853729.060106,
+    "alive": true,
+    "rss_mib": 535.6,
+    "listeners": [
+      "127.0.0.1:18765"
+    ]
+  },
+  {
+    "name": "hwopsd",
+    "pid": 81430,
+    "created": 1789854578.458036,
+    "strategy": "dense",
+    "alive": true,
+    "rss_mib": 71.8,
+    "listeners": [
+      "127.0.0.1:18080"
+    ]
+  }
+]

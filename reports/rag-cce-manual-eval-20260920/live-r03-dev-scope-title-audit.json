@@ -1,0 +1,725 @@
+[
+  {
+    "id": "cce-manual-001",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "缺Turbo Pod直接从VPC分配及可与节点不同子网；现有网络配置背景不能补齐。PARTIAL。",
+    "answer_sha256": "c6a36cf6d6d5aa51f96c045c0e250407c3407386201110da93bd6459763f4540",
+    "evidence_checked": {
+      "reference": [
+        "80ac443d3f561750b3a077f1eb94967f12362923ebefb3d4f4c4822bebf48e05",
+        "55167b03f6b3b749f19e4d67de9587897dd94680a60938aa15f33b15bbad65e0"
+      ],
+      "retrieved": [
+        "6d53d5cb49b891d1c6dcd691138c0a218182ebea99e36d9a2f06400637b3186e",
+        "28d1c8adc5c71e480f24ae7b779d0ce9120a669a9d784c8bb4c594f5fcef1362",
+        "38028aa86f9a33aea4817eddf70b656239523f642cd417d76590232439c8a285",
+        "95c58dfbda65118fc5560455895ca964b25e03dcb2bcbed44a4d1fd6a5b37a21",
+        "b2c4f079f3c9bd04da1573d070eb72b595aa574a34fc172dc9ebdbe33e6880c2"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-009",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "缺区域规格新增、售罄下线及创建页面核对；只有网卡与Pod数量关系。PARTIAL。",
+    "answer_sha256": "9fa21a01b4de841d7f3a2d4fea589b0fa5b2c541d072f57d271868d99de58e6c",
+    "evidence_checked": {
+      "reference": [
+        "052a137fccf9990cf63aed1847dd5340919edeeb7a03eebfbe53d77f188cb7b9",
+        "95489cc36d8b16a6ff2b29b69f1b25074438603f8cd373c9e5ccc330f04a8891"
+      ],
+      "retrieved": [
+        "022db6a766af95956675dcac127555eb342367d555daed25b5d2c50c40764c83",
+        "0470e7f44a591624d88615e7420bb236f3b742d13900852ab0a8bd38fae43568",
+        "f616aef2072d6ae6564959cd4546fc231a13bc892c1d3f09942d4d728c69cda3",
+        "e4f56df695202d436fdfef699935f1e52a3c2e762544a8f872ae56ef60b6b1ef",
+        "c8505b932d7eadcd00d7d808fd5853303b66f1f4716187060d78ee081bb0412d"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-016",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "两项事实虽已回答，仍添加固定EIP及额外删除检查等未问缺口，状态PARTIAL。",
+    "answer_sha256": "b683bc1c278a89a6c67a4aead0f4d05bf67c66f5aef4f8a50d9da47159d30ab4",
+    "evidence_checked": {
+      "reference": [
+        "432f4617369a710fc54747b4fa7f283697bb0692b38377b597e3b0ccc6a3d219",
+        "b916963f9dba7be89bbe8e680e389fa3b3a564dcf78283900e07f8b141f58671"
+      ],
+      "retrieved": [
+        "4228666e8ec5158f769279d59b389a67238e2a81b05c4134e1e1dc60ab6c6858",
+        "1bf96bccaea5daae3158c17b94b15c8c2ef256dea6e84cb410647148c82aff91",
+        "57be97471d04cc87977c619e652f7b2133b7dc74eef1a324693f9ad1f6b6b4fd",
+        "3087a957bd099a3cacdc15305eb74b5f499e848cc980f695dfce6fb65c283878",
+        "bbfa1662bd9b38027d8d32abfe6fde66910c9d7d96f3f9395077336372554d82"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-017",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "手工删除Pod触发迁移已表达，但增加未问的目标节点和迁移失败排查缺口，PARTIAL。",
+    "answer_sha256": "df1d12ef94eb3e5e61e2abaf352e72e5fab3cc7639e0124e86487b9b60c6c48d",
+    "evidence_checked": {
+      "reference": [
+        "b65076cddabf1d0c680c66fc9ce99eb56c57669f9d153cbdb84f5f2330e05806"
+      ],
+      "retrieved": [
+        "4228666e8ec5158f769279d59b389a67238e2a81b05c4134e1e1dc60ab6c6858",
+        "03ef87936aef35ecd2050669a1752918a9b5d88a3073bac7cb376a47081f8f82",
+        "6b75e5d0fe279c578c8d92f625b3326edcc88e8e44dbc9a7bb1c6ab8cc350364",
+        "6a4a47db15ae8235f4720550b8ac0d7858bf468f2b989fb52f06f114263e7b67",
+        "98cc2c27c39592c570f9849e7443ba0ef9352e054b5628576a8ff77f5f21937b"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-030",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "未说明不能为系统盘、专属盘或共享盘；另外附加历史VBD兼容说明但未清楚标注历史范围。",
+    "answer_sha256": "5d05f561f4af79c36d5458d9bcff4bf98a7c05d01b55794298fbbe13c984bd6e",
+    "evidence_checked": {
+      "reference": [
+        "4fe30979d5004c2c03bc3c4d0f05e6fc4d3d12aebc1989c7f96d2fa0876db008",
+        "d698a32402362812a692ef8f659c9ba18f2333fcef10ff76090affd9edd3e27c"
+      ],
+      "retrieved": [
+        "e671271b5c78eb20d240fbd07e92a8221ddee58dd3b73769388cabcbe3f064e1",
+        "13b7cc436f8e527607c8251395b68c1f230991ad40c253d9731066082371859b",
+        "0e4ed5ae94e89ba165599added82188403b882c6a47d1a8d87f760b345fa890f",
+        "fcceca3dedab3fba24be8fab5000ab83a6f461c5dd9ec421fb128664ceb2287b",
+        "f9ea0fb45aca56713ba5d35d7b68be52e713cfdafa622993e6752ca82d3d8d91"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-035",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "三项事实具备，但质疑用户已给出的业务指标前提并添加实测比较缺口，PARTIAL。",
+    "answer_sha256": "164412bb2becc7c430fce6f127981e41144040938f5129a17059bbd02c318c78",
+    "evidence_checked": {
+      "reference": [
+        "0fc4101a956010f2701cd5067f61aa551ce0aa22b448fcdd186a0d019dc00efc",
+        "d0d470da08058b7567fff85cb38a815ca8b864e2f4ddb260fc45ec66e329ddd4"
+      ],
+      "retrieved": [
+        "acd40a754cbfcbea05a2058e8007f4cb87a224510d21fbfcb38d12ac44972247",
+        "b89e9111a517cef33d0ebeecf5bca0432735440ebff877bef43ae089b02873d5",
+        "cd0a0bf61e167973dde3377f3a7ec6e291ba0e09626a8efa511ac6da6177ea5f",
+        "a338792557b1911e0a2da7603c105c4400b432f5eb6cf1918c1410b443fb4eeb",
+        "d7d428d937d71b5dc3c1bab5207437037b715c9986538e1640aeaab656409b56"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-052",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "YAML、NPU配置、可视化入口均具备，但添加完整模型清单及GPU模板等未问缺口，PARTIAL。",
+    "answer_sha256": "8da1b56538304030addf0424f92f84b8115ff36c87066324dba6a24bbf12dd5c",
+    "evidence_checked": {
+      "reference": [
+        "94791f522eef38dc117a9bdd1a500aee4cc584830f976a052d7c174ddd58dd02",
+        "c0f4000c56c21d6cac28f1a2e4b42b1d276e295f68cd39fd708c42290bce7ffb"
+      ],
+      "retrieved": [
+        "eed15a8c7b89c4af87a86718aea56979462e0cf4ad444a66e36c3d2043a125fe",
+        "4cc2549eb083c011ae2f9ff47b6e2979720dc73f5786398368d8bb6f0b3c265b",
+        "d4f2dccf3006474fc662dae75e1f84ce8d82f45ee2285e1a6cbbb5dde804377c",
+        "35dd52bbd322fa6b91ea48091aaeaa8816e37f5d9bff9fcee240632772a37ea8",
+        "5906b90b37434acb41e5cb02abb868d74972aaca9eca465006a0db24f2b7e729"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-064",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "Autoscaler扩容及低利用率删除明确，且列出了亲和性不能扩容的条件；未保证所有Pending都能扩容解决。LLM将禁止项误判为必须复述。",
+    "answer_sha256": "c5652a076ea2b7ad66ac239d5cb440f06b7bd74725e6e1005a4b2a1fa5ea4b33",
+    "evidence_checked": {
+      "reference": [
+        "2d489afd629520e44a761dcf51207efb8e7110ea5060cfb87c7ec1c9b6dfe99f"
+      ],
+      "retrieved": [
+        "76872fa3ec65da1b18a35eaad9bab460815ab3c5701913da33cc5670e228ce38",
+        "0f6027bb858438b4b3156fa7732ae8e81a87f1733e62ad70aa10ac30dad76651",
+        "17060c6968ae7686ad235f01ed1818f520b87c3a131b95c3522cb478e8d7ef0e",
+        "d9a3379ec0ec4c0ff00880b0a906750a53ad8941dd7269ab6fe5e11f74e1f654",
+        "e1d7bf26a1a0bf6e191c6407a2ac22d3cb5a7e6cc22927bf32b9e79382ac51b8"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-066",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "客户端可用v2/v3已答，但控制台唯一版本未被要求，仍因此返回PARTIAL。",
+    "answer_sha256": "09e4b6a88c5744bde2e4dd94c6f6f016ff77e4161668e64ce990995420b035af",
+    "evidence_checked": {
+      "reference": [
+        "3ba20c79c804bb71f0877d3ef21e1d94f904a6deb632a899c78f403c8878b664"
+      ],
+      "retrieved": [
+        "6756718fe4222c5776fde798715ef7b35f2334517bc85c8e4d8e2ad436114168",
+        "ea845a42819bf3193b82de4a38c8674ffeddbaf8253f8acdecd11f46bf520116",
+        "dcd8a98b7ab5cac565ae1bd34cc00ec1066ab2ae730648d4ab2e43c91abe3c62",
+        "b13efbf5013cc68a1a899de882445497e55396f6c885cafef54f669424a6017a",
+        "a0ff795917fac7d170db20372649d2bf0df9f5fcd2cdfad366803696cd3f3fc3"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-071",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "实际答案缺少委托其他账号或云服务代运维；LLM解释错误声称已覆盖。另有部门用户组等未问缺口。",
+    "answer_sha256": "6847583537f195e317f295db2c1e236d445d2b43e833112bc8ca58bdd42037eb",
+    "evidence_checked": {
+      "reference": [
+        "bce9b1297393395820ce4bc453ee83b3ebc5eb0ac1b6df63769c821fa23e3657",
+        "cfa3499841e33d79d3b6ace93b21b1821e0a363c73e1eb5668a0becc43dc4c48"
+      ],
+      "retrieved": [
+        "24d91ee2216c816c67bd4d62f73c578280d3ad7024cd56df4a389181e5f93e63",
+        "5a5f3716f09d37984e9edb421dbb76fcd72e71b0a76619d180cb820e20deaa36",
+        "bc4504f3ce7c6862cd08e30ec3798dcf60d47c8024b1162dba3d02cfcaf2e7e4",
+        "e07b7e22e518925d7b8f8015e463b0f5547a115d14ffc4425a74ee9d8b42c717",
+        "6fd1ccf51f06efceb1b49aace9da4620c966d2fae61a37ec6b7265b0e1e6baa9"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-080",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "非共享及跨节点必有一个Pod不能启动已答，未标注历史Flexvolume范围。",
+    "answer_sha256": "20afd4869dc2682e5681e9105cc493d7396b614457b14175988f30b149c6bb37",
+    "evidence_checked": {
+      "reference": [
+        "8d97cf71ff601d511d550707a35e6a894e035400f1d80e5b04a92b258f8352b9"
+      ],
+      "retrieved": [
+        "7f1439567c83739e46bc5f4a527f26e6fa6044ea6543852d42b9125621924cd9",
+        "f9ea0fb45aca56713ba5d35d7b68be52e713cfdafa622993e6752ca82d3d8d91",
+        "5f892f6f3d23d38bac8032ac13fa01fff011676a854aa809122a7b17cdae2d2b",
+        "e6856198ec8b1396db67de66b7a49c7b4319fe5255d188992657e0eba2ef9382",
+        "9bc648f4429138e2f3e830bfa080d50f9920f774c9c64aed62e2b6968de2096c"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-082",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "INVALID_MODEL_OUTPUT导致FAILED，无可发布答案；不是正确拒答。",
+    "answer_sha256": "08658c336f044bdc0846679028af232f6f04d89fab68691f1c9d924bd9577173",
+    "evidence_checked": {
+      "reference": [
+        "060b51b80bb4eba36be8aa1042ed62f1cd874c5bdebd64e7b5fd2cdfe86e6648",
+        "74664b96af5ef61bc571857ad612bcb0a7f854f64429de5f3fbd30b138218132"
+      ],
+      "retrieved": [],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-083",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "已准确回答表中恢复栏为无，却继续索取实际恢复方法导致PARTIAL。",
+    "answer_sha256": "bd6d24b2e4b834601a2e58388409276070e3ac7678fc0f3391be5b98ed1e4315",
+    "evidence_checked": {
+      "reference": [
+        "507b21a4cf5b0d368c71c3c97c1afdd80b12e85b3d62a3864a76abc45635a1a9"
+      ],
+      "retrieved": [
+        "c95fe502e58e2abdbbc897a218e7f42781a58c2027a0d6cd2a02134152226e00",
+        "320ebba43d965efc813db1254c96e5c3e64ad166ab37c8241d120a9c4339e741",
+        "03ef87936aef35ecd2050669a1752918a9b5d88a3073bac7cb376a47081f8f82",
+        "0756fdea81b82282a67f1956f203ba4c9a53af281de29b069b6586e80b29cadc",
+        "ef514b22d06ba75764a9096facd9031b51cc3aea26ddf30c8d70288155e4de4a"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-092",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "Updater和Admission Controller已答，遗漏Recommender根据历史数据产生建议的职责。",
+    "answer_sha256": "f742fe2d2c49110472b177a51bdc4ed555be0037985225be835ebfab95ea7be9",
+    "evidence_checked": {
+      "reference": [
+        "1bf40291096ea00589cb5eb998078bc0155a4c88e6270f21bb7d5ce379430050",
+        "60c92436fc02f2ba204769250068a50cf13a4ecd7cf1bd0c3c6f8d693a3d2806",
+        "dbff5c57e4cc6a23bb9bd5fa656075fe5d28def8c0a2eda65ca605cf01439c0f"
+      ],
+      "retrieved": [
+        "8ee0e141d3b2b2881f977ec0589bbb88cd38494ded377cf5cce262664507c272",
+        "ae350f4ce5734e103adc6dc3fc7666b1e0bfd16bb3f6d78acb0fa4e1e05cecd8",
+        "179d57730fbfdb9b063155e179036f0623674ee9cd481b891cd646319bf0e5b7",
+        "179d57730fbfdb9b063155e179036f0623674ee9cd481b891cd646319bf0e5b7",
+        "afb714089538ef51dc7e501f2a21c28fb36693127b011447e076260a48ce5f0a"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-095",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "两个版本、文档不一致和不能确定唯一版本已说明，但仍重复在gaps要求权威版本，状态PARTIAL。",
+    "answer_sha256": "f6cbb576eec07e4da1cc3945b7381f6000d559c73b9ab1ccdf6e3a0e3bd27e25",
+    "evidence_checked": {
+      "reference": [
+        "4808e27a6a89f041cd5aa886e12f86c4cc9ce7c9e16ee0c101667965afebce47",
+        "c45a9ed752675a4f562179a3fa7c5bb9d3cafd4d8e108fdd351c822a6c3d59b5"
+      ],
+      "retrieved": [
+        "6756718fe4222c5776fde798715ef7b35f2334517bc85c8e4d8e2ad436114168",
+        "dcd8a98b7ab5cac565ae1bd34cc00ec1066ab2ae730648d4ab2e43c91abe3c62",
+        "ea845a42819bf3193b82de4a38c8674ffeddbaf8253f8acdecd11f46bf520116",
+        "b13efbf5013cc68a1a899de882445497e55396f6c885cafef54f669424a6017a",
+        "85bc936739c6fb56dcc2629cdf83c22d768ec1afbee8fdc4b4f72fd119dcfd8d"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-negative-runtime-backup",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "gaps明确缺具体集群备份记录和实际phase，不能确认昨晚状态；正文查询方法来自实际召回，无编造。LLM忽略gaps。",
+    "answer_sha256": "d0433fae4268097e34f8125fa172699828339eda167e0e8bb2a824090471a173",
+    "evidence_checked": {
+      "reference": [],
+      "retrieved": [
+        "d25e890a4853f162a5a7ee945aa654f7a41c9f5eb323cd065f2e65f9709efc11",
+        "7a1b1871e4b0c8ef234d3bfcbca1f439158434024e0a38bf6541c7a93eb015ff",
+        "fc2758ad9bf29d8d3637083d21ad3be4901f23a3f4296aa3f9c9d2f6c981bf54",
+        "600af1d93e5d2bf639695c97fd6ded903b9d84555284917c88d0b2be276a2045",
+        "523464388c31fa91cc70156a11b7fd93e4677e96b6629594723fcd7e6c6fb094"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-negative-runtime-security",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "gaps明确没有default-secret实际data及密码内容，未编造密码或将示例大小当固定值；正文凭据过期说明有原文支持。LLM错误只看正文。",
+    "answer_sha256": "c01126fd4596bb761cb34597a589034aa1bb74a46170d9d77b5228780eb1908c",
+    "evidence_checked": {
+      "reference": [],
+      "retrieved": [
+        "e964bc77d08fa480d2a8f7d32ccbe301db8d39843fe2f2ac40db9e51707bbe6a",
+        "7edcac3452540b0b9dea3a01d334d1e8146a159d20c462f8b4781fed3c578118",
+        "65564491e0bfb66a462dbb834e7091ddcaad27d1995c2b3327474d10ea28939f",
+        "5b8087f0554b70e6d56c84b4d049c021914c54f39febeffbcb270748d05eaa44",
+        "cf13a066f689981b23135c97d8a6066ec9d001794fb87b1ca7f4cc7dbac36bc0"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-negative-unprovided-cve",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "gaps明确所有片段未出现指定漏洞编号，无法确认修复小版本；未编造。空answer不妨碍具体拒答。",
+    "answer_sha256": "6c6124c8909074a9eb1ecb31758b903070d4cb43506e69f05a237fe1de643b31",
+    "evidence_checked": {
+      "reference": [],
+      "retrieved": [
+        "199966708235b4fa4ee0813f8190706d69a0e6d5c0cdb7a514068215b8e6be9d",
+        "afbd3464075d507132370ac703db7390c6a6b2c3f35d862e5ff0e1868be6dbd9",
+        "dfc8fae0d11932b2223b8e4e516f8ffc8e8b27c10c3128007c27f9b83b7ab3e8",
+        "42dd8e44328b8a7a602cce3820a33c3c46cd5a2a140847ab1925f53550d7ccea",
+        "4ed14b20ca33d8cada042f23753c5e7c96a22c0b6609932b8aeb3879897656db"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-002",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "明确无需维护节点部署、管理、安全性，并按CPU内存用量按需付费。",
+    "answer_sha256": "8b266a0f0e4e5300c2aa26f8158d831788dd7e49297d8bbc688433dec43d96b5",
+    "evidence_checked": {
+      "reference": [
+        "4711d32c52d902893460461ca8ae7e6a5f1e5b081fe8427f619be7c16140efb5"
+      ],
+      "retrieved": [
+        "15ec4dac93dc72ae34f8e67c87cc6ad07e28c19b8bf2efb516906f02b74005c9",
+        "a061a5c6ece70d49ec7ab53f0c4c976542386c3fe8c682de83ad2481a3909d2a",
+        "6639767c4718ec2e36c1b2776efa81b318718455efd241dd2eec9fa4c7428a52",
+        "185df5fd8896bf17b535dd2aade7faa32174288976d56199f677c06e05d02af3",
+        "617869bfb1a1a15af491811a606128f2a25fd35275802bbdb8dedb7f981e474b"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-006",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "明确不是控制节点且运行容器应用，列全Kubelet/Kube-proxy/Container Runtime。",
+    "answer_sha256": "de5ce41f1232702afdaa292b3f6fd9711dcb92da5db3b258c4b328b4de2e60af",
+    "evidence_checked": {
+      "reference": [
+        "4aa3da22e745fd38e4c19822dc03bbc9e9ff3c4a67ba0f8b35d6e7d502941669",
+        "6b6ff91452b0c6e22b39d0fa054f36eeeb632a9f97fbc73a4fdb81f82a7e6986"
+      ],
+      "retrieved": [
+        "6a6a5662664aad254d790299118614484008faf1913c0fb77191dbafc1b6ee16",
+        "12829611f3b6ae8e52a8acf33374c0718ebed275baa7f29d94d5b744d64c6c14",
+        "922406c6e231601807811281920e484a6e530193002248bbe7f142b617dd01b0",
+        "3b0340ce72d7722929ce80f0a20df1cf257240e6d0633621ffa9db2582cbbf79",
+        "052a137fccf9990cf63aed1847dd5340919edeeb7a03eebfbe53d77f188cb7b9"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-012",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "实际B规格计费，0.1923×10=1.923USD，控制台默认价格不改变实际计费。",
+    "answer_sha256": "a2004f7d2f07f9e113a91fa90ee2f1464a1cd5996fbaebbec1025e7323e23f10",
+    "evidence_checked": {
+      "reference": [
+        "4103eaac536dfe43250b110b131c3e0fb576b7977442ed2c7a6ef402418418b6",
+        "4e15d39251218113ce70c261e1089b1e7767b09cd46c9fabaef2fd59565af3da"
+      ],
+      "retrieved": [
+        "772a8a729be4059d9949de51681fd7da5537f2db666502e8c275460ce4ed96ed",
+        "6444628ae21afe6c4cbefff7e15961716920c97bbe2c6d39a12390938292eb6f",
+        "a2fceea6bcbbf5e71d6411f7767503c75b08ce3ae146f63fc5c4443ecf02916f",
+        "98a26b7aeb0f4ca9d2c56cc554f33b1da50234283416c4e0a9212d699fc28240",
+        "b0d7d7360b02bfbe508fab5c86f37634bbc9ba68948b36d839e094042e229955"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-013",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "集群页面、节点管理、节点池页签、右上角创建节点池路径完整。",
+    "answer_sha256": "b99b3fd973fd781ff1470ed45fe8c545730eabe4b0732007a3d8b363289a7547",
+    "evidence_checked": {
+      "reference": [
+        "3b0f6ae683d1c5f27b98d4fbc349699d3327a85e5bcbef44be7cec53108e67b6"
+      ],
+      "retrieved": [
+        "f477b0747c525b17010e7f39757703e8dcb6b865848205e5c5468a16e13391db",
+        "c185b2f472b90c12d41ccb4f7043872f9eca785c44f00ca3a051f197ac311f08",
+        "ea2f1cbd9b591373515589b5745f78b964aece98c256f9f4512c5cf59b06532b",
+        "02226e4272a03c6edbe94f03d8ba6e70ad7d5af8a5184b3f5c594fe9dc6e94aa",
+        "2e2d944695bd742babf122aaffe3467865e9d5bdd222f98b824b7bcf82bf1b27"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-019",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "批处理和应用领域已答，遗漏高性能异构芯片管理；LLM初评漏检。",
+    "answer_sha256": "83938ef940b6435c5f83d2c7c6ed58472babc7395f88019d166cc0e30d4e055c",
+    "evidence_checked": {
+      "reference": [
+        "a53e45f161e46d8400159e1a3adbdda5115ee942b758836d5e1da6ef99673564"
+      ],
+      "retrieved": [
+        "06ac43085ef87014b0047f609c1d54ff7d50f1cb51a4510a9e45e29755633eb0",
+        "f7bf2eee6e76c3cd286e1b66580b1255fb1a3ee5d736c1f37e30a5508dc10b4a",
+        "c62d8d79f4fa786557dfc02c8f1768fdb06f5ab0b2d34cc7fc3cb3fda0ba72b2",
+        "0ef09fc4acaa589bca102a8b9de714721c36a54fa0b9365c51a5bb655b6e5da7",
+        "23aa65a3f7dad934c2389a6be201efd43a596a00a105b85afe3ee44b8ba5e1f8"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-022",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "节点GPU驱动、镜像CUDA Toolkit、版本配套完整；示例470.141.03/11.4明确为示例，补充兼容核对有资料支持。",
+    "answer_sha256": "46e65354f11cb7351e1a07703c0b2f097a939a48f1f0a9975c85bb4c0c5ce6cd",
+    "evidence_checked": {
+      "reference": [
+        "838f82cbcac48789f4529030dd9152e7cc5ff8dd6d6738b4a2e0a64513410053"
+      ],
+      "retrieved": [
+        "b4eaa73adcb9368fe4d24612643186fc7e3cf6c1c64f1f11a5291d9e4b595f5a",
+        "7cbd8f5ea2a47d8a4f0896fd59283697c68e5d585430bf5ce7a0e4e025072291",
+        "49f31105fe0668d0125fcc84f476aa0a56476e89bc8c7904f3da19ad427b4dd4",
+        "4f229ff4dbd1aa3e64c5242338cb6015b20c0e0f48898bbc4a0a107290312650",
+        "d14282db0a94981c9982bf23f73ae2b807899bc77a8a563b6a9c13dfe8ba58c5"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-024",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "VPC无隧道封装且节点受路由表配额限制；容器隧道VXLAN/OVS均具备，规模及适用范围有依据。",
+    "answer_sha256": "ff805872908067e758306b168cf08216d8d610845fdeaaec8c31c931f03689c2",
+    "evidence_checked": {
+      "reference": [
+        "d479cec29342cee8019e979fd149d743b3a3fa39bc8d5e8d66be4c31a735deb5",
+        "c47292a532a08dc6f239859e4428d77909e466656cb923c7c895066c6f21a5d3"
+      ],
+      "retrieved": [
+        "61bdfd077eee6ae7646886f383b20033dc4d13169326f3131394c79bcaf2d137",
+        "3404daee75c0b8d3fb8a58cab1eb32d6bb862b99fab0ea2d6387bd57efd9a9d2",
+        "d06f867055ca65680f3efe52775c3830fda8b1881511968d45da5d25977627ac",
+        "a681f0bdb281979836572b51b0049f9b1eef69aa3184dfd6ca4b372a2de2abb7",
+        "77adba08c7879aa5ef88a57fadcaa99bd247a7724a94caec2393d930b733063c"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-025",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "ENI/Sub-ENI及无封装/NAT机制完整；其他VPC能力、IP消耗和Pod数量条件来自召回。",
+    "answer_sha256": "58a84218aa0bd92a438b9d6e6ce8cbdce2495ca6fe0c5c8bc57504fa45af5dec",
+    "evidence_checked": {
+      "reference": [
+        "858cb06b2159582a79c173e2f2149681b307de631427fd5e7b49f25e938beb0c"
+      ],
+      "retrieved": [
+        "125a23201d6adf0c7cbfe64af13b841b3f56dbe1e5eaaa0402d3a9bcf1032027",
+        "ddd301ece5dca1076e76ead8860dcbc6e92734d3b20df8c275cf0892812d9e7f",
+        "3404daee75c0b8d3fb8a58cab1eb32d6bb862b99fab0ea2d6387bd57efd9a9d2",
+        "77adba08c7879aa5ef88a57fadcaa99bd247a7724a94caec2393d930b733063c",
+        "56940d1e81777ac44a50029afe17a19ad617082d5be443bb4f20636df3d7a1e0"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-051",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "拓扑、原子调度、工作流及生命周期控制平面虽有，遗漏声明式生命周期管理这一冻结必答限定。LLM初评漏检。",
+    "answer_sha256": "fbd56614eaaac73f5bcdc2fa7a91251a2eb8bb3727a746f0a9251d3fa8e4c7f1",
+    "evidence_checked": {
+      "reference": [
+        "b413f01c2c2abadb8a8087a9b60cd71147f42ab1f00ea729c1101a255740174a"
+      ],
+      "retrieved": [
+        "b4462e732eacb3bde6d781350af1dccde3605b71252c48362d75f71f9ee76574",
+        "4e216617f56809792fd863c077a34442a225e1f4816c6dad73a5c56fe4ae544a",
+        "fcad512f1b0ee7980ae21bd021e2a6ff3f6a8718bdea304a618f9a3693344fa7",
+        "bf9a3155a4e8118f3f0e8537b84e9a6b7d6b1019431b3e95df728a9bc3f4bd2e",
+        "c538168841a9bf423869e8f6ca47878b256406fe9b6826b9d1e67f443ab17afb"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-055",
+    "passed": false,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "按环境建立命名空间已答，未写创建及查询工作负载时选择对应命名空间；大量Volcano队列旁支不能替代该操作点。",
+    "answer_sha256": "415cf355e2e73b86080d339f54eeb1e5392ee47d84e618ec1b09cbf59f1e25a8",
+    "evidence_checked": {
+      "reference": [
+        "1bb41cad7bb282da433d127c84266be595c5306936e74c02d3d329b87893a2a1",
+        "d5bd35649dd972b99a7481ae565fefd378b3b016ce9a19f19878a092ac218a59"
+      ],
+      "retrieved": [
+        "824eadabea778bd337919a89cf47f904cf9691625733774077710a0b5bc834ad",
+        "c0beecaca077cf8a011d7c1727cb73fad4fb57ace4f40d1cbd83ea27026bbd1a",
+        "3688bf61b4188ec66c13ba17e75da12763dbf4ce08e8371cc0002bc4e48f21ab",
+        "e73ed3ef312efa9e4bb6ba1495947ed11136db4a6b36409a9ebc481380dab5c3",
+        "24a0a2d1d9b1f30ac5e44608175bae7f9c1b2d3b204f861c9808cf0674fd75df"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-069",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "CCE尝试v2转v3机制及模板页面再次删除均完整，release存储补充有依据。",
+    "answer_sha256": "a1f23b8840ad497813d6e8dcd8089b0fda0093b23af1b6cc3ed9add09cdf7b6b",
+    "evidence_checked": {
+      "reference": [
+        "64c6885e8f5994ece3a1b65d4150444d96bb7e3c69090c2a1891f359a8e28ea2"
+      ],
+      "retrieved": [
+        "64c6885e8f5994ece3a1b65d4150444d96bb7e3c69090c2a1891f359a8e28ea2",
+        "dcd8a98b7ab5cac565ae1bd34cc00ec1066ab2ae730648d4ab2e43c91abe3c62",
+        "c7760f810e735efeabd888c0852285896007f1e6556ded8863a4cbf03ab548c0",
+        "b13efbf5013cc68a1a899de882445497e55396f6c885cafef54f669424a6017a",
+        "c4ce9f6dbd5a0fc4780e059dffd4ecc76739dc2b239f08f75a57ef8e214f9de2"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-074",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "配置中心与配置概览页签完整，概览内容及监控入口来自原文。",
+    "answer_sha256": "c39836224f6c39130bcdf32c878fda93e6187b1ea16a5f3cf44fd63ef63e8e04",
+    "evidence_checked": {
+      "reference": [
+        "8670c7658a9f6dc56ceb56b304a0d06ba6b2527d595318b265224bc974d4991f"
+      ],
+      "retrieved": [
+        "a11fe9b002b5154443f86f533348ba5999732270d02b64f9bea4a72d855c8ff0",
+        "61897b0d93d302a707e21bba6c91ad9897a46ce21e469a07ac6f2467bf420da6",
+        "c649c303b2c42982d68bfdc6215da47f1d1b0b79816bde9ebdb0d2ff3f43a163",
+        "bcfd608f6f807392ea13c7e3d6acff52a13a7bf5cc2c8c51db04d337378b5197",
+        "5e8485b87b9507909498f90adeeff0108c03b1b474603fc7f220bdb40da60f8b"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-087",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "只读原因、kubectl修改spec.accessMode为ReadWrite、重试删除三点完整。",
+    "answer_sha256": "4b6913c7be1436ba1c4e4416c00d5eabf5f1a48f79e7b2db790f2df3cf7546a1",
+    "evidence_checked": {
+      "reference": [
+        "f9dfbf547190a945e474ede93c5770a4484a88381f48a91b49bff8f14bf1df62"
+      ],
+      "retrieved": [
+        "802e5d6d90fe6be6ebc32b546d7f94adf1c7110d55079b27e32cc847abbdf761",
+        "5e38dd89079a4f27c2dc724a8e9835fb4a006053c0950e008a76fd534ed59450",
+        "d05126bc4aef9ce046e22d01f41c4eba9c2560df8325278695ffa75b696dfdc8",
+        "f887e25ddfb4987c4ca2c4ee1060bc438af2321a59480493b2864a4846d3c66c",
+        "e662fa200f28ac49638fe59da0e30f87cb1ef31737708e7e1de49ae179dd5a1d"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-088",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "只允许restores/backups，清理其他文件可恢复，未声称已经执行删除。",
+    "answer_sha256": "71a4f22b94f643075db28563e7bf2015e9ffd684d8c9a5c1b41b29eda9b4fc8d",
+    "evidence_checked": {
+      "reference": [
+        "8a27a349a07b2f18f6dea011fb970f2e17d2f61b71f2eb7765a2a319992e1e8c"
+      ],
+      "retrieved": [
+        "1b4220ede980e3832c21baa44bc88a9ecbf36e11c9d7cb76f658bbf0a1cd8b62",
+        "802e5d6d90fe6be6ebc32b546d7f94adf1c7110d55079b27e32cc847abbdf761",
+        "3be8e1c2bdc4607d6715d37d687c811ddc663e7946e025bf309a585412cd74ed",
+        "7d99ab88a2ed958be8c71b3bee6c91b3701321cf640515c312afb3955665929b",
+        "63f8871afd980e08f88e950da3a5c5e1ce480844b090c6b8f6c203c323f74119"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-096",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "未设置时PV及存储删除、retain-volume-only保留底层卷、Delete及Everest>=1.2.9条件完整；包周期EVS级联说明有召回依据。",
+    "answer_sha256": "01f0612093794a6910e03f01810cda1b2f62ddd37372769926a390da55095f6a",
+    "evidence_checked": {
+      "reference": [
+        "11d2c13cf84246f174d33ce534b5cef61f608920c455ef712f1c3d42f49d0918",
+        "33ee6ae0190b4b4a06731251b9049a221c86500417df1e12a2d86fcc990cbd40"
+      ],
+      "retrieved": [
+        "0b1a2c6a5548ea603d260e8a7f8b658330c763cd79dba7563e1eac1a6b265af9",
+        "336551535e196d5457cca37ffa35713803b361f755dcb5452bd911ba6d5f5006",
+        "9d9bef72e5fc4334d167afad04a8ba8b211bc3978a208e3cf1a3ccbecc7d58bc",
+        "585f8c859956b1b38282dd0827f79a305f184299372e3fa937853008c1a825bd",
+        "45999b2806ccb5d233f7b85dff77856a53510b9de5ccf2b2be59773e039e4213"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-097",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "PV及底层存储保留、Released不能直接再绑定、删除PV后新建PV/PVC关联原存储完整；未混入销毁流程。",
+    "answer_sha256": "a19fc2a381002b8f737fff081d7f1aac85a0bdb07c69d53c357527281511b5a0",
+    "evidence_checked": {
+      "reference": [
+        "33ee6ae0190b4b4a06731251b9049a221c86500417df1e12a2d86fcc990cbd40"
+      ],
+      "retrieved": [
+        "0b1a2c6a5548ea603d260e8a7f8b658330c763cd79dba7563e1eac1a6b265af9",
+        "336551535e196d5457cca37ffa35713803b361f755dcb5452bd911ba6d5f5006",
+        "585f8c859956b1b38282dd0827f79a305f184299372e3fa937853008c1a825bd",
+        "45999b2806ccb5d233f7b85dff77856a53510b9de5ccf2b2be59773e039e4213",
+        "9d9bef72e5fc4334d167afad04a8ba8b211bc3978a208e3cf1a3ccbecc7d58bc"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-manual-098",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "nvidia-smi、先满足CUDA配套再优先推荐、非推荐时自行验证机型系统驱动均完整；驱动升级说明有原文支持。",
+    "answer_sha256": "5b68502bff799ab410230b58a30996eb5dec53875edd025baaa6658d686b6c69",
+    "evidence_checked": {
+      "reference": [
+        "cf1a67f32ada07fc9c4e9636370dc55d1404c67d075f4da9db646f50d9ead466",
+        "84891c3b2fbc4b36d314ecd037a4d18f2fe1ff5d99a523f3273de39868c5ad62"
+      ],
+      "retrieved": [
+        "7cbd8f5ea2a47d8a4f0896fd59283697c68e5d585430bf5ce7a0e4e025072291",
+        "49f31105fe0668d0125fcc84f476aa0a56476e89bc8c7904f3da19ad427b4dd4",
+        "b4eaa73adcb9368fe4d24612643186fc7e3cf6c1c64f1f11a5291d9e4b595f5a",
+        "12cea251592228deac300f2adbe5479c7e0ed48ed8fea44c32cfc6a1868acf9f",
+        "4f229ff4dbd1aa3e64c5242338cb6015b20c0e0f48898bbc4a0a107290312650"
+      ],
+      "answer_and_gaps": true
+    }
+  },
+  {
+    "id": "cce-negative-unprovided-extension",
+    "passed": true,
+    "reviewer": "GPT-6 Agent evidence review (not human expert)",
+    "reason": "明确未提供quantum-zero-loss文档、不能回答步骤或最低版本；其他插件仅标为示例，未冒充所问插件。",
+    "answer_sha256": "ea9370d5db30d6f0908baf2f6de28067c2b646aa612b8bdec11f53083adc9380",
+    "evidence_checked": {
+      "reference": [],
+      "retrieved": [
+        "68679a32724e75397b5507eb0091433d6b030d6bf5b76212dae79ea1d3b6eee1",
+        "0f879d5adfab1d907498ea0b304542a758a2d93d00ea388b624a7661b7b38b89",
+        "3e130d82d655ed5c269bc2dd247aadd862a1567807d220c11fda1263f95c55b8",
+        "5f8ffca4470cca610a44b8cfbbd2c86cf162ec53dd33366780a9c8526c15fe6c",
+        "3c5d70e1e20d323d44f197226566695e6aaf74662671fa1e9f3cda80780860a3"
+      ],
+      "answer_and_gaps": true
+    }
+  }
+]

@@ -1,0 +1,1864 @@
+[
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-002",
+      "group": "cce_10_0726",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "使用本地临时卷时，参数“挂载路径”应输入什么？对挂载目录有什么要求？",
+      "answerable": true,
+      "required_facts": [
+        "需输入挂载路径，如：/tmp；数据存储挂载到容器上的路径。",
+        "请不要挂载在系统目录下，如“/”、“/var/run”等，会导致容器异常。",
+        "建议挂载在空目录下，若目录不为空，请确保目录下无影响容器启动的文件，否则文件会被替换，导致容器启动异常，工作负载创建失败。"
+      ],
+      "reference_answer": "需输入挂载路径，如：/tmp；数据存储挂载到容器上的路径。；请不要挂载在系统目录下，如“/”、“/var/run”等，会导致容器异常。；建议挂载在空目录下，若目录不为空，请确保目录下无影响容器启动的文件，否则文件会被替换，导致容器启动异常，工作负载创建失败。",
+      "evidence": [
+        {
+          "document_id": "cce_10_0726",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0726.html",
+          "title": "使用本地临时卷",
+          "file": "documents/cce_10_0726.md",
+          "content_sha256": "e96c44a912f72701faa55bc2419cfdb82909c925ede10472f48408e52b7ddb78",
+          "start_line": 38,
+          "end_line": 38,
+          "section": "使用本地临时卷",
+          "anchor": "   | 挂载路径 | 请输入挂载路径，如：/tmp。  数据存储挂载到容器上的路径。请不要挂载在系统目录下，如“**/**”、“**/var/run”**等，会导致容器异常。建议挂载在空目录下，若目录不为空，请确保目录下无影响容器启动的文件，否则文件会被替换，导致容器启动异常，工作负载创建失败。 须知：  挂载高危目录的情况下 ，建议使用低权限账号启动，否则可能会造成宿主机高危文件被破坏。 |",
+          "quote": "   | 挂载路径 | 请输入挂载路径，如：/tmp。  数据存储挂载到容器上的路径。请不要挂载在系统目录下，如“**/**”、“**/var/run”**等，会导致容器异常。建议挂载在空目录下，若目录不为空，请确保目录下无影响容器启动的文件，否则文件会被替换，导致容器启动异常，工作负载创建失败。 须知：  挂载高危目录的情况下 ，建议使用低权限账号启动，否则可能会造成宿主机高危文件被破坏。 |",
+          "quote_sha256": "6ae7e61539960e1ca38ee436ae3d70ccb4d20713e561145479198fda94762233"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0726:table-001-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-002",
+      "question": "使用本地临时卷时，参数“挂载路径”应输入什么？对挂载目录有什么要求？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 1206.323083024472
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-004",
+      "group": "cce_10_0879",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "单集群视角的成本洞察中，命名空间估算成本&资源消耗汇总功能包含的“运行总核时”指的是什么？",
+      "answerable": true,
+      "required_facts": [
+        "即所选时间周期内，命名空间总消耗的核时资源数。"
+      ],
+      "reference_answer": "即所选时间周期内，命名空间总消耗的核时资源数。",
+      "evidence": [
+        {
+          "document_id": "cce_10_0879",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0879.html",
+          "title": "单集群视角的成本洞察",
+          "file": "documents/cce_10_0879.md",
+          "content_sha256": "4f2bfc104d1ff0a5fc1618f9f796791d47130cd524f283e8260e477a1130c0d2",
+          "start_line": 61,
+          "end_line": 61,
+          "section": "集群维度",
+          "anchor": "| 运行总核时 | 所选时间周期内，命名空间总消耗的核时资源数 |",
+          "quote": "| 运行总核时 | 所选时间周期内，命名空间总消耗的核时资源数 |",
+          "quote_sha256": "34704afaafb86e84c7a558500882c6bddfb58b91f8f09ca100df38fbdc9eb7f8"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0879:table-003-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-004",
+      "question": "单集群视角的成本洞察中，命名空间估算成本&资源消耗汇总功能包含的“运行总核时”指的是什么？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 630.947666009888
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-005",
+      "group": "cce_10_0343",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "对象存储卷PV配置中，参数 storageClassName 用于指定什么？需配置为什么值？",
+      "answerable": true,
+      "required_facts": [
+        "用于指定K8s storage class名称。",
+        "需配置为“csi-obs”。"
+      ],
+      "reference_answer": "用于指定K8s storage class名称。；需配置为“csi-obs”。",
+      "evidence": [
+        {
+          "document_id": "cce_10_0343",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html",
+          "title": "1.15集群如何从Flexvolume存储类型迁移到CSI Everest存储类型",
+          "file": "documents/cce_10_0343.md",
+          "content_sha256": "ec08fe7f0bf9831854c620e4ba6f6873374e3a3c43588f94d654ebe4f21edef5",
+          "start_line": 148,
+          "end_line": 148,
+          "section": "操作步骤",
+          "anchor": "   | storageClassName | K8s storage class名称；需配置为“csi-obs”。 |",
+          "quote": "   | storageClassName | K8s storage class名称；需配置为“csi-obs”。 |",
+          "quote_sha256": "b8f0030b03c24906cfc4b0db8f9ea93b138f168c45b14018fd2509aa579ad88c"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0343:table-003-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-005",
+      "question": "对象存储卷PV配置中，参数 storageClassName 用于指定什么？需配置为什么值？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 511.22874999418855
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-006",
+      "group": "cce_10_0559",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "kube-apiserver组件监控指标中，apiserver_flowcontrol_current_executing_seats 是什么类型的指标？它表示什么含义？",
+      "answerable": true,
+      "required_facts": [
+        "是一个 Gauge 类型的指标。",
+        "表示某个优先级队列中当前已占用的并发资源量，反映了当前队列中正在消耗的并发资源，可以了解队列的实际负载情况。"
+      ],
+      "reference_answer": "是一个 Gauge 类型的指标。；表示某个优先级队列中当前已占用的并发资源量，反映了当前队列中正在消耗的并发资源，可以了解队列的实际负载情况。",
+      "evidence": [
+        {
+          "document_id": "cce_10_0559",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0559.html",
+          "title": "使用Prometheus监控控制节点组件指标",
+          "file": "documents/cce_10_0559.md",
+          "content_sha256": "8eddb7e1973d917f2cfd83346b2c30216f85a5ca10ddf9c7adb2c4ea7fb59379",
+          "start_line": 352,
+          "end_line": 352,
+          "section": "kube-apiserver组件监控指标说明",
+          "anchor": "| apiserver\\_flowcontrol\\_current\\_executing\\_seats | Gauge | 表示某个优先级队列中当前已占用的并发资源量，反映了当前队列中正在消耗的并发资源，可以了解队列的实际负载情况。详情请参见[API优先级和公平性](https://kubernetes.io/zh-cn/docs/concepts/cluster-administration/flow-control/#metrics)。该指标通常使用priority\\_level标签进行分类，标识请求所属的优先级级别（如system、workload-high等）。  如果current\\_executing\\_seats接近current\\_limit\\_seats，表明该队列的并发资源可能即将耗尽。您可以提升集群的**修改类API请求最大并发数 （max-mutating-requests-inflight）**和**非修改类API请求最大并发数 （max-requests-inflight****）**的参数取值以优化配置，操作详情请参见[修改CCE集群配置](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)。 | - 查看特定优先级当前已占用的并发席位数量    ```   apiserver_flowcontrol_current_executing_seats{priority_level=\"system\"}   ``` - 计算席位使用率（当前占用/当前限制）    ```   sum(apiserver_flowcontrol_current_executing_seats) by (priority_level) / sum(apiserver_flowcontrol_current_limit_seats) by (priority_level)   ``` |",
+          "quote": "| apiserver\\_flowcontrol\\_current\\_executing\\_seats | Gauge | 表示某个优先级队列中当前已占用的并发资源量，反映了当前队列中正在消耗的并发资源，可以了解队列的实际负载情况。详情请参见[API优先级和公平性](https://kubernetes.io/zh-cn/docs/concepts/cluster-administration/flow-control/#metrics)。该指标通常使用priority\\_level标签进行分类，标识请求所属的优先级级别（如system、workload-high等）。  如果current\\_executing\\_seats接近current\\_limit\\_seats，表明该队列的并发资源可能即将耗尽。您可以提升集群的**修改类API请求最大并发数 （max-mutating-requests-inflight）**和**非修改类API请求最大并发数 （max-requests-inflight****）**的参数取值以优化配置，操作详情请参见[修改CCE集群配置](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)。 | - 查看特定优先级当前已占用的并发席位数量    ```   apiserver_flowcontrol_current_executing_seats{priority_level=\"system\"}   ``` - 计算席位使用率（当前占用/当前限制）    ```   sum(apiserver_flowcontrol_current_executing_seats) by (priority_level) / sum(apiserver_flowcontrol_current_limit_seats) by (priority_level)   ``` |",
+          "quote_sha256": "223a7dfb11e24e4ab4913ff31d4d7f0117df30104583e75779115bfcf270ed98"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0559:table-001-p07",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-006",
+      "question": "kube-apiserver组件监控指标中，apiserver_flowcontrol_current_executing_seats 是什么类型的指标？它表示什么含义？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 533.7113749992568
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-009",
+      "group": "cce_10_0249",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "在VPC集群（开启DataPlane V2替换kube-proxy）和CCE Turbo集群（开启DataPlane V2替换kube-proxy）中，对于独享型负载均衡类型Service且访问类型为私网，当客户端与服务Pod同节点时，访问情况如何？",
+      "answerable": true,
+      "required_facts": [
+        "无法访问。"
+      ],
+      "reference_answer": "无法访问。",
+      "evidence": [
+        {
+          "document_id": "cce_10_0249",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0249.html",
+          "title": "服务概述",
+          "file": "documents/cce_10_0249.md",
+          "content_sha256": "f267bfb8de16cfa6c6b619613eaaa11be994f5e7c04f58d54a599b6b39a2a030",
+          "start_line": 201,
+          "end_line": 201,
+          "section": "集群内无法访问Service的说明",
+          "anchor": "    | 独享型负载均衡类型Service | 私网 | 与服务Pod同节点 | 无法访问 | 无法访问 |",
+          "quote": "    | 独享型负载均衡类型Service | 私网 | 与服务Pod同节点 | 无法访问 | 无法访问 |",
+          "quote_sha256": "6db7f147a01c7c26726e8ccdaef2a939fde57aa2ffca7c3a33a17060d6293e78"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0249:table-006-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-009",
+      "question": "在VPC集群（开启DataPlane V2替换kube-proxy）和CCE Turbo集群（开启DataPlane V2替换kube-proxy）中，对于独享型负载均衡类型Service且访问类型为私网，当客户端与服务Pod同节点时，访问情况如何？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 599.7642920119688
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-010",
+      "group": "cce_10_0999",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "AI数据加速引擎插件使用示例中，规格配置参数包含哪些信息？示例中的基础版内存规格是多少？",
+      "answerable": true,
+      "required_facts": [
+        "规格配置参数包含产品类型-内存规格、版本号、实例类型等信息。",
+        "示例为基础版-16GB。"
+      ],
+      "reference_answer": "规格配置参数包含产品类型-内存规格、版本号、实例类型等信息。；示例为基础版-16GB。",
+      "evidence": [
+        {
+          "document_id": "cce_10_0999",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0999.html",
+          "title": "AI数据加速引擎插件",
+          "file": "documents/cce_10_0999.md",
+          "content_sha256": "182a1b0baf6e2e96bf3e8ae68e34358b4111072d21707ec6b20ef1b6e3e8f93d",
+          "start_line": 165,
+          "end_line": 165,
+          "section": "使用示例",
+          "anchor": "      | 规格配置 | 基础版-16GB | 包含产品类型-内存规格、版本号、实例类型等信息，请根据需求选择。各规格的具体区别，具体请参见[购买Redis实例](https://support.huaweicloud.com/intl/zh-cn/usermanual-dcs/dcs-ug-0713002.html)。 |",
+          "quote": "      | 规格配置 | 基础版-16GB | 包含产品类型-内存规格、版本号、实例类型等信息，请根据需求选择。各规格的具体区别，具体请参见[购买Redis实例](https://support.huaweicloud.com/intl/zh-cn/usermanual-dcs/dcs-ug-0713002.html)。 |",
+          "quote_sha256": "34b410709da21d254fc1f664eb55c21b395c31528e26e90107701a8a980c84ac"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0999:table-005-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-010",
+      "question": "AI数据加速引擎插件使用示例中，规格配置参数包含哪些信息？示例中的基础版内存规格是多少？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 546.23958398588
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-011",
+      "group": "cce_10_0476",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "对于Huawei Cloud EulerOS 2.0操作系统，集群版本v1.36支持CCE Standard集群的哪些网络模型以及CCE Turbo集群的哪种网络模型？",
+      "answerable": true,
+      "required_facts": [
+        "支持CCE Standard集群的VPC网络模型、容器隧道网络模型",
+        "支持CCE Turbo集群的云原生网络2.0"
+      ],
+      "reference_answer": "支持CCE Standard集群的VPC网络模型、容器隧道网络模型；支持CCE Turbo集群的云原生网络2.0",
+      "evidence": [
+        {
+          "document_id": "cce_10_0476",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0476.html",
+          "title": "节点操作系统说明",
+          "file": "documents/cce_10_0476.md",
+          "content_sha256": "aca6488de6220fa89a8b2b789743942e8b872d2ab6189e5cfb0ca17000563095",
+          "start_line": 31,
+          "end_line": 31,
+          "section": "弹性云服务器-虚拟机",
+          "anchor": "| Huawei Cloud EulerOS 2.0 | v1.36 | √ | √ | √ |",
+          "quote": "| Huawei Cloud EulerOS 2.0 | v1.36 | √ | √ | √ |",
+          "quote_sha256": "489161779ccabc94b42529e66f648e28b6c7d2512537b46f7231335e9db4b712"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0476:table-002-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-011",
+      "question": "对于Huawei Cloud EulerOS 2.0操作系统，集群版本v1.36支持CCE Standard集群的哪些网络模型以及CCE Turbo集群的哪种网络模型？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 567.9161250009201
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-013",
+      "group": "cce_10_0302",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "在Kubernetes社区v1.25版本中，资源Event的废弃API版本是什么？其替代API版本是什么？该替代API从社区哪个版本开始可用？",
+      "answerable": true,
+      "required_facts": [
+        "废弃API版本为events.k8s.io/v1beta1",
+        "替代API版本为events.k8s.io/v1",
+        "该API从社区v1.19版本开始可用"
+      ],
+      "reference_answer": "废弃API版本为events.k8s.io/v1beta1；替代API版本为events.k8s.io/v1；该API从社区v1.19版本开始可用",
+      "evidence": [
+        {
+          "document_id": "cce_10_0302",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0302.html",
+          "title": "升级前须知",
+          "file": "documents/cce_10_0302.md",
+          "content_sha256": "de7620d51fa4714bb39670fc854d69787f1b962e3ef239da7a72fe190878ebd4",
+          "start_line": 154,
+          "end_line": 154,
+          "section": "废弃API说明",
+          "anchor": "| Event | events.k8s.io/v1beta1 | events.k8s.io/v1  （该API从社区v1.19版本开始可用） | 此次更新需注意以下变更：   - **type** 字段只能设置为 **Normal** 和 **Warning** 之一。 - **involvedObject** 字段被更名为 **regarding**。 - **action**、**reason**、**reportingController** 和 **reportingInstance** 字段 在创建新的 **events.k8s.io/v1** 版本 Event 时都是必需的字段。 - 使用 **eventTime** 而不是已被弃用的 **firstTimestamp** 字段 （该字段已被更名为 **deprecatedFirstTimestamp**，且不允许出现在新的 **events.k8s.io/v1** Event 对象中）。 - 使用 **series.lastObservedTime** 而不是已被弃用的 **lastTimestamp** 字段 （该字段已被更名为 **deprecatedLastTimestamp**，且不允许出现在新的 **events.k8s.io/v1** Event 对象中）。 - 使用 **series.count** 而不是已被弃用的 **count** 字段 （该字段已被更名为 **deprecatedCount**，且不允许出现在新的 **events.k8s.io/v1** Event 对象中）。 - 使用 **reportingController** 而不是已被弃用的 **source.component** 字段 （该字段已被更名为 **deprecatedSource.component**，且不允许出现在新的 **events.k8s.io/v1** Event 对象中）。 - 使用 **reportingInstance** 而不是已被弃用的 **source.host** 字段 （该字段已被更名为 **deprecatedSource.host**，且不允许出现在新的 **events.k8s.io/v1** Event 对象中）。 |",
+          "quote": "| Event | events.k8s.io/v1beta1 | events.k8s.io/v1  （该API从社区v1.19版本开始可用） | 此次更新需注意以下变更：   - **type** 字段只能设置为 **Normal** 和 **Warning** 之一。 - **involvedObject** 字段被更名为 **regarding**。 - **action**、**reason**、**reportingController** 和 **reportingInstance** 字段 在创建新的 **events.k8s.io/v1** 版本 Event 时都是必需的字段。 - 使用 **eventTime** 而不是已被弃用的 **firstTimestamp** 字段 （该字段已被更名为 **deprecatedFirstTimestamp**，且不允许出现在新的 **events.k8s.io/v1** Event 对象中）。 - 使用 **series.lastObservedTime** 而不是已被弃用的 **lastTimestamp** 字段 （该字段已被更名为 **deprecatedLastTimestamp**，且不允许出现在新的 **events.k8s.io/v1** Event 对象中）。 - 使用 **series.count** 而不是已被弃用的 **count** 字段 （该字段已被更名为 **deprecatedCount**，且不允许出现在新的 **events.k8s.io/v1** Event 对象中）。 - 使用 **reportingController** 而不是已被弃用的 **source.component** 字段 （该字段已被更名为 **deprecatedSource.component**，且不允许出现在新的 **events.k8s.io/v1** Event 对象中）。 - 使用 **reportingInstance** 而不是已被弃用的 **source.host** 字段 （该字段已被更名为 **deprecatedSource.host**，且不允许出现在新的 **events.k8s.io/v1** Event 对象中）。 |",
+          "quote_sha256": "793a1fe5ba3e86dcfae10ecd987053e552954f65fe570ff57e5784ec22861bf3"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0302:table-009-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-013",
+      "question": "在Kubernetes社区v1.25版本中，资源Event的废弃API版本是什么？其替代API版本是什么？该替代API从社区哪个版本开始可用？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 568.1347080098931
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-014",
+      "group": "cce_10_0025",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "在云审计服务支持的CCE操作列表中，操作名称为“查询指定分区”时，其资源维度和对应的事件名称分别是什么？",
+      "answerable": true,
+      "required_facts": [
+        "资源维度为“集群”",
+        "对应的事件名称为“GetOnePartition”"
+      ],
+      "reference_answer": "资源维度为“集群”；对应的事件名称为“GetOnePartition”",
+      "evidence": [
+        {
+          "document_id": "cce_10_0025",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0025.html",
+          "title": "云审计服务支持的CCE操作列表",
+          "file": "documents/cce_10_0025.md",
+          "content_sha256": "2dde9e3979fa591acfe0e0d221bcf5aa11f835b41cc80ec9fdb8a090d962d722",
+          "start_line": 216,
+          "end_line": 216,
+          "section": "云审计服务支持的CCE操作列表",
+          "anchor": "| 查询指定分区 | 集群 | GetOnePartition |",
+          "quote": "| 查询指定分区 | 集群 | GetOnePartition |",
+          "quote_sha256": "9906152f03fcd3465ff45a3304c30602fe68e38753391b84e3f4bb97b0f47de3"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0025:table-001-p23",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-014",
+      "question": "在云审计服务支持的CCE操作列表中，操作名称为“查询指定分区”时，其资源维度和对应的事件名称分别是什么？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 538.2233330165036
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-015",
+      "group": "cce_10_0460",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "在K8s节点污点检查异常处理中，检查节点上是否存在集群升级需要使用到的污点，该污点的名称和污点影响分别是什么？",
+      "answerable": true,
+      "required_facts": [
+        "污点名称为node.kubernetes.io/upgrade",
+        "污点影响为NoSchedule"
+      ],
+      "reference_answer": "污点名称为node.kubernetes.io/upgrade；污点影响为NoSchedule",
+      "evidence": [
+        {
+          "document_id": "cce_10_0460",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0460.html",
+          "title": "K8s节点污点检查异常处理",
+          "file": "documents/cce_10_0460.md",
+          "content_sha256": "fbff46c2ec03db8d0bc2f8a3af9508e6aaec1663e41d4fde5d4cb9793a3d42a8",
+          "start_line": 15,
+          "end_line": 15,
+          "section": "检查项内容",
+          "anchor": "| node.kubernetes.io/upgrade | NoSchedule |",
+          "quote": "| node.kubernetes.io/upgrade | NoSchedule |",
+          "quote_sha256": "f16acc2d3b5d347cb1974703e3716cc11bc1c30433b947ff14da1fa26794c372"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0460:table-001-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-015",
+      "question": "在K8s节点污点检查异常处理中，检查节点上是否存在集群升级需要使用到的污点，该污点的名称和污点影响分别是什么？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 627.2047910024412
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-016",
+      "group": "cce_10_0370",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "在CCE密钥管理（对接DEW）的基础挂载配置中，objects参数下的objectName参数是什么类型？是否为必选参数？它表示什么？",
+      "answerable": true,
+      "required_facts": [
+        "objectName参数为String类型",
+        "是必选参数",
+        "表示凭据名称，需填写ServiceAccount中引用的凭据"
+      ],
+      "reference_answer": "objectName参数为String类型；是必选参数；表示凭据名称，需填写ServiceAccount中引用的凭据",
+      "evidence": [
+        {
+          "document_id": "cce_10_0370",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0370.html",
+          "title": "CCE密钥管理（对接 DEW）",
+          "file": "documents/cce_10_0370.md",
+          "content_sha256": "0989ab94a8189dbd7f49e8400717f047695992817a463610f53351dd14a2b385",
+          "start_line": 633,
+          "end_line": 633,
+          "section": "基础挂载",
+          "anchor": "      | objectName | String | 是 | 凭据名称，需填写ServiceAccount中引用的凭据。若同一个SecretProviderClass中定义了多个objectName，不允许重名，否则会挂载失败。 |",
+          "quote": "      | objectName | String | 是 | 凭据名称，需填写ServiceAccount中引用的凭据。若同一个SecretProviderClass中定义了多个objectName，不允许重名，否则会挂载失败。 |",
+          "quote_sha256": "161e9fd5ed240039b5e8de354feeb17317be7dc15d82aea94e01addf09ad2bc6"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0370:table-005-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-016",
+      "question": "在CCE密钥管理（对接DEW）的基础挂载配置中，objects参数下的objectName参数是什么类型？是否为必选参数？它表示什么？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 659.6466249902733
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-017",
+      "group": "cce_10_0150",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "在创建普通任务（Job）时，初始化容器（可选）参数用于选择容器是否作为初始化（Init）容器，初始化（Init）容器是否支持设置健康检查？",
+      "answerable": true,
+      "required_facts": [
+        "初始化（Init）容器不支持设置健康检查"
+      ],
+      "reference_answer": "初始化（Init）容器不支持设置健康检查",
+      "evidence": [
+        {
+          "document_id": "cce_10_0150",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0150.html",
+          "title": "创建普通任务（Job）",
+          "file": "documents/cce_10_0150.md",
+          "content_sha256": "d281f1b7773ad63487f5ce8529c0cd84ee5cd7d13bb0ba6b108d1a3c189fb1f3",
+          "start_line": 58,
+          "end_line": 58,
+          "section": "创建普通任务",
+          "anchor": "       | 初始化容器（可选） | 选择容器是否作为初始化（Init）容器。初始化（Init）容器不支持设置健康检查。  Init容器是一种特殊容器，可以在Pod中的其他应用容器启动之前运行。每个Pod中可以包含多个容器，同时Pod中也可以有一个或多个先于应用容器启动的Init容器，当所有的Init 容器运行完成时，Pod中的应用容器才会启动并运行。详细说明请参见[Init 容器](https://kubernetes.io/zh/docs/concepts/workloads/pods/init-containers/)。 |",
+          "quote": "       | 初始化容器（可选） | 选择容器是否作为初始化（Init）容器。初始化（Init）容器不支持设置健康检查。  Init容器是一种特殊容器，可以在Pod中的其他应用容器启动之前运行。每个Pod中可以包含多个容器，同时Pod中也可以有一个或多个先于应用容器启动的Init容器，当所有的Init 容器运行完成时，Pod中的应用容器才会启动并运行。详细说明请参见[Init 容器](https://kubernetes.io/zh/docs/concepts/workloads/pods/init-containers/)。 |",
+          "quote_sha256": "caa34905cfb6ef6bb5b1b458f3b13a285c34a5c82979ff487e7b73191490d699"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0150:table-002-p03",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-017",
+      "question": "在创建普通任务（Job）时，初始化容器（可选）参数用于选择容器是否作为初始化（Init）容器，初始化（Init）容器是否支持设置健康检查？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 568.7825409986544
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-018",
+      "group": "cce_10_0635",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "在CCE有状态负载中动态挂载本地持久卷时，填写挂载路径的“权限”参数，只读和读写分别有什么含义？",
+      "answerable": true,
+      "required_facts": [
+        "只读：只能读容器路径中的数据卷",
+        "读写：可修改容器路径中的数据卷，容器迁移时新写入的数据不会随之迁移，会造成数据丢失"
+      ],
+      "reference_answer": "只读：只能读容器路径中的数据卷；读写：可修改容器路径中的数据卷，容器迁移时新写入的数据不会随之迁移，会造成数据丢失",
+      "evidence": [
+        {
+          "document_id": "cce_10_0635",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0635.html",
+          "title": "在有状态负载中动态挂载本地持久卷",
+          "file": "documents/cce_10_0635.md",
+          "content_sha256": "77f1ef21cf2598f51a3e187e673cae11311264550f6bcf420bb7f7740c9e19a8",
+          "start_line": 53,
+          "end_line": 53,
+          "section": "动态挂载本地持久卷",
+          "anchor": "   | 权限 | - 只读：只能读容器路径中的数据卷。 - 读写：可修改容器路径中的数据卷，容器迁移时新写入的数据不会随之迁移，会造成数据丢失。 |",
+          "quote": "   | 权限 | - 只读：只能读容器路径中的数据卷。 - 读写：可修改容器路径中的数据卷，容器迁移时新写入的数据不会随之迁移，会造成数据丢失。 |",
+          "quote_sha256": "db19af492c251984f99dfcb769444efabc4f63b86b58ba5f9bb53677f7719ffa"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0635:table-002-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-018",
+      "question": "在CCE有状态负载中动态挂载本地持久卷时，填写挂载路径的“权限”参数，只读和读写分别有什么含义？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 555.2333749947138
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-data-021",
+      "group": "cce_10_1155",
+      "category": "TABLE_DATA",
+      "question_type": "table_data",
+      "question": "Envoy Gateway插件版本记录表中，插件版本1.0.35对应的社区版本是什么？",
+      "answerable": true,
+      "required_facts": [
+        "插件版本1.0.35对应社区版本1.7.4"
+      ],
+      "reference_answer": "插件版本1.0.35对应社区版本1.7.4",
+      "evidence": [
+        {
+          "document_id": "cce_10_1155",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1155.html",
+          "title": "Envoy Gateway",
+          "file": "documents/cce_10_1155.md",
+          "content_sha256": "40a6665ea2f738ee1ee0b33a1906f6f80b44cb385d2a4f57e09661b6bf7c9151",
+          "start_line": 158,
+          "end_line": 159,
+          "section": "版本记录",
+          "anchor": "| 1.0.35 | v1.30  v1.31  v1.32  v1.33  v1.34  v1.35 | 升级Envoy Gateway版本为v1.7.4 | [1.7.4](https://github.com/envoyproxy/gateway/releases/tag/v1.7.4) |\n| 1.0.9 | v1.30  v1.31  v1.32  v1.33  v1.34  v1.35 | 新增Envoy Gateway插件 | [1.7.2](https://github.com/envoyproxy/gateway/releases/tag/v1.7.2) |",
+          "quote": "| 1.0.35 | v1.30  v1.31  v1.32  v1.33  v1.34  v1.35 | 升级Envoy Gateway版本为v1.7.4 | [1.7.4](https://github.com/envoyproxy/gateway/releases/tag/v1.7.4) |\n| 1.0.9 | v1.30  v1.31  v1.32  v1.33  v1.34  v1.35 | 新增Envoy Gateway插件 | [1.7.2](https://github.com/envoyproxy/gateway/releases/tag/v1.7.2) |",
+          "quote_sha256": "e80973d4e1d7ea0fecd8affda92b22e5b4c31cb729fff2ace0e06fb5568c2ffe"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_1155:table-004-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-data-021",
+      "question": "Envoy Gateway插件版本记录表中，插件版本1.0.35对应的社区版本是什么？",
+      "answerable": true,
+      "question_type": "table_data",
+      "category": "TABLE_DATA",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 696.9868339947425
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-data-023",
+      "group": "cce_10_0719",
+      "category": "TABLE_DATA",
+      "question_type": "table_data",
+      "question": "aC8型弹性云服务器规格表中，ac8.12xlarge.4规格的vCPU和内存分别是多少？",
+      "answerable": true,
+      "required_facts": [
+        "ac8.12xlarge.4的vCPU为48核",
+        "内存为192 GiB"
+      ],
+      "reference_answer": "ac8.12xlarge.4的vCPU为48核；内存为192 GiB",
+      "evidence": [
+        {
+          "document_id": "cce_10_0719",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0719.html",
+          "title": "节点规格说明",
+          "file": "documents/cce_10_0719.md",
+          "content_sha256": "504183f45a8fd8eba74f0943d325cdaba90736652ffc6b635cc83d6fe8d38597",
+          "start_line": 125,
+          "end_line": 130,
+          "section": "通用计算增强型",
+          "anchor": "| ac8.large.4 | 2 | 8 | 20/2 | 90 | 75 | 2 | 3 | 8 | 6/0.3 | 5 | 24 | 基于QingTian架构的自研极简虚拟化 |\n| ac8.xlarge.4 | 4 | 16 | 20/3 | 100 | 150 | 4 | 3 | 16 | 6/0.5 | 5 | 24 |\n| ac8.2xlarge.4 | 8 | 32 | 20/5 | 160 | 200 | 8 | 3 | 32 | 6/1.1 | 5 | 24 |\n| ac8.4xlarge.4 | 16 | 64 | 30/8 | 200 | 300 | 16 | 4 | 64 | 6/2.1 | 5 | 24 |\n| ac8.8xlarge.4 | 32 | 128 | 40/12 | 350 | 400 | 32 | 4 | 128 | 6/4.3 | 5 | 60 |\n| ac8.12xlarge.4 | 48 | 192 | 50/18 | 500 | 500 | 48 | 4 | 256 | 8/6.4 | 7 | 60 |",
+          "quote": "| ac8.large.4 | 2 | 8 | 20/2 | 90 | 75 | 2 | 3 | 8 | 6/0.3 | 5 | 24 | 基于QingTian架构的自研极简虚拟化 |\n| ac8.xlarge.4 | 4 | 16 | 20/3 | 100 | 150 | 4 | 3 | 16 | 6/0.5 | 5 | 24 |\n| ac8.2xlarge.4 | 8 | 32 | 20/5 | 160 | 200 | 8 | 3 | 32 | 6/1.1 | 5 | 24 |\n| ac8.4xlarge.4 | 16 | 64 | 30/8 | 200 | 300 | 16 | 4 | 64 | 6/2.1 | 5 | 24 |\n| ac8.8xlarge.4 | 32 | 128 | 40/12 | 350 | 400 | 32 | 4 | 128 | 6/4.3 | 5 | 60 |\n| ac8.12xlarge.4 | 48 | 192 | 50/18 | 500 | 500 | 48 | 4 | 256 | 8/6.4 | 7 | 60 |",
+          "quote_sha256": "f299e68c5fba688802bcb3d45587dfd53eeb91eec7b7a8d08ec494d2433c3bb7"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0719:table-006-p02",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-data-023",
+      "question": "aC8型弹性云服务器规格表中，ac8.12xlarge.4规格的vCPU和内存分别是多少？",
+      "answerable": true,
+      "question_type": "table_data",
+      "category": "TABLE_DATA",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 584.4537499942817
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-data-024",
+      "group": "cce_10_11521",
+      "category": "TABLE_DATA",
+      "question_type": "table_data",
+      "question": "Volcano队列资源规划表中，queue-team-b的初始任务请求在CPU、内存和GPU维度分别是多少？",
+      "answerable": true,
+      "required_facts": [
+        "queue-team-b初始任务请求为2 CPU、4 GiB、1 GPU"
+      ],
+      "reference_answer": "queue-team-b初始任务请求为2 CPU、4 GiB、1 GPU",
+      "evidence": [
+        {
+          "document_id": "cce_10_11521",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11521.html",
+          "title": "Volcano队列",
+          "file": "documents/cce_10_11521.md",
+          "content_sha256": "35381b2c87f94416f40ec60f406303be2a85e00efc737de747d113a1b0f7fc99",
+          "start_line": 174,
+          "end_line": 175,
+          "section": "资源规划",
+          "anchor": "| queue-team-a | 2 CPU、4 GiB、1 GPU | 2 CPU、4 GiB、1 GPU | 1 CPU、2 GiB、1 GPU | 1 CPU、2 GiB、0 GPU |\n| queue-team-b | 4 CPU、8 GiB、2 GPU | 4 CPU、8 GiB、2 GPU | 2 CPU、4 GiB、1 GPU | 2 CPU、4 GiB、1 GPU |",
+          "quote": "| queue-team-a | 2 CPU、4 GiB、1 GPU | 2 CPU、4 GiB、1 GPU | 1 CPU、2 GiB、1 GPU | 1 CPU、2 GiB、0 GPU |\n| queue-team-b | 4 CPU、8 GiB、2 GPU | 4 CPU、8 GiB、2 GPU | 2 CPU、4 GiB、1 GPU | 2 CPU、4 GiB、1 GPU |",
+          "quote_sha256": "6948a314001d155b2a0e7281ada24fd83147d2dbdefc9f67be3bef97a151a2f9"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_11521:table-005-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-data-024",
+      "question": "Volcano队列资源规划表中，queue-team-b的初始任务请求在CPU、内存和GPU维度分别是多少？",
+      "answerable": true,
+      "question_type": "table_data",
+      "category": "TABLE_DATA",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 612.5468749960419
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-data-025",
+      "group": "cce_10_1162",
+      "category": "TABLE_DATA",
+      "question_type": "table_data",
+      "question": "Velero插件大规模场景内存建议表中，当集群资源数量为200000时，建议的内存申请值和限制值分别是多少？",
+      "answerable": true,
+      "required_facts": [
+        "集群资源数量为200000时建议内存申请值为4000Mi",
+        "建议内存限制值为16000Mi"
+      ],
+      "reference_answer": "集群资源数量为200000时建议内存申请值为4000Mi；建议内存限制值为16000Mi",
+      "evidence": [
+        {
+          "document_id": "cce_10_1162",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1162.html",
+          "title": "Velero",
+          "file": "documents/cce_10_1162.md",
+          "content_sha256": "b9d2d1265dcb48fc5c76e3027e5a81a396b984291cc3f3adefbf69f42ab0a0ae",
+          "start_line": 55,
+          "end_line": 59,
+          "section": "安装插件",
+          "anchor": "     | 10000 | 125m | 500m | 200Mi | 800Mi |\n     | 20000 | 250m | 1000m | 500Mi | 2000Mi |\n     | 50000 | 500m | 2000m | 1000Mi | 4000Mi |\n     | 100000 | 1000m | 4000m | 2000Mi | 8000Mi |\n     | 200000 | 2000m | 8000m | 4000Mi | 16000Mi |",
+          "quote": "     | 10000 | 125m | 500m | 200Mi | 800Mi |\n     | 20000 | 250m | 1000m | 500Mi | 2000Mi |\n     | 50000 | 500m | 2000m | 1000Mi | 4000Mi |\n     | 100000 | 1000m | 4000m | 2000Mi | 8000Mi |\n     | 200000 | 2000m | 8000m | 4000Mi | 16000Mi |",
+          "quote_sha256": "1d9439b29c854a28b18e70e8a2ef1b1d1ad01be6c9aaf8272bc37c79afcbac34"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_1162:table-001-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-data-025",
+      "question": "Velero插件大规模场景内存建议表中，当集群资源数量为200000时，建议的内存申请值和限制值分别是多少？",
+      "answerable": true,
+      "question_type": "table_data",
+      "category": "TABLE_DATA",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 542.1849169943016
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-data-026",
+      "group": "cce_10_0287",
+      "category": "TABLE_DATA",
+      "question_type": "table_data",
+      "question": "默认资源配额表中，对于1000节点集群，Pod和Deployment的配额分别是多少？",
+      "answerable": true,
+      "required_facts": [
+        "1000节点集群Pod配额为5000",
+        "Deployment配额为2000"
+      ],
+      "reference_answer": "1000节点集群Pod配额为5000；Deployment配额为2000",
+      "evidence": [
+        {
+          "document_id": "cce_10_0287",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0287.html",
+          "title": "设置资源配额及限制",
+          "file": "documents/cce_10_0287.md",
+          "content_sha256": "3a8cedbdae4fc153a055ed08c87e3b9f97137d64ff83dde23e65fc988a4917da",
+          "start_line": 15,
+          "end_line": 18,
+          "section": "设置资源配额及限制",
+          "anchor": "| 50节点 | 2000 | 1000 | 1000 | 1000 | 1000 |\n| 200节点 | 2000 | 1000 | 1000 | 1000 | 1000 |\n| 1000节点 | 5000 | 2000 | 2000 | 2000 | 2000 |\n| 2000节点 | 5000 | 2000 | 2000 | 2000 | 2000 |",
+          "quote": "| 50节点 | 2000 | 1000 | 1000 | 1000 | 1000 |\n| 200节点 | 2000 | 1000 | 1000 | 1000 | 1000 |\n| 1000节点 | 5000 | 2000 | 2000 | 2000 | 2000 |\n| 2000节点 | 5000 | 2000 | 2000 | 2000 | 2000 |",
+          "quote_sha256": "d5fefaa2c721761a0d47c86bf395112fe649b571945523bfd7131cd8fb286415"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0287:table-001-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-data-026",
+      "question": "默认资源配额表中，对于1000节点集群，Pod和Deployment的配额分别是多少？",
+      "answerable": true,
+      "question_type": "table_data",
+      "category": "TABLE_DATA",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 566.0233749949839
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-data-028",
+      "group": "cce_10_0628",
+      "category": "TABLE_DATA",
+      "question_type": "table_data",
+      "question": "对象存储常驻进程内存消耗表中，4并发写10M文件时的内存消耗约为多少？",
+      "answerable": true,
+      "required_facts": [
+        "4并发写10M文件时内存消耗约为220m"
+      ],
+      "reference_answer": "4并发写10M文件时内存消耗约为220m",
+      "evidence": [
+        {
+          "document_id": "cce_10_0628",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0628.html",
+          "title": "对象存储概述",
+          "file": "documents/cce_10_0628.md",
+          "content_sha256": "b5e19243544e516905328d3685b1757709a3e071c75d87f7c580d4d1d008c4d2",
+          "start_line": 36,
+          "end_line": 39,
+          "section": "性能说明",
+          "anchor": "| 长稳运行 | 约50m |\n| 2并发写10M文件 | 约110m |\n| 4并发写10M文件 | 约220m |\n| 单写100G文件 | 约300m |",
+          "quote": "| 长稳运行 | 约50m |\n| 2并发写10M文件 | 约110m |\n| 4并发写10M文件 | 约220m |\n| 单写100G文件 | 约300m |",
+          "quote_sha256": "f3f4bce5a522b04c7ab6a1f983a8192f16af7e9bb0e417d0474f7e0c511d149b"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0628:table-001-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-data-028",
+      "question": "对象存储常驻进程内存消耗表中，4并发写10M文件时的内存消耗约为多少？",
+      "answerable": true,
+      "question_type": "table_data",
+      "category": "TABLE_DATA",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 540.4332920152228
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-table-data-029",
+      "group": "cce_10_0700",
+      "category": "TABLE_DATA",
+      "question_type": "table_data",
+      "question": "CPU Burst性能对比表中，开启CPU Burst时p99时延和nr_bursts突破limit值次数分别是多少？",
+      "answerable": true,
+      "required_facts": [
+        "开启CPU Burst时p99时延为456us",
+        "nr_bursts突破limit值次数为469"
+      ],
+      "reference_answer": "开启CPU Burst时p99时延为456us；nr_bursts突破limit值次数为469",
+      "evidence": [
+        {
+          "document_id": "cce_10_0700",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0700.html",
+          "title": "CPU Burst弹性限流",
+          "file": "documents/cce_10_0700.md",
+          "content_sha256": "30288f8323015ef2f01f7ab406e3a1ee29cc8d73c59962457a48a6388702ab2a",
+          "start_line": 130,
+          "end_line": 131,
+          "section": "操作步骤",
+          "anchor": "      | 未开启CPU Burst | 2.96ms | 986 | 14.3s | 0 | 0 |\n      | 开启CPU Burst | 456us | 0 | 0 | 469 | 3.7s |",
+          "quote": "      | 未开启CPU Burst | 2.96ms | 986 | 14.3s | 0 | 0 |\n      | 开启CPU Burst | 456us | 0 | 0 | 469 | 3.7s |",
+          "quote_sha256": "192f19ef5714fc35c9403cd4e45cb64426fc16aaf39b1c73b68c9905ec240886"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0700:table-002-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-data-029",
+      "question": "CPU Burst性能对比表中，开启CPU Burst时p99时延和nr_bursts突破limit值次数分别是多少？",
+      "answerable": true,
+      "question_type": "table_data",
+      "category": "TABLE_DATA",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 613.0807909939904
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-031",
+      "group": "cce_10_1160",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "在“立即恢复”页面中，哪个表单字段的下方说明文字提到支持通配符如 app-*？",
+      "answerable": true,
+      "required_facts": [
+        "恢复命名空间字段的下方说明文字提到支持通配符如 app-*。"
+      ],
+      "reference_answer": "恢复命名空间字段的下方说明文字提到支持通配符如 app-*。",
+      "evidence": [
+        {
+          "document_id": "cce_10_1160",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1160.html",
+          "title": "集群内备份和恢复应用",
+          "file": "documents/cce_10_1160.md",
+          "content_sha256": "209c64fc4d1fb428edd6ca6c5ea45dad6684a0988e50dbec55bc9afdc89c4ff3",
+          "start_line": 111,
+          "end_line": 111,
+          "section": "立即恢复",
+          "anchor": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002588927280.png \"点击放大\")",
+          "quote": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002588927280.png \"点击放大\")",
+          "quote_sha256": "58689f68d72dd4a920d1d6d52a0e4de75d28fe3fbcbe437d8e10d655d0468748"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_1160:image-004",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-031",
+      "question": "在“立即恢复”页面中，哪个表单字段的下方说明文字提到支持通配符如 app-*？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 547.4956670077518
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-032",
+      "group": "cce_10_0842",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "在“负载监听器配置”表单的“更多配置”区域中，安全策略下拉框当前选中的具体策略名称是什么？",
+      "answerable": true,
+      "required_facts": [
+        "安全策略下拉框选择“安全策略 tls-1-2”。"
+      ],
+      "reference_answer": "安全策略下拉框选择“安全策略 tls-1-2”。",
+      "evidence": [
+        {
+          "document_id": "cce_10_0842",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0842.html",
+          "title": "为负载均衡类型的Service配置HTTP/2",
+          "file": "documents/cce_10_0842.md",
+          "content_sha256": "2b810d8491938d7952265dfabcdb6cb503afadc71a5ffad2e082aa44c80706b5",
+          "start_line": 95,
+          "end_line": 95,
+          "section": "步骤二：创建负载均衡并配置HTTP/2",
+          "anchor": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002408397125.png \"点击放大\")",
+          "quote": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002408397125.png \"点击放大\")",
+          "quote_sha256": "f15d0c22e492c2148f8429e12cc46db5458e9d10d393246ad8e3803ebf3a9f12"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0842:image-005",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-032",
+      "question": "在“负载监听器配置”表单的“更多配置”区域中，安全策略下拉框当前选中的具体策略名称是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 687.3826249793638
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-033",
+      "group": "cce_10_1066",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "在子网可用IP余量监控原理图中，标注“3.指标聚合”的箭头连接了哪些AOM框内的实例？",
+      "answerable": true,
+      "required_facts": [
+        "实例A和实例B通过向上箭头指向实例C",
+        "标注为“3.指标聚合”"
+      ],
+      "reference_answer": "实例A和实例B通过向上箭头指向实例C；标注为“3.指标聚合”",
+      "evidence": [
+        {
+          "document_id": "cce_10_1066",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1066.html",
+          "title": "集群关联子网可用IP余量监控及告警配置",
+          "file": "documents/cce_10_1066.md",
+          "content_sha256": "82192f59664ab691478ea71a47c8d4811692a4f972a1876cbe55a9962808c8ef",
+          "start_line": 14,
+          "end_line": 14,
+          "section": "方案原理",
+          "anchor": " ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002414703808.png \"点击放大\")",
+          "quote": " ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002414703808.png \"点击放大\")",
+          "quote_sha256": "38f2590e7a11a7b5242a04eecf9f6cd382097428e140acc9d12c108e200e29b5"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_1066:image-001",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-033",
+      "question": "在子网可用IP余量监控原理图中，标注“3.指标聚合”的箭头连接了哪些AOM框内的实例？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 558.6016250017565
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-036",
+      "group": "cce_10_1063",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "在标题为“Hubble”的Grafana看板截图中，“Top 10 Port Distribution”折线图图例里显示的5443/TCP端口速率是多少？",
+      "answerable": true,
+      "required_facts": [
+        "5443/TCP 4.64 p/s"
+      ],
+      "reference_answer": "5443/TCP 4.64 p/s",
+      "evidence": [
+        {
+          "document_id": "cce_10_1063",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1063.html",
+          "title": "部署Hubble实现DataPlane V2网络可观测性",
+          "file": "documents/cce_10_1063.md",
+          "content_sha256": "ff58affc6307f606a60ad5b5826fb70a561016ef0e04ad5e8224e1d391ea4ae0",
+          "start_line": 531,
+          "end_line": 531,
+          "section": "步骤六：配置Hubble指标看板",
+          "anchor": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002424303849.png \"点击放大\")",
+          "quote": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002424303849.png \"点击放大\")",
+          "quote_sha256": "5f6ba0899bb2ecdb8fd610676c77a3f88be206154d4aa2d0c27f916f5569a3dd"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_1063:image-004",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-036",
+      "question": "在标题为“Hubble”的Grafana看板截图中，“Top 10 Port Distribution”折线图图例里显示的5443/TCP端口速率是多少？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 547.0534579944797
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-037",
+      "group": "cce_10_11252",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "在“从 DryRun 到 Execute：先评估计划，再执行受控迁移”流程图中，第③步“执行与验证”的流程箭头依次经过哪些环节？",
+      "answerable": true,
+      "required_facts": [
+        "Eviction → 重建 Pod → nominatedNodeName → Scheduler 实际绑定",
+        "status.result 记录实际收益",
+        "status.relocations 记录逐 Pod 过程"
+      ],
+      "reference_answer": "Eviction → 重建 Pod → nominatedNodeName → Scheduler 实际绑定；status.result 记录实际收益；status.relocations 记录逐 Pod 过程",
+      "evidence": [
+        {
+          "document_id": "cce_10_11252",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11252.html",
+          "title": "Volcano异构资源碎片整理",
+          "file": "documents/cce_10_11252.md",
+          "content_sha256": "1aa7f8bfa9a604830265f1a354e95434a52fd61cb22fd880530a769512a806ac",
+          "start_line": 66,
+          "end_line": 66,
+          "section": "能力概述",
+          "anchor": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002666617422.png \"点击放大\")",
+          "quote": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002666617422.png \"点击放大\")",
+          "quote_sha256": "7afb36291aeaceecf8aa29a7577a9e72d4f3a9f3eb08a30c25f4e3833a1e1830"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_11252:image-001",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-037",
+      "question": "在“从 DryRun 到 Execute：先评估计划，再执行受控迁移”流程图中，第③步“执行与验证”的流程箭头依次经过哪些环节？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 737.9437920171767
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-038",
+      "group": "cce_10_0831",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "在“负载均衡配置”界面中，“负载均衡器”下哪个按钮处于蓝色选中状态？",
+      "answerable": true,
+      "required_facts": [
+        "“选择已有”按钮处于蓝色选中状态。"
+      ],
+      "reference_answer": "“选择已有”按钮处于蓝色选中状态。",
+      "evidence": [
+        {
+          "document_id": "cce_10_0831",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0831.html",
+          "title": "为负载均衡类型的Service配置黑名单/白名单访问策略",
+          "file": "documents/cce_10_0831.md",
+          "content_sha256": "9a9e95880e4bb13fa1dfcadff1364cfedb3a97e65006ea0321fb1bed3b51a9f2",
+          "start_line": 53,
+          "end_line": 53,
+          "section": "创建负载均衡并配置黑名单/白名单访问策略",
+          "anchor": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002380728432.png \"点击放大\")",
+          "quote": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002380728432.png \"点击放大\")",
+          "quote_sha256": "9e00fa133f7336df87b2053089f99ef8078b5099fc15c06a63b6082dc3af47e2"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0831:image-003",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-038",
+      "question": "在“负载均衡配置”界面中，“负载均衡器”下哪个按钮处于蓝色选中状态？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 567.8141250100452
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-040",
+      "group": "cce_10_0395",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "日志查看界面中，当前选中的时间范围按钮是哪个，其右侧紧邻的按钮名称是什么？",
+      "answerable": true,
+      "required_facts": [
+        "当前选中的时间范围按钮是“近1小时”（蓝色高亮）",
+        "其右侧紧邻的按钮是“高级搜索”下拉按钮"
+      ],
+      "reference_answer": "当前选中的时间范围按钮是“近1小时”（蓝色高亮）；其右侧紧邻的按钮是“高级搜索”下拉按钮",
+      "evidence": [
+        {
+          "document_id": "cce_10_0395",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0395.html",
+          "title": "CCE集群备份恢复（停止维护）",
+          "file": "documents/cce_10_0395.md",
+          "content_sha256": "d1fdccb5a2298bd161ebb4d6218d7791bfe6d53dfe091d3a87f70440058f2281",
+          "start_line": 116,
+          "end_line": 116,
+          "section": "创建存储库",
+          "anchor": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001284319493.png \"点击放大\")",
+          "quote": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001284319493.png \"点击放大\")",
+          "quote_sha256": "14cd4d2b4d5f588dc1c47813a99792c3fff65052f4a070c41f513126fad8dab6"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0395:image-001",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-040",
+      "question": "日志查看界面中，当前选中的时间范围按钮是哪个，其右侧紧邻的按钮名称是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 530.7148749998305
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-041",
+      "group": "cce_10_0843",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "在“负载均衡配置”区域中，下拉框当前显示的负载均衡实例名称是什么？",
+      "answerable": true,
+      "required_facts": [
+        "cie-test"
+      ],
+      "reference_answer": "cie-test",
+      "evidence": [
+        {
+          "document_id": "cce_10_0843",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0843.html",
+          "title": "为负载均衡类型的Service配置TLS",
+          "file": "documents/cce_10_0843.md",
+          "content_sha256": "d40e842c2f17a609c1319a4cfa7ac83774df31a3520eeb0deecbe17c29af8150",
+          "start_line": 54,
+          "end_line": 54,
+          "section": "创建负载均衡并配置TLS",
+          "anchor": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002380836822.png \"点击放大\")",
+          "quote": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002380836822.png \"点击放大\")",
+          "quote_sha256": "7a44cc4318320a31cf4e5adb0c675ff2e352b0163f7fc532d970e0251f162e23"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0843:image-003",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-041",
+      "question": "在“负载均衡配置”区域中，下拉框当前显示的负载均衡实例名称是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 556.6417499794625
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-043",
+      "group": "cce_10_0113",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "环境变量配置表格中，第5行“资源引用”类型对应的变量名称是什么？",
+      "answerable": true,
+      "required_facts": [
+        "key4"
+      ],
+      "reference_answer": "key4",
+      "evidence": [
+        {
+          "document_id": "cce_10_0113",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0113.html",
+          "title": "设置环境变量",
+          "file": "documents/cce_10_0113.md",
+          "content_sha256": "d05372ff78470fd61cab55b1068da2f97e559472cf13ab724e33190649b5081b",
+          "start_line": 32,
+          "end_line": 32,
+          "section": "添加环境变量",
+          "anchor": "    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001868021626.png \"点击放大\")",
+          "quote": "    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001868021626.png \"点击放大\")",
+          "quote_sha256": "5e1afd1d4788a00e12c8f1078c1914d4186d66b2e4cd393610ecce3a56bf786d"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0113:image-001",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-043",
+      "question": "环境变量配置表格中，第5行“资源引用”类型对应的变量名称是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 555.2407079958357
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-044",
+      "group": "cce_10_0971",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "“指标观测”区域中，开关右侧显示的文字是什么？",
+      "answerable": true,
+      "required_facts": [
+        "开启"
+      ],
+      "reference_answer": "开启",
+      "evidence": [
+        {
+          "document_id": "cce_10_0971",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0971.html",
+          "title": "实现NPU指标的全面监控",
+          "file": "documents/cce_10_0971.md",
+          "content_sha256": "8f06ffea1344cfc9ac045ef618da8ddacf7288f10de1858b6eddce0984db55c9",
+          "start_line": 47,
+          "end_line": 47,
+          "section": "步骤一：启用npu-exporter组件",
+          "anchor": "    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002372478101.png \"点击放大\")",
+          "quote": "    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002372478101.png \"点击放大\")",
+          "quote_sha256": "d8e42a84b5f5243f8681efdffd552953a17cef76c04d8dddc82eeb450d84e80c"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0971:image-004",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-044",
+      "question": "“指标观测”区域中，开关右侧显示的文字是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 524.8037079873029
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-046",
+      "group": "cce_10_0009",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "“容器配置”页面中，镜像名称输入框右侧的按钮文字是什么？",
+      "answerable": true,
+      "required_facts": [
+        "更换镜像"
+      ],
+      "reference_answer": "更换镜像",
+      "evidence": [
+        {
+          "document_id": "cce_10_0009",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0009.html",
+          "title": "使用第三方镜像",
+          "file": "documents/cce_10_0009.md",
+          "content_sha256": "d7792777566300850ba34fe47a405e41926678764d77c8afb8a04f41fbd83326",
+          "start_line": 58,
+          "end_line": 58,
+          "section": "使用第三方镜像",
+          "anchor": "    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002332225269.png \"点击放大\")",
+          "quote": "    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002332225269.png \"点击放大\")",
+          "quote_sha256": "a19f7185e02f2cd0a994bd1107e32da81d8c66c3b72dae5575da40397cad34d3"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0009:image-004",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-046",
+      "question": "“容器配置”页面中，镜像名称输入框右侧的按钮文字是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 542.8354169998784
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-047",
+      "group": "cce_10_1113",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "代码编辑器截图中，data字段下配置行的键名是什么？",
+      "answerable": true,
+      "required_facts": [
+        "custom_535.216.03"
+      ],
+      "reference_answer": "custom_535.216.03",
+      "evidence": [
+        {
+          "document_id": "cce_10_1113",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1113.html",
+          "title": "通过节点标签配置GPU驱动版本",
+          "file": "documents/cce_10_1113.md",
+          "content_sha256": "4b027bd7ab03bd9db3e35e6bb228f03d99da8ef0a45535bb9e464a7297e43505",
+          "start_line": 51,
+          "end_line": 51,
+          "section": "操作步骤",
+          "anchor": "      ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002520530036.png)",
+          "quote": "      ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002520530036.png)",
+          "quote_sha256": "8f283a23dabb69d3d2ccf3727ea3035e21ea9b0bc044032677178b3c92cc3295"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_1113:image-003",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-047",
+      "question": "代码编辑器截图中，data字段下配置行的键名是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 638.3699589932803
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-053",
+      "group": "cce_10_0858",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "迁移流程示意图中，第二个蓝色步骤框的标题文字是什么？",
+      "answerable": true,
+      "required_facts": [
+        "第二个蓝色步骤框的标题文字为“将流量逐渐转移至ELB Ingress”"
+      ],
+      "reference_answer": "第二个蓝色步骤框的标题文字为“将流量逐渐转移至ELB Ingress”",
+      "evidence": [
+        {
+          "document_id": "cce_10_0858",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0858.html",
+          "title": "Nginx Ingress迁移到ELB Ingress",
+          "file": "documents/cce_10_0858.md",
+          "content_sha256": "7721c6c0ab52f5b8ec35f1bcf93b10543e3c4447f728bb062842e2a88d1caf5e",
+          "start_line": 46,
+          "end_line": 46,
+          "section": "迁移流程",
+          "anchor": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002493314242.png \"点击放大\")",
+          "quote": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002493314242.png \"点击放大\")",
+          "quote_sha256": "94ce97d5bbb7ff61acf0c2d52a1764cddcb3083d90ca56280722c72e228d8001"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0858:image-003",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-053",
+      "question": "迁移流程示意图中，第二个蓝色步骤框的标题文字是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 542.2442919807509
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-054",
+      "group": "cce_10_0387",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "在“编辑网段”对话框中，哪个按钮被红框标注？",
+      "answerable": true,
+      "required_facts": [
+        "“添加IPv4扩展网段”按钮被红框标注"
+      ],
+      "reference_answer": "“添加IPv4扩展网段”按钮被红框标注",
+      "evidence": [
+        {
+          "document_id": "cce_10_0387",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0387.html",
+          "title": "扩展集群VPC网段",
+          "file": "documents/cce_10_0387.md",
+          "content_sha256": "08a4d2c7d1ad4bcd0cf9c1ef9aba1373b475dda78846f72076b8198245e43766",
+          "start_line": 32,
+          "end_line": 32,
+          "section": "操作步骤",
+          "anchor": "    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001938973252.png \"点击放大\")",
+          "quote": "    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001938973252.png \"点击放大\")",
+          "quote_sha256": "9a92cf899ea135be338d9f1b11f0faad6146e9e41ae7e803788dcf4e37cc8cba"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0387:image-001",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-054",
+      "question": "在“编辑网段”对话框中，哪个按钮被红框标注？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 610.4724169999827
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-055",
+      "group": "cce_10_1091",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "在“委托 / 创建委托”页面中，委托名称输入框填写的值是什么？",
+      "answerable": true,
+      "required_facts": [
+        "委托名称输入框的值为agency_for_cce_service_account"
+      ],
+      "reference_answer": "委托名称输入框的值为agency_for_cce_service_account",
+      "evidence": [
+        {
+          "document_id": "cce_10_1091",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1091.html",
+          "title": "配置镜像免密下载",
+          "file": "documents/cce_10_1091.md",
+          "content_sha256": "3fe08ccdcea5426e944096f5991fa566dcb528c454cc6d39aa12d04a32811b39",
+          "start_line": 188,
+          "end_line": 188,
+          "section": "创建委托并授权",
+          "anchor": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002537913478.png \"点击放大\")",
+          "quote": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002537913478.png \"点击放大\")",
+          "quote_sha256": "d19c883a51516090dedd6c458333c1ab2ec12925ca6c7b26d4bfdf504df2406c"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_1091:image-008",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-055",
+      "question": "在“委托 / 创建委托”页面中，委托名称输入框填写的值是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 608.7852499913424
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-056",
+      "group": "cce_10_0437",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "CCE集群概览页面的“网络信息”面板中，转发模式字段显示的值是什么？",
+      "answerable": true,
+      "required_facts": [
+        "转发模式字段显示为iptables"
+      ],
+      "reference_answer": "转发模式字段显示为iptables",
+      "evidence": [
+        {
+          "document_id": "cce_10_0437",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0437.html",
+          "title": "安全组检查异常处理",
+          "file": "documents/cce_10_0437.md",
+          "content_sha256": "4712deb5f54fe669a4b076483e3e2e600780ed7e2a18c49ae4a20a077df3aa92",
+          "start_line": 21,
+          "end_line": 21,
+          "section": "解决方案",
+          "anchor": "    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002454680297.png \"点击放大\")",
+          "quote": "    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002454680297.png \"点击放大\")",
+          "quote_sha256": "6695ae8249663f03803f25399570ca528c2aa74489183308dd7a8d18454e46db"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0437:image-002",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-056",
+      "question": "CCE集群概览页面的“网络信息”面板中，转发模式字段显示的值是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 548.1576670135837
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-057",
+      "group": "cce_10_1171",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "AOM指标浏览页面的表格中，destination_workload为coredns的指标行，其当前值显示为多少？",
+      "answerable": true,
+      "required_facts": [
+        "destination_workload为coredns的指标行当前值显示为40.47"
+      ],
+      "reference_answer": "destination_workload为coredns的指标行当前值显示为40.47",
+      "evidence": [
+        {
+          "document_id": "cce_10_1171",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1171.html",
+          "title": "通过Hubble监控集群TCP及UDP流量",
+          "file": "documents/cce_10_1171.md",
+          "content_sha256": "a92a8f146a4a85e6514ecc82a8ac55c5ff7dff51a890d6ad3c18a1ce360cc069",
+          "start_line": 81,
+          "end_line": 81,
+          "section": "在AOM中配置指标监控",
+          "anchor": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002633864586.png \"点击放大\")",
+          "quote": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002633864586.png \"点击放大\")",
+          "quote_sha256": "27cceb1548e7366480806b5b3f6cb455dc7da80f68869b4bef0e1a0ce2e2d0e1"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_1171:image-002",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-057",
+      "question": "AOM指标浏览页面的表格中，destination_workload为coredns的指标行，其当前值显示为多少？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 676.0667089838535
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-058",
+      "group": "cce_10_1161",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "服务列表界面中，名为envoy-default-inference-pool-with-aigwroute-d416582c的服务，其访问端口->容器端口/协议列显示的内容是什么？",
+      "answerable": true,
+      "required_facts": [
+        "访问端口->容器端口/协议列显示80->10080/TCP",
+        "下方还显示30961/TCP"
+      ],
+      "reference_answer": "访问端口->容器端口/协议列显示80->10080/TCP；下方还显示30961/TCP",
+      "evidence": [
+        {
+          "document_id": "cce_10_1161",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1161.html",
+          "title": "通过Envoy AI Gateway实现大模型推理流量路由",
+          "file": "documents/cce_10_1161.md",
+          "content_sha256": "bdd8f8695da035f3d40b7fc1090f541e0b6b0b1aef672b8b403b02bc23155fdf",
+          "start_line": 474,
+          "end_line": 474,
+          "section": "操作步骤",
+          "anchor": "      ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002618653121.png \"点击放大\")",
+          "quote": "      ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002618653121.png \"点击放大\")",
+          "quote_sha256": "69b03d53f79c896d0a5fb6da68dde954de4a30d1773fb3a5331fc87636fd0bc0"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_1161:image-003",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-058",
+      "question": "服务列表界面中，名为envoy-default-inference-pool-with-aigwroute-d416582c的服务，其访问端口->容器端口/协议列显示的内容是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 547.2480829921551
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-059",
+      "group": "cce_10_0682",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "ELB后端服务器组页面中，表格里两条记录的权重值分别是多少？",
+      "answerable": true,
+      "required_facts": [
+        "两条记录的权重均为10"
+      ],
+      "reference_answer": "两条记录的权重均为10",
+      "evidence": [
+        {
+          "document_id": "cce_10_0682",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0682.html",
+          "title": "为负载均衡类型的Service配置跨集群的后端",
+          "file": "documents/cce_10_0682.md",
+          "content_sha256": "77c40c99c427edcb03341a6ccb687b834e2e03e97fa2e2097e45da86e46a2987",
+          "start_line": 188,
+          "end_line": 188,
+          "section": "为ELB监听器配置同VPC内的ECS后端",
+          "anchor": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001980261046.png \"点击放大\")",
+          "quote": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001980261046.png \"点击放大\")",
+          "quote_sha256": "d699708e3698b8469861cb0b20269d96a99ae312c93bb69ac4de594ed63381d5"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0682:image-007",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-059",
+      "question": "ELB后端服务器组页面中，表格里两条记录的权重值分别是多少？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 574.6289169765078
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-060",
+      "group": "cce_10_0063",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "在“节点伸缩策略”页签的策略列表中，点击“更多”后展开的下拉菜单里哪个选项被红色矩形框标出？",
+      "answerable": true,
+      "required_facts": [
+        "“删除”选项被红色矩形框标出"
+      ],
+      "reference_answer": "“删除”选项被红色矩形框标出",
+      "evidence": [
+        {
+          "document_id": "cce_10_0063",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0063.html",
+          "title": "管理节点弹性策略",
+          "file": "documents/cce_10_0063.md",
+          "content_sha256": "22144b426207b1b992e03d0e27390591f80f7cad5cf5fd43a221428028d4bda7",
+          "start_line": 36,
+          "end_line": 36,
+          "section": "删除节点弹性策略",
+          "anchor": "    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001917617482.png \"点击放大\")",
+          "quote": "    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001917617482.png \"点击放大\")",
+          "quote_sha256": "93cb66fa3683053c21f42035ebeb4d72c75e7c8f021e667a804c3c8f9dfca52c"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0063:image-003",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-060",
+      "question": "在“节点伸缩策略”页签的策略列表中，点击“更多”后展开的下拉菜单里哪个选项被红色矩形框标出？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 693.3016249968205
+    }
+  }
+]

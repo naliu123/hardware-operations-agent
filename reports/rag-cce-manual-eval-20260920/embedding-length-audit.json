@@ -1,0 +1,12 @@
+{
+  "fragments": 3539,
+  "over_512": 1191,
+  "max_tokens": 5848,
+  "examples": [
+    {
+      "title": "Helm v2与Helm v3的差异及适配方案",
+      "tokens": 1425,
+      "crds_token_offset": 915
+    }
+  ]
+}

@@ -1,0 +1,830 @@
+{
+  "schema_version": 1,
+  "phoenix_url": "http://127.0.0.1:16006",
+  "datasets": {
+    "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31:development": {
+      "name": "hwops-cce-manual-eval-development",
+      "id": "RGF0YXNldDo1",
+      "version_id": "RGF0YXNldFZlcnNpb246NQ==",
+      "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+      "examples": {
+        "cce-manual-001": "RGF0YXNldEV4YW1wbGU6MTI3",
+        "cce-manual-002": "RGF0YXNldEV4YW1wbGU6MTI4",
+        "cce-manual-006": "RGF0YXNldEV4YW1wbGU6MTI5",
+        "cce-manual-008": "RGF0YXNldEV4YW1wbGU6MTMw",
+        "cce-manual-009": "RGF0YXNldEV4YW1wbGU6MTMx",
+        "cce-manual-012": "RGF0YXNldEV4YW1wbGU6MTMy",
+        "cce-manual-013": "RGF0YXNldEV4YW1wbGU6MTMz",
+        "cce-manual-016": "RGF0YXNldEV4YW1wbGU6MTM0",
+        "cce-manual-017": "RGF0YXNldEV4YW1wbGU6MTM1",
+        "cce-manual-018": "RGF0YXNldEV4YW1wbGU6MTM2",
+        "cce-manual-019": "RGF0YXNldEV4YW1wbGU6MTM3",
+        "cce-manual-022": "RGF0YXNldEV4YW1wbGU6MTM4",
+        "cce-manual-023": "RGF0YXNldEV4YW1wbGU6MTM5",
+        "cce-manual-024": "RGF0YXNldEV4YW1wbGU6MTQw",
+        "cce-manual-025": "RGF0YXNldEV4YW1wbGU6MTQx",
+        "cce-manual-029": "RGF0YXNldEV4YW1wbGU6MTQy",
+        "cce-manual-030": "RGF0YXNldEV4YW1wbGU6MTQz",
+        "cce-manual-031": "RGF0YXNldEV4YW1wbGU6MTQ0",
+        "cce-manual-032": "RGF0YXNldEV4YW1wbGU6MTQ1",
+        "cce-manual-033": "RGF0YXNldEV4YW1wbGU6MTQ2",
+        "cce-manual-034": "RGF0YXNldEV4YW1wbGU6MTQ3",
+        "cce-manual-035": "RGF0YXNldEV4YW1wbGU6MTQ4",
+        "cce-manual-036": "RGF0YXNldEV4YW1wbGU6MTQ5",
+        "cce-manual-039": "RGF0YXNldEV4YW1wbGU6MTUw",
+        "cce-manual-040": "RGF0YXNldEV4YW1wbGU6MTUx",
+        "cce-manual-041": "RGF0YXNldEV4YW1wbGU6MTUy",
+        "cce-manual-045": "RGF0YXNldEV4YW1wbGU6MTUz",
+        "cce-manual-047": "RGF0YXNldEV4YW1wbGU6MTU0",
+        "cce-manual-049": "RGF0YXNldEV4YW1wbGU6MTU1",
+        "cce-manual-050": "RGF0YXNldEV4YW1wbGU6MTU2",
+        "cce-manual-051": "RGF0YXNldEV4YW1wbGU6MTU3",
+        "cce-manual-052": "RGF0YXNldEV4YW1wbGU6MTU4",
+        "cce-manual-053": "RGF0YXNldEV4YW1wbGU6MTU5",
+        "cce-manual-054": "RGF0YXNldEV4YW1wbGU6MTYw",
+        "cce-manual-055": "RGF0YXNldEV4YW1wbGU6MTYx",
+        "cce-manual-058": "RGF0YXNldEV4YW1wbGU6MTYy",
+        "cce-manual-059": "RGF0YXNldEV4YW1wbGU6MTYz",
+        "cce-manual-062": "RGF0YXNldEV4YW1wbGU6MTY0",
+        "cce-manual-064": "RGF0YXNldEV4YW1wbGU6MTY1",
+        "cce-manual-065": "RGF0YXNldEV4YW1wbGU6MTY2",
+        "cce-manual-066": "RGF0YXNldEV4YW1wbGU6MTY3",
+        "cce-manual-067": "RGF0YXNldEV4YW1wbGU6MTY4",
+        "cce-manual-068": "RGF0YXNldEV4YW1wbGU6MTY5",
+        "cce-manual-069": "RGF0YXNldEV4YW1wbGU6MTcw",
+        "cce-manual-070": "RGF0YXNldEV4YW1wbGU6MTcx",
+        "cce-manual-071": "RGF0YXNldEV4YW1wbGU6MTcy",
+        "cce-manual-072": "RGF0YXNldEV4YW1wbGU6MTcz",
+        "cce-manual-074": "RGF0YXNldEV4YW1wbGU6MTc0",
+        "cce-manual-076": "RGF0YXNldEV4YW1wbGU6MTc1",
+        "cce-manual-080": "RGF0YXNldEV4YW1wbGU6MTc2",
+        "cce-manual-081": "RGF0YXNldEV4YW1wbGU6MTc3",
+        "cce-manual-082": "RGF0YXNldEV4YW1wbGU6MTc4",
+        "cce-manual-083": "RGF0YXNldEV4YW1wbGU6MTc5",
+        "cce-manual-084": "RGF0YXNldEV4YW1wbGU6MTgw",
+        "cce-manual-085": "RGF0YXNldEV4YW1wbGU6MTgx",
+        "cce-manual-086": "RGF0YXNldEV4YW1wbGU6MTgy",
+        "cce-manual-087": "RGF0YXNldEV4YW1wbGU6MTgz",
+        "cce-manual-088": "RGF0YXNldEV4YW1wbGU6MTg0",
+        "cce-manual-089": "RGF0YXNldEV4YW1wbGU6MTg1",
+        "cce-manual-090": "RGF0YXNldEV4YW1wbGU6MTg2",
+        "cce-manual-091": "RGF0YXNldEV4YW1wbGU6MTg3",
+        "cce-manual-092": "RGF0YXNldEV4YW1wbGU6MTg4",
+        "cce-manual-093": "RGF0YXNldEV4YW1wbGU6MTg5",
+        "cce-manual-094": "RGF0YXNldEV4YW1wbGU6MTkw",
+        "cce-manual-095": "RGF0YXNldEV4YW1wbGU6MTkx",
+        "cce-manual-096": "RGF0YXNldEV4YW1wbGU6MTky",
+        "cce-manual-097": "RGF0YXNldEV4YW1wbGU6MTkz",
+        "cce-manual-098": "RGF0YXNldEV4YW1wbGU6MTk0",
+        "cce-manual-099": "RGF0YXNldEV4YW1wbGU6MTk1",
+        "cce-negative-runtime-nodes": "RGF0YXNldEV4YW1wbGU6MTk2",
+        "cce-negative-runtime-backup": "RGF0YXNldEV4YW1wbGU6MTk3",
+        "cce-negative-runtime-security": "RGF0YXNldEV4YW1wbGU6MTk4",
+        "cce-negative-unprovided-cve": "RGF0YXNldEV4YW1wbGU6MTk5",
+        "cce-negative-unprovided-quota": "RGF0YXNldEV4YW1wbGU6MjAw",
+        "cce-negative-unprovided-extension": "RGF0YXNldEV4YW1wbGU6MjAx"
+      }
+    }
+  },
+  "experiments": {
+    "manual-v3-r1-regression-final": {
+      "id": "RXhwZXJpbWVudDo5",
+      "dataset_key": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31:development",
+      "config_sha256": "ccbed435709639a70aa968574328e32cb03dfe52a899c50de6f6b1df9307ebfe",
+      "runs": {
+        "cce-manual-001": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNDM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-002": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNDQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-006": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNDU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-008": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNDY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-009": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNDc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-012": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNDg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-013": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNDk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-016": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNTA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-017": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNTE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-018": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNTI=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-019": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNTM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-022": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNTQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-023": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNTU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-024": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNTY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-025": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNTc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-029": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNTg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-030": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNTk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-031": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNjA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-032": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNjE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-033": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNjI=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-034": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNjM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-035": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNjQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-036": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNjU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-039": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNjY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-040": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNjc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-041": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNjg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-045": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNjk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-047": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNzA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-049": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNzE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-050": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNzI=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-051": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNzM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-052": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNzQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-053": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNzU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-054": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNzY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-055": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNzc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-058": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNzg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-059": {
+          "id": "RXhwZXJpbWVudFJ1bjoyNzk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-062": {
+          "id": "RXhwZXJpbWVudFJ1bjoyODA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-064": {
+          "id": "RXhwZXJpbWVudFJ1bjoyODE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-065": {
+          "id": "RXhwZXJpbWVudFJ1bjoyODI=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-066": {
+          "id": "RXhwZXJpbWVudFJ1bjoyODM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-067": {
+          "id": "RXhwZXJpbWVudFJ1bjoyODQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-068": {
+          "id": "RXhwZXJpbWVudFJ1bjoyODU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-069": {
+          "id": "RXhwZXJpbWVudFJ1bjoyODY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-070": {
+          "id": "RXhwZXJpbWVudFJ1bjoyODc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-071": {
+          "id": "RXhwZXJpbWVudFJ1bjoyODg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-072": {
+          "id": "RXhwZXJpbWVudFJ1bjoyODk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-074": {
+          "id": "RXhwZXJpbWVudFJ1bjoyOTA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-076": {
+          "id": "RXhwZXJpbWVudFJ1bjoyOTE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-080": {
+          "id": "RXhwZXJpbWVudFJ1bjoyOTI=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-081": {
+          "id": "RXhwZXJpbWVudFJ1bjoyOTM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-082": {
+          "id": "RXhwZXJpbWVudFJ1bjoyOTQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-083": {
+          "id": "RXhwZXJpbWVudFJ1bjoyOTU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-084": {
+          "id": "RXhwZXJpbWVudFJ1bjoyOTY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-085": {
+          "id": "RXhwZXJpbWVudFJ1bjoyOTc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-086": {
+          "id": "RXhwZXJpbWVudFJ1bjoyOTg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-087": {
+          "id": "RXhwZXJpbWVudFJ1bjoyOTk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-088": {
+          "id": "RXhwZXJpbWVudFJ1bjozMDA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-089": {
+          "id": "RXhwZXJpbWVudFJ1bjozMDE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-090": {
+          "id": "RXhwZXJpbWVudFJ1bjozMDI=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-091": {
+          "id": "RXhwZXJpbWVudFJ1bjozMDM=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-092": {
+          "id": "RXhwZXJpbWVudFJ1bjozMDQ=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-093": {
+          "id": "RXhwZXJpbWVudFJ1bjozMDU=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-094": {
+          "id": "RXhwZXJpbWVudFJ1bjozMDY=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-095": {
+          "id": "RXhwZXJpbWVudFJ1bjozMDc=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-096": {
+          "id": "RXhwZXJpbWVudFJ1bjozMDg=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-097": {
+          "id": "RXhwZXJpbWVudFJ1bjozMDk=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-098": {
+          "id": "RXhwZXJpbWVudFJ1bjozMTA=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-manual-099": {
+          "id": "RXhwZXJpbWVudFJ1bjozMTE=",
+          "evaluations": [
+            "evidence_recall_at_5",
+            "all_evidence_at_5",
+            "document_hit_at_5",
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-negative-runtime-nodes": {
+          "id": "RXhwZXJpbWVudFJ1bjozMTI=",
+          "evaluations": [
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-negative-runtime-backup": {
+          "id": "RXhwZXJpbWVudFJ1bjozMTM=",
+          "evaluations": [
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-negative-runtime-security": {
+          "id": "RXhwZXJpbWVudFJ1bjozMTQ=",
+          "evaluations": [
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-negative-unprovided-cve": {
+          "id": "RXhwZXJpbWVudFJ1bjozMTU=",
+          "evaluations": [
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-negative-unprovided-quota": {
+          "id": "RXhwZXJpbWVudFJ1bjozMTY=",
+          "evaluations": [
+            "latency_ms",
+            "citation_integrity"
+          ]
+        },
+        "cce-negative-unprovided-extension": {
+          "id": "RXhwZXJpbWVudFJ1bjozMTc=",
+          "evaluations": [
+            "latency_ms",
+            "citation_integrity"
+          ]
+        }
+      }
+    }
+  }
+}

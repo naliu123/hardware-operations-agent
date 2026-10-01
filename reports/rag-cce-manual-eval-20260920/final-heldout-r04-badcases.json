@@ -1,0 +1,388 @@
+[
+  {
+    "case": {
+      "id": "cce-manual-020",
+      "group": "family:cce_10_0351",
+      "category": "调度",
+      "question_type": "scenario",
+      "question": "应用对CPU上下文切换和跨Socket内存访问敏感，CCE文档建议用什么策略改善？",
+      "answerable": true,
+      "required_facts": [
+        "使用CPU管理策略分配独占CPU核/绑核",
+        "减少调度延迟",
+        "CPU manager优先同Socket和完整物理核"
+      ],
+      "reference_answer": "使用CPU管理策略分配独占CPU核/绑核；减少调度延迟；CPU manager优先同Socket和完整物理核",
+      "evidence": [
+        {
+          "document_id": "cce_10_0351",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0351.html",
+          "title": "CPU管理策略",
+          "file": "documents/cce_10_0351.md",
+          "content_sha256": "55cfdb9cf90bea044f6e5a834310d5c2a636791479e9b6faf7240aba25116b0e",
+          "start_line": 12,
+          "end_line": 12,
+          "section": "使用场景",
+          "anchor": "对上下文切换敏感",
+          "quote": "- 对上下文切换敏感",
+          "quote_sha256": "732432cbf2e6b0fd58e89e3ad0b61046784949def8dd67fe07cd4eaaf6c456dc"
+        },
+        {
+          "document_id": "cce_10_0351",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0351.html",
+          "title": "CPU管理策略",
+          "file": "documents/cce_10_0351.md",
+          "content_sha256": "55cfdb9cf90bea044f6e5a834310d5c2a636791479e9b6faf7240aba25116b0e",
+          "start_line": 17,
+          "end_line": 17,
+          "section": "使用场景",
+          "anchor": "CPU manager会优先在一个Socket上分配资源",
+          "quote": "如果您的应用有以上其中一个特点，可以利用Kubernetes中提供的[CPU管理策略](https://kubernetes.io/zh/docs/tasks/administer-cluster/cpu-management-policies/)为应用分配独占的CPU核（即CPU绑核），提升应用性能，减少应用的调度延迟。CPU manager会优先在一个Socket上分配资源，也会优先分配完整的物理核，避免一些干扰。",
+          "quote_sha256": "6c5337121f1c95f7aa5ec0fff8f23ece768e3acae052ad72aa072121127c2101"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "heldout"
+    },
+    "observed": {
+      "id": "cce-manual-020",
+      "question": "应用对CPU上下文切换和跨Socket内存访问敏感，CCE文档建议用什么策略改善？",
+      "answerable": true,
+      "question_type": "scenario",
+      "category": "调度",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [],
+      "result": {
+        "schema_version": 1,
+        "id": "ZLSTSNSF4VI4CV3XVFVEJKWCFC",
+        "conversation_id": "4XF6GPATSUVL5KBSBATM6Z3V2N",
+        "question": "应用对CPU上下文切换和跨Socket内存访问敏感，CCE文档建议用什么策略改善？",
+        "status": "FAILED",
+        "data_mode": "LIVE",
+        "answer": "",
+        "claims": [],
+        "citations": [],
+        "gaps": [],
+        "error": {
+          "code": "MODEL_UNAVAILABLE",
+          "message": "模型未配置或调用失败，未使用模拟答案替代。"
+        },
+        "created_at": "2026-09-22T16:00:32.460005Z",
+        "trace_id": "d87e5865a05e4b4f40acd37b2846b13c",
+        "evidence_selection": {
+          "candidate_fragment_ids": [
+            "KDFQD7UQFXF6PU7LCHCKNWS2RO",
+            "ROAN4J76G4YBB77A67RS5EMDUQ",
+            "BKFMOMZBPHRMLW237OTATBV2NA",
+            "YTRNJTWYCZY4S6OGSR3OANACO7",
+            "32B6P76V4FNZY6DTD4HRDBH3LS",
+            "XSJQYKXNZMW5KIGHS547DNXJ25",
+            "BWU6SMZ4P4SHVHF3TNXGECWCGF",
+            "YYTBIF5TF6T5RCDPA7R5MGLDKW",
+            "6TTEOSUMM2WEC3GIIGWPTH7GEN",
+            "BI7253H3UZWTQ6FVOEPIOIKBM3",
+            "C3RT5HOZHAO6EXKJXUYDDRVFZP",
+            "VE3BYYQHCWET5QGK7TTC4ZESAV",
+            "64JQOMNCYM7X2KLLNKWLPTGG2B",
+            "JZKG7HXOO2H2UKCW6YTH23M6G3",
+            "AHDYXBFLQA3AIXZ75ZIRCOQHQZ",
+            "K276JX7FPH375K7TDZQC7SJOBF",
+            "D4H6B7GRKXDCK6QDLIM2K4KJIQ",
+            "TWE2WMRAF2XUHCM67W3IFJ67LX",
+            "QGY4GTGABWYRIKNCRGUZQYCIDD",
+            "QJ5P347NIT4R2IPLHREFXO47YT",
+            "5O2IX5YCBFTVB4YIABZ2KPNGRB",
+            "ZNKQHCTQTBWXWVI555IP5WAF7C",
+            "CBAOGVRAUNJ5ZJWQU5WMSMPKYC",
+            "HVVPDCYX6EG4JTUSCWBA7YAE5F",
+            "A66ISE7OFSGOHX7GQMIJJYMQN6",
+            "G7X3EAFSM2RNOF7REMT7D7IBXG",
+            "JSXU3T5WERJ5GBIV5TLYHOR2GY",
+            "XO5GPTCBOE54HEQELIPTXLBW47",
+            "GGAMKCFVDLLNNY3KOQBSR4ATVR",
+            "WHG7SUOFOXYSHEH3KVYFZNXNCP",
+            "2OJ4AUXL4AIK6JTSBDHFBQPKEG",
+            "GQZSYDLNXSKETQ4VFF44GLU7PJ",
+            "EM5D5BKSQGZDYBVPFP7CBGA542",
+            "OQK6J4YXTIOMG6YKLGQU7QZFGA",
+            "7KF3LVCUZGXXYIV4BPDTDYIYGR",
+            "YWJBEJFRHMGOOXWFT4XW3664IQ",
+            "B6DG2A5WLBKKUP5XWWZODQZ5L7",
+            "BWWFQPD5WMF7GMHX7GCGLFRYGN",
+            "4PY4Y5ORX5HW65RJTKIC5KIQW2",
+            "T7EUQDX3LLRKB4MHPMCJ365ERK",
+            "XYLCDX2UXMW5PNAVSZZNA7ERSA",
+            "UW7XKWUDWBRTUGDTXKE3OLYUUB",
+            "3WYYIQRS7HYFTBJX4DLWIMKRZI",
+            "XF55GAS4GBOFO4IJGNQSM47FUF",
+            "BNVDPVCGFUG2S6664JEOFNCQDH",
+            "GZZNLXX3ML27347DPGI7RZFB7J"
+          ],
+          "expanded_fragment_ids": [
+            "4PY4Y5ORX5HW65RJTKIC5KIQW2",
+            "T7EUQDX3LLRKB4MHPMCJ365ERK",
+            "XYLCDX2UXMW5PNAVSZZNA7ERSA",
+            "UW7XKWUDWBRTUGDTXKE3OLYUUB",
+            "3WYYIQRS7HYFTBJX4DLWIMKRZI",
+            "XF55GAS4GBOFO4IJGNQSM47FUF",
+            "BNVDPVCGFUG2S6664JEOFNCQDH",
+            "GZZNLXX3ML27347DPGI7RZFB7J"
+          ],
+          "input_bytes": 81844,
+          "context_bytes": 0
+        }
+      },
+      "citation_integrity": false,
+      "latency_ms": 46236.701375004486,
+      "judge": {
+        "verdict": {
+          "fact_support": [
+            "",
+            "",
+            ""
+          ],
+          "facts_met": [
+            false,
+            false,
+            false
+          ],
+          "contradictions": [],
+          "unsupported_claims": [],
+          "direct_answer": false,
+          "correct_abstention": false,
+          "explanation": "答案为空，且状态为FAILED（服务错误），未提供任何内容，也未指出具体缺口，因此不满足任何必答点，不属于正确拒答。"
+        },
+        "passed": false,
+        "model": "deepseek-flash",
+        "annotator_kind": "LLM",
+        "rubric_version": "v2",
+        "same_model_as_generator": true,
+        "rubric_sha256": "87641e81bcd8d5f9fbd11a701e9c065cce5037104a80fb906ff9304d22a1f552",
+        "usage": {
+          "prompt_tokens": 1060,
+          "completion_tokens": 85,
+          "total_tokens": 1145
+        },
+        "recorded_attempts": 1,
+        "accepted_usage": {
+          "prompt_tokens": 1060,
+          "completion_tokens": 85,
+          "total_tokens": 1145,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 804
+        },
+        "created_at": "2026-09-22T16:19:41.307731+00:00"
+      },
+      "audit": {
+        "id": "cce-manual-020",
+        "passed": false,
+        "reviewer": "GPT-6 Agent evidence review (not human expert)",
+        "reason": "外部模型调用失败，结果为FAILED/MODEL_UNAVAILABLE，无答案和引用。服务失败按固定验收口径直接计失败，不重试、不使用参考答案替代。",
+        "answer_sha256": "4796f4a698c73f8bb556c217b82129f556e1218961c122854c6e3b572e62abfe",
+        "evidence_checked": {
+          "reference": [
+            "732432cbf2e6b0fd58e89e3ad0b61046784949def8dd67fe07cd4eaaf6c456dc",
+            "6c5337121f1c95f7aa5ec0fff8f23ece768e3acae052ad72aa072121127c2101"
+          ],
+          "retrieved": [],
+          "answer_and_gaps": true
+        }
+      }
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-021",
+      "group": "family:cce_10_0351",
+      "category": "调度",
+      "question_type": "constraint",
+      "question": "enhanced-static相比static新增支持哪种Burstable Pod，CPU requests和limits需满足什么条件？",
+      "answerable": true,
+      "required_facts": [
+        "兼容static绑核能力",
+        "新增符合条件的Burstable Pod优先使用CPU",
+        "requests和limits均为正整数",
+        "不应凭空要求两者必须相等"
+      ],
+      "reference_answer": "兼容static绑核能力；新增符合条件的Burstable Pod优先使用CPU；requests和limits均为正整数；不应凭空要求两者必须相等",
+      "evidence": [
+        {
+          "document_id": "cce_10_0552",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0552.html",
+          "title": "增强型CPU管理策略",
+          "file": "documents/cce_10_0552.md",
+          "content_sha256": "4ad2ec7aab1404801f17c89ceb89e5d3e35cc6fe79ea87f3f58ceaa2a5f3baba",
+          "start_line": 12,
+          "end_line": 12,
+          "section": "增强型CPU管理策略",
+          "anchor": "要求CPU的requests和limits参数值都是正整数",
+          "quote": "增强型CPU管理策略（enhanced-static），是在兼容静态绑核CPU管理策略的基础上，新增一种符合某些资源特征的Burstable Pod（要求CPU的requests和limits参数值都是正整数）优先使用某些CPU的能力，以减少应用在多个CPU间频繁切换带来的影响。能够优先使用CPU的Burstable Pod举例如下：",
+          "quote_sha256": "83dab1961444942ad59beccfd18409822b075b42b71792385c477c6e15c208a3"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "heldout"
+    },
+    "observed": {
+      "id": "cce-manual-021",
+      "question": "enhanced-static相比static新增支持哪种Burstable Pod，CPU requests和limits需满足什么条件？",
+      "answerable": true,
+      "question_type": "constraint",
+      "category": "调度",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [],
+      "result": {
+        "schema_version": 1,
+        "id": "YOCKRAF6J742PC4WZDPPEO34MH",
+        "conversation_id": "OHR6OHW7JB4JISWAGYDP7FFNGO",
+        "question": "enhanced-static相比static新增支持哪种Burstable Pod，CPU requests和limits需满足什么条件？",
+        "status": "FAILED",
+        "data_mode": "LIVE",
+        "answer": "",
+        "claims": [],
+        "citations": [],
+        "gaps": [],
+        "error": {
+          "code": "INVALID_MODEL_OUTPUT",
+          "message": "模型输出或引用未通过校验，未发布该答案。"
+        },
+        "created_at": "2026-09-22T16:01:19.362843Z",
+        "trace_id": "54f0e7a30522bb46161d7ce33f13564f",
+        "model_usage": {
+          "prompt_tokens": 22252,
+          "completion_tokens": 95,
+          "total_tokens": 22347,
+          "calls": 1
+        },
+        "evidence_selection": {
+          "candidate_fragment_ids": [
+            "BWU6SMZ4P4SHVHF3TNXGECWCGF",
+            "G7X3EAFSM2RNOF7REMT7D7IBXG",
+            "QJ5P347NIT4R2IPLHREFXO47YT",
+            "DSCKBVJIHT3JXHIUJT33IW27BW",
+            "VBPU6FYBR3JA63KNUF2T7GS4FX",
+            "DJ57IBXJC4C72MC7H723LJCLSN",
+            "PTFMHRVDWE5DMYFCODKGCVEED4",
+            "AC6S2VLCZNQJ7AS7S2NAAWVLKA",
+            "GQZSYDLNXSKETQ4VFF44GLU7PJ",
+            "BKFMOMZBPHRMLW237OTATBV2NA",
+            "4PY4Y5ORX5HW65RJTKIC5KIQW2",
+            "A2TJTBKDHDWNRMQXM6YCF7QWAG",
+            "KIHFWJMPR2K4IDCSCC6ORXCBLP",
+            "MIW2JEOBKGKRTWU7VWXHGXOTQ3",
+            "R2RXTTU5PNHJNSTQQT5OPVBC3I",
+            "X5PSLCNFCPMAVAGKHXAP64DQKD",
+            "Z244TPV5OKNZI2NQ7XON64PXJ6",
+            "OMK64BKEOA6GC7XIBPD3IS3JX5",
+            "P6MYAUYCBPT35SVYEOC4TPBKP3",
+            "6QVFC54QIQHRKOHNQ3WPUAYGCC",
+            "HZPKXBY4RPMB6CQQ3AQNXYCRL7",
+            "CQ6WFJPBUMXTNKWDG2ZWPRBYA4",
+            "TLXXTU2ROIRVTVIUECYCGZSOP2",
+            "UEMQ2NG64AVD4ANEBZXAUQZYZE",
+            "GVLBTGJE4S7BDNWADNL7OJ4CBL",
+            "CT3SR7NACBKE3VMQ2LUPTEHZLO",
+            "YYT3VICNUYIT5VIQ5VZLCUBFF5",
+            "2QQ42QHCQC62E6U7VJ344D4F7H",
+            "LMC6LHEC33QPQDAJYQPO7AZXLF",
+            "GV5YS3KKM4KP4MGGIR243ZD5WK",
+            "TDLJZW5HMWX67M2D4Q4AU7ASEI",
+            "GWVAAUTVUFIXY63A6BUHVYAX4G",
+            "KDFQD7UQFXF6PU7LCHCKNWS2RO",
+            "FOYMRCFNNQVOJBHSVKQHTTUKIZ",
+            "EBUWVVCW34KJO6OVLALJHGPABQ",
+            "4ID35OZTGDVED4HCX3MXKT4TUL",
+            "7WTZVGRY6PSB7UW5TRDVDYHTM3",
+            "XMEFTGW4WN6ZJ2WJVXMPS3ZIXB",
+            "6ZXLDXCEOKQSQO3OMUVGLR3DIQ",
+            "R777PPG4ZDFZSTWQCR6NMSBCLW"
+          ],
+          "expanded_fragment_ids": [
+            "FOYMRCFNNQVOJBHSVKQHTTUKIZ",
+            "EBUWVVCW34KJO6OVLALJHGPABQ",
+            "4ID35OZTGDVED4HCX3MXKT4TUL",
+            "7WTZVGRY6PSB7UW5TRDVDYHTM3",
+            "XMEFTGW4WN6ZJ2WJVXMPS3ZIXB",
+            "6ZXLDXCEOKQSQO3OMUVGLR3DIQ",
+            "R777PPG4ZDFZSTWQCR6NMSBCLW"
+          ],
+          "input_bytes": 74405,
+          "context_bytes": 6149
+        }
+      },
+      "citation_integrity": false,
+      "latency_ms": 28176.759207999567,
+      "judge": {
+        "verdict": {
+          "fact_support": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "facts_met": [
+            false,
+            false,
+            false,
+            false
+          ],
+          "contradictions": [],
+          "unsupported_claims": [],
+          "direct_answer": false,
+          "correct_abstention": false,
+          "explanation": "答案为空，未提供任何内容，无法满足任何必答点，也未直接回答问题。状态为FAILED属于服务错误，不是正确拒答。"
+        },
+        "passed": false,
+        "model": "deepseek-flash",
+        "annotator_kind": "LLM",
+        "rubric_version": "v2",
+        "same_model_as_generator": true,
+        "rubric_sha256": "87641e81bcd8d5f9fbd11a701e9c065cce5037104a80fb906ff9304d22a1f552",
+        "usage": {
+          "prompt_tokens": 867,
+          "completion_tokens": 85,
+          "total_tokens": 952
+        },
+        "recorded_attempts": 1,
+        "accepted_usage": {
+          "prompt_tokens": 867,
+          "completion_tokens": 85,
+          "total_tokens": 952,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          },
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 611
+        },
+        "created_at": "2026-09-22T16:19:42.629426+00:00"
+      },
+      "audit": {
+        "id": "cce-manual-021",
+        "passed": false,
+        "reviewer": "GPT-6 Agent evidence review (not human expert)",
+        "reason": "证据选择完成但生成输出未通过校验，结果为FAILED/INVALID_MODEL_OUTPUT，无答案和引用。按固定验收口径直接计失败。",
+        "answer_sha256": "65317d6a3841d7c9071c7b6f2fcc6ea01f8609167930407278519b2c2edc9b98",
+        "evidence_checked": {
+          "reference": [
+            "83dab1961444942ad59beccfd18409822b075b42b71792385c477c6e15c208a3"
+          ],
+          "retrieved": [],
+          "answer_and_gaps": true
+        }
+      }
+    }
+  }
+]

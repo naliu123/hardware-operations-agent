@@ -1,0 +1,26 @@
+{
+  "count": 129,
+  "columns": [
+    "name",
+    "span_kind",
+    "parent_id",
+    "start_time",
+    "end_time",
+    "status_code",
+    "status_message",
+    "events",
+    "context.span_id",
+    "context.trace_id",
+    "attributes.input.value",
+    "attributes.openinference.span.kind",
+    "attributes.embedding.model_name",
+    "attributes.output.value",
+    "attributes.output.mime_type",
+    "attributes.input.mime_type",
+    "attributes.retrieval.documents"
+  ],
+  "kinds": {
+    "RETRIEVER": 75,
+    "EMBEDDING": 54
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "phoenix_url": "http://127.0.0.1:16006",
+  "evaluator_count": 1,
+  "evaluator": {
+    "id": "Q29kZUV2YWx1YXRvcjo2",
+    "name": "hwops-rag-runtime-contract-v1",
+    "kind": "CODE",
+    "sandbox_config_id": "U2FuZGJveENvbmZpZzoy",
+    "source_sha256": "1cc836e62548d1feae67c54d47351e6b4a0b4ce457906693f959a0ce957de341",
+    "output_configs_sha256": "fb655a8ed31de859303a39dfa6acae61467f57ad7564a698119f44f0d2955c69",
+    "datasets": {
+      "0831cba954957a20cf588da7864c6b03c1a7133adc28f3274a710593c5987fe5:development": {
+        "dataset_id": "RGF0YXNldDo2",
+        "dataset_evaluator_id": "RGF0YXNldEV2YWx1YXRvcjox"
+      },
+      "0831cba954957a20cf588da7864c6b03c1a7133adc28f3274a710593c5987fe5:heldout": {
+        "dataset_id": "RGF0YXNldDo3",
+        "dataset_evaluator_id": "RGF0YXNldEV2YWx1YXRvcjoy"
+      },
+      "0af6479128adb9bd240c23b1be6d4aeca6f20db54b3b1d202b06c66631417d69:development": {
+        "dataset_id": "RGF0YXNldDo4",
+        "dataset_evaluator_id": "RGF0YXNldEV2YWx1YXRvcjoz"
+      },
+      "0af6479128adb9bd240c23b1be6d4aeca6f20db54b3b1d202b06c66631417d69:heldout": {
+        "dataset_id": "RGF0YXNldDo5",
+        "dataset_evaluator_id": "RGF0YXNldEV2YWx1YXRvcjo0"
+      },
+      "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3:development": {
+        "dataset_id": "RGF0YXNldDoz",
+        "dataset_evaluator_id": "RGF0YXNldEV2YWx1YXRvcjo1"
+      },
+      "9a149c88baf70aff3b702688378f28cb450aaaf9fa5fe732b8f6c340bce350f3:heldout": {
+        "dataset_id": "RGF0YXNldDo0",
+        "dataset_evaluator_id": "RGF0YXNldEV2YWx1YXRvcjo2"
+      },
+      "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31:development": {
+        "dataset_id": "RGF0YXNldDo1",
+        "dataset_evaluator_id": "RGF0YXNldEV2YWx1YXRvcjo3"
+      },
+      "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31:heldout": {
+        "dataset_id": "RGF0YXNldDoxMA==",
+        "dataset_evaluator_id": "RGF0YXNldEV2YWx1YXRvcjo4"
+      },
+      "c08c4b67938d20506a1e58aa278778ab65e907871ac95cb10bab41981ee2cc10:development": {
+        "dataset_id": "RGF0YXNldDox",
+        "dataset_evaluator_id": "RGF0YXNldEV2YWx1YXRvcjo5"
+      },
+      "c08c4b67938d20506a1e58aa278778ab65e907871ac95cb10bab41981ee2cc10:heldout": {
+        "dataset_id": "RGF0YXNldDoy",
+        "dataset_evaluator_id": "RGF0YXNldEV2YWx1YXRvcjoxMA=="
+      }
+    }
+  }
+}

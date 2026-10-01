@@ -1,0 +1,164 @@
+{
+  "verified_at": "2026-09-25T10:13:10Z",
+  "navigation_entries": 757,
+  "category_entries": 116,
+  "document_entries": 641,
+  "captured_documents": 641,
+  "ingested_documents": 641,
+  "revision_count": 641,
+  "fragment_count": 5585,
+  "representation_count": 42570,
+  "corpus_sha256": "527101b5c146ec9b3961f4b4252b2ab009bc7b9209b16abc6f8e9d3ce0d41559",
+  "index": "hwops-cce-manual-v3",
+  "aliases": {
+    "hwops-cce-manual-v3-revisions": [
+      "hwops-cce-manual-v3-verified-revisions"
+    ],
+    "hwops-cce-manual-v3": [
+      "hwops-cce-manual-v3-verified"
+    ]
+  },
+  "public_search_checks": [
+    {
+      "query": "Kubernetes 1.36版本说明",
+      "strategy": "bm25",
+      "expected_source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0131.html",
+      "retrieved_sources": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0462.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0131.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_whsnew_0004.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html"
+      ],
+      "trace_id": "49ae8a2979647899d374bdd14249515c",
+      "passed": true
+    },
+    {
+      "query": "Kubernetes 1.36版本说明",
+      "strategy": "dense",
+      "expected_source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0131.html",
+      "retrieved_sources": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0131.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0131.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0131.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0117.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0099.html"
+      ],
+      "trace_id": "3d80e1cb661669ed92cf37f677329314",
+      "passed": true
+    },
+    {
+      "query": "购买Standard Turbo集群",
+      "strategy": "bm25",
+      "expected_source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+      "retrieved_sources": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0982.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0425.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0980.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0992.html"
+      ],
+      "trace_id": "5633c6e59e1081ef1251002dc8c8c2e8",
+      "passed": true
+    },
+    {
+      "query": "购买Standard Turbo集群",
+      "strategy": "dense",
+      "expected_source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+      "retrieved_sources": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html"
+      ],
+      "trace_id": "ab6e52345b2ea83768977331396a9a46",
+      "passed": true
+    },
+    {
+      "query": "纳管具备安全启动能力的ECS实例",
+      "strategy": "bm25",
+      "expected_source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html",
+      "retrieved_sources": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html"
+      ],
+      "trace_id": "b5da7e26e0a9c49af679bf44f6440106",
+      "passed": true
+    },
+    {
+      "query": "纳管具备安全启动能力的ECS实例",
+      "strategy": "dense",
+      "expected_source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html",
+      "retrieved_sources": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html"
+      ],
+      "trace_id": "fab7a565dac9dbe8e4a4199ac8237b25",
+      "passed": true
+    },
+    {
+      "query": "CCE节点kubelet和runtime组件路径与社区原生配置差异说明",
+      "strategy": "bm25",
+      "expected_source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0883.html",
+      "retrieved_sources": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0883.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0883.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0945.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0302.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0883.html"
+      ],
+      "trace_id": "3861a755ae8a33b565dea5fa7f085bff",
+      "passed": true
+    },
+    {
+      "query": "CCE节点kubelet和runtime组件路径与社区原生配置差异说明",
+      "strategy": "dense",
+      "expected_source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0883.html",
+      "retrieved_sources": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0883.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0883.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0883.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0883.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0883.html"
+      ],
+      "trace_id": "ad285afaccc9187de53c25f934a9686b",
+      "passed": true
+    },
+    {
+      "query": "使用kubectl部署带文件存储卷的有状态工作负载",
+      "strategy": "bm25",
+      "expected_source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0321.html",
+      "retrieved_sources": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0429.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0633.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0334.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0321.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html"
+      ],
+      "trace_id": "053cba59f60bb0ac74d72182cde6212e",
+      "passed": true
+    },
+    {
+      "query": "使用kubectl部署带文件存储卷的有状态工作负载",
+      "strategy": "dense",
+      "expected_source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0321.html",
+      "retrieved_sources": [
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0321.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0321.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0328.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0320.html",
+        "https://support.huaweicloud.com/usermanual-cce/cce_10_0328.html"
+      ],
+      "trace_id": "832627fcf101661abd1ada4ed7cb5f12",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true
+}

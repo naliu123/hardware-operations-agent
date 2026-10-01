@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-25T10:16:28.733099+00:00",
+  "sha256": "0831cba954957a20cf588da7864c6b03c1a7133adc28f3274a710593c5987fe5",
+  "generation_sha256": "edf8578fb9c2dc23f6f436f28ce3be2553a964c5c88bc21baefe28553ae491dd",
+  "corpus_sha256": "527101b5c146ec9b3961f4b4252b2ab009bc7b9209b16abc6f8e9d3ce0d41559",
+  "count": 60,
+  "splits": {
+    "heldout": 20,
+    "development": 40
+  },
+  "categories": {
+    "TABLE_EXPLANATORY": 20,
+    "TABLE_DATA": 10,
+    "IMAGE": 30
+  },
+  "split_categories": {
+    "IMAGE:development": 20,
+    "IMAGE:heldout": 10,
+    "TABLE_DATA:development": 7,
+    "TABLE_DATA:heldout": 3,
+    "TABLE_EXPLANATORY:development": 13,
+    "TABLE_EXPLANATORY:heldout": 7
+  },
+  "source_document_count": 60,
+  "label_origin": "AI_SOURCE_CURATED from source table transforms and vision descriptions; not expert-certified",
+  "primary_metric": "evidence recall at 5 and complete evidence at 5",
+  "target": 0.95,
+  "heldout_policy": "freeze configuration before one-time use; inspected failures retire holdout"
+}

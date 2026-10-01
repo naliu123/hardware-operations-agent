@@ -1,0 +1,407 @@
+[
+  {
+    "case_id": "cce-manual-081",
+    "rrf_constant": 60,
+    "source_hit_at_5": false,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0326.html",
+        "title": "使用kubectl对接已有对象存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0325.html",
+        "title": "使用kubectl自动创建对象存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0318.html",
+        "title": "使用kubectl自动创建文件存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0319.html",
+        "title": "使用kubectl对接已有文件存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html",
+        "title": "1.15集群如何从Flexvolume存储类型迁移到CSI Everest存储类型"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-081",
+    "rrf_constant": 20,
+    "source_hit_at_5": false,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0326.html",
+        "title": "使用kubectl对接已有对象存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0325.html",
+        "title": "使用kubectl自动创建对象存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0318.html",
+        "title": "使用kubectl自动创建文件存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0319.html",
+        "title": "使用kubectl对接已有文件存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html",
+        "title": "1.15集群如何从Flexvolume存储类型迁移到CSI Everest存储类型"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-081",
+    "rrf_constant": 10,
+    "source_hit_at_5": false,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0326.html",
+        "title": "使用kubectl对接已有对象存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0325.html",
+        "title": "使用kubectl自动创建对象存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html",
+        "title": "1.15集群如何从Flexvolume存储类型迁移到CSI Everest存储类型"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0318.html",
+        "title": "使用kubectl自动创建文件存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0319.html",
+        "title": "使用kubectl对接已有文件存储"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-081",
+    "rrf_constant": 5,
+    "source_hit_at_5": false,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0326.html",
+        "title": "使用kubectl对接已有对象存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0325.html",
+        "title": "使用kubectl自动创建对象存储"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html",
+        "title": "1.15集群如何从Flexvolume存储类型迁移到CSI Everest存储类型"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0313.html",
+        "title": "使用kubectl对接已有云硬盘"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html",
+        "title": "1.15集群如何从Flexvolume存储类型迁移到CSI Everest存储类型"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-081",
+    "rrf_constant": 1,
+    "source_hit_at_5": true,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html",
+        "title": "1.15集群如何从Flexvolume存储类型迁移到CSI Everest存储类型"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0313.html",
+        "title": "使用kubectl对接已有云硬盘"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0312.html",
+        "title": "使用kubectl自动创建云硬盘"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_bestpractice_00253.html",
+        "title": "通过StorageClass动态创建SFS Turbo子目录"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0326.html",
+        "title": "使用kubectl对接已有对象存储"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-093",
+    "rrf_constant": 60,
+    "source_hit_at_5": false,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-093",
+    "rrf_constant": 20,
+    "source_hit_at_5": false,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-093",
+    "rrf_constant": 10,
+    "source_hit_at_5": false,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-093",
+    "rrf_constant": 5,
+    "source_hit_at_5": false,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-093",
+    "rrf_constant": 1,
+    "source_hit_at_5": true,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0421.html",
+        "title": "Helm v2与Helm v3的差异及适配方案"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+        "title": "Helm v2 Release转换成Helm v3 Release"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-084",
+    "rrf_constant": 60,
+    "source_hit_at_5": false,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0431.html",
+        "title": "节点限制检查异常处理"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+        "title": "节点自愈功能"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html",
+        "title": "重置节点"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html",
+        "title": "移除节点"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html",
+        "title": "移除节点"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-084",
+    "rrf_constant": 20,
+    "source_hit_at_5": false,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0431.html",
+        "title": "节点限制检查异常处理"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+        "title": "节点自愈功能"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html",
+        "title": "重置节点"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html",
+        "title": "移除节点"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html",
+        "title": "移除节点"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-084",
+    "rrf_constant": 10,
+    "source_hit_at_5": false,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0431.html",
+        "title": "节点限制检查异常处理"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+        "title": "节点自愈功能"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html",
+        "title": "重置节点"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html",
+        "title": "移除节点"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html",
+        "title": "移除节点"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-084",
+    "rrf_constant": 5,
+    "source_hit_at_5": true,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0431.html",
+        "title": "节点限制检查异常处理"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+        "title": "节点自愈功能"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html",
+        "title": "重置节点"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+        "title": "高危操作一览"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+        "title": "节点自愈功能"
+      }
+    ]
+  },
+  {
+    "case_id": "cce-manual-084",
+    "rrf_constant": 1,
+    "source_hit_at_5": true,
+    "sources": [
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+        "title": "高危操作一览"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+        "title": "节点自愈功能"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0431.html",
+        "title": "节点限制检查异常处理"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0186.html",
+        "title": "删除/退订节点"
+      },
+      {
+        "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+        "title": "节点自愈功能"
+      }
+    ]
+  }
+]

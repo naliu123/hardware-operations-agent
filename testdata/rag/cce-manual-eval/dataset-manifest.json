@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+  "seed_sha256": "c31aa9753665cd3084c58491410af0f923f678f6f0a88a74a633c8c0fe51364c",
+  "corpus_sha256": "527101b5c146ec9b3961f4b4252b2ab009bc7b9209b16abc6f8e9d3ce0d41559",
+  "count": 111,
+  "splits": {
+    "development": 75,
+    "heldout": 36
+  },
+  "categories": {
+    "集群": 6,
+    "节点": 5,
+    "节点池": 4,
+    "工作负载": 6,
+    "调度": 6,
+    "网络": 5,
+    "存储": 8,
+    "弹性伸缩": 7,
+    "备份中心": 8,
+    "云原生观测": 4,
+    "云原生成本治理": 6,
+    "AI容器": 6,
+    "命名空间": 6,
+    "配置项与密钥": 4,
+    "插件": 5,
+    "模板（Helm Chart）": 7,
+    "权限": 5,
+    "配置中心": 4,
+    "存储管理-Flexvolume（已弃用）": 4,
+    "高危操作一览": 5
+  },
+  "question_types": {
+    "comparison": 14,
+    "scope": 8,
+    "version": 9,
+    "concept": 18,
+    "constraint": 15,
+    "numeric": 8,
+    "procedure": 16,
+    "scenario": 9,
+    "command": 1,
+    "conflict": 1,
+    "unanswerable": 12
+  },
+  "source_document_count": 75,
+  "leakage_group_count": 60,
+  "label_origin": "AI_SOURCE_CURATED; not expert-certified",
+  "primary_metric": "binary fully-correct-and-grounded answer rate, errors included",
+  "target": 0.95,
+  "heldout_policy": "freeze config before use; inspected failures retire holdout",
+  "limitations": [
+    "Representative chapter coverage, not a random sample of all 641 documents.",
+    "Questions were authored from source, not sampled from production traffic.",
+    "Known 03a high-risk cases and discovered Helm conflict stay in development.",
+    "Related document families stay together; some chapters consequently occur in only one split."
+  ]
+}

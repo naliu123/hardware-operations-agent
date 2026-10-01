@@ -1,0 +1,4598 @@
+{
+  "schema_version": 2,
+  "index": "hwops-cce-manual-v3",
+  "corpus_sha256": "527101b5c146ec9b3961f4b4252b2ab009bc7b9209b16abc6f8e9d3ce0d41559",
+  "navigation_sha256": "e265f860bcd4b74663f57feae0a79452b29b2feede3c32460aa229bc7edcb489",
+  "enrichment_sha256": "90370871f2734a2d1890bf0037dbc4b8e3a27f45068dc4ff15eb6f2b859a2af1",
+  "documents": {
+    "cce_10_0054": {
+      "title": "高危操作一览",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+      "content_sha256": "74606d65851002a616dc9b9dc58670e72fa4a6370f23b4bb59ffe9b650fbe352",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "74606d65851002a616dc9b9dc58670e72fa4a6370f23b4bb59ffe9b650fbe352",
+          "revision_id": "WVUA7IFI34O4OG6CCQ2SFXHIC5",
+          "status": "PUBLISHED",
+          "fragment_count": 15,
+          "fragment_ids": [
+            "BXOIXKCVH2IKTMQHNPXSPYLIG7",
+            "CDS6VHSNPXZTLUAKRKJ454S36L",
+            "KCENPMJMQWFXNVEBV5Y36ZIMSO",
+            "BRGN6HIIXEHEFTWHAPQLG7DZ6Q",
+            "7N5OAPIDBOWT4LDMBUSHJB3KD3",
+            "4EE3RPYM534P2YHILOH7X3QKOD",
+            "TDTFIQI7YCD45TW2O5EFJHQEX2",
+            "2DLKH55QVXX2RB27IQKWS2BHSY",
+            "6LSLGPFYQDBTA3ZUMBISO5QPBY",
+            "5VJQQIFSOKHKHCGRZ2LPOYR3AG",
+            "ROXFFUHFFPX4NSONCNUOE5EXJS",
+            "YQOCJMDHXCL5H5BGWRN2FQXOCF",
+            "6TKSSE3WHCFF4TPWDIVTSZXNNH",
+            "5XD57AURXPZ46GVI3NVQ7QGD7K",
+            "IJHO4ZTIQ5FPL6CDVXUH6K4S3F"
+          ]
+        }
+      ]
+    },
+    "cce_10_0430": {
+      "title": "集群概述",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0430.html",
+      "content_sha256": "8e6ac6ce30b1d113ffd0d45863b0056200e412aed04481534a17aa694b047872",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "8e6ac6ce30b1d113ffd0d45863b0056200e412aed04481534a17aa694b047872",
+          "revision_id": "AIGOXEQMI74KUBRDT46JWXXT7D",
+          "status": "PUBLISHED",
+          "fragment_count": 10,
+          "fragment_ids": [
+            "AKTI3QEF4QA6IICLFAAYSCWZOT",
+            "DJVNUMYIV2D7QQ5SIJRYX6W53M",
+            "JSA2JIBIIQYMBUWPVCDPPJFBC6",
+            "AIPDJCR74NAUIOBBA3HXYFH4SB",
+            "7FC6XET662YUNCPHXHEIJIHOB5",
+            "VEQ3UR7NHB62LZILMB7I36AJM5",
+            "HP7DN4YSTXNNUM6THGZ5QOHVII",
+            "UKDFSDWYRWCVGG4HWCWOYQS32Q",
+            "4FGWWEBC5QIPII7NRVQOADC3VY",
+            "XQ6HT3A3JKDNUZZMC4Q5LRIHXL"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0131": {
+      "title": "Kubernetes 1.36版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0131.html",
+      "content_sha256": "14840adfbd7a089f40c81aad1ac4a8c395c2ef07e5fa119f6dd053fc0b82cf04",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "14840adfbd7a089f40c81aad1ac4a8c395c2ef07e5fa119f6dd053fc0b82cf04",
+          "revision_id": "RSPZQZ4SIPYSGNMVMDPIZPNN23",
+          "status": "PUBLISHED",
+          "fragment_count": 23,
+          "fragment_ids": [
+            "UEIVISSCZF7GFUED75X2OCI7ZU",
+            "2DZNPDV4DIZZHE6JMKQOGKJOVG",
+            "OL2FHRXKYAUK5DEJVTU242VCWP",
+            "HHTBKWC4EZKJBAZI7CTKWF6C4K",
+            "3V7W5HBKROL56OSAMNFGPFEPZR",
+            "AXPCUIHROX46A32QRJIYCTUC3T",
+            "S7Q7MSIDY6CGDLVSMBQPARBIYZ",
+            "AEGWXTE7NEYF7BZEKGRFXYQ7OU",
+            "2JDEIVADAONPEXRHDXVKQDQJKZ",
+            "7ZMHHXXMLCUMJFHCVUUX4HLM33",
+            "73VPBHODLPV4YB7MKSCLBH55X5",
+            "KVK7XPW3ZBSATZVR667QHTDJNF",
+            "UTRUKAG4XZJ5VOZJGUVND2GCWD",
+            "5B4PNKSXKMW52WICUWHHKPLVY7",
+            "N7AIMT65AYX3E3A5LYVSCLZXJI",
+            "L6FBNUUGAIWFAJZQ3TWNMTS2FD",
+            "DBBLP2K7GULK3UTMYIFOJZZEN4",
+            "4F4SNOJ7GG7WIXDVC43MHH57AT",
+            "WR6UI57PLVQRK7TPHONVIE25O3",
+            "CYO5ZXET2LUT3OZPZCEDZYU6ML",
+            "ANMVGVDF4APKEFG3BUESRLDBGB",
+            "U7GWOCLWTDOXJH5LTBIOW37ZEL",
+            "QYO6DJGXXZMPX67FPARRTXCT4A"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0117": {
+      "title": "Kubernetes 1.35版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0117.html",
+      "content_sha256": "87d25c71cc68481681309ea88ec0bc1dd387fca1c9077c58bbe86867adeeb37a",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "87d25c71cc68481681309ea88ec0bc1dd387fca1c9077c58bbe86867adeeb37a",
+          "revision_id": "FHDZPZJDNHN3GKA245TIGQISVL",
+          "status": "PUBLISHED",
+          "fragment_count": 21,
+          "fragment_ids": [
+            "ZZJ33OGWYYNRQ63FMPT5HWD3VO",
+            "6FWR44WE5QVHRHZTFJ7HV63VO2",
+            "FRQVEXB5FPQ23ILAXLR3CREK3C",
+            "NPUU7UJKW4YLIMYKYK7U4NXQFN",
+            "OYS5OYIKUTTLTOTCADYLYTLWAH",
+            "C6I3OON7SYJ3O3QRAYKVOYTMHZ",
+            "6WR2NQYWFVJCV44FIF3NZILPZW",
+            "RNBM7QG7CT6HNB4AHUZS2CLDVB",
+            "MRXKHL4DHSEXCLXGUKTNJTFXLO",
+            "GM44OAUSQY54NIAIO2CKZQ6NDB",
+            "GOHRMEC5KGJFRPE5YCLFL6N6LK",
+            "ZNODKISSOQI2T6Z5XGOOM3EFZU",
+            "RMBWTPLHX5RCKP5P5MRWUUQ3EC",
+            "U63UH7FJRXWIEXOQCOJOH3UWNK",
+            "6GZSLSBGH245X3PKD6BCQIST5K",
+            "4QHHR4YHVWMIA4WLGUHJRM2RKL",
+            "JXUWFOUOZ42ZQDXLCKC44ZD3DN",
+            "TFGUQKZOF5IR75PBKB4XCETZ56",
+            "SWTX7X66QR4LL7W2FPD4U64IFT",
+            "LMD4DLQQVMJH3ABXDDLOGWVXML",
+            "EZ636LE4DWSIWACR6EXRIIPJZ3"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0108": {
+      "title": "Kubernetes 1.34版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0108.html",
+      "content_sha256": "b20a438a2abf3ef9c83b0dbb5a7ff35d700930b88567aa40012e08f54191d419",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "b20a438a2abf3ef9c83b0dbb5a7ff35d700930b88567aa40012e08f54191d419",
+          "revision_id": "QZCJKW6TY3KV5HB5LCYK75U533",
+          "status": "PUBLISHED",
+          "fragment_count": 8,
+          "fragment_ids": [
+            "ARKAN2YLVUJ6M56YZA2CIPJEMB",
+            "BRPM6HD7YOAU5H54RD7LSAOMIS",
+            "CRDWBKRT2PIOCI7TCZTJZ7DPP2",
+            "3UEJRVIOX5ONE7C2KPATRIIVXD",
+            "64WXKAMDHZHKNZ5TVP7IQVESIY",
+            "CSZ2A3NJIMZBPJ7YHPQNHXYU2T",
+            "ENIIAZUFR72BK5RADKQ6VHFJVO",
+            "7HHOBZTSQLHJ4R6BZDMY4MO7VK"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0105": {
+      "title": "Kubernetes 1.33版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0105.html",
+      "content_sha256": "681c7eb1f1b5fcfa774304f83127021f4ef6fcb24b2d36605ae59dd20e9cf836",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "681c7eb1f1b5fcfa774304f83127021f4ef6fcb24b2d36605ae59dd20e9cf836",
+          "revision_id": "WIZB6ZK765QI76MO3JFCSRHHCD",
+          "status": "PUBLISHED",
+          "fragment_count": 10,
+          "fragment_ids": [
+            "ORCP5QF4JSTACKSV2JSFHSLSU5",
+            "6LNJZEJQPIZML2YB2UNP6HURCQ",
+            "ENRTPFHBSQGYKPQTWY6WXOYSGT",
+            "TYZ4JXZ6QLOFNYHHNRQPAPFVXV",
+            "YS4UFWATWKYH6BNJA6YHDZJDXK",
+            "3IVCBQZVBLQIZGMHAOXW2B7UNU",
+            "QENELAICPRPJQJYCX47L6VMIHZ",
+            "3RRBRFG2SA5PUK66JKFABTMXQU",
+            "6OOHMDJHQSRPDTDW4IFIUPTUIO",
+            "HB56P5EY6V4URBIT7M3FNKP4HX"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0104": {
+      "title": "Kubernetes 1.32版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0104.html",
+      "content_sha256": "d4b895308c0f3dbd8b2014871d06cbace3f19a043ee65059fb5848299e894c88",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "d4b895308c0f3dbd8b2014871d06cbace3f19a043ee65059fb5848299e894c88",
+          "revision_id": "EDCHCMQK2MOOYAKVGPYDHFEM7B",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "7PDJZAYTW5SFD7QLREJNEJ5Z4C",
+            "OHITTHK6US6KOCBZ5TASL3TS2R",
+            "MZSNZDJWREV6CV4KCB6M4HFCXI",
+            "RLTLY34ICYUYERUCUY4VONBEHC",
+            "XMMJ3DXR7VD7ZRECB6RN2U2XBH"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0099": {
+      "title": "Kubernetes 1.31版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0099.html",
+      "content_sha256": "4548519c786b60a514a5933b540f8b9298591f49b61db983a1e82751ff86c4a0",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "4548519c786b60a514a5933b540f8b9298591f49b61db983a1e82751ff86c4a0",
+          "revision_id": "F4EKUKFW3SZKPS3EHTRL2N6HMK",
+          "status": "PUBLISHED",
+          "fragment_count": 9,
+          "fragment_ids": [
+            "JPWHTSBTJURPGT6S3VE2SECVBT",
+            "GLL7KH7EBOFSQ7J2MR5X66BGX5",
+            "Q2ECCKGK7OKGGUDKDGPLWAS7P6",
+            "R2FG5KAQMQXRNPJMNI3RLAPKQS",
+            "TJRFQXCCV64LE4IW4EMQIXNECL",
+            "MLKDWUBM7KESBAD6JM5SDR6JVJ",
+            "JRJOCVO4HXX65IPUH4G5BCALXR",
+            "TFXKHU4QRT2SZAKTOMSDTRM66A",
+            "7VGK3OZZRHSJNQ26R652XTG7MK"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0095": {
+      "title": "Kubernetes 1.30版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0095.html",
+      "content_sha256": "8574d0ad6155d0f0c05b0f6aa82b190267a188ab9ae86b22a82c9cc1430de78f",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "8574d0ad6155d0f0c05b0f6aa82b190267a188ab9ae86b22a82c9cc1430de78f",
+          "revision_id": "XKEBWBLHFDIEF7JNJOXX6JD4RI",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "HRKDXKWNNZETVE44P7276VZIBL",
+            "THESNAY53PT4TWEM7NB2DONXI7",
+            "TMYK3AOGZTHNM7H2DNWIWNSX7M",
+            "V7CI5ELPN6PII2JZE5EYZKUFFA",
+            "2IS2GRWFEX6IGCGHSFA4V7CSIT"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0089": {
+      "title": "Kubernetes 1.29版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0089.html",
+      "content_sha256": "f745cb55c5f3afb51715c84948adc616f67b88975c3b5526814b4e4f3b7b0c39",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "f745cb55c5f3afb51715c84948adc616f67b88975c3b5526814b4e4f3b7b0c39",
+          "revision_id": "ZWBXTD2NFPUNT6TMM6SGI6PEHZ",
+          "status": "PUBLISHED",
+          "fragment_count": 7,
+          "fragment_ids": [
+            "OSP5DQLXTK64RDN5WT4RIQFSOC",
+            "72NUCTI6QPWZRROHRXNYB6UG2A",
+            "TNVCDW565GQTHULRESRGX46PX3",
+            "HYSIJTKM4LNLOIYSDNYWF4B3VH",
+            "3EGTNCVGOUDLWY626N3C6GLKTN",
+            "XPVHZYUPN3HMLEV2ZJI63KT6LG",
+            "34QO5EIQGTRVZUZW6PMAHFO4EA"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0068": {
+      "title": "（停止维护） Kubernetes 1.28版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0068.html",
+      "content_sha256": "96b329646ea56f8291bb9fe9d3639f1c74a5cb2bc91adea0e199877e51e3de1a",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "96b329646ea56f8291bb9fe9d3639f1c74a5cb2bc91adea0e199877e51e3de1a",
+          "revision_id": "TQ662GPI4S3BVMCLVX2SK6BLMW",
+          "status": "PUBLISHED",
+          "fragment_count": 11,
+          "fragment_ids": [
+            "WPKXSXFCL42EBGGH2BMQMNWNUB",
+            "JN6QF6IUZTFL6HJAUYY6FFMMXJ",
+            "P6RLXXSLAVD3XGR7BMH5VHWGJD",
+            "GY64XNNZL7SPGSDJEYYNC6DQX5",
+            "VWBC4YJEYKUSEX6LD3Y33MDGXP",
+            "GLQL6EU3SYBGHIUIHXQBF3T3L2",
+            "DDO5DD3MTD6SVBGHW63BCHPSD2",
+            "WZBZHTUSO4Y46ESIJ5ALBFVWTQ",
+            "WOL5K6BIKW44YQR6CK53ATQVA6",
+            "S6F5VQ2GNBLDVXUCZWTWGYFQU6",
+            "C5SMGECX5T6GMUSJ5ZWOH4ONLT"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0059": {
+      "title": "（停止维护）Kubernetes 1.27版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0059.html",
+      "content_sha256": "8640dc9869f4e6f72e094fc72d32152bd353d1f9b4444023077352dee79b87de",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "8640dc9869f4e6f72e094fc72d32152bd353d1f9b4444023077352dee79b87de",
+          "revision_id": "V32MALBEZBQVRAZSI644IENKBE",
+          "status": "PUBLISHED",
+          "fragment_count": 25,
+          "fragment_ids": [
+            "EJ5EWEMVBE26YODLCW7I2HPSJO",
+            "E7E67DADYEEWE2QOTGY6JVFXYJ",
+            "WEPFIT3Y7C6KY5D5ZXX2Q5KSRM",
+            "DI3A3K7AR3XELHXDMZG25BUGKE",
+            "LNUAQSZT32ITTPATE6NED6NWIN",
+            "A3NQZQONRJKU62G2YMPEUQSRE6",
+            "XQBX7X4EFRA7BMBOAKVDEMO3QH",
+            "WNIURERWE2DNWQOEXRRTXS3EPB",
+            "PYISOXCQDWJ5J5MTPM4GZ4FOJ6",
+            "PLWLL4ID22YRYDCTVFLLPKUFRT",
+            "64ZZM7WVWIZNVKX4H7IODW3PU3",
+            "WSXIDZB3O7ABPI574NJHINBTPX",
+            "YVW3YLVC56HGB4TRKM53VV3GKB",
+            "3VCCPFUBQYHJXKI2R3RIJEWXHE",
+            "VGKMZIT4JQ267YZAWGUYFSDERQ",
+            "2RRRQLYZJ7GFQC65RJ2MMYRLDG",
+            "LCLANXH46PFHQ3WEZNVEZT4SBC",
+            "7UY4FJ6PUJF5YDZBNXGL4EXEE7",
+            "7MKKPGIDPM7K6YMIIP4WLJC5KD",
+            "4REZBRSYBNPFUA6REO47BX25ND",
+            "YCPWNRAWLIODYNZNJSO6PF6DBI",
+            "PZOALTOFPLSVSZZB4J3TZKFH4G",
+            "HZYLZZEXY7MBIYZMZP5JO4R3IH",
+            "M2UUMEPE5S3DVZR2V4E73PJ2LE",
+            "SYFABQTUSCQAQQ6DSPTL75QYAA"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0058": {
+      "title": "（停止维护）Kubernetes 1.25版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0058.html",
+      "content_sha256": "055fb82fa3fafb82d907bca6aae7f7f622303e01f3ae206ea48e7e0132cc0454",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "055fb82fa3fafb82d907bca6aae7f7f622303e01f3ae206ea48e7e0132cc0454",
+          "revision_id": "35W3YZMJF2Z2U67CXKA43H5LFF",
+          "status": "PUBLISHED",
+          "fragment_count": 29,
+          "fragment_ids": [
+            "ZO73PNPIFQ7AMKPBUAID3N32QU",
+            "OAQYHCVSCVUY7SLTUPAP6YM7FI",
+            "CLMKKQMMJQF4NIEZ6AUVCJ43TQ",
+            "USRMNQ2TUZ3F6A4I62T67CFUUZ",
+            "2WAWFC4Q3RYF5XUGDKVIIREK2P",
+            "WXLYYLFWPXXHU4KG2FJJRSEHVC",
+            "UOQRQTWDLAV3E7FDWC4HTV32QL",
+            "2GZFOWRXWA56BH7MSRS627JCWF",
+            "GVSRCATGN64HANC6NXJUIYYBMX",
+            "IADYTA75E2FUFAM6CEVUIX5XH5",
+            "IERB24VBTPS5JWSD4ASJK2K53F",
+            "EYZZSP3MYSINXPCBZB6KRXIJTR",
+            "CB6BOT2NU5TNZ5CEZRKL5J6DWS",
+            "3TNKG7KHUX6L46DLASUADO3ZAC",
+            "4THG4KUYZ34GWNUUTXSSEHQ2QU",
+            "X4LJA4GFBK5VLDXEUVJFO74LLX",
+            "UFGUTWUJZHRZQ3MZOCBZXATAQM",
+            "RNN3JE3IKQKYJWFB35QJTQNSOF",
+            "Z4D3ORVFAIQX5GKDX47YOVXOAL",
+            "5ZVUFMWCJ5L6J6OKPDIE342IPO",
+            "YNZ44W3EQYMRQ7ZQKQWX3XO5N4",
+            "IMHDUQNCLEVVW7SBG47Z5UX6MD",
+            "5FOJ5L6MOCJMCXBRZEUW33IYLP",
+            "ZCTKGOPVVSJ6ARSKLDTWEASYF5",
+            "FDXQXRZEXUJGPCWC74QKVDXDFL",
+            "Z36GOB7JAC73MPXQXSB6YPJWMZ",
+            "MNMZ54NM4IWZXQ3D27CAEE74HC",
+            "PZMBVB4D4I5BK7ATB2JDOJICUL",
+            "XNG6JDXWLPL5OK2VXEWR6JHIU4"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0027": {
+      "title": "（停止维护）Kubernetes 1.23版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0027.html",
+      "content_sha256": "0ee02a00705ffacd341c231ba2e6a71eb9a9c3e44aa2cb345bbe3c905d64358f",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "0ee02a00705ffacd341c231ba2e6a71eb9a9c3e44aa2cb345bbe3c905d64358f",
+          "revision_id": "LOLJDDJFJ5FLW3C43YXVNF65NZ",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "YZCIXBQXE3ZU5QEKC3CF4ZSWBG",
+            "3IYUEXSDQC7AXP3UZMOSY4QTJH",
+            "X4KRXHSRFCKQJ3BIH2NZWBUOJS",
+            "KJBUAM7TCJE7B4CXA42FT2I7BS",
+            "4SISETE7IKNN3QLMIVEUAUAKKX"
+          ]
+        }
+      ]
+    },
+    "cce_bulletin_0026": {
+      "title": "（停止维护）Kubernetes 1.21版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0026.html",
+      "content_sha256": "12d8be33f30a966d2316df7b63930f289f30c4b193f65c723ae87d08ca594066",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "12d8be33f30a966d2316df7b63930f289f30c4b193f65c723ae87d08ca594066",
+          "revision_id": "IKKS3PTUYCEVEOZ5PCFV6B6MMH",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "5KPNCSMVBI7T76E2ZRUE5GNAQH",
+            "4VBZEZPTUCNW6VW7R4ZA3WJB5F",
+            "YLP2ZYHNIHACFMMLJCJC53DMHE",
+            "ZLPD3C3AAQFL2RE4XIJGASPGOC"
+          ]
+        }
+      ]
+    },
+    "cce_whsnew_0010": {
+      "title": "（停止维护）Kubernetes 1.19版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_whsnew_0010.html",
+      "content_sha256": "85c6a0adfbed48a9a64e16dd151a08389a471721481811060a77a155d688e795",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "85c6a0adfbed48a9a64e16dd151a08389a471721481811060a77a155d688e795",
+          "revision_id": "VC54TZVXXD25UVCAZ4KPSA6ELA",
+          "status": "PUBLISHED",
+          "fragment_count": 11,
+          "fragment_ids": [
+            "RQ443UZNE4L3WWXM52GDUVRMNA",
+            "XTVIAAV4GVIFWDLYWMKSI3QGIL",
+            "2ECQG2WIXHRVORMIILGULMTOU3",
+            "5PXW4LCI2SKN4DNDDBD3NKMXRR",
+            "Y2IURCNGKKAFN4LPM642HH4YRG",
+            "IR3NJW7SOU3XWQGPX5A6P3SZ7A",
+            "ESXPEEUPP5MCBK7CUVBZRSJ7IU",
+            "MP52SCBE7O7KZ4WVGUFXVZFZEO",
+            "YSGSGUBPM62BIRYTEYK5NZNGGC",
+            "4KFOFOS45ZTBOIMJBKQXTQQ3LA",
+            "SFD5FPO2NZ2TMOLBR65AJDX55M"
+          ]
+        }
+      ]
+    },
+    "cce_whsnew_0007": {
+      "title": "（停止维护）Kubernetes 1.17版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_whsnew_0007.html",
+      "content_sha256": "4ff53c7244e1e0a24914772f39f15fe02aa3eb75ae137ca8030c195d6212e413",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "4ff53c7244e1e0a24914772f39f15fe02aa3eb75ae137ca8030c195d6212e413",
+          "revision_id": "6FCCBU4F234CA2A74UV4CEGTH2",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "FOWGFV4TNFSBHCCQRR5B4RWFZK",
+            "TLWPQRLF6E45OH6P5G2CB6EUIE",
+            "DLAYTP5OLQB5ZTDWNUZ3QGW4EZ",
+            "M6XXSFNN2QI5VGPEYK6ZMCG3XZ"
+          ]
+        }
+      ]
+    },
+    "cce_whsnew_0006": {
+      "title": "（停止维护）Kubernetes 1.15版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_whsnew_0006.html",
+      "content_sha256": "a08b6d6ec84bc613c813331553fd1c827572aadd9272f3cab0e00789046f47f3",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "a08b6d6ec84bc613c813331553fd1c827572aadd9272f3cab0e00789046f47f3",
+          "revision_id": "FSKQ2ZGB7OGPUFBNG2VUZOR5K3",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "EWKW5NXDRN23BCZEWJBRTDTTFX",
+            "44KOIZQOELJO3AQKLMQH4XR3WW",
+            "QSAVAFLSGV3ZTST5GO4PMKHMQ5",
+            "YJEK6PL7Q6K4XMHGHTB3RVTVAS"
+          ]
+        }
+      ]
+    },
+    "cce_whsnew_0009": {
+      "title": "（停止维护）Kubernetes 1.13版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_whsnew_0009.html",
+      "content_sha256": "84677aab7cab5b0eb116db50ae707d2bf829c3213f40752099e2861e890e73c1",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "84677aab7cab5b0eb116db50ae707d2bf829c3213f40752099e2861e890e73c1",
+          "revision_id": "5ZJ74ZOXH5V2TQGFMBFOFB3NWL",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "FMFPK73QNVCVZ6MYLT4SXZIGIE",
+            "2KXHBXVVXQQCKMYRX6H6RPD27R"
+          ]
+        }
+      ]
+    },
+    "cce_whsnew_0004": {
+      "title": "（停止维护）Kubernetes 1.11版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_whsnew_0004.html",
+      "content_sha256": "47113b1aaa8ba88e23b73d82debc9c34d07012a023a876a88d9b9d49572cc131",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "47113b1aaa8ba88e23b73d82debc9c34d07012a023a876a88d9b9d49572cc131",
+          "revision_id": "56EKJSF7FR3MIMX2ZBI5PSWPSE",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "EZKBXVGXAWCBSP5JT6UEVTNURR",
+            "PD5GRZEIXUKIOOAAI3MSUSLDDE"
+          ]
+        }
+      ]
+    },
+    "cce_whsnew_0008": {
+      "title": "（停止维护）Kubernetes 1.9及之前版本说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_whsnew_0008.html",
+      "content_sha256": "3f153b0979326720dc73d02700267f6021588cf1c0cfba29b1aad4422e65547f",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "3f153b0979326720dc73d02700267f6021588cf1c0cfba29b1aad4422e65547f",
+          "revision_id": "BCTVC2TT27L2LXAEVNCHIJGDZH",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "QEGFM6WNBY2VLBQYVU4XVJSFJ4",
+            "FZM6SVJKDZK6CAXZML3NDPPKFC",
+            "O5ZQURHLJGKOL37CZVVQEIIXB4",
+            "J64ZT64ZZCXTDORVZO3XGNUI5A"
+          ]
+        }
+      ]
+    },
+    "cce_10_0405": {
+      "title": "CCE补丁版本发布记录",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+      "content_sha256": "636bed85a0b2983fc8b46942a7077a3d068e3a454447af7c021fcafb6d5d8dd1",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "636bed85a0b2983fc8b46942a7077a3d068e3a454447af7c021fcafb6d5d8dd1",
+          "revision_id": "2GUQV2G2OBDPUXXSSL3R3HGWNV",
+          "status": "PUBLISHED",
+          "fragment_count": 67,
+          "fragment_ids": [
+            "AF6TCI5NWXCCLC2KM23LGZGXQC",
+            "GBIPWOTO3NF4YRO2ZBJUQ5UJFP",
+            "XAM4HO2UGP5ZDAICAOEKJXNTF6",
+            "FS5ZY4HIUGWWJW52BE2DCS6UOG",
+            "OZVU2KWJEQ5NWZ4AGHK5FCWI6Z",
+            "6SNGZ5K5OOW3B5PI4X2NNTHYVN",
+            "AHG7TKMUBFSTCHDFJBL5IS4KQH",
+            "WSTEDT2PVQBWJEKGJECZFDUII4",
+            "PO6XL64KFJ6TEEFCF52TNZLYLL",
+            "EG7HGSDWLKBDZBCZTGOVVJKCDF",
+            "6FRWN46I56FY7A4JRKK4R6EGYH",
+            "VYGEE27GVNLGDXYBPHUMYZVMZ5",
+            "VT4L4FL5B7YTZWKCY74N54HZ7R",
+            "IPDIUMDHE5JW26QVM33TZS6Q32",
+            "2QYMFERIL4FWVCRT55EYL5HNZO",
+            "UZVPUU3CEB6UFBWCBXZWTGJXGF",
+            "BG2ZIQAKV7LXYSIWCSJQQFXFY5",
+            "PHRSZEUZIH2LPHV4JQFFZNPGHY",
+            "4NOJE26JNM3UBKQS3IKMQINHX6",
+            "74D6COS4EQ4Z4CFYOIMZYGKXEA",
+            "JEQJTDVQAOVPKYBL5ZE35MJX4M",
+            "6E3AJKJDEBEWFJGWQ2L4NZBGSQ",
+            "SIMW27RF4GCGFTN44DZWJU3EZQ",
+            "AIRF2TVZNAGVV4OKMSGJI2HY7E",
+            "HPOYSZRSBRPZQTYFPBB44MTW3F",
+            "O266NYGSA2D66NC5IZQXTF5XUO",
+            "54DRN3BDYJ673DRLNL7MGZNFRP",
+            "NNXEQBIEJROQXZNNVN4QUC7M4S",
+            "TJNCLSBDR7M4DH6FYWKU7ZW4IB",
+            "QKQJ7CTDDGTVIWEVWJ6GDI4W5U",
+            "4D54XXIIQJ5SSCS6XJFXXA5DXP",
+            "AFIQCUMEJZKUKZYVJNXTGLX5WS",
+            "POXGL6U2GS6Q2376UO2HYZ3RG3",
+            "6B77R7CCKZ4ZP5NT4PXUVXPMU5",
+            "D3Z7NGYU5T2O6LST72X2ZTQX7B",
+            "CZGA2LLBWCIWE2TXAPNW45RBTZ",
+            "X4BZSQJ7F36NQKCC3BDY2CY74X",
+            "SRPOITPQEJREF45TUQATQN7WAY",
+            "FIKPYFPPVKDE4A3HVTI53EAKBH",
+            "3WHQVF7TUG7I3O4A3MR5XY5DUP",
+            "5B5L52L5QQYYPN6G6QYA5TLTAL",
+            "HAQ3TKYPMRDN5MVFRZCKZH3AFD",
+            "33HWXK6Y5D2DSEUQI3CCAMNFCL",
+            "3A5OYPARDWFT6DYF7ZAAUWFECT",
+            "BZTRS2F3TXV6QCPAJEB3Z6FDOY",
+            "3I3D6H7VVILYGCPAMWJC6EPOK7",
+            "BLBE5KBWNSBMVXQUW4HAL2SQ37",
+            "EJ53X3KPG44XN7OMM66LBEGQWZ",
+            "W6KL7S2OEU3UY4A4KKLJ4KO7CQ",
+            "TWB76G6IV46WA7C55VU27YVABQ",
+            "RNIMY5BEGRVFNHXYVB526PLWJ2",
+            "NRNZDR5ONFPO473I7Q7SXMT7AL",
+            "X5FWKRK45M4E6BLG4EV7MI3HDE",
+            "UFFCQPLDJGHVRR7MXUKESKGU42",
+            "KP57WDTA5VL7KNETKMJ6AULTRN",
+            "2ROZBYI7DZXFHPEFDNFAKATCQA",
+            "WYYML3LRVO7MT2HVMUNTPKCO4P",
+            "T2M4SFJ5KRFDIR5DVLB5XVVKW3",
+            "DAY7P2OZEOM6IRWI7PLQ76CG6M",
+            "6IH2XDKVIJAGKVRKESSF3JABBK",
+            "D27KTIWMEJVIZ7V7PA365NPQAK",
+            "GLZUDI6RFBKTX3HKHAV4QFGL2Z",
+            "GHIHQKD2GTOMQHQKNR2CRNW52U",
+            "KNKA5RQMFNPXU47WZWQF53VDIC",
+            "NW53JEAJPBRNAYR5LQAYELXB4J",
+            "S7FUQVEDVFTS7XEWSINCI6245S",
+            "64TFCSJF5YFQIKJUGVML4VY2PB"
+          ]
+        }
+      ]
+    },
+    "cce_10_0342": {
+      "title": "集群类型对比",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0342.html",
+      "content_sha256": "3388382e0ad9068e1ba7300f80aee1aaddf3a4e2344a202d93675f89c5a9b8fc",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "3388382e0ad9068e1ba7300f80aee1aaddf3a4e2344a202d93675f89c5a9b8fc",
+          "revision_id": "KCGKKVA6IFAH64BCKZM5VHRTNE",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "XP3IBSIWQHVIDYSZ5R5XKSEJUL"
+          ]
+        }
+      ]
+    },
+    "cce_10_1112": {
+      "title": "不同集群规格的资源数据量说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1112.html",
+      "content_sha256": "9fc26d0a2e01601b611485323e2c49aa96dfadef01cacac4dc2eb823a96acb0c",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "9fc26d0a2e01601b611485323e2c49aa96dfadef01cacac4dc2eb823a96acb0c",
+          "revision_id": "42MPVT5MIRSDUQXYXL7YQR72PC",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "5LDBGCMEH6DY5EAPYGZHAFOI33",
+            "DYWNVW53DKQ7Q2JEAK3J4YACRE",
+            "HTEBEOF7T7DLC4K7XTYHSVQIAJ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0028": {
+      "title": "购买Standard/Turbo集群",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+      "content_sha256": "2676ec40eb58e9fb4fb8a5f02be2850e450a683a4bf1dd67cf9a7a847a60575a",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "2676ec40eb58e9fb4fb8a5f02be2850e450a683a4bf1dd67cf9a7a847a60575a",
+          "revision_id": "J4YMKGSUKVZUJITJSOXHRSO2MC",
+          "status": "PUBLISHED",
+          "fragment_count": 30,
+          "fragment_ids": [
+            "Q3LQXB7XGBK2RRCTSV25BMSKOR",
+            "SBOSNLBTHLIOFWW7VGPJA6PCIG",
+            "ENRO5PFN4NAOT56DNTOJQL3OMU",
+            "J4IR7O2VI2A3RQDJJABD7VJUEQ",
+            "5PSLMP73FEMN4XI7WMHFL7WZLB",
+            "K4GUKAMXLB32MAG25NKPZW3OEW",
+            "F3BMKD4C44A7KTR2XSNVDPS53S",
+            "FLDWWU4DPO2F5TEGZ6EZWGFXOI",
+            "LWEUKUCWTFKGXDFXYQDMUX37XF",
+            "AMZOLBQ44XOBUUEJXJ7OXB25AO",
+            "AXRGTNRKA4ECCOYBILMV7LPJKW",
+            "AKUCNQMM5BHSJFO5ZUKRWJMAK4",
+            "CWQNNTLRPS5EJ7PMCEGY75JZKD",
+            "5TEQ6552KN3Z7ICBHM5ZZLONVP",
+            "RXLB7Q45PJKPFC7LXJ6FB426KE",
+            "V7MWS3FGQX6UHVT6GAQE2KJ3XA",
+            "KJUT5LD4H4YAHLNJP2UWENVB4E",
+            "3HIWE2NGEP7GBIQETDWJLTCYHV",
+            "D4MJEEPAZCBOUM7A6LEBJ5I6LX",
+            "MDCBQZTYJUIQLPUOSVWR2ZFQDS",
+            "XEDOVIKAMFR3NMKU3LSIRTISFP",
+            "ZOODYHMLYHJFNOKPGK66IIGUN6",
+            "XDTQGC7V5DZRHJP6LEK3YJFQDY",
+            "ZTDOSCYTAD4CZRWD5C5RFF6T4P",
+            "ROAX7QO6YE7CNRG6JG3FX5VOI4",
+            "ZNULXJWIZ72QQ6CUWBFRWECYGB",
+            "L7V4C6SLLF3OL6B6ZRMVC6IVZI",
+            "MUIFBWVXL372OEVNJPYTG7UP3Q",
+            "7I3BK5ZEMYXDSMTDAFMBX6NHD5",
+            "QPDUFP5ELF4SVNPPCKXZTH76NL"
+          ]
+        }
+      ]
+    },
+    "cce_10_0840": {
+      "title": "在CCE Turbo分布式集群中使用边缘云资源",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0840.html",
+      "content_sha256": "18e676410c3ad00b7e8fac6502a5b747bdfea2ccda376016f6f7d0e1a858489b",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "18e676410c3ad00b7e8fac6502a5b747bdfea2ccda376016f6f7d0e1a858489b",
+          "revision_id": "CXKA5XVNV4WKFZ3UJACW22RSS4",
+          "status": "PUBLISHED",
+          "fragment_count": 19,
+          "fragment_ids": [
+            "H5FMYCAGOXW4UAKAQ4A5IM2BCV",
+            "Z63ACCHNPRMSS4QWUNVF4GEUM4",
+            "U3BA5HQTFLKFBMFYKFDMLPNVDQ",
+            "RY67DUUTV4X7XA6K7WLOI56LJ3",
+            "LLO7YDQDBC3JM7TV6NZ533N4MN",
+            "FRWIZ5P446PQOULKI5XAPF74M5",
+            "4VPKP2HHVJWG7EEB7SBPFF63F5",
+            "CI5WX7G7UMEEIXPHELWLY7XIP2",
+            "V6CVOD5WGRZIOZV377PPCSKLUL",
+            "BWXPMUEBFZYEDOCDKIM3L5LSSQ",
+            "FNHAXDQSJNHSTSRBJYTD2XD2EI",
+            "JKO4Y3XLFBD5VIVVNU4UPW7HZO",
+            "4UYMU4MMNEYVAA2OAW727KQLPO",
+            "HVTQWTZDQ7SYLOSYLH5MFHKOQT",
+            "7S5OKZ3VLKIGVAETAAICO66EKN",
+            "TE4N2ZFJBPZQWDPEDJBLBXXYFM",
+            "3CDGMNFYU57EFTO2ZWOEJXIMKN",
+            "PGFEBMYZKWCW4VAOWEY2I3ONF5",
+            "WOJTPBHDELRD6BZ6RAVAQXU3KF"
+          ]
+        }
+      ]
+    },
+    "cce_10_0922": {
+      "title": "使用KMS进行Secret落盘加密",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0922.html",
+      "content_sha256": "82594ff8fffb87aa3c95c59385f5bb6007289e7f993328c6c5c5d81e1b3da647",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "82594ff8fffb87aa3c95c59385f5bb6007289e7f993328c6c5c5d81e1b3da647",
+          "revision_id": "E5AZIUF2TYE5UIWRF4A7LHCLIS",
+          "status": "PUBLISHED",
+          "fragment_count": 8,
+          "fragment_ids": [
+            "RTJAZ3S66HCLNAPVEMCPDHSTJW",
+            "YWCGT3D4YH4JRKX3QOHNHYMVO5",
+            "UVX5CMYQ4IO4KY7ZVXFV5FNXLA",
+            "P6QCMW4NCFSEEYA3NZEZBF5H2Z",
+            "HAG6EQQOMMUEJRZX7B3YXIGS56",
+            "FAMZEDR2PNK2YNW3TFCPLJJSAW",
+            "6FJ74VR3HLVZMS7SD6F74A2N3P",
+            "ZYP76RATHNKGC7TVJJNZHWM2OW"
+          ]
+        }
+      ]
+    },
+    "cce_10_0349": {
+      "title": "nftables、 iptables与IPVS如何选择",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0349.html",
+      "content_sha256": "600fa904bfc88f07f012538f95d8d2d4e62b22a69759c71dd812fc2194e83431",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "600fa904bfc88f07f012538f95d8d2d4e62b22a69759c71dd812fc2194e83431",
+          "revision_id": "P7RSHZI3ASEE5GKOPDBNVA6FXM",
+          "status": "PUBLISHED",
+          "fragment_count": 6,
+          "fragment_ids": [
+            "OBDCFRFWINIITAHDEXAKR5EKB6",
+            "LRQ4JAKYTOBCL563LCQ253674U",
+            "NUMIVO46ML354K2KCPMI3R5BMS",
+            "ERXVLROCCHDE7HDENDKOFMIDBF",
+            "Y7FUGYTAW37WOSO5PU3LDOODLC",
+            "L5OIUYNUNPTP3N5GSB6RE3YPIV"
+          ]
+        }
+      ]
+    },
+    "cce_10_0961": {
+      "title": "连接集群概述",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0961.html",
+      "content_sha256": "c3b041855190a5f4dc75b6880dc2a10bdb024a02f6d46eee5603aacefa933565",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "c3b041855190a5f4dc75b6880dc2a10bdb024a02f6d46eee5603aacefa933565",
+          "revision_id": "C3CLJCTCDMKSXOLVTXRAW6KT7N",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "IO7WDZKEFV74W4LZK534G3W4EF",
+            "VHDGR4ZBH2NP3CVLRXQR7LIPQT",
+            "AUUVCXYOVCJHTXB22GH6KN6ZPW"
+          ]
+        }
+      ]
+    },
+    "cce_10_0107": {
+      "title": "通过kubectl连接集群",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0107.html",
+      "content_sha256": "91cc6e4ca93f5018925a7f0704968fe53ab18ebee7d60bb9664f2172bc9b9fbc",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "91cc6e4ca93f5018925a7f0704968fe53ab18ebee7d60bb9664f2172bc9b9fbc",
+          "revision_id": "UWK4OK63IXHBHFVSFURMJUEVE4",
+          "status": "PUBLISHED",
+          "fragment_count": 11,
+          "fragment_ids": [
+            "RS3H7H5KYNNJK7GN4FFEFFCI65",
+            "S4PRLFCKVOUMMYSIAEHAMP4ZSQ",
+            "DIED3L5ELPEMTWZSFDRI4UXD3U",
+            "NNSQ5AO6QCGZYBEXXF663OSSHI",
+            "Q7J3RRR7ZLHWXVILY74SYJ3CZP",
+            "TUUUE2QSJ6L7HQKZPCHIFCCLZW",
+            "RXWM2KAERQ4DYEVKZ6AVO5LSXD",
+            "P7I2JDI4SAQASEQAWR33I53IJS",
+            "O34IKVDWP3ZBHYLP6JGFJ3OBQE",
+            "FXSKVVZP2WR355BAQF5SWBBTP5",
+            "ZAJ73PZGDQOIIZWPTOAFILIQQ4"
+          ]
+        }
+      ]
+    },
+    "cce_10_1143": {
+      "title": "通过KooCLI+kubectl连接集群",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1143.html",
+      "content_sha256": "fb2b2e9529d40919abeca65517f2c1eeda78d735dc08fb7511d7f4379c1aaa3e",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "fb2b2e9529d40919abeca65517f2c1eeda78d735dc08fb7511d7f4379c1aaa3e",
+          "revision_id": "MDIAKYW7HMIBCZ7ZJ7VOMTMWEQ",
+          "status": "PUBLISHED",
+          "fragment_count": 9,
+          "fragment_ids": [
+            "KIL5EQ2RYFQFTY7ZK27WDFQT4V",
+            "XPGEIIAD72DQIWLH527EU255T4",
+            "SZLWPOYDUN5F6EA65FLSCHOVOT",
+            "XIFR4EWOTEL56MEVTIKGIKPIHV",
+            "4K6A7NFV5XARVFFJDHYWNQHV66",
+            "XZY7G7JTCQP42XT4QWLBWLIY6X",
+            "46QHWQA47IGVEQURBTCBUWBZQF",
+            "KQU5SGKSLDFGGCG3U7Q6TCRAMZ",
+            "EKE2PF4XWR7TLVOGM2PHVQZ643"
+          ]
+        }
+      ]
+    },
+    "cce_10_0671": {
+      "title": "通过CloudShell连接集群",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0671.html",
+      "content_sha256": "42c8d20d620692f772803d0814e977627671104fd22b2ff2bee063fed91714c8",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "42c8d20d620692f772803d0814e977627671104fd22b2ff2bee063fed91714c8",
+          "revision_id": "RI2EV5JYWTWDHEHVKGOFX2MSOU",
+          "status": "PUBLISHED",
+          "fragment_count": 6,
+          "fragment_ids": [
+            "BPUSKV6OBR646FMKYOGRIW5GR4",
+            "X4Z4CN7BPAR4PRKPGY7HZXDWHT",
+            "7ZD2OCQZEDCK5JTBPRLD4PWIOL",
+            "OA5NP5MA73QXFTRTG63UXKW674",
+            "66E55V6YIA57OXHD6RTTJYLILQ",
+            "LF5TPLX7EPE7BEEQMMXOU3JQGX"
+          ]
+        }
+      ]
+    },
+    "cce_10_0175": {
+      "title": "通过X509证书连接集群",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0175.html",
+      "content_sha256": "f5136d2a33cd3c887f4ec3928fa423f009bf553eabf997cfa87e7b4e504bd33d",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "f5136d2a33cd3c887f4ec3928fa423f009bf553eabf997cfa87e7b4e504bd33d",
+          "revision_id": "ZHIZKRFWOPTHWN55EJYGO66XIA",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "XUMDC5AQDFW2UIVIGOHF7KKGQT",
+            "ACZS7ROLLAIYUGCNPFKI457DSF",
+            "KYTVXOXL4D3BII655RAM53ULUH",
+            "CFK7S6TRP5SYC6MX3NSVVIDOBH"
+          ]
+        }
+      ]
+    },
+    "cce_10_0367": {
+      "title": "通过自定义域名访问集群",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0367.html",
+      "content_sha256": "4260010b69604c17b251679bde7a656e586961ff4d2596d0b050d2427ed59012",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "4260010b69604c17b251679bde7a656e586961ff4d2596d0b050d2427ed59012",
+          "revision_id": "2HVKKDWM6Z7ASAPHWOUTSK2DWQ",
+          "status": "PUBLISHED",
+          "fragment_count": 7,
+          "fragment_ids": [
+            "3DIRO5LGAKMW744G5GUQRU7KBS",
+            "FQ2YCTNXBYI4NHQ6267RPT5YGQ",
+            "YKABB6AEM6JK7JAGU5QIJBVT4Z",
+            "4JAGJ6BHHVWCU5B3DCMNVZTIBM",
+            "H7Z4PZR7DOC7IWWWQKE2DQL2HJ",
+            "D2JKCM2D7EQJVTHN4VXEP3PQQI",
+            "XNO4OWL3EB2DBYETDPSQ7NL6RW"
+          ]
+        }
+      ]
+    },
+    "cce_10_0864": {
+      "title": "配置集群API Server公网访问",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0864.html",
+      "content_sha256": "b7b34047d505cde2968575d473ea2f76194123e9ea7925a7e43ac089abcf8244",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "b7b34047d505cde2968575d473ea2f76194123e9ea7925a7e43ac089abcf8244",
+          "revision_id": "MZWJ2KNFBV5M7UWDPLFOINX3K5",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "AQOI4TLSP7AZ77P4ZAHKVEVGTH",
+            "JWQUF5KW5XYRVJHD3SWLZK4DXH",
+            "JT7UAL7XEWBFLA5EYVAXPYKETE",
+            "65K6XYRIA2ANGJKAHNDZBEHWYO"
+          ]
+        }
+      ]
+    },
+    "cce_10_0744": {
+      "title": "吊销集群访问凭证",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0744.html",
+      "content_sha256": "0b80cdf8363d396fa61519133a4faaadb97210953366dad9d47c9a95b7244b5b",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "0b80cdf8363d396fa61519133a4faaadb97210953366dad9d47c9a95b7244b5b",
+          "revision_id": "OXXR3U6O46OF2ZH76LFJENQEXY",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "43BXD3BWVRI6VGTYO433KYVMXZ",
+            "FGKXK4YC2UKGA2QNFIECUSTSXU",
+            "VAMKZUVMKUW5U4AQHMD3HDIRDA",
+            "BOZWZYLEGOTCBMXUID5IDGLRBA",
+            "DO27ONSIECVL2MWQI334BDA7GS"
+          ]
+        }
+      ]
+    },
+    "cce_10_0962": {
+      "title": "管理集群概述",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0962.html",
+      "content_sha256": "2d1746015d7426dfb50da0f56241aa1d92902996bd890b07f2c87dab4e9d96cc",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "2d1746015d7426dfb50da0f56241aa1d92902996bd890b07f2c87dab4e9d96cc",
+          "revision_id": "4FZDGP4SGKVDZW5XVC5ZTU7Q6Z",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "5XSVY5KKG2CFHSVUA4WMGSA5U5",
+            "LHAVG7GJFXLAGERDM6DDED7OR4",
+            "YEFCMMBZFFBMXARLYZS2P6WFNZ",
+            "KN5AWB5XHMSTJLBB7VKUDBIKHX"
+          ]
+        }
+      ]
+    },
+    "cce_10_0213": {
+      "title": "修改CCE集群配置",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html",
+      "content_sha256": "91cee1446109243bab614559217403dd976908c2605e1dbdc1e3e131a9566e4e",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "91cee1446109243bab614559217403dd976908c2605e1dbdc1e3e131a9566e4e",
+          "revision_id": "LZQEV56FFKYK6XEYYYZ5UACMN2",
+          "status": "PUBLISHED",
+          "fragment_count": 21,
+          "fragment_ids": [
+            "KTDYV6BLNFIKP4IOZX4Q52KSMO",
+            "KI5F2BAVDB7XZLYR4TRTMWXH4O",
+            "RWEASLZIHM2WTZNCBYTHOGTQNE",
+            "FL6SLUVWGESPJOLUEC6RUGFTSE",
+            "6EBZKFRFDCNBTUELPSMXWS7CDH",
+            "NJ45PMMZBGOZ3NOBVJGZBOUWVQ",
+            "NP5IGILM5XUNQY6ZVAUGZWMLZ7",
+            "XMYHDZLJ3TM6ZADOOHHUBEXEOR",
+            "BJTVA6RGULDPFYR5G3HXWSPAGY",
+            "WI6FTHMMQLDIB6GACKU54YKLQS",
+            "ZHPWZPHV2C5MD6BS4RGSOGPT4N",
+            "XMGDZKQHEP4WLFZYWULLIT7D4A",
+            "EJN6S3ZYSJIU6NZINUTU4E3IIH",
+            "WTDKB4OLN2FNR6TCF7IXI3H73K",
+            "UFFFOQJVOE2X43WEKJ3GX4H27V",
+            "PCJ2KG3IUJAIZ2H4WSOD227RO7",
+            "IUMHIUCVHEXDQJGWOGF2MV5HB7",
+            "2PRTF66ZQJBZRIBAMIUUINHBXF",
+            "AS4VMRH2ZJPEOKYZAPFYRUR5DL",
+            "GZB6KCBG4IBLMOKHALMIGWXDKP",
+            "WFMVA5YOTIUYIJDM6PM5DXUD4E"
+          ]
+        }
+      ]
+    },
+    "cce_10_0602": {
+      "title": "开启集群过载控制",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0602.html",
+      "content_sha256": "304e9d447993dabb03fd2be2b64621ffa7784bccbd418c78a0048671abf01879",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "304e9d447993dabb03fd2be2b64621ffa7784bccbd418c78a0048671abf01879",
+          "revision_id": "G7O7XLTFTVALUEX4TH54N5CBII",
+          "status": "PUBLISHED",
+          "fragment_count": 10,
+          "fragment_ids": [
+            "QV6YAOT3QW6WUJ4MKJRTK4Q47U",
+            "REE4YWYIZJ5DCGG3KAEWK5AMYQ",
+            "AB64YEVESLN5CUVRIMS7M2EHZS",
+            "SFFALF3Z7HDUWCPOQOMNTYEM25",
+            "B7WJZCUSKZZV47U6A5SENBHVGY",
+            "BL7RYDJQSQM5MDSKRBY2LRTXUC",
+            "U73OYEQ6XGOQKGKORLTK5F2GBA",
+            "OZFQZD4UF3PW3CWBXCFNGDJGYJ",
+            "3YGBFXCJLQGZS2XOKPFPZK5MWH",
+            "PSZQHXRWW6A2AIULWGRYIQZAOH"
+          ]
+        }
+      ]
+    },
+    "cce_10_1080": {
+      "title": "更新集群证书",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1080.html",
+      "content_sha256": "36a5520d16142488bf8283c72bbe938818e44d5f459a0dd4928e0ec3f2c5a566",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "36a5520d16142488bf8283c72bbe938818e44d5f459a0dd4928e0ec3f2c5a566",
+          "revision_id": "4ZL7JD7CZLCJG7YPHN7ZNPPISQ",
+          "status": "PUBLISHED",
+          "fragment_count": 11,
+          "fragment_ids": [
+            "Z2HZ32PYMSZ2CBVP6SPDZBUAVX",
+            "VGGTYE5U6AECPA6X77LDCXC4LB",
+            "OBUYYXFPJPIXBIRH3PFXVH6YTD",
+            "N5O6I4WNRYIMB6HIG2IXGG47NY",
+            "QFWIHBQNIKV6SIKVSAKAFLK3OY",
+            "YZOQQYNCSUFZL5PT6JSXGRGC7Z",
+            "Q2DOIHJJVVLCEP32NAQ2O5UY3K",
+            "H2HWU2ANCDU3TK2WQRXEMBOA3P",
+            "4RIK3DJN7WUJVEKS3NI7VKIF3P",
+            "ZLQ3FZZ4K6GA5JWCBW2AKOV2KB",
+            "EX52RZAY534N6WCCQ2R3YPWJSV"
+          ]
+        }
+      ]
+    },
+    "cce_10_0403": {
+      "title": "变更集群规格",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0403.html",
+      "content_sha256": "81d812aec0a9de0ea6fa26fde18c8470532b371adad980d4219b31b11cf0473c",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "81d812aec0a9de0ea6fa26fde18c8470532b371adad980d4219b31b11cf0473c",
+          "revision_id": "B2R42H653ZQOH4KBTE5VKJF5EN",
+          "status": "PUBLISHED",
+          "fragment_count": 6,
+          "fragment_ids": [
+            "NJOHYMJWNK76QTJ5RIA6NHGKP4",
+            "ZOLJFSGZMIU37MJPIU5QREOK2R",
+            "CRJPWA4R3RDJJPGTRGEDKWRUCE",
+            "532OYTDO6DCVZIXHXWO6X2IP7W",
+            "YJUNWLA7WL52G67QOWFBVUTT3V",
+            "BH62IQYTRFS6J3IZFHJEXWJD3O"
+          ]
+        }
+      ]
+    },
+    "cce_10_0426": {
+      "title": "更改集群节点的默认安全组",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0426.html",
+      "content_sha256": "79db9e50ba3597470408101189889801a611a8313841e446a3855acbb0f19471",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "79db9e50ba3597470408101189889801a611a8313841e446a3855acbb0f19471",
+          "revision_id": "ORXJN6FIRF2XYXLVMPYAUMRCQ6",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "YLVUHYGX4WV2LKI5EKH5MLJRSH",
+            "BHJPSST2ZXDYX3AEVMTRQTWET4",
+            "UUWVMLJTE7MSW53BXTK4KRPHBF"
+          ]
+        }
+      ]
+    },
+    "cce_10_0212": {
+      "title": "删除集群",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0212.html",
+      "content_sha256": "ccae4625efa9b60430b258ad370eec31cc35506b6f6096d0f38a724422650bc2",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "ccae4625efa9b60430b258ad370eec31cc35506b6f6096d0f38a724422650bc2",
+          "revision_id": "OL2MLBHHZRMSSY34JO22NBZBBJ",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "KZOZBJHURL4I6WWWSVLU3REBKL",
+            "EYB5IZDJIZCOU2YDHEF2X777JQ",
+            "HTCE7255JUSSZD4ZPR65OW6SMO",
+            "R6JO2RS2WMSLD7Q7LRQSXLDXZU",
+            "C4BA5GNXCQXFMJHSJGC2WGARBT"
+          ]
+        }
+      ]
+    },
+    "cce_10_0927": {
+      "title": "禁止删除集群",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0927.html",
+      "content_sha256": "4407bdeaac12aaa01f6fb1b26199e4d4c62a456c565b1e17512ea09e46b082ee",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "4407bdeaac12aaa01f6fb1b26199e4d4c62a456c565b1e17512ea09e46b082ee",
+          "revision_id": "EJGNX3SE63WKYB2GOKV5DY2X2H",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "P2FWTK45JW7FORKSOQ7GW4UQMJ",
+            "JHIJP2S3CAOT64UR3OAC773ITZ",
+            "G7IHFSPU4DWHA2ZA2C5VQRXD6N"
+          ]
+        }
+      ]
+    },
+    "cce_10_0214": {
+      "title": "休眠/唤醒按需计费集群",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0214.html",
+      "content_sha256": "34c1392a436b996117e1f85e227b118dee5a5fd2bc37887cf905516b84b57caf",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "34c1392a436b996117e1f85e227b118dee5a5fd2bc37887cf905516b84b57caf",
+          "revision_id": "Z4UZVXALJ267ZOM4YWI5DZK4GP",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "JXTSWXWJWJE36K4EGQOU6EGJPF",
+            "NIT2TPIADUTLMLMJACU3BR2QPZ",
+            "VRL6TCDEG2U3NSLQURUOW45Q4L",
+            "WJ5VA7AXC7FRMEYEFPGOOLWV2S"
+          ]
+        }
+      ]
+    },
+    "cce_10_0304": {
+      "title": "续费包年/包月集群",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0304.html",
+      "content_sha256": "31953f27a3a3826ad48c10d3a67f602af43762d82f8656dc5a6d7c1d7a029877",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "31953f27a3a3826ad48c10d3a67f602af43762d82f8656dc5a6d7c1d7a029877",
+          "revision_id": "VWYPZR35B2KR42MMY6SPWHQK4M",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "GAOR3RWTW7423MDG3NKW4NOVER",
+            "657UUORHASXCONY4FDCZJA7I2I",
+            "C42LMTFCHWKV27TL4YRBMXGPHC"
+          ]
+        }
+      ]
+    },
+    "cce_10_0368": {
+      "title": "按需计费集群转包周期",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0368.html",
+      "content_sha256": "2aac59cf35a64f43e371486a93d2bb93df005c02f784300613aeb32dd3f0d211",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "2aac59cf35a64f43e371486a93d2bb93df005c02f784300613aeb32dd3f0d211",
+          "revision_id": "KR54J6N7NFEJJMTMPAFHOLBYYW",
+          "status": "PUBLISHED",
+          "fragment_count": 6,
+          "fragment_ids": [
+            "SLQVWKH2FXA3XAYJEFPRHIITWS",
+            "6GJP4EAQLKCAHV3FUX4NQNQTWZ",
+            "ISUFJUSMLI6GKX42TIOG5SK2BL",
+            "YCMGGZHWWPENZUJAMHBYRS4DHJ",
+            "IXVIAWSZBSAIUFT2VVAF5FAFWT",
+            "QRVGZ7LSCXVNPXJLA6DQX3JIQP"
+          ]
+        }
+      ]
+    },
+    "cce_10_0302": {
+      "title": "升级前须知",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0302.html",
+      "content_sha256": "de7620d51fa4714bb39670fc854d69787f1b962e3ef239da7a72fe190878ebd4",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "de7620d51fa4714bb39670fc854d69787f1b962e3ef239da7a72fe190878ebd4",
+          "revision_id": "TVJVJBYRRZPVNWT3BPW3FQRWG5",
+          "status": "PUBLISHED",
+          "fragment_count": 6,
+          "fragment_ids": [
+            "MARBOEDPSQRSA4GV5I3QI6BR34",
+            "ZGG26FMTELZIZSUQ4JWB4QZKQ6",
+            "OFMWLLDTPPB3LYVTSBSKBFQJME",
+            "OSCA2KX4ABZRSTFLSZGBLSJ4IX",
+            "FJZQT24WLREPXV7FU53O433UUH",
+            "S62E4BAZJXLK4UR2OYQLG2NACQ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0197": {
+      "title": "集群升级",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0197.html",
+      "content_sha256": "fea998cf52e6fa5839f7f88bbe538f5b55860cfb739eb9985b2c9af42210bfd8",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "fea998cf52e6fa5839f7f88bbe538f5b55860cfb739eb9985b2c9af42210bfd8",
+          "revision_id": "UBYXSZKHR6P6HDO46LBCBYSAS6",
+          "status": "PUBLISHED",
+          "fragment_count": 14,
+          "fragment_ids": [
+            "ZT45BLOF4AXOYG4I373IRGXFFO",
+            "TDCYG6Z7SEPGGDXPGJPBYNWFXA",
+            "FCGNPJNZGGH4BOLP5EONPUAWF6",
+            "PDGDRVAZIJPJXLTCJRMQ3PETZK",
+            "ILXARVDRCSS2UT2KCPXYJCANMN",
+            "EBW57YKVKUJBYBMVNJJG4D3XBA",
+            "GGO3CPPKAQEOQW5OXHWW7EWD2W",
+            "LR7OEXXBAODUNBGWLYHS26Q3Y2",
+            "6ZWKRUVWXEBGE4VEHTTVCUQFH6",
+            "DD6ABY5YBA4MWP6XOCOBEL7PW7",
+            "DVXDLTITZ4DWSNPUVVOYMKMZNG",
+            "DIX6LR4AUAAPH4IXIX72KH5PKM",
+            "47O6CNNFB4JEAWYAEI46G2X4VI",
+            "ILVVWX3HEYVFLSSLHDMJWNTMSH"
+          ]
+        }
+      ]
+    },
+    "cce_10_1119": {
+      "title": "节点池升级",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1119.html",
+      "content_sha256": "a8287397405da86213ff4ee5913ea006ddd624580e827a541e668b28fe4ed520",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "a8287397405da86213ff4ee5913ea006ddd624580e827a541e668b28fe4ed520",
+          "revision_id": "DXVEMMWKV27DC3GAEZUTIFXSDY",
+          "status": "PUBLISHED",
+          "fragment_count": 18,
+          "fragment_ids": [
+            "MRTUHJEQRG3PDIJB7TXIKLNR64",
+            "7WTCATAZAUTZPCZPZUK7CENGDA",
+            "SSKYCHXDYXF74GNVC2URNYSM6K",
+            "TLFGEBDMJRO7KDQRU2RV5XOOTC",
+            "XEVCOKUQSX6HRFY4W2ZNWYQ2EC",
+            "WESNUVJYFSNYYZCYGDXYGT2RCR",
+            "5K7MGADPFSBBQVBG2TTL3IUVQI",
+            "UHMAPDXMOC2IXZ4EAV5YYDVQXQ",
+            "G425XWQJ7P7NOYRHRXLYRCTBLZ",
+            "GHG7KB4OLEOHQZAUKPS7HQLWMC",
+            "FSV7VDHHENYTBPPWPGBMXOREUE",
+            "T2TLLVJM7WHCWFNUJ6N7EDAMQ2",
+            "GLXXCAVXLRG5LS7ZATYANPBPZH",
+            "C3HYLF7T27PB22OOSREHSUAOSS",
+            "FHBCWXPLYC5ZIZDKQ7EOBSO4YG",
+            "KKTMTJ5ZHK7BIIGE6NPCUHU5S6",
+            "5JF2SIUIPJL35YZ4IJ35BJWJ35",
+            "Q2E2AQ4UO6APPFBX63TVOJGT5V"
+          ]
+        }
+      ]
+    },
+    "cce_10_0568": {
+      "title": "集群状态检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0568.html",
+      "content_sha256": "80372ccceb3bfd5d0038048c3a458210d5f9c3bd06326900adb74559b1153298",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "80372ccceb3bfd5d0038048c3a458210d5f9c3bd06326900adb74559b1153298",
+          "revision_id": "DTR6JNIHJZQXJKZ3R2OZOUQ32T",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "POE77UEOYGSQ46A65OAOU6HZHE"
+          ]
+        }
+      ]
+    },
+    "cce_10_0569": {
+      "title": "节点状态检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0569.html",
+      "content_sha256": "84a76aa296cde49ceac5ea0b9f8136cf87c55a3b8e76b7a524db19deb0d75234",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "84a76aa296cde49ceac5ea0b9f8136cf87c55a3b8e76b7a524db19deb0d75234",
+          "revision_id": "6NJQHUAMOCYG5EPNCKD7JWC57F",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "V4GPFZYU4A6IIERERMOTAS3DRE"
+          ]
+        }
+      ]
+    },
+    "cce_10_0567": {
+      "title": "跳过节点检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0567.html",
+      "content_sha256": "69dd1c395256120d324bd41bc5b2681c779d5164094ce07143c42a6464790bba",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "69dd1c395256120d324bd41bc5b2681c779d5164094ce07143c42a6464790bba",
+          "revision_id": "ODVJLHOAMA7SOYLEZNLZWBKR6F",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "S7WCI2JQ4WZUYLZFSUM7AATYKS"
+          ]
+        }
+      ]
+    },
+    "cce_10_0561": {
+      "title": "业务检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0561.html",
+      "content_sha256": "8f22ab7225f1d4aca42527bebc7ba37416deaf621adf1d0902c2b84ea3d34817",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "8f22ab7225f1d4aca42527bebc7ba37416deaf621adf1d0902c2b84ea3d34817",
+          "revision_id": "HGMHS6WIY4XCWOZXUG33U2JA5O",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "UX4LJ22VAEGZV6RSV75IBVA3QD"
+          ]
+        }
+      ]
+    },
+    "cce_10_0565": {
+      "title": "新建节点检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0565.html",
+      "content_sha256": "9c911bee756bc9082bba1480ab5cca0401411f85b9ad683b917b8ad25a74eef8",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "9c911bee756bc9082bba1480ab5cca0401411f85b9ad683b917b8ad25a74eef8",
+          "revision_id": "2ZGA3IPMI7HKWH46TMJNNYWL4L",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "HTRFU65SJWTKYUOCDDTONLPWDN"
+          ]
+        }
+      ]
+    },
+    "cce_10_0566": {
+      "title": "新建Pod检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0566.html",
+      "content_sha256": "2d4098de6a91b4f8ba25d642251049102e5e0fab1d956a4c320515035bed8b67",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "2d4098de6a91b4f8ba25d642251049102e5e0fab1d956a4c320515035bed8b67",
+          "revision_id": "OK6CJASNOGHDF4N6IDYXFP4HTJ",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "XODBMKQAXONJV5CGREKMTNGHUN",
+            "FVDVGB4KQMKSUXGXNI6UYWXBQH",
+            "J4DCKH7RGZWT4K3PJ4UQAQV5FY"
+          ]
+        }
+      ]
+    },
+    "cce_10_0210": {
+      "title": "集群跨版本业务迁移",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0210.html",
+      "content_sha256": "cc5c7da164d7c296c0d53e8216acad986a8e31936b5ed5778a33b20e50fbf2dd",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "cc5c7da164d7c296c0d53e8216acad986a8e31936b5ed5778a33b20e50fbf2dd",
+          "revision_id": "NJH4KYSC7MC53TUOGWADSP2QQJ",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "CMRX5HG255PO2CWHM7Q3DVZLIU",
+            "W3QPTKPIYYOLUKOWWBNNCJUPNA",
+            "ALMH5WBVQX2YRYQG3AF4NA6XZD",
+            "XLOI5PFRO3IT3IKYFMKWL2XVKW",
+            "5J7TOF5FE4TMFNNHT6DWBA6NGT"
+          ]
+        }
+      ]
+    },
+    "cce_10_0549": {
+      "title": "升级前检查项",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0549.html",
+      "content_sha256": "0a664841664e76cadb2c3fc01b5ab6c4fd02e1d9780188c1e92d01369c915832",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "0a664841664e76cadb2c3fc01b5ab6c4fd02e1d9780188c1e92d01369c915832",
+          "revision_id": "XPBXDCI6FQ4VJUNJCS3BQ3MJJD",
+          "status": "PUBLISHED",
+          "fragment_count": 12,
+          "fragment_ids": [
+            "G4H4R7PKB2YHOTXGQZSMEJFMQE",
+            "E2ACOM3MRZXCWBTETPKCMKGGVO",
+            "YE374WS5B6DCC7MJBWZNVTSVZX",
+            "N6GL774DPDNA57A3JAVSBC66MO",
+            "VNBXXFTPWYDZEQUGODHUEWUMFC",
+            "YQ5RO5JCDPEKKBZ3VBUKIZLBZP",
+            "A6QCDZPNJPJ62WGKDPMUGYLSQX",
+            "TCNHUHSBYUR43GWNI5WVEHUSIG",
+            "COROMKQM3ZST2E2VMISXTRF4FQ",
+            "MLLWIGKSIQBU2ONZC7P6QGQETQ",
+            "JSLP7HQIP2C6ZXMXSCBLVITVXE",
+            "Y6OQUKT2FKEDWME5SAXL2KY6BQ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0431": {
+      "title": "节点限制检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0431.html",
+      "content_sha256": "05cdc6d7d97ab5fc6169810a1d1c0142b14955497ef3d548f9a84df3cf253819",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "05cdc6d7d97ab5fc6169810a1d1c0142b14955497ef3d548f9a84df3cf253819",
+          "revision_id": "N52GBVLPKKZMOL7GKBYIYB46DA",
+          "status": "PUBLISHED",
+          "fragment_count": 7,
+          "fragment_ids": [
+            "MUKVW6L42CESHWGIIIY27GNYYC",
+            "SJGQ3GIPVXOJR42OLV2WTUPV26",
+            "7YS4N4256H5ZBF2B6KRFS4RG7J",
+            "3NT4VS6XHRHPZP4K4RYLZCPOP7",
+            "T7TRTTBGFUGGSBZLCKM3MSAQ3K",
+            "L7ELEKXEYCBEWINNA3UE6JFMW4",
+            "MDTAYHYH5B3SFJRABD7GC5ELNU"
+          ]
+        }
+      ]
+    },
+    "cce_10_0432": {
+      "title": "升级管控检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0432.html",
+      "content_sha256": "a8d6f226ecc482f137908182f9017593b8e6ece410cbf25aa6a8bc06338eca13",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "a8d6f226ecc482f137908182f9017593b8e6ece410cbf25aa6a8bc06338eca13",
+          "revision_id": "L7EBS6O2X4YSMSJ3DZVWL2KJQV",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "B42NSDLZYEV5VXNIF2IRVIAH4R",
+            "YYGD3QLOWO7QUKMQRFD7EW6OGA"
+          ]
+        }
+      ]
+    },
+    "cce_10_0433": {
+      "title": "插件检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0433.html",
+      "content_sha256": "e1c716cc45093cf8f03e7730a56fcfc20731d589c3169425b0b64abf760ac586",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "e1c716cc45093cf8f03e7730a56fcfc20731d589c3169425b0b64abf760ac586",
+          "revision_id": "OIYLLO2SX3GHUIPSMJ3AJCBDMC",
+          "status": "PUBLISHED",
+          "fragment_count": 8,
+          "fragment_ids": [
+            "6OJXBNCFD3FT3UPCL4EAPDA5A4",
+            "F4SDS5Y3ALUQB4JC7N23J6CIYH",
+            "JNGUGPWB45MTUUI47BVORJ4PHZ",
+            "NDC56J723QSEVEON5CFYIDVN7H",
+            "SJLHQDMC3EZFAC4CXMF3HKQEGI",
+            "RJ2OVXT4ASUQLZ43JU3WTSOSS3",
+            "HTAH5IOTBHVGMCWR7MVSNUI6LC",
+            "GL2F7E6GUAWFYR3KCM5CUNZBTX"
+          ]
+        }
+      ]
+    },
+    "cce_10_0434": {
+      "title": "Helm模板检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0434.html",
+      "content_sha256": "fdb4ca8b2a2032f519434d97bca565fc59053b12b05b59f816f3d267238e55ee",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "fdb4ca8b2a2032f519434d97bca565fc59053b12b05b59f816f3d267238e55ee",
+          "revision_id": "6SFE3RLHHHGP5TKXK5WZIYKZXD",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "7P4VUVO2QJI5NBCWPYSZIVY57P"
+          ]
+        }
+      ]
+    },
+    "cce_10_0436": {
+      "title": "节点池检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0436.html",
+      "content_sha256": "c8ace9860fca8678960b7c6b196361113fd3b8d3e7393be6f23a5b96b6b5f70b",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "c8ace9860fca8678960b7c6b196361113fd3b8d3e7393be6f23a5b96b6b5f70b",
+          "revision_id": "XVIA3AVQADV44E4IXDKCM6ELQC",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "QWGU2PPTL4CVVGHOQP66XYT2QW",
+            "C7YLJUOVM5IM25IIXK5OWQ6ECL",
+            "YAMMO2ZQOTA7GKGKO7K7LXQWKT"
+          ]
+        }
+      ]
+    },
+    "cce_10_0437": {
+      "title": "安全组检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0437.html",
+      "content_sha256": "4712deb5f54fe669a4b076483e3e2e600780ed7e2a18c49ae4a20a077df3aa92",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "4712deb5f54fe669a4b076483e3e2e600780ed7e2a18c49ae4a20a077df3aa92",
+          "revision_id": "UWAUVZ2EOOB3AQZXQVTX7WHMZ2",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "GTYHTSED725TMV6JPAFSMD3DUK",
+            "XSOINRJSSMFLYW2IGIZE2CDIB7"
+          ]
+        }
+      ]
+    },
+    "cce_10_0439": {
+      "title": "残留待迁移节点检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0439.html",
+      "content_sha256": "41a400cb529521e365f7ca2db0edcab7531de09969e34322805623713d28bbb7",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "41a400cb529521e365f7ca2db0edcab7531de09969e34322805623713d28bbb7",
+          "revision_id": "HWOFOJ3TLKNK6EU5VHP3WHJMOG",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "X6S4KZ6BNG6QQHPULTDVYDOBBN",
+            "XBECCEM2NVXOQXDWPN2WQGYT3O",
+            "AN2DK3UC34DDF6RKWQIJWRPZUT"
+          ]
+        }
+      ]
+    },
+    "cce_10_0440": {
+      "title": "K8s废弃资源检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0440.html",
+      "content_sha256": "0d665df870e6d0cadbb6df5100ff6f8a5c178a764e8af458e85d1ec8d6cc95b6",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "0d665df870e6d0cadbb6df5100ff6f8a5c178a764e8af458e85d1ec8d6cc95b6",
+          "revision_id": "GLQWXNA4WLDFH6M2VO64LPOLQA",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "DAXW53ADLWBNFR6PTMMALECUEA",
+            "QDPOWDNNXSRZYZONCLKRNXQBPR",
+            "CEIYN7KSDTGJXUWG5ZRNYCPFZV"
+          ]
+        }
+      ]
+    },
+    "cce_10_0441": {
+      "title": "兼容性风险检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0441.html",
+      "content_sha256": "ab4ac7d23fb14e34eadd1476da3da9cf4eed70a9f4bcb6d93c091ff214e07217",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "ab4ac7d23fb14e34eadd1476da3da9cf4eed70a9f4bcb6d93c091ff214e07217",
+          "revision_id": "HEI3VEHWYFBEXN5NXGF4F6DBCC",
+          "status": "PUBLISHED",
+          "fragment_count": 7,
+          "fragment_ids": [
+            "3TCV4ND332B4Q47NYWGBWAGOLZ",
+            "HWB5UZ2PJTEOMUDCJGT7RN4ZQK",
+            "QLWHJQ6RPMUESFXBUD4TBA5WM4",
+            "3R57D73N7MEEWHFJRAI65QDVBB",
+            "QPZ5SJVH5TUD5TZWCPZ63OQCUZ",
+            "UTXXZ66AAX36NOFPABF77LKCIU",
+            "RAKHEGCER3KANIT5ITRBVKTYAV"
+          ]
+        }
+      ]
+    },
+    "cce_10_0442": {
+      "title": "节点上CCE Agent版本检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0442.html",
+      "content_sha256": "edcccac6dd16f5b790b13eebe1b11e37fc97765825703c5dd4a39b05882f7d7b",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "edcccac6dd16f5b790b13eebe1b11e37fc97765825703c5dd4a39b05882f7d7b",
+          "revision_id": "TBH7QACTJJDTDPJGV6FHUJKWVS",
+          "status": "PUBLISHED",
+          "fragment_count": 11,
+          "fragment_ids": [
+            "55BDWJQAFBKE3JZ5NIHCAQZBFJ",
+            "MSIPIYMHPASSI5EVLKDFSQN6RL",
+            "NTVYSIXVKOYZ3FRPUS6QXJUYMQ",
+            "ODKRKXX6SCF5W3Y6UP2AVK25XV",
+            "F6W3TSEQVSNIB4GFKNRXEN5AYC",
+            "XYGWMZJJI4PWZ4TXJYFRX3NZMC",
+            "33N4Y2SJ5PQWVEP7RKHBDVI5KQ",
+            "GOE6RG73ANS7JJU32VJJQZKQJ7",
+            "ULQZVNPW7FY36KBHLQPKHJMIOT",
+            "YG7WKTQYWS7ZDMBJYSP7F5I232",
+            "HJI4S7MAI7CI67TFSAZRRGECDS"
+          ]
+        }
+      ]
+    },
+    "cce_10_0443": {
+      "title": "节点CPU使用率检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0443.html",
+      "content_sha256": "bab23d1737ae7d3701df723ccc9bea8e059bf19684999d85676d2c80dd7add72",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "bab23d1737ae7d3701df723ccc9bea8e059bf19684999d85676d2c80dd7add72",
+          "revision_id": "XXSMVVD6SPWOZCZLSFX5P7P4LT",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "KFKBKUPXG3Y4SRPEESTFSI5DM4"
+          ]
+        }
+      ]
+    },
+    "cce_10_0445": {
+      "title": "节点磁盘检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0445.html",
+      "content_sha256": "6a6b3fc60d90c7445e9ab918b479e93101ff9028af9b67ed4c065138d5c7f9ec",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "6a6b3fc60d90c7445e9ab918b479e93101ff9028af9b67ed4c065138d5c7f9ec",
+          "revision_id": "M6GZU4GVIVW7JEXHDM2KWMEATF",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "RFAM7AS6AIWKU7D5Q2XROZR2MI",
+            "N4ST6DXC6FODLEI5SLTGUURMEI",
+            "SC6GL2XMOWIDXTFQPXBGZLRKCU",
+            "E5LQ6IKF2TKRTXU2VDKVZPJNEA"
+          ]
+        }
+      ]
+    },
+    "cce_10_0446": {
+      "title": "节点DNS检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0446.html",
+      "content_sha256": "f3bbb9a0a63384537b437f037045518ac6ced9e84c7697b8850ea87c3e8b4c61",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "f3bbb9a0a63384537b437f037045518ac6ced9e84c7697b8850ea87c3e8b4c61",
+          "revision_id": "UQ575U323SD2AS3JPSAOBVSKKL",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "FIK6KBUXYU5WMJUIBZ25BIUILJ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0447": {
+      "title": "节点关键目录文件权限检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0447.html",
+      "content_sha256": "2d0653dd0d4b1201c5bba91bc74b39c47ca69c5e21295eb71a6b0d2bdc4903cf",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "2d0653dd0d4b1201c5bba91bc74b39c47ca69c5e21295eb71a6b0d2bdc4903cf",
+          "revision_id": "2CL3VE4AQ4KVEOKI3OUFR35ALR",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "EYKDDI32UX57ZMLC54ESEE54MW",
+            "6MITCO2ELIZ2GS6LIT2EPM5ZZO"
+          ]
+        }
+      ]
+    },
+    "cce_10_0448": {
+      "title": "节点Kubelet检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0448.html",
+      "content_sha256": "ae45713e3998ce2d9821c5d0053d99745b61fb208d443b40b48e1484356a2599",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "ae45713e3998ce2d9821c5d0053d99745b61fb208d443b40b48e1484356a2599",
+          "revision_id": "PQA3XEZFD5LGALNTN3S7ZG33R4",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "DFR7FNGIU4DPMS3PVA62AURDLM",
+            "HWHJY5IHFT6F2EFR4UTN4XM6A3"
+          ]
+        }
+      ]
+    },
+    "cce_10_0449": {
+      "title": "节点内存检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0449.html",
+      "content_sha256": "023c44332f880e82930e692cd5523b287f4f7d63a7241822a38b0a2ff0a8fd58",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "023c44332f880e82930e692cd5523b287f4f7d63a7241822a38b0a2ff0a8fd58",
+          "revision_id": "EHQPYLRW32FHLN5CED2BE7AYDZ",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "EALN4VNOXSSAHFT43DNKQSK3BP"
+          ]
+        }
+      ]
+    },
+    "cce_10_0450": {
+      "title": "节点时钟同步服务器检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0450.html",
+      "content_sha256": "e1d832d0d1c4349ea3ffb840e3d811cd5c6b8e1104752a919d5d398372cc9eee",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "e1d832d0d1c4349ea3ffb840e3d811cd5c6b8e1104752a919d5d398372cc9eee",
+          "revision_id": "4LBTM6245IEPGUCWMEPL2ZGKLE",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "COF66NT2FQB64Q7ZKIVIF7LWNL",
+            "P73BQAXJYL6BJH2UO4TUAHZZL7",
+            "U2IOSKEATK3FQVTXAZUFBHWBAV"
+          ]
+        }
+      ]
+    },
+    "cce_10_0451": {
+      "title": "节点OS检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0451.html",
+      "content_sha256": "3ab94000d5b25982e6fbce2a24a5b8a46c5e9f5473115cbd0d629cbc866c18c6",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "3ab94000d5b25982e6fbce2a24a5b8a46c5e9f5473115cbd0d629cbc866c18c6",
+          "revision_id": "I4CEJLE552AL76BW3TUF6YVYJB",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "77CZW75BE25HKQG7NVOLYPXVUW",
+            "EFHFUGWJEWUC6QDCWMIXNUX4FP",
+            "HH3PTH67KVMYBDXFZ4GDE27UZY",
+            "UEMNLSYNO37JWTKCDMCJ6MSDQS",
+            "SXKEDV455VCJZ24PMBG24SSEMH"
+          ]
+        }
+      ]
+    },
+    "cce_10_0452": {
+      "title": "节点CPU数量检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0452.html",
+      "content_sha256": "b66702164a7953401a48cdf232b4369876f26fab70ca5c7d3a53d500559c2bee",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "b66702164a7953401a48cdf232b4369876f26fab70ca5c7d3a53d500559c2bee",
+          "revision_id": "RUIUBQUXDW2NTWI3WRWDF4GFSS",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "G5HRSMB6NMCXVX6BMYXNGEXL3A"
+          ]
+        }
+      ]
+    },
+    "cce_10_0454": {
+      "title": "ASM网格版本检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0454.html",
+      "content_sha256": "3d14eaddcbf9ef4b020ed7db019c94802c49c78b7f429b3ca19c01e10a6e1a8c",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "3d14eaddcbf9ef4b020ed7db019c94802c49c78b7f429b3ca19c01e10a6e1a8c",
+          "revision_id": "IY33KLPXMDFKGFJ6AZHPGUOH2A",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "YRPUXLCGOBIDL55KC35GD5CPU5",
+            "6UZGXRJE2NC55PPSVRYSNSDYUU"
+          ]
+        }
+      ]
+    },
+    "cce_10_0455": {
+      "title": "节点Ready检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0455.html",
+      "content_sha256": "88aba1e16195c78478e10b1396212755ceae98e975efd66798abcffc2cd394f6",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "88aba1e16195c78478e10b1396212755ceae98e975efd66798abcffc2cd394f6",
+          "revision_id": "PX4IZKGQQSUGWDLYY7LPVMIUPJ",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "2WZM6BNT73LYMVVSPER2C64UA5",
+            "74HE6FFA7TYRT7DSDYUGVX5VIU",
+            "N4UB2N7FSASESJZIPX5AZUZJXK"
+          ]
+        }
+      ]
+    },
+    "cce_10_0456": {
+      "title": "节点journald检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0456.html",
+      "content_sha256": "6031768e39e8f671c174153af5052b07614712a2a388da3ab690f4286520f335",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "6031768e39e8f671c174153af5052b07614712a2a388da3ab690f4286520f335",
+          "revision_id": "M3WHOXRQ6KJBAG5IZH3KAWVKQQ",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "I5EDSV3S6UQYHOXSB2HMVRH53I",
+            "74JXAPJYVFDGN7ONNWYAONG27G"
+          ]
+        }
+      ]
+    },
+    "cce_10_0457": {
+      "title": "节点干扰ContainerdSock检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0457.html",
+      "content_sha256": "9e7f9841ed5c454950c7348c84e85581cd7827405c792ed78fd2442fbab6f08c",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "9e7f9841ed5c454950c7348c84e85581cd7827405c792ed78fd2442fbab6f08c",
+          "revision_id": "S7HTWMHBGNPRI5NCEWVNIMCWXQ",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "OOX7Q336H5YFMJQIPHTSPNFB7Y",
+            "SY2BYON3E43EG6K2BTMHKZ7JU7"
+          ]
+        }
+      ]
+    },
+    "cce_10_0458": {
+      "title": "内部错误异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0458.html",
+      "content_sha256": "678686aed751aa26d589c962d8e11baea978e4770a7b8f4ff71bfe5e08552837",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "678686aed751aa26d589c962d8e11baea978e4770a7b8f4ff71bfe5e08552837",
+          "revision_id": "QLUIJJOSPVSLF3SFYARAFDVJ2K",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "NPV25UR3CAORUHHA3AISM5YBAK"
+          ]
+        }
+      ]
+    },
+    "cce_10_0459": {
+      "title": "节点挂载点检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0459.html",
+      "content_sha256": "5515bfb57a9add4bf3b840a4ecbf45ace72561156a1b96b32bcf007ce9458fac",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "5515bfb57a9add4bf3b840a4ecbf45ace72561156a1b96b32bcf007ce9458fac",
+          "revision_id": "UCM7XD5MUERF2YC7VPWIC6OTXI",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "GKKOXTYJBQQDLJGOHVWETCXNPY",
+            "WL2HUBPKYPQXZBYLB2MP23TLWI"
+          ]
+        }
+      ]
+    },
+    "cce_10_0460": {
+      "title": "K8s节点污点检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0460.html",
+      "content_sha256": "fbff46c2ec03db8d0bc2f8a3af9508e6aaec1663e41d4fde5d4cb9793a3d42a8",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "fbff46c2ec03db8d0bc2f8a3af9508e6aaec1663e41d4fde5d4cb9793a3d42a8",
+          "revision_id": "LVZFFRRQR5ZYCVAGDWYUEQQF6B",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "NCBDYFDOWCYCTKWPPI4TEP36B2",
+            "FY4BPRWAMV5DW6OT4WZEBLDKO4"
+          ]
+        }
+      ]
+    },
+    "cce_10_0478": {
+      "title": "everest插件版本限制检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0478.html",
+      "content_sha256": "0399d6371508a07c926eb74742552b03dcf85dce0139a57aa28e03ff0fdb276f",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "0399d6371508a07c926eb74742552b03dcf85dce0139a57aa28e03ff0fdb276f",
+          "revision_id": "SUDWHIMZOJO2JNJPOVT355D2FA",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "HRL67PEYXY4EXQTMEBZRAR4GG6",
+            "BFG2IJPVLZXPHUCCN4U6CXAWQ2"
+          ]
+        }
+      ]
+    },
+    "cce_10_0479": {
+      "title": "cce-hpa-controller插件限制检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0479.html",
+      "content_sha256": "8c2b4d9fdccb5dee308dd3d250ad68491ca9864aa02d482970c9c41a02dbf98c",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "8c2b4d9fdccb5dee308dd3d250ad68491ca9864aa02d482970c9c41a02dbf98c",
+          "revision_id": "RMNVBLJ7VFCYTHUJSIKDLGCOOG",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "TSNOWHZ4633FYAUL5OSE2VJNQD"
+          ]
+        }
+      ]
+    },
+    "cce_10_0480": {
+      "title": "增强型CPU管理策略检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0480.html",
+      "content_sha256": "78638361bc27ef4575681a08a5c72bba2e5ddc87d41e6dff2ff9f14a049e8055",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "78638361bc27ef4575681a08a5c72bba2e5ddc87d41e6dff2ff9f14a049e8055",
+          "revision_id": "L2WLVH5G2I6UB26ZCEGXPUQBZ3",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "TAYITKALAGUANWDRNBZQSYG5TR"
+          ]
+        }
+      ]
+    },
+    "cce_10_0484": {
+      "title": "用户节点组件健康检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0484.html",
+      "content_sha256": "0903baaef46ae8624f576dc048df954239c969d5ff255a03a8b3f24fcd0c221d",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "0903baaef46ae8624f576dc048df954239c969d5ff255a03a8b3f24fcd0c221d",
+          "revision_id": "BUNMIJ75WMPSCYTVK6IQ4PAH27",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "3NA7L6QALFZOV4OM5OOVTF4HN2",
+            "A5RIIQC7LUQKYEGM5ON2HNZZAW",
+            "5MQBRD7JIIVLOWCA4X2D3VQIKY",
+            "K6EVXC3EEHQ5XPJLCTFYSXUYHG"
+          ]
+        }
+      ]
+    },
+    "cce_10_0485": {
+      "title": "控制节点组件健康检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0485.html",
+      "content_sha256": "f079e876ae3189cb700aca4d61bf076b7f71afb94a2a4bcea6e6df9b47efe28f",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "f079e876ae3189cb700aca4d61bf076b7f71afb94a2a4bcea6e6df9b47efe28f",
+          "revision_id": "IXHHEQ4QMA7V7UK3Z3BU6QVL3B",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "UNRJDWQOLVXIGFLKOXI6H2AB4L"
+          ]
+        }
+      ]
+    },
+    "cce_10_0486": {
+      "title": "K8s组件内存资源限制检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0486.html",
+      "content_sha256": "3bc6af6750861cc8acda655fb6b0985945882bdf1e72e02527f52e35d006d881",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "3bc6af6750861cc8acda655fb6b0985945882bdf1e72e02527f52e35d006d881",
+          "revision_id": "2AF33XNQZVFPFSG6RWPJNMD2PP",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "Z4345SHJ3Z5QQPZ3FMRT3DDNDB"
+          ]
+        }
+      ]
+    },
+    "cce_10_0487": {
+      "title": "K8s废弃API检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0487.html",
+      "content_sha256": "817640680454f025d90e8593a99f6f5b8d89476ec1b2d2e990bc67e7f91e43ec",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "817640680454f025d90e8593a99f6f5b8d89476ec1b2d2e990bc67e7f91e43ec",
+          "revision_id": "RLCMVCSO4OBLSPTK2XND72TKX3",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "L54OKR5GEKPUUP2PGQZXMEKLJT",
+            "56SXGYJFR3AUA5PGC4TBAZVO2Z",
+            "RXGD2FY7J6T2PR3Z55KGIGSUMH",
+            "NYDLMWORIFMLKAM4BJQZE7PZRB",
+            "JIHB3QYZRTWGG3JYOTAEUSOU2T"
+          ]
+        }
+      ]
+    },
+    "cce_10_0489": {
+      "title": "节点NetworkManager检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0489.html",
+      "content_sha256": "81c4700b6195a3385025072d93e577bcbea1b6f2ef7af2f9457ee1c786fe5c5f",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "81c4700b6195a3385025072d93e577bcbea1b6f2ef7af2f9457ee1c786fe5c5f",
+          "revision_id": "PC5UON6MQ5JAZWQ57M3BSYGUIV",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "5OYH7YJYZJPK3VHTI4RW3NTMHB"
+          ]
+        }
+      ]
+    },
+    "cce_10_0490": {
+      "title": "节点ID文件检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0490.html",
+      "content_sha256": "ee201615a1659f1e17713073840b78c481584cde3fc782a3cfe161fce17b43f1",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "ee201615a1659f1e17713073840b78c481584cde3fc782a3cfe161fce17b43f1",
+          "revision_id": "CJOTJ6ZMFJFI3RL7TZSIZGFO3T",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "3M6KEINSN74US5IWGE3SZB4PLI",
+            "Q4TLH3YFAJTGWPUCIIZCZHVFOQ",
+            "O6QZUR3WEZ6BFRJ3UQNN4DOBHW"
+          ]
+        }
+      ]
+    },
+    "cce_10_0491": {
+      "title": "节点配置一致性检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0491.html",
+      "content_sha256": "897194b32d5b4d8eb9d4305bf895d7a610fc35bcfb7cea56e383d76c785cd024",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "897194b32d5b4d8eb9d4305bf895d7a610fc35bcfb7cea56e383d76c785cd024",
+          "revision_id": "FRB76WENC7LJDDX4EBRL6RBPQH",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "5JMRJDNNDCZOY5XLGMA7434L7H",
+            "7FU6BG7PYJXGGFSPQC2WXZA66N",
+            "2WXGXOARUWBYWVAVX3OGVCKJRA"
+          ]
+        }
+      ]
+    },
+    "cce_10_0492": {
+      "title": "节点配置文件检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0492.html",
+      "content_sha256": "e28e20353a49d9409b5207c36df7ff65f759ed9185e24fd67ffe2c8ec8b7ecdf",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "e28e20353a49d9409b5207c36df7ff65f759ed9185e24fd67ffe2c8ec8b7ecdf",
+          "revision_id": "VMXSQSCVC5RKFNA5EVSUPRCAQI",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "XCMJ4L47FJFUTAJZPTXX7HFMS2",
+            "PSK7BK577EQALECR4YJZT6OYX2"
+          ]
+        }
+      ]
+    },
+    "cce_10_0493": {
+      "title": "CoreDNS配置一致性检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0493.html",
+      "content_sha256": "0a3dd6adb11d6557d9c25d67a6403eb27e389f2463fa4d766563b7910a0dafe9",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "0a3dd6adb11d6557d9c25d67a6403eb27e389f2463fa4d766563b7910a0dafe9",
+          "revision_id": "JN67ROSW4KKEY2OIC7GCRDZ2HE",
+          "status": "PUBLISHED",
+          "fragment_count": 6,
+          "fragment_ids": [
+            "A3ALOO5FK2CDJIHFFV7JEFWL2X",
+            "TA2YDUBYC5EO4BNJRQ2TQ2HVOV",
+            "LLU6U3FRPMH34XUOGGLVSEB7MR",
+            "FFYFGGVBMWLGRQSBGGHP66Z4MA",
+            "WMJK3H45VZKTEZRDASE43UBR34",
+            "W5JL6BFVM3LMBCDQKQND43BXJB"
+          ]
+        }
+      ]
+    },
+    "cce_10_0494": {
+      "title": "节点Sudo检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0494.html",
+      "content_sha256": "20796697c4ede7f8a59f82db84e3ae69a9e8a3cbb765a7b78a7edeb145b76b35",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "20796697c4ede7f8a59f82db84e3ae69a9e8a3cbb765a7b78a7edeb145b76b35",
+          "revision_id": "JH7EX47EFIHFLOIDPEVWZP5MUI",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "NM2XMPKCBAZTG5WX2IKQM7CTZS",
+            "WB5MQMWW5UA5YMATSAN424ADLO",
+            "WSSYTAMA3CZ3NUZ34D7CCVMK7V"
+          ]
+        }
+      ]
+    },
+    "cce_10_0495": {
+      "title": "节点关键命令检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0495.html",
+      "content_sha256": "702b76a9f9e5e6efcd3e63fc1fe95ae6d09e71ba7e4ba985b9117cff7e6acc90",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "702b76a9f9e5e6efcd3e63fc1fe95ae6d09e71ba7e4ba985b9117cff7e6acc90",
+          "revision_id": "7NRSRB5A7HZ2JVGHNU5A46ZPPY",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "TBFQRBPBFQPLIPTRDECHPF5II2",
+            "XEMM2X2LPXDIMVCVEOT7PWF52B",
+            "L3QKWON5PFZC3UZ3YDF54CGXO6",
+            "MYCPBHHHKIE6NTT2PTXWKH4OYO"
+          ]
+        }
+      ]
+    },
+    "cce_10_0496": {
+      "title": "节点sock文件挂载检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0496.html",
+      "content_sha256": "7f5a29d641966725433bf1c323b91587817401b73b3fa8eaa1ce47a3b38999ea",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "7f5a29d641966725433bf1c323b91587817401b73b3fa8eaa1ce47a3b38999ea",
+          "revision_id": "5X6QL2ICGOIHBLCEMOSG5WZA5S",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "AV57AFOZLY5CRELUO3ZLFTSP7I",
+            "EEJD7JGII4F4FC7ETQHK7J4R4E",
+            "UZINGZTIJSQ64JXXLF66DX5JVQ",
+            "KWNCMDP5CSPNQDQIZQBECTIEFF"
+          ]
+        }
+      ]
+    },
+    "cce_10_0497": {
+      "title": "HTTPS类型负载均衡证书一致性检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0497.html",
+      "content_sha256": "016d5016e2425ad3644a1e8266be8e50bf64d6bf2393e054ab13c883686b2777",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "016d5016e2425ad3644a1e8266be8e50bf64d6bf2393e054ab13c883686b2777",
+          "revision_id": "ZTD7BB3F2P3TVLOARHP6WEJEEA",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "HT2VXH6VSLBPAVCZ7AV2EC6CH2",
+            "DNPZX7HOMUTFPLCSXUMCNNP4E2",
+            "OJ4KPIBK2GZUKXYGXIPNOU4H4W",
+            "SUUKNEFAV53OOISJIAEZFEG2KA",
+            "GOWASSPW6FHJHU4C6YXZAHUCDM"
+          ]
+        }
+      ]
+    },
+    "cce_10_0498": {
+      "title": "节点挂载检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0498.html",
+      "content_sha256": "2448979229224ca039a2552205e473a6d79d4032e039507965bf92c7860cc40f",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "2448979229224ca039a2552205e473a6d79d4032e039507965bf92c7860cc40f",
+          "revision_id": "7E7VIMXNGE6GWBGYHQT53LJSCD",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "CM7DID72TRQRXMZF77TNTNFSSH",
+            "7FIVMKWKBSCHLVULUAUSFGUOUW",
+            "HPBNZBLO53ICMM5CS46RIO23HS",
+            "AQCHCHRFOFHPLBF63IWAFKPDM5",
+            "F4CKBUCMOC5FBRO4PCL24K2TK2"
+          ]
+        }
+      ]
+    },
+    "cce_10_0499": {
+      "title": "节点paas用户登录权限检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0499.html",
+      "content_sha256": "b4e93f557873ad96932c62843d3848e83501c14e8fbe5d2bca5374b9d4c69238",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "b4e93f557873ad96932c62843d3848e83501c14e8fbe5d2bca5374b9d4c69238",
+          "revision_id": "KNEEY2KQMI5J22HMOX45FZEGSI",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "ZWGSM6IC37FZKHQ25NLHTIUAH6",
+            "VIRCMDXUJNXRWS64DKJFSW3ZY3"
+          ]
+        }
+      ]
+    },
+    "cce_10_0500": {
+      "title": "ELB IPv4私网地址检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0500.html",
+      "content_sha256": "5c42ac2e5c7b99ccee2b4ce03d1f3c101048b98e6969f214dcb8d9fd62d95384",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "5c42ac2e5c7b99ccee2b4ce03d1f3c101048b98e6969f214dcb8d9fd62d95384",
+          "revision_id": "DV6J2HVWAAQCBCIEMWMPVHCTLZ",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "HH3VY2TFSSNPORSTITKLF3KNY3",
+            "LKU7FXGFZJN7RQJJM4HCI5KTNW",
+            "UDS45EBA6GSRFQIBDLSOZMDUUR",
+            "KRMNUPGWMFIS6GH2ATQFSLXB62",
+            "RFFPJ74N3YZWF2IPG3MQQVBDKQ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0501": {
+      "title": "检查历史升级记录是否满足升级条件",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0501.html",
+      "content_sha256": "dc6d0b0407225d2738794c482b7063f7bce1ad819b1f5bfb01e60220df04d6e7",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "dc6d0b0407225d2738794c482b7063f7bce1ad819b1f5bfb01e60220df04d6e7",
+          "revision_id": "4CHG4POIEHQDLOTAMPD5PK3RGV",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "WU7IJ3AHSVN3PCRSBYDT4PNNUS"
+          ]
+        }
+      ]
+    },
+    "cce_10_0502": {
+      "title": "检查集群管理平面网段是否与主干配置一致",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0502.html",
+      "content_sha256": "1a27d4140452805bd3e652a49c5196d232962c2be6182bbd8e9b845223439728",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "1a27d4140452805bd3e652a49c5196d232962c2be6182bbd8e9b845223439728",
+          "revision_id": "M55P773LW7JKMDX6EQ3DSVOHC3",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "XGTY4S6CUXSM4MNTORQWARFEIQ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0503": {
+      "title": "CCE AI套件（NVIDIA GPU）插件检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0503.html",
+      "content_sha256": "625657f93367c5026448328212daf5aea6f8a6829227fde8ca77b7e2a4cdcba9",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "625657f93367c5026448328212daf5aea6f8a6829227fde8ca77b7e2a4cdcba9",
+          "revision_id": "HKXLPTJV27X73H47F3TNC5LWXW",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "ZRAGWWGAV2FMTIYJZHNXUJA2IO",
+            "EMFKXW5ZYKB6P2US3YEJWVQ3NU"
+          ]
+        }
+      ]
+    },
+    "cce_10_0504": {
+      "title": "节点系统参数检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0504.html",
+      "content_sha256": "0f11190bf0c4295dcd50018676ad4eaea3b89ea0537948269018ba2d2c93b5dc",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "0f11190bf0c4295dcd50018676ad4eaea3b89ea0537948269018ba2d2c93b5dc",
+          "revision_id": "3MA536AFKIUNUY6YUKLBUPYV3W",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "3MNRDHPGQEDF6NYKP6GYEWL426",
+            "XRLZCSTHMZ6TCYCTRBPU3UL5VV",
+            "4QTZZVUKLFFRVIBBSGJ2GXY6JZ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0505": {
+      "title": "残留packageversion检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0505.html",
+      "content_sha256": "b91616fc56dc7f549bf3ceb3b37712008b3ec6c32154a71e17f1cdb14e459801",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "b91616fc56dc7f549bf3ceb3b37712008b3ec6c32154a71e17f1cdb14e459801",
+          "revision_id": "C275P3IDELZWX3AWGHDQAKGJ7Q",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "XNLAJCGC756NUOWW4IZTM4W6UQ",
+            "EYJ35CMUISXWVC4QSPL7UTOG4S"
+          ]
+        }
+      ]
+    },
+    "cce_10_0506": {
+      "title": "节点命令行检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0506.html",
+      "content_sha256": "5df2ff7f6588439f5fb98f652539806035e52df177b88f77cdcbaccc1411ce65",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "5df2ff7f6588439f5fb98f652539806035e52df177b88f77cdcbaccc1411ce65",
+          "revision_id": "LHHUIOQYP47KP57EE4KY7TXUPR",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "VD2MCJ4EIFYZ5W75J3YZXPG56Q"
+          ]
+        }
+      ]
+    },
+    "cce_10_0507": {
+      "title": "节点交换区检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0507.html",
+      "content_sha256": "b771230645b07228fd391e122476223cf2a5c6a0d302532c7b84ca7665adc833",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "b771230645b07228fd391e122476223cf2a5c6a0d302532c7b84ca7665adc833",
+          "revision_id": "MHOX53LH7X5UO2J6BRUPQ4I3I6",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "LI2VICUFZQWWUDXJXABUZ4KRNB",
+            "TFI7QNEQN56MM25VYZEFEOS4ZO"
+          ]
+        }
+      ]
+    },
+    "cce_10_0508": {
+      "title": "NGINX Ingress控制器插件升级检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0508.html",
+      "content_sha256": "23b6b1bd2dd760a442cc2d852839256e9efc2c52c402d6a4e72608f5ded9b42c",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "23b6b1bd2dd760a442cc2d852839256e9efc2c52c402d6a4e72608f5ded9b42c",
+          "revision_id": "FN6RONIZIXWEYMEOI3SCBJWFCG",
+          "status": "PUBLISHED",
+          "fragment_count": 16,
+          "fragment_ids": [
+            "RQ5V43RSQF5RQTIYBPK2DGNA7P",
+            "DE2VMZCU3QWQCC4MIJRH7U5K5T",
+            "ADN2IJLQFB3YPUVG3JFGOOJAJN",
+            "H6AJ6MOZTZTJFS57KH7NT6YQCV",
+            "MJHJIVNI4WPKGBQ64K4RTUQGBC",
+            "DOEYXFYF7CBWRTUKXQSPP5KQLM",
+            "LTETAPG6SLESHN65PXOTCGW3QI",
+            "7UYSIH37FBR5YG4ENTD75YTCLC",
+            "6C7SDL4NLYT57ONMK6OENUFBCX",
+            "UIO4CRKVJIJ6TIQRVUIZFJNOKN",
+            "GTCV76ZXXW2KNGYZ75ZZN5FX4B",
+            "4KUJROXJWZKYVRJN3MENIZ46RA",
+            "WGSNDVXDOP4BRB2L65F7BGND42",
+            "ZAB6IBA5UCHSAYTYXSCL5BPJRN",
+            "OC6MU3XOOVRMZNSA7GMK5YAEJ7",
+            "65SRT6P2PKXDRRSS2OOPHJ5XW7"
+          ]
+        }
+      ]
+    },
+    "cce_10_0509": {
+      "title": "云原生监控插件升级检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0509.html",
+      "content_sha256": "55cd12745e08baf47b80e9b19f2143df75ac8568847836404ea42e6e697f0b48",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "55cd12745e08baf47b80e9b19f2143df75ac8568847836404ea42e6e697f0b48",
+          "revision_id": "IVNYJZI7TJKD25BPXQKI72CJ5Z",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "VWE5JD7WH6U6FNV33USN4GHXUI",
+            "EWFST7KBXQAZURUCLMDKQY35ME",
+            "SITGGFUC3MP3RI2ZA3QODQUKYJ",
+            "ZGMVCKUQRQ2VSRNJPAVZKL3FBJ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0510": {
+      "title": "Containerd Pod重启风险检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0510.html",
+      "content_sha256": "16d7ab627031bfc723bdffe8494878ffc19eef8c842dbc550b5620a2f5fca89d",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "16d7ab627031bfc723bdffe8494878ffc19eef8c842dbc550b5620a2f5fca89d",
+          "revision_id": "R22GGJLEFGZ5TRN254XSDJ7NTX",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "DLOVKBVB4ZNGTQHGOB7JWOW6ZL"
+          ]
+        }
+      ]
+    },
+    "cce_10_0511": {
+      "title": "CCE AI套件（NVIDIA GPU）插件关键参数检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0511.html",
+      "content_sha256": "8eec25a356442729c04360cafa51be2a6a6a145315d015e06d17fe9a821e05ed",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "8eec25a356442729c04360cafa51be2a6a6a145315d015e06d17fe9a821e05ed",
+          "revision_id": "GTN6NVZGWRN63E6MAO7ZEQS7QU",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "YMYDJOSJ4WGVTIINCKYFTAZYDN",
+            "K42D5G7FJRL24ZZVG7RRYECIWR"
+          ]
+        }
+      ]
+    },
+    "cce_10_0512": {
+      "title": "GPU/NPU Pod重建风险检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0512.html",
+      "content_sha256": "162d08aab3c5685a08329e51b757bb441ba0050febfddb8e7e08ecd9b505800b",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "162d08aab3c5685a08329e51b757bb441ba0050febfddb8e7e08ecd9b505800b",
+          "revision_id": "LPAOWIDIYASQEYFZM4XIN7SFG4",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "DZHFVQHM4GE2QKKRQMQX4SR4OS"
+          ]
+        }
+      ]
+    },
+    "cce_10_0513": {
+      "title": "ELB监听器访问控制配置项检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0513.html",
+      "content_sha256": "2cc6c83955853095325decf97af8fa65f6d19d225fd3b94ebc9bf5026812414c",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "2cc6c83955853095325decf97af8fa65f6d19d225fd3b94ebc9bf5026812414c",
+          "revision_id": "WUZBANW4YJ5Q6U4IPOH5TMSXDX",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "DFGWVELIC2CFIFKZBGZY5UJLZS",
+            "RM45DJCJASQSU3ZNJ3UCHCNMLI"
+          ]
+        }
+      ]
+    },
+    "cce_10_0515": {
+      "title": "控制节点子网配额检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0515.html",
+      "content_sha256": "78a6f508ab27c05df3fce7e6afa17c0ad07d12d352544cc2ee6ee7b759e5bc05",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "78a6f508ab27c05df3fce7e6afa17c0ad07d12d352544cc2ee6ee7b759e5bc05",
+          "revision_id": "GUNTF2K2UNOCJECAVWOQRRUCDB",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "4JIDY44A2PD5C2GH4FOOWRGZJQ",
+            "UYFINGCLMAQFR4HDPHRDXI5K52",
+            "D6ILAF6VCB6FHGDTP744KTKULG"
+          ]
+        }
+      ]
+    },
+    "cce_10_0516": {
+      "title": "节点运行时检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0516.html",
+      "content_sha256": "4f7b37278850644d5a6f3d897f1bb20e5942e1e914fed13ec914ffc35f2d47a0",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "4f7b37278850644d5a6f3d897f1bb20e5942e1e914fed13ec914ffc35f2d47a0",
+          "revision_id": "OBGQLOBYOG2T7PG2NH7RDPP6C3",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "FPDFA4XTRJ33T4WMWDW4S564QY"
+          ]
+        }
+      ]
+    },
+    "cce_10_0517": {
+      "title": "节点池运行时检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0517.html",
+      "content_sha256": "0463a46215f2b521ae3224e875bb0c44e2c314101baaab64101a04efc885e362",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "0463a46215f2b521ae3224e875bb0c44e2c314101baaab64101a04efc885e362",
+          "revision_id": "ZRUKX7FQKDPOBJSDC67IX6NTPH",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "AIQKUFUJOABNL5DLXYHJ7446VJ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0518": {
+      "title": "检查节点镜像数量异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0518.html",
+      "content_sha256": "92c800de3064583a6a9041ea780d1892e1d88d88054a85f178629d1c639347f2",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "92c800de3064583a6a9041ea780d1892e1d88d88054a85f178629d1c639347f2",
+          "revision_id": "5MUMZMCDJJO5ZGW72HWYJXXKLH",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "RUDKTGGAMZJLIN5LDQQ7QLOTOU",
+            "4EW2ZJP6DGXB5J2LSELSSPYMK3",
+            "JSGCQXAX6YUIWUTCDQ36BAKSFZ",
+            "EL7DTO4XHNI2FE2M3T66QE57UV",
+            "IZ2E225TWSIGDS7W2EDQMCMCWO"
+          ]
+        }
+      ]
+    },
+    "cce_10_0519": {
+      "title": "OpenKruise插件兼容性检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0519.html",
+      "content_sha256": "b98b4e69ff229da7d8ade3732e48fd4cd7ff7b88e8384771c2212ac3996e92d1",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "b98b4e69ff229da7d8ade3732e48fd4cd7ff7b88e8384771c2212ac3996e92d1",
+          "revision_id": "TRMJARWMDQTBFY36RBI5HVODAV",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "IUOIWX734FLCXMQ7LRDJMM6LZN",
+            "H2WR2D6EK643PBUNGM2QWSPZOY",
+            "HHSPBC7FJRB3YBXKGOFT36Q7T2"
+          ]
+        }
+      ]
+    },
+    "cce_10_0520": {
+      "title": "Secret落盘加密特性兼容性检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0520.html",
+      "content_sha256": "9afcf64f4b41ed403bbbc0401f9f26e00a2c72125b143f6340b4ebac374af728",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "9afcf64f4b41ed403bbbc0401f9f26e00a2c72125b143f6340b4ebac374af728",
+          "revision_id": "RERNCXUHQOZACHNKNRW5IAHRA4",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "HNHE7YXCNCDL2V3WFV32HJJRSP"
+          ]
+        }
+      ]
+    },
+    "cce_10_0521": {
+      "title": "Ubuntu内核与GPU驱动兼容性提醒",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0521.html",
+      "content_sha256": "af93589256cb53202846a984768f80c7d57f86db6dc24d500f6230a9da8567fa",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "af93589256cb53202846a984768f80c7d57f86db6dc24d500f6230a9da8567fa",
+          "revision_id": "YQCR3AN6INNDQSQUXOM3XTX2CJ",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "KYMTMVDNBGQHNP54QTXANEVBBJ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0522": {
+      "title": "排水任务检查异常处理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0522.html",
+      "content_sha256": "dd195246bd3c5df8d4e78647d3dcc6a035dc7b8b6741870a55bdf7670d4ea732",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "dd195246bd3c5df8d4e78647d3dcc6a035dc7b8b6741870a55bdf7670d4ea732",
+          "revision_id": "G2DOCVNVWHNVKXCRAX3F2TABWF",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "TVHFGJFOV5KGRPEWV7MC3LG7PI"
+          ]
+        }
+      ]
+    },
+    "cce_10_0523": {
+      "title": "节点镜像层数量异常检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0523.html",
+      "content_sha256": "d2e35f5794e243d5d3d9fefcbf3f703d20928cea2862401885aee318f0c62057",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "d2e35f5794e243d5d3d9fefcbf3f703d20928cea2862401885aee318f0c62057",
+          "revision_id": "U67CGJKUIQJ2BA6FHHU5IO5NQN",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "VVSAWYAMVVHGUDLGVEHCQJDXO7",
+            "MEOSXKOIDTQEC2OTSWUG7YL7QD"
+          ]
+        }
+      ]
+    },
+    "cce_10_0524": {
+      "title": "检查集群是否满足滚动升级条件",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0524.html",
+      "content_sha256": "3417239ef84cc5aad90c3e79e6bc9ba1d1f2c9fd551ea8d637541a4642db5bbc",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "3417239ef84cc5aad90c3e79e6bc9ba1d1f2c9fd551ea8d637541a4642db5bbc",
+          "revision_id": "KB7TKB632VRSCQWZ3LEJRSMWEP",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "DKIOJM5MIIGR47FKV2MY6G4PTQ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0525": {
+      "title": "轮转证书文件数量检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0525.html",
+      "content_sha256": "113ea712ed2d9d26f28f596dc31834b8754350d1f650bc651cf12fa95a985ba6",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "113ea712ed2d9d26f28f596dc31834b8754350d1f650bc651cf12fa95a985ba6",
+          "revision_id": "O54ZXJSMMJGFHBEFP6L3VJ5L5X",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "KD355DWD7IBVTTUKIGNSZ5EQIP",
+            "DS7NHAQZCB6IC3ZGN7LTKNSRR4"
+          ]
+        }
+      ]
+    },
+    "cce_10_0526": {
+      "title": "Ingress与ELB配置一致性检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0526.html",
+      "content_sha256": "6b46eb4da467dfc2c7bb788b75f7bf2038b4646eec0229495242fb2e38a20322",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "6b46eb4da467dfc2c7bb788b75f7bf2038b4646eec0229495242fb2e38a20322",
+          "revision_id": "X75UWTI5U2STPVK63QRLGFJIQV",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "UGDDIIVZ3E6YFAGOML7H5DZTOS",
+            "KPVA3MOVTQJVVNANT2OQ342AFX"
+          ]
+        }
+      ]
+    },
+    "cce_10_0527": {
+      "title": "集群网络组件的NetworkPolicy开关检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0527.html",
+      "content_sha256": "3bc88e383975adca52c4865be654a1cdbcb1761658e10f081b21ab90c1bf831b",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "3bc88e383975adca52c4865be654a1cdbcb1761658e10f081b21ab90c1bf831b",
+          "revision_id": "M2E76UCICLNSJDW2EHUO7H4J6Q",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "OXLZUJF4IS2OKHNA6ZRKEIKNC3",
+            "OLIC2A7PTBLVOFLN33DS272M44"
+          ]
+        }
+      ]
+    },
+    "cce_10_0528": {
+      "title": "集群与节点池配置管理检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0528.html",
+      "content_sha256": "57943ccf02247c39548ab7e8db33ef0fd529ea10aea67b1e066c1280de7c7efb",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "57943ccf02247c39548ab7e8db33ef0fd529ea10aea67b1e066c1280de7c7efb",
+          "revision_id": "XI4SZFNNOS5JJLB3BRC3RJKOR2",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "J7HOUN2YVTXV22HZJZXZLTRNYY",
+            "SLVQ5RPQ3AUYOSVJYUY2DD5KML",
+            "QNIW3XGRFM2S6KTXIS7XVFPW32"
+          ]
+        }
+      ]
+    },
+    "cce_10_0529": {
+      "title": "控制节点时区检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0529.html",
+      "content_sha256": "592ea2a985f718c9e368ce127113fc5282ad1ca2e61375c231b9115df0d3b0e1",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "592ea2a985f718c9e368ce127113fc5282ad1ca2e61375c231b9115df0d3b0e1",
+          "revision_id": "U5FTQZ46L47FQ5MZ7N4OTAEBXQ",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "K46PC46FQOK7ULOKGBED4UK5UN"
+          ]
+        }
+      ]
+    },
+    "cce_10_0530": {
+      "title": "SnatIPRanges升级后变化检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0530.html",
+      "content_sha256": "904d09c2c8eef516b9923187c862e2acbe9238bded2d1f8f78e096f0dab5daa9",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "904d09c2c8eef516b9923187c862e2acbe9238bded2d1f8f78e096f0dab5daa9",
+          "revision_id": "IYG3FJRFYO7VMZIH7NVMXSAC35",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "YWPVKMNWKDFYBPDOARPYIKQ2BV",
+            "XGAGRKULMRIF3HNU6NUBJE75T5"
+          ]
+        }
+      ]
+    },
+    "cce_10_0531": {
+      "title": "插件配置一致性校验",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0531.html",
+      "content_sha256": "3d24438155cd01db178e2695493469c3bce2c2becd620e7d536944026b7b6170",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "3d24438155cd01db178e2695493469c3bce2c2becd620e7d536944026b7b6170",
+          "revision_id": "W4US2O6VBZXZUZMZY2EEQIF5PW",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "G5LWWHOF6YKFJIRDPEWHP443WZ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0532": {
+      "title": "VPC容器预留网段升级检查",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0532.html",
+      "content_sha256": "db53a51265e8769800a9e42bbc2f7009328facd6f9a47d36c54661cb507f8321",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "db53a51265e8769800a9e42bbc2f7009328facd6f9a47d36c54661cb507f8321",
+          "revision_id": "JCHMSBBNJAR7O4MZ2BMHWTQLJO",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "ESYIEGHBJOK7RHALDYKK223OVK",
+            "HHMIADUXMZXHX5DD3HPSOYPHH7",
+            "5YONT6RAI4NQBRCVC4KRVXRIYK"
+          ]
+        }
+      ]
+    },
+    "cce_10_1144": {
+      "title": "集群升级风险提示",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1144.html",
+      "content_sha256": "eceaec407424507d583b9cdbd75776b2f66c1aefbe1f4677fb7545d29db4107f",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "eceaec407424507d583b9cdbd75776b2f66c1aefbe1f4677fb7545d29db4107f",
+          "revision_id": "S34QANZRLBQENXMHUTGMQDSDFU",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "ZKPB3C5LQ23V45JJHSYBFZFKXF"
+          ]
+        }
+      ]
+    },
+    "cce_10_0180": {
+      "title": "节点概述",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0180.html",
+      "content_sha256": "d0664eee31e6a1e0c41f7f9b9f973668f3b4d259ae6cbb65c90c9a5b8ef19568",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "d0664eee31e6a1e0c41f7f9b9f973668f3b4d259ae6cbb65c90c9a5b8ef19568",
+          "revision_id": "XW75IF2YMORHQAEXA3HPYCVIHV",
+          "status": "PUBLISHED",
+          "fragment_count": 6,
+          "fragment_ids": [
+            "LKKFLELH3IOERDFGJ4TKRLVJ4W",
+            "QHK3VBQGKMW5GCLSHZ6J4FBWHF",
+            "P6M4DCSHDFQTZ2NPYVVJRUX3ZW",
+            "PSPOTV57LEBGSH3INMH3BBZWHV",
+            "6QEFKEG6F6QBZMYDPYLZ7QDK53",
+            "2UULC67JN4WTXVUN5LF5P4VUTZ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0462": {
+      "title": "容器运行时说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0462.html",
+      "content_sha256": "aad7285f52098023033fe312c50ed5c98b209937d4eede76d905d479e7453eea",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "aad7285f52098023033fe312c50ed5c98b209937d4eede76d905d479e7453eea",
+          "revision_id": "HPT76IFIBF6DXYH4LM4QTGYRIJ",
+          "status": "PUBLISHED",
+          "fragment_count": 19,
+          "fragment_ids": [
+            "C7D3ERD5A4RJKRSH73RTF5HN6R",
+            "6UK35RCVMVAFG4J4OI3BA4GAF3",
+            "QQZBYOULIKWDPFV4BQ5XZS2QKP",
+            "JITK7HLLQPAHCKWV5HTF5HPZVZ",
+            "JL2NJ7COJAPY6QNGCTDRRKEBBR",
+            "MK2MK6FIRKPSDDSP6XYV5T2SZP",
+            "F3BZFQVLMPWZ4BRIGP7YARZZO2",
+            "NIV4W4HIBJPDVP2VG6HOO2QIMB",
+            "D7PLPHJLZEMQTBUFN6FPQRE5WR",
+            "GV3KXQPKZRDZQMZJASQDNFH6Q6",
+            "LQGTBWDDDUWM3BMZAXLSP25T7I",
+            "FPRWZPF67GB4DC7LMT4JK2M36R",
+            "DKL3HMMVRURBYTCA3GLVRYQ36P",
+            "WSZAFJERLG6H22RZQZXAPVS456",
+            "ZMAZTE6PENKIUB27AKYSQK5R5G",
+            "SKQFH3UMI2RW3PPBLCWFMKV3PH",
+            "VLDFSDTHZVT5XW5NBQPY3HCDJY",
+            "EZC7BDO7YSIM4BGYZCKECL7YVB",
+            "A3Y24MGAFO6ITOUB6WGSQO7UOS"
+          ]
+        }
+      ]
+    },
+    "cce_10_0476": {
+      "title": "节点操作系统说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0476.html",
+      "content_sha256": "aca6488de6220fa89a8b2b789743942e8b872d2ab6189e5cfb0ca17000563095",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "aca6488de6220fa89a8b2b789743942e8b872d2ab6189e5cfb0ca17000563095",
+          "revision_id": "T3XZN3RBX6IBMV2DEB6XKI4BOB",
+          "status": "PUBLISHED",
+          "fragment_count": 14,
+          "fragment_ids": [
+            "3PKYIYVVZ7DXSLHBRWGH4FAF6W",
+            "O43BXKK3ORQNO2YJVQKO3J6HGO",
+            "2AQORM7GRE3PZFZGXWPLURTO6S",
+            "VLANVEMNME47H3R6RQAHMNRXE4",
+            "GLW3SMXIURCK5AKHYTC3KARINR",
+            "ZVKJMCRUYQGMJQSDKMMD5FEGWP",
+            "L7KO4SDNDU3DTTXKRHC2IWQ2BR",
+            "24Z2WKQ2K3DNFZHNPM7SP4CMUA",
+            "BWNZUFP72S4ZOKQEEAZAHSRAYI",
+            "54IF2GYOQDAW4RDLYAHYAWOEQW",
+            "QVKWYPSRXWPTNA23LCGF26TRUF",
+            "YZADETKRYFDIJHGOOF4IN4PHWI",
+            "5GEE7LRBO76OEKFJMSNCOLJGMH",
+            "V5PTHFRXGB22LJYRDSRXHZGEJJ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0719": {
+      "title": "节点规格说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0719.html",
+      "content_sha256": "504183f45a8fd8eba74f0943d325cdaba90736652ffc6b635cc83d6fe8d38597",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "504183f45a8fd8eba74f0943d325cdaba90736652ffc6b635cc83d6fe8d38597",
+          "revision_id": "SLOJYSVDHV2VSUAHSNHBZDUXUU",
+          "status": "PUBLISHED",
+          "fragment_count": 82,
+          "fragment_ids": [
+            "VKH4GCV6IEJNTFX6RX5NIX3PDW",
+            "2B6BHOOVW4HL5YUEQJWCQ7N5DL",
+            "DHZD36534Y2BK7YK5VOK2HCU7P",
+            "4QMYGMJWDYKD4MA5VJRYG42OGZ",
+            "MXWCGRM26HEJTM4ZMHGVJVUA4Z",
+            "5I4KCLHYTGXTTM56VGZFFC2OGY",
+            "NO6JJJZIHE3UGX52WCTMARSJTB",
+            "6ZGOOTBC2FZCLQJVRXWOWKQBGD",
+            "TUODEQ5P5F4AXIKOJUNYD4PZBR",
+            "MBRZMKFL42XN2C35OOVLY7VK6B",
+            "VR6BZ2KPLGEFSCMPUVCNWCZ5LX",
+            "K52WBS2CNTI4SHMS26LWJBDQES",
+            "3TDV4RXDAGNGE3GK5JD3DWNBNU",
+            "ZFUS34BOP6U4PTIIGZUSQKSQC3",
+            "5S7JSWD3OH42XOUD4A4VZRRRL7",
+            "4PFWHSJGVWXMYPD2TO6ILF3XJT",
+            "AIXEYWZ7E4QT3CN5R2NB3VQO3Q",
+            "PXFUGA5L5MCJVVXVLLPMUYAYTP",
+            "CL6FHA3IIZMFYQZEZOZTPL6TVO",
+            "WKNCH7RECYLSIXR4GWYIU2SRPI",
+            "5KO2SM6PHK4YE2ATRLOBQ5POJV",
+            "2AQRPVNXX7WKHNA7GGZ3CVUQHR",
+            "IL5L6BXXHF2ASZFJRM55KC5SKT",
+            "52FFYAKY4BRTEUWZLYJCPDS2RU",
+            "OKNFCHIZNCD4SHMIGC7VRS5SLF",
+            "I323JXRWRCUETFWCRXYKFMNDJA",
+            "4MGH6VF5HZA4ZX2JUVDAS7O72C",
+            "ONN32MPPYFIE6DERAZMJHK4XIE",
+            "NHZLILDAQ6C2DREYHXV4MS3VYK",
+            "MDG4NHZITZ7P5MFMBHE2VG5TDG",
+            "KHJAPJ3HVRT742Y7G3EVCZV4XA",
+            "RIMF2FMP7N7EJB2E2BACV3YBZR",
+            "ZXHHPUJC2T776QOSBIQL2QHBPH",
+            "M7LNWNVXBNX3IMAPRTCVIENZHO",
+            "Q7I2K4QWJT7A7U4XXIW75DEU57",
+            "TGSYJUI7QZXGUOQEFCQBR6NESW",
+            "XTSPIX4RD4EE4JI6XYLPIHF2JW",
+            "JR4RN47OEMCA62W4652MVVVDGA",
+            "F5NAZK5LX7AHJNZJZDQKG2ZO3R",
+            "A5SEJ7KL3K24GJO5RHPZCAKTFV",
+            "O7JVZPWOXO5R3CY3UWDU4MCLQI",
+            "FG3HL56EAKPZ6IRGZEGBEFD2DR",
+            "IAAH36SZEHGCXQWCWBZYWWYMG7",
+            "RCZRF2QFAOQ4NQYZ7BDPDUD7XT",
+            "TQ7LYIEH2CEBXH2CFCPOOPJEPM",
+            "SCEG7YLB3NT5KAYVUFLC2CTNJV",
+            "P2EYHEAJEVZHWBYDA6CSIQQ4VG",
+            "4J556MBZUSFREU4A5OWKNKESM3",
+            "KQ6ODU2JM6RWB45NQ3ZU3F3ADW",
+            "YJV6IQEENRUKFQED263DORIOBH",
+            "YAZ4LZPEQQUZUGGIFIIU463BQS",
+            "DMAOVQLBWFMFTPVAYGV4H3PLUP",
+            "25HIDCMY2CBII7QCEQGKHG5YOO",
+            "AXFNRNX3WYPVPPMH4NOBX33TBM",
+            "ZMULB27EL3LF65CEQNOROQWWTU",
+            "7RH5SRTJIVLIIUZGO6CD6H5TKE",
+            "GS6YHW3ZH6TMHUSB7L3LJIECRY",
+            "KCNYIWUMZR5FEQIUWFZXUMSWSA",
+            "SGBLTHGVZ6IP73Z54ARC2E7JGE",
+            "TSRYZQIMT2D4HV5KLAJIHEEBQU",
+            "5CTILYVAMHXECGJ2HV4XTJPHE7",
+            "2H37AFWRGPJGPUSJZ6WEUMUM32",
+            "OEAZEBI5N7NKYH2AVWWIR4EXW5",
+            "KVW4DSQTEAJME4FVMZ5IFOPXHG",
+            "5PKRLPYLFOH35K5QAWWAY4YMUS",
+            "LCUZLQW4BBGCXAWFUZDJDJW3M7",
+            "2LUZAWH7G4US6KUJD5YPF762ZN",
+            "R5LQXS34AHRUBFK6JUOZXJUNTV",
+            "DKWQYZ264FB6VVSOBG3TRVR3IB",
+            "3637UW4MUKXADAVNPS77XZKRRV",
+            "G5QGEEQC4TWZMZRCKJGJFUDMQ2",
+            "PAOTTRPJQMVHUIJB4NP5PVUQ2F",
+            "EKKCOAWRQKFINJKQKXCLW2CKQF",
+            "7TOFU2WQ2JTP46GUQRMK7ZDMNH",
+            "7KTFY52QBH6RQUVBA7OIUKNQ42",
+            "B373DSROA6OTDJCNYTETW36WXB",
+            "2UB6HZOC5WDUE4X4NBCQ5WN2N5",
+            "PWF5KCWK2OJFNOT4Z2AG2S7OFK",
+            "YSE4TIXCO7VZOCFMKFQIJJNLKR",
+            "TJ7WQS5L5VOQ265QJ6XKN4XDAD",
+            "MJ3WKVFMILV7N2HQDUDREH3BRH",
+            "S6KUFDOPGKCWK6TJCQWZZ5QR4X"
+          ]
+        }
+      ]
+    },
+    "cce_10_0363": {
+      "title": "创建节点",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0363.html",
+      "content_sha256": "302605349bce16c64e78ed67cbd0b9b6f4a8321ffc05d76fd5083a3c8c73939d",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "302605349bce16c64e78ed67cbd0b9b6f4a8321ffc05d76fd5083a3c8c73939d",
+          "revision_id": "PMZKUGENOHHQ5NXPYJKYEWUHQN",
+          "status": "PUBLISHED",
+          "fragment_count": 21,
+          "fragment_ids": [
+            "6DABR35BP4NE6E6RXHGCO7H7OV",
+            "PYWVLZ4PZO2SQ4DCLJGZOXKOZL",
+            "ZDT7NZF6RIGDODNRAALYV3FF2M",
+            "QK45YN4G6TXLPHIY3QORIXD3ZU",
+            "GYMAJVVPQXKS7TN4CUS7LVAY5U",
+            "M2OAT3AH4ZYXALR734LJECLDPG",
+            "YIFXDBDA5T5HQDSA36JPINYDWZ",
+            "HAT2YU2IPDPYTC2LG2RSOZWOBU",
+            "P3PMBLLS76A3OFAWGQQM3RN4N4",
+            "NV6SYIXA2YRTKQLIEMGHRRUCJ3",
+            "GQ37TFLB2APLJK6NYVD7UHT6QW",
+            "GZL6HBFOW4IQEVLHAUGRUM442U",
+            "JHWHZZCVSY2GDRE6I74FVZIWAQ",
+            "GSOR43CNCCAVRF5QMMHNT6N73Y",
+            "YISH2FFB73OQFNH2GZQ33P32GA",
+            "4TTUNDIXV4YDCQC2XPSXRRS6DN",
+            "6R7DXSPM34F6YBTB3I3MV2WCAC",
+            "SDOWR46NDVRRMUCLQKGMKXOYNY",
+            "LB2AUV3BJIRENYOOUCD7K3UY53",
+            "BOVQU67GB26S7B4VNDAH4L5EVG",
+            "HJURHLAHJXOSHCWTJ5M7PSVJ6L"
+          ]
+        }
+      ]
+    },
+    "cce_10_0198": {
+      "title": "纳管节点",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0198.html",
+      "content_sha256": "2e517292942e56df7bfbc73859805e0d1a9d77eadfb649434ae8f05fdee646b8",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "2e517292942e56df7bfbc73859805e0d1a9d77eadfb649434ae8f05fdee646b8",
+          "revision_id": "3VJJA2GWSYD4FM5IXBHKEJZRLG",
+          "status": "PUBLISHED",
+          "fragment_count": 14,
+          "fragment_ids": [
+            "3YHGEXO4XPKYJBDQCPB224QKJN",
+            "7XEIIV4FLG2ZNTPYL7TPCKASQF",
+            "Z7C3GJCNXTJJKBYAIBNKI3QUIS",
+            "AI5LKSAONMLLTELQBMYN3ONVY6",
+            "3NG6COWS52WAJG2PQNPIX2EIO4",
+            "5CEQGWHOFW6EXW7C6QB7JKUZY6",
+            "7BQNYWUUC3SPIDXBXATMXKIKKI",
+            "4EF67ADSYL2VMK4JUMRDZJBNDC",
+            "3ABPPWAIKVBA7NS5CARNBK2U53",
+            "RY2V3XIQELO2YCMZZ3KZUKRFMJ",
+            "2XGVXJY2O562335PQHA2SE224S",
+            "AJK63MKMNZEOQEVOB2USBHVFTG",
+            "N6LZE2LFRQQ7G2CV7HZW4IMR2A",
+            "XIGTZPEVIC4ROOKVVVR5IPXWQJ"
+          ]
+        }
+      ]
+    },
+    "cce_10_1156": {
+      "title": "纳管具备安全启动能力的ECS实例",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1156.html",
+      "content_sha256": "6504bd89fb026d2f82666024b32a9c890fb7b9a2fdae455c64340251545d4031",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "6504bd89fb026d2f82666024b32a9c890fb7b9a2fdae455c64340251545d4031",
+          "revision_id": "WW73XMNBWIQTFSXP4FSL2RRBJ3",
+          "status": "PUBLISHED",
+          "fragment_count": 8,
+          "fragment_ids": [
+            "ELXD57LHBJCRNUGYISFJPQBS36",
+            "SBM22OH2LRRPLS22MLUY2PWMMU",
+            "MMRQEAODH5JFDBQZF2QOWCZCMT",
+            "KKUOT7MWN3WF3VQYZDOBPZNTH4",
+            "3W2CXSESNCH6FMXWNQITTFU5PQ",
+            "2FOTCDVTTBRWHDUS675QH6XRRJ",
+            "63XATDVCDBL7DIFXSWF35XE2CX",
+            "64PR4U4NEVZ2NXHPEX7KV7WTAB"
+          ]
+        }
+      ]
+    },
+    "cce_10_0185": {
+      "title": "登录节点",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0185.html",
+      "content_sha256": "cb6eaa4c6f851d090cdcc23aa23026e683cf178ff9bc905663bb1d1571220f2e",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "cb6eaa4c6f851d090cdcc23aa23026e683cf178ff9bc905663bb1d1571220f2e",
+          "revision_id": "E2PMGO56RDWHS5J6HZJQGDN6WK",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "NHFEMZWB75JPBQHXXQWVM7ZRAO",
+            "42E6XE53R34WI644UJRFVNGTPI",
+            "DX3RFYLXUR3S5OZ3DWXBY6T3Y2"
+          ]
+        }
+      ]
+    },
+    "cce_10_0004": {
+      "title": "管理节点标签",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0004.html",
+      "content_sha256": "048ecc811c6a1609b43ffb104319648cf7965ac544769006e6c448e1998c2f78",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "048ecc811c6a1609b43ffb104319648cf7965ac544769006e6c448e1998c2f78",
+          "revision_id": "7DEODTRNH2MM24XRP7IHLC6E2O",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "WFFTA526M5YIO6P2HTNJLZI4AD",
+            "VHJ4NV7WNSUJ62HZKVMFA6563B",
+            "IONMGRCHZ2XILE46QFLZUNJSEK",
+            "FCABJQ7L5YGPZWSR7L5COVC3NK",
+            "NLA7EMUVZPHJRBARNGU2WUH26I"
+          ]
+        }
+      ]
+    },
+    "cce_10_0352": {
+      "title": "管理节点污点",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0352.html",
+      "content_sha256": "adac33379f5edd9adb4954d7812b0c805213e483c0982691ab94ebde20ac847c",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "adac33379f5edd9adb4954d7812b0c805213e483c0982691ab94ebde20ac847c",
+          "revision_id": "ICNYOFUUK6FMXPVSWPR4IZ2FIX",
+          "status": "PUBLISHED",
+          "fragment_count": 18,
+          "fragment_ids": [
+            "OWL73NZVLNAC7MQJNU7NFPZ7SC",
+            "W6MG5E4KR7DMXRZQK4T5HQEBJC",
+            "WEKL753ATTBX47I3CXIJZOPDHW",
+            "HY6U6X24Z4LUM5VQUFVRZ5NSLS",
+            "4WDC7JOIJAEAUMW4UAF5T2HUSN",
+            "3PR7ZVQKGBUDVHAUFXK3NGWRZH",
+            "QRW7AQV25W2P7RGJZ32DM43DWP",
+            "ULEOLRR5QWK7RDK3XESXGJRGMX",
+            "FTFLIK5K4PYWXS3OQ3EQZII3J7",
+            "PAYT3MV32E3RMEDT6VWDDIIMUB",
+            "ME4YELMQ6VHX6QOW5OUWNQQJSP",
+            "BC5FF5AG4MM26L6VC2QTCYPODF",
+            "EV7NI4D7TQOPGWXSQL5D76QLC7",
+            "R646PMOPWVJVI57ONY7WFSESOO",
+            "HRPL2AGIVDUKQE362A7K6E7CDD",
+            "V5EO3OLC6FEPDO2OFCFWZISRQ2",
+            "S67NMFOSR3IYAU4MXZXVW6YKSR",
+            "FF65V6AH3MY2QFOYUBBBZAUBH2"
+          ]
+        }
+      ]
+    },
+    "cce_10_0003": {
+      "title": "重置节点",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html",
+      "content_sha256": "152e05e8b119e67e465f759d3c31ddc6531e2858af903d6bc032cd3590e8514c",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "152e05e8b119e67e465f759d3c31ddc6531e2858af903d6bc032cd3590e8514c",
+          "revision_id": "PEL4YRDPFF7JFGYLAAQ474N6ZR",
+          "status": "PUBLISHED",
+          "fragment_count": 24,
+          "fragment_ids": [
+            "NAWISHFFKMT75UPSYPFMIDYA5P",
+            "YOPJEGA76XDKD5BEFZAKFQ6PAF",
+            "GANOM47Q334CPGIRMTCAP7X4ZC",
+            "H6KVKMEUB53KWSQPKAK6I3YY5X",
+            "UUQIVI6XBSQZ2GTZG3IPOV3ANA",
+            "OOR5T2YAACVHDCMB7PGDVTTJOZ",
+            "3JY3Q3NBDIIVKJ5XKJGK5N7XEH",
+            "6CGSNP2DGX4T5AYJ3SGSASBUE4",
+            "GDK3OWP7WMV7XNQUU43STGTUO3",
+            "2X2W6USQCXMC75A3YT3QUBUERQ",
+            "4GU2KEIEW6IWXD4O4CLBOC6VAP",
+            "DPJS6G2IGTATLIAFMZDAVXMJFX",
+            "PIWLXRWJUDBG6WEMQYFFQF57EB",
+            "KRGMO5XKBB7KNQ42WHMK6TUXEF",
+            "OM23O2D7DEKHXCZQQKVLVSSROW",
+            "T2X2RLOENK6NSZWHLIOH7RQLSH",
+            "VSX74IJIGNSCOD6Z2FB5A4SYLJ",
+            "LROXFTOA3FNKAC6AQI3Y3S7TI6",
+            "35KS2VWZZXC5NKELHUPZC63RBH",
+            "VO3RUFC37HCREVOTLFD3RUR4AO",
+            "TNVYBFOY4C4BNLLTRT7TVCLKI5",
+            "V5OMTHPPRL5XROCZWSJW7AMFFL",
+            "Z4IG4PVBS4EXVEQQYROYTHLQRW",
+            "AMXSNZ5RGHYXFHZPLSWYMWAF5K"
+          ]
+        }
+      ]
+    },
+    "cce_10_0338": {
+      "title": "移除节点",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html",
+      "content_sha256": "d3586a93e77947ffeccc526cab9045ad95b904d17834b411fb7c5b1d6863dd63",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "d3586a93e77947ffeccc526cab9045ad95b904d17834b411fb7c5b1d6863dd63",
+          "revision_id": "OILOFQ5M7BR6K3KDDZ2Q6RZTFW",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "KGFTD56XBDZZKPHGFHTL5WB5E6",
+            "UBWIBKVVRNDBYN4OAF5DZF5C5L",
+            "6C3PMIE3KTS44XXGO4EN363KRQ",
+            "EB3Y4WBMXIYBYSCKC7CZE7IAUG",
+            "EXYTDGSOR7Z5B4IWWQLQVPBGQ3"
+          ]
+        }
+      ]
+    },
+    "cce_10_0184": {
+      "title": "同步云服务器",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0184.html",
+      "content_sha256": "6e8313a530c54eebb4cf4f93d6a0e20eb41cd5aaacc4dd04599d193bf6ecc55b",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "6e8313a530c54eebb4cf4f93d6a0e20eb41cd5aaacc4dd04599d193bf6ecc55b",
+          "revision_id": "ZG56WCBC3VPEECBTOQKGTCJDQ6",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "YGVI2DTCZDJUZK5BUGNYZLCH7J",
+            "BCZUF4RSCAKB2LVSOZESIOR5V6",
+            "Z5NXVIAJ2VOIJ2JAV7A7VUUSHQ",
+            "UXHEOVMGFDNJB2UI4HYJ2MYBJZ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0605": {
+      "title": "节点排水",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0605.html",
+      "content_sha256": "51104e76eca2e833820f1e481dbfb55472e3263d7f733b1bfd093562a54faf19",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "51104e76eca2e833820f1e481dbfb55472e3263d7f733b1bfd093562a54faf19",
+          "revision_id": "JLUBAFKVK3F7OIFKCJJT43LCRK",
+          "status": "PUBLISHED",
+          "fragment_count": 20,
+          "fragment_ids": [
+            "W42M27IWELBMPGWJGJWBJABI2O",
+            "NRBB5OPM3MKHZ2YAAJBDXFJJ4A",
+            "7TX7ISHWAWMW3EG2BF63YU6B3S",
+            "H2ZBNISIXYC7PDTWDSZ3OFKYF6",
+            "C6Y6LQIAPTEAEV55JQCLZVTMII",
+            "4VNYXGZZFSIZE3RSSMQOVKERLK",
+            "64ZEOUBUF33T2SOYMOVHDSVOUT",
+            "O553MQAC4A33VJEBI4SSY56ZSI",
+            "4YYZUY2IKVNHS6NUECC7HRXTHR",
+            "7FSDOUKOCAA3OBFGKWDURA5LCL",
+            "6TN7UJAOEEZRWGSKUSRXKH6VCE",
+            "ZWO3USMCOWDVUQ66AXV5WA24GZ",
+            "OH2W5RQMC2WO7PAG4T2DWOTDPX",
+            "7JHY535PF6GD75YQFC7OEOOBRP",
+            "OXJJSQWFTYGQ2OIYCAYOCHL7BM",
+            "MQJFD2ORT2BKST5T2TENU5DOIE",
+            "GPDKV2BUUHLZYWEQXDEUN7X4QA",
+            "OPFWCPKYHTDBTNUXCKEIFIKL7E",
+            "PWMWTWYD7LIWGKIJT6M4H4VE46",
+            "LKZKNI2TUGC7AMGV2X7ILY5XRD"
+          ]
+        }
+      ]
+    },
+    "cce_10_0186": {
+      "title": "删除/退订节点",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0186.html",
+      "content_sha256": "eb312a6f2186177fddcb65c679639dbf466bff82893094e8b0eb9a8cc4098299",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "eb312a6f2186177fddcb65c679639dbf466bff82893094e8b0eb9a8cc4098299",
+          "revision_id": "FPDQXKOCSO3E5U5T6O5UXU3F7Z",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "VQC5CKP5GNAG53P7AJSKYAW5BT",
+            "QWMACAEEJKK6NIIQW6EWDBCR72",
+            "EXBWBDBIFHJCESEHVOMHVYXU6A",
+            "6YGYWN6VTD3DPJPU3JLXWCHQ4Y"
+          ]
+        }
+      ]
+    },
+    "cce_10_0407": {
+      "title": "按需节点转包年/包月",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0407.html",
+      "content_sha256": "2d38536c5621b8194bd432fff3a0afa24fa831ea8fb7eda5e091aaf1ef6dc2af",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "2d38536c5621b8194bd432fff3a0afa24fa831ea8fb7eda5e091aaf1ef6dc2af",
+          "revision_id": "IHU3GA6XQRCIAFGJO3NCRKKBSM",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "KLOGLCXRINZYI76MUKIVB4KXPC",
+            "O24UMR4DS7NOK5GIFNPE6BSPDG",
+            "JFZHF3ODYCRO6ECYGRNTFC7XIA",
+            "2SWXVUV43R2VLKDXVYHUMETNNJ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0837": {
+      "title": "包年/包月节点修改自动续费配置",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0837.html",
+      "content_sha256": "ca2594e8a3f2a82abf25119baa12cf7ef490196eb3460ed835a93528d401c802",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "ca2594e8a3f2a82abf25119baa12cf7ef490196eb3460ed835a93528d401c802",
+          "revision_id": "6SG3FCEUUH46PIHITAZ3JS4XNH",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "FSCAFHCBPSYVVLI6Q5BYJVIPSR",
+            "XRQSB3BDK5A57EMNGII6M5GYJB",
+            "MW5EPOVMDEI44QPD3HZNHVCIR3"
+          ]
+        }
+      ]
+    },
+    "cce_10_0036": {
+      "title": "节点关机",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0036.html",
+      "content_sha256": "358f3b92cc376f7efb1e7205162d497fbc5eda302677a2df5ee8a58a6f1168c3",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "358f3b92cc376f7efb1e7205162d497fbc5eda302677a2df5ee8a58a6f1168c3",
+          "revision_id": "SF7GHWESBOS4MZICYHNJXA7PLZ",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "VIQBBNT4LSY2GCRAM23ZZIR3HY",
+            "CCG3K5WVGG3RHU5LB4XAHV2HT3",
+            "TLZS5P67NPIPV6RWYUHF3VHAJG"
+          ]
+        }
+      ]
+    },
+    "cce_10_0276": {
+      "title": "节点滚动升级",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0276.html",
+      "content_sha256": "c143e1a56ff1166a985b1a802ab211290bba0774531cf8391462e9eb69b9752a",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "c143e1a56ff1166a985b1a802ab211290bba0774531cf8391462e9eb69b9752a",
+          "revision_id": "VC27UUM5ECR4Q7G5R7XAKW7HHK",
+          "status": "PUBLISHED",
+          "fragment_count": 11,
+          "fragment_ids": [
+            "T4NYVCYJPZCYJ2Z7JUFPOPUGZ7",
+            "UDYEZPHPLYH3FXGQVQJU6WPWVZ",
+            "5MYTFIZ26GWURQFKRECZKBMFM5",
+            "BMXDTGT6HZAELWQI5SDK2ZYJYO",
+            "HC2U6A2TCWRF4QOYLDCLFNMIBR",
+            "GEIP4TNZNZ2KLZX2MW3QMLY7RK",
+            "XFOXSEZKH4PUIQKUGCVAI7V2QW",
+            "K6YVQOCS2CL3LTXTYL7ZPQBMOC",
+            "LEJ5NKPNMBYSYBRDZD3F5QD24P",
+            "D55EGXUIHEHABOLYR4V4JR556G",
+            "SJKWZVJJRFUVZ2VAN7JSDTN5HE"
+          ]
+        }
+      ]
+    },
+    "cce_10_0178": {
+      "title": "节点预留资源策略说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html",
+      "content_sha256": "9186a2757c2faedba4ba90fdd63a235b976c4416ceb198c6c18c2615dd34342d",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "9186a2757c2faedba4ba90fdd63a235b976c4416ceb198c6c18c2615dd34342d",
+          "revision_id": "ERR665JA66LQTZWO46PBE2QVVO",
+          "status": "PUBLISHED",
+          "fragment_count": 7,
+          "fragment_ids": [
+            "UWMBFKQP6OE4WEBJW634LDMBJ2",
+            "2HJ6JUIOXEXUIYIJAWXYSOFYLY",
+            "QAEQIVPFTETJRB2AAGKKUJKRX5",
+            "A7CXDEV7BQBJ7TBPOG2VLHPBKP",
+            "SAP5U7ZAPMB7XZSLJEDMP4OVTN",
+            "SWVQSKWXFCB2ZQ4S6BRPACD5M6",
+            "BMU3CZFFMPCUVP5MGIFRASTNME"
+          ]
+        }
+      ]
+    },
+    "cce_10_0341": {
+      "title": "默认数据盘空间分配说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0341.html",
+      "content_sha256": "8d2e7c94c1c1e363e75146da4ab5fd2369705f8adc24cfcca947b9a164c63e78",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "8d2e7c94c1c1e363e75146da4ab5fd2369705f8adc24cfcca947b9a164c63e78",
+          "revision_id": "B7CF7BCZ7SUBGDE4BXJ3MSFVV4",
+          "status": "PUBLISHED",
+          "fragment_count": 15,
+          "fragment_ids": [
+            "WFNN53KR5C2HQDUTNLOBM4HJLW",
+            "UQJ2S3GDR6W7OUF5J7RY66TOQD",
+            "AYNKWUOFISV7LLQ2WWRGS7CVVZ",
+            "Y4Z774QQJIX5K5GMYZQDJFRERS",
+            "KATEVVFQEQ5PDPS6KJNBK7FEJ3",
+            "4IR5L2R6RJH773USSMJGVYMJMK",
+            "ZMWIEXGGMIGFPIBVCB6CM6RX5S",
+            "34RHCADDIMRC2UEX5GX2PA2N3U",
+            "DVNPWW3DVNGCFLUZRK4UML36SV",
+            "IZ5PKLLIZV4DHCHKTXFZHTTNS2",
+            "6TJGNI2EX3576WY72HLOI3VATT",
+            "2U6NTEMEZB2YV4XVP2RTZV4REC",
+            "CCJHOCEGINCOPX3AKNSAL4TUYE",
+            "VTEQHG4VMBYXGF36D4C5XXWNDL",
+            "YUN3I2C5G4WOV5DZJW53B64YBY"
+          ]
+        }
+      ]
+    },
+    "cce_10_0348": {
+      "title": "节点可创建的最大Pod数量说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html",
+      "content_sha256": "d527b4ccb58886b1a1dbbe6d994bc89431dacdcb3a5b0d78465537c09fa9aaf1",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "d527b4ccb58886b1a1dbbe6d994bc89431dacdcb3a5b0d78465537c09fa9aaf1",
+          "revision_id": "ZVO2KLQTTIT22PEFJN6ZXLJCER",
+          "status": "PUBLISHED",
+          "fragment_count": 7,
+          "fragment_ids": [
+            "AJOTQZWBNPFM3GJAKYB7FWAG2S",
+            "PI2UIXQTGDMUWUI2H2BWN2P46Q",
+            "7OIIKF5LEKFKRLB5G72UKHYMGO",
+            "HUG2EPJ7YH2NTEESO4TZREG3JI",
+            "Z44RTLPFUCX27V2RCJS5VOCHGT",
+            "OEBDGHEP5YMDBQXYQMJV4NU4YG",
+            "OTTFJLFGAKGQKJ6EN7T6MNYXLK"
+          ]
+        }
+      ]
+    },
+    "cce_10_0883": {
+      "title": "CCE节点kubelet和runtime组件路径与社区原生配置差异说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0883.html",
+      "content_sha256": "6e7038ea67b4d1b4dfcc0ac96a2d05f44309e441b1d7a9f3c690762475aa1a4a",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "6e7038ea67b4d1b4dfcc0ac96a2d05f44309e441b1d7a9f3c690762475aa1a4a",
+          "revision_id": "V6VGAPZRWCYGRBFEKBD5HNXIU6",
+          "status": "PUBLISHED",
+          "fragment_count": 8,
+          "fragment_ids": [
+            "K67S25HCOECKJOI4VB566PPAXF",
+            "R2CVRZB2HCYLQRRRSJ7JDIG7TW",
+            "KIERY22KVWMK23YJ6E43RAT3W2",
+            "7JNUFXKXHUW45HYO4PSCVP73NM",
+            "E73GHHJB62CRNXAC6CPS2WHV43",
+            "5UY3E6NAOFC6FN54VPLWE4RBKY",
+            "QAAJ3B4QTA6JUZEPMOD3LHL7NU",
+            "N5HXSOLB5CAXK24LLXZKCJSA2Z"
+          ]
+        }
+      ]
+    },
+    "cce_10_0601": {
+      "title": "将节点容器运行时从Docker迁移到Containerd",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0601.html",
+      "content_sha256": "9f42f5405c18416ea563c6984e4a2d3296faa01e4c091124833730a7ebbda2af",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "9f42f5405c18416ea563c6984e4a2d3296faa01e4c091124833730a7ebbda2af",
+          "revision_id": "42DD46VABRLIBHTSGKFIEB4K76",
+          "status": "PUBLISHED",
+          "fragment_count": 8,
+          "fragment_ids": [
+            "B5FGSQITPDSHQUG776YS55E3MS",
+            "7SFPPQOLFKEQVH4TP2VRMLDI7Y",
+            "NO5GLJKKNQMVZ64IEMWJLHXYYE",
+            "3TGGITDETPDAZTQFFQYIMLSYAZ",
+            "3SOXUUTVVAWWYHBRMRI3PYRYEX",
+            "WTMENILMJ2NJRSQ5FQQIOLYYPI",
+            "BT2FHXKYZK2RQCPZ64X4X2D3GL",
+            "3VKDKUMPE23A6FC3LUBOHVSH35"
+          ]
+        }
+      ]
+    },
+    "cce_10_1136": {
+      "title": "将节点迁移到cgroup v2",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1136.html",
+      "content_sha256": "b9cbccc74af3d697788f0a21940299de2a87416081709dd19fd40ad6544456ef",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "b9cbccc74af3d697788f0a21940299de2a87416081709dd19fd40ad6544456ef",
+          "revision_id": "4R4VJE44VHG4LGRC4EHKMV66DY",
+          "status": "PUBLISHED",
+          "fragment_count": 6,
+          "fragment_ids": [
+            "LCFG6EOSP324SFHSX57TM6TMJR",
+            "CLVLNFV3Y26N6MSSVHMAFTKMFP",
+            "PP2NZLDM5DMT22HDP6TT467RNF",
+            "FYJVQRWCFWB5NKCDTRWBZAGFC4",
+            "7V5WFCI2QLWIITZ4YPKQULQ4YY",
+            "RH3FCPWBXTCMLW5WWQ7D2PO343"
+          ]
+        }
+      ]
+    },
+    "cce_10_0409": {
+      "title": "可优化的节点系统参数列表",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0409.html",
+      "content_sha256": "625dc718fc7a9a03fd0985245da4bbb27d3d4d145eeeb7be822b323fac32c068",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "625dc718fc7a9a03fd0985245da4bbb27d3d4d145eeeb7be822b323fac32c068",
+          "revision_id": "MQ4BGVLWD3ROTGU6AKTHBP4B4H",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "BJDUHYBB2JURUBSGSAVAHGKIZP",
+            "VY3RZY2YL7VHT3RAAHMQZDL5AM",
+            "2D63367X2J7T5NNBBEHJK65PRI",
+            "A6LCZX7ZNHVIVFEKK3D3EFYPKV",
+            "XPTK5LWEWWP7CJHX55MBZIKCHF"
+          ]
+        }
+      ]
+    },
+    "cce_10_0410": {
+      "title": "修改节点日志缓存内存占用量上限RuntimeMaxUse",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0410.html",
+      "content_sha256": "1e693e5ac151c0c4e584b5e4eb86a91799765f9208281d1e7ac83ac2b92996a0",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "1e693e5ac151c0c4e584b5e4eb86a91799765f9208281d1e7ac83ac2b92996a0",
+          "revision_id": "4KTP3ECZ2WQTOOZQIYQQTUKYY5",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "46DEV2JTBPD43D7C2YR5DBYSAN",
+            "F2YBOEX4NWYRFKDCILWWP2DSGC",
+            "KPJ5A6JTZUZB6YXYIFCWBPLDA7"
+          ]
+        }
+      ]
+    },
+    "cce_10_0411": {
+      "title": "修改最大文件句柄数",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0411.html",
+      "content_sha256": "4d84316f3d0606c6b266025269b631c6a6d84a947b44398c670ef0796af0aea1",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "4d84316f3d0606c6b266025269b631c6a6d84a947b44398c670ef0796af0aea1",
+          "revision_id": "BKINAS5BFUITICN2STHGL55IJC",
+          "status": "PUBLISHED",
+          "fragment_count": 6,
+          "fragment_ids": [
+            "7KSQCWCDQP4WG6UBKQHVKUOFH6",
+            "JTTUMNLUQNUGK627P5PHIEEYHI",
+            "FCMI32XRK4PV6R7IODIF4S4K2D",
+            "NBYQBYZZZJTMLXQBLSAUP3W7DZ",
+            "UO56HWIGNY3S6GPXKETXJVRPV5",
+            "TT4W4KIDZC5LJNVUDYIQUZ7YAI"
+          ]
+        }
+      ]
+    },
+    "cce_10_0412": {
+      "title": "修改节点内核参数",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0412.html",
+      "content_sha256": "c8b628807fb489278f302e26000f7a82b0797a2fceed2bef7e362d6bef252991",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "c8b628807fb489278f302e26000f7a82b0797a2fceed2bef7e362d6bef252991",
+          "revision_id": "ZOLMNXBQZERZGN7CU2HPE4CTW5",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "IPB526TRMEXOSDAQI2GTNZ3DEX",
+            "P62F3JD3TJOF5OGAVP4XT5NSLN",
+            "K7TETQNJGBAH5FUSBLWPL4L34P",
+            "3AT7TKQQYNY3F5ILC5TE76GISD"
+          ]
+        }
+      ]
+    },
+    "cce_10_0401": {
+      "title": "修改节点进程 ID数量上限kernel.pid_max",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0401.html",
+      "content_sha256": "18a32996a4b3251839b356651905a4717f3799e075bc5cd76cbbb38b2c597006",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "18a32996a4b3251839b356651905a4717f3799e075bc5cd76cbbb38b2c597006",
+          "revision_id": "EMJRQHBM5FHJGE7D5ELRJQMUCX",
+          "status": "PUBLISHED",
+          "fragment_count": 8,
+          "fragment_ids": [
+            "KIYT4646SDMAI3MVOZQKWWFSTY",
+            "T2SGP5A3DZXCR3VRWUKUOOWLSR",
+            "JJZBZ5RLTKXTGE573U72FHPFLV",
+            "PQNRQADIVQYDJQIYY425FCO2E4",
+            "TY4DRGLXZI6HDMPL4KRTUI6BUK",
+            "HACAPYXOAXB46SQRXJVQT2EDIF",
+            "TSIQY5OR6WIZUPXFDRR36ZR4ZT",
+            "44GD6EGJ7D4VYXUNA5XOY6Q7TR"
+          ]
+        }
+      ]
+    },
+    "cce_10_0659": {
+      "title": "配置节点故障检测策略",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0659.html",
+      "content_sha256": "021489953fbf9c592be63c75654e00a006693b961df662b80bb05ef0f79e489b",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "021489953fbf9c592be63c75654e00a006693b961df662b80bb05ef0f79e489b",
+          "revision_id": "4JDCYYYAHCYRNHCCLPF3S2HYS6",
+          "status": "PUBLISHED",
+          "fragment_count": 13,
+          "fragment_ids": [
+            "K4KB4WPSRKSRWVELT26AXKATAY",
+            "DZYJUQGM6W2Z7Z2GXD5S2TID6F",
+            "OZFJYKFY7P2QMDODSQW6QJRVHE",
+            "TTCEONF6KO33SMZK7OVS26GTX4",
+            "F4DXAUEDE637YFZBK3D2DMBDX6",
+            "GCKHFI6BIMSAOZCO4HUVUPPS5P",
+            "7WYHWN4XRENU5T36VZ36DEDUZF",
+            "OUIJ2TV7YF3QH4C3GSKXC242KX",
+            "MZYJCOVQNEAZ2UEYHNBVRRIWAP",
+            "UZI5RWF543KM6O2P3SGXTQNAXL",
+            "LZIVBHSUHSWVV3FM756246FAT7",
+            "JZYVROSA7AOKA3RG5RXP3EIJH7",
+            "SWAYQ7GWKQC6KLK3BS7C2DHU3E"
+          ]
+        }
+      ]
+    },
+    "cce_10_4659": {
+      "title": "创建节点时执行安装前/后脚本",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_4659.html",
+      "content_sha256": "be982903845f01c217862fa7352b87267d9c4760d6dfdb7e6eb7566a61be2889",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "be982903845f01c217862fa7352b87267d9c4760d6dfdb7e6eb7566a61be2889",
+          "revision_id": "TP5MJKGN5YVLPJETAVO76EKFZV",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "RQT7WWMJ6SIIM2BYHXN7R4JLYN",
+            "MXK6DX4XWBSGIRSFTSYJLCCM5F",
+            "KV7SF2FQYERZYWSYB7KNMZHN5F"
+          ]
+        }
+      ]
+    },
+    "cce_10_0946": {
+      "title": "云服务器事件处理建议",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0946.html",
+      "content_sha256": "92b76bfbad89b32c97e6225edb8f652e21bf09cc664e6110a8b158ba85819e53",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "92b76bfbad89b32c97e6225edb8f652e21bf09cc664e6110a8b158ba85819e53",
+          "revision_id": "DDZW6KAKX66RWXPDJXDLHWK7QO",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "GVJ6JGPSKDEV63OGPFPBEQ5BRY",
+            "P3THYUWWVPVDWHLQBUCLVRBB46",
+            "3LZMGWEBQP6EU7TV24773M65MJ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0081": {
+      "title": "节点池概述",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0081.html",
+      "content_sha256": "1d6c9a7ed6c8ed6d1dde84429c54ea82adfd9b5db613e8edd04fd39db76ddbfd",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "1d6c9a7ed6c8ed6d1dde84429c54ea82adfd9b5db613e8edd04fd39db76ddbfd",
+          "revision_id": "SCJ5IILMHHD7QWCPP732652RMR",
+          "status": "PUBLISHED",
+          "fragment_count": 9,
+          "fragment_ids": [
+            "ECOYFEI5ROPTYEQ7K7TDIMK2OO",
+            "K5TDZTF2DSB4JVSSU3XT5WPMN3",
+            "SZKLFOHUUTNB6SB6LLHKJP2VGY",
+            "2XJLNLHW7QNPSCWECAN5UNN5G3",
+            "WN7V63WNEWBXDEZU2N5XLBAEUI",
+            "UJAXI2XOOYIUHK4QJMPKIIWUX7",
+            "LLECDVD2IGE7NNDBWSXF6O4SWK",
+            "BZHUMNRUBHAA3MGYZSPINA3JVP",
+            "KJWW2DSB3MFYOBTEX3LJRUC62N"
+          ]
+        }
+      ]
+    },
+    "cce_10_0918": {
+      "title": "新版节点池切换说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0918.html",
+      "content_sha256": "50e03f7b7118942e9b35ac04503de66b18740700ab9a19be7784e15eff076373",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "50e03f7b7118942e9b35ac04503de66b18740700ab9a19be7784e15eff076373",
+          "revision_id": "FQA7PKZ5HWAIMQON63NMFJBG5U",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "CAHEKD6RMNP3X5PELDSL4LSIZV",
+            "G73SMHNG77PLFLSNSXSH6S67WW",
+            "4QSVCE3JZPVA7Z2WWJOXQ3TB5N",
+            "FKDOCSPIQDGOJAQILVNARTOFAV",
+            "Y3XL3DUZXOHY3HRR6BBLKME6QT"
+          ]
+        }
+      ]
+    },
+    "cce_10_0648": {
+      "title": "节点池多规格计费说明",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0648.html",
+      "content_sha256": "514a5c5ccae647be0f054db571907cf33a873e61b64cef5b969c2606421005f6",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "514a5c5ccae647be0f054db571907cf33a873e61b64cef5b969c2606421005f6",
+          "revision_id": "OQ47OPQSMELEPC63AC2OINQAVI",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "VWXRKHXNO3KGWJXHNXMF2QX557",
+            "GLP52X27F2X6RMTFIG7OQA6XN7"
+          ]
+        }
+      ]
+    },
+    "cce_10_0012": {
+      "title": "创建节点池",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0012.html",
+      "content_sha256": "8fb915d8611c648df9e242b9ba147f28627e36960f8209a420e2a18a17ee1445",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "8fb915d8611c648df9e242b9ba147f28627e36960f8209a420e2a18a17ee1445",
+          "revision_id": "N76SPV2GSHQEVLGZEN7KFBYZMX",
+          "status": "PUBLISHED",
+          "fragment_count": 25,
+          "fragment_ids": [
+            "73ZHANTDYQSN3C7E6JDU335QH5",
+            "CKQ3ESN5RQLKJOWETGX6BYP56N",
+            "RMWUSLJCDIHIS5QXZPJ3IFW6ZB",
+            "52OZRVHFIRKW6ERXSWMI434KHD",
+            "XZVUP5MLXJ7O2VUVRX35IEDSEI",
+            "CTDZ5FEOE63G6PUDHQY2N4DW3T",
+            "WLJM3Z2527YJXEASMHKJXVHI2J",
+            "44PYKECA5HW52BX4HATJHQSRJN",
+            "K3KGEX24KYDQIUDKTPSGGVQFOE",
+            "LAORDQFEALJNGHQNJHATLBJOJY",
+            "R4JJRDSAP2TUWIZWDZ7TT4EULK",
+            "FYNJGMJV2DIBCG2PCJE4OSJEJY",
+            "XYJ3M2G2XSUGZB66V4L6RISJTF",
+            "GUGKFG47E3QKFK4PQGGMSZBP7N",
+            "FFSRK2X2W3TEUTSWQZPIYSUHGG",
+            "Q2YYFHIWLVJ755AGXFDKIBS2DF",
+            "XAL5TA26GE5HEOZ2V746XAWNOQ",
+            "LCES4FZ4KIERJTZ2GVQLL253S5",
+            "TI5L7XIGOIRIK6EDVWLWT3ZICO",
+            "IAUQRLE5734LDGQK2RS65BU5BV",
+            "3ZBXGDXCWUVLF3FEFKJYPGTVSF",
+            "4WD5INDXD7UIOJLARPZGXR7ERC",
+            "7Y7BHF5J3N7FSFDGE3YKRUYU6I",
+            "SDTSQADT2SB2CO6O375THOPXLJ",
+            "XF3DHRICRZIY2Q63R4VZC4FIHU"
+          ]
+        }
+      ]
+    },
+    "cce_10_0658": {
+      "title": "扩缩容节点池",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0658.html",
+      "content_sha256": "5e05d36b978f0023586685f508535a427ede78a2ce55c72ddc0f88be308aa1aa",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "5e05d36b978f0023586685f508535a427ede78a2ce55c72ddc0f88be308aa1aa",
+          "revision_id": "AH47QVPL3QUX7KHEVJVGUHLLXF",
+          "status": "PUBLISHED",
+          "fragment_count": 8,
+          "fragment_ids": [
+            "F4ZAIYGXAOT2QJBKIMJMA2DSFP",
+            "QUQNSXKXUCIUVD4GGD7C77AHYO",
+            "LCJVTMCQKLYNUROII63AQKHVBW",
+            "ACWWZJJTQSFVKXEZIXLME7I3RR",
+            "YAM35NWHUR6SOSHX3NJGNQIFDO",
+            "ZWHEKNA3GHQOJ6WPN7XEJSISC2",
+            "GYEA2HFBSXD7IKGYQKNKUWE4W5",
+            "N757I27KPHL2L73HDYSVZPJVQT"
+          ]
+        }
+      ]
+    },
+    "cce_10_0964": {
+      "title": "为节点池中的每个节点自动创建弹性公网IP",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0964.html",
+      "content_sha256": "bac2cd19e1de131221ea00c65fc60db7db72f297f15664d9a2849563c58b26f5",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "bac2cd19e1de131221ea00c65fc60db7db72f297f15664d9a2849563c58b26f5",
+          "revision_id": "DFMA3HVGGXCKX6HLGQJO6ELRF6",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "UZBVC23P6MKZDYQRDYAVGYGVNF",
+            "IKXBHRWMCEBDTTYLT37MRZTTEB",
+            "D5SFZNMGZLRALFKHCZOEO7SGBV",
+            "EEOD6ZTB4W2RYHXLUYSJL7FAST",
+            "MM6N3IZMM3MTKSCQUGO6R6LSVG"
+          ]
+        }
+      ]
+    },
+    "cce_10_0653": {
+      "title": "更新节点池",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0653.html",
+      "content_sha256": "1df8f30cd899ad56c86351d9bb154bf58809933ac2c6aeda9ea457b28dd125c8",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "1df8f30cd899ad56c86351d9bb154bf58809933ac2c6aeda9ea457b28dd125c8",
+          "revision_id": "HJL7SDQTCSSNTML6CF36IWVFIS",
+          "status": "PUBLISHED",
+          "fragment_count": 22,
+          "fragment_ids": [
+            "53UURKOGXNJLYA7YHX6YPJO6N6",
+            "IKMCMOCIBMMJY5G56FVZFHCD5V",
+            "GLCL3T3NDLPLXSFAIV6PINXIPR",
+            "FGRGVK4BOYBLNBO5PCE4TAKIJ4",
+            "MRPUZK27H77T2MMWXELQ2SIJLE",
+            "SFCUBBEIV3JIBJALKOZGXOYOWU",
+            "6RTEISIAB56XWNT3VJ4S56D3AC",
+            "LBVUOF3I7NDRPBVWDKVMO37EPK",
+            "VPH32OPIDBDYJEPNAHDWLQXUHK",
+            "BJQGWBSSFLRUOEBOTJB4F3O4VC",
+            "SG5MZYMRRTVSOQGGWME4C3TDUW",
+            "TQNB7D3S3W5XC7W2DNW3L5RSP5",
+            "NRBLYCISEXHW5TMUGRTZEJU6XU",
+            "CTRY2PW4BU7OLCG53PXS4PKIAX",
+            "EWGYOOW672TBXPO35UNQAGHKXI",
+            "KNFHMBF4FHMMCXKICIGLPWQCAA",
+            "STFYBP7W44MW6XE54JYBJ67DFA",
+            "QZ635WYTRXYWGJIMKKS7RNWQGR",
+            "IELDCUCGNHZD6LQAXB47ZPEMSP",
+            "WAQ6YHOJYA7O6NGO3UDINXLQ5N",
+            "5HRHNE5QIY3GJEP64M2T3HWJMR",
+            "6SMYZIXYJDTPH6TD23QKSMEVCB"
+          ]
+        }
+      ]
+    },
+    "cce_10_0727": {
+      "title": "更新弹性伸缩配置",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0727.html",
+      "content_sha256": "f0dd3313fbac86d683851caf3e3695278f392315ab3101e86110d8bc43943c33",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "f0dd3313fbac86d683851caf3e3695278f392315ab3101e86110d8bc43943c33",
+          "revision_id": "IFCNC4K4LG3D2UB7XE7UV2AKL7",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "IPYD5GIVHCXXQPXAHCPXU2YMKY",
+            "RRXYZ5MHVIQCUHUUB6GYBER762",
+            "Q2IOY3NXH7KXXXVJLUR7R2QTYA",
+            "WXC5JLVFA27SRAPI7AJ2LQZBNA",
+            "VK4EZ32RN7MV3Q4CUZU26KZJCS"
+          ]
+        }
+      ]
+    },
+    "cce_10_0652": {
+      "title": "节点池配置管理",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0652.html",
+      "content_sha256": "91f50c3a916bd541e48f446037745398a168be3c387594ffeaacb635c77c2987",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "91f50c3a916bd541e48f446037745398a168be3c387594ffeaacb635c77c2987",
+          "revision_id": "JSL2RLA6UHRK35IF6IJ4XXG3LQ",
+          "status": "PUBLISHED",
+          "fragment_count": 30,
+          "fragment_ids": [
+            "R6HIGDPXCJ7S74RG75C6NXXLFJ",
+            "VNXKG5BGXH4BURX7T4AK7IHD2F",
+            "DSS7FAEIDT2UOE37CXIK7W2UTS",
+            "PKZGF6VZB2BLGTKNPQTUO75E66",
+            "FY2WFND6QBABR7FUVY6SUXB7RE",
+            "EU5XH4AMTIN33RHVJOPFAVV7FP",
+            "AATUJPMXWOB7X6E6GNNACO53QU",
+            "F6OM63GENU5WS7OLV657XQ3R2W",
+            "P7QRU7VNWLC7SAR6ZG7YAQJ6PS",
+            "IF3WRGAFRZR6RAKF3W6W5PP6IB",
+            "RSXXIHWK7ZVO5DRGW6YQZ5ICB5",
+            "X4J4ESYWACRYPOIX5X4P6LLFL7",
+            "QDCK4KP56SR22IJ57CFY7UMQAH",
+            "DZXOSBYUNOEEAVFL2EYA244COI",
+            "JY7RPKPRME7R5EBSXGMAQEWBLW",
+            "NQMGMANRV4UEDZLDCMTTS3XQGA",
+            "M4GROFMLZQ5HUTMQXA3SSCXMOL",
+            "BZG3XI2YTJKGTPHSOVOWCSZAWY",
+            "MSM46G4QSRGGQ7LPORR4M22S5A",
+            "JB5LX5G7TYKOLOD4XSC5U24VES",
+            "RJZI7L63ZMCUGCYKWA5RZDJJ3A",
+            "QEUQCJGRJOCEVU3KLIBHXEYVUB",
+            "EIEOV7RGWQU3BKEWNRKCURRSMS",
+            "O7LZM2JPUPSK62M2JM3PBX5HQM",
+            "VEEXYW4LGFIW7ZHY676KS2SY3O",
+            "SZV6KD7FH3MT6XSDYVON7CQTBB",
+            "PDNZTMTWRCSCWNNS6MQURZODWO",
+            "6GTW2UJTZVOI3VQ7KEU5IYSIIX",
+            "DQQ7M5EV76SEEQE3LYQSZAI337",
+            "PUQ3THS2O57OXI4PP6V4VCDRKL"
+          ]
+        }
+      ]
+    },
+    "cce_10_0886": {
+      "title": "纳管节点至节点池",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0886.html",
+      "content_sha256": "11b683283e110ed790577154958d666ff20bb980da2ba749e3b7dfb4bf4a7360",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "11b683283e110ed790577154958d666ff20bb980da2ba749e3b7dfb4bf4a7360",
+          "revision_id": "4SGX44QWM3IEXYV7NYZZT3UE7L",
+          "status": "PUBLISHED",
+          "fragment_count": 6,
+          "fragment_ids": [
+            "MKFC63L3SIXM25JGB4QWD4QDU5",
+            "IMCXPNAGNO2JONRANGO4A2SC73",
+            "CSJT7SN63JDQFBQZ2GQEQVWAIX",
+            "OFVMZHR3F637W3MPTRTJGSLMJ3",
+            "NW3DEDL2UTSDRDBXAFY7LX2IIJ",
+            "NLDESRP7TW46QBAS2VYPW52M7W"
+          ]
+        }
+      ]
+    },
+    "cce_10_0655": {
+      "title": "复制节点池",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0655.html",
+      "content_sha256": "4ace7c569fd8f3664a8fc276c98fc5c6a3393a26ca2d58f99e8b414bcd784a29",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "4ace7c569fd8f3664a8fc276c98fc5c6a3393a26ca2d58f99e8b414bcd784a29",
+          "revision_id": "S22A65MUX2L4NPEVMVDDD7K3JZ",
+          "status": "PUBLISHED",
+          "fragment_count": 1,
+          "fragment_ids": [
+            "ZKCGAVYLQMLVA4EXESRCUMEQW4"
+          ]
+        }
+      ]
+    },
+    "cce_10_0654": {
+      "title": "同步节点池",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0654.html",
+      "content_sha256": "2e44cbdae4a502e1751a4329dd6da610e060a437c1119387af872e266bd4fd1c",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "2e44cbdae4a502e1751a4329dd6da610e060a437c1119387af872e266bd4fd1c",
+          "revision_id": "SOCKXU4G2QS7JVN4PHZ623VC5M",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "7MO3I2TRAGA2PG5V4WMTTBHJCS",
+            "CJTYMHYBIXB7OFFUIHOXUU4R6A",
+            "BTBPZ4JEMZMWSQM5ZSW4EDSLVX"
+          ]
+        }
+      ]
+    },
+    "cce_10_0660": {
+      "title": "升级操作系统",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0660.html",
+      "content_sha256": "dc9f4bd2e42671f0b4d3434c1efe97f20f9557714c5edae3e6c54117ebbcd30f",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "dc9f4bd2e42671f0b4d3434c1efe97f20f9557714c5edae3e6c54117ebbcd30f",
+          "revision_id": "SDU7N4QYSQIKXLVYDGRRQRC3XG",
+          "status": "PUBLISHED",
+          "fragment_count": 8,
+          "fragment_ids": [
+            "HKAYJXMC5GQ64HQRUXUN4EI3X4",
+            "AUXW4D2TONPJKVXSR26PZHJ6SY",
+            "IA6T7VBZ5SYLAD3DONVWY426I2",
+            "5MCCBI3XN3KT7S272Q2TLR7RHE",
+            "TNIHQR5Z2YY2T76XK2SVHZFCPB",
+            "2VPIMHYR2MHIB3EMDVZGUQWQMN",
+            "DSYX4EA33CAZQGI26NETMUV6OK",
+            "5WTFEROSE6FWB2RYCGK5D23274"
+          ]
+        }
+      ]
+    },
+    "cce_10_1166": {
+      "title": "节点自愈功能",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+      "content_sha256": "5e8d6d3e877a287da529cb2a592ea228df814ab0a067def82f73c00088e06aca",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "5e8d6d3e877a287da529cb2a592ea228df814ab0a067def82f73c00088e06aca",
+          "revision_id": "SJDTEHI36LMDEMOCDYFN5DHT7P",
+          "status": "PUBLISHED",
+          "fragment_count": 12,
+          "fragment_ids": [
+            "Q46AVFFQ4WPIS3RKMRHQLLUA4M",
+            "OSYKNW7VF2H33QQWYEELOLLVDT",
+            "VRTJESK3W7ZB752A3WKUOIVMTF",
+            "GLM4KVAZBUITRQKXJTNCJREKQU",
+            "HGRHLLCBG2SFKK7ITBAJZA7OGB",
+            "5LRCLIIEMQ4DFY5MAUH7NPSRM5",
+            "GCR4PFXUXKII5ZX4DDIJ43DMAU",
+            "HLA465QDH3ZONB3GRKFKFMYECF",
+            "RYBIMFPW3VGUQI2DZ464ATL63L",
+            "ZH2QBDHSOWTICZ7MBSLWNCD2KH",
+            "KRLM5HYVJXK3WHD6ZZIWO5SQTC",
+            "WG3H3N5WDGN372HSVTVAZDQ2G6"
+          ]
+        }
+      ]
+    },
+    "cce_10_0656": {
+      "title": "迁移节点",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0656.html",
+      "content_sha256": "d63562948bd345e54699694f5f1531b712c9502230cbd52dd0a1d42eaaf56d78",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "d63562948bd345e54699694f5f1531b712c9502230cbd52dd0a1d42eaaf56d78",
+          "revision_id": "GS43ZL3IWONM5D32M7PN53S6RY",
+          "status": "PUBLISHED",
+          "fragment_count": 4,
+          "fragment_ids": [
+            "ZMZNXH4HXX6VAFQHVNY75FHF2Z",
+            "O5VSNND4UCKYV2SYMSJJAOLSLA",
+            "4XVQDR55DBXD325JAYS7HY7MBN",
+            "73IOY3ZUITSCSOXCZSXDHNA76C"
+          ]
+        }
+      ]
+    },
+    "cce_10_0657": {
+      "title": "删除节点池",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0657.html",
+      "content_sha256": "e40cf85a4fa8f78e4e30870b22fa6df37571aa1cd38a59fe4f56b59a1300f517",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "e40cf85a4fa8f78e4e30870b22fa6df37571aa1cd38a59fe4f56b59a1300f517",
+          "revision_id": "GMNHRSGGHEWFNRIM7E6RH2RBBG",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "IOJL5V4Q2ESD3QE3BEFJN4JM2L",
+            "WU7SLNQ5IWUZZNFOJRWGPV5HA5",
+            "23Z72GWYKKGRBWFA7GDM53PDKK"
+          ]
+        }
+      ]
+    },
+    "cce_10_0006": {
+      "title": "工作负载概述",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0006.html",
+      "content_sha256": "c3777f2902a3d3ad9d82495ebd8bfdd0db0a789189b161fa4a3cf055f633325d",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "c3777f2902a3d3ad9d82495ebd8bfdd0db0a789189b161fa4a3cf055f633325d",
+          "revision_id": "ZGSXBR6PZNE6ERKMJ5FVDT7PKS",
+          "status": "PUBLISHED",
+          "fragment_count": 8,
+          "fragment_ids": [
+            "5U3ITXRZV7RC25HMT5S3A6PLQL",
+            "YW2UKDP6BJS5AML3UQYEAGE6CM",
+            "SVAOTOK4FDNZR35SIFGC5HFPGS",
+            "QRKJK2HWHVXLFXY5S4AAGBV2IA",
+            "37GZSTVQJEBFDGROKN33FNUBI7",
+            "UIYHLI7ZYKJ3TKBCMDMILOSLNR",
+            "R5TUPQ73BQEJ5ONG4UMKRPXPA6",
+            "FNPLX6XRAG32OOYC5WRH3JJYGH"
+          ]
+        }
+      ]
+    },
+    "cce_10_0047": {
+      "title": "创建无状态负载（Deployment）",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0047.html",
+      "content_sha256": "cff40bdeb2be2e3d27a42708080c9eac84f43ba446dd212d49f339105914cb5e",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "cff40bdeb2be2e3d27a42708080c9eac84f43ba446dd212d49f339105914cb5e",
+          "revision_id": "XJU5UNYMOKLZNECI7OOHK527AP",
+          "status": "PUBLISHED",
+          "fragment_count": 11,
+          "fragment_ids": [
+            "6K2TPH3L5VYDZ7TJTBFK4UTZKE",
+            "WBGECC6PANDIUJRKZ2SMI6HEI2",
+            "ETTQ7AIOY44CX2XHJHV6GU3SUY",
+            "CKA7PNNB2C4OKBNFO7HLOPL32U",
+            "DAWVAGP4M2BVFRZPYPNVPO7VXV",
+            "7G24DSUJZ3MFQT6GA5Y6WHANTF",
+            "P3MJEJMOBVGXNQVQ34BM2PTWCN",
+            "G4KXE7OCPTVEWUVUJBCK6NJGIP",
+            "53D474VE4P6EJHZ5YA4RU7YTMF",
+            "OCFO5HQZNA7456MEOGWXD45K52",
+            "JVXGDB2THMTAE5VIDTR4UB65GK"
+          ]
+        }
+      ]
+    },
+    "cce_10_0048": {
+      "title": "创建有状态负载（StatefulSet）",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0048.html",
+      "content_sha256": "6e427d59da83b9af17fa1c20f8e6a4c79d3bc23ccee468cd30bc0f3f58055b35",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "6e427d59da83b9af17fa1c20f8e6a4c79d3bc23ccee468cd30bc0f3f58055b35",
+          "revision_id": "YMJ36DQJYWO7ONDW2SHN24DNLJ",
+          "status": "PUBLISHED",
+          "fragment_count": 23,
+          "fragment_ids": [
+            "YRHMPGPWSNAZ3CIV2R5AC2LGWZ",
+            "J4S7KM2CBMV4M24PWD6LAUEAGZ",
+            "EYLOXZYGCSTA44FYVYJ7UWOM4H",
+            "FI3VGVQOLYU5IAEWFR3DTCNEKS",
+            "XOKDCHGE6FLLT5QVML4A3VODJI",
+            "PNLFVWE34ZV2YHCYYS7RSG2WNF",
+            "WPJCWUPM7VTJIALFOSJSVEYZEF",
+            "VNLK3P4VX7QZFQZTFUATL5YWS5",
+            "SE5POJU4KX43IPJFKUVAIM5DIJ",
+            "NRL65242N4GW25ZBK5S3GIX6E7",
+            "DNSQI3I4ODGK2MCTVG3AOO6XF6",
+            "UH5HASUGGN52WRLM3BMEXFAANH",
+            "JGUPRFEK7QR2EOUFCPET7GCRMI",
+            "LKZ6TUDTR2ALXBMUOPFTMN2W72",
+            "QV4BANEYRSXEDJIL64FGGTJLWZ",
+            "RMTRLBRYR7WVHYQYJWV4VKQN6L",
+            "Q5FGHV4JBZFUM4PUKRUKIWIPLF",
+            "E2CRHC4U6EEYLOTGXI5OXMXINJ",
+            "CA3MIZ42UH2JIFNASZLD2HTDMA",
+            "SY3QY5UOLVSMJYUJ5M7A7UCYH4",
+            "I2DA7CMNNWY552L77N4KOZULSZ",
+            "LAD63YU45HDZGWTPOWWQMT7OKN",
+            "OZ475B675OHQBXENJKGWM3MA3C"
+          ]
+        }
+      ]
+    },
+    "cce_10_0216": {
+      "title": "创建守护进程集（DaemonSet）",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0216.html",
+      "content_sha256": "4d276365268b5f99eda31eb6ec79a75db2cbf768bce678f2aba110298d91dadb",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "4d276365268b5f99eda31eb6ec79a75db2cbf768bce678f2aba110298d91dadb",
+          "revision_id": "2JO53BGEPNJLPDNWUIPFZKMAGN",
+          "status": "PUBLISHED",
+          "fragment_count": 18,
+          "fragment_ids": [
+            "Q5C74HBWOUPJ645YL3ICK2BGL6",
+            "RLGEZUXSL434UN5G2NUCAT7D7L",
+            "4FY6RLCRLW2OCQQTLEAIALDKQO",
+            "3L7JWRZ46OHCHJ73J7FDNGFMHV",
+            "X7R2G6ASYSOA3POT7MW7CAZYSB",
+            "XJ34ZQB67FV6Y2HDO62BY2NXZQ",
+            "TI7WCO63CRL7ZFMXKOZNS6ATVN",
+            "2UER72OM7ROYZ2BVGG7PJD4RID",
+            "V4JSEL3RMT24J63J5HZ2DCRWC2",
+            "5CCZTFSPRM7XHHIZMUW3LPUGHH",
+            "JKBJVPMSNFEII2COUG7PLJSH5X",
+            "4RFPLLRPNHETOQC7NLZZ3NKC6N",
+            "4IULED3JUBMTI3I4U52LUM5D44",
+            "LP2VSIMCMZAMCEZGCFRQDH43UR",
+            "OAVXFR7Q2KRWPMOCCLP3NSX3CA",
+            "KHEOS64MULDZYIUHTIUW5SRIIL",
+            "JJZUZSRNXKNHK3OERJB2R6T36L",
+            "D4GJQQXJK7EKDY27FPVULHUF6J"
+          ]
+        }
+      ]
+    },
+    "cce_10_0150": {
+      "title": "创建普通任务（Job）",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0150.html",
+      "content_sha256": "d281f1b7773ad63487f5ce8529c0cd84ee5cd7d13bb0ba6b108d1a3c189fb1f3",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "d281f1b7773ad63487f5ce8529c0cd84ee5cd7d13bb0ba6b108d1a3c189fb1f3",
+          "revision_id": "S22WTYMFEEF6Z53W5BEQET5N7S",
+          "status": "PUBLISHED",
+          "fragment_count": 19,
+          "fragment_ids": [
+            "B4KHZ4GXGPYGX5UIGDCWDFXTMA",
+            "ZTCRAMJLMGBU536NECECWV7MEV",
+            "XD6ID4ZY3LUENGOGL2ZO3C7RCT",
+            "6ADCPLJFAKOSAYSKLPPG337UJG",
+            "ROZG6SM2V2VLMMHOMREVIJ4O6E",
+            "FHURYF6LEFEPCN5NBWBKAS4SZF",
+            "S6U7G7RMCR5MZSAQ3G4DHM7LZL",
+            "7KJLS54SJIAUOBKQAGWVPJE2HZ",
+            "IAQR4W326NDYQSQQJ4CE64WYAB",
+            "3TASVPYMJ5GXFVYBHCPAJOLLJW",
+            "PDL4A5UH7OVYHTGLONBEEGQBSU",
+            "GQG6IYJ6AXIOE66WJYXW57HARD",
+            "MZG57ZE3T6GD4E2OXR4BNUNCPV",
+            "QU62T6BEKOLNVVNUD3GCRW6QR5",
+            "MP2FJC33QBPP4ZH43EI4MU27NL",
+            "IUTRLIOKQ632X75VAD24YMK6WA",
+            "AEMRGTZ2KEV5E6QBRF627FZZIB",
+            "JLRTXIX773EWV7N5QQ2LQCL46S",
+            "JTGTU4L36U2NKXM6KL6XGVAASL"
+          ]
+        }
+      ]
+    },
+    "cce_10_0151": {
+      "title": "创建定时任务（CronJob）",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0151.html",
+      "content_sha256": "8bc19f8a2acd699f552018308015d9e9a20d3e7b8155a2aab49b912319cc750b",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "8bc19f8a2acd699f552018308015d9e9a20d3e7b8155a2aab49b912319cc750b",
+          "revision_id": "AQ2TRCPQLDS6NRC64ETPSYAJ4Q",
+          "status": "PUBLISHED",
+          "fragment_count": 37,
+          "fragment_ids": [
+            "MHRYF5XGTJCXWHB5PBFRPCVC44",
+            "EO5HSCSHYWBG7N7EQTOU2J6EWK",
+            "YR5GTDX4I4SKHI6A4ZNAR466O3",
+            "5LB3XJNX6OCX7TZDQJEKAHOO5R",
+            "46PCTDWOZ5SFPDRVAMSM25UGG4",
+            "4QNZ4N65Z42WIFMUNOJAGHXEEO",
+            "LTKNNU43LATQSPIK7DM7C7O5CK",
+            "2OAJOJIIFW6FE5EUAPSLYREUF7",
+            "WJ54OBRUXASFVIMNMAX2G4HB6U",
+            "JHGCVH4RRYV3PUHTIXPZTGTBBA",
+            "NLLEFNGASWWGB34EIWZJZH42VB",
+            "W3GYJT752W7RVCUK2HXMQ7OQRI",
+            "XJKM72M6KHMCRU3YOGVVOWT2KQ",
+            "ACW4MT2QECLWPWW5SLCOYNRGEI",
+            "LAS576KJTLNUECEFSYLYWYR6WI",
+            "M7ZOPTOUMMWXSXAFBPCKDFS4X3",
+            "ZXYQZUYVQSPWU4SLIRD4P3GED7",
+            "OQZBVIA2HTM5NVLNINR5GTCXXK",
+            "PWNCY2YECUKBBUTAYWZDOIUQFK",
+            "2QCOA46XDCZQOH3SKEYOXY3VAB",
+            "MFCQCLLCB3CFWF2PEHGPLK7JVW",
+            "HTGDL4QIOW53VDWSEIVLMSHRCR",
+            "VA5UYAS6IQBKEWZYEJWCRXE3ZB",
+            "RGNDDY565PRRYI7OFJLSXPU5CO",
+            "73KFEJYJ2NESBIRS63WQAH4QEK",
+            "OY2UIHO5KN7ACIZGRXHVVHIYEW",
+            "IAXB7R4QMD63O7KQ5J5IHJ6WK5",
+            "FAKLHCNFGKWV7PYPWLLQMLLZOP",
+            "FPPD4NLNWC2J4USIGWJO6PT2WH",
+            "MB4YRCA3KFWSMZXHB7DEQDMIXD",
+            "LL6JHVKZAHS6DWL5FGPTLTACDO",
+            "PRFYNHGWYYGJBVIAJGSXGEOMHS",
+            "JGXK4YZDIRIZSKPH3KTVO77H34",
+            "TAP2XPK5QE6WND2MDCJYSLSDCC",
+            "U2H3CTTHRXRNOPX3EIRHDGVJYZ",
+            "ZB7EO5XDDLDKJIMM7SIHLWMXRT",
+            "QEFT5WDBT3CXZ2RYWQ2E45XIVJ"
+          ]
+        }
+      ]
+    },
+    "cce_10_0463": {
+      "title": "安全运行时与普通运行时",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0463.html",
+      "content_sha256": "4b6582ebd14cfe2b00b166298daf26a27816aebe187ebbda65864321ac8364e7",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "4b6582ebd14cfe2b00b166298daf26a27816aebe187ebbda65864321ac8364e7",
+          "revision_id": "NYDLKQKBEXIIHPE7TS3AYZWCZR",
+          "status": "PUBLISHED",
+          "fragment_count": 3,
+          "fragment_ids": [
+            "VGLSFTHWSV6WXML7BNMBTGIQLB",
+            "2ZC65ZUX4Z6QKOLI65JJNZELYQ",
+            "ODMS4RZME2LYI5XHKJZDFLGDKD"
+          ]
+        }
+      ]
+    },
+    "cce_10_0354": {
+      "title": "设置容器与节点时区同步",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0354.html",
+      "content_sha256": "d79143b64be78195769eb94d3dec81686703e08b867e99fe3ba94d49f22add5c",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "d79143b64be78195769eb94d3dec81686703e08b867e99fe3ba94d49f22add5c",
+          "revision_id": "CRXNUIFP44GRWA574KH35J7PZ7",
+          "status": "PUBLISHED",
+          "fragment_count": 5,
+          "fragment_ids": [
+            "NIIUXBPWULUY2RCWYNFDSN7DC5",
+            "3YQZ2EJFQJQ3MM4PSF4SOREWU5",
+            "W5LWO77Z2O5RZDUMRCKDBPPKLB",
+            "FRWDFWAVY6CJMQXEXXPVOEZ7F2",
+            "4SA4QIXHOCJ3RBOU5PPJ6QBITS"
+          ]
+        }
+      ]
+    },
+    "cce_10_0353": {
+      "title": "设置镜像拉取策略",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0353.html",
+      "content_sha256": "77857c23e131319ad921c557bf93fdba9ba7f8edfea4628a56298f0e5478e94a",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "77857c23e131319ad921c557bf93fdba9ba7f8edfea4628a56298f0e5478e94a",
+          "revision_id": "EF7IXQQILRMTI23YRXLJSQU7VT",
+          "status": "PUBLISHED",
+          "fragment_count": 2,
+          "fragment_ids": [
+            "ALFJBC47SC4HYKBPYEDPX73XMB",
+            "3IU2XBR5XEOZ4VUZDRKEC7KVQ7"
+          ]
+        }
+      ]
+    },
+    "cce_10_0009": {
+      "title": "使用第三方镜像",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0009.html",
+      "content_sha256": "d7792777566300850ba34fe47a405e41926678764d77c8afb8a04f41fbd83326",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "d7792777566300850ba34fe47a405e41926678764d77c8afb8a04f41fbd83326",
+          "revision_id": "V6IUAEI7JJCC3WZK33GSWO4GKR",
+          "status": "PUBLISHED",
+          "fragment_count": 10,
+          "fragment_ids": [
+            "JQNDSTVHW4MUQUBHBI4CFGMDIG",
+            "OGW4MOH4GZFTA6A3IVNXGA6RY3",
+            "NNSNBRXIWYAWDHTEDDCS6OFQCP",
+            "PW5QWXROYJMRKC2JBXLSA6IH2X",
+            "7TO2PEDNGMAEYQYKFUEBW4QQJJ",
+            "I46TAYN5IYSG2W3CMRPMIDGAVS",
+            "TLINJETCTWNDIBEB5UZXR44QGA",
+            "FOW2TQHYDAWRRSMN3CKG34QWVH",
+            "GYJQ6IO5YVJWXG3DEIORLMNPWF",
+            "MQQPYVLQT5AIC4SRIIUXP6HRCH"
+          ]
+        }
+      ]
+    },
+    "cce_10_1091": {
+      "title": "配置镜像免密下载",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1091.html",
+      "content_sha256": "3fe08ccdcea5426e944096f5991fa566dcb528c454cc6d39aa12d04a32811b39",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "3fe08ccdcea5426e944096f5991fa566dcb528c454cc6d39aa12d04a32811b39",
+          "revision_id": "ARIMTCWW6DF6SA5UUZKW4KSZX5",
+          "status": "PUBLISHED",
+          "fragment_count": 11,
+          "fragment_ids": [
+            "QXI46MRCTRPFRDMNGMADCXMAQM",
+            "SFKZA2MT54REABOAPV3T72KFWK",
+            "JLA6R2B5E6SU7SLJLV365D6UGK",
+            "BST3IMH3JDYNSKSXEACFYNUGJ2",
+            "J6C5CX7N7NHLVJUTIP3ZTQI5PP",
+            "QWN6DAHWJU6OWOVUAKMNAFNJOE",
+            "K3BENPGVHGOO3N2DFYVIJAOCQ4",
+            "LJZXDD7IAVRPV2XXZEGDQ2T4JD",
+            "E22BR7QEHA5VAV2ODRXQWDGR2C",
+            "A4Z6YQ4UVA422QJAGXRM5QKAQ6",
+            "IOE65EZRRSX7NSBNQ6NRMFEM2K"
+          ]
+        }
+      ]
+    },
+    "cce_10_0163": {
+      "title": "设置容器规格",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0163.html",
+      "content_sha256": "c90f538d2231f9250c033ef535fd04c9c45649d043eb62413ab44173050014d0",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "c90f538d2231f9250c033ef535fd04c9c45649d043eb62413ab44173050014d0",
+          "revision_id": "OSTLGYT3Y7APGI6B6IMGN2EDBT",
+          "status": "PUBLISHED",
+          "fragment_count": 12,
+          "fragment_ids": [
+            "XRSUZHAGRPAEJEDSFMJIRK5LUL",
+            "S4AVSZROCYZF2TJYAUTXXCKA7U",
+            "BG2SAI4FPDWS6MRFKJXELA7XSF",
+            "KQ7APOWYJ5ADEZPAAYDXLH2BPH",
+            "V3UYOUNBZTWGWVUUWTWMY42FA2",
+            "BLRP7MMT5WUMZZPE56APOEXFSG",
+            "26BVKXNFSGYST27NZ7RABJ3G3W",
+            "7X27RWFHEJWZT5JTVLHA6VRB6Z",
+            "VN6G3QPSBL6ZP5EWWVZQPZNRVP",
+            "OJ36NDB366PBYHFA5BVIXBUFE2",
+            "IYQFCQ7VKBFEWVGGTN7XXULEZD",
+            "ZJVWGKXLM22GCM2ZO4FU5D445H"
+          ]
+        }
+      ]
+    },
+    "cce_10_0105": {
+      "title": "设置容器生命周期",
+      "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0105.html",
+      "content_sha256": "fad98661ae21814f1029cccb76f788867b3d740e8c02abd57ffb5a0ad8ba5571",
+      "parts": [
+        {
+          "part": 1,
+          "content_sha256": "fad98661ae21814f1029cccb76f788867b3d740e8c02abd57ffb5a0ad8ba5571",
+          "revision_id": "ILWRGD6IGCJWP4XJPZISPIYJHW",
+          "status": "PUBLISHED",
+          "fragment_count": 17,
+          "fragment_ids": [
+            "XSRTFIAV77UNWIH672HSTPNS2A",
+            "OZU2ZXFEOA57YQAKRVG65KWSR3",
+            "3ZCJN4YB6MBALWRTEKPFJCO5BK",
+            "ELYFS4YSC733JUM37KTHWJZLTA",
+            "E5RIAQKHYUXSXSFFRMRPTDHRW7",
+            "PN6HSKRKZNRXF2RKECSFFHJMSI",
+            "MYY4BQPDMQZHKY77HUTMHQCTZ5",
+            "7QKJ2ZDRJOEBXPKPQFBYMJLEMY",
+            "7S3XTVAP3F2ZHTAIHTUZ2EKJEV",
+            "IY54CU5E7NLI74Y2EQFGSZAOYO",
+            "MUJTBV6QU7GNCONWVSHIDYRROI",
+            "CFXYBCBFMAKO7DFV5RROAME35H",
+            "WUUBJCQ2BILTWQPVGYC4PLC2ZT",
+            "NYBSTVY4GF5OEFCGVQKNGHDYZW",
+            "SSH62ESF7KPKCTFNL7WAYCRJ2H",
+            "SQTJM5DEJSV4AE7QTMNTDNRFEE",
+            "4IAUXTDTQR7BPPAM22YTCKLP36"
+          ]
+        }
+      ]
+    }
+  }
+}

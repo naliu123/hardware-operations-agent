@@ -1,0 +1,60 @@
+{
+  "elasticsearch_fragments": 56,
+  "datasets": [
+    {
+      "split": "development",
+      "id": "RGF0YXNldDox",
+      "version_id": "RGF0YXNldFZlcnNpb246MQ==",
+      "count": 25
+    },
+    {
+      "split": "heldout",
+      "id": "RGF0YXNldDoy",
+      "version_id": "RGF0YXNldFZlcnNpb246Mg==",
+      "count": 41
+    }
+  ],
+  "experiments": [
+    {
+      "name": "dev-bm25-baseline",
+      "id": "RXhwZXJpbWVudDox",
+      "runs": 25
+    },
+    {
+      "name": "dev-dense-answers",
+      "id": "RXhwZXJpbWVudDo0",
+      "runs": 25
+    },
+    {
+      "name": "dev-dense-v1",
+      "id": "RXhwZXJpbWVudDoy",
+      "runs": 25
+    },
+    {
+      "name": "dev-hybrid-v1",
+      "id": "RXhwZXJpbWVudDoz",
+      "runs": 25
+    },
+    {
+      "name": "heldout-dense-answers",
+      "id": "RXhwZXJpbWVudDo2",
+      "runs": 41
+    },
+    {
+      "name": "heldout-dense-final",
+      "id": "RXhwZXJpbWVudDo1",
+      "runs": 41
+    }
+  ],
+  "phoenix_span_count": 607,
+  "span_kinds": {
+    "RETRIEVER": 182,
+    "EMBEDDING": 161,
+    "LLM": 132,
+    "EVALUATOR": 66,
+    "CHAIN": 66
+  },
+  "experiment_trace_count": 248,
+  "all_experiment_traces_present": true,
+  "credential_scan": "passed"
+}

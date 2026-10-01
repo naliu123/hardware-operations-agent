@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-09-22T15:55:27.574559+00:00",
+  "development_run": "live-r04-dev-evidence-selection",
+  "config": {
+    "strategy": "hybrid",
+    "answers": true,
+    "top_k": 5,
+    "candidate_k": 20,
+    "context_bytes": 49152,
+    "rrf": 1,
+    "evidence_selection": true,
+    "selection_extra_candidates": 8,
+    "selection_input_bytes_limit": 262144,
+    "temperature": 0,
+    "binary_sha256": "b10f8323be2ad18e0d8147f3007b982c1e1fbfd5f13bd43a340886d9b31b4a86",
+    "index": "hwops-cce-manual-v1",
+    "state_path": ".local/rag/hwops-cce-manual-state.json",
+    "dataset_sha256": "aa778e2c4a824c64f13c6fbe2b5609c99f170be4f951824136b8f455fd4d9c31",
+    "corpus_sha256": "527101b5c146ec9b3961f4b4252b2ab009bc7b9209b16abc6f8e9d3ce0d41559",
+    "code_sha256": "5ff9bb48313255bc865647dc98dc3d8c4118fc76c186a016ef10624ea24350af",
+    "model": "deepseek-flash",
+    "mode": "LIVE_ANSWERS"
+  }
+}

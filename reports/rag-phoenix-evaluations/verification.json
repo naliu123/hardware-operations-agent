@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-09-25T23:26:41.976562+00:00",
+  "phoenix_url": "http://127.0.0.1:16006",
+  "datasets": 10,
+  "experiments": 33,
+  "runs": 1633,
+  "evaluations": 9987,
+  "dataset_examples": 357,
+  "items": {
+    "reports/rag-cce-manual-assets-v3-r1-20260925/evaluation-v3/asset-v3-r1-dev-answers-v3-r01.json": {
+      "id": "RXhwZXJpbWVudDo3",
+      "runs": 40,
+      "evaluations": 280
+    },
+    "reports/rag-cce-manual-assets-v3-r1-20260925/evaluation-v3/asset-v3-r1-heldout-answers-v3-final.json": {
+      "id": "RXhwZXJpbWVudDo4",
+      "runs": 20,
+      "evaluations": 140
+    },
+    "reports/rag-cce-manual-assets-v3-r1-20260925/regression/manual-v3-r1-regression-final.json": {
+      "id": "RXhwZXJpbWVudDo5",
+      "runs": 75,
+      "evaluations": 357
+    },
+    "reports/rag-cce-20260920/dev-bm25-baseline.json": {
+      "id": "RXhwZXJpbWVudDox",
+      "runs": 25,
+      "evaluations": 186
+    },
+    "reports/rag-cce-20260920/dev-dense-answers.json": {
+      "id": "RXhwZXJpbWVudDo0",
+      "runs": 25,
+      "evaluations": 403
+    },
+    "reports/rag-cce-20260920/dev-dense-v1.json": {
+      "id": "RXhwZXJpbWVudDoy",
+      "runs": 25,
+      "evaluations": 186
+    },
+    "reports/rag-cce-20260920/dev-hybrid-v1.json": {
+      "id": "RXhwZXJpbWVudDoz",
+      "runs": 25,
+      "evaluations": 186
+    },
+    "reports/rag-cce-20260920/heldout-dense-answers.json": {
+      "id": "RXhwZXJpbWVudDo2",
+      "runs": 41,
+      "evaluations": 662
+    },
+    "reports/rag-cce-20260920/heldout-dense-final.json": {
+      "id": "RXhwZXJpbWVudDo1",
+      "runs": 41,
+      "evaluations": 307
+    },
+    "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v2-baseline.json": {
+      "id": "RXhwZXJpbWVudDoxMA==",
+      "runs": 40,
+      "evaluations": 200
+    },
+    "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v3-dev-answers-r00.json": {
+      "id": "RXhwZXJpbWVudDoxMQ==",
+      "runs": 40,
+      "evaluations": 280
+    },
+    "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v3-dev-r00.json": {
+      "id": "RXhwZXJpbWVudDoxMg==",
+      "runs": 40,
+      "evaluations": 80
+    },
+    "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v3-dev-r01-no-rewrite.json": {
+      "id": "RXhwZXJpbWVudDoxMw==",
+      "runs": 40,
+      "evaluations": 200
+    },
+    "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v3-dev-r02-query-rewrite.json": {
+      "id": "RXhwZXJpbWVudDoxNA==",
+      "runs": 40,
+      "evaluations": 200
+    },
+    "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v3-heldout-answers-final.json": {
+      "id": "RXhwZXJpbWVudDoxNQ==",
+      "runs": 20,
+      "evaluations": 120
+    },
+    "reports/rag-cce-manual-assets-v3-20260925/evaluation/asset-v3-heldout-final.json": {
+      "id": "RXhwZXJpbWVudDoxNg==",
+      "runs": 20,
+      "evaluations": 100
+    },
+    "reports/rag-cce-manual-assets-v3-20260925/evaluation/manual-v3-regression.json": {
+      "id": "RXhwZXJpbWVudDoxNw==",
+      "runs": 75,
+      "evaluations": 357
+    },
+    "reports/rag-cce-manual-assets-v3-r1-20260925/evaluation/asset-v3-r1-dev-retrieval.json": {
+      "id": "RXhwZXJpbWVudDoxOA==",
+      "runs": 40,
+      "evaluations": 200
+    },
+    "reports/rag-cce-manual-assets-v3-r1-20260925/evaluation/asset-v3-r1-heldout-retrieval-final.json": {
+      "id": "RXhwZXJpbWVudDoxOQ==",
+      "runs": 20,
+      "evaluations": 100
+    },
+    "reports/rag-cce-manual-assets-v3-r1-20260925/evaluation-v3/asset-v3-r1-dev-answers-v3.json": {
+      "id": "RXhwZXJpbWVudDoyMA==",
+      "runs": 40,
+      "evaluations": 200
+    },
+    "reports/rag-cce-manual-assets-v3-r1-20260925/evaluation-v3/asset-v3-r1-dev-v3.json": {
+      "id": "RXhwZXJpbWVudDoyMQ==",
+      "runs": 40,
+      "evaluations": 200
+    },
+    "reports/rag-cce-manual-eval-20260920/final-heldout-r04.json": {
+      "id": "RXhwZXJpbWVudDoyMg==",
+      "runs": 36,
+      "evaluations": 234
+    },
+    "reports/rag-cce-manual-eval-20260920/live-r00-dev-hybrid60.json": {
+      "id": "RXhwZXJpbWVudDoyMw==",
+      "runs": 75,
+      "evaluations": 507
+    },
+    "reports/rag-cce-manual-eval-20260920/live-r01-dev-hybrid1.json": {
+      "id": "RXhwZXJpbWVudDoyNA==",
+      "runs": 75,
+      "evaluations": 507
+    },
+    "reports/rag-cce-manual-eval-20260920/live-r02-dev-completeness.json": {
+      "id": "RXhwZXJpbWVudDoyNQ==",
+      "runs": 75,
+      "evaluations": 507
+    },
+    "reports/rag-cce-manual-eval-20260920/live-r03-dev-scope-title.json": {
+      "id": "RXhwZXJpbWVudDoyNg==",
+      "runs": 75,
+      "evaluations": 507
+    },
+    "reports/rag-cce-manual-eval-20260920/live-r04-dev-evidence-selection.json": {
+      "id": "RXhwZXJpbWVudDoyNw==",
+      "runs": 75,
+      "evaluations": 507
+    },
+    "reports/rag-cce-manual-eval-20260920/live-r05-dev-reliability.json": {
+      "id": "RXhwZXJpbWVudDoyOA==",
+      "runs": 75,
+      "evaluations": 507
+    },
+    "reports/rag-cce-manual-eval-20260920/r00-dev-bm25.json": {
+      "id": "RXhwZXJpbWVudDoyOQ==",
+      "runs": 75,
+      "evaluations": 357
+    },
+    "reports/rag-cce-manual-eval-20260920/r00-dev-dense.json": {
+      "id": "RXhwZXJpbWVudDozMA==",
+      "runs": 75,
+      "evaluations": 357
+    },
+    "reports/rag-cce-manual-eval-20260920/r00-dev-hybrid.json": {
+      "id": "RXhwZXJpbWVudDozMQ==",
+      "runs": 75,
+      "evaluations": 357
+    },
+    "reports/rag-cce-manual-eval-20260920/r01-dev-hybrid-rrf1.json": {
+      "id": "RXhwZXJpbWVudDozMg==",
+      "runs": 75,
+      "evaluations": 357
+    },
+    "reports/rag-cce-manual-rag-v2-20260923/rag-v2-development-once.json": {
+      "id": "RXhwZXJpbWVudDozMw==",
+      "runs": 75,
+      "evaluations": 339
+    }
+  }
+}

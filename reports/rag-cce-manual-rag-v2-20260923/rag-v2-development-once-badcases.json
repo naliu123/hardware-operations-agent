@@ -1,0 +1,1632 @@
+[
+  {
+    "case": {
+      "id": "cce-manual-012",
+      "group": "cce_10_0648",
+      "category": "节点池",
+      "question_type": "numeric",
+      "question": "节点池默认规格A为0.0993USD/小时，但手动新增10台规格B为0.1923USD/小时，新增节点一小时按哪个价格算，总额多少？",
+      "answerable": true,
+      "required_facts": [
+        "以实际创建的B规格计费",
+        "新增10台一小时为1.923USD",
+        "控制台展示默认A价格不改变实际计费"
+      ],
+      "reference_answer": "以实际创建的B规格计费；新增10台一小时为1.923USD；控制台展示默认A价格不改变实际计费",
+      "evidence": [
+        {
+          "document_id": "cce_10_0648",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0648.html",
+          "title": "节点池多规格计费说明",
+          "file": "documents/cce_10_0648.md",
+          "content_sha256": "514a5c5ccae647be0f054db571907cf33a873e61b64cef5b969c2606421005f6",
+          "start_line": 7,
+          "end_line": 7,
+          "section": "节点池多规格计费说明",
+          "anchor": "将以实际创建的规格进行计费",
+          "quote": "若节点池中选择了多个规格时，控制台中显示的是节点池默认规格的价格，在节点池创建或扩缩容过程中，将以实际创建的规格进行计费。",
+          "quote_sha256": "4103eaac536dfe43250b110b131c3e0fb576b7977442ed2c7a6ef402418418b6"
+        },
+        {
+          "document_id": "cce_10_0648",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0648.html",
+          "title": "节点池多规格计费说明",
+          "file": "documents/cce_10_0648.md",
+          "content_sha256": "514a5c5ccae647be0f054db571907cf33a873e61b64cef5b969c2606421005f6",
+          "start_line": 17,
+          "end_line": 17,
+          "section": "计费样例",
+          "anchor": "新增10个节点并指定节点规格为B",
+          "quote": "  - 手动扩容节点池时，新增10个节点并指定节点规格为B，则使用1小时的计费为：0.1923×10 = 1.923USD",
+          "quote_sha256": "4e15d39251218113ce70c261e1089b1e7767b09cd46c9fabaef2fd59565af3da"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-012",
+      "question": "节点池默认规格A为0.0993USD/小时，但手动新增10台规格B为0.1923USD/小时，新增节点一小时按哪个价格算，总额多少？",
+      "answerable": true,
+      "question_type": "numeric",
+      "category": "节点池",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "N75CCPE7EMAC6UK2AJQWWAVJOU",
+          "revision_id": "H5XZJZRSHCN4OYG2VFAWKIDSHU",
+          "section": "计费样例",
+          "start_line": 11,
+          "end_line": 24,
+          "content": "示例，某一按需节点池中添加了两个规格类型，其中默认规格A价格（包含云硬盘价格）为0.0993USD/小时，另一规格B价格为0.1923USD/小时。\n\n- 节点池创建场景\n\n  创建节点池时，节点数量设置为10，则实际将创建10个默认规格A的节点。使用1小时的计费为：0.0993×10 = 0.993USD\n- 节点池扩容场景\n  - 手动扩容节点池时，新增10个节点并指定节点规格为B，则使用1小时的计费为：0.1923×10 = 1.923USD\n  - 节点池弹性伸缩时，新增10个节点，默认会使用优先级最高的默认规格A，则使用1小时的计费为：0.0993×10 = 0.993USD\n\n    若创建了5个规格A的实例后遇到规格A资源不足的场景，其余5个实例为规格B，则使用1小时的计费为：0.0993×5 + 0.1923×5 = 1.458USD\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n节点池创建或手动扩容时，如遇规格资源不足或配额不足导致节点创建失败的场景，请根据实际创建的节点数量进行计算。",
+          "content_hash": "772a8a729be4059d9949de51681fd7da5537f2db666502e8c275460ce4ed96ed",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "按需节点池中默认规格A价格为0.0993USD/小时，规格B价格为0.1923USD/小时，创建节点池时节点数量设置为10，使用1小时的计费是多少？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "节点池手动扩容时新增10个节点并指定节点规格为B，使用1小时的计费是多少？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "节点池弹性伸缩时新增10个节点，默认使用优先级最高的默认规格A，使用1小时的计费是多少？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "若创建了5个规格A的实例后遇到规格A资源不足，其余5个实例为规格B，使用1小时的计费是多少？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "节点池创建或手动扩容时，如遇规格资源不足或配额不足导致节点创建失败，应如何计算费用？"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片为计费样例中的提示图标，位于节点池创建或手动扩容时资源不足或配额不足导致节点创建失败的说明文字之前，用于引出该注意事项。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0648.html",
+          "title": "节点池多规格计费说明",
+          "document_context": "目录：用户指南 > 节点池 > 节点池多规格计费说明\n更新时间：2025-07-18 GMT+08:00",
+          "score": 0.04918032786885246
+        },
+        {
+          "id": "HHZTEDB4TYQ2HNSJPO2B5Z6PUW",
+          "revision_id": "VSPCZPDPP5ZL74RHDGKT2IFM7S",
+          "section": "操作步骤",
+          "start_line": 39,
+          "end_line": 41,
+          "content": "| 参数 | 参数说明 |\n   | --- | --- |\n   | 计费模式 | 支持以下计费方式： - 包年包月 包年包月需要选择购买时长，还可以勾选自动续费。按月购买自动续费周期为1个月，按年购买自动续费周期为1年。 - 按需计费 按资源的实际使用时长计费，可以随时开通/删除资源。 - 竞价计费 竞价计费是后付费模式，相对于按需计费模式，以更低的折扣按实际使用时长计费。详情请参见[竞价计费型实例](https://support.huaweicloud.com/intl/zh-cn/usermanual-ecs/ecs_03_0188.html)。  说明：  - 如果创建竞价实例时同时购买了数据盘和弹性公网IP，数据盘和弹性公网IP会在竞价实例释放时随实例释放。如果给已经创建完成的竞价实例挂载数据盘和弹性公网IP，则需要在删除竞价实例后自行释放这些资源。   - 竞价实例不支持重置、纳管、移除、迁移、转包周期、集群重置升级。如果要对集群进行重置升级，需要先删除竞价节点，将竞价节点池实例数设为0。   - ECS可能会因为用户报价小于市场价、资源不足等原因主动释放竞价实例。建议在集群中安装最新版本的npd插件，npd插件会在竞价实例被ECS释放前5分钟收到通知，产生ReceivedReclaimNodeNotification事件，并给节点加污点**node-problem-controller.cce.io/SpotPriceNodeReclaimNotification: NoExecute**，驱逐节点上的Pod，使Pod能在节点被删除前迁移到其他节点。 |",
+          "content_hash": "f3550f63c466757000a5095f1be189822f60636fc7217327795867721b7ee0d8",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "创建节点时支持哪些计费模式？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "包年包月计费模式的自动续费周期是多久？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "竞价计费实例在什么情况下会被ECS主动释放？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "竞价实例不支持哪些操作？"
+            },
+            {
+              "kind": "TABLE",
+              "text": "表格列出了创建节点时的计费模式参数，包括包年包月、按需计费和竞价计费三种方式，并说明了各自的计费特点、自动续费规则以及竞价实例的释放和限制条件。"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "| 参数 | 参数说明 |\n   | --- | --- |\n   | 计费模式 | 支持以下计费方式： - 包年包月 包年包月需要选择购买时长，还可以勾选自动续费。按月购买自动续费周期为1个月，按年购买自动续费周期为1年。 - 按需计费 按资源的实际使用时长计费，可以随时开通/删除资源。 - 竞价计费 竞价计费是后付费模式，相对于按需计费模式，以更低的折扣按实际使用时长计费。详情请参见[竞价计费型实例](https://support.huaweicloud.com/intl/zh-cn/usermanual-ecs/ecs_03_0188.html)。  说明：  - 如果创建竞价实例时同时购买了数据盘和弹性公网IP，数据盘和弹性公网IP会在竞价实例释放时随实例释放。如果给已经创建完成的竞价实例挂载数据盘和弹性公网IP，则需要在删除竞价实例后自行释放这些资源。   - 竞价实例不支持重置、纳管、移除、迁移、转包周期、集群重置升级。如果要对集群进行重置升级，需要先删除竞价节点，将竞价节点池实例数设为0。   - ECS可能会因为用户报价小于市场价、资源不足等原因主动释放竞价实例。建议在集群中安装最新版本的npd插件，npd插件会在竞价实例被ECS释放前5分钟收到通知，产生ReceivedReclaimNodeNotification事件，并给节点加污点**node-pro"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "竞价实例。建议在集群中安装最新版本的npd插件，npd插件会在竞价实例被ECS释放前5分钟收到通知，产生ReceivedReclaimNodeNotification事件，并给节点加污点**node-problem-controller.cce.io/SpotPriceNodeReclaimNotification: NoExecute**，驱逐节点上的Pod，使Pod能在节点被删除前迁移到其他节点。 |"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0363.html",
+          "title": "创建节点",
+          "document_context": "目录：用户指南 > 节点 > 创建节点\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.048131080389144903
+        },
+        {
+          "id": "IPECGCL6XSZ7CTPBMLJTNO43RG",
+          "revision_id": "VSPCZPDPP5ZL74RHDGKT2IFM7S",
+          "section": "操作步骤",
+          "start_line": 86,
+          "end_line": 88,
+          "content": "| K8S污点（Taints） | 默认为空。支持给节点加污点来设置反亲和性，每个节点最多配置20条污点，每条污点包含以下3个参数： - Key：必须以字母或数字开头和结尾，可以包含字母、数字、连字符、下划线和点，最长63个字符；另外可以使用DNS子域作为前缀。 - Value：必须以字母或数字开头和结尾，可以包含字母、数字、连字符、下划线和点，最长63个字符。 - Effect：只可选NoSchedule，PreferNoSchedule或NoExecute。  污点的使用请参见[管理节点污点](https://support.huaweicloud.com/usermanual-cce/cce_10_0352.html)。  说明：  对于1.19及以下版本集群，有可能会出现污点打上之前负载已经调度到节点上，如果需要避免这种情况，请选择1.19及以上集群。 |\n   | 最大实例数 | 节点最大可以正常运行的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点最多能创建多少个Pod还受其他因素影响，具体请参见[节点可创建的最大Pod数量说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 |\n   | 云服务器组 | 云服务器组是对云服务器的一种逻辑划分，同一云服务器组中的云服务器遵从同一策略。  反亲和性策略：同一云服务器组中的云服务器分散地创建在不同主机上，提高业务的可靠性。  选择已创建的云服务器组，或单击“创建云服务器组”创建，创建完成后单击刷新按钮。 |",
+          "content_hash": "115d57d58d7e7da29b9392bfdb109bfd301c69d3a9620838c49abd794d9d131a",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "K8S污点的作用是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "每个节点最多可以配置多少条污点？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "污点的Effect有哪些可选值？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "最大实例数的取值范围是多少？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "云服务器组的反亲和性策略有什么作用？"
+            },
+            {
+              "kind": "TABLE",
+              "text": "表格列出了K8S污点、最大实例数和云服务器组参数，说明了污点的配置规则、最大实例数的取值范围以及云服务器组的反亲和性策略。"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "| K8S污点（Taints） | 默认为空。支持给节点加污点来设置反亲和性，每个节点最多配置20条污点，每条污点包含以下3个参数： - Key：必须以字母或数字开头和结尾，可以包含字母、数字、连字符、下划线和点，最长63个字符；另外可以使用DNS子域作为前缀。 - Value：必须以字母或数字开头和结尾，可以包含字母、数字、连字符、下划线和点，最长63个字符。 - Effect：只可选NoSchedule，PreferNoSchedule或NoExecute。  污点的使用请参见[管理节点污点](https://support.huaweicloud.com/usermanual-cce/cce_10_0352.html)。  说明：  对于1.19及以下版本集群，有可能会出现污点打上之前负载已经调度到节点上，如果需要避免这种情况，请选择1.19及以上集群。 |\n   | 最大实例数 | 节点最大可以正常运行的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。  节点最多能创建多少个Pod还受其他因素影响，具体请参见[节点可创建的最大Pod数量说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 |\n   | 云服务器组 | 云服务器组是对云服务器的一种逻辑划分，同一云服务器组中的云服"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 |\n   | 云服务器组 | 云服务器组是对云服务器的一种逻辑划分，同一云服务器组中的云服务器遵从同一策略。  反亲和性策略：同一云服务器组中的云服务器分散地创建在不同主机上，提高业务的可靠性。  选择已创建的云服务器组，或单击“创建云服务器组”创建，创建完成后单击刷新按钮。 |"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0363.html",
+          "title": "创建节点",
+          "document_context": "目录：用户指南 > 节点 > 创建节点\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.04664224664224664
+        },
+        {
+          "id": "22RCZ65QZ3RT3YMRND6IQCOGD5",
+          "revision_id": "4OJQBMD4MWEO6EOPUORUDM52TY",
+          "section": "更新节点池",
+          "start_line": 78,
+          "end_line": 79,
+          "content": "| 新增节点调度策略 | 节点池中新增节点的默认调度策略。勾选“设置为不可调度”之后，该节点池新增的节点在创建完成之后均会被打上不可调度的标签。以方便用户在工作负载被调度到节点上之前，对节点进行一些操作。  定时开启调度时间：若设置定时开启调度功能，在超过自定义时间后，节点将会自动开启调度。  - 不设置：默认情况下，将不设置超时时间，此时节点需要您前往“节点管理”界面，手动选择节点开启调度，详情请参见[一键设置节点调度策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0352.html)。 - 自定义：该参数可配置节点不可调度的默认超时时间，取值范围为0-99min。 说明：  - 如果需要同时使用节点池的自动扩缩容能力，定时开启调度时间应小于15min。因为通过autoscaler扩容的节点如果处于不可调度状态超过15min，autoscaler会认为本次扩容失败，触发再次扩容。同时，原节点处于不可调度状态超过20min，节点将被列入缩容备选节点，被autoscaler缩容。 - 开启该开关后，节点池的创建/更新过程中，节点会被打上node.cloudprovider.kubernetes.io/uninitialized的污点。 | 新增节点自动生效，存量节点需重置后生效 |\n   | 安装前执行脚本 | 请输入脚本命令，命令中不能包含中文字符。脚本命令会进行Base64转码。安装前/后执行脚本统一计算字符，转码后的字符总数不能超过10240。  脚本将在Kubernetes软件安装前执行，可能导致Kubernetes软件无法正常安装，需谨慎使用。 | 新增节点自动生效，存量节点需重置后生效 |",
+          "content_hash": "f9b08e06888f2dd9a8831a2726b70005c782c59b93b85e0335fec7ec48946a57",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "更新节点池时，新增节点调度策略的更新生效机制是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "安装前执行脚本的更新生效机制是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "定时开启调度时间的取值范围是多少？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "安装前执行脚本的字符总数限制是多少？"
+            },
+            {
+              "kind": "TABLE",
+              "text": "表6高级配置（续），包含参数、参数说明、更新生效机制三列。参数包括新增节点调度策略和安装前执行脚本。新增节点调度策略可设置不可调度及定时开启调度时间，取值范围0-99min；安装前执行脚本不能包含中文字符，转码后字符总数不超过10240。更新生效机制为新增节点自动生效，存量节点需重置后生效。"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "| 新增节点调度策略 | 节点池中新增节点的默认调度策略。勾选“设置为不可调度”之后，该节点池新增的节点在创建完成之后均会被打上不可调度的标签。以方便用户在工作负载被调度到节点上之前，对节点进行一些操作。  定时开启调度时间：若设置定时开启调度功能，在超过自定义时间后，节点将会自动开启调度。  - 不设置：默认情况下，将不设置超时时间，此时节点需要您前往“节点管理”界面，手动选择节点开启调度，详情请参见[一键设置节点调度策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0352.html)。 - 自定义：该参数可配置节点不可调度的默认超时时间，取值范围为0-99min。 说明：  - 如果需要同时使用节点池的自动扩缩容能力，定时开启调度时间应小于15min。因为通过autoscaler扩容的节点如果处于不可调度状态超过15min，autoscaler会认为本次扩容失败，触发再次扩容。同时，原节点处于不可调度状态超过20min，节点将被列入缩容备选节点，被autoscaler缩容。 - 开启该开关后，节点池的创建/更新过程中，节点会被打上node.cloudprovider.kubernetes.io/uninitialized的污点。 | 新增节点自动生效，存量节点需重置"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "后，节点池的创建/更新过程中，节点会被打上node.cloudprovider.kubernetes.io/uninitialized的污点。 | 新增节点自动生效，存量节点需重置后生效 |\n   | 安装前执行脚本 | 请输入脚本命令，命令中不能包含中文字符。脚本命令会进行Base64转码。安装前/后执行脚本统一计算字符，转码后的字符总数不能超过10240。  脚本将在Kubernetes软件安装前执行，可能导致Kubernetes软件无法正常安装，需谨慎使用。 | 新增节点自动生效，存量节点需重置后生效 |"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0653.html",
+          "title": "更新节点池",
+          "document_context": "目录：用户指南 > 节点池 > 管理节点池 > 更新节点池\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.046634615384615385
+        },
+        {
+          "id": "ACY7ZCOOP2NZZAPTJUWPMCC2KL",
+          "revision_id": "4OJQBMD4MWEO6EOPUORUDM52TY",
+          "section": "更新节点池",
+          "start_line": 64,
+          "end_line": 66,
+          "content": "| 参数 | 参数说明 | 更新生效机制 |\n   | --- | --- | --- |\n   | 自动支付 | 开启自动支付后，每次节点池扩容包年/包月节点时，系统将自动处理订单并收取费用。在这一过程中，系统会自动应用您名下可用的折扣，并按照既定的顺序进行扣款。具体扣款顺序和规则，请参见[自动支付](https://support.huaweicloud.com/intl/zh-cn/usermanual-billing/isautopay_topic_1000001.html)。 | 仅对新增节点自动生效 |",
+          "content_hash": "aa767c77ff6a2f9088f35656d6a1c6c31308e4b98d96590521f5bb7a4da5c5ab",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "更新节点池时，自动支付的更新生效机制是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "开启自动支付后，系统如何处理订单？"
+            },
+            {
+              "kind": "TABLE",
+              "text": "表5支付配置参数，包含参数、参数说明、更新生效机制三列。参数为自动支付，开启后每次节点池扩容包年/包月节点时，系统将自动处理订单并收取费用，自动应用折扣并扣款。更新生效机制为仅对新增节点自动生效。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0653.html",
+          "title": "更新节点池",
+          "document_context": "目录：用户指南 > 节点池 > 管理节点池 > 更新节点池\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.01639344262295082
+        }
+      ],
+      "result": {
+        "trace_id": "4b7e8fded712b8337910f250bacb7d5b",
+        "retrieval_queries": [
+          "节点池默认规格A为0.0993USD/小时，但手动新增10台规格B为0.1923USD/小时，新增节点一小时按哪个价格算，总额多少？",
+          "新增节点一小时按哪个价格计算，总额多少？",
+          "新增10台节点后，每小时的费用是多少？",
+          "新增节点后的总费用是多少？"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 1420.1933330041356
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-018",
+      "group": "cce_10_0216",
+      "category": "工作负载",
+      "question_type": "scenario",
+      "question": "我想在集群每个节点部署日志采集器和节点监控，应选择哪类工作负载？",
+      "answerable": true,
+      "required_facts": [
+        "DaemonSet守护进程集",
+        "日志采集进程和节点监控进程适合逐节点部署"
+      ],
+      "reference_answer": "DaemonSet守护进程集；日志采集进程和节点监控进程适合逐节点部署",
+      "evidence": [
+        {
+          "document_id": "cce_10_0216",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0216.html",
+          "title": "创建守护进程集（DaemonSet）",
+          "file": "documents/cce_10_0216.md",
+          "content_sha256": "4d276365268b5f99eda31eb6ec79a75db2cbf768bce678f2aba110298d91dadb",
+          "start_line": 13,
+          "end_line": 13,
+          "section": "创建守护进程集（DaemonSet）",
+          "anchor": "日志采集进程",
+          "quote": "- **日志采集进程**：例如Fluentd或Logstash，需要部署在每个节点上采集节点的日志数据，并转发到统一的日志系统。",
+          "quote_sha256": "92ceaa619a03bdd0a89ee83ea595e5ce282f5ab3de667e38933aab93c475af73"
+        },
+        {
+          "document_id": "cce_10_0216",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0216.html",
+          "title": "创建守护进程集（DaemonSet）",
+          "file": "documents/cce_10_0216.md",
+          "content_sha256": "4d276365268b5f99eda31eb6ec79a75db2cbf768bce678f2aba110298d91dadb",
+          "start_line": 14,
+          "end_line": 14,
+          "section": "创建守护进程集（DaemonSet）",
+          "anchor": "监控进程",
+          "quote": "- **监控进程**：例如Prometheus Node Exporter等，部署在每个节点上收集节点层面的性能数据。",
+          "quote_sha256": "83499ee4e434e61ed2fc6c92b3ae5f618bae885e51c0a82c68b9805594938b32"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-018",
+      "question": "我想在集群每个节点部署日志采集器和节点监控，应选择哪类工作负载？",
+      "answerable": true,
+      "question_type": "scenario",
+      "category": "工作负载",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "ARR4QWML77G6IZDPDAQRUYW4TV",
+          "revision_id": "M2ABZQQE3YNCQPQDXMMAP5YMPA",
+          "section": "索引",
+          "start_line": 9,
+          "end_line": 13,
+          "content": "- [创建备份计划时，自定义CRON表达式如何填写？](https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html)\n- [备份记录删除失败提示：backup storage location xxx is currently in read-only mode](https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html)\n- [备份仓库状态不可用提示：Backup store contains invalid top-level directories: [xxx]](https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html)\n- [恢复失败提示：error executing PVAction for persistentvolumes/pvc-xxxx](https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html)\n- [备份/恢复记录长时间处于删除中](https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html)",
+          "content_hash": "802e5d6d90fe6be6ebc32b546d7f94adf1c7110d55079b27e32cc847abbdf761",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "备份中心常见问题索引中列出了哪些问题？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "创建备份计划时，自定义CRON表达式如何填写？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "备份记录删除失败提示：backup storage location xxx is currently in read-only mode 的解决方法是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "备份仓库状态不可用提示：Backup store contains invalid top-level directories: [xxx] 如何解决？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "恢复失败提示：error executing PVAction for persistentvolumes/pvc-xxxx 如何处理？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html",
+          "title": "备份中心常见问题",
+          "document_context": "目录：用户指南 > 备份中心 > 备份中心常见问题\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.03278688524590164
+        },
+        {
+          "id": "GB7VHTNDQ27HM64PQWRWSQJPEF",
+          "revision_id": "M2ABZQQE3YNCQPQDXMMAP5YMPA",
+          "section": "备份/恢复记录长时间处于删除中",
+          "start_line": 78,
+          "end_line": 102,
+          "content": "**问题现象**\n\n备份/恢复记录长时间处于删除中，显示“当前备份/恢复记录删除失败”。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002622244107.png \"点击放大\")\n\n**解决方案**\n\n该问题是由于备份/恢复文件或云硬盘快照删除失败导致，请先手动删除备份仓库OBS桶中的文件以及创建的云硬盘快照，然后再重新尝试删除备份/恢复记录。\n\n- 删除恢复记录：\n\n  恢复记录文件保存在对应备份仓库OBS桶的restores目录中，文件名称为恢复记录的名称，直接在OBS控制台删除对应文件即可。\n- 删除备份记录：\n  - 备份记录文件保存在对应备份仓库OBS桶的backups目录中，文件名称为备份记录的名称，直接在OBS控制台删除对应文件即可。\n  - 备份记录关联的云硬盘快照清理步骤如下：\n    1. 前往OBS控制台，打开对应备份仓库OBS桶的backups目录。\n    2. 进入备份文件目录。\n    3. 下载xxx-volumesnapshots.json.gz文件。\n\n       ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002591596112.png \"点击放大\")\n    4. 解压文件后可获取到一个json文件，使用编辑器打开解压后的文件，其中 providerSnapshotID 字段即为快照的ID。\n\n       ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002591756070.png \"点击放大\")\n    5. 获取快照ID后，即可在EVS控制台根据该ID删除快照。",
+          "content_hash": "f887e25ddfb4987c4ca2c4ee1060bc438af2321a59480493b2864a4846d3c66c",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "备份/恢复记录长时间处于删除中的问题现象是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "备份/恢复记录长时间处于删除中是什么原因导致的？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何解决备份/恢复记录长时间处于删除中的问题？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "删除恢复记录时，恢复记录文件保存在哪里？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "删除备份记录时，备份记录文件保存在哪里？"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片展示了备份/恢复记录长时间处于删除中的问题现象。"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片展示了下载xxx-volumesnapshots.json.gz文件的操作界面。"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片展示了解压后的json文件中providerSnapshotID字段的内容。"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "**问题现象**\n\n备份/恢复记录长时间处于删除中，显示“当前备份/恢复记录删除失败”。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002622244107.png \"点击放大\")\n\n**解决方案**\n\n该问题是由于备份/恢复文件或云硬盘快照删除失败导致，请先手动删除备份仓库OBS桶中的文件以及创建的云硬盘快照，然后再重新尝试删除备份/恢复记录。\n\n- 删除恢复记录：\n\n  恢复记录文件保存在对应备份仓库OBS桶的restores目录中，文件名称为恢复记录的名称，直接在OBS控制台删除对应文件即可。\n- 删除备份记录：\n  - 备份记录文件保存在对应备份仓库OBS桶的backups目录中，文件名称为备份记录的名称，直接在OBS控制台删除对应文件即可。\n  - 备份记录关联的云硬盘快照清理步骤如下：\n    1. 前往OBS控制台，打开对应备份仓库OBS桶的backups目录。\n    2. 进入备份文件目录。\n    3. 下载xxx-volumesnapshots.json.gz文件。\n\n       ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002591596112.png \"点击放大\")\n    4. 解压文件后可获取到一个json文件，使用编辑器打开解压后的文件"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "/zh-cn/usermanual-cce/zh-cn_image_0000002591596112.png \"点击放大\")\n    4. 解压文件后可获取到一个json文件，使用编辑器打开解压后的文件，其中 providerSnapshotID 字段即为快照的ID。\n\n       ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002591756070.png \"点击放大\")\n    5. 获取快照ID后，即可在EVS控制台根据该ID删除快照。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html",
+          "title": "备份中心常见问题",
+          "document_context": "目录：用户指南 > 备份中心 > 备份中心常见问题\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.031746031746031744
+        },
+        {
+          "id": "GTNAOT6XTV3QJDD5JQZCQTRWK7",
+          "revision_id": "5QNOEBMEDY4GT76ST3WK2S5NCF",
+          "section": "解决方案",
+          "start_line": 30,
+          "end_line": 31,
+          "content": "请您登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群控制台，在“插件中心”处进行手动卸载，具体插件支持版本以及替换方案可查看[帮助文档](https://support.huaweicloud.com/usermanual-cce/cce_10_0277.html)。\n- **问题场景三：插件配置不满足升级条件，请在插件升级页面升级插件之后重试**",
+          "content_hash": "b1811bbd73d397cdd7f8a04e94ca13640c210e02fda0345615630e6b80d1f837",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "当集群升级的目标版本不支持该插件时，应如何手动卸载插件？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在CCE控制台的哪个位置可以手动卸载插件？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在哪里可以查看插件支持版本以及替换方案？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "问题场景三的标题是什么？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0433.html",
+          "title": "插件检查异常处理",
+          "document_context": "目录：用户指南 > 集群 > 升级管理 > 升级前检查异常问题排查 > 插件检查异常处理\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.03125
+        },
+        {
+          "id": "GQKDUZ6TASHVERHCG2HCFCIZFO",
+          "revision_id": "6LOIYCOXWY42G6YYGTJ5A2ENBQ",
+          "section": "工作负载监控 / 功能入口",
+          "start_line": 7,
+          "end_line": 14,
+          "content": "如果您需要监控工作负载的资源使用情况，可以前往“监控中心 > 工作负载”页面查看。该页面提供了指定集群下所有工作负载的综合信息，以及单个工作负载的详细监控数据，包括CPU/内存使用率、网络流入/流出速率等。\n\n#### 功能入口\n\n1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群。\n2. 在左侧导航栏中选择“监控中心”，单击“工作负载”页签。\n\n   [工作负载列表](https://support.huaweicloud.com/usermanual-cce/cce_10_0714.html)页面呈现了所有工作负载的综合信息，如需深入了解单个工作负载的监控情况，可单击工作负载名称，进入该工作负载的“[概览](https://support.huaweicloud.com/usermanual-cce/cce_10_0714.html)”页面，通过切换“[Pod列表](https://support.huaweicloud.com/usermanual-cce/cce_10_0714.html)”、“[监控](https://support.huaweicloud.com/usermanual-cce/cce_10_0714.html)”页签查看相应内容。",
+          "content_hash": "81154ce739addd749b6d5b48c57da2b4ec09d1f439ba7c74563ddcffbb33e17c",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "如何进入CCE控制台的工作负载监控页面？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在“监控中心 > 工作负载”页面可以查看哪些监控数据？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "工作负载列表页面提供了哪些信息？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何查看单个工作负载的详细监控数据？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在工作负载概览页面可以切换哪些页签？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0714.html",
+          "title": "工作负载监控",
+          "document_context": "目录：用户指南 > 云原生观测 > 监控中心 > 工作负载监控\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.01639344262295082
+        },
+        {
+          "id": "2Z35EMQTGGLW4H2N7TX4QJFHT5",
+          "revision_id": "3TVF2RSZR3Z4B4HX4WHJTLTLKQ",
+          "section": "索引",
+          "start_line": 9,
+          "end_line": 24,
+          "content": "- [如何关闭日志中心？](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [插件中除log-operator外组件均未就绪](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [log-operator标准输出报错](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [节点容器运行时为docker时采集不到容器文件日志](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [日志无法上报，otel组件标准输出报错：log's quota has full](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [采集容器内日志，且采集目录配置了通配符，日志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [fluent-bit容器组一直重启](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [节点OS为Ubuntu 18.04时出现日志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [采集Job日志时出现日志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [云原生日志采集插件运行正常，部分日志策略未生效](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [log-agent-otel-collector组件出现OOM](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [节点负载过多，采集日志时缺少部分Pod信息](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [如何修改集群日志中心的日志存储时间？](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [如何修复日志采集策略中日志组（流）不存在的问题？](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [Pod调度到CCI后，采集不到日志](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [Turbo集群新创建节点场景出现FailedAssignENI告警](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)",
+          "content_hash": "1ed3bf9b380155a53e5dd57caa2debd8003783753e28c91a05ba82ddd90dd0bd",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "日志中心FAQ索引中列出了哪些问题？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何关闭日志中心？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "插件中除log-operator外组件均未就绪怎么办？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "log-operator标准输出报错如何处理？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "节点容器运行时为docker时采集不到容器文件日志如何解决？"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "- [如何关闭日志中心？](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [插件中除log-operator外组件均未就绪](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [log-operator标准输出报错](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [节点容器运行时为docker时采集不到容器文件日志](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [日志无法上报，otel组件标准输出报错：log's quota has full](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [采集容器内日志，且采集目录配置了通配符，日志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [fluent-bit容器组一直重启](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [节点OS为Ubuntu 18.04时出现日志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [采集Job日志时出现日志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [云原生日志采集插件运行正常，部分日志策略未生效](https"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [云原生日志采集插件运行正常，部分日志策略未生效](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [log-agent-otel-collector组件出现OOM](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [节点负载过多，采集日志时缺少部分Pod信息](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [如何修改集群日志中心的日志存储时间？](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [如何修复日志采集策略中日志组（流）不存在的问题？](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [Pod调度到CCI后，采集不到日志](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [Turbo集群新创建节点场景出现FailedAssignENI告警](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html",
+          "title": "日志中心FAQ",
+          "document_context": "目录：用户指南 > 云原生观测 > 云原生观测FAQ > 日志中心FAQ\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.016129032258064516
+        }
+      ],
+      "result": {
+        "trace_id": "7f50bd4f9ecf6c27abc72030d043048c",
+        "retrieval_queries": [
+          "我想在集群每个节点部署日志采集器和节点监控，应选择哪类工作负载？",
+          "问题1",
+          "问题2"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 3474.7971250035334
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-034",
+      "group": "family:cce_10_0279",
+      "category": "弹性伸缩",
+      "question_type": "procedure",
+      "question": "在CCE使用HPA前，监控插件需要提供什么API？",
+      "answerable": true,
+      "required_facts": [
+        "需要安装能够提供Metrics API的插件",
+        "按集群版本和需求选择"
+      ],
+      "reference_answer": "需要安装能够提供Metrics API的插件；按集群版本和需求选择",
+      "evidence": [
+        {
+          "document_id": "cce_10_0208",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0208.html",
+          "title": "创建HPA策略",
+          "file": "documents/cce_10_0208.md",
+          "content_sha256": "8280927ec233438b4bc9c4d0a9787ad5384805616a878972db866e0566c778fb",
+          "start_line": 13,
+          "end_line": 13,
+          "section": "前提条件",
+          "anchor": "使用HPA需要安装能够提供Metrics API的插件",
+          "quote": "使用HPA需要安装能够提供Metrics API的插件，您可根据集群版本和实际需求选择其中之一：",
+          "quote_sha256": "c5ece9bdffc9fb681bf5f9d866df4cfda77cf33dd08910404f7862e380b9619f"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-034",
+      "question": "在CCE使用HPA前，监控插件需要提供什么API？",
+      "answerable": true,
+      "question_type": "procedure",
+      "category": "弹性伸缩",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "ARR4QWML77G6IZDPDAQRUYW4TV",
+          "revision_id": "M2ABZQQE3YNCQPQDXMMAP5YMPA",
+          "section": "索引",
+          "start_line": 9,
+          "end_line": 13,
+          "content": "- [创建备份计划时，自定义CRON表达式如何填写？](https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html)\n- [备份记录删除失败提示：backup storage location xxx is currently in read-only mode](https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html)\n- [备份仓库状态不可用提示：Backup store contains invalid top-level directories: [xxx]](https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html)\n- [恢复失败提示：error executing PVAction for persistentvolumes/pvc-xxxx](https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html)\n- [备份/恢复记录长时间处于删除中](https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html)",
+          "content_hash": "802e5d6d90fe6be6ebc32b546d7f94adf1c7110d55079b27e32cc847abbdf761",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "备份中心常见问题索引中列出了哪些问题？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "创建备份计划时，自定义CRON表达式如何填写？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "备份记录删除失败提示：backup storage location xxx is currently in read-only mode 的解决方法是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "备份仓库状态不可用提示：Backup store contains invalid top-level directories: [xxx] 如何解决？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "恢复失败提示：error executing PVAction for persistentvolumes/pvc-xxxx 如何处理？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html",
+          "title": "备份中心常见问题",
+          "document_context": "目录：用户指南 > 备份中心 > 备份中心常见问题\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.03278688524590164
+        },
+        {
+          "id": "GB7VHTNDQ27HM64PQWRWSQJPEF",
+          "revision_id": "M2ABZQQE3YNCQPQDXMMAP5YMPA",
+          "section": "备份/恢复记录长时间处于删除中",
+          "start_line": 78,
+          "end_line": 102,
+          "content": "**问题现象**\n\n备份/恢复记录长时间处于删除中，显示“当前备份/恢复记录删除失败”。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002622244107.png \"点击放大\")\n\n**解决方案**\n\n该问题是由于备份/恢复文件或云硬盘快照删除失败导致，请先手动删除备份仓库OBS桶中的文件以及创建的云硬盘快照，然后再重新尝试删除备份/恢复记录。\n\n- 删除恢复记录：\n\n  恢复记录文件保存在对应备份仓库OBS桶的restores目录中，文件名称为恢复记录的名称，直接在OBS控制台删除对应文件即可。\n- 删除备份记录：\n  - 备份记录文件保存在对应备份仓库OBS桶的backups目录中，文件名称为备份记录的名称，直接在OBS控制台删除对应文件即可。\n  - 备份记录关联的云硬盘快照清理步骤如下：\n    1. 前往OBS控制台，打开对应备份仓库OBS桶的backups目录。\n    2. 进入备份文件目录。\n    3. 下载xxx-volumesnapshots.json.gz文件。\n\n       ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002591596112.png \"点击放大\")\n    4. 解压文件后可获取到一个json文件，使用编辑器打开解压后的文件，其中 providerSnapshotID 字段即为快照的ID。\n\n       ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002591756070.png \"点击放大\")\n    5. 获取快照ID后，即可在EVS控制台根据该ID删除快照。",
+          "content_hash": "f887e25ddfb4987c4ca2c4ee1060bc438af2321a59480493b2864a4846d3c66c",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "备份/恢复记录长时间处于删除中的问题现象是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "备份/恢复记录长时间处于删除中是什么原因导致的？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何解决备份/恢复记录长时间处于删除中的问题？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "删除恢复记录时，恢复记录文件保存在哪里？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "删除备份记录时，备份记录文件保存在哪里？"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片展示了备份/恢复记录长时间处于删除中的问题现象。"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片展示了下载xxx-volumesnapshots.json.gz文件的操作界面。"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片展示了解压后的json文件中providerSnapshotID字段的内容。"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "**问题现象**\n\n备份/恢复记录长时间处于删除中，显示“当前备份/恢复记录删除失败”。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002622244107.png \"点击放大\")\n\n**解决方案**\n\n该问题是由于备份/恢复文件或云硬盘快照删除失败导致，请先手动删除备份仓库OBS桶中的文件以及创建的云硬盘快照，然后再重新尝试删除备份/恢复记录。\n\n- 删除恢复记录：\n\n  恢复记录文件保存在对应备份仓库OBS桶的restores目录中，文件名称为恢复记录的名称，直接在OBS控制台删除对应文件即可。\n- 删除备份记录：\n  - 备份记录文件保存在对应备份仓库OBS桶的backups目录中，文件名称为备份记录的名称，直接在OBS控制台删除对应文件即可。\n  - 备份记录关联的云硬盘快照清理步骤如下：\n    1. 前往OBS控制台，打开对应备份仓库OBS桶的backups目录。\n    2. 进入备份文件目录。\n    3. 下载xxx-volumesnapshots.json.gz文件。\n\n       ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002591596112.png \"点击放大\")\n    4. 解压文件后可获取到一个json文件，使用编辑器打开解压后的文件"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "/zh-cn/usermanual-cce/zh-cn_image_0000002591596112.png \"点击放大\")\n    4. 解压文件后可获取到一个json文件，使用编辑器打开解压后的文件，其中 providerSnapshotID 字段即为快照的ID。\n\n       ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002591756070.png \"点击放大\")\n    5. 获取快照ID后，即可在EVS控制台根据该ID删除快照。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html",
+          "title": "备份中心常见问题",
+          "document_context": "目录：用户指南 > 备份中心 > 备份中心常见问题\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.031746031746031744
+        },
+        {
+          "id": "GTNAOT6XTV3QJDD5JQZCQTRWK7",
+          "revision_id": "5QNOEBMEDY4GT76ST3WK2S5NCF",
+          "section": "解决方案",
+          "start_line": 30,
+          "end_line": 31,
+          "content": "请您登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群控制台，在“插件中心”处进行手动卸载，具体插件支持版本以及替换方案可查看[帮助文档](https://support.huaweicloud.com/usermanual-cce/cce_10_0277.html)。\n- **问题场景三：插件配置不满足升级条件，请在插件升级页面升级插件之后重试**",
+          "content_hash": "b1811bbd73d397cdd7f8a04e94ca13640c210e02fda0345615630e6b80d1f837",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "当集群升级的目标版本不支持该插件时，应如何手动卸载插件？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在CCE控制台的哪个位置可以手动卸载插件？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在哪里可以查看插件支持版本以及替换方案？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "问题场景三的标题是什么？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0433.html",
+          "title": "插件检查异常处理",
+          "document_context": "目录：用户指南 > 集群 > 升级管理 > 升级前检查异常问题排查 > 插件检查异常处理\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.03125
+        },
+        {
+          "id": "ANACBGB2AHF2HK3ZFMHVN2RA7B",
+          "revision_id": "JDOWXY345B4KJXK6F7MSTQW4W3",
+          "section": "检查项内容 / 解决方案",
+          "start_line": 9,
+          "end_line": 15,
+          "content": "检查cce-hpa-controller插件的目标版本是否存在兼容性限制。\n\n#### 解决方案\n\n检测到目标cce-hpa-controller插件版本存在兼容性限制，需要集群安装能提供metrics api的插件，例如metrics-server；\n\n请您在集群中安装相应metrics插件之后重试检查",
+          "content_hash": "6518885abfc1ab5bf24e4174db6710b76f5e883b23eb5a1aa05466dd19da573d",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "cce-hpa-controller插件限制检查异常处理中，检查项内容是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "检测到目标cce-hpa-controller插件版本存在兼容性限制时，需要集群安装什么类型的插件？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "cce-hpa-controller插件限制检查异常处理的解决方案是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在集群中安装metrics插件之后需要做什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "cce-hpa-controller插件限制检查异常处理中，能提供metrics api的插件例如什么？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0479.html",
+          "title": "cce-hpa-controller插件限制检查异常处理",
+          "document_context": "目录：用户指南 > 集群 > 升级管理 > 升级前检查异常问题排查 > cce-hpa-controller插件限制检查异常处理\n更新时间：2026-04-03 GMT+08:00",
+          "score": 0.01639344262295082
+        },
+        {
+          "id": "2Z35EMQTGGLW4H2N7TX4QJFHT5",
+          "revision_id": "3TVF2RSZR3Z4B4HX4WHJTLTLKQ",
+          "section": "索引",
+          "start_line": 9,
+          "end_line": 24,
+          "content": "- [如何关闭日志中心？](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [插件中除log-operator外组件均未就绪](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [log-operator标准输出报错](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [节点容器运行时为docker时采集不到容器文件日志](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [日志无法上报，otel组件标准输出报错：log's quota has full](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [采集容器内日志，且采集目录配置了通配符，日志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [fluent-bit容器组一直重启](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [节点OS为Ubuntu 18.04时出现日志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [采集Job日志时出现日志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [云原生日志采集插件运行正常，部分日志策略未生效](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [log-agent-otel-collector组件出现OOM](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [节点负载过多，采集日志时缺少部分Pod信息](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [如何修改集群日志中心的日志存储时间？](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [如何修复日志采集策略中日志组（流）不存在的问题？](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [Pod调度到CCI后，采集不到日志](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [Turbo集群新创建节点场景出现FailedAssignENI告警](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)",
+          "content_hash": "1ed3bf9b380155a53e5dd57caa2debd8003783753e28c91a05ba82ddd90dd0bd",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "日志中心FAQ索引中列出了哪些问题？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何关闭日志中心？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "插件中除log-operator外组件均未就绪怎么办？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "log-operator标准输出报错如何处理？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "节点容器运行时为docker时采集不到容器文件日志如何解决？"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "- [如何关闭日志中心？](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [插件中除log-operator外组件均未就绪](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [log-operator标准输出报错](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [节点容器运行时为docker时采集不到容器文件日志](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [日志无法上报，otel组件标准输出报错：log's quota has full](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [采集容器内日志，且采集目录配置了通配符，日志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [fluent-bit容器组一直重启](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [节点OS为Ubuntu 18.04时出现日志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [采集Job日志时出现日志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [云原生日志采集插件运行正常，部分日志策略未生效](https"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "志无法采集](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [云原生日志采集插件运行正常，部分日志策略未生效](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [log-agent-otel-collector组件出现OOM](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [节点负载过多，采集日志时缺少部分Pod信息](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [如何修改集群日志中心的日志存储时间？](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [如何修复日志采集策略中日志组（流）不存在的问题？](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [Pod调度到CCI后，采集不到日志](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)\n- [Turbo集群新创建节点场景出现FailedAssignENI告警](https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html)"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html",
+          "title": "日志中心FAQ",
+          "document_context": "目录：用户指南 > 云原生观测 > 云原生观测FAQ > 日志中心FAQ\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.016129032258064516
+        }
+      ],
+      "result": {
+        "trace_id": "c8bec32dec5bbd742c57a1c3863e10a1",
+        "retrieval_queries": [
+          "在CCE使用HPA前，监控插件需要提供什么API？",
+          "问题1",
+          "问题2"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 493.7264589971164
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-040",
+      "group": "cce_10_0110",
+      "category": "云原生观测",
+      "question_type": "concept",
+      "question": "CCE云原生可观测性从下到上分哪四层？",
+      "answerable": true,
+      "required_facts": [
+        "算力底座",
+        "数据采集",
+        "监控与日志",
+        "云原生观测"
+      ],
+      "reference_answer": "算力底座；数据采集；监控与日志；云原生观测",
+      "evidence": [
+        {
+          "document_id": "cce_10_0110",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0110.html",
+          "title": "云原生观测体系概述",
+          "file": "documents/cce_10_0110.md",
+          "content_sha256": "dd64af3fc43a12c9fec58cddea479c59056d7596589a7d06006ea92cc5a42f72",
+          "start_line": 12,
+          "end_line": 12,
+          "section": "云原生观测体系概述",
+          "anchor": "CCE可观测性分为四个层次",
+          "quote": "从架构分层的角度，CCE可观测性分为四个层次。自下而上分别为：**算力底座**、**数据采集**、**监控与日志**、**云原生观测**。",
+          "quote_sha256": "958120c9ed63a8d579f52b2f1a38d5a91afe7ee3e09ad48b6cdcbcbfbb92006a"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-040",
+      "question": "CCE云原生可观测性从下到上分哪四层？",
+      "answerable": true,
+      "question_type": "concept",
+      "category": "云原生观测",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 3456.4801669985172
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-041",
+      "group": "family:cce_10_0953",
+      "category": "云原生观测",
+      "question_type": "scope",
+      "question": "CCE云原生观测授权的细粒度改造，是从什么粒度改为什么粒度？",
+      "answerable": true,
+      "required_facts": [
+        "从系统策略粒度权限集改为Action粒度",
+        "Action对应依赖调用的接口"
+      ],
+      "reference_answer": "从系统策略粒度权限集改为Action粒度；Action对应依赖调用的接口",
+      "evidence": [
+        {
+          "document_id": "cce_10_0953",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0953.html",
+          "title": "云原生观测委托权限说明",
+          "file": "documents/cce_10_0953.md",
+          "content_sha256": "6aa987425c7d66194cedddf368d6534cfa8f3dd5534641d85e8936e43f8061ea",
+          "start_line": 9,
+          "end_line": 9,
+          "section": "云原生观测委托权限说明",
+          "anchor": "将由系统策略为粒度的权限集",
+          "quote": "为了最小化授权，CCE服务进行了一次权限细粒度化改造，将由系统策略为粒度的权限集，修改为Action（依赖调用的接口对应一个Action）粒度的权限集。如果您已经进行了服务授权，可以一键进行权限优化，优化您授权的权限。",
+          "quote_sha256": "b3b158edcab5ca3411be22f26c3ee9fc2f624645b7fc28f7888a04c110919fc0"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-041",
+      "question": "CCE云原生观测授权的细粒度改造，是从什么粒度改为什么粒度？",
+      "answerable": true,
+      "question_type": "scope",
+      "category": "云原生观测",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 4697.465249999368
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-050",
+      "group": "family:cce_10_11511",
+      "category": "AI容器",
+      "question_type": "concept",
+      "question": "CCE推理负载基于什么控制器和推理引擎，多角色分布式推理有哪些角色？",
+      "answerable": true,
+      "required_facts": [
+        "Kthena ModelServing",
+        "vLLM",
+        "Entry和Worker"
+      ],
+      "reference_answer": "Kthena ModelServing；vLLM；Entry和Worker",
+      "evidence": [
+        {
+          "document_id": "cce_10_11511",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11511.html",
+          "title": "部署推理负载",
+          "file": "documents/cce_10_11511.md",
+          "content_sha256": "07f34e8be41600f339b14fa7923ec3a80415226b1fee4f6cf0e95eee6594dabe",
+          "start_line": 9,
+          "end_line": 9,
+          "section": "简介",
+          "anchor": "该能力基于Kthena ModelServing构建",
+          "quote": "推理负载（Inference Workload / ServingGroup）适用于在CCE集群中部署大语言模型（LLM）推理服务。该能力基于Kthena ModelServing构建，通过vLLM推理引擎，支持单节点或多角色（Entry + Worker）分布式推理，结合Gang调度与拓扑感知策略，实现算力灵活配比与服务稳定调度。",
+          "quote_sha256": "3f98a487d4ddc7fc2bdc7a33a3d646a89670bd5c16e0319fe665840a4df7841c"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-050",
+      "question": "CCE推理负载基于什么控制器和推理引擎，多角色分布式推理有哪些角色？",
+      "answerable": true,
+      "question_type": "concept",
+      "category": "AI容器",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 3677.196875003574
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-055",
+      "group": "cce_10_0285",
+      "category": "命名空间",
+      "question_type": "scenario",
+      "question": "想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？",
+      "answerable": true,
+      "required_facts": [
+        "为不同环境建立对应命名空间",
+        "创建和查询工作负载时选择对应命名空间",
+        "不要宣称这等同于完整网络安全隔离"
+      ],
+      "reference_answer": "为不同环境建立对应命名空间；创建和查询工作负载时选择对应命名空间；不要宣称这等同于完整网络安全隔离",
+      "evidence": [
+        {
+          "document_id": "cce_10_0285",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "file": "documents/cce_10_0285.md",
+          "content_sha256": "d0eaed4dded12d85d8eac6419e236f92048a9e8661f35deffb2e18f2013e6cb5",
+          "start_line": 9,
+          "end_line": 9,
+          "section": "使用命名空间",
+          "anchor": "创建工作负载时，您可以选择对应的命名空间",
+          "quote": "- 创建工作负载时，您可以选择对应的命名空间，实现资源或租户的隔离。",
+          "quote_sha256": "1bb41cad7bb282da433d127c84266be595c5306936e74c02d3d329b87893a2a1"
+        },
+        {
+          "document_id": "cce_10_0285",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "file": "documents/cce_10_0285.md",
+          "content_sha256": "d0eaed4dded12d85d8eac6419e236f92048a9e8661f35deffb2e18f2013e6cb5",
+          "start_line": 21,
+          "end_line": 21,
+          "section": "命名空间使用实践",
+          "anchor": "不同环境创建对应命名空间",
+          "quote": "  - 不同环境创建对应命名空间。",
+          "quote_sha256": "d5bd35649dd972b99a7481ae565fefd378b3b016ce9a19f19878a092ac218a59"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-055",
+      "question": "想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？",
+      "answerable": true,
+      "question_type": "scenario",
+      "category": "命名空间",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "EICGSMUWHEK6C34JYUP5C5KQOV",
+          "revision_id": "2VJ6ZD4URERPRVTAZ5WIMW534R",
+          "section": "命名空间使用实践",
+          "start_line": 14,
+          "end_line": 28,
+          "content": "- **按照不同环境划分命名空间**\n\n  一般情况下，工作负载发布会经历开发环境、联调环境、测试环境，最后到生产环境的过程。这个过程中不同环境部署的工作负载相同，只是在逻辑上进行了定义。分为两种做法：\n\n  - 分别创建不同集群。\n\n    不同集群之间，资源不能共享。同时，不同环境中的服务互访需要通过负载均衡才能实现。\n  - 不同环境创建对应命名空间。\n\n    同个命名空间下，通过服务名称（Service name）可直接访问。跨命名空间的可以通过服务名称、命名空间名称访问。\n\n    例如下图，开发环境/联调环境/测试环境分别创建了命名空间。\n\n    **图1** 不同环境创建对应命名空间\n     ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001199021298.png \"点击放大\")",
+          "content_hash": "c2ae96986867e82558359b74e00b5ea5ecbedfa41eece22b997004ec848f7384",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "按照不同环境划分命名空间时，有哪两种做法？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "不同集群之间资源能否共享？不同环境中的服务互访需要通过什么实现？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "同个命名空间下和跨命名空间的服务访问方式有何不同？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "开发环境、联调环境、测试环境分别创建命名空间的示例图是什么？"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图1展示了在不同环境（开发环境、联调环境、测试环境）中分别创建对应命名空间的示例。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "document_context": "目录：用户指南 > 命名空间 > 管理命名空间\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.06428490111891752
+        },
+        {
+          "id": "NMWPNMLU4IZ2NTUE2SZS7EEIN7",
+          "revision_id": "L4WPLV5QCVTMB7LSY4CEBSDQXK",
+          "section": "操作场景",
+          "start_line": 9,
+          "end_line": 11,
+          "content": "命名空间（Namespace）是对一组资源和对象的抽象整合。在同一个集群内可创建不同的命名空间，不同命名空间中的数据彼此隔离。使得它们既可以共享同一个集群的服务，也能够互不干扰。\n\n例如可以将开发环境、测试环境的业务分别放在不同的命名空间。",
+          "content_hash": "c0beecaca077cf8a011d7c1727cb73fad4fb57ace4f40d1cbd83ea27026bbd1a",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "命名空间（Namespace）在CCE中是对什么资源的抽象整合？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在同一个集群内创建不同命名空间后，不同命名空间中的数据是否隔离？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "命名空间如何帮助共享同一个集群的服务并互不干扰？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "可以将开发环境和测试环境的业务分别放在不同的命名空间吗？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0278.html",
+          "title": "创建命名空间",
+          "document_context": "目录：用户指南 > 命名空间 > 创建命名空间\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.06426850662704708
+        },
+        {
+          "id": "R72TDZBKRATGZF2PLEWMMM5OEZ",
+          "revision_id": "ITQEOCLYMSDLTS4UHYX2LMRZOP",
+          "section": "前提条件",
+          "start_line": 42,
+          "end_line": 42,
+          "content": "已创建v1.29及以上版本的CCE Standard/Turbo集群。",
+          "content_hash": "824eadabea778bd337919a89cf47f904cf9691625733774077710a0b5bc834ad",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "使用FlexNPU的前提条件是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "需要创建什么版本的CCE集群才能使用FlexNPU？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11112.html",
+          "title": "使用FlexNPU实现NPU资源虚拟化与隔离",
+          "document_context": "目录：用户指南 > 调度 > NPU调度 > NPU动态虚拟化 > 使用FlexNPU实现NPU资源虚拟化与隔离\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.04838709677419355
+        },
+        {
+          "id": "Z4UQTE655MNJPWEZ7O2SWELJCP",
+          "revision_id": "N5AUIJXRSRN2QIZFAAAFSW4HYV",
+          "section": "云原生混部配置",
+          "start_line": 41,
+          "end_line": 45,
+          "content": "| 参数 | 默认行为 | 参数说明 |\n   | --- | --- | --- |\n   | CPU 弹性限流 | 开启 | 开启CPU Burst弹性限流后，当节点资源充足时，Pod的CPU实际使用量可以短暂突破CPU Limit值，以降低业务长尾响应时延，详情请参见[CPU Burst弹性限流](https://support.huaweicloud.com/usermanual-cce/cce_10_0700.html)。 |\n   | 出口网络带宽 | 开启 | 在CCE Turbo集群中，支持在线业务与离线业务的网络隔离，详情请参见[出口网络带宽保障](https://support.huaweicloud.com/usermanual-cce/cce_10_0701.html)。 |\n   | 资源超卖 | 开启 | 通过实时采集节点负载信息，挖掘节点已分配、但未使用的资源，实现动态超卖节点资源。您可以选择需要超卖的资源类型，默认同时开启CPU和内存资源超卖。详情请参见[动态资源超卖](https://support.huaweicloud.com/usermanual-cce/cce_10_0384.html)。  说明：  - 若集群版本不满足条件，资源超卖功能配置不会生效，详情请参见[表1](https://support.huaweicloud.com/usermanual-cce/cce_10_0384.html)。 - 修改超卖资源配置时：   - 对于增加超卖资源类型，如超卖资源由CPU变为CPU、内存，此时可以随时添加。   - 对于减少超卖资源类型，如由CPU、内存变为仅超卖CPU，此时需要在合适的时间进行更改，即分配率不超过100%时才可进行安全更改。 |",
+          "content_hash": "0ab3069d17d4ee3c4b1d13de87f15b6cafb4a6aaf0ac76db43aac7e130dbd5f3",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "开启CPU Burst弹性限流后，Pod的CPU实际使用量可以突破多少？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在CCE Turbo集群中，如何实现网络隔离？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何配置动态资源超卖功能？"
+            },
+            {
+              "kind": "TABLE",
+              "text": "| 参数 | 默认行为 | 参数说明 |"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "| 参数 | 默认行为 | 参数说明 |\n   | --- | --- | --- |\n   | CPU 弹性限流 | 开启 | 开启CPU Burst弹性限流后，当节点资源充足时，Pod的CPU实际使用量可以短暂突破CPU Limit值，以降低业务长尾响应时延，详情请参见[CPU Burst弹性限流](https://support.huaweicloud.com/usermanual-cce/cce_10_0700.html)。 |\n   | 出口网络带宽 | 开启 | 在CCE Turbo集群中，支持在线业务与离线业务的网络隔离，详情请参见[出口网络带宽保障](https://support.huaweicloud.com/usermanual-cce/cce_10_0701.html)。 |\n   | 资源超卖 | 开启 | 通过实时采集节点负载信息，挖掘节点已分配、但未使用的资源，实现动态超卖节点资源。您可以选择需要超卖的资源类型，默认同时开启CPU和内存资源超卖。详情请参见[动态资源超卖](https://support.huaweicloud.com/usermanual-cce/cce_10_0384.html)。  说明：  - 若集群版本不满足条件，资源超卖功能配置不会生效，详情请参见[表1](https://support.huaweicloud.com/usermanual-cce/cce_10_0384.html)。 - 修改超卖资源配置时：   - 对于增加超卖资源类型，如超卖资源由CPU变为CPU、内存，此时可以随时添加。   - 对于减少超卖资源类型，如由CPU、"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": ")。 - 修改超卖资源配置时：   - 对于增加超卖资源类型，如超卖资源由CPU变为CPU、内存，此时可以随时添加。   - 对于减少超卖资源类型，如由CPU、内存变为仅超卖CPU，此时需要在合适的时间进行更改，即分配率不超过100%时才可进行安全更改。 |"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0708.html",
+          "title": "开启云原生混部",
+          "document_context": "目录：用户指南 > 调度 > 云原生混部 > 开启云原生混部\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.046875
+        },
+        {
+          "id": "CJ3N3XJHLRJ2HNSRVX2FRT4DCT",
+          "revision_id": "F7IZJDST26LC237GCT5KIH6CX2",
+          "section": "集群配置与资源管理",
+          "start_line": 11,
+          "end_line": 19,
+          "content": "集群配置与资源管理提供了灵活的参数调整和动态资源分配能力，您可以根据业务需求优化集群性能并高效利用资源，具体请参见[表1 集群配置与资源管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0962.html)。\n\n**表1** 集群配置与资源管理\n\n| 功能 | 说明 |\n| --- | --- |\n| [修改CCE集群配置](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html) | 集群配置参数是分布式系统中用于定义节点行为、资源分配、通信规则、扩展策略等的底层规则集，会影响集群的性能、稳定性、扩展性和容错能力。通过调整CCE Standard/Turbo集群的配置参数，您可以对核心组件进行深度配置。 |\n| [开启集群过载控制](https://support.huaweicloud.com/usermanual-cce/cce_10_0602.html) | 过载控制是一种动态调整机制，可以根据控制节点的资源压力，限制系统外部请求的并发量，从而维护控制节点和集群的稳定性和可靠性。  在CCE Standard/Turbo集群中，您可以通过开启集群过载控制、监控集群过载情况、设置集群过载告警等操作，有效减少集群过载的可能性。 |\n| [变更集群规格](https://support.huaweicloud.com/usermanual-cce/cce_10_0403.html) | 集群规模是指集群支持管理的最大节点数量。当前集群规模不能满足您的诉求时，可通过“变更集群规格”功能扩大集群规模，确保集群能够承载不断变化的工作负载。 |",
+          "content_hash": "413207b5ef93fa0cf49be0636b5cdd402f09649ecb21d9e4ad4acb55d352d364",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "集群配置与资源管理提供了哪些能力？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "修改CCE集群配置的作用是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "开启集群过载控制的功能是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "变更集群规格适用于什么场景？"
+            },
+            {
+              "kind": "TABLE",
+              "text": "表1展示了集群配置与资源管理的功能列表，包含三列：功能、说明和操作链接。功能列包括修改CCE集群配置、开启集群过载控制和变更集群规格；说明列分别解释了各功能的作用和适用场景。可检索术语包括：集群配置参数、过载控制、集群规模、节点数量、资源压力、并发量等。"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "集群配置与资源管理提供了灵活的参数调整和动态资源分配能力，您可以根据业务需求优化集群性能并高效利用资源，具体请参见[表1 集群配置与资源管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0962.html)。\n\n**表1** 集群配置与资源管理\n\n| 功能 | 说明 |\n| --- | --- |\n| [修改CCE集群配置](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html) | 集群配置参数是分布式系统中用于定义节点行为、资源分配、通信规则、扩展策略等的底层规则集，会影响集群的性能、稳定性、扩展性和容错能力。通过调整CCE Standard/Turbo集群的配置参数，您可以对核心组件进行深度配置。 |\n| [开启集群过载控制](https://support.huaweicloud.com/usermanual-cce/cce_10_0602.html) | 过载控制是一种动态调整机制，可以根据控制节点的资源压力，限制系统外部请求的并发量，从而维护控制节点和集群的稳定性和可靠性。  在CCE Standard/Turbo集群中，您可以通过开启集群过载控制、监控集群过载情况、设置集群过载告警等操作，有效减少集群过载的可能性。 |\n| [变更集群规格](https://support.huaweicloud.com/usermanual-cce/cce_10"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "过载情况、设置集群过载告警等操作，有效减少集群过载的可能性。 |\n| [变更集群规格](https://support.huaweicloud.com/usermanual-cce/cce_10_0403.html) | 集群规模是指集群支持管理的最大节点数量。当前集群规模不能满足您的诉求时，可通过“变更集群规格”功能扩大集群规模，确保集群能够承载不断变化的工作负载。 |"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0962.html",
+          "title": "管理集群概述",
+          "document_context": "目录：用户指南 > 集群 > 管理集群 > 管理集群概述\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.01639344262295082
+        }
+      ],
+      "result": {
+        "trace_id": "7dbc3f7375dae473464a650fae9846c7",
+        "retrieval_queries": [
+          "想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？",
+          "如何通过CCE集群实现开发、联调、测试环境的逻辑隔离共享？",
+          "如何利用CCE集群在同一集群内为开发、联调、测试环境提供资源共享但保持逻辑隔离？",
+          "如何在CCE集群中设置开发、联调、测试环境的资源共享机制以实现逻辑隔离？"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 2419.6259999953327
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-064",
+      "group": "cce_10_0154",
+      "category": "插件",
+      "question_type": "scenario",
+      "question": "集群Pod因工作节点资源不足而调度失败，CCE集群弹性引擎会怎样处理，利用率低时呢？",
+      "answerable": true,
+      "required_facts": [
+        "基于Autoscaler扩容新节点",
+        "扩容节点资源利用率很低时自动删除节点",
+        "不保证其他原因导致的Pending都能靠扩容解决"
+      ],
+      "reference_answer": "基于Autoscaler扩容新节点；扩容节点资源利用率很低时自动删除节点；不保证其他原因导致的Pending都能靠扩容解决",
+      "evidence": [
+        {
+          "document_id": "cce_10_0154",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0154.html",
+          "title": "CCE集群弹性引擎",
+          "file": "documents/cce_10_0154.md",
+          "content_sha256": "e664cbe3cec1b3c7de3edff25704d2c0a01a8acf791499e2605594a026b130ef",
+          "start_line": 9,
+          "end_line": 9,
+          "section": "插件简介",
+          "anchor": "当集群中的Pod因为资源不足无法调度时",
+          "quote": "CCE集群弹性引擎插件基于社区Autoscaler组件，能够根据应用的资源需求自动调整集群节点数量，优化资源利用率和性能。作为Kubernetes中的核心控制器，Autoscaler具备根据资源需求情况自动扩展或缩减节点的能力。当集群中的Pod因为资源不足无法调度时，Autoscaler会扩容新的节点来提供更多的资源。同时，如果扩容的节点资源利用率很低，Autoscaler会自动删除这些节点。关于实现节点弹性伸缩的具体操作，请参见[创建节点弹性策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0209.html)。",
+          "quote_sha256": "2d489afd629520e44a761dcf51207efb8e7110ea5060cfb87c7ec1c9b6dfe99f"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-064",
+      "question": "集群Pod因工作节点资源不足而调度失败，CCE集群弹性引擎会怎样处理，利用率低时呢？",
+      "answerable": true,
+      "question_type": "scenario",
+      "category": "插件",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 5748.156749999907
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-067",
+      "group": "family:cce_10_0191",
+      "category": "模板（Helm Chart）",
+      "question_type": "constraint",
+      "question": "同一Helm模板上传多个版本只算一个模板配额吗？模板包命名规则是什么？",
+      "answerable": true,
+      "required_facts": [
+        "每个版本消耗对应模板配额",
+        "name-version.tgz",
+        "version为主版本号.次版本号.修订号"
+      ],
+      "reference_answer": "每个版本消耗对应模板配额；name-version.tgz；version为主版本号.次版本号.修订号",
+      "evidence": [
+        {
+          "document_id": "cce_10_0146",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0146.html",
+          "title": "通过模板部署应用",
+          "file": "documents/cce_10_0146.md",
+          "content_sha256": "bc6c586f9d9988d6f9ab14fd68ebfcdcb0b9b222efb643f4ff8b9b473f0ae075",
+          "start_line": 17,
+          "end_line": 17,
+          "section": "约束与限制",
+          "anchor": "模板若存在多个版本",
+          "quote": "- 模板若存在多个版本，则消耗对应数量的模板配额。",
+          "quote_sha256": "e0341f98a2da82b70d941cad6166d1a836d5ad0812f410eddef8019d055a4645"
+        },
+        {
+          "document_id": "cce_10_0146",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0146.html",
+          "title": "通过模板部署应用",
+          "file": "documents/cce_10_0146.md",
+          "content_sha256": "bc6c586f9d9988d6f9ab14fd68ebfcdcb0b9b222efb643f4ff8b9b473f0ae075",
+          "start_line": 26,
+          "end_line": 26,
+          "section": "模板包规范",
+          "anchor": "模板包命名格式为",
+          "quote": "  模板包命名格式为：**{name}-{version}**.tgz，其中**{version}**为版本号，格式为“主版本号.次版本号.修订号”，如redis-0.4.2.tgz。",
+          "quote_sha256": "4b59443ec5a621c54dd49805718a75ee382a0aededadf10a2fa01ca19172f40e"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-067",
+      "question": "同一Helm模板上传多个版本只算一个模板配额吗？模板包命名规则是什么？",
+      "answerable": true,
+      "question_type": "constraint",
+      "category": "模板（Helm Chart）",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "FXE7R2JKSNXHDBNODQBIHWEO6R",
+          "revision_id": "OXDEUGA5SSJGY3S7LLLWYQEYV2",
+          "section": "约束与限制",
+          "start_line": 15,
+          "end_line": 18,
+          "content": "- 单个用户可以上传模板的个数有限制，请以各个Region控制台界面中提示的实际值为准。\n- CCE使用的Helm版本为v3.18.6，支持上传Helm v3版本语法的模板包。\n- 模板若存在多个版本，则消耗对应数量的模板配额。\n- 由于模板的操作权限同时具有较高的集群操作权限，因此租户应当谨慎授予用户对于模板生命周期管理的权限，包括上传模板的权限，以及创建、删除和更新模板实例的权限。",
+          "content_hash": "ea845a42819bf3193b82de4a38c8674ffeddbaf8253f8acdecd11f46bf520116",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "单个用户上传模板的个数限制是多少？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE使用的Helm版本是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "模板存在多个版本时，如何消耗模板配额？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "为什么租户应当谨慎授予用户对于模板生命周期管理的权限？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "模板生命周期管理权限包括哪些操作？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0146.html",
+          "title": "通过模板部署应用",
+          "document_context": "目录：用户指南 > 模板（Helm Chart） > 通过模板部署应用\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.06557377049180328
+        },
+        {
+          "id": "VZKTTV7QWNCL5DCKHIYA4BUFI2",
+          "revision_id": "EYF3KM35V5U6DBZRXG3QHMO33P",
+          "section": "安装Helm模板包",
+          "start_line": 47,
+          "end_line": 53,
+          "content": "您可以使用Helm安装模板包（Chart），在使用Helm命令安装模板包前，您可能需要了解三大概念帮助您更好地使用Helm。\n\n- 模板包（Chart）：模板包中含有Kubernetes应用的资源定义以及大量的配置文件。\n- 仓库（Repository）：仓库是用于存放共享模板包的地方，您可以从仓库中下载模板包至本地安装，也可以选择直接在线安装。\n- 实例（Release）：实例是Helm在Kubernetes集群中安装模板包后的运行结果。一个模板包通常可以在一个集群中安装多次，每次安装都会创建一个新的实例。以MySQL模板包为例，如果您想在集群中运行两个数据库，可以安装该模板包两次，每一个数据库都会拥有自己的release 和release name。\n\n更多关于Helm命令的使用方法请参见[使用Helm](https://helm.sh/zh/docs/intro/using_helm/)。",
+          "content_hash": "5f5ff6472df52ebfdbbc8ffc81e05d28c08ad42d2c67a94a99999471829cb345",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "Helm的三大概念分别是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "模板包（Chart）中包含哪些内容？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "仓库（Repository）的作用是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "实例（Release）是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "一个模板包可以在一个集群中安装多次吗？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0144.html",
+          "title": "通过Helm v3客户端部署应用",
+          "document_context": "目录：用户指南 > 模板（Helm Chart） > 通过Helm v3客户端部署应用\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.06401209677419355
+        },
+        {
+          "id": "BOEXGSBZJMRYZKP345PBOIBQIU",
+          "revision_id": "CM3GUZMTCJ7GESJ53OKJ7WKBVX",
+          "section": "模板概述",
+          "start_line": 7,
+          "end_line": 9,
+          "content": "CCE提供了管理Helm Chart（模板）的控制台，能够帮助您方便地使用模板部署应用，并在控制台上管理应用。CCE使用的Helm版本为v3.8.2，支持上传Helm v3语法的模板包，具体请参见[通过模板部署应用](https://support.huaweicloud.com/usermanual-cce/cce_10_0146.html)。\n\n您也可以直接使用Helm客户端直接部署应用，使用Helm客户端部署应用不受版本控制，可以使用Helm v2或v3，具体请参见[通过Helm v2客户端部署应用](https://support.huaweicloud.com/usermanual-cce/cce_10_0420.html)及[通过Helm v3客户端部署应用](https://support.huaweicloud.com/usermanual-cce/cce_10_0144.html)。",
+          "content_hash": "b974ff2f5606f22a04f85cbb989502426cf79c79729c7cfbad814277b43f46b8",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "CCE控制台支持管理Helm Chart吗？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE使用的Helm版本是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE支持上传哪个Helm语法的模板包？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "使用Helm客户端部署应用是否受版本控制？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "通过Helm v2客户端部署应用的文档链接是什么？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0191.html",
+          "title": "模板概述",
+          "document_context": "目录：用户指南 > 模板（Helm Chart） > 模板概述\n更新时间：2026-06-17 GMT+08:00",
+          "score": 0.06201923076923077
+        },
+        {
+          "id": "5KQ5DAJRQ33QRU3NEQYINIZX3O",
+          "revision_id": "EYF3KM35V5U6DBZRXG3QHMO33P",
+          "section": "安装Helm模板包",
+          "start_line": 55,
+          "end_line": 91,
+          "content": "1. 从Helm官方推荐的仓库[Artifact Hub](https://artifacthub.io/packages/search?kind=0)中查找模板包，并配置Helm仓库。\n\n   ```\n   helm repo add {repo_name} {repo_addr}\n   ```\n\n   例如，以[WordPress模板包](https://artifacthub.io/packages/helm/bitnami/wordpress)为例：\n\n   ```\n   helm repo add bitnami https://charts.bitnami.com/bitnami\n   ```\n2. 使用**helm install**命令安装模板包。\n\n   ```\n   helm install {release_name} {chart_name} --set key1=val1\n   ```\n\n   例如，以安装WordPress为例，[步骤1](https://support.huaweicloud.com/usermanual-cce/cce_10_0144.html)添加的仓库中WordPress的模板包为bitnami/wordpress，并将实例自定义命名为my-wordpress，同时指定一些配置参数。\n\n   ```\n   helm install my-wordpress bitnami/wordpress \\\n        --set mariadb.primary.persistence.enabled=true \\\n        --set mariadb.primary.persistence.storageClass=csi-disk \\\n        --set mariadb.primary.persistence.size=10Gi \\\n        --set persistence.enabled=false\n   ```\n\n   您可以使用**helm show values** ***{chart\\_name}***命令查看模板可配置的选项。例如，查看WordPress的可配置项：\n\n   ```\n   helm show values bitnami/wordpress\n   ```\n3. 查看已安装的模板实例。\n\n   ```\n   helm list\n   ```",
+          "content_hash": "a89ebaa0cd3b121cf6a014b681f84d629ef2ecec9b09dedffa3d46c5f4aff714",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "如何从Artifact Hub查找模板包并配置Helm仓库？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "使用helm install命令安装模板包的语法是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何查看模板可配置的选项？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何查看已安装的模板实例？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "以WordPress为例，如何安装并指定配置参数？"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "1. 从Helm官方推荐的仓库[Artifact Hub](https://artifacthub.io/packages/search?kind=0)中查找模板包，并配置Helm仓库。\n\n   ```\n   helm repo add {repo_name} {repo_addr}\n   ```\n\n   例如，以[WordPress模板包](https://artifacthub.io/packages/helm/bitnami/wordpress)为例：\n\n   ```\n   helm repo add bitnami https://charts.bitnami.com/bitnami\n   ```\n2. 使用**helm install**命令安装模板包。\n\n   ```\n   helm install {release_name} {chart_name} --set key1=val1\n   ```\n\n   例如，以安装WordPress为例，[步骤1](https://support.huaweicloud.com/usermanual-cce/cce_10_0144.html)添加的仓库中WordPress的模板包为bitnami/wordpress，并将实例自定义命名为my-wordpress，同时指定一些配置参数。\n\n   ```\n   helm install my-wordpress bitnami/wordpress \\\n        --set mariadb.primary.persistence.enabled=true \\\n        --set mariadb.primary.persistence.storageClass=csi-disk \\\n        --set mariadb.primary.persistence.size=10Gi \\\n        --set persistence.enabled=false\n   ```\n\n   您可以使用**helm show values** ***{chart\\_name}***命令查看模板可配置的选项。例如，查看WordPress的可配置项：\n\n   ```\n   helm show values bitnami/wordpress\n   ```\n3. 查看已安装的模板实例。\n\n   ```\n   he"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "_name}***命令查看模板可配置的选项。例如，查看WordPress的可配置项：\n\n   ```\n   helm show values bitnami/wordpress\n   ```\n3. 查看已安装的模板实例。\n\n   ```\n   helm list\n   ```"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0144.html",
+          "title": "通过Helm v3客户端部署应用",
+          "document_context": "目录：用户指南 > 模板（Helm Chart） > 通过Helm v3客户端部署应用\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.047619047619047616
+        },
+        {
+          "id": "RZBY3ENDLSQULOFJKXIT5IJ3CL",
+          "revision_id": "OXDEUGA5SSJGY3S7LLLWYQEYV2",
+          "section": "上传模板",
+          "start_line": 63,
+          "end_line": 69,
+          "content": "1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群。\n2. 在左侧导航栏中选择“应用模板”，在右上角单击“上传模板”。\n3. 单击“添加文件”，选中待上传的模板包后，单击“上传”。\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n   由于上传模板时创建OBS桶的命名规则由cce-charts-{region}-**{domain\\_name}**变为cce-charts-{region}-**{domain\\_id}**，其中旧命名规则中的domain\\_name系统会做base64转化并取前63位，如果您在现有命名规则的OBS桶中找不到模板，请在旧命名规则的桶中进行查找。",
+          "content_hash": "8f2a1c018fbf9117b4c3a963fd111948c775721e3e73f31073d1c0d87a5e41da",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "上传模板的步骤是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "上传模板时，OBS桶的命名规则发生了什么变化？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如果在现有命名规则的OBS桶中找不到模板，应该在哪里查找？"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片为提示图标，出现在上传模板步骤的说明文字之后，用于强调OBS桶命名规则变化的注意事项。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0146.html",
+          "title": "通过模板部署应用",
+          "document_context": "目录：用户指南 > 模板（Helm Chart） > 通过模板部署应用\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.04664224664224664
+        }
+      ],
+      "result": {
+        "trace_id": "1bd95f60c40cf1c9d15f0e899002350d",
+        "retrieval_queries": [
+          "同一Helm模板上传多个版本只算一个模板配额吗？模板包命名规则是什么？",
+          "同一个Helm模板上传多个版本是否只算一个模板配额？Helm模板包的命名规则是什么？",
+          "Helm模板上传多次是否会被视为同一个模板配额？请说明Helm模板包的命名规范。",
+          "同一个Helm模板的不同版本是否占用相同的配额？请提供Helm模板包的命名规则。"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 2566.294416996243
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-088",
+      "group": "cce_10_1164",
+      "category": "备份中心",
+      "question_type": "procedure",
+      "question": "Velero仓库提示invalid top-level directories，OBS桶根目录只允许哪些目录？",
+      "answerable": true,
+      "required_facts": [
+        "只允许restores和backups",
+        "清理根目录其他文件或文件夹后可恢复",
+        "不声称已执行删除"
+      ],
+      "reference_answer": "只允许restores和backups；清理根目录其他文件或文件夹后可恢复；不声称已执行删除",
+      "evidence": [
+        {
+          "document_id": "cce_10_1164",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1164.html",
+          "title": "备份中心常见问题",
+          "file": "documents/cce_10_1164.md",
+          "content_sha256": "520bcc2b2c774e0c6ffc36d233cbb1740b15fe31548d51efd49cdd2972c826e1",
+          "start_line": 62,
+          "end_line": 62,
+          "section": "备份仓库状态不可用提示：Backup store contains invalid top-level directories: [xxx]",
+          "anchor": "根目录中禁止包含除restores、 backups之外的文件或文件夹",
+          "quote": "备份仓库对应OBS桶中根目录中禁止包含除restores、 backups之外的文件或文件夹，在OBS中删除相关文件后即可恢复。",
+          "quote_sha256": "8a27a349a07b2f18f6dea011fb970f2e17d2f61b71f2eb7765a2a319992e1e8c"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-088",
+      "question": "Velero仓库提示invalid top-level directories，OBS桶根目录只允许哪些目录？",
+      "answerable": true,
+      "question_type": "procedure",
+      "category": "备份中心",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 3606.045082997298
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-091",
+      "group": "family:cce_10_0279",
+      "category": "弹性伸缩",
+      "question_type": "comparison",
+      "question": "metrics.k8s.io、custom.metrics.k8s.io和external.metrics.k8s.io分别提供什么指标？",
+      "answerable": true,
+      "required_facts": [
+        "metrics提供Pod/Node的CPU内存",
+        "custom提供Kubernetes对象关联的自定义指标",
+        "external来自外部、不关联Kubernetes资源"
+      ],
+      "reference_answer": "metrics提供Pod/Node的CPU内存；custom提供Kubernetes对象关联的自定义指标；external来自外部、不关联Kubernetes资源",
+      "evidence": [
+        {
+          "document_id": "cce_10_0290",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "file": "documents/cce_10_0290.md",
+          "content_sha256": "13dd681a175e1ef00fd415a682dee09adaf26418aa3898ee97ec649d736cb338",
+          "start_line": 40,
+          "end_line": 40,
+          "section": "HPA工作原理",
+          "anchor": "metrics.k8s.io：",
+          "quote": "  - metrics.k8s.io： 主要提供Pod和Node的CPU和Memory相关的监控指标。",
+          "quote_sha256": "7c0f7bcf77c0a5af50a3a0d374055e623fb4994661b82031c7ebd3ac207fd790"
+        },
+        {
+          "document_id": "cce_10_0290",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "file": "documents/cce_10_0290.md",
+          "content_sha256": "13dd681a175e1ef00fd415a682dee09adaf26418aa3898ee97ec649d736cb338",
+          "start_line": 41,
+          "end_line": 41,
+          "section": "HPA工作原理",
+          "anchor": "custom.metrics.k8s.io：",
+          "quote": "  - custom.metrics.k8s.io： 主要提供Kubernetes Object相关的自定义监控指标。",
+          "quote_sha256": "328b24cd51d3b2699c4834395a4804e7de48f5ae753d051d7833d9a601dd3ef2"
+        },
+        {
+          "document_id": "cce_10_0290",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "file": "documents/cce_10_0290.md",
+          "content_sha256": "13dd681a175e1ef00fd415a682dee09adaf26418aa3898ee97ec649d736cb338",
+          "start_line": 42,
+          "end_line": 42,
+          "section": "HPA工作原理",
+          "anchor": "external.metrics.k8s.io：",
+          "quote": "  - external.metrics.k8s.io：指标来源外部，与任何的Kubernetes资源的指标无关。",
+          "quote_sha256": "3819f33629303012b3c28785a77aa904bb8d96bb55430058eb35af2d19036873"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-091",
+      "question": "metrics.k8s.io、custom.metrics.k8s.io和external.metrics.k8s.io分别提供什么指标？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "弹性伸缩",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 5138.340541998332
+    }
+  },
+  {
+    "case": {
+      "id": "cce-negative-unprovided-cve",
+      "group": "unprovided-cve",
+      "category": "集群",
+      "question_type": "unanswerable",
+      "question": "手册里CVE-2099-987654漏洞对应的CCE修复小版本是什么？",
+      "answerable": false,
+      "required_facts": [
+        "没有该虚构漏洞及修复版本依据，不能编造版本。"
+      ],
+      "reference_answer": "没有该虚构漏洞及修复版本依据，不能编造版本。",
+      "evidence": [],
+      "absence_basis": "no_claim_in_frozen_corpus",
+      "split": "development",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-negative-unprovided-cve",
+      "question": "手册里CVE-2099-987654漏洞对应的CCE修复小版本是什么？",
+      "answerable": false,
+      "question_type": "unanswerable",
+      "category": "集群",
+      "metrics": {},
+      "documents": [],
+      "result": {},
+      "citation_integrity": false,
+      "error": "HTTPStatusError",
+      "latency_ms": 5617.383624994545
+    }
+  }
+]

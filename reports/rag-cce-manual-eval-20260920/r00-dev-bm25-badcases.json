@@ -1,0 +1,1067 @@
+[
+  {
+    "case": {
+      "id": "cce-manual-009",
+      "group": "family:cce_10_0180",
+      "category": "节点",
+      "question_type": "constraint",
+      "question": "为什么不能给所有区域的CCE Turbo节点承诺同一个可用规格和最大Pod数？",
+      "answerable": true,
+      "required_facts": [
+        "区域规格可能新增、售罄或下线，需看创建节点页面",
+        "Turbo最大Pod数量与节点可用弹性网卡/辅助弹性网卡数量有关"
+      ],
+      "reference_answer": "区域规格可能新增、售罄或下线，需看创建节点页面；Turbo最大Pod数量与节点可用弹性网卡/辅助弹性网卡数量有关",
+      "evidence": [
+        {
+          "document_id": "cce_10_0719",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0719.html",
+          "title": "节点规格说明",
+          "file": "documents/cce_10_0719.md",
+          "content_sha256": "504183f45a8fd8eba74f0943d325cdaba90736652ffc6b635cc83d6fe8d38597",
+          "start_line": 11,
+          "end_line": 11,
+          "section": "节点规格说明",
+          "anchor": "不同区域支持的节点规格",
+          "quote": "不同区域支持的节点规格（flavor）不同，且节点规格存在新增、售罄下线等情况，建议您在使用前登录CCE控制台，在创建节点界面查看您需要的节点规格是否支持。",
+          "quote_sha256": "052a137fccf9990cf63aed1847dd5340919edeeb7a03eebfbe53d77f188cb7b9"
+        },
+        {
+          "document_id": "cce_10_0719",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0719.html",
+          "title": "节点规格说明",
+          "file": "documents/cce_10_0719.md",
+          "content_sha256": "504183f45a8fd8eba74f0943d325cdaba90736652ffc6b635cc83d6fe8d38597",
+          "start_line": 13,
+          "end_line": 13,
+          "section": "节点规格说明",
+          "anchor": "每个节点可以创建最大Pod数量",
+          "quote": "对于CCE Turbo集群，由于Pod需要占用节点弹性网卡/辅助弹性网卡，每个节点可以创建最大Pod数量与节点可使用网卡数量相关，因此您需要评估节点的可使用网卡数量，可用网卡数量确定了该节点支持的负载实例上限，详细说明请参见[节点可创建的最大Pod数量说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。",
+          "quote_sha256": "95489cc36d8b16a6ff2b29b69f1b25074438603f8cd373c9e5ccc330f04a8891"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-009",
+      "question": "为什么不能给所有区域的CCE Turbo节点承诺同一个可用规格和最大Pod数？",
+      "answerable": true,
+      "question_type": "constraint",
+      "category": "节点",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "7D7FM7YZKS5BWLFHJKHJ67HWZE",
+          "revision_id": "SRFDGMCSLDQ3QUH5JHJE4OPO4P",
+          "section": "常见问题",
+          "start_line": 77,
+          "end_line": 84,
+          "content": "- **CCE Turbo集群如何查看节点规格支持的最大Pod数？**\n\n  CCE Turbo集群节点可创建的Pod数与节点网卡数量有关，不同规格支持的网卡数量可能不同。您可以在创建节点时查看每个规格支持的负载实例上限。\n\n  ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002602443981.png \"点击放大\")\n- **为什么相同CPU和内存规格的节点，可创建的Pod数却不一样？**\n\n  节点可创建的Pod数并非根据节点规格单一因素决定，是根据集群类型和其他参数共同作用的结果，详情参见[节点最大Pod数量计算方式](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。",
+          "content_hash": "022db6a766af95956675dcac127555eb342367d555daed25b5d2c50c40764c83",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html",
+          "title": "节点可创建的最大Pod数量说明",
+          "score": 37.918663
+        },
+        {
+          "id": "KMO4PQBYFE2E4KVPIFXBLRR4HG",
+          "revision_id": "2IE7L4LBQJE7RDFOOMUZNMO7ZD",
+          "section": "索引",
+          "start_line": 8,
+          "end_line": 15,
+          "content": "- [为什么监控中心没有数据了？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [如何关闭监控中心？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [监控中心为什么没有展示自定义指标？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [为什么云原生监控插件开启本地数据存储时，重启prometheus-server实例可能会导致节点列表的资源信息短时间（1-2分钟）无法正常显示？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [为什么云原生监控插件开启本地数据存储时，重启kube-state-metrics实例可能会导致页面部分数据翻倍？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [云原生监控插件开启本地数据存储时为什么不能正常上报指标？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [为什么监控中心的工作负载/节点CPU使用率超过100%？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [采集端点访问403的原因是什么？该如何处理？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)",
+          "content_hash": "e4f56df695202d436fdfef699935f1e52a3c2e762544a8f872ae56ef60b6b1ef",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html",
+          "title": "监控中心FAQ",
+          "score": 35.2428
+        },
+        {
+          "id": "34Z3L3TWEDSEHBA6XW4BSFB2A4",
+          "revision_id": "SRFDGMCSLDQ3QUH5JHJE4OPO4P",
+          "section": "如何提升集群中可使用Pod数量",
+          "start_line": 68,
+          "end_line": 73,
+          "content": "| 方案 | 适用集群 | 操作说明 | 操作影响 |\n| --- | --- | --- | --- |\n| **增加节点（推荐）** | 所有集群 | 新增节点以增加可用的Pod数。 | **对业务无影响。**但需要考虑集群规模过大可能会对集群性能产生影响，请合理规划。  建议新增大规格节点，并逐步将业务迁移至新节点，缩容老节点。 |\n| **修改节点最大实例数** | 所有集群 | 对于DefaultPool中的节点，您可以重置节点然后重新配置节点最大实例数；对于自定义节点池中的节点，您可以在节点池配置中修改“kubelet管理的Pod上限”参数。 | **涉及节点重置或kubelet组件重启，可能会导致业务短暂中断。**  “容器隧道网络”集群可通过该方式直接提升可使用Pod数量，但其他类型的集群还受其他参数影响，需综合考虑。 |\n| **重建集群并重新规划Pod网段** | “VPC网络”集群 | 对于VPC网络模型集群，如果需要调整[每个节点预留的Pod IP数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)，只能通过重建集群。 | **业务需要重建。** |\n| **变更为更大的实例规格增加节点网卡数量** | “云原生2.0网络”集群（CCE Turbo集群） | 如果是由于节点网卡数量不足限制了Pod数量，可以通过变更节点的实例规格来扩容单节点Pod数。  如果节点支持的网卡数量大于[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)，需要同步修改[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)，其值建议和网卡数量保持一致。 | **变更规格会导致业务短暂中断。**  变更规格可能存在其他潜在影响，详情请参见[CCE节点池内的节点变更规格后会有哪些影响？](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00445.html)。 |",
+          "content_hash": "0470e7f44a591624d88615e7420bb236f3b742d13900852ab0a8bd38fae43568",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html",
+          "title": "节点可创建的最大Pod数量说明",
+          "score": 27.051672
+        },
+        {
+          "id": "W3WKXUG5WDLYBBOT6XRD7SYVWR",
+          "revision_id": "AHPNLFYYNNWLS5KIR4AKHRRFIZ",
+          "section": "以Gang语义评估工作负载中断影响",
+          "start_line": 211,
+          "end_line": 245,
+          "content": "在分布式训练和模型推理中，整理方案不应将迁移分散到大量工作负载。即使迁移Pod总数相同，从一个工作负载迁移多个Pod通常也比从多个工作负载各迁移一个Pod具有更小的影响范围。Repack因此以PodGroup作为中断影响统计单元，对每个可行腾空方案计算多维成本。\n\n**是否低于Gang最小可用成员数**\n\n对于一个PodGroup，Repack从Scheduler快照读取Running成员数和MinAvailable，计算不影响Gang最小可用条件的最大迁移Pod数：\n\n```\n可安全迁移的 Pod 数 = max(Running - MinAvailable, 0)\n```\n\n- 计划迁移数不超过该值：PodGroup的可用副本数仍满足MinAvailable，受影响目标资源量按实际迁移量计算。\n- 计划迁移数超过该值：PodGroup将低于MinAvailable，低于最小可用成员数的PodGroup数量增加；受影响目标资源量按整个PodGroup的目标资源占用量计算。\n\n例如，一个训练任务当前有8个Running Worker，minAvailable: 6：\n\n- 迁移1～2个Worker 后仍满足minAvailable；\n- 迁移第 3个Worker后低于minAvailable，Repack将整个PodGroup的NPU占用计入受影响目标资源量。\n\n**多维中断影响评分**\n\n每个可行候选都按完整计划计算五个维度，而不是只评价当前节点上的局部Pod：\n\n- 受影响工作负载数，默认权重1.0：尽量减少同时受到迁移影响的训练或推理工作负载。\n- 低于 MinAvailable 的 PodGroup 数，默认权重0.8。\n- 受影响目标资源量，默认权重0.6：PodGroup仍满足MinAvailable时计算实际迁移卡数，否则计算整个PodGroup的卡数。\n- 迁移目标资源量，默认权重0.3：在工作负载影响接近时减少迁移的NPU/GPU数量。\n- 迁移Pod数，默认权重0.1：进一步减少驱逐与重建对象数量。\n\n每个维度都在当前一轮候选之间做 Min-Max 归一化，再乘以默认权重求和，总分越低，方案越优先。权重体现的是综合偏好，不是严格的逐级排序；分数也只用于同一规划轮次内的相对选择，不能跨集群或跨Run比较。\n\n例如，三个方案都能释放一个节点并迁移3张卡：方案 A 从同一工作负载迁移3个Pod，且迁移后仍满足MinAvailable；方案B从3个工作负载各迁移1个Pod；方案C只影响1个工作负载，但迁移后低于 MinAvailable。综合评分通常优先方案A；方案B的工作负载影响范围更大，方案C在低于MinAvailable的PodGroup数和受影响目标资源量两个维度上的成本更高。\n\nscope和maxPerRun是硬性限制，中断影响评分只用于在满足限制的候选方案中排序。评分倾向于减少受影响工作负载，并避免使 PodGroup低于MinAvailable，但不会将其作为禁止条件。不可中断的工作负载应通过scope.podGroups.exclude明确排除。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002666454524.png \"点击放大\")",
+          "content_hash": "955ca949f1a18f3c42cf947f16c406f084d5985e0fd6b880390f5d5be6fba9b5",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11252.html",
+          "title": "Volcano异构资源碎片整理",
+          "score": 26.14569
+        },
+        {
+          "id": "G34PQESIPJ5JEPPRSTOEXVOSW2",
+          "revision_id": "WXEGRDPNDJDMSJNUSSA25YQS5S",
+          "section": "步骤一：进行集群基本配置",
+          "start_line": 20,
+          "end_line": 41,
+          "content": "通过对集群进行基本配置，可以定义集群的核心架构和资源规则的底层设置，为集群运行提供框架性约束和资源分配依据。\n\n1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)。在页面左上角![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002316283617.png)处，选择集群部署区域，所选区域与资源部署区域的距离越近，网络时延越低，访问速度越快。\n\n   确认区域后，请单击“购买集群”。如果是首次使用CCE则需要创建委托，请根据页面提示进行处理。\n2. 对集群的基础信息进行配置，具体说明请参见[图2](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)和[表1](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)。\n\n   **图2** 购买集群（以Turbo为例）\n    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002316196701.png \"点击放大\")\n\n   **表1** 购买集群（Standard/Turbo皆适用）\n\n   | 参数 | 说明 | 集群创建后是否支持修改 |\n   | --- | --- | --- |\n   | 集群类型 | 根据需求选择“CCE Standard集群”或“CCE Turbo集群”。  - CCE Standard集群：标准版本集群，提供高可靠、安全的商业级容器集群服务。 - CCE Turbo集群：拥有更高性能的云原生网络，提供云原生混部调度能力，可实现更高的资源利用率和更广的全场景覆盖。 关于集群类型差异详情，请参见[集群类型对比](https://support.huaweicloud.com/usermanual-cce/cce_10_0342.html)。 | × |\n   | 计费模式 | 根据需求选择集群的计费模式。 - 包年/包月：预付费模式，按订单的购买周期计费，适用于可预估资源使用周期的场景，价格比按需计费模式更优惠。 选择该计费模式时，需要设置“购买时长”并选择是否自动续费（按月购买时自动续费周期为1个月，按年购买时自动续费周期则为1年）。 - 按需计费：后付费模式，按资源的实际使用时长计费，可以随时开通/删除资源。 | √ |\n   | 集群名称 | 请输入集群名称，同一账号下集群不可重名。  集群名称长度范围为4~128个字符，以小写字母开头，支持小写字母、数字和中划线(-)，不能以中划线(-)结尾。 | √ |\n   | 企业项目 | 该参数仅对开通企业项目的企业客户账号显示。  选择某个企业项目后，集群和集群安全组将会创建在该企业项目下。您可以通过企业项目管理集群及其他资源（节点、ELB、以及节点的安全组等）。了解更多企业项目相关信息，请查看[企业管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-em/zh-cn_topic_0123692049.html)。 | √ |\n   | 集群版本 | 选择集群使用的Kubernetes版本，建议选择最新的商用版本，可为您提供更多稳定可靠的新特性。 | √ |\n   | 控制节点架构 | 表示控制节点所采用的硬件平台类型，包括x86和鲲鹏。请根据业务场景进行选择。 - x86：高性能、通用性强，适用于复杂计算和高吞吐场景，如数据中心、云计算平台以及高性能计算等。 - 鲲鹏：低功耗、高能效，适用于边缘计算、物联网以及嵌入式系统等场景。 | × |\n   | 集群最大管理规模 | 集群支持管理的最大节点数量，请根据业务场景选择。  - 自动升配：开启后，当集群控制面负载过高或节点规模超出当前集群规格管理上限时，将自动提升集群最大管理规模，并联动调整集群管理费用。详情请参见[自动升配](https://support.huaweicloud.com/usermanual-cce/cce_10_0403.html)。 | √  详情请参见[变更集群规格](https://support.huaweicloud.com/usermanual-cce/cce_10_0403.html)。 |\n   | 集群master实例数 | 选择集群控制平面的节点（master实例）数量。控制平面节点由系统自动托管，会部署Kubernetes集群的管控面组件，如 kube-apiserver，kube-controller-manager，kube-scheduler等组件。  - 3实例（高可用）：创建3个控制平面节点，确保集群高可用。 - 单实例：您的集群只会创建一个控制平面节点。 说明：  在CCE集群的控制节点发生故障的数量超过一半情况下，集群将无法正常运行。 您还可以指定集群master实例分布策略，默认为自动分配。 - 自动分配：即随机分配，尽可能将控制节点随机分布在不同可用区以提高容灾能力 。若某可用区资源不足，将分配至资源充足的可用区，优先保障集群创建成功，可能无法保障可用区级容灾。 - 自定义分配：自定义选择每台控制节点的位置。 单实例场景下，您可以选择一个可用区进行部署；多实例场景下，您可以选择多种分配场景：   - 可用区：通过把控制节点创建在不同的可用区中实现容灾。   - 主机：通过把控制节点创建在相同可用区下的不同主机中实现容灾。   - 自定义：用户自行决定每台控制节点所在的位置。 | ×  创建完成后，集群master实例数以及实例所在的可用区皆不支持修改。 |",
+          "content_hash": "947e9f234c0f0c213eb4cb16955d690847c872e72bf509398bad7708397bfbca",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+          "title": "购买Standard/Turbo集群",
+          "score": 25.201046
+        }
+      ],
+      "result": {
+        "trace_id": "3ccb9502be58d5640c01eb90d49a5307"
+      },
+      "citation_integrity": false,
+      "latency_ms": 731.1192919878522
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-019",
+      "group": "cce_10_0702",
+      "category": "调度",
+      "question_type": "concept",
+      "question": "Volcano主要弥补Kubernetes在哪类计算场景的调度能力？",
+      "answerable": true,
+      "required_facts": [
+        "批处理平台",
+        "面向机器学习、深度学习、生物信息学/基因组学和大数据",
+        "提供高性能任务调度、异构芯片管理和任务运行管理"
+      ],
+      "reference_answer": "批处理平台；面向机器学习、深度学习、生物信息学/基因组学和大数据；提供高性能任务调度、异构芯片管理和任务运行管理",
+      "evidence": [
+        {
+          "document_id": "cce_10_0702",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0702.html",
+          "title": "调度概述",
+          "file": "documents/cce_10_0702.md",
+          "content_sha256": "03863a57247c52c23d144e29ec9e0ae8f0d899e9f34394734795baaeb067b19c",
+          "start_line": 44,
+          "end_line": 44,
+          "section": "Volcano调度",
+          "anchor": "Volcano是一个基于Kubernetes的批处理平台",
+          "quote": "Volcano是一个基于Kubernetes的批处理平台，提供了机器学习、深度学习、生物信息学、基因组学及其他大数据应用所需要而Kubernetes当前缺失的一系列特性，提供了高性能任务调度引擎、高性能异构芯片管理、高性能任务运行管理等通用计算能力。",
+          "quote_sha256": "a53e45f161e46d8400159e1a3adbdda5115ee942b758836d5e1da6ef99673564"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-019",
+      "question": "Volcano主要弥补Kubernetes在哪类计算场景的调度能力？",
+      "answerable": true,
+      "question_type": "concept",
+      "category": "调度",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "PUAZZIEXBGU7LCMHBUXF2B4RW5",
+          "revision_id": "G7RRVJ2FNYEUCBTALFLH2QTERN",
+          "section": "插件简介",
+          "start_line": 8,
+          "end_line": 24,
+          "content": "[Volcano](https://volcano.sh/)是一个基于Kubernetes的批处理平台，提供了机器学习、深度学习、生物信息学、基因组学及其他大数据应用所需要而Kubernetes当前缺失的一系列特性。\n\nVolcano提供了高性能任务调度引擎、高性能异构芯片管理、高性能任务运行管理等通用计算能力，通过接入AI、大数据、基因、渲染等诸多行业计算框架服务终端用户，最大支持1000Pod/s的调度并发数，轻松应对各种规模的工作负载，大大提高调度效率和资源利用率。\n\nVolcano针对计算型应用提供了作业调度、作业管理、队列管理等多项功能，主要特性包括：\n\n- 丰富的计算框架支持：通过CRD提供了批量计算任务的通用API，通过提供丰富的插件及作业生命周期高级管理，支持TensorFlow，MPI，Spark等计算框架容器化运行在Kubernetes上。\n- 高级调度：面向批量计算、高性能计算场景提供丰富的高级调度能力，包括成组调度，优先级抢占、装箱、资源预留、任务拓扑关系等。\n- 队列管理：支持分队列调度，提供队列优先级、多级队列等复杂任务调度能力。\n\n目前Volcano项目已经在Github开源，项目开源地址：<https://github.com/volcano-sh/volcano>\n\n本文介绍如何在CCE集群中安装及配置Volcano插件，具体使用方法请参见[Volcano调度](https://support.huaweicloud.com/usermanual-cce/cce_10_0423.html)。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n在使用Volcano作为调度器时，建议将集群中所有工作负载都使用Volcano进行调度，以避免多调度器同时工作导致的一些调度资源冲突问题。",
+          "content_hash": "06ac43085ef87014b0047f609c1d54ff7d50f1cb51a4510a9e45e29755633eb0",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0193.html",
+          "title": "Volcano调度器",
+          "score": 37.261925
+        },
+        {
+          "id": "22OFL2DSUTFHF4BR6EVSR4NCZM",
+          "revision_id": "QYONJANRADZRGXKGXQJZXRYJDH",
+          "section": "Volcano Job",
+          "start_line": 2,
+          "end_line": 13,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_1092.html\n目录：用户指南 > AI容器 > 训练任务 > Volcano Job\n更新时间：2026-09-20 GMT+08:00\n\n随着人工智能、大数据分析和高性能计算（HPC）等场景的快速发展，传统Kubernetes Job在复杂任务调度、资源保障、任务依赖等方面逐渐显现出局限性。为解决这些问题，CCE Standard/Turbo 集群基于**Volcano**提供了 **Volcano Job（简称 vcjob）** 功能。Volcano是一个面向批处理与高性能计算场景的Kubernetes原生调度系统，提供了比原生Job更强大的作业管理能力。\n\n通过 Volcano Job，用户可以：\n\n- 定义包含多个任务类型的复杂作业（如 MPI、Spark、TensorFlow 等）。\n- 设置最小成功 Pod 数（minAvailable），保障作业执行的可靠性。\n- 指定专用调度器（如 volcano）进行资源调度。\n- 支持任务间依赖关系、索引型任务（Indexed Job）等高级特性。",
+          "content_hash": "c62d8d79f4fa786557dfc02c8f1768fdb06f5ab0b2d34cc7fc3cb3fda0ba72b2",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1092.html",
+          "title": "Volcano Job",
+          "score": 34.29799
+        },
+        {
+          "id": "EYBISNQT4HL7VS4GF2P7WFHXET",
+          "revision_id": "G7RRVJ2FNYEUCBTALFLH2QTERN",
+          "section": "版本记录",
+          "start_line": 393,
+          "end_line": 441,
+          "content": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/notice_3.0-zh-cn.png)\n\n建议升级到跟集群配套的最新Volcano版本。\n\n**表9** Volcano调度器版本记录\n\n| 插件版本 | 支持的集群版本 | 更新特性 |\n| --- | --- | --- |\n| 1.22.40 | v1.30  v1.31  v1.32  v1.33  v1.34  v1.35  v1.36 | - 支持subgroup级亲和与反亲和调度能力 - 支持GPU/NPU节点级碎片整理能力 |\n| 1.22.28 | v1.29  v1.30  v1.31  v1.32  v1.33  v1.34  v1.35  v1.36 | 支持podgroup级反亲和调度 |\n| 1.22.11 | v1.29  v1.30  v1.31  v1.32  v1.33  v1.34  v1.35  v1.36 | 支持Kubernetes v1.36 |\n| 1.22.5 | v1.29  v1.30  v1.31  v1.32  v1.33  v1.34  v1.35 | - 多级网络拓扑亲和调度能力增强 - 多维Gang调度能力增强 - 在离线混部能力优化 |\n| 1.21.25 | v1.29  v1.30  v1.31  v1.32  v1.33  v1.34  v1.35 | 支持Kubernetes v1.35 |\n| 1.21.7 | v1.28  v1.29  v1.30  v1.31  v1.32  v1.33  v1.34 | 优化多级HyperNode装箱能力 |\n| 1.20.20 | v1.28  v1.29  v1.30  v1.31  v1.32  v1.33  v1.34 | 修复部分问题 |\n| 1.20.6 | v1.28  v1.29  v1.30  v1.31  v1.32  v1.33  v1.34 | - 支持训练任务多维并行与多级网络拓扑协同调度能力 - 支持队列间资源动态共享与回收 - 支持层级队列管理能力 |\n| 1.19.23 | v1.28  v1.29  v1.30  v1.31  v1.32  v1.33  v1.34 | 支持CCE v1.34集群 |\n| 1.19.13 | v1.28  v1.29  v1.30  v1.31  v1.32  v1.33 | - 支持昇腾NPU双DIE拓扑场景的紧凑型缩容能力 - 支持训练作业两级分组网络拓扑感知调度能力 |\n| 1.19.6 | v1.27  v1.28  v1.29  v1.30  v1.31  v1.32  v1.33 | - 支持NPU逻辑卡池弹性调度能力 - 支持训练作业两级分组网络拓扑感知调度能力 |\n| 1.18.15 | v1.27  v1.28  v1.29  v1.30  v1.31  v1.32  v1.33 | 支持CCE v1.33集群 |\n| 1.18.3 | v1.27  v1.28  v1.29  v1.30  v1.31  v1.32 | - 支持NPU资源紧凑型缩容能力 - 支持xGPU多卡抢占能力 |\n| 1.17.11 | v1.25  v1.27  v1.28  v1.29  v1.30  v1.31  v1.32 | 支持CCE v1.32集群 |\n| 1.16.17 | v1.25  v1.27  v1.28  v1.29  v1.30  v1.31 | 支持GPU虚拟化多卡均分调度 |\n| 1.16.8 | v1.25  v1.27  v1.28  v1.29  v1.30  v1.31 | - 支持CCE v1.31集群 - 优化超节点资源调度能力 |\n| 1.15.11 | v1.23  v1.25  v1.27  v1.28  v1.29  v1.30 | 修复部分问题 |\n| 1.15.10 | v1.23  v1.25  v1.27  v1.28  v1.29  v1.30 | - 支持Tor装箱调度能力 - 优化NPU双DIE拓扑调度能力 |\n| 1.15.8 | v1.23  v1.25  v1.27  v1.28  v1.29  v1.30 | 支持NPU双DIE亲和调度能力 |\n| 1.15.6 | v1.23  v1.25  v1.27  v1.28  v1.29  v1.30 | 新增基于应用资源画像的超卖能力 |\n| 1.14.11 | v1.23  v1.25  v1.27  v1.28  v1.29  v1.30 | - 新增支持超节点资源调度模型（HyperJob） - 支持超节点亲和调度 - 支持Kubernetes v1.30 |\n| 1.13.7 | v1.21  v1.23  v1.25  v1.27  v1.28  v1.29 | - 网卡资源调度支持前置预热 - 支持自定义资源超卖比例 |\n| 1.13.3 | v1.21  v1.23  v1.25  v1.27  v1.28  v1.29 | - 支持自定义资源按照节点优先级缩容 - 优化抢占与节点扩容联动能力 |\n| 1.13.1 | v1.21  v1.23  v1.25  v1.27  v1.28  v1.29 | 调度器内存使用优化 |\n| 1.12.18 | v1.21  v1.23  v1.25  v1.27  v1.28  v1.29 | - 适配CCE v1.29集群 - 默认开启抢占功能 |\n| 1.12.1 | v1.19.16  v1.21  v1.23  v1.25  v1.27  v1.28 | 应用弹性扩缩容性能优化 |\n| 1.11.21 | v1.19.16  v1.21  v1.23  v1.25  v1.27  v1.28 | - 支持Kubernetes v1.28 - 支持负载感知调度 - 镜像OS更新为Huawei Cloud EulerOS 2.0 - 优化CSI资源抢占能力 - 优化负载感知重调度能力 - 优化混部场景抢占能力 |\n| 1.11.6 | v1.19.16  v1.21  v1.23  v1.25  v1.27 | - 支持Kubernetes v1.27 - 支持重调度功能 - 支持节点池亲和调度能力 - 优化调度性能 |\n| 1.10.7 | v1.19.16  v1.21  v1.23  v1.25 | 修复本地持久卷插件未计算预绑定到节点的pod的问题 |\n| 1.10.5 | v1.19.16  v1.21  v1.23  v1.25 | - volcano agent支持资源超卖。 - 添加针对GPU资源字段的校验admission：nvidia.com/gpu应小于1或者为正整数，volcano.sh/gpu-core.percentage应小于100并为5的倍数。 - 修复存在PVC绑定失败的场景下，后续提交Pod调度慢的问题。 - 修复节点上存在长时间Teminating Pod场景下，新提交Pod无法运行的问题。 - 修复并发创建挂载PVC的Pod的场景下，volcano重启的问题。 |\n| 1.9.1 | v1.19.16  v1.21  v1.23  v1.25 | - 修复networkresource插件计数pipeline pod占用subeni问题 - 修复binpack插件对资源不足节点打分问题 - 修复对结束状态未知的Pod的资源的处理 - 优化事件输出 - 默认高可用部署 |\n| 1.7.2 | v1.19.16  v1.21  v1.23  v1.25 | - Volcano支持v1.25集群 - 提升Volcano调度性能 |\n| 1.7.1 | v1.19.16  v1.21  v1.23  v1.25 | Volcano支持v1.25集群 |\n| 1.4.7 | v1.15  v1.17  v1.19  v1.21 | 删除Pod状态Undetermined，以适配集群Autoscaler的弹性能力。 |\n| 1.4.5 | v1.17  v1.19  v1.21 | volcano-scheduler的部署方式由StatefulSet调整为Deployment，修复节点异常时Pod无法自动迁移的问题 |\n| 1.4.2 | v1.15  v1.17  v1.19  v1.21 | - 修复跨GPU分配失败问题 - 适配更新后的EAS API |\n| 1.3.7 | v1.15  v1.17  v1.19  v1.21 | - 支持在/离线作业混合部署及资源超卖功能 - 优化集群调度吞吐性能 - 修复特定场景下调度器panic的问题 - 修复CCE v1.15集群中volcano作业volumes.secret校验失败的问题 - 修复挂载volume，作业调度不成功的问题 |\n| 1.3.3 | v1.15  v1.17  v1.19  v1.21 | 修复GPU异常导致的调度器崩溃问题；修复特权Init容器准入失败问题 |\n| 1.3.1 | v1.15  v1.17  v1.19 | - 升级Volcano框架到最新版本 - 支持Kubernetes v1.19版本 - 添加numa-aware插件 - 修复多队列场景下Deployment扩缩容的问题 - 调整默认开启的算法插件 |\n| 1.2.5 | v1.15  v1.17  v1.19 | - 修复某些场景下OutOfcpu的问题 - 修复queue设置部分capability情况下Pod无法调度问题 - 支持volcano组件日志时间与系统时间保持一致 - 修复队列间多抢占问题 - 修复ioaware插件在某些极端场景下结果不符合预期的问题 - 支持混合集群 |\n| 1.2.3 | v1.15  v1.17  v1.19 | - 修复因为精度不够引发的训练任务OOM的问题 - 修复CCE v1.15以上版本GPU调度的问题，暂不支持任务分发时的CCE版本滚动升级 - 修复特定场景下队列状态不明的问题 - 修复特定场景下作业挂载PVC panic的问题 - 修复GPU作业无法配置小数的问题 - 添加ioaware插件 - 添加ring controller |",
+          "content_hash": "0ef09fc4acaa589bca102a8b9de714721c36a54fa0b9365c51a5bb655b6e5da7",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0193.html",
+          "title": "Volcano调度器",
+          "score": 29.034815
+        },
+        {
+          "id": "HD6WOYH6TI3HO7A23JKBTESNCX",
+          "revision_id": "3TLDULSIYBCVCMUT2PIXBLP47L",
+          "section": "Volcano自定义资源",
+          "start_line": 24,
+          "end_line": 27,
+          "content": "- Pod组（PodGroup）：Pod组是Volcano自定义资源类型，代表一组强关联Pod的集合，主要用于批处理工作负载场景，比如Tensorflow中的一组ps和worker。\n- 队列（Queue）：容纳一组PodGroup的队列，也是该组PodGroup获取集群资源的划分依据。\n- 作业（Volcano Job，简称vcjob）：Volcano自定义的Job资源类型。区别于Kubernetes Job，vcjob提供了更多高级功能，如可指定调度器、支持最小运行Pod数、 支持task、支持生命周期管理、支持指定队列、支持优先级调度等。Volcano Job更加适用于机器学习、大数据、科学计算等高性能计算场景。\n- 应用扩缩容优先级策略（Balancer与BalancerPolicyTemplate）：开启Volcano应用扩缩容优先级策略后，将会在集群中新增两类CRD资源，其中BalancerPolicyTemplate用来进行优先级策略定义，Balancer用来申明扩缩容优先级的作用范围。一个Balancer CR资源对应一个BalancerPolicyTemplate CR资源，两者结合共同申明哪些工作负载使用了哪些优先级策略。详情请参见[应用扩缩容优先级策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0746.html)。",
+          "content_hash": "061cf94226f32d80cc31a7b92f9b430acb1c3d99e534bfe3ca3b39f2eff050ad",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0721.html",
+          "title": "Volcano调度概述",
+          "score": 25.932823
+        },
+        {
+          "id": "UEKTQKOOA4Z4MF72XLGHRNXSK4",
+          "revision_id": "2BNGHPC6AZ275PFRBLCCFMDONK",
+          "section": "设置集群默认调度器",
+          "start_line": 10,
+          "end_line": 21,
+          "content": "**默认调度器 (default-scheduler)**\n\nKubernetes调度器可以发现集群中新创建且尚未被调度到节点上的Pod，并负责将未调度的Pod指派到一个合适的节点上运行。在同一个集群中可以使用多个不同的调度器，kube-scheduler调度器是Kubernetes社区提供的集群默认调度器，CCE同时还支持增强的Volcano调度器，提供了高性能任务调度引擎、高性能异构芯片管理、高性能任务运行管理等通用计算能力。\n\n您可以选择将kube-scheduler调度器和Volcano调度器配合使用，也可以单独使用kube-scheduler调度器或Volcano调度器。\n\n**表1** 集群默认调度器\n\n| 调度器名称 | 说明 | 调度器配置 |\n| --- | --- | --- |\n| kube-scheduler调度器 | 提供社区原生调度器标准调度能力。  设置kube-scheduler调度器为默认调度器时，如果集群中同时安装[Volcano调度器](https://support.huaweicloud.com/usermanual-cce/cce_10_0193.html)，将默认启用Volcano增强能力，为您提供资源利用率优化、AI任务性能增强、异构资源管理等高级调度能力，提升集群资源利用率，节约使用成本。此时，集群中的普通工作负载调度任务任由kube-scheduler调度器执行，仅部分指定的工作负载由Volcano调度器执行，详情请参见[使用Volcano调度工作负载](https://support.huaweicloud.com/usermanual-cce/cce_10_0722.html)。 | kube-scheduler调度器配置：   - [调度器性能配置](https://support.huaweicloud.com/usermanual-cce/cce_10_0785.html) - [业务优先级保障调度](https://support.huaweicloud.com/usermanual-cce/cce_10_0785.html)   安装Volcano调度器后的增强配置：   - [资源利用率优化调度（Volcano调度器支持）](https://support.huaweicloud.com/usermanual-cce/cce_10_0785.html) - [AI任务性能增强调度（Volcano调度器支持）](https://support.huaweicloud.com/usermanual-cce/cce_10_0785.html) - [异构资源调度（Volcano调度器支持）](https://support.huaweicloud.com/usermanual-cce/cce_10_0785.html) |\n| Volcano调度器（v1.27及以上集群版本支持） | 设置Volcano调度器为默认调度器后，Volcano调度器将替换kube-scheduler调度器，集群中的工作负载任务调度均由Volcano调度器执行。  Volcano兼容kube-scheduler调度能力，并提供增量调度能力。使用该调度器时，请先安装Volcano调度器插件，详情请参见[Volcano调度器](https://support.huaweicloud.com/usermanual-cce/cce_10_0193.html)。 | Volcano调度器增强配置：   - [业务优先级保障调度](https://support.huaweicloud.com/usermanual-cce/cce_10_0785.html) - [资源利用率优化调度（Volcano调度器支持）](https://support.huaweicloud.com/usermanual-cce/cce_10_0785.html) - [AI任务性能增强调度（Volcano调度器支持）](https://support.huaweicloud.com/usermanual-cce/cce_10_0785.html) - [异构资源调度（Volcano调度器支持）](https://support.huaweicloud.com/usermanual-cce/cce_10_0785.html) |",
+          "content_hash": "6cb5c307aab102989817d90bc3219c09667f07fc3be91f35e7c347c65393572a",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0785.html",
+          "title": "调度配置",
+          "score": 25.288593
+        }
+      ],
+      "result": {
+        "trace_id": "2120dca0a3f6459c2ec41269f132e796"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1224.2295420001028
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-033",
+      "group": "family:cce_10_0279",
+      "category": "弹性伸缩",
+      "question_type": "concept",
+      "question": "HPA怎样把监控到的负载变化转为副本数变化？",
+      "answerable": true,
+      "required_facts": [
+        "周期检查Pod度量数据",
+        "计算达到目标数值所需副本数",
+        "调整Deployment等目标资源的replicas字段"
+      ],
+      "reference_answer": "周期检查Pod度量数据；计算达到目标数值所需副本数；调整Deployment等目标资源的replicas字段",
+      "evidence": [
+        {
+          "document_id": "cce_10_0290",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "file": "documents/cce_10_0290.md",
+          "content_sha256": "13dd681a175e1ef00fd415a682dee09adaf26418aa3898ee97ec649d736cb338",
+          "start_line": 20,
+          "end_line": 20,
+          "section": "HPA工作原理",
+          "anchor": "HPA周期性检查Pod的度量数据",
+          "quote": "HPA（Horizontal Pod Autoscaler）是用来控制Pod水平伸缩的控制器，HPA周期性检查Pod的度量数据，计算满足HPA资源所配置的目标数值所需的副本数量，进而调整目标资源（如Deployment）的replicas字段。",
+          "quote_sha256": "2f161f6b129229a043aaeede8211fe32a4115a266881ae1b64c955dd2b057893"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-033",
+      "question": "HPA怎样把监控到的负载变化转为副本数变化？",
+      "answerable": true,
+      "question_type": "concept",
+      "category": "弹性伸缩",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "4EZSVFG6T3HRKEUKP3EMN2ZZOT",
+          "revision_id": "ASV2Q36FC2YU245SX72PZBCTFR",
+          "section": "添加事件类告警",
+          "start_line": 40,
+          "end_line": 61,
+          "content": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n- 基于事件触发的告警规则依赖安装云原生日志采集插件，详情请参见[云原生日志采集插件](https://support.huaweicloud.com/usermanual-cce/cce_10_0416.html)。\n- 部分指标模板依赖[CCE节点故障检测](https://support.huaweicloud.com/usermanual-cce/cce_10_0132.html)插件（NPD）进行上报，指标详情请参见[表1](https://support.huaweicloud.com/usermanual-cce/cce_10_0724.html)。如需要使用相关的告警规则，请确保节点故障检测插件（NPD）已安装且正常运行。\n\n1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群。\n2. 在左侧导航栏选择“告警中心”，切换至“告警规则 > 自定义告警规则”页签，单击“创建告警规则”。\n3. 设置告警规则，在创建告警规则面板填写配置。\n   - 规则类型：选择“事件告警”，设置基于事件触发的告警规则，常见事件来源为Kubernetes事件和云服务事件。\n   - 规则详情：\n\n     | 参数 | 说明 | 场景示例 |\n     | --- | --- | --- |\n     | 规则名称 | 自定义告警规则的名称 | ReplicaSet副本数变化 |\n     | 描述（可选） | 添加告警规则描述。 | ReplicaSet副本数在5分钟内变化次数超过3次 |\n     | 事件名称 | 输入事件的名称，该名称需要与实际产生的Kubernetes事件或云服务事件相匹配。具体事件名称可请参见[CCE事件列表](https://support.huaweicloud.com/usermanual-cce/cce_10_0902.html)。 | ScalingReplicaSet |\n     | 触发方式 | - 立即触发：只要事件出现即发生告警。 - 累计触发：在指定的监控周期内，累计次数满足数值要求，才会发生告警。 | 选择“累计触发”，并设置监控周期为“5分钟”，累计次数为“> 3”。 |\n     | 告警等级 | 根据重要性选择告警等级，分为“紧急”、“重要”、“次要”、“提示”四个等级。 | 次要 |\n     | 联系组 | 选择一个已有的联系组。您也可以单击“新建联系组”进行创建，配置参数详情请参见[绑定联系组](https://support.huaweicloud.com/usermanual-cce/cce_10_0724.html)。 | CCEGroup |\n\n     上述示例为ScalingReplicaSet事件设置一条名为“ReplicaSet副本数变化”的告警，告警等级为次要。当5分钟内累计次数超过3次时，CCEGroup内的所有告警联系人发送通知 （通知方式为短信或邮件）。\n4. 单击“确定”，然后可前往自定义告警规则列表中查看规则是否创建成功。",
+          "content_hash": "21f4c3fe5d3045fc0f0001039e286e5b0511e1ff797976d8609a4282332d88c0",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0835.html",
+          "title": "通过CCE配置自定义告警",
+          "score": 31.024942
+        },
+        {
+          "id": "QKDNX6HZFLO35SGMBFT2IAYHO2",
+          "revision_id": "L47ZATFWNANOYLZG52VPDPA34A",
+          "section": "模板检查",
+          "start_line": 91,
+          "end_line": 117,
+          "content": "**检查说明：**\n\n当前插件相关的Kubernetes资源与预期Helm模板内容存在不兼容差异，此类在插件升级后将无法保留的配置将触发模板检查异常。该异常通常源于您曾通过非插件配置的下发方式（例如直接后台使用kubectl）修改了资源配置。\n\n**检测范围：**\n\n- 支持检查类型：\n  - 插件运行中巡检\n  - 插件编辑/升级前检查\n- 支持集群范围：1.19及以上集群版本\n- 支持插件范围：\n  - NGINX Ingress控制器插件的cceaddon-nginx-ingress-controller Deployment与ConfigMap资源。\n  - CoreDNS插件的ConfigMap资源。\n\n**风险说明：**\n\n升级插件时，这些与模板不兼容的改动会被覆盖或丢失。\n\n在未察觉的情况下，可能导致业务配置被回滚、流量中断或副本数变化等问题。\n\n**解决方案：**\n\n1. 确认当前Kubernetes资源与预期模板资源的具体差异项。\n2. 修改Kubernetes资源，将不兼容项调整至与预期模板内容一致。\n3. 如果Kubernetes资源无法还原至预期状态，但可通过插件配置更新将差异内容重新下发时，则可选择忽略该异常并执行下发。\n\n   （例如：原NGINX Ingress控制器插件的工作负载副本数为4，而模板配置为2，此时可在插件配置中将副本数调整为4，并选择忽略异常后执行下发，使生成资源与实际期望保持一致。）",
+          "content_hash": "8a7243fea75d9ffd74c5256324a9a84f4e8d61f01c2b245a6d0688933335c386",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1031.html",
+          "title": "通用检查项",
+          "score": 26.321674
+        },
+        {
+          "id": "5GBU2RCHSYASPE5W2V4S4YBCPC",
+          "revision_id": "ULGB5VEWROGGJJZCM3RRESMTDU",
+          "section": "CronHPA工作原理",
+          "start_line": 65,
+          "end_line": 81,
+          "content": "CronHPA（Cron Horizontal Pod Autoscaler）是Kubernetes中的一种基于时间的自动扩展机制，用于在特定时间段内根据预设的规则自动调整Pod的数量。\n\n1. **用户定义CronHPA CRD**\n\n   用户通过Kubernetes YAML文件定义CronHPA资源，指定时间规则、最小/最大副本数等。\n2. **CronHPA Controller 监控**\n\n   CronHPA Controller会定期检查当前时间和定义的Cron表达式，判断是否需要执行扩缩容操作。\n3. **时间匹配**\n\n   当前时间与Cron表达式匹配时，CronHPA Controller会触发扩缩容操作。\n4. **调整副本数量**\n\n   CronHPA Controller通过Kubernetes API调用，调整ReplicaSet、Deployment或StatefulSet的副本数量。\n5. **Pod数量变化**\n\n   目标控制器（如Deployment）根据新的副本数量创建或删除Pod，以实现自动扩缩容。",
+          "content_hash": "5d8746b719bb8e27a7eead9d8f63f0e45f110c6b6bbd8145998afea66799e937",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "score": 25.929512
+        },
+        {
+          "id": "RW4YBVALWHBRPQKO3GZH5U3JFF",
+          "revision_id": "ULGB5VEWROGGJJZCM3RRESMTDU",
+          "section": "工作负载伸缩原理",
+          "start_line": 2,
+          "end_line": 15,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html\n目录：用户指南 > 弹性伸缩 > 工作负载弹性伸缩 > 工作负载伸缩原理\n更新时间：2026-09-20 GMT+08:00\n\nCCE支持多种工作负载伸缩方式，策略对比如下：\n\n**表1** 弹性伸缩策略对比\n\n| 伸缩策略 | HPA策略 | CronHPA策略 | CustomedHPA策略 | VPA策略 | AHPA策略 |\n| --- | --- | --- | --- | --- | --- |\n| 策略介绍 | Kubernetes中实现POD水平自动伸缩的功能，即[Horizontal Pod Autoscaling](https://kubernetes.io/zh-cn/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/)。 | 基于HPA策略的增强能力，主要面向应用资源使用率存在周期性变化的场景。 | CCE自研的弹性伸缩增强能力，可实现基于指标触发或定时触发弹性伸缩。 | Kubernetes中实现POD垂直自动伸缩的功能，即Vertical Pod Autoscaling。 | AHPA策略即Advanced Horizontal Pod Autoscaling，可以根据历史数据提前进行扩缩容动作。 |\n| 策略规则 | 基于**指标**（CPU利用率、内存利用率），对无状态工作负载的**副本数**进行弹性扩缩容。 | 基于**周期**（每天、每周、每月或每年的具体时间点），对无状态工作负载的**副本数**进行弹性扩缩容。 | 基于**指标**（CPU利用率、内存利用率）或**周期**（每天、每周、每月或每年的具体时间点），对无状态工作负载的**副本数**进行弹性扩缩容。 | 基于容器资源（CPU、内存）**历史使用情况**，对工作负载的**资源申请量**进行扩缩容。 | 基于容器资源（CPU、内存）**历史使用情况**进行预测，提前对工作负载**副本数**进行弹性扩缩容。 |\n| 主要功能 | 在Kubernetes社区HPA功能的基础上，增加了应用级别的冷却时间窗和扩缩容阈值等功能。 | CronHPA提供HPA对象的兼容能力，您可以同时使用CronHPA与HPA。   - CronHPA与HPA策略共同使用：CronHPA作用于HPA策略之上，用于定时调整HPA策略的实例数范围。 - CronHPA策略单独使用：CronHPA 直接定时调整工作负载的Pod实例数。 | **指标触发**   - 支持按照当前实例数的百分比进行扩缩容。 - 支持设置一次扩缩容的最小步长，可分步分级扩缩容。 - 支持按照实际指标值执行不同的扩缩容动作。   **周期触发**  支持选择天、周、月或年的具体时间点或周期作为触发时间 | 根据CPU、内存历史使用情况自动计算建议值，并调整Pod资源申请量。 | 根据业务历史指标，识别工作负载弹性周期并对未来波动进行预测，提前进行扩缩容动作，解决原生HPA的滞后问题。 |\n| 使用方式 | [创建HPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0208.html) | [创建CronHPA定时策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0415.html) | [创建CustomedHPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0292.html) | [创建VPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0921.html) | [创建AHPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0934.html) |",
+          "content_hash": "34c73f1b275b68853bc071093e12505dcd5e1ba3aff80ea56d4c223d3ba386c4",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "score": 25.757027
+        },
+        {
+          "id": "CBGRSYYCOMGFHCCB2Q4ACX5T7V",
+          "revision_id": "FZWWAD3TLI63FV2DCDTZ7LJP33",
+          "section": "功能介绍",
+          "start_line": 10,
+          "end_line": 20,
+          "content": "AHPA通过对工作负载的历史指标进行监控，以周为维度进行建模，因此对具有明显周期性的工作负载具有更佳效果。\n\nAHPA启动后拉取指定的工作负载过去一定时间的监控数据（至少一周，至多八周），利用统计学原理分析建模。随后每分钟一次，根据当前时间点的历史监控数据，结合未来一段时间窗口的历史数据，给出当前时间点工作负载的推荐副本数，提前准备Pod应对即将到来的业务量上涨，保障资源供给。\n\nAHPA可与HPA策略以及CronHPA策略共同使用，实现复杂场景下的工作负载伸缩。\n\nAHPA支持根据推荐结果调整HPA策略的最大和最小实例数，或者直接调整Deployment工作负载的副本数。\n\nAHPA调整HPA策略最大和最小实例数的逻辑与CronHPA相同，可参考[使用CronHPA调整HPA伸缩范围](https://support.huaweicloud.com/usermanual-cce/cce_10_0415.html)。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002088594353.png \"点击放大\")",
+          "content_hash": "270807c4b800fd90753a5fdba0b42dc10d364ac5f64b59d0166232534ffbab3e",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0934.html",
+          "title": "创建AHPA策略",
+          "score": 24.108618
+        }
+      ],
+      "result": {
+        "trace_id": "77a1a0ebde09a599ddd95ad7ca0d702a"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1169.4973749981727
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-049",
+      "group": "family:cce_10_11511",
+      "category": "AI容器",
+      "question_type": "version",
+      "question": "通过CCE推理负载部署LLM服务，对集群和Volcano插件最低版本有什么要求？",
+      "answerable": true,
+      "required_facts": [
+        "v1.29及以上CCE Standard或Turbo",
+        "Volcano 1.21.7及以上"
+      ],
+      "reference_answer": "v1.29及以上CCE Standard或Turbo；Volcano 1.21.7及以上",
+      "evidence": [
+        {
+          "document_id": "cce_10_11511",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11511.html",
+          "title": "部署推理负载",
+          "file": "documents/cce_10_11511.md",
+          "content_sha256": "07f34e8be41600f339b14fa7923ec3a80415226b1fee4f6cf0e95eee6594dabe",
+          "start_line": 15,
+          "end_line": 15,
+          "section": "前提条件",
+          "anchor": "已创建v1.29及以上版本",
+          "quote": "- 已创建v1.29及以上版本的CCE Standard或CCE Turbo集群。",
+          "quote_sha256": "9f862dbc001d2430b76c2b851b7f9d981abdc2547b2bb832fb9fa55ff4af2b22"
+        },
+        {
+          "document_id": "cce_10_11511",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11511.html",
+          "title": "部署推理负载",
+          "file": "documents/cce_10_11511.md",
+          "content_sha256": "07f34e8be41600f339b14fa7923ec3a80415226b1fee4f6cf0e95eee6594dabe",
+          "start_line": 16,
+          "end_line": 16,
+          "section": "前提条件",
+          "anchor": "已安装1.21.7及以上版本",
+          "quote": "- 已安装1.21.7及以上版本的Volcano插件。",
+          "quote_sha256": "c39bdcdc0a6de7a59a6f80e3c3bed8631fc255f785313573d54d3d759eb9b003"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-049",
+      "question": "通过CCE推理负载部署LLM服务，对集群和Volcano插件最低版本有什么要求？",
+      "answerable": true,
+      "question_type": "version",
+      "category": "AI容器",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "G5W44M7XIDG2F5FGE5AVT7NLNE",
+          "revision_id": "XCP3BLXKMLB2DHFDTLCH3N6Y72",
+          "section": "简介",
+          "start_line": 8,
+          "end_line": 8,
+          "content": "推理负载（Inference Workload / ServingGroup）适用于在CCE集群中部署大语言模型（LLM）推理服务。该能力基于Kthena ModelServing构建，通过vLLM推理引擎，支持单节点或多角色（Entry + Worker）分布式推理，结合Gang调度与拓扑感知策略，实现算力灵活配比与服务稳定调度。",
+          "content_hash": "3f98a487d4ddc7fc2bdc7a33a3d646a89670bd5c16e0319fe665840a4df7841c",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11511.html",
+          "title": "部署推理负载",
+          "score": 32.83095
+        },
+        {
+          "id": "NFLFFQO37IH4LA4WPD5D3NTBII",
+          "revision_id": "IBCIGDBF3KBS2QO73TQVOWMPYC",
+          "section": "能力概览",
+          "start_line": 26,
+          "end_line": 32,
+          "content": "AI容器提供以下核心能力：\n\n| 能力 | 说明 |\n| --- | --- |\n| [推理负载](https://support.huaweicloud.com/usermanual-cce/cce_10_11511.html) | 支持AI模型推理服务的部署与管理，包括推理框架、推理网关及PD分离等高级推理架构。 |\n| [训练任务](https://support.huaweicloud.com/usermanual-cce/cce_10_1152.html) | 基于Volcano管理AI训练作业，支持通过Volcano Job创建和管理分布式训练任务，通过Volcano队列实现多租户资源分配与优先级调度。 |\n| [AI应用模板](https://support.huaweicloud.com/usermanual-cce/cce_10_1154.html) | 提供开箱即用的场景化AI应用模板，一键部署推理应用，简化从模型到服务的全链路操作。 |",
+          "content_hash": "67957b98abcd7d5017ef63b02e9027d3b08e84466b90106701677c328ab25dc8",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_09731.html",
+          "title": "AI容器概述",
+          "score": 27.786507
+        },
+        {
+          "id": "IFIIUWTOTC7YBDBTEDY6YLJQOJ",
+          "revision_id": "GHMG5LXVODMXRYRCVFCFHPOAM2",
+          "section": "LeaderWorkerSet插件",
+          "start_line": 2,
+          "end_line": 22,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_1004.html\n目录：用户指南 > 插件 > 云原生AI插件 > LeaderWorkerSet插件\n更新时间：2026-09-20 GMT+08:00\n\n大规模语言模型（LLM）推理采用多节点、多GPU的分布式计算架构，通过Tensor Parallelism跨GPU切分模型参数，结合Pipeline Parallelism跨节点分配计算阶段，实现多设备协同推理。传统的Kubernetes的Deployment和StatefulSet可以用于部署LLM分布式推理，但存在一些局限性：\n\n- **Deployment：**用于部署无状态应用，虽然可以用于LLM推理，但难以管理Pod间的依赖关系和统一的生命周期。例如，滚动更新时可能导致部分 Pod 已经更新，而其他 Pod 尚未更新，从而影响推理服务的可用性。\n- **StatefulSet：**用于管理有状态应用，可以保证Pod的顺序部署和唯一身份。但是，StatefulSet的伸缩和更新操作相对复杂，难以实现LLM推理服务所需的快速弹性伸缩。此外，StatefulSet对Pod的删除和重建策略较为严格，可能影响服务的快速恢复。\n\n对此，CCE Standard/Turbo集群提供了LeaderWorkerSet插件，这是一种专为AI/ML推理设计的CRD资源，能够更有效地解决在LLM分布式推理场景中Deployment和StatefulSet的局限性。该插件具有以下优势：\n\n- **分布式推理优化**：支持Tensor Parallelism与Pipeline Parallelism并行策略，实现跨Pod的高效计算协同与零拷贝通信。\n- **组级别生命周期管理**：支持组级别的弹性伸缩、滚动升级和重启，提升服务高可用性。\n- **身份标识与智能路由**：每个LeaderWorkerSet（LWS）可被唯一标识，并支持基于KV Cache亲和性的智能路由。\n- **多租户资源隔离**：每个团队或用户可以拥有独立的推理实例（Serve实例），实现资源隔离和灵活的资源管理。\n\nLeaderWorkerSet插件适用于以下场景：\n\n- **LLM分布式推理服务：**适用于各种需要高性能、高吞吐量的大模型推理场景。例如，在线问答、文本生成、对话机器人、AI 辅助创作等。\n- **高性能多节点推理加速：**支持vLLM、SGLang等主流AI推理框架，能够充分利用多节点的计算资源，加速推理过程。尤其适用于对推理时延有较高要求的场景，例如实时推荐、智能搜索等。\n- **会话感知型推理服务优化**：对于需要保持会话状态的应用（例如聊天机器人、智能客服等），通过LeaderWorkerSet与AI Gateway联动，可以实现基于Session的精准路由，从而提高KV Cache命中率，减少重复计算，提升性能。",
+          "content_hash": "bf9a3155a4e8118f3f0e8537b84e9a6b7d6b1019431b3e95df728a9bc3f4bd2e",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1004.html",
+          "title": "LeaderWorkerSet插件",
+          "score": 27.157373
+        },
+        {
+          "id": "TLXXTU2ROIRVTVIUECYCGZSOP2",
+          "revision_id": "XER33ESGBAUDRVTGPUG66XPH33",
+          "section": "创建Kthena ModelServing示例",
+          "start_line": 183,
+          "end_line": 260,
+          "content": "在分布式推理负载中，存在Prefill与Decode两种角色。每个角色实例内的多个Pod存在频繁通信。为提升通信效率，应确保相同角色实例内的Pod部署在同一网络性能域内。Kthena提供的模型服务编排（ModelServing）支持定义推理负载在不同维度上的网络拓扑调度要求。系统会基于ModelServing自动创建并管理PodGroup，通过Volcano实现负载的多维多级网络拓扑亲和调度。\n\n创建ModelServing时，仅需在rolePolicy和groupPolicy中指定networkTopology约束即可。ModelServing控制器会根据rolePolicy和groupPolicy中定义的networkTopology自动创建并管理PodGroup的网络拓扑约束配置。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/caution_3.0-zh-cn.png)\n\nrolePolicy的HyperNode层级要求应不高于groupPolicy，否则会造成无法调度的情况。\n\n```\napiVersion: workload.serving.volcano.sh/v1alpha1\nkind: ModelServing\nmetadata:\n  name: sample\n  namespace: default\nspec:\n  schedulerName: volcano\n  replicas: 1\n  template:\n    restartGracePeriodSeconds: 60\n    networkTopology:\n      rolePolicy:\n        mode: hard              # 可选字段，配置Role网络拓扑约束模式\n        highestTierAllowed: 1   # 可选字段，表示Role内Pods最高允许部署到哪一层HyperNode\n      groupPolicy:\n        mode: hard              # 可选字段，配置ServingGroup网络拓扑约束模式\n        highestTierAllowed: 2   # 可选字段，表示ServingGroup内Pods最高允许部署到哪一层HyperNode\n    roles:\n      - name: prefill\n        replicas: 1\n        entryTemplate:\n          spec:\n            containers:\n              - name: leader\n                image: busybox\n                resources:\n                  limits:\n                    cpu: \"0.5\"\n                  requests:\n                    cpu: \"0.5\"\n        workerReplicas: 3\n        workerTemplate:\n          spec:\n            containers:\n              - name: worker\n                image: busybox\n                resources:\n                  limits:\n                    cpu: \"0.5\"\n                  requests:\n                    cpu: \"0.5\"\n      - name: decode\n        replicas: 1\n        entryTemplate:\n          spec:\n            containers:\n              - name: leader\n                image: busybox\n                resources:\n                  limits:\n                    cpu: \"0.5\"\n                  requests:\n                    cpu: \"0.5\"\n        workerReplicas: 3\n        workerTemplate:\n          spec:\n            containers:\n              - name: worker\n                image: busybox\n                resources:\n                  limits:\n                    cpu: \"0.5\"\n                  requests:\n                    cpu: \"0.5\"\n```\n\n上述示例中，推理负载由1个Prefill实例和1个Decode实例组成一个ServingGroup。每个实例包含4个Pod（1个entry Pod + 3个worker Pod）。调度时Prefill/Decode实例内的Pod只能调度到同一个1层HyperNode的节点上，整个ServingGroup实例内的Pods可以部署在同一个2层HyperNode下的节点上。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002563515641.png \"点击放大\")",
+          "content_hash": "fcd43ae1c5abec9eb75d1704cce1f90bf1cec47b1e2ddc1245e8a234a59b7273",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1128.html",
+          "title": "多维多级网络拓扑调度",
+          "score": 26.854038
+        },
+        {
+          "id": "A2TJTBKDHDWNRMQXM6YCF7QWAG",
+          "revision_id": "HHKXL7W4XI5Q7X2T7DTBVPGOV4",
+          "section": "创建Kthena ModelServing推理负载",
+          "start_line": 155,
+          "end_line": 254,
+          "content": "当分布式推理负载存在Prefill和Decode两种角色时，每个角色内可以有多个Pod。单个Prefill或Decode角色内的多个Pod需要默认满足Gang调度能力，即一个角色实例中的Pod要么全部被调度，要么一个都不调度。Prefill和Decode角色可以有多个实例，存在不同的组合方式。例如，在4P2D的场景下，只有满足最低2P1D数量要求时，才能为负载Pod分配资源。\n\nKthena提供的模型服务编排（ModelServing）已支持通过Volcano调度推理负载。在ModelServing中，可以直接定义推理负载在不同维度的Gang调度要求，并通过Volcano实现负载的多维度Gang调度。创建ModelServing时，只需指定gangPolicy和Role，ModelServing控制器将根据gangPolicy和Role定义自动创建并管理PodGroup的分组，示例如下。\n\n```\napiVersion: workload.serving.volcano.sh/v1alpha1\nkind: ModelServing\nmetadata:\n  name: sample\n  namespace: default\nspec:\n  schedulerName: volcano\n  replicas: 1\n  template:\n    restartGracePeriodSeconds: 60\n    gangPolicy:\n      minRoleReplicas:    # 可选，各Role最少Repilca数量的Gang调度条件\n        prefill: 2\n        decode: 2\n    roles:\n      - name: prefill\n        replicas: 4        # 必选，Role Replica数量\n        entryTemplate:\n          spec:\n            containers:\n              - name: leader\n                image: busybox\n                command: ['sh', '-c', 'echo \"Hello, Kubernetes!\" && sleep 3600']\n                resources:\n                  limits:\n                    cpu: \"0.5\"\n                  requests:\n                    cpu: \"0.5\"\n        workerReplicas: 1    # 可选，Role Prefill内Worker Pod数量\n        workerTemplate:\n          spec:\n            containers:\n              - name: worker\n                image: busybox\n                command: ['sh', '-c', 'echo \"Hello, Kubernetes!\" && sleep 3600']\n                resources:\n                  limits:\n                    cpu: \"0.5\"\n                  requests:\n                    cpu: \"0.5\"\n      - name: decode\n        replicas: 4\n        entryTemplate:\n          spec:\n            containers:\n              - name: leader\n                image: busybox\n                command: ['sh', '-c', 'echo \"Hello, Kubernetes!\" && sleep 3600']\n                resources:\n                  limits:\n                    cpu: \"0.5\"\n                  requests:\n                    cpu: \"0.5\"\n        workerReplicas: 1    # 可选，Role Replica内Worker Pod数量\n        workerTemplate:\n          spec:\n            containers:\n              - name: worker\n                image: busybox\n                command: ['sh', '-c', 'echo \"Hello, Kubernetes!\" && sleep 3600']\n                resources:\n                  limits:\n                    cpu: \"0.5\"\n                  requests:\n                    cpu: \"0.5\"\n```\n\n示例中组调度（Gang）需要满足是两个维度：\n\n- workerReplicas：每个Role Replica内最少Worker Pod数量。Role Replica内至少需要entryReplica (1) + workerReplicas个Pod可调度后该Role Replica可调度。\n- minRoleReplicas：各个Role最小的副本数量，示例中Prefill和Decode各自至少需要2个副本（2P2D）才能调度。\n\nModelServing工作负载的最少Pod数由最少Role replicas数量\\*Role Pod数量计算得到，您无需单独设置。\n\n在资源不足时可以看到Prefill和Decode Role各自启动了2个Replica，每个Replica内2个Pod。\n\n```\nNAME                   READY   STATUS    RESTARTS   AGE\nsample-0-decode-0-0    1/1     Running   0          8s\nsample-0-decode-0-1    1/1     Running   0          8s\nsample-0-decode-1-0    1/1     Running   0          8s\nsample-0-decode-1-1    1/1     Running   0          7s\nsample-0-decode-2-0    0/1     Pending   0          7s\nsample-0-decode-2-1    0/1     Pending   0          7s\nsample-0-decode-3-0    0/1     Pending   0          7s\nsample-0-decode-3-1    0/1     Pending   0          7s\nsample-0-prefill-0-0   1/1     Running   0          8s\nsample-0-prefill-0-1   1/1     Running   0          8s\nsample-0-prefill-1-0   1/1     Running   0          8s\nsample-0-prefill-1-1   1/1     Running   0          8s\nsample-0-prefill-2-0   0/1     Pending   0          8s\nsample-0-prefill-2-1   0/1     Pending   0          8s\nsample-0-prefill-3-0   0/1     Pending   0          8s\nsample-0-prefill-3-1   0/1     Pending   0          8s\n```",
+          "content_hash": "0f3b7ef1af4fd3c63a1982c72b0f4b85e816ccca276b3f47617e4113876bdf60",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1130.html",
+          "title": "多维组调度（Gang）",
+          "score": 25.987568
+        }
+      ],
+      "result": {
+        "trace_id": "c4a19510f4d78e68f4c4b665dc29253c"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1099.7580830007792
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-052",
+      "group": "cce_10_1154",
+      "category": "AI容器",
+      "question_type": "scope",
+      "question": "CCE AI应用预置模板能免去手写YAML吗，主要预置了哪些模型部署配置？",
+      "answerable": true,
+      "required_facts": [
+        "无需编写复杂Kubernetes YAML",
+        "预置模型运行参数、NPU资源需求及硬件适配",
+        "通过可视化界面选模板配置"
+      ],
+      "reference_answer": "无需编写复杂Kubernetes YAML；预置模型运行参数、NPU资源需求及硬件适配；通过可视化界面选模板配置",
+      "evidence": [
+        {
+          "document_id": "cce_10_1154",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1154.html",
+          "title": "部署AI应用模板",
+          "file": "documents/cce_10_1154.md",
+          "content_sha256": "7c2bb7ccd162930c4347c3a76072827d2f3ee6dd2220d43b8b41fc09de10f02a",
+          "start_line": 18,
+          "end_line": 18,
+          "section": "核心优势",
+          "anchor": "无需编写复杂的Kubernetes YAML文件",
+          "quote": "- 开箱即用：无需编写复杂的Kubernetes YAML文件，参数已针对昇腾（Ascend）底层硬件进行深度适配与优化。",
+          "quote_sha256": "94791f522eef38dc117a9bdd1a500aee4cc584830f976a052d7c174ddd58dd02"
+        },
+        {
+          "document_id": "cce_10_1154",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1154.html",
+          "title": "部署AI应用模板",
+          "file": "documents/cce_10_1154.md",
+          "content_sha256": "7c2bb7ccd162930c4347c3a76072827d2f3ee6dd2220d43b8b41fc09de10f02a",
+          "start_line": 13,
+          "end_line": 13,
+          "section": "简介",
+          "anchor": "涵盖运行参数、NPU资源需求及硬件适配",
+          "quote": "- 预置配置：底层已内置针对主流AI模型（如DeepSeek-R1）的预定义配置，涵盖运行参数、NPU资源需求及硬件适配。",
+          "quote_sha256": "c0f4000c56c21d6cac28f1a2e4b42b1d276e295f68cd39fd708c42290bce7ffb"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-052",
+      "question": "CCE AI应用预置模板能免去手写YAML吗，主要预置了哪些模型部署配置？",
+      "answerable": true,
+      "question_type": "scope",
+      "category": "AI容器",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "ENZH4AX6RD2YJT7KGFBTWW2ITW",
+          "revision_id": "EG7AREQ64OCVF2LWPDKU2OVE5G",
+          "section": "简介",
+          "start_line": 8,
+          "end_line": 13,
+          "content": "AI应用模板是基于华为云CCE（云容器引擎）“AI推理框架插件”打造的便捷化模型部署工具。\n\n传统的AI大模型部署往往涉及复杂的容器配置、硬件资源（GPU/NPU）调度、网络网关设置以及存储挂载等繁琐步骤。为了大幅降低大模型部署的门槛，现为您提供了一键式的推理预置模板：\n\n- 预置配置：底层已内置针对主流AI模型（如DeepSeek-R1）的预定义配置，涵盖运行参数、NPU资源需求及硬件适配。\n- 极简操作：只需通过可视化前端界面，选择模板并简单配置，即可快速将大模型转化为高可用、低延迟的API推理服务。",
+          "content_hash": "eed15a8c7b89c4af87a86718aea56979462e0cf4ad444a66e36c3d2043a125fe",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1154.html",
+          "title": "部署AI应用模板",
+          "score": 58.174576
+        },
+        {
+          "id": "J6WBXITOB7APTNOL6CYSLAMRNL",
+          "revision_id": "4EBWBOPLXAVYULNTJ57ROMZVIB",
+          "section": "模型模板",
+          "start_line": 52,
+          "end_line": 160,
+          "content": "AI推理框架插件已内置针对主流AI模型的预定义部署模板，用户无需手动编写复杂配置文件，可通过声明式API直接调用模板并快速部署模型。模板中已适配常见模型的参数、资源需求及硬件配置，能够有效降低部署的门槛。\n\n该插件已提供以下主流模型的预置模板，您可以参考[模型部署](https://support.huaweicloud.com/usermanual-cce/cce_10_0996.html)示例，部署并使用相关模型。\n\n**表3** 预置模板\n\n| 模型类型 | NPU资源类型 |\n| --- | --- |\n| DeepSeek-R1-Distill-Qwen-7B | huawei.com/ascend-1980 |\n| DeepSeek-R1-Distill-Llama-8B | huawei.com/ascend-1980 |\n| DeepSeek-R1-Distill-Qwen-14B | huawei.com/ascend-1980 |\n| DeepSeek-R1-Distill-Qwen-32B | huawei.com/ascend-1980 |\n| DeepSeek-R1-Distill-Llama-70B | huawei.com/ascend-1980 |\n| QwQ-32B | huawei.com/ascend-1980 |\n| Qwen2.5-Coder-32B-Instruct | huawei.com/ascend-1980 |\n| Qwen2.5-32B-Instruct | huawei.com/ascend-1980 |\n| Qwen2.5-72B-Instruct | huawei.com/ascend-1980 |\n\nAI推理框架插件内置模型的预置模板示例（AI推理框架插件已提供，用户无需操作）：\n\n```\napiVersion: leaderworkerset.x-k8s.io/v1\nkind: LeaderWorkerSet\nmetadata:\n  namespace: ${namespace}\n  name: ${name}\n  labels:\n    xds/version: ${helm_revision}\nspec:\n  replicas: ${replicas}\n  leaderWorkerTemplate:\n    leaderTemplate:\n      metadata:\n        labels:\n          xds/instanceType: head\n          xds/teGroupId: ${te_group_id}\n          xds/modelId: ${model_id}\n          xds/teGroupType: ${te_group_type}\n      spec:\n        containers:\n          - name: ascend-vllm-arm64\n            image: ${leader_image}\n            env:\n              - name: HF_HUB_OFFLINE\n                value: \"1\"\n              - name: INFER_MODE\n                value: DEFAULT\n              - name: USE_MASKFREE_ATTN\n                value: \"1\"\n              - name: MASKFREE_ATTN_THRESHOLD\n                value: \"16384\"\n            args:\n              [\n                \"--model\",\n                \"deepseek-ai/DeepSeek-R1-Distill-Qwen-7B\",\n                \"--max-num-seqs\",\n                \"256\",\n                \"--max-model-len\",\n                \"2048\",\n                \"--max-num-batched-tokens\",\n                \"4096\",\n                \"--block-size\",\n                \"128\",\n                \"--gpu-memory-utilization\",\n                \"0.9\",\n                \"--trust-remote-code\",\n                \"--served-model-name\",\n                \"${model_name}\"\n              ]\n            imagePullPolicy: IfNotPresent\n            resources:\n              limits:\n                cpu: \"8\"\n                memory: 72Gi\n                huawei.com/ascend-1980: \"1\"\n              requests:\n                cpu: \"1\"\n                memory: 64Gi\n                huawei.com/ascend-1980: \"1\"\n            ports:\n              - containerPort: 8000\n            volumeMounts:\n              - name: models\n                mountPath: /workspace/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B\n                subPath: ${model_path}\n                readOnly: true\n            readinessProbe:\n              initialDelaySeconds: 5\n              periodSeconds: 5\n              failureThreshold: 3\n              httpGet:\n                path: /health\n                port: 8000\n            livenessProbe:\n              initialDelaySeconds: 180\n              periodSeconds: 5\n              failureThreshold: 3\n              httpGet:\n                path: /health\n                port: 8000\n        volumes:\n          - name: models\n            persistentVolumeClaim:\n              claimName: ${pvc_name}\n    size: 1\n    workerTemplate:\n      spec:\n        containers: []\n```",
+          "content_hash": "4cc2549eb083c011ae2f9ff47b6e2979720dc73f5786398368d8bb6f0b3c265b",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0996.html",
+          "title": "AI推理框架插件",
+          "score": 52.05727
+        },
+        {
+          "id": "C7NC6JU4SCD7UOICEHQ25UVVQ4",
+          "revision_id": "IBCIGDBF3KBS2QO73TQVOWMPYC",
+          "section": "功能优势",
+          "start_line": 12,
+          "end_line": 22,
+          "content": "- **预置AI应用模板，部署更快捷**\n\n  预置开箱即用的场景化配置，简化复杂的参数调优过程，打通从模型部署到推理应用的全链路闭环，驱动AI应用敏捷构建。\n\n- **一体化底座，运维更省心**\n\n  统一接入和管理AI业务所需的复杂底层资源，包括GPU、NPU、RDMA（Remote Direct Memory Access）、高性能缓存、分布式存储等，并提供面向AI任务的监控视角和故障发现能力，大幅增强AI基础设施的运维能力。\n\n- **智能调度，成本更优**\n\n  针对AI计算类任务的特性，提供[组调度](https://support.huaweicloud.com/usermanual-cce/cce_10_0778.html)、[装箱调度](https://support.huaweicloud.com/usermanual-cce/cce_10_0773.html)、[拓扑感知调度](https://support.huaweicloud.com/usermanual-cce/cce_10_1125.html)、[GPU虚拟化调度](https://support.huaweicloud.com/usermanual-cce/cce_10_0643.html)、[NPU紧凑型缩容](https://support.huaweicloud.com/usermanual-cce/cce_10_1024.html)等调度策略，减少资源碎片，提升集群的资源利用率。",
+          "content_hash": "5906b90b37434acb41e5cb02abb868d74972aaca9eca465006a0db24f2b7e729",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_09731.html",
+          "title": "AI容器概述",
+          "score": 42.105038
+        },
+        {
+          "id": "33XFWT6LNNBZZUMC6JNP25OWTX",
+          "revision_id": "HQBCOFKKUMH4DJVDMAPNHDS6ZZ",
+          "section": "Helm",
+          "start_line": 12,
+          "end_line": 33,
+          "content": "[Helm](https://helm.sh/)是Kubernetes的包管理器，主要用来管理Charts。Helm Chart是用来封装Kubernetes原生应用程序的一系列YAML文件。可以在您部署应用的时候自定义应用程序的一些Metadata，以便于应用程序的分发。对于应用发布者而言，可以通过Helm打包应用、管理应用依赖关系、管理应用版本并发布应用到软件仓库。对于使用者而言，使用Helm后不用需要编写复杂的应用部署文件，可以以简单的方式在Kubernetes上查找、安装、升级、回滚、卸载应用程序。\n\nHelm和Kubernetes之间的关系可以如下类比：\n\n- Helm <–> Kubernetes\n- Apt <–> Ubuntu\n- Yum <–> CentOS\n- Pip <–> Python\n\nHelm的整体架构如下图：\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001325364477.png \"点击放大\")\n\nKubernetes的应用编排存在着一些问题，Helm可以用来解决这些问题，如下：\n\n- 管理、编辑与更新大量的Kubernetes配置文件。\n- 部署一个含有大量配置文件的复杂Kubernetes应用。\n- 分享和复用Kubernetes配置和应用。\n- 参数化配置模板支持多个环境。\n- 管理应用的发布：回滚、diff和查看发布历史。\n- 控制一个部署周期中的某一些环节。\n- 发布后的测试验证。",
+          "content_hash": "e1efe9052f5c4fc48b91abd30e6a24a3455fda49fe57011beca6d7abc7b1dcfd",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0191.html",
+          "title": "模板概述",
+          "score": 25.50397
+        },
+        {
+          "id": "NFLFFQO37IH4LA4WPD5D3NTBII",
+          "revision_id": "IBCIGDBF3KBS2QO73TQVOWMPYC",
+          "section": "能力概览",
+          "start_line": 26,
+          "end_line": 32,
+          "content": "AI容器提供以下核心能力：\n\n| 能力 | 说明 |\n| --- | --- |\n| [推理负载](https://support.huaweicloud.com/usermanual-cce/cce_10_11511.html) | 支持AI模型推理服务的部署与管理，包括推理框架、推理网关及PD分离等高级推理架构。 |\n| [训练任务](https://support.huaweicloud.com/usermanual-cce/cce_10_1152.html) | 基于Volcano管理AI训练作业，支持通过Volcano Job创建和管理分布式训练任务，通过Volcano队列实现多租户资源分配与优先级调度。 |\n| [AI应用模板](https://support.huaweicloud.com/usermanual-cce/cce_10_1154.html) | 提供开箱即用的场景化AI应用模板，一键部署推理应用，简化从模型到服务的全链路操作。 |",
+          "content_hash": "67957b98abcd7d5017ef63b02e9027d3b08e84466b90106701677c328ab25dc8",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_09731.html",
+          "title": "AI容器概述",
+          "score": 23.442757
+        }
+      ],
+      "result": {
+        "trace_id": "22348bbd9242bd9620a52de3ef898c53"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1108.238375003566
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-053",
+      "group": "cce_10_0278",
+      "category": "命名空间",
+      "question_type": "numeric",
+      "question": "CCE一个命名空间最多允许创建多少个Service？这里说的是Pod数吗？",
+      "answerable": true,
+      "required_facts": [
+        "Service不超过6000个",
+        "指Kubernetes service资源，不是Pod数"
+      ],
+      "reference_answer": "Service不超过6000个；指Kubernetes service资源，不是Pod数",
+      "evidence": [
+        {
+          "document_id": "cce_10_0278",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0278.html",
+          "title": "创建命名空间",
+          "file": "documents/cce_10_0278.md",
+          "content_sha256": "c98b38a7bbfcf448263896bcdb12dc42a27db90a83ee24753114370263e62284",
+          "start_line": 19,
+          "end_line": 19,
+          "section": "约束与限制",
+          "anchor": "每个命名空间下，创建的服务数量不能超过6000个",
+          "quote": "每个命名空间下，创建的服务数量不能超过6000个。此处的服务对应kubernetes的service资源，即工作负载所添加的服务。",
+          "quote_sha256": "887464e7080aa27e7586352daad1bd95cb33a15f95f85f2dd1e59c6cbb2ed61c"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-053",
+      "question": "CCE一个命名空间最多允许创建多少个Service？这里说的是Pod数吗？",
+      "answerable": true,
+      "question_type": "numeric",
+      "category": "命名空间",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "MIJQWUJSU46PMN5Z6S2LUGB2BN",
+          "revision_id": "5P5KKKJHQZD4K7OZGC7W72RLEH",
+          "section": "工作负载升级",
+          "start_line": 13,
+          "end_line": 165,
+          "content": "对于Deployment、StatefulSet和DaemonSet类型的工作负载，CCE支持两种升级策略，以满足不同业务场景下的发布需求：\n\n- RollingUpdate（默认）：表示滚动升级，即先启动新版本Pod并确认就绪后，再逐步终止旧版本Pod，从而保证服务持续可用。适用于需要零停机更新的场景。\n- Recreate：表示替换升级，即先完全终止所有旧版本Pod，再一次性创建新版本Pod，会导致服务短暂中断。适用于开发测试环境、后台批处理任务或能够容忍停机更新的无状态应用。\n\n您可以在创建工作负载时直接指定升级策略，具体步骤如下：\n\n- [控制台方式](https://support.huaweicloud.com/usermanual-cce/cce_10_0397.html)\n- [kubectl命令行方式](https://support.huaweicloud.com/usermanual-cce/cce_10_0397.html)\n\n1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群。\n2. 在左侧导航栏中选择“工作负载”，在右上角单击“创建工作负载”。\n3. 在“高级配置”的“升级策略”页签中，配置升级策略，具体参数说明请参见[图1](https://support.huaweicloud.com/usermanual-cce/cce_10_0397.html)和[表1](https://support.huaweicloud.com/usermanual-cce/cce_10_0397.html)。滚动升级与替换升级公共参数含义一致。\n\n   **图1** 工作负载升级策略\n    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002351051709.png \"点击放大\")\n\n   **表1** 工作负载升级策略\n\n   | 参数 | 说明 | 限制 |\n   | --- | --- | --- |\n   | 最大无效实例数（maxUnavailable） | 表示在滚动更新过程中，允许处于不可用状态的最大实例数量或比例，即实际运行Pod数可低于期望副本数的最大允许范围，默认为25%。实际升级过程中，比例会换算为绝对数，并**向下取整**。  例如spec.replicas为2，默认状态下最多有2\\*0.25=0个（向下取整）Pod失效，即实际运行Pod数不可低于期望副本数，系统中最少有2个Pod处于运行状态。换言之，在升级过程中，一直会有2个Pod处于运行状态，每次新建一个Pod，等这个Pod创建成功后再删掉一个旧Pod，直至Pod全部为新Pod。 | 仅Deployment、DaemonSet支持配置 |\n   | 最大浪涌（maxSurge） | 表示在滚动更新过程中，允许超出期望副本数的最大实例数或比例，即决定可以同时创建多少个新Pod替换旧Pod，默认值为25%。实际升级过程中，比例会换算为绝对数，并**向上取整**。  例如spec.replicas为2，默认状态下最多同时创建2\\*0.25=1个（向上取整）Pod，即系统中最多同时存在3个Pod。 | 仅Deployment、DaemonSet支持配置 |\n   | 实例可用最短时间（minReadySeconds） | 表示新创建的Pod在进入可用状态前，需持续保持就绪状态的最小时长。  该参数相当于引入了一个“稳定观察期”，可防止短暂就绪但不稳定的Pod过早参与服务，从而提升应用部署过程的稳定性和可靠性。 | - |\n   | 最大保留版本数（revisionHistoryLimit） | 表示在执行回退操作时，系统最多保留多少个旧版本的 ReplicaSet。这些旧ReplicaSet会占用etcd中的资源，并在执行kubectl get rs时显示在输出结果中。  每个Deployment的历史配置都会保存在对应的ReplicaSet中。因此，如果旧的ReplicaSet被删除，将无法回退至对应版本。系统默认保留最近的10个旧ReplicaSet， | - |\n   | 升级最大时长（progressDeadlineSeconds） | 表示Deployment更新失败之前，允许的最长无进展时间，以秒为单位。如果指定，则此字段值需要大于minReadySeconds取值。  当Deployment在滚动更新过程中超过progressDeadlineSeconds且无进展时，其资源状态将反应为Type=Progressing、Status=False、Reason=ProgressDeadlineExceeded。这表示Deployment的更新被判定为失败，系统会记录相关事件，但不会自动回滚，需由用户手动干预或通过外部机制触发回退操作。 | 仅Deployment支持配置 |\n   | 缩容时间窗（terminationGracePeriodSeconds） | 表示Pod在被删除时，Kubelet给容器预留的最大终止等待时间，默认为30秒。容器应在这段时间内优雅退出，否则系统将会发送SIGKILL的系统信号强制终止。 | - |\n4. 填写其他参数后，单击“创建工作负载”。等待一段时间后，工作负载状态将变为“运行中”。\n\n以Deployment类型工作负载为例，展示如何配置工作负载升级策略。\n\n1. 请参见[通过kubectl连接集群](https://support.huaweicloud.com/usermanual-cce/cce_10_0107.html)，使用kubectl连接集群。\n2. 创建一个名为nginx-deployment.yaml的文件。其中，nginx-deployment.yaml为自定义名称，您可以随意命名。\n\n   ```\n   vi nginx-deployment.yaml\n   ```\n\n   文件示例如下，关于Deployment配置的详细说明请参见[Kubernetes官方文档](https://kubernetes.io/zh-cn/docs/reference/kubernetes-api/workload-resources/deployment-v1/)。\n\n   ```\n   apiVersion: apps/v1\n   kind: Deployment\n   metadata:\n     name: nginx\n     namespace: default\n   spec:\n     replicas: 2\n     selector:\n       matchLabels:\n         app: nginx\n     template:\n       metadata:\n         labels:\n           app: nginx\n       spec:\n         containers:\n         - image: nginx:latest\n           imagePullPolicy: Always\n           name: nginx\n           resources:\n             requests:\n               cpu: 250m\n               memory: 512Mi\n             limits:\n               cpu: 250m\n               memory: 512Mi\n         imagePullSecrets:\n         - name: default-secret\n         terminationGracePeriodSeconds: 30\n     strategy:\n       type: RollingUpdate # 表示滚动升级，Recreate表示替换升级\n       rollingUpdate: # 用于配置滚动升级参数\n         maxUnavailable: 25%\n         maxSurge: 25%\n     minReadySeconds: 0\n     revisionHistoryLimit: 10\n     progressDeadlineSeconds: 600\n   ```\n\n   **表2** 工作负载升级策略\n\n   | 参数 | 说明 | 限制 |\n   | --- | --- | --- |\n   | maxUnavailable | 表示在滚动更新过程中，允许处于不可用状态的最大实例数量或比例，即实际运行Pod数可低于期望副本数的最大允许范围，默认为25%。实际升级过程中，比例会换算为绝对数，并**向下取整**。  例如spec.replicas为2，默认状态下最多有2\\*0.25=0个（向下取整）Pod失效，即实际运行Pod数不可低于期望副本数，系统中最少有2个Pod处于运行状态。换言之，在升级过程中，一直会有2个Pod处于运行状态，每次新建一个Pod，等这个Pod创建成功后再删掉一个旧Pod，直至Pod全部为新Pod。 | 仅滚动升级支持配置 |\n   | maxSurge | 表示在滚动更新过程中，允许超出期望副本数的最大实例数或比例，即决定可以同时创建多少个新Pod替换旧Pod，默认值为25%。实际升级过程中，比例会换算为绝对数，并**向上取整**。  例如spec.replicas为2，默认状态下最多同时创建2\\*0.25=1个（向上取整）Pod，即系统中最多同时存在3个Pod。 | 仅滚动升级支持配置 |\n   | minReadySeconds | 表示新创建的Pod在进入可用状态前，需持续保持就绪状态的最小时长。  该参数相当于引入了一个“稳定观察期”，可防止短暂就绪但不稳定的Pod过早参与服务，从而提升应用部署过程的稳定性和可靠性。 | - |\n   | revisionHistoryLimit | 表示在执行回退操作时，系统最多保留多少个旧版本的 ReplicaSet。这些旧ReplicaSet会占用etcd中的资源，并在执行kubectl get rs时显示在输出结果中。  每个Deployment的历史配置都会保存在对应的ReplicaSet中。因此，如果旧的ReplicaSet被删除，将无法回退至对应版本。系统默认保留最近的10个旧ReplicaSet， | - |\n   | progressDeadlineSeconds | 表示Deployment更新失败之前，允许的最长无进展时间，以秒为单位。如果指定，则此字段值需要大于minReadySeconds取值。  当Deployment在滚动更新过程中超过progressDeadlineSeconds且无进展时，其资源状态将反应为Type=Progressing、Status=False、Reason=ProgressDeadlineExceeded。这表示Deployment的更新被判定为失败，系统会记录相关事件，但不会自动回滚，需由用户手动干预或通过外部机制触发回退操作。 | - |\n   | terminationGracePeriodSeconds | 表示Pod在被删除时，Kubelet给容器预留的最大终止等待时间，默认为30秒。容器应在这段时间内优雅退出，否则系统将会发送SIGKILL的系统信号强制终止。 | - |\n3. 执行以下命令，创建Deployment。\n\n   ```\n   kubectl create -f nginx-deployment.yaml\n   ```\n\n   回显如下表示已开始创建Deployment。\n\n   ```\n   deployment.apps/nginx created\n   ```\n4. 执行以下命令，查看Deployment状态。\n\n   ```\n   kubectl get deployment\n   ```\n\n   回显结果如下，则表示Deployment已创建成功。\n\n   ```\n   NAME           READY     UP-TO-DATE   AVAILABLE   AGE\n   nginx          2/2       2            2           4m5s\n   ```\n5. 执行以下命令，将上述工作负载的镜像改为nginx:alpine。\n\n   ```\n   kubectl edit deploy nginx\n   ```\n\n   请在spec.containers.image字段中修改镜像，修改完成后，保存并退出。\n6. 执行以下命令，查看上述工作负载的副本情况。\n\n   ```\n   kubectl get rs\n   ```\n\n   回显结果如下：\n\n   ```\n   NAME               DESIRED   CURRENT   READY     AGE\n   nginx-6f9f58dffd   2         2         2         1m    # 新版本 ReplicaSet（活跃）\n   nginx-7f98958cdf   0         0         0         48m   # 旧版本 ReplicaSet（已停用）\n   ```\n\n   由于spec.replicas设置为2，且maxSurge和maxUnavailable均设置为25%，在实际升级过程中：\n\n   - maxSurge = 1（2 × 25% = 0.5，向上取整为1）→ 最多允许新增1个额外Pod；\n   - maxUnavailable = 0（2 × 25% = 0.5，向下取整为0）→ 不允许有不可用的Pod。\n\n   因此，升级期间总Pod数最多为3个，且始终有2个可用Pod对外服务。CCE会采用“先创建新Pod、验证就绪后再删除旧Pod”的方式，逐个替换，直到全部升级完成。\n7. 待升级完成后，执行以下命令，查看Pod状态。\n\n   ```\n   kubectl get pods\n   ```\n\n   回显结果如下，Pod的状态皆为Running，则说明升级成功。\n\n   ```\n   NAME                     READY     STATUS    RESTARTS   AGE\n   nginx-6f9f58dffd-tdmqk   1/1       Running   0          1m\n   nginx-6f9f58dffd-tesqr   1/1       Running   0          1m\n   ```",
+          "content_hash": "2e6054d930844fb2757360761b9e00b26c44b3c075136b95a6c1b5b582684a8f",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0397.html",
+          "title": "工作负载升级与回退",
+          "score": 28.776
+        },
+        {
+          "id": "P2K5CRSLQC3ZNN7HOPSWWMRRSL",
+          "revision_id": "K6CHYTM52SGROSTAVBV3TUD7RL",
+          "section": "操作场景",
+          "start_line": 8,
+          "end_line": 31,
+          "content": "CCE Turbo集群支持以命名空间或工作负载粒度设置容器所在的容器子网及安全组，该功能通过名为NetworkAttachmentDefinition的[CRD](https://kubernetes.io/zh/docs/concepts/extend-kubernetes/api-extension/custom-resources/)资源实现。如您想为指定的命名空间或工作负载配置指定的容器子网和安全组，可创建自定义容器网络配置（NetworkAttachmentDefinition），并将该容器网络配置与相应的命名空间或工作负载关联，进而实现业务的子网划分或业务安全隔离的诉求。\n\n**图1** 自定义容器网络配置示意图\n ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002003770097.png \"点击放大\")\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/caution_3.0-zh-cn.png)\n\n为工作负载绑定安全组存在多种配置方式（如注解、安全组策略、节点池配置、容器网络配置），当您同时使用多种配置方式时，只生效优先级最高的配置方式，优先级详情请参见[不同方法配置工作负载安全组的对比](https://support.huaweicloud.com/usermanual-cce/cce_10_1078.html)。\n\n目前容器网络配置（NetworkAttachmentDefinition）支持关联的资源类型对比如下：\n\n**表1** 关联资源类型对比\n\n| 维度 | 容器网络配置（NetworkAttachmentDefinition）关联的资源类型 | |\n| --- | --- | --- |\n| 命名空间 | 工作负载 |\n| 容器网络划分维度说明 | 为命名空间关联容器网络配置，该命名空间下创建的所有工作负载使用相同的子网配置和安全组配置 | 为工作负载关联容器网络配置，指定了相同容器网络配置的工作负载使用相同的子网配置和安全组配置 |\n| 支持的集群版本 | 仅在CCE Turbo集群中可用，且集群为1.23.8-r0、1.25.3-r0及以上版本 | 仅在CCE Turbo集群中可用，且集群为v1.23.16-r0、v1.25.11-r0、v1.27.8-r0、v1.28.6-r0、v1.29.2-r0及以上版本 |\n| 约束限制 | 同一个命名空间最多只能被关联到一个容器网络配置 | 只能指定未关联命名空间的自定义容器网络配置 |\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n- 集群中存在默认容器网络配置default-network，对所有未配置自定义容器网络配置的Pod生效，“概览”页面的网络信息中的“默认容器子网”即为default-network中的容器子网。**default-network不支持删除****，并且如果通过kubectl修改该配置，不支持修改其中关联安全组securityGroups以外的字段，否则存在配置丢失覆盖风险。**\n- 当集群中只有一个容器网络配置，该容器网络配置即为默认容器网络配置；当集群中有多个容器网络配置时，带有名为“yangtse.io/default-network: true”annotation的容器网络配置即为默认容器网络配置。当集群中不存在默认容器网络配置时，未关联任何容器网络配置的Pod创建后由于无法分配到网卡而启动失败。",
+          "content_hash": "b5ea7e29d06fd1aeda52a0f0a5c501568677bdbc917a3cfcc214b142e6fdd529",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0196.html",
+          "title": "使用容器网络配置为命名空间/工作负载绑定子网及安全组",
+          "score": 27.010262
+        },
+        {
+          "id": "ELSZKKCANYOHAVCC46QSAR7FRB",
+          "revision_id": "7AKXW6XJLDLLFEPCU3YLHLNE44",
+          "section": "CoreDNS介绍",
+          "start_line": 8,
+          "end_line": 46,
+          "content": "创建集群时会安装[CoreDNS插件](https://support.huaweicloud.com/usermanual-cce/cce_10_0129.html)，CoreDNS是用来做集群内部域名解析。\n\n在kube-system命名空间下可以查看到CoreDNS的Pod。\n\n```\n$ kubectl get po --namespace=kube-system\nNAME                                      READY   STATUS    RESTARTS   AGE\ncoredns-7689f8bdf-295rk                   1/1     Running   0          9m11s\ncoredns-7689f8bdf-h7n68                   1/1     Running   0          11m\n```\n\nCoreDNS安装成功后会成为DNS服务器，当创建Service后，CoreDNS会将Service的名称与IP记录起来，这样Pod就可以通过向CoreDNS查询Service的名称获得Service的IP地址。\n\n访问时通过nginx.<namespace>.svc.cluster.local访问，其中nginx为Service的名称，<namespace>为命名空间名称，svc.cluster.local为域名后缀，在实际使用中，在同一个命名空间下可以省略<namespace>.svc.cluster.local，直接使用ServiceName即可。\n\n使用ServiceName的方式有个主要的优点就是可以在开发应用程序时可以将ServiceName写在程序中，这样无需感知具体Service的IP地址。\n\nCoreDNS插件安装后也有一个Service，在kube-system命名空间下，如下所示。\n\n```\n$ kubectl get svc -n kube-system\nNAME               TYPE           CLUSTER-IP      EXTERNAL-IP                    PORT(S)                      AGE\ncoredns            ClusterIP      10.247.3.10     <none>                         53/UDP,53/TCP,8080/TCP       13d\n```\n\n默认情况下，其他Pod创建后，会将coredns Service的地址作为域名解析服务器的地址写在Pod的 /etc/resolv.conf 文件中，创建一个Pod，查看/etc/resolv.conf文件，如下所示。\n\n```\n$ kubectl exec test01-6cbbf97b78-krj6h -it -- /bin/sh\n/ # cat /etc/resolv.conf\nnameserver 10.247.3.10\nsearch default.svc.cluster.local svc.cluster.local cluster.local\noptions ndots:5 timeout single-request-reopen\n```\n\n在Pod中访问nginx Pod的ServiceName:Port，会先从CoreDNS中解析出nginx Service的IP地址，然后再访问nginx Service的IP地址，从而访问到nginx Pod。\n\n**图1** 集群内域名解析示例图\n ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001244261167.png \"点击放大\")",
+          "content_hash": "c736037d5318da8279b9716ee306395cab640b729f706a798893ced827f3731f",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0360.html",
+          "title": "DNS概述",
+          "score": 26.42144
+        },
+        {
+          "id": "64IJCLVT52MSZCWPIT5MLZR4LK",
+          "revision_id": "PSKH5QMFJKER6MFBAVYW4XWNSS",
+          "section": "自定义命名空间权限（kubectl）",
+          "start_line": 87,
+          "end_line": 197,
+          "content": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\nkubectl访问CCE集群时，通过集群上生成的配置文件（kubeconfig）进行认证，kubeconfig文件内包含用户信息，CCE根据用户信息的权限判断kubectl有权限访问哪些Kubernetes资源。即用户所获取的kubeconfig文件中包含该用户的身份信息，因此在使用kubectl进行访问时，将继承该用户的权限。用户拥有的权限请参见[IAM角色/策略权限与命名空间权限的关系](https://support.huaweicloud.com/usermanual-cce/cce_10_0187.html)。\n\n除了使用cluster-admin、admin、edit、view这4个最常用的clusterrole外，您还可以通过定义Role和RoleBinding来进一步对命名空间中不同类别资源（如Pod、Deployment、Service等）的增删改查权限进行配置，从而做到更加精细化的权限控制。\n\n创建用户，样例：user-example。\n\nRole的定义非常简单，指定namespace，然后就是rules规则。如下面示例中的规则就是允许对default命名空间下的Pod进行GET、LIST操作。\n\n```\nkind: Role\napiVersion: rbac.authorization.k8s.io/v1\nmetadata:\n  namespace: default                          # 命名空间\n  name: role-example\nrules:\n- apiGroups: [\"\"]\n  resources: [\"pods\"]                         # 可以访问pod\n  verbs: [\"get\", \"list\"]                      # 可以执行GET、LIST操作\n```\n\n- apiGroups表示资源所在的API分组。\n- resources表示可以操作哪些资源：pods表示可以操作Pod，其他Kubernetes的资源如deployments、configmaps等都可以操作\n- verbs表示可以执行的操作：get表示查询一个Pod，list表示查询所有Pod。您还可以使用create（创建）, update（更新）, delete（删除）等操作词。\n\n创建一个名为role-test.yaml的文件，输入上述样例，执行kubectl create -f role-test.yaml创建role。\n\n详细的类型和操作请参见[使用 RBAC 鉴权](https://kubernetes.io/zh/docs/reference/access-authn-authz/rbac/)。\n\n有了Role之后，就可以将Role与具体的用户绑定起来，实现这个的就是RoleBinding了。如下所示。\n\n```\nkind: RoleBinding\napiVersion: rbac.authorization.k8s.io/v1\nmetadata:\n  name: RoleBinding-example\n  namespace: default\n  annotations:\n    CCE.com/IAM: 'true'\nroleRef:\n  kind: Role\n  name: role-example\n  apiGroup: rbac.authorization.k8s.io\nsubjects:\n- kind: User\n  name: 0c97ac3cb280f4d91fa7c0096739e1f8    # user-example的用户ID，请根据实际替换\n  apiGroup: rbac.authorization.k8s.io\n```\n\n这里的subjects就是将Role与IAM用户绑定起来，从而使得IAM用户获取role-example这个Role里面定义的权限，如下图所示。\n\n**图4** RoleBinding绑定Role和用户\n ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0262051194.png \"点击放大\")\n\nsubjects下用户的类型还可以是用户组，这样配置可以对用户组下所有用户生效。\n\n```\n...\nsubjects:\n- kind: Group\n  name: 0c96fad22880f32a3f84c009862af6f7    # 用户组ID\n  apiGroup: rbac.authorization.k8s.io\n```\n\n创建一个名为myrolebinding.yaml的文件，输入上述样例，执行kubectl create -f myrolebinding.yaml创建RoleBinding。\n\n您可以通过以下步骤验证命名空间权限是否生效。\n\n1. 使用IAM用户user-example登录CCE控制台，获取kubeconfig文件，并使用kubectl连接集群，详情请参见[通过kubectl连接集群](https://support.huaweicloud.com/usermanual-cce/cce_10_0107.html)。\n2. 获取Pod信息。\n\n   ```\n   kubectl get pod\n   ```\n\n   回显如下，可获取到Pod的信息。\n\n   ```\n   NAME                                   READY   STATUS    RESTARTS   AGE\n   deployment-389584-2-6f6bd4c574-2n9rk   1/1     Running   0          4d7h\n   deployment-389584-2-6f6bd4c574-7s5qw   1/1     Running   0          4d7h\n   deployment-3895841-746b97b455-86g77    1/1     Running   0          4d7h\n   deployment-3895841-746b97b455-twvpn    1/1     Running   0          4d7h\n   nginx-658dff48ff-7rkph                 1/1     Running   0          4d9h\n   nginx-658dff48ff-njdhj                 1/1     Running   0          4d9h\n   ```\n3. 然后查看其他类型的资源，例如Deployment：\n\n   ```\n   kubectl get deploy\n   ```\n\n   回显如下，表示无权限查看Deployment。\n\n   ```\n   Error from server (Forbidden): deployments.apps is forbidden: User \"0c97ac3cb280f4d91fa7c0096739e1f8\" cannot list resource \"deployments\" in API group \"apps\" in the namespace \"default\"\n   ```\n4. 再次查询kube-system命名空间下的Pod信息：\n\n   ```\n   kubectl get pod --namespace=kube-system\n   ```\n\n   回显如下，表示无权限查看kube-system命名空间下的Pod信息。\n\n   ```\n   Error from server (Forbidden): pods is forbidden: User \"0c97ac3cb280f4d91fa7c0096739e1f8\" cannot list resource \"pods\" in API group \"\" in the namespace \"kube-system\"\n   ```\n\n这就说明IAM用户user-example仅拥有default这个命名空间下GET和LIST Pod的权限，与前面定义的没有偏差。",
+          "content_hash": "724f6c40f8f3c684ffbc40eb794a83e71bfac79ccb0bbdbe181a4b514ba756f0",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0189.html",
+          "title": "配置命名空间权限（Kubernetes RBAC授权）",
+          "score": 26.268923
+        },
+        {
+          "id": "JZR2RW2JNRNIASVIYWXHML65HZ",
+          "revision_id": "SRFDGMCSLDQ3QUH5JHJE4OPO4P",
+          "section": "节点最大实例数说明",
+          "start_line": 29,
+          "end_line": 50,
+          "content": "在创建节点时，可以配置节点可以创建的最大实例数（maxPods）。该参数是kubelet的配置参数，决定kubelet最多可创建多少个Pod。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/notice_3.0-zh-cn.png)\n\n对于默认节点池（DefaultPool）中的节点，节点创建完成后，最大实例数不支持修改。\n\n对于自定义节点池中的节点，创建完成后可通过修改节点池配置中的max-pods参数，修改节点最大实例数。详情请参见[节点池配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0652.html)。\n\n**图2** 创建节点时的最大实例数配置\n ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001981030921.png \"点击放大\")\n\n根据节点规格不同，节点默认最大实例数如[表1](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)所示。\n\n**表1** 节点默认最大实例数\n\n| 内存 | 节点默认最大实例数 |\n| --- | --- |\n| 4G | 20 |\n| 8G | 40 |\n| 16G | 60 |\n| 32G | 80 |\n| 64G及以上 | 110 |",
+          "content_hash": "55bcf85910ef6e138d456ff29452ca394a82cb2a7b27e43a478bfcef9110869f",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html",
+          "title": "节点可创建的最大Pod数量说明",
+          "score": 26.23634
+        }
+      ],
+      "result": {
+        "trace_id": "de3db053818c431b61eb8ebacc129d94"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1119.9655829987023
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-055",
+      "group": "cce_10_0285",
+      "category": "命名空间",
+      "question_type": "scenario",
+      "question": "想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？",
+      "answerable": true,
+      "required_facts": [
+        "为不同环境建立对应命名空间",
+        "创建和查询工作负载时选择对应命名空间",
+        "不要宣称这等同于完整网络安全隔离"
+      ],
+      "reference_answer": "为不同环境建立对应命名空间；创建和查询工作负载时选择对应命名空间；不要宣称这等同于完整网络安全隔离",
+      "evidence": [
+        {
+          "document_id": "cce_10_0285",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "file": "documents/cce_10_0285.md",
+          "content_sha256": "d0eaed4dded12d85d8eac6419e236f92048a9e8661f35deffb2e18f2013e6cb5",
+          "start_line": 9,
+          "end_line": 9,
+          "section": "使用命名空间",
+          "anchor": "创建工作负载时，您可以选择对应的命名空间",
+          "quote": "- 创建工作负载时，您可以选择对应的命名空间，实现资源或租户的隔离。",
+          "quote_sha256": "1bb41cad7bb282da433d127c84266be595c5306936e74c02d3d329b87893a2a1"
+        },
+        {
+          "document_id": "cce_10_0285",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "file": "documents/cce_10_0285.md",
+          "content_sha256": "d0eaed4dded12d85d8eac6419e236f92048a9e8661f35deffb2e18f2013e6cb5",
+          "start_line": 21,
+          "end_line": 21,
+          "section": "命名空间使用实践",
+          "anchor": "不同环境创建对应命名空间",
+          "quote": "  - 不同环境创建对应命名空间。",
+          "quote_sha256": "d5bd35649dd972b99a7481ae565fefd378b3b016ce9a19f19878a092ac218a59"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-055",
+      "question": "想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？",
+      "answerable": true,
+      "question_type": "scenario",
+      "category": "命名空间",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "VBZJTFQXG4BYKZ3H5W6OKHF6RZ",
+          "revision_id": "UNFNWLOOIDLBEX5JLEXI6O6WHG",
+          "section": "操作场景",
+          "start_line": 8,
+          "end_line": 10,
+          "content": "命名空间（Namespace）是对一组资源和对象的抽象整合。在同一个集群内可创建不同的命名空间，不同命名空间中的数据彼此隔离。使得它们既可以共享同一个集群的服务，也能够互不干扰。\n\n例如可以将开发环境、测试环境的业务分别放在不同的命名空间。",
+          "content_hash": "c0beecaca077cf8a011d7c1727cb73fad4fb57ace4f40d1cbd83ea27026bbd1a",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0278.html",
+          "title": "创建命名空间",
+          "score": 45.615177
+        },
+        {
+          "id": "HYRERI4KEBKD4MQV4RT5ZF5P7X",
+          "revision_id": "7HOYRTJCDJUR63BBOMBFEPPAAD",
+          "section": "命名空间使用实践",
+          "start_line": 13,
+          "end_line": 33,
+          "content": "- **按照不同环境划分命名空间**\n\n  一般情况下，工作负载发布会经历开发环境、联调环境、测试环境，最后到生产环境的过程。这个过程中不同环境部署的工作负载相同，只是在逻辑上进行了定义。分为两种做法：\n\n  - 分别创建不同集群。\n\n    不同集群之间，资源不能共享。同时，不同环境中的服务互访需要通过负载均衡才能实现。\n  - 不同环境创建对应命名空间。\n\n    同个命名空间下，通过服务名称（Service name）可直接访问。跨命名空间的可以通过服务名称、命名空间名称访问。\n\n    例如下图，开发环境/联调环境/测试环境分别创建了命名空间。\n\n    **图1** 不同环境创建对应命名空间\n     ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001199021298.png \"点击放大\")\n- **按照应用划分命名空间**\n\n  对于同个环境中，应用数量较多的情况，建议进一步按照工作负载类型划分命名空间。例如下图中，按照APP1和APP2划分不同命名空间，将不同工作负载在逻辑上当做一个工作负载组进行管理。且同一个命名空间内的工作负载可以通过服务名称访问，不同命名空间下的通过服务名称、命名空间名称访问。\n\n  **图2** 按照工作负载划分命名空间\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001243981147.png \"点击放大\")",
+          "content_hash": "3688bf61b4188ec66c13ba17e75da12763dbf4ce08e8371cc0002bc4e48f21ab",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "score": 44.815712
+        },
+        {
+          "id": "2WFPINTVUHUKHHRWFXWQUIKCE3",
+          "revision_id": "LW7FSSIE4QSYD3MLKXDFNCY3K2",
+          "section": "Volcano队列",
+          "start_line": 2,
+          "end_line": 16,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_11521.html\n目录：用户指南 > AI容器 > 训练任务 > Volcano队列\n更新时间：2026-09-20 GMT+08:00\n\n在共享异构算力资源（GPU/NPU） 集群中，算法开发、模型调优和生产训练等业务通常由不同团队共同使用同一批计算资源。如果所有训练任务都提交到同一个默认队列，容易出现以下问题：某个团队一次提交大量任务长期占用GPU/NPU，其他团队的任务无法及时运行；开发调试任务与生产训练任务相互竞争，关键训练缺少稳定的资源保障；某个队列空闲时，已分配给该队列的资源无法被其他队列利用，降低集群利用率。\n\n通过Volcano队列（Queue），可以为不同团队或训练环境创建独立队列，并按CPU、内存、GPU/NPU等资源维度配置预留资源、应得资源和使用上限。队列空闲时可借出资源，资源所有者需要时可通过reclaim回收，兼顾资源保障与集群利用率。\n\n典型使用场景如下：\n\n- **多团队共享训练集群**：按部门、租户或项目划分队列，避免单个团队无上限地消耗集群资源。\n- **开发与生产训练分级**：为生产队列配置更高的队列优先级或更多应得资源，使关键任务更容易获得资源。\n- **异构资源弹性共享**：允许繁忙队列借用其他队列的空闲资源，并在资源所有者需要时回收借出的资源。\n- **多维异构资源配额**：分别配置CPU、内存、nvidia.com/gpu或集群实际注册的其他扩展资源。\n- **分层组织管理**：启用分层队列后，可按业务层级组织队列结构，例如“部门 > 项目 > 环境”组织队列，并在父子队列之间继承和约束资源。",
+          "content_hash": "24a0a2d1d9b1f30ac5e44608175bae7f9c1b2d3b204f861c9808cf0674fd75df",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11521.html",
+          "title": "Volcano队列",
+          "score": 25.151764
+        },
+        {
+          "id": "XZK6DOJGEBFKM3ZUTVLSFQO2GX",
+          "revision_id": "UNFNWLOOIDLBEX5JLEXI6O6WHG",
+          "section": "命名空间类别",
+          "start_line": 22,
+          "end_line": 30,
+          "content": "命名空间按创建类型可分为以下几类：\n\n- 集群默认创建的命名空间：集群在启动时会默认创建default、kube-public、kube-system、kube-node-lease命名空间。\n  - default：所有未指定Namespace的对象都会被分配在default命名空间。\n  - kube-public：此命名空间下的资源可以被所有人访问（包括未认证用户），使集群中的某些资源可以在整个集群范围内可见可读。 该命名空间为Kubernetes预留的命名空间，其公共属性只是一种约定而并非要求。\n  - kube-system：所有由Kubernetes系统创建的资源都处于这个命名空间。\n  - kube-node-lease：每个节点在该命名空间中都有一个关联的“Lease”对象，该对象由节点定期更新。NodeStatus和NodeLease都被视为来自节点的心跳，在v1.13之前的版本中，节点的心跳只有NodeStatus，NodeLease特性从v1.13开始引入。NodeLease比NodeStatus更轻量级，该特性在集群规模扩展性和性能上有明显提升。\n- 用户创建的命名空间：用户可以按照需要创建命名空间，例如开发环境、联调环境和测试环境分别创建对应的命名空间。或者按照不同的业务创建对应的命名空间，例如系统若分为登录和游戏服务，可以分别创建对应命名空间。\n- 服务网格命名空间：使用ASM服务时将自动创建名为istio-system、asm-system、istio-operator、mantis-system的命名空间。这些命名空间不支持进行配额管理。如果您手动创建名称相同的命名空间，这些命名空间也将会受到该限制。",
+          "content_hash": "ce2fd8fbdb462b5c572810551a82782361aa2c46225196fd8c4f5ef4198c05b2",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0278.html",
+          "title": "创建命名空间",
+          "score": 24.615726
+        },
+        {
+          "id": "2FK233NJBADN75MUPIGZLM35FY",
+          "revision_id": "IMIQSYBAKHUVUIVNJHYFTAJ5VM",
+          "section": "相关概念",
+          "start_line": 18,
+          "end_line": 23,
+          "content": "- **可用区（Availability Zone，AZ）**：是一个或多个物理数据中心的集合，有独立的风火水电，AZ内逻辑上再将计算、网络、存储等资源划分成多个集群。一个Region中的多个AZ间通过高速光纤相连，以满足用户跨AZ构建高可用性系统的需求。可用区可以分为两种类型：\n  - 通用可用区：部署于华为云的数据中心，为公有云用户共享。\n  - 边缘可用区：部署在用户数据中心，为CloudPond用户专属。\n- **分区（Partition）**：表示云计算资源的逻辑管理单元，用于在Region内或跨可用区统一组织资源，实现中心云与边缘计算资源的协同调度与高效管理。可以从以下几个角度进行理解：\n  - 计算角度：一个分区是由一个或多个互相隔离但网络位置相近（通常互访时延小于 2ms）的可用区组成的资源集合。将应用分散在一个分区内不同可用区可以实现应用高可用性。\n  - 分区类型：按资源类别，划分为中心云和边缘分区（一个或多个）。",
+          "content_hash": "a9067e8c10b8dcba746bad21e13cda63031e9972051dd83d9d44150555f1c840",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0840.html",
+          "title": "在CCE Turbo分布式集群中使用边缘云资源",
+          "score": 21.884365
+        }
+      ],
+      "result": {
+        "trace_id": "459f1e20c538bec8c2661bd477fb674a"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1113.7973750010133
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-062",
+      "group": "cce_10_0277",
+      "category": "插件",
+      "question_type": "procedure",
+      "question": "修改CCE插件能直接在后台编辑资源吗，正确入口是什么？",
+      "answerable": true,
+      "required_facts": [
+        "从插件中心或插件管理API操作",
+        "不要后台直接修改资源",
+        "可能导致插件异常或升级覆盖参数"
+      ],
+      "reference_answer": "从插件中心或插件管理API操作；不要后台直接修改资源；可能导致插件异常或升级覆盖参数",
+      "evidence": [
+        {
+          "document_id": "cce_10_0277",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0277.html",
+          "title": "插件概述",
+          "file": "documents/cce_10_0277.md",
+          "content_sha256": "5ff971f6d887f0c14b9ada876722a2257be26b73c904d2c712f255a4f477c61b",
+          "start_line": 16,
+          "end_line": 16,
+          "section": "插件概述",
+          "anchor": "CCE插件采用Helm模板方式部署",
+          "quote": "CCE插件采用Helm模板方式部署，修改或升级插件请从插件中心页面或开放的插件管理API（具体请参见《云容器引擎(CCE) API参考》中“插件管理”）进行操作。勿后台直接修改插件相关资源，以免插件异常或引入其他非预期问题（例如升级后参数配置被覆盖等）。",
+          "quote_sha256": "7bc6b0b04a8146cfa4162ca0729e9108ab5feff1edd198be45c6ec1d8f2612a6"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-062",
+      "question": "修改CCE插件能直接在后台编辑资源吗，正确入口是什么？",
+      "answerable": true,
+      "question_type": "procedure",
+      "category": "插件",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "KMO4PQBYFE2E4KVPIFXBLRR4HG",
+          "revision_id": "2IE7L4LBQJE7RDFOOMUZNMO7ZD",
+          "section": "索引",
+          "start_line": 8,
+          "end_line": 15,
+          "content": "- [为什么监控中心没有数据了？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [如何关闭监控中心？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [监控中心为什么没有展示自定义指标？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [为什么云原生监控插件开启本地数据存储时，重启prometheus-server实例可能会导致节点列表的资源信息短时间（1-2分钟）无法正常显示？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [为什么云原生监控插件开启本地数据存储时，重启kube-state-metrics实例可能会导致页面部分数据翻倍？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [云原生监控插件开启本地数据存储时为什么不能正常上报指标？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [为什么监控中心的工作负载/节点CPU使用率超过100%？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)\n- [采集端点访问403的原因是什么？该如何处理？](https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html)",
+          "content_hash": "e4f56df695202d436fdfef699935f1e52a3c2e762544a8f872ae56ef60b6b1ef",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0923.html",
+          "title": "监控中心FAQ",
+          "score": 21.490955
+        },
+        {
+          "id": "VEAYNDNIH4ZDCK2JWPJVLXOQJ2",
+          "revision_id": "34IDLHGXBXD5A24JI6LPTLUXR3",
+          "section": "权限修改",
+          "start_line": 63,
+          "end_line": 69,
+          "content": "安装Dashboard插件后初始角色仅拥有对大部分资源的只读权限，若想让Dashboard界面支持更多操作，需自行在后台对RBAC相关资源进行修改。\n\n**具体修改方式：**\n\n可对名为“kubernetes-dashboard-minimal”这个ClusterRole中的规则进行调整。\n\n关于使用RBAC的具体细节可参考文档：<https://kubernetes.io/docs/reference/access-authn-authz/rbac/>。",
+          "content_hash": "81ae352b9232c165e75a5c2c8147717c663588a0773c4966c26dc9082c61b256",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0128.html",
+          "title": "Kubernetes Dashboard",
+          "score": 20.927505
+        },
+        {
+          "id": "PLSL6KHNU3EUNTWZU7YUHX5XRK",
+          "revision_id": "GTRXXXZ5D6LKZBLVIPUCR3UC7D",
+          "section": "解决方案",
+          "start_line": 12,
+          "end_line": 34,
+          "content": "由于云原生监控插件在3.9.0之后的版本，不再聚合grafana的能力，因此升级前需要重新安装开源版本grafana插件。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n- 重新安装grafana不会影响已有的数据。\n- 手动创建的grafana的服务（service）和路由（ingress）无法直接绑定至新的grafana插件，需要手动修改服务选择器的配置，请及时修改对应的选择器。\n\n**方案一**：如果当前插件能够升级至3.9.0及以上的版本，请前往“插件中心”页面，单击云原生监控插件的“升级”按钮。然后在新窗口中单击“安装Grafana”，等待请求下发完成后单击“继续升级插件”，将插件升级至最新版本。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001788300096.png \"点击放大\")\n\n**方案二**：如果当前插件不支持升级至3.9.0及以上的版本，则按照以下方式，手动迁移grafana的插件。\n\n1. 关闭云原生监控插件的grafana开关。\n\n   进入插件中心，在云原生监控插件的编辑页面，关闭grafana的开关。\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002502666365.png \"点击放大\")\n2. 安装开源grafana插件。\n\n   在插件中心的页面中，安装grafana插件。\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002502666407.png \"点击放大\")",
+          "content_hash": "e0f459775dc3e8b34f8b7ec446b4386fc04bec28aa68d913e8a4e2561bd7e001",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0509.html",
+          "title": "云原生监控插件升级检查异常处理",
+          "score": 18.198116
+        },
+        {
+          "id": "QKDNX6HZFLO35SGMBFT2IAYHO2",
+          "revision_id": "L47ZATFWNANOYLZG52VPDPA34A",
+          "section": "模板检查",
+          "start_line": 91,
+          "end_line": 117,
+          "content": "**检查说明：**\n\n当前插件相关的Kubernetes资源与预期Helm模板内容存在不兼容差异，此类在插件升级后将无法保留的配置将触发模板检查异常。该异常通常源于您曾通过非插件配置的下发方式（例如直接后台使用kubectl）修改了资源配置。\n\n**检测范围：**\n\n- 支持检查类型：\n  - 插件运行中巡检\n  - 插件编辑/升级前检查\n- 支持集群范围：1.19及以上集群版本\n- 支持插件范围：\n  - NGINX Ingress控制器插件的cceaddon-nginx-ingress-controller Deployment与ConfigMap资源。\n  - CoreDNS插件的ConfigMap资源。\n\n**风险说明：**\n\n升级插件时，这些与模板不兼容的改动会被覆盖或丢失。\n\n在未察觉的情况下，可能导致业务配置被回滚、流量中断或副本数变化等问题。\n\n**解决方案：**\n\n1. 确认当前Kubernetes资源与预期模板资源的具体差异项。\n2. 修改Kubernetes资源，将不兼容项调整至与预期模板内容一致。\n3. 如果Kubernetes资源无法还原至预期状态，但可通过插件配置更新将差异内容重新下发时，则可选择忽略该异常并执行下发。\n\n   （例如：原NGINX Ingress控制器插件的工作负载副本数为4，而模板配置为2，此时可在插件配置中将副本数调整为4，并选择忽略异常后执行下发，使生成资源与实际期望保持一致。）",
+          "content_hash": "8a7243fea75d9ffd74c5256324a9a84f4e8d61f01c2b245a6d0688933335c386",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1031.html",
+          "title": "通用检查项",
+          "score": 17.430721
+        },
+        {
+          "id": "C4DWKYNJEN6HKFNMJFAIARWP4E",
+          "revision_id": "7SAH7O55D7DFD4PRDLTNZ2GNU4",
+          "section": "使用Corefile配置CoreDNS插件",
+          "start_line": 99,
+          "end_line": 116,
+          "content": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n安装CoreDNS插件时，不支持使用Corefile视图配置，仅编辑/升级场景支持使用Corefile视图配置。\n\n1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群。\n2. 在左侧导航栏中选择“插件中心”，在右侧找到**CoreDNS域名解析**插件，单击“编辑”。\n3. 在“参数配置”中，选择是否切换Corefile视图（1.30.3及以上版本的插件支持）。\n\n   切换后将通过Corefile格式直接配置kube-system命名空间下的CoreDNS的ConfigMap，且已有的存根域配置和高级配置内 parameterSyncStrategy/servers/upstream\\_nameservers等参数均不再生效，您需要自行保证Corefile配置的正确性。\n\n   关于Corefile格式的说明请参考[如何配置Corefile](https://coredns.io/manual/toc/#configuration)。\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n   - 关闭Corefile视图后，依旧会以存根域配置和高级配置内 parameterSyncStrategy/servers/upstream\\_nameservers 等参数配置CoreDNS的配置项，切换时需要保证配置的合理性。\n   - 开启Corefile视图后更新/升级插件，再次关闭Corefile视图更新/升级插件，插件更新会拦截当前的配置，需要将 parameterSyncStrategy设置为force或者inherit策略后才能完成升级。\n   - 修改Corefile配置项后，需要等待CoreDNS内部的Reload机制自动完成配置刷新（约在十秒内配置生效）。\n4. 完成Corefile编辑后，单击“确定”。",
+          "content_hash": "f4b2594cd843079f63b301fba7ff59c8ee9506c6330e400657bac03688ba807d",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0129.html",
+          "title": "CoreDNS域名解析",
+          "score": 15.94371
+        }
+      ],
+      "result": {
+        "trace_id": "214e33d16ac240bd78cfaa8239ad6f57"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1114.921417000005
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-076",
+      "group": "cce_10_0784",
+      "category": "配置中心",
+      "question_type": "version",
+      "question": "CCE网络配置里扩展VPC网络容器网段，要求什么网络模型和最低集群版本？",
+      "answerable": true,
+      "required_facts": [
+        "VPC网络模型",
+        "v1.19.16-r0及以上"
+      ],
+      "reference_answer": "VPC网络模型；v1.19.16-r0及以上",
+      "evidence": [
+        {
+          "document_id": "cce_10_0784",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0784.html",
+          "title": "网络配置",
+          "file": "documents/cce_10_0784.md",
+          "content_sha256": "f3faa79a901fa6f8585c434d4cca9c40364ee1f1caab6e700bc27f00280399a3",
+          "start_line": 44,
+          "end_line": 44,
+          "section": "容器网段配置（VPC网络模型集群支持）",
+          "anchor": "仅支持v1.19.16-r0及以上版本的“VPC网络”模型集群",
+          "quote": "  - 仅支持v1.19.16-r0及以上版本的“VPC网络”模型集群。",
+          "quote_sha256": "9f91369328bed1d7c1b065e2ab317e55ec379f5c36dc4e35225def93d555823a"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-076",
+      "question": "CCE网络配置里扩展VPC网络容器网段，要求什么网络模型和最低集群版本？",
+      "answerable": true,
+      "question_type": "version",
+      "category": "配置中心",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "PZXON5M6OUC64UHCB2WUOJGJ3C",
+          "revision_id": "WXEGRDPNDJDMSJNUSSA25YQS5S",
+          "section": "步骤二：进行网络配置（第1部分）",
+          "start_line": 45,
+          "end_line": 108,
+          "content": "网络配置是一个层次化的网络管理体系，它通过集群网络、容器网络和服务网络三个维度的协同配置，为容器化应用提供端到端的网络连接和安全保障。\n\n- 集群网络：用于管理Kubernetes节点间的底层网络通信，为Pod和Service的流量传输提供载体，确保集群基础设施的连通性和安全性。\n- 容器网络：为每个Pod分配独立IP，以实现容器间直接通信和跨节点互通。\n- 服务网络：为集群内服务（Service）提供稳定的访问入口、负载均衡和流量管理能力。\n\n配置前，建议提前了解以上三种网络的相关概念及其关系，具体请参见[网络概述](https://support.huaweicloud.com/usermanual-cce/cce_10_0010.html)。\n\n- [Standard集群](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)\n- [Turbo集群](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)\n\n1. 配置集群网络参数，具体说明请参见[图3](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)和[表2](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)。\n\n   **图3** 集群网络配置\n    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002282335202.png \"点击放大\")\n\n   **表2** 集群网络配置\n\n   | 参数 | 说明 | 集群创建后是否支持修改 |\n   | --- | --- | --- |\n   | 虚拟私有云 | 为新建集群选择一个虚拟私有云。  若没有可选虚拟私有云，请单击“新建虚拟私有云”进行创建，完成创建后单击刷新按钮。操作步骤详情请参见[创建虚拟私有云和子网](https://support.huaweicloud.com/intl/zh-cn/usermanual-vpc/zh-cn_topic_0013935842.html)。 | × |\n   | 默认节点子网 | 选定子网后，集群中的节点会默认使用此子网中的IP地址。创建节点或节点池时，支持新建的节点或节点池重新设置节点子网。 | × |\n   | 启用IPv6 | 开启后，集群将使用IPv4/IPv6双栈模式，即每个工作节点可以同时拥有一个IPv4地址和一个IPv6地址，这两个地址均支持内网和公网访问。开启前，“默认节点子网”需具有IPv6网段，具体请参见[创建虚拟私有云和子网（IPv6）](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cce/cce_bestpractice_00222.html#section3)。  - CCE Standard集群（容器隧道网络）：集群版本在v1.15及以上时，支持启用IPv6，并在v1.23版本中进入GA（Generally Available）阶段。 - CCE Standard集群（VPC网络模型）：暂不支持启用IPv6。 - CCE Turbo集群：集群在v1.23.8-r0、v1.25.3-r0及以上时，支持启用IPv6。 具体请参见[如何通过CCE搭建IPv4/IPv6双栈集群？](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cce/cce_bestpractice_00222.html)。 | × |\n   | 节点默认安全组 | 您可选择使用CCE自动生成的安全组，或选择已有安全组作为节点默认安全组。  **节点默认安全组必须放通指定端口来保证集群内部正常通信**，否则将无法成功创建节点，安全组端口配置说明请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。  选择自动生成安全组时，您可通过勾选“开放TCP 22端口”复选框来开放节点默认安全组的22端口。勾选后将对**所有IP地址**开放22端口，**请注意相关安全风险**。 | √ |\n2. 配置容器网络参数，具体说明请参见[图4](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)和[表3](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)。\n\n   **图4** 容器网络配置\n    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002567776059.png \"点击放大\")\n\n   **表3** 容器网络配置\n\n   | 参数 | 说明 | 集群创建后是否支持修改 |\n   | --- | --- | --- |\n   | 容器网络模型 | 表示集群中容器网络使用的模型框架。 - VPC网络：适用于集群规模较小（1000节点及以下）且性能要求较高的场景。例如，AI计算、大数据计算等。 - 容器隧道网络：适用于集群规模大（最大可支持2000节点）且对性能要求相对较低的场景。例如，Web应用、访问量不大的数据中后台服务等。  如需了解更多网络模型差异，请参见[容器网络模型对比](https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html)。 | × |\n   | DataPlane V2（VPC网络支持） | 基于eBPF技术在内核层实现Kubernetes网络加速，进而提供高性能服务通信（Service ClusterIP）、精准流量管控（NetworkPolicy）和智能带宽管理（Egress Bandwidth）等能力，详情请参见[DataPlane V2网络加速说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0945.html)。  该功能具有以下限制，更详细内容请参考[DataPlane V2网络加速说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0945.html)中的约束限制。  - 集群限制：仅VPC网络支持开启该功能，且集群版本在v1.27.16-r30、v1.28.15-r20、v1.29.13-r0、v1.30.10-r0、v1.31.6-r0及以上。 - 内存限制：开启后，会在每个节点上部署cilium-agent，每个cilium-agent预计占用内存80MiB，每增加一个Pod，cilium-agent内存消耗预计额外增加10KiB。 - 操作系统限制：创建后，节点仅支持使用Huawei Cloud EulerOS 2.0、Ubuntu 22.04操作系统。 | × |\n   | 网络策略（容器隧道网络支持） | 为集群提供基于策略的网络控制，详情请参见[配置网络策略（NetworkPolicy）限制Pod访问的对象](https://support.huaweicloud.com/usermanual-cce/cce_10_0059.html)。  开启时，如果客户配置的服务网段和自建线下网段存在冲突，新增网关链路调整，可能出现新增网关对应链路的建链不成功。  例如，集群通过云专线访问云外地址时，云外交换机不支持ip-option，开启网络策略可能导致网络无法访问。 | √ |\n   | 容器网段 | 用于设置容器使用的网段，决定集群中容器的数量上限。Standard集群支持“手动设置网段”和“自动设置网段”两种配置方式，具体如下：  - 手动设置网段：可以根据需求自定义容器网段。若涉及跨VPC网络直接通信等场景，**请确保容器网段与需要连接的VPC网段区分**，避免网段冲突，更多信息请参见[集群网络地址段规划实践](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cce/cce_bestpractice_00004.html)。同时，VPC网络模型支持添加多个容器网段，且支持集群创建后添加容器网段，具体请参见[扩展VPC网络集群的容器网段](https://support.huaweicloud.com/usermanual-cce/cce_10_0680.html)。 - 自动设置网段：系统将从172.(16~31).0.0/16、10.(0|16|32|48|64|80|96|112).0.0/12中为用户随机分配一个与当前集群所选虚拟私有云及服务网段不冲突的网段。因集群创建后不支持修改，在商用场景中建议选择“手动设置网段”的配置方式。 说明：  由于容器隧道网络集群创建完成后不支持容器网段扩容，为避免IP地址不足，容器网段掩码最大设置为19位。 | ×  创建后，VPC网络集群支持添加容器网段，但不支持修改或删除已有容器网段。 |\n   | VPC容器网段预留（VPC网络支持） | 开启后，可以在集群所在VPC中预留容器网段的IP地址，避免后续新增子网网段与容器网段发生冲突。  v1.28.15-r70、v1.29.15-r30、v1.30.14-r30、v1.31.10-r30、v1.32.6-r30、v1.33.5-r20及以上版本的集群支持该配置。 | √ |\n   | 每节点预留的PodIP数（VPC网络支持） | 表示容器网络可分配的Pod IP个数（即alpha.cce/fixPoolMask参数），决定每个节点可创建的Pod的最大数量。使用主机网络（HostNetwork）的Pod不会占用这些预留的IP数。  使用[容器网络](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)时，每个Pod会占用一个IP地址。如果节点预留的Pod IP数量不够的话，则无法创建Pod，具体说明请参见[每个节点预留的Pod IP数说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 | × |\n3. 配置服务网络参数，具体说明请参见[图5](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)和[表4](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)。\n\n   **图5** 服务网络配置\n    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002484402152.png \"点击放大\")\n\n   **表4** 服务网络配置\n\n   | 参数 | 说明 | 集群创建后是否支持修改 |\n   | --- | --- | --- |\n   | 服务网段（Service CIDR ） | 用于为ClusterIP类型Service分配IP地址（用于集群内容器间通信），并决定该类Service的数量上限。服务网段不能与节点子网、容器网段重叠。 | × |\n   | 服务转发模式 | 用于实现Service流量的负载均衡和路由转发，支持多种转发模式，具体请参见[nftables、iptables与IPVS如何选择](https://support.huaweicloud.com/usermanual-cce/cce_10_0349.html)。  - nftables：nftables为新一代转发模式，解决iptables性能瓶颈与扩展难题，适配大规模服务场景，提供统一配置框架整合多协议规则管理。仅v1.35及以上集群版本支持。 - iptables：社区传统的kube-proxy模式。适用于Service数量较少或客户端会出现大量并发短链接的场景。IPv6集群不支持iptables模式。 - IPVS：吞吐更高，速度更快的转发模式。适用于集群规模较大或Service数量较多的场景。 | × |\n\n1. 配置集群网络参数，具体说明请参见[图6](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)和[表5](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)。\n\n   **图6** 集群网络配置\n    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002282335202.png \"点击放大\")\n\n   **表5** 集群网络配置\n\n   | 参数 | 说明 | 集群创建后是否支持修改 |\n   | --- | --- | --- |\n   | 虚拟私有云 | 为新建集群选择一个虚拟私有云。  若没有可选虚拟私有云，请单击“新建虚拟私有云”进行创建，完成创建后单击刷新按钮。操作步骤详情请参见[创建虚拟私有云和子网](https://support.huaweicloud.com/intl/zh-cn/usermanual-vpc/zh-cn_topic_0013935842.html)。 | × |\n   | 默认节点子网 | 选定子网后，集群中的节点会默认使用此子网中的IP地址。创建节点或节点池时，支持新建的节点或节点池重新设置节点子网。 | × |\n   | 启用IPv6 | 开启后，集群将使用IPv4/IPv6双栈模式，即每个工作节点可以同时拥有一个IPv4地址和一个IPv6地址，这两个地址均支持内网和公网访问。开启前，“默认节点子网”需具有IPv6网段，具体请参见[创建虚拟私有云和子网（IPv6）](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cce/cce_bestpractice_00222.html#section3)。  - CCE Standard集群（容器隧道网络）：集群版本在v1.15及以上时，支持启用IPv6，并在v1.23版本中进入GA（Generally Available）阶段。 - CCE Standard集群（VPC网络模型）：暂不支持启用IPv6。 - CCE Turbo集群：集群在v1.23.8-r0、v1.25.3-r0及以上时，支持启用IPv6。 具体请参见[如何通过CCE搭建IPv4/IPv6双栈集群？](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cce/cce_bestpractice_00222.html)。 | × |\n   | 节点默认安全组 | 您可选择使用CCE自动生成的安全组，或选择已有安全组作为节点默认安全组。  **节点默认安全组必须放通指定端口来保证集群内部正常通信**，否则将无法成功创建节点，安全组端口配置说明请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。  选择自动生成安全组时，您可通过勾选“开放TCP 22端口”复选框来开放节点默认安全组的22端口。勾选后将对**所有IP地址**开放22端口，**请注意相关安全风险**。 | √ |",
+          "content_hash": "b2c4f079f3c9bd04da1573d070eb72b595aa574a34fc172dc9ebdbe33e6880c2",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+          "title": "购买Standard/Turbo集群",
+          "score": 50.457542
+        },
+        {
+          "id": "GZHPDUBOLGWIOXVTZXB7WFPFIM",
+          "revision_id": "U2G4EURAI2WC3NI4CNSFGSXBWE",
+          "section": "VPC网络模型",
+          "start_line": 8,
+          "end_line": 25,
+          "content": "VPC网络模型将虚拟私有云VPC的路由方式与底层网络深度整合，适用于高性能场景，但节点数量受限于虚拟私有云VPC的路由配额。在VPC网络模型中，容器网段独立于节点网段进行单独设置。在Pod IP地址分配时，集群中的每个节点会被分配固定大小的Pod IP地址段，用于给该节点上运行的Pod分配IP地址。由于VPC网络模型没有隧道封装的消耗，容器网络性能相对于容器隧道网络有一定优势。此外，使用VPC网络模型的集群时，由于VPC路由表中自动配置了容器网段与VPC网段之间的路由，可以支持同一VPC内的云服务器从集群外直接访问容器实例等特殊场景。\n\n**图1** VPC网络\n ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001199181338.png \"点击放大\")\n\n在VPC网络模型的集群中，不同形式的网络通信路径不同：\n\n- 节点内Pod间通信：IPVlan子接口分配给节点上的Pod，因此同节点的Pod间通信可以直接通过IPVlan进行转发。\n- 跨节点Pod间通信：所有跨节点Pod间的通信均根据VPC路由表中的路由先访问到默认网关，然后借助VPC的路由转发能力，将访问流量转发到另一个节点上的Pod。\n- Pod访问公网：集群内的容器在访问公网时，系统会将Pod IP通过NAT转换成节点IP，使Pod以节点IP的形式与外部进行通信。\n\n  ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n  VPC网络集群中默认将10.0.0.0/8、172.16.0.0/12、192.168.0.0/16这三个VPC私有网段视为集群私有网段。如果集群所在VPC使用了扩展网段，创建、重置节点等操作也会将扩展网段添加到集群私有网段中。\n\n  在Pod中发起访问请求时，如果Pod访问的目的地址在集群私有网段范围内，则节点不会将Pod IP进行网络地址转换，可以借由上层VPC直接将报文送达至目的地址，即直接使用Pod IP与集群私有网络地址进行通信。\n\n  当VPC网络集群版本为v1.23.14-r0、v1.25.9-r0、v1.27.6-r0、v1.28.4-r0及以上时，CCE提供nonMasqueradeCIDRs参数设置集群私有网段，以满足不同的使用场景，详情请参见[在VPC网络集群中访问集群外地址时使用Pod IP作为客户端源IP](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cce/cce_bestpractice_10041.html)。",
+          "content_hash": "01e50484c6643377b00949c2917a6a8bcc61988000b249f997c8bafbfbee5de2",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0283.html",
+          "title": "VPC网络模型说明",
+          "score": 48.025593
+        },
+        {
+          "id": "Y6YDJWZJNASLNFQMTRE27Y6PNM",
+          "revision_id": "IXH3ZAVP3EAAQ5OUKSYP3UNKMC",
+          "section": "DataPlane V2网络加速说明",
+          "start_line": 2,
+          "end_line": 17,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_0945.html\n目录：用户指南 > 网络 > 容器网络 > Pod网络配置 > DataPlane V2网络加速说明\n更新时间：2026-09-20 GMT+08:00\n\n创建VPC网络模型和云原生网络2.0模型的集群支持开启DataPlane V2网络加速模式，开启后，会启用eBPF流量转发路径，实现Service、NetworkPolicy、Bandwidth等能力。\n\n| DataPlane V2 | 说明 |\n| --- | --- |\n| 技术实现 | DataPlane V2通过集成开源社区的[cilium插件](https://docs.cilium.io/en/stable/)提供Service、NetworkPolicy、Bandwidth等能力。 |\n| 支持的集群版本 | CCE Standard集群（VPC网络模型）（商用）：v1.27.16-r30、v1.28.15-r20、v1.29.13-r0、v1.30.10-r0、v1.31.6-r0及以上集群版本。  CCE Turbo集群（商用）：v1.34.3-r10及以上集群版本 |\n| 使用方法 | - 在创建CCE Standard 集群时，在容器网络配置中选择VPC网络模型，开启**DataPlane V2**选项。 - 在创建CCE Turbo集群时，在容器网络配置中选择云原生网络2.0模型，开启**DataPlane V2**选项。   须知：  - CCE Turbo集群开启了DataPlane V2后，暂不支持安全容器。 - 开启了DataPlane V2后，不支持关闭。 - 开启DataPlane V2后，CCE Standard集群的VPC网络模型支持[L7网络策略](https://docs.cilium.io/en/stable/security/policy/index.html#layer-7-examples)，CCE Turbo集群暂不支持[L7网络策略](https://docs.cilium.io/en/stable/security/policy/index.html#layer-7-examples)。 - 开启DataPlane V2后，CCE Standard集群的VPC网络模型默认开启eBPF Bandwidth能力，CCE Turbo集群默认关闭eBPF Bandwidth能力，通过TBF Qdisc实现Bandwidth。 - 开启DataPlane V2后，默认开启[Host-Routing](https://docs.cilium.io/en/stable/operations/performance/tuning/#ebpf-host-routing)。 - 开启DataPlane V2后，CCE Turbo集群节点访问本节点上的工作负载，不再通过VPC进行转发，而是节点内部直接转发；此场景工作负载关联的安全组将失效，如有诉求，请通过[CiliumNetworkPolicy](https://docs.cilium.io/en/stable/security/policy/layer3/#access-to-from-local-host)进行限制。 - CCE Standard集群中配置了[L7网络策略](https://docs.cilium.io/en/stable/security/policy/index.html#layer-7-examples)的工作负载，不支持从[非伪装网段](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cce/cce_bestpractice_10041.html#section2)以外的源地址访问此工作负载对应的NodePort地址。 - 仅支持新建集群开启DataPlane V2，存量集群不支持开启。 - 新建集群初始版本为v1.34及以上的集群且开启DataPlane V2时，节点上将不再运行kube-proxy。 - 如果您的集群中有业务启用了L7网络策略或DNS策略，cilium升级期间，匹配上L7网络策略或DNS策略的流量将会中断，详见[社区约束](https://docs.cilium.io/en/stable/operations/upgrade/#version-specific-notes)。 |\n| 支持的操作系统 | 支持Huawei Cloud EulerOS 2.0操作系统。  v1.28.15-r70、v1.29.15-r30、v1.30.14-r30、v1.31.10-r30、v1.32.6-r30、v1.33.5-r20、v1.34.1-r0及以上版本的集群额外支持使用Ubuntu 22.04操作系统。 |\n| 性能优化 | - Service网络采用eBPF替换原有的kube-proxy模式，相比于kube-proxy，时延更小，支持Service大规模集群场景。 - Bandwidth采用eBPF对带宽进行限制。带宽限制更精准，资源消耗更低。 |\n| Bandwidth | 开启DataPlane V2网络加速后，CCE Standard集群的VPC网络模型将使用eBPF对带宽进行限制，CCE Turbo集群将使用TBF Qdisc对带宽进行限制，详见[为Pod配置QoS](https://support.huaweicloud.com/usermanual-cce/cce_10_0382.html)。 |\n| NetworkPolicy | - 网络策略（NetworkPolicy）的实现和容器隧道网络有差异，详见[配置网络策略（NetworkPolicy）限制Pod访问的对象](https://support.huaweicloud.com/usermanual-cce/cce_10_0059.html)：   - ipBlock选择器只支持选择集群外的IP地址段，不支持选择集群内的Pod或Node的IP地址。   - 对ipBlock选择器中的except关键字支持不佳，不建议使用except关键字。   - 使用Egress类型的NetworkPolicy会导致Pod访问集群中HostNetwork的Pod和集群中节点的IP失败。  - 当前[CiliumNetworkPolicy](https://docs.cilium.io/en/stable/network/kubernetes/policy/#ciliumnetworkpolicy)及[CiliumClusterwideNetworkPolicy](https://docs.cilium.io/en/stable/network/kubernetes/policy/#ciliumclusterwidenetworkpolicy) API在不同集群上支持的功能存在差异：   - CCE Standard集群不支持[Host Policies](https://docs.cilium.io/en/stable/security/policy/language/#hostpolicies)。   - CCE Turbo集群不支持[Host Policies](https://docs.cilium.io/en/stable/security/policy/language/#hostpolicies)，[DNS策略](https://docs.cilium.io/en/stable/security/dns/)以及[L7网络策略](https://docs.cilium.io/en/stable/security/policy/language/#layer-7-examples)。 |\n| 资源消耗 | 每个节点上有常驻进程cilium-agent负责处理eBPF网络加速，每个cilium-agent预计占用内存80MiB，每增加一个Pod，cilium-agent内存消耗预计额外增加10KiB。 |",
+          "content_hash": "01fcb7806e5a8a2ad831a6997006b36acac733b13ba4140a59e93a7e14d09808",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0945.html",
+          "title": "DataPlane V2网络加速说明",
+          "score": 47.68685
+        },
+        {
+          "id": "POGF2C4ABCMCGQ7LBVXT74TYTR",
+          "revision_id": "24FXARY6GKNPFBXXA6GVRUYK2R",
+          "section": "网络模型对比",
+          "start_line": 18,
+          "end_line": 37,
+          "content": "[表1](https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html)主要介绍CCE所支持的网络模型，您可根据实际业务需求进行选择。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/caution_3.0-zh-cn.png)\n\n集群创建成功后，网络模型不可更改，请谨慎选择。\n\n**表1** 网络模型对比\n\n| **对比维度** | **容器隧道网络** | **VPC网络** | **云原生网络2.0** |\n| --- | --- | --- | --- |\n| 适用场景 | - 对性能要求不高：由于需要额外的VXLAN隧道封装，相对于另外两种容器网络模式，性能存在一定的损耗（约5%-15%）。所以容器隧道网络适用于对性能要求不是特别高的业务场景，比如：Web应用、访问量不大的数据中台、后台服务等。 - 大规模组网：相比VPC路由网络受限于VPC路由条目配额的限制，容器隧道网络没有网络基础设施的任何限制；同时容器隧道网络把广播域控制到了节点级别，容器隧道网络最大可支持2000节点规模。 | - 性能要求较高：由于没有额外的隧道封装，相比于容器隧道网络模式，VPC网络模型集群的容器网络性能接近于VPC网络性能，所以适用于对性能要求较高的业务场景，比如：AI计算、大数据计算等。 - 中小规模组网：由于VPC路由网络受限于VPC路由表条目配额的限制，建议集群规模为1000节点及以下。 | - 性能要求高：由于云原生网络2.0直接使用VPC网络构建容器网络，容器通信不需要进行隧道封装和NAT转换，所以适用于对带宽、时延要求极高的业务场景，比如：线上直播、电商抢购等。 - 大规模组网：云原生网络2.0当前默认可支持2000个节点（最大支持20000节点），10万个Pod。 |\n| 核心技术 | OVS | IPVlan，VPC路由 | VPC弹性网卡/弹性辅助网卡 |\n| 适用集群 | CCE Standard集群 | CCE Standard集群 | CCE Turbo集群 |\n| 容器网络隔离 | Pod支持Kubernetes原生NetworkPolicy | 否 | Pod支持使用安全组隔离 |\n| ELB对接Pod | ELB对接Pod需要通过节点NodePort转发 | ELB对接Pod需要通过节点NodePort转发 | 使用独享型ELB时可直接对接Pod  使用共享型ELB对接Pod需要通过节点NodePort转发 |\n| Pod IP地址管理 | - 需设置单独的容器网段。容器网段独立于VPC网段，不能与之重叠。 - 集群创建完成后不支持容器网段扩容。为避免IP地址不足，建议将容器网段掩码最大设置为19位。 | - 需设置单独的容器网段。容器网段独立于VPC网段，不能与之重叠。 - 支持添加多个容器网段。 - 集群创建完成后支持添加容器网段，详情请参见[扩展VPC网络集群的容器网段](https://support.huaweicloud.com/usermanual-cce/cce_10_0680.html)。 - 分配Pod IP地址时，会先从容器网段中为每个节点配置一个固定的子网网段，节点内所有Pod的IP地址从该网段中分配。 | - 直接指定VPC子网作为容器网段。 - 集群创建完成后支持添加容器网段，详情请参见[添加/删除CCE Turbo集群的默认容器子网](https://support.huaweicloud.com/usermanual-cce/cce_10_0906.html)。 - Pod IP地址直接在VPC中分配，因此对VPC的地址消耗较高，建议在使用前规划较大的VPC网段。 |\n| 每个节点上可运行的Pod数量 | 取决于**节点可以创建的最大实例数**，由kubelet的配置参数**maxPods**决定，详情请参见[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 | 由**节点可以创建的最大实例数**和**每个节点预留的Pod IP数**中的最小值决定：   - 节点可以创建的最大实例数，即kubelet的配置参数**maxPods**，详情请参见[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 - 每个节点预留的Pod IP数，详情请参见[每个节点预留的Pod IP数说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 | 由**节点可以创建的最大实例数**和**每个节点预留的Pod IP数**中的最小值决定：   - 节点可以创建的最大实例数，即kubelet的配置参数**maxPods**，详情请参见[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 - 节点的网卡数量，详情请参见[CCE Turbo集群节点网卡数量](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 |\n| 网络性能 | 基于VxLAN隧道封装，有一定性能损耗。 | 无隧道封装，跨节点通过VPC路由器转发，性能较好，可媲美主机网络，但存在NAT转换损耗。 | 容器网络与VPC网络融合，性能无损耗。 |\n| 组网规模 | 最大可支持2000节点 | 受限于VPC路由表能力，适合中小规模组网，建议规模为1000节点及以下。  VPC网络模式下，集群每添加一个节点，会在VPC的路由表中添加一条路由（包括默认路由表和自定义路由表），因此集群本身规模受VPC路由表上限限制，创建前请提前评估集群规模。路由表配额请参见[使用限制](https://support.huaweicloud.com/intl/zh-cn/productdesc-vpc/overview_0003.html)。 | 默认支持2000节点，最大支持20000节点  由于云原生网络2.0集群中的容器从VPC网段内分配IP地址，消耗VPC的地址空间，实际支持规模受限于VPC子网网段大小，因此创建前请提前评估集群规模。 |\n| IPv4/IPv6双栈 | 支持创建IPv4/IPv6双栈集群 | 不支持 | 支持创建IPv4/IPv6双栈集群 |",
+          "content_hash": "3404daee75c0b8d3fb8a58cab1eb32d6bb862b99fab0ea2d6387bd57efd9a9d2",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html",
+          "title": "容器网络模型对比",
+          "score": 47.34295
+        },
+        {
+          "id": "3QUHTFPYW3VEKZOQ5B5HB2PLTE",
+          "revision_id": "YPSVHNUVSR5X2K2ORK77LGLLOK",
+          "section": "删除VPC网络集群的容器网段",
+          "start_line": 2,
+          "end_line": 10,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_1019.html\n目录：用户指南 > 网络 > 容器网络 > VPC网络模型 > 删除VPC网络集群的容器网段\n更新时间：2026-09-20 GMT+08:00\n\n在使用VPC集群时，用户可能在最初规划容器子网时未能充分考虑未来需求，导致容器网段规划不合理。或者，在新增容器子网后发现配置有误，需要进行修改或删除。本文将指导您如何删除容器网段，实现容器网络配置的灵活调整。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n该功能当前正陆续上线中，仅部分局点支持。",
+          "content_hash": "2c1f154a26a98770be151e00649e5ee9fad8e611f1fa941b2d0abadcb67469b5",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1019.html",
+          "title": "删除VPC网络集群的容器网段",
+          "score": 47.336273
+        }
+      ],
+      "result": {
+        "trace_id": "bbec454ccb095f04c11e5250a70df0c3"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1216.0177920013666
+    }
+  }
+]

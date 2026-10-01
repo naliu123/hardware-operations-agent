@@ -1,0 +1,6 @@
+[
+  {"model": "Atlas", "firmware": "R2", "answer": "蓝灯表示待机。此为 REPLAY 合成规则。"},
+  {"model": "Atlas", "firmware": "R10", "answer": "蓝灯表示维护。此为 REPLAY 合成规则。"},
+  {"model": "Boreal", "firmware": "B-9", "answer": "蓝灯表示升级。此为 REPLAY 合成规则。"},
+  {"model": "Boreal", "firmware": "B-10", "answer": "蓝灯表示自检。此为 REPLAY 合成规则。"}
+]

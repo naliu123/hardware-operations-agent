@@ -1,0 +1,221 @@
+{
+  "generated_at": "2026-09-22T14:48:25.246266+00:00",
+  "scope": "03c retained LIVE generation, selection, judging and diagnostic probes",
+  "currency_cost": null,
+  "complete_cost_accounting": false,
+  "limitations": [
+    "Tokens and calls below are retained usage, not billed currency cost; no pricing assumptions.",
+    "LIVE-R01 v2 first invalid-format judge attempt predates attempt logging: one call, unknown tokens.",
+    "LIVE-R03 cce-manual-082 FAILED before failed generation usage was retained: unknown calls/tokens.",
+    "Connection failures before provider responses may not have usage; a missing value is not evidence of zero cost.",
+    "Running experiment totals cover only persisted completed rows, not in-flight calls.",
+    "Generation totals include the R04 evidence-selection call; separate stage usage was not stored in these runs."
+  ],
+  "known_total": {
+    "calls": 718,
+    "prompt_tokens": 3750926,
+    "completion_tokens": 191927,
+    "total_tokens": 3942853
+  },
+  "groups": [
+    {
+      "artifact": "live-r00-dev-hybrid60.json",
+      "kind": "public_http_generation_including_selection",
+      "status": "complete",
+      "completed": 75,
+      "expected": 75,
+      "calls": 75,
+      "prompt_tokens": 244285,
+      "completion_tokens": 12548,
+      "total_tokens": 256833
+    },
+    {
+      "artifact": "live-r00-dev-hybrid60.json",
+      "kind": "judge",
+      "calls": 75,
+      "prompt_tokens": 332914,
+      "completion_tokens": 8724,
+      "total_tokens": 341638
+    },
+    {
+      "artifact": "live-r01-dev-hybrid1.json",
+      "kind": "public_http_generation_including_selection",
+      "status": "complete",
+      "completed": 75,
+      "expected": 75,
+      "calls": 75,
+      "prompt_tokens": 264388,
+      "completion_tokens": 13466,
+      "total_tokens": 277854
+    },
+    {
+      "artifact": "live-r01-dev-hybrid1-judge-attempts.jsonl",
+      "kind": "judge",
+      "calls": 75,
+      "prompt_tokens": 372531,
+      "completion_tokens": 12777,
+      "total_tokens": 385308
+    },
+    {
+      "artifact": "live-r02-dev-completeness.json",
+      "kind": "public_http_generation_including_selection",
+      "status": "complete",
+      "completed": 75,
+      "expected": 75,
+      "calls": 75,
+      "prompt_tokens": 288013,
+      "completion_tokens": 29775,
+      "total_tokens": 317788
+    },
+    {
+      "artifact": "live-r02-dev-completeness-judge-attempts.jsonl",
+      "kind": "judge",
+      "calls": 79,
+      "prompt_tokens": 408610,
+      "completion_tokens": 15411,
+      "total_tokens": 424021
+    },
+    {
+      "artifact": "live-r03-dev-scope-title.json",
+      "kind": "public_http_generation_including_selection",
+      "status": "complete",
+      "completed": 75,
+      "expected": 75,
+      "calls": 76,
+      "prompt_tokens": 307774,
+      "completion_tokens": 28836,
+      "total_tokens": 336610
+    },
+    {
+      "artifact": "live-r03-dev-scope-title-judge-attempts.jsonl",
+      "kind": "judge",
+      "calls": 75,
+      "prompt_tokens": 380887,
+      "completion_tokens": 14379,
+      "total_tokens": 395266
+    },
+    {
+      "artifact": "live-r04-dev-evidence-selection.json",
+      "kind": "public_http_generation_including_selection",
+      "status": "running",
+      "completed": 13,
+      "expected": 75,
+      "calls": 26,
+      "prompt_tokens": 338589,
+      "completion_tokens": 11524,
+      "total_tokens": 350113
+    },
+    {
+      "artifact": "live-r04-dev-evidence-selection.json",
+      "kind": "judge",
+      "calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    },
+    {
+      "artifact": "evidence-blocks-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 5,
+      "prompt_tokens": 18859,
+      "completion_tokens": 2788,
+      "total_tokens": 21647
+    },
+    {
+      "artifact": "generation-extract-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 8,
+      "prompt_tokens": 30198,
+      "completion_tokens": 5116,
+      "total_tokens": 35314
+    },
+    {
+      "artifact": "generation-review-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 8,
+      "prompt_tokens": 33001,
+      "completion_tokens": 2733,
+      "total_tokens": 35734
+    },
+    {
+      "artifact": "generation-scope-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 8,
+      "prompt_tokens": 29390,
+      "completion_tokens": 2635,
+      "total_tokens": 32025
+    },
+    {
+      "artifact": "generation-thinking-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 5,
+      "prompt_tokens": 22391,
+      "completion_tokens": 9126,
+      "total_tokens": 31517
+    },
+    {
+      "artifact": "operation-scope-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 2,
+      "prompt_tokens": 22720,
+      "completion_tokens": 1088,
+      "total_tokens": 23808
+    },
+    {
+      "artifact": "r02-gap-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 3,
+      "prompt_tokens": 7496,
+      "completion_tokens": 1979,
+      "total_tokens": 9475
+    },
+    {
+      "artifact": "r03-gap-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 3,
+      "prompt_tokens": 8077,
+      "completion_tokens": 1254,
+      "total_tokens": 9331
+    },
+    {
+      "artifact": "r04-selection-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 16,
+      "prompt_tokens": 218306,
+      "completion_tokens": 3649,
+      "total_tokens": 221955
+    },
+    {
+      "artifact": "r04b-selection-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 16,
+      "prompt_tokens": 194616,
+      "completion_tokens": 9870,
+      "total_tokens": 204486
+    },
+    {
+      "artifact": "r04c-selection-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 6,
+      "prompt_tokens": 83144,
+      "completion_tokens": 3363,
+      "total_tokens": 86507
+    },
+    {
+      "artifact": "rerank-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 4,
+      "prompt_tokens": 68471,
+      "completion_tokens": 590,
+      "total_tokens": 69061
+    },
+    {
+      "artifact": "selection-temperature-probe.json",
+      "kind": "diagnostic_probe_not_accuracy",
+      "calls": 3,
+      "prompt_tokens": 76266,
+      "completion_tokens": 296,
+      "total_tokens": 76562
+    }
+  ]
+}

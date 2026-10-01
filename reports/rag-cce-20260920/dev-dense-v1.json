@@ -1,0 +1,2716 @@
+{
+  "id": "RXhwZXJpbWVudDoy",
+  "name": "dev-dense-v1",
+  "config": {
+    "split": "development",
+    "strategy": "dense",
+    "answers": false,
+    "top_k": 5,
+    "candidate_k": 20,
+    "rrf_constant": 60,
+    "data_mode": "LIVE",
+    "dataset_sha256": "c08c4b67938d20506a1e58aa278778ab65e907871ac95cb10bab41981ee2cc10"
+  },
+  "rows": [
+    {
+      "id": "cce-q004",
+      "question": "给控制节点重新装了一遍系统后组件不见了，可以用重置节点恢复吗？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r04"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r24",
+        "cce-t1-r22",
+        "cce-t1-r14",
+        "cce-t1-r04",
+        "cce-t1-r21"
+      ],
+      "latency_ms": 17.257708008401096,
+      "metrics": {
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.25,
+        "ndcg_at_5": 0.43067655807339306
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r24 集群/节点 / Node节点",
+            "start_line": 211,
+            "end_line": 216,
+            "content": "分类：Node节点\n高危操作：删除节点上的cce-pause等系统镜像\n导致后果：导致无法正常创建容器，且无法拉取系统镜像\n误操作后解决方案：请从其他正常节点复制该镜像恢复",
+            "content_hash": "5df7d8da94db00fc51e75ca9d7713360719f3bbd4a81e31443548abfc991ca80",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7993399
+          },
+          {
+            "id": "DL52JJRFWSTU7JHQRM2TUYHFFD",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r22 集群/节点 / Node节点",
+            "start_line": 197,
+            "end_line": 202,
+            "content": "分类：Node节点\n高危操作：在节点上安装自己的其他软件\n导致后果：导致安装在节点上的Kubernetes组件异常，节点状态变成不可用，无法部署工作负载到此节点\n误操作后解决方案：卸载已安装软件，尝试恢复或重置节点，具体请参见重置节点。",
+            "content_hash": "579b8fd0bad78e8f00859f3e1609226b302356c3a1bb5eee214ff090aef96335",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.79808116
+          },
+          {
+            "id": "QUAG6SLXXOWY4TGYAA3XCPFJK6",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r14 集群/节点 / Node节点",
+            "start_line": 114,
+            "end_line": 119,
+            "content": "分类：Node节点\n高危操作：重装操作系统\n导致后果：节点组件被删除，节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "c30112cfd5546dd19aa110c816f1739d916af810e7abd3fc7d1502dc34dd5e52",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.795493
+          },
+          {
+            "id": "274FGZVXA73JVT5DSNXG7R4AKE",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r04 集群/节点 / 控制节点",
+            "start_line": 36,
+            "end_line": 41,
+            "content": "分类：控制节点\n高危操作：重装操作系统\n导致后果：控制节点组件被删除\n误操作后解决方案：不可恢复。",
+            "content_hash": "85df2bf6103fb27facabb79b1b8c01bfa032c818b4a8fa3dbea860c7b2ae0bc5",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.79341805
+          },
+          {
+            "id": "WU2TZZNKLVLIWI6CHKLMVKEHNM",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r21 集群/节点 / Node节点",
+            "start_line": 190,
+            "end_line": 195,
+            "content": "分类：Node节点\n高危操作：对节点进行磁盘格式化或分区，包括系统盘、容器运行时和kubelet组件使用的数据盘\n导致后果：可能导致节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "7a1ab9b1e7fece916c782d4344e7303cb2f0abcd71e1ac49f87b029079b80cb7",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7899735
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "6107ec290ab0dcaaba2670592b067494"
+      },
+      "started_at": "2026-09-19T21:48:41.088052+00:00",
+      "ended_at": "2026-09-19T21:48:41.105313+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoyNg=="
+    },
+    {
+      "id": "cce-q005",
+      "question": "自行把控制节点的 etcd 升了版本，集群出问题后怎么办？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r05"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r05",
+        "cce-t1-r09",
+        "cce-t1-r08",
+        "cce-t1-r07",
+        "cce-t1-r02"
+      ],
+      "latency_ms": 13.218000007327646,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "5JAXJXPC354A2HMCOE6D6JKQOW",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r05 集群/节点 / 控制节点",
+            "start_line": 43,
+            "end_line": 48,
+            "content": "分类：控制节点\n高危操作：自行升级控制节点或者etcd组件版本\n导致后果：可能导致集群无法使用\n误操作后解决方案：回退到原始版本。",
+            "content_hash": "5aafe67e29f9c31340f806c1d58e68b0584ef0b2934f59d6e7c1884537de6ee4",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.84376335
+          },
+          {
+            "id": "FWFO3HYYZQMXQR5M6MUDFEMSOD",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r09 集群/节点 / 控制节点",
+            "start_line": 71,
+            "end_line": 76,
+            "content": "分类：控制节点\n高危操作：自行更换控制节点或etcd证书\n导致后果：可能导致集群不可用\n误操作后解决方案：不可恢复。",
+            "content_hash": "8c8dc64ac031086de16e3df57be326a40bc35b5af0cdeec2caa7946e4c710595",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8360014
+          },
+          {
+            "id": "JPOR4PIIYKFIOHU4UWWOAXGTXY",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r08 集群/节点 / 控制节点",
+            "start_line": 64,
+            "end_line": 69,
+            "content": "分类：控制节点\n高危操作：自行修改核心组件（etcd、kube-apiserver、docker等）参数\n导致后果：可能导致控制节点不可用\n误操作后解决方案：按照推荐配置参数恢复，详情请参见修改CCE集群配置。",
+            "content_hash": "4dd5af5f3b290f2aa8f289818399d8b33c2bacc470d1510f7bec06a65c14da5b",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8264024
+          },
+          {
+            "id": "3AN4DP22X6DTGYMMIYOHO5WNLN",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r07 集群/节点 / 控制节点",
+            "start_line": 57,
+            "end_line": 62,
+            "content": "分类：控制节点\n高危操作：更改节点IP\n导致后果：该控制节点不可用\n误操作后解决方案：改回原IP。",
+            "content_hash": "e55cb7ea957529992c3e7f580375b84cfbf2ef009ba7c2eb51ef9d00b7d55c8f",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.818912
+          },
+          {
+            "id": "KEY3FPO4OBOW4K6F2TNDIXPT6J",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r02 集群/节点 / 控制节点",
+            "start_line": 18,
+            "end_line": 27,
+            "content": "分类：控制节点\n高危操作：修改集群控制节点安全组\n\n 说明：\n\n控制节点安全组命名规则：集群名称-cce-control-随机数\n导致后果：可能导致控制节点无法使用\n误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。",
+            "content_hash": "0b7996d9fb8ba0f179499a3726a07bbb9a7b0ff2c3e43a544dda91bce55f39b5",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.814448
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "dfee89217c615dfc26aa7950d2da7516"
+      },
+      "started_at": "2026-09-19T21:48:41.129050+00:00",
+      "ended_at": "2026-09-19T21:48:41.142271+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoyNw=="
+    },
+    {
+      "id": "cce-q008",
+      "question": "手工调过 kube-apiserver 和 etcd 的启动参数后控制节点异常，应该恢复到什么配置？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r08"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r22",
+        "cce-t1-r08",
+        "cce-t1-r24",
+        "cce-t1-r17",
+        "cce-t1-r21"
+      ],
+      "latency_ms": 12.236334005137905,
+      "metrics": {
+        "recall_at_1": 0.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.5,
+        "ndcg_at_5": 0.6309297535714575
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "DL52JJRFWSTU7JHQRM2TUYHFFD",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r22 集群/节点 / Node节点",
+            "start_line": 197,
+            "end_line": 202,
+            "content": "分类：Node节点\n高危操作：在节点上安装自己的其他软件\n导致后果：导致安装在节点上的Kubernetes组件异常，节点状态变成不可用，无法部署工作负载到此节点\n误操作后解决方案：卸载已安装软件，尝试恢复或重置节点，具体请参见重置节点。",
+            "content_hash": "579b8fd0bad78e8f00859f3e1609226b302356c3a1bb5eee214ff090aef96335",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8040565
+          },
+          {
+            "id": "JPOR4PIIYKFIOHU4UWWOAXGTXY",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r08 集群/节点 / 控制节点",
+            "start_line": 64,
+            "end_line": 69,
+            "content": "分类：控制节点\n高危操作：自行修改核心组件（etcd、kube-apiserver、docker等）参数\n导致后果：可能导致控制节点不可用\n误操作后解决方案：按照推荐配置参数恢复，详情请参见修改CCE集群配置。",
+            "content_hash": "4dd5af5f3b290f2aa8f289818399d8b33c2bacc470d1510f7bec06a65c14da5b",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.79981625
+          },
+          {
+            "id": "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r24 集群/节点 / Node节点",
+            "start_line": 211,
+            "end_line": 216,
+            "content": "分类：Node节点\n高危操作：删除节点上的cce-pause等系统镜像\n导致后果：导致无法正常创建容器，且无法拉取系统镜像\n误操作后解决方案：请从其他正常节点复制该镜像恢复",
+            "content_hash": "5df7d8da94db00fc51e75ca9d7713360719f3bbd4a81e31443548abfc991ca80",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.78830826
+          },
+          {
+            "id": "X2AEYRDOYZPUNS4P2IRZNMQ7FB",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r17 集群/节点 / Node节点",
+            "start_line": 139,
+            "end_line": 148,
+            "content": "分类：Node节点\n高危操作：自行修改核心组件（kubelet、kube-proxy等）参数\n导致后果：可能导致节点不可用、修改安全相关配置导致组件不安全等\n\n即使修改完后当时未出现上述情况，在后续集群升级时还可能导致自行修改的参数被重置的问题，详情请参见注意事项。\n误操作后解决方案：如果出现节点不可用问题，建议按照推荐配置参数恢复，详情请参见节点池配置管理。\n\n同时，建议您通过CCE控制台修改相关配置，以便在集群升级时自动继承。",
+            "content_hash": "3439d6785eabec4c043fccdc853cb906615a2a652a798fafaf77ed90953e2d26",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.78698814
+          },
+          {
+            "id": "WU2TZZNKLVLIWI6CHKLMVKEHNM",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r21 集群/节点 / Node节点",
+            "start_line": 190,
+            "end_line": 195,
+            "content": "分类：Node节点\n高危操作：对节点进行磁盘格式化或分区，包括系统盘、容器运行时和kubelet组件使用的数据盘\n导致后果：可能导致节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "7a1ab9b1e7fece916c782d4344e7303cb2f0abcd71e1ac49f87b029079b80cb7",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7837281
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "90bb77c19d8517863b2ebda9acdc09de"
+      },
+      "started_at": "2026-09-19T21:48:41.163612+00:00",
+      "ended_at": "2026-09-19T21:48:41.175851+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoyOA=="
+    },
+    {
+      "id": "cce-q009",
+      "question": "自行给控制节点换了一套 etcd 证书导致集群不可用，能恢复吗？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r09"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r09",
+        "cce-t1-r05",
+        "cce-t1-r08",
+        "cce-t1-r04",
+        "cce-t1-r03"
+      ],
+      "latency_ms": 11.46100000187289,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "FWFO3HYYZQMXQR5M6MUDFEMSOD",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r09 集群/节点 / 控制节点",
+            "start_line": 71,
+            "end_line": 76,
+            "content": "分类：控制节点\n高危操作：自行更换控制节点或etcd证书\n导致后果：可能导致集群不可用\n误操作后解决方案：不可恢复。",
+            "content_hash": "8c8dc64ac031086de16e3df57be326a40bc35b5af0cdeec2caa7946e4c710595",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.83634186
+          },
+          {
+            "id": "5JAXJXPC354A2HMCOE6D6JKQOW",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r05 集群/节点 / 控制节点",
+            "start_line": 43,
+            "end_line": 48,
+            "content": "分类：控制节点\n高危操作：自行升级控制节点或者etcd组件版本\n导致后果：可能导致集群无法使用\n误操作后解决方案：回退到原始版本。",
+            "content_hash": "5aafe67e29f9c31340f806c1d58e68b0584ef0b2934f59d6e7c1884537de6ee4",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8014376
+          },
+          {
+            "id": "JPOR4PIIYKFIOHU4UWWOAXGTXY",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r08 集群/节点 / 控制节点",
+            "start_line": 64,
+            "end_line": 69,
+            "content": "分类：控制节点\n高危操作：自行修改核心组件（etcd、kube-apiserver、docker等）参数\n导致后果：可能导致控制节点不可用\n误操作后解决方案：按照推荐配置参数恢复，详情请参见修改CCE集群配置。",
+            "content_hash": "4dd5af5f3b290f2aa8f289818399d8b33c2bacc470d1510f7bec06a65c14da5b",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.79791844
+          },
+          {
+            "id": "274FGZVXA73JVT5DSNXG7R4AKE",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r04 集群/节点 / 控制节点",
+            "start_line": 36,
+            "end_line": 41,
+            "content": "分类：控制节点\n高危操作：重装操作系统\n导致后果：控制节点组件被删除\n误操作后解决方案：不可恢复。",
+            "content_hash": "85df2bf6103fb27facabb79b1b8c01bfa032c818b4a8fa3dbea860c7b2ae0bc5",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7886841
+          },
+          {
+            "id": "OAVSEEKGJFNKIVK6L2CEAEDSOO",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r03 集群/节点 / 控制节点",
+            "start_line": 29,
+            "end_line": 34,
+            "content": "分类：控制节点\n高危操作：节点到期或被销毁\n导致后果：该控制节点不可用\n误操作后解决方案：不可恢复。",
+            "content_hash": "723a15e3285deeb7db2b8b375df74f565011eef6fdccd3c5f9c13a1eaa7c7a5d",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7879907
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "f81d92d2859906d452d1a1c0b92a1c85"
+      },
+      "started_at": "2026-09-19T21:48:41.198469+00:00",
+      "ended_at": "2026-09-19T21:48:41.209933+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoyOQ=="
+    },
+    {
+      "id": "cce-q012",
+      "question": "工作节点被误删了，文档对恢复是怎么说的？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r12"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r24",
+        "cce-t1-r12",
+        "cce-t1-r13",
+        "cce-t1-r04",
+        "cce-t1-r14"
+      ],
+      "latency_ms": 10.400750004919246,
+      "metrics": {
+        "recall_at_1": 0.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.5,
+        "ndcg_at_5": 0.6309297535714575
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r24 集群/节点 / Node节点",
+            "start_line": 211,
+            "end_line": 216,
+            "content": "分类：Node节点\n高危操作：删除节点上的cce-pause等系统镜像\n导致后果：导致无法正常创建容器，且无法拉取系统镜像\n误操作后解决方案：请从其他正常节点复制该镜像恢复",
+            "content_hash": "5df7d8da94db00fc51e75ca9d7713360719f3bbd4a81e31443548abfc991ca80",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.76780975
+          },
+          {
+            "id": "YJXSXOGSS2ZWKPTGPNGDLLVIMR",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r12 集群/节点 / Node节点",
+            "start_line": 100,
+            "end_line": 105,
+            "content": "分类：Node节点\n高危操作：节点被删除\n导致后果：该节点不可用\n误操作后解决方案：不可恢复。",
+            "content_hash": "634eb85436fb9cac1bb9172650095d019852de2b6e99608dc45acdf1bae1250c",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.76435673
+          },
+          {
+            "id": "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r13 集群/节点 / Node节点",
+            "start_line": 107,
+            "end_line": 112,
+            "content": "分类：Node节点\n高危操作：节点使用的弹性网卡被删除\n导致后果：该节点上的容器网络不可用\n误操作后解决方案：不可恢复。",
+            "content_hash": "5c7daa3178d37b1d7e0f7d4e063b26e3f19ff2b9212d56cdfa3532efba5f6ade",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.75517595
+          },
+          {
+            "id": "274FGZVXA73JVT5DSNXG7R4AKE",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r04 集群/节点 / 控制节点",
+            "start_line": 36,
+            "end_line": 41,
+            "content": "分类：控制节点\n高危操作：重装操作系统\n导致后果：控制节点组件被删除\n误操作后解决方案：不可恢复。",
+            "content_hash": "85df2bf6103fb27facabb79b1b8c01bfa032c818b4a8fa3dbea860c7b2ae0bc5",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7549224
+          },
+          {
+            "id": "QUAG6SLXXOWY4TGYAA3XCPFJK6",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r14 集群/节点 / Node节点",
+            "start_line": 114,
+            "end_line": 119,
+            "content": "分类：Node节点\n高危操作：重装操作系统\n导致后果：节点组件被删除，节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "c30112cfd5546dd19aa110c816f1739d916af810e7abd3fc7d1502dc34dd5e52",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7531618
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "cd824577f72fb2fe4f4676f26c49bf39"
+      },
+      "started_at": "2026-09-19T21:48:41.230333+00:00",
+      "ended_at": "2026-09-19T21:48:41.240736+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjozMA=="
+    },
+    {
+      "id": "cce-q014",
+      "question": "普通 Node 节点被重新安装操作系统后组件丢失，应采取什么恢复动作？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r14"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r22",
+        "cce-t1-r14",
+        "cce-t1-r24",
+        "cce-t1-r12",
+        "cce-t1-r13"
+      ],
+      "latency_ms": 10.788874991703779,
+      "metrics": {
+        "recall_at_1": 0.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.5,
+        "ndcg_at_5": 0.6309297535714575
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "DL52JJRFWSTU7JHQRM2TUYHFFD",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r22 集群/节点 / Node节点",
+            "start_line": 197,
+            "end_line": 202,
+            "content": "分类：Node节点\n高危操作：在节点上安装自己的其他软件\n导致后果：导致安装在节点上的Kubernetes组件异常，节点状态变成不可用，无法部署工作负载到此节点\n误操作后解决方案：卸载已安装软件，尝试恢复或重置节点，具体请参见重置节点。",
+            "content_hash": "579b8fd0bad78e8f00859f3e1609226b302356c3a1bb5eee214ff090aef96335",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.83681107
+          },
+          {
+            "id": "QUAG6SLXXOWY4TGYAA3XCPFJK6",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r14 集群/节点 / Node节点",
+            "start_line": 114,
+            "end_line": 119,
+            "content": "分类：Node节点\n高危操作：重装操作系统\n导致后果：节点组件被删除，节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "c30112cfd5546dd19aa110c816f1739d916af810e7abd3fc7d1502dc34dd5e52",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8338126
+          },
+          {
+            "id": "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r24 集群/节点 / Node节点",
+            "start_line": 211,
+            "end_line": 216,
+            "content": "分类：Node节点\n高危操作：删除节点上的cce-pause等系统镜像\n导致后果：导致无法正常创建容器，且无法拉取系统镜像\n误操作后解决方案：请从其他正常节点复制该镜像恢复",
+            "content_hash": "5df7d8da94db00fc51e75ca9d7713360719f3bbd4a81e31443548abfc991ca80",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8310888
+          },
+          {
+            "id": "YJXSXOGSS2ZWKPTGPNGDLLVIMR",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r12 集群/节点 / Node节点",
+            "start_line": 100,
+            "end_line": 105,
+            "content": "分类：Node节点\n高危操作：节点被删除\n导致后果：该节点不可用\n误操作后解决方案：不可恢复。",
+            "content_hash": "634eb85436fb9cac1bb9172650095d019852de2b6e99608dc45acdf1bae1250c",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.83027756
+          },
+          {
+            "id": "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r13 集群/节点 / Node节点",
+            "start_line": 107,
+            "end_line": 112,
+            "content": "分类：Node节点\n高危操作：节点使用的弹性网卡被删除\n导致后果：该节点上的容器网络不可用\n误操作后解决方案：不可恢复。",
+            "content_hash": "5c7daa3178d37b1d7e0f7d4e063b26e3f19ff2b9212d56cdfa3532efba5f6ade",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8285291
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "2ef836418d862abed0cd95dea0a7cdb6"
+      },
+      "started_at": "2026-09-19T21:48:41.261922+00:00",
+      "ended_at": "2026-09-19T21:48:41.272713+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjozMQ=="
+    },
+    {
+      "id": "cce-q015",
+      "question": "可以直接在 CCE 工作节点执行 yum update 更新内核和运行时吗？出问题怎么办？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r15"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r15",
+        "cce-t2-r07",
+        "cce-t1-r22",
+        "cce-t1-r23",
+        "cce-t1-r18"
+      ],
+      "latency_ms": 11.175124993314967,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "GVSV4MVQ7ITNOLT4AUXSASIFL3",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r15 集群/节点 / Node节点",
+            "start_line": 121,
+            "end_line": 130,
+            "content": "分类：Node节点\n高危操作：升级内核或容器平台依赖组件（如openvswitch/ipvlan/docker/containerd）\n导致后果：可能导致节点无法使用或网络异常\n\n 说明：\n\n节点运行依赖系统内核版本，如非必要，请不要使用yum update命令更新或重装节点的操作系统内核（使用原镜像或其它镜像重装均属高危操作）\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "40ecd30f1b4167c5a88ef3d84f80ccdb1708582c3024af49a023c5f7c95d0181",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.818771
+          },
+          {
+            "id": "GKOROF7KVEPGLLUB2RKFBDEL4F",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t2-r07 网络 / 网络",
+            "start_line": 292,
+            "end_line": 300,
+            "content": "高危操作：容器隧道网络集群节点升级内核或升级openvswitch\n导致后果：容器网络不通\n\n 说明：\n\n容器隧道网络集群数据面组件采用的是华为优化后的openvswitch组件，不支持自行升级为操作系统自带的openvswitch。\n误操作后解决方案：恢复方式请参见如何解决yum update升级操作系统导致容器网络不可用问题？",
+            "content_hash": "ca994cae09b8aa264e2f02e522c1cb8c0f5c8795e7b672a5850b810d129f3dd3",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7903149
+          },
+          {
+            "id": "DL52JJRFWSTU7JHQRM2TUYHFFD",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r22 集群/节点 / Node节点",
+            "start_line": 197,
+            "end_line": 202,
+            "content": "分类：Node节点\n高危操作：在节点上安装自己的其他软件\n导致后果：导致安装在节点上的Kubernetes组件异常，节点状态变成不可用，无法部署工作负载到此节点\n误操作后解决方案：卸载已安装软件，尝试恢复或重置节点，具体请参见重置节点。",
+            "content_hash": "579b8fd0bad78e8f00859f3e1609226b302356c3a1bb5eee214ff090aef96335",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.789009
+          },
+          {
+            "id": "IZJEZRRCGV2KA7YAJZEXOCTH6S",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r23 集群/节点 / Node节点",
+            "start_line": 204,
+            "end_line": 209,
+            "content": "分类：Node节点\n高危操作：修改NetworkManager的配置\n导致后果：节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "ed3ffd9e4af954bb903ce87c865e0508812fc566a8358c4564aa3377dedca813",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.788939
+          },
+          {
+            "id": "B7IUL7OSULLCR2EGTBHFHLFHZK",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r18 集群/节点 / Node节点",
+            "start_line": 150,
+            "end_line": 155,
+            "content": "分类：Node节点\n高危操作：修改操作系统配置\n导致后果：可能导致节点不可用\n误操作后解决方案：尝试还原配置项或重置节点，具体请参见重置节点。",
+            "content_hash": "4047821222b11a1433ffa1e73beb2d44521935ff70493d08ad64959b20dc5633",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.785745
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "27dfc74869d7ed33375334ce81731323"
+      },
+      "started_at": "2026-09-19T21:48:41.294832+00:00",
+      "ended_at": "2026-09-19T21:48:41.306010+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjozMg=="
+    },
+    {
+      "id": "cce-q017",
+      "question": "直接改 kubelet 和 kube-proxy 参数以后，当时正常，升级集群时还会有什么风险？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r17"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r17",
+        "cce-t1-r08",
+        "cce-t1-r01",
+        "cce-t1-r22",
+        "cce-t4-r10"
+      ],
+      "latency_ms": 11.290041991742328,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "X2AEYRDOYZPUNS4P2IRZNMQ7FB",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r17 集群/节点 / Node节点",
+            "start_line": 139,
+            "end_line": 148,
+            "content": "分类：Node节点\n高危操作：自行修改核心组件（kubelet、kube-proxy等）参数\n导致后果：可能导致节点不可用、修改安全相关配置导致组件不安全等\n\n即使修改完后当时未出现上述情况，在后续集群升级时还可能导致自行修改的参数被重置的问题，详情请参见注意事项。\n误操作后解决方案：如果出现节点不可用问题，建议按照推荐配置参数恢复，详情请参见节点池配置管理。\n\n同时，建议您通过CCE控制台修改相关配置，以便在集群升级时自动继承。",
+            "content_hash": "3439d6785eabec4c043fccdc853cb906615a2a652a798fafaf77ed90953e2d26",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8169162
+          },
+          {
+            "id": "JPOR4PIIYKFIOHU4UWWOAXGTXY",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r08 集群/节点 / 控制节点",
+            "start_line": 64,
+            "end_line": 69,
+            "content": "分类：控制节点\n高危操作：自行修改核心组件（etcd、kube-apiserver、docker等）参数\n导致后果：可能导致控制节点不可用\n误操作后解决方案：按照推荐配置参数恢复，详情请参见修改CCE集群配置。",
+            "content_hash": "4dd5af5f3b290f2aa8f289818399d8b33c2bacc470d1510f7bec06a65c14da5b",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8071804
+          },
+          {
+            "id": "YVX4B6IBMDWBOWW3WAW3ZILBUC",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r01 集群/节点 / 集群",
+            "start_line": 9,
+            "end_line": 16,
+            "content": "分类：集群\n高危操作：通过kube-apiserver一次性查询大量数据。例如一次性发起大量LIST请求，或单个LIST请求查询大量数据。\n导致后果：控制节点内存负载过高，影响系统稳定性。\n误操作后解决方案：停止大批量查询行为。\n\n如果需要增强集群抗过载能力，您可以变更集群规格至更大的规模，详情请参见变更集群规格。",
+            "content_hash": "5203bb0ab412ab1ea2f4bdcd451a23cf868629f94c9b6d0f438978cad845e385",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8016578
+          },
+          {
+            "id": "DL52JJRFWSTU7JHQRM2TUYHFFD",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r22 集群/节点 / Node节点",
+            "start_line": 197,
+            "end_line": 202,
+            "content": "分类：Node节点\n高危操作：在节点上安装自己的其他软件\n导致后果：导致安装在节点上的Kubernetes组件异常，节点状态变成不可用，无法部署工作负载到此节点\n误操作后解决方案：卸载已安装软件，尝试恢复或重置节点，具体请参见重置节点。",
+            "content_hash": "579b8fd0bad78e8f00859f3e1609226b302356c3a1bb5eee214ff090aef96335",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7994062
+          },
+          {
+            "id": "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r10 负载均衡 / 负载均衡",
+            "start_line": 376,
+            "end_line": 381,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器转发策略，添加、删除转发规则\n导致后果：导致Service/Ingress访问不通。\n如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "f5995e38cd71284bf2f658a272a5543f6e959e57c5c85274c1eb4d694dfb54a4",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7957939
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "1203fdf30d46e208c994e83d8443a70e"
+      },
+      "started_at": "2026-09-19T21:48:41.329827+00:00",
+      "ended_at": "2026-09-19T21:48:41.341119+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjozMw=="
+    },
+    {
+      "id": "cce-q018",
+      "question": "修改了节点操作系统配置后节点不可用，可以尝试哪两种处理方式？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r18"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r18",
+        "cce-t1-r23",
+        "cce-t1-r22",
+        "cce-t1-r15",
+        "cce-t1-r21"
+      ],
+      "latency_ms": 12.47950000106357,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "B7IUL7OSULLCR2EGTBHFHLFHZK",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r18 集群/节点 / Node节点",
+            "start_line": 150,
+            "end_line": 155,
+            "content": "分类：Node节点\n高危操作：修改操作系统配置\n导致后果：可能导致节点不可用\n误操作后解决方案：尝试还原配置项或重置节点，具体请参见重置节点。",
+            "content_hash": "4047821222b11a1433ffa1e73beb2d44521935ff70493d08ad64959b20dc5633",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.79693437
+          },
+          {
+            "id": "IZJEZRRCGV2KA7YAJZEXOCTH6S",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r23 集群/节点 / Node节点",
+            "start_line": 204,
+            "end_line": 209,
+            "content": "分类：Node节点\n高危操作：修改NetworkManager的配置\n导致后果：节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "ed3ffd9e4af954bb903ce87c865e0508812fc566a8358c4564aa3377dedca813",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.78748345
+          },
+          {
+            "id": "DL52JJRFWSTU7JHQRM2TUYHFFD",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r22 集群/节点 / Node节点",
+            "start_line": 197,
+            "end_line": 202,
+            "content": "分类：Node节点\n高危操作：在节点上安装自己的其他软件\n导致后果：导致安装在节点上的Kubernetes组件异常，节点状态变成不可用，无法部署工作负载到此节点\n误操作后解决方案：卸载已安装软件，尝试恢复或重置节点，具体请参见重置节点。",
+            "content_hash": "579b8fd0bad78e8f00859f3e1609226b302356c3a1bb5eee214ff090aef96335",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7847158
+          },
+          {
+            "id": "GVSV4MVQ7ITNOLT4AUXSASIFL3",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r15 集群/节点 / Node节点",
+            "start_line": 121,
+            "end_line": 130,
+            "content": "分类：Node节点\n高危操作：升级内核或容器平台依赖组件（如openvswitch/ipvlan/docker/containerd）\n导致后果：可能导致节点无法使用或网络异常\n\n 说明：\n\n节点运行依赖系统内核版本，如非必要，请不要使用yum update命令更新或重装节点的操作系统内核（使用原镜像或其它镜像重装均属高危操作）\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "40ecd30f1b4167c5a88ef3d84f80ccdb1708582c3024af49a023c5f7c95d0181",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7823764
+          },
+          {
+            "id": "WU2TZZNKLVLIWI6CHKLMVKEHNM",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r21 集群/节点 / Node节点",
+            "start_line": 190,
+            "end_line": 195,
+            "content": "分类：Node节点\n高危操作：对节点进行磁盘格式化或分区，包括系统盘、容器运行时和kubelet组件使用的数据盘\n导致后果：可能导致节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "7a1ab9b1e7fece916c782d4344e7303cb2f0abcd71e1ac49f87b029079b80cb7",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7810577
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "bc6846db9de4279e99493f57d1f212b5"
+      },
+      "started_at": "2026-09-19T21:48:41.364420+00:00",
+      "ended_at": "2026-09-19T21:48:41.376902+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjozNA=="
+    },
+    {
+      "id": "cce-q023",
+      "question": "改动 NetworkManager 的配置后节点失联，文档建议怎么处理？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r23"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r23",
+        "cce-t1-r11",
+        "cce-t1-r18",
+        "cce-t1-r13",
+        "cce-t1-r22"
+      ],
+      "latency_ms": 13.42925000062678,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "IZJEZRRCGV2KA7YAJZEXOCTH6S",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r23 集群/节点 / Node节点",
+            "start_line": 204,
+            "end_line": 209,
+            "content": "分类：Node节点\n高危操作：修改NetworkManager的配置\n导致后果：节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "ed3ffd9e4af954bb903ce87c865e0508812fc566a8358c4564aa3377dedca813",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.818997
+          },
+          {
+            "id": "6OQW65RZHH6R72YGFYOSIZVRRP",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r11 集群/节点 / Node节点",
+            "start_line": 89,
+            "end_line": 98,
+            "content": "分类：Node节点\n高危操作：修改节点DNS配置（/etc/resolv.conf）\n导致后果：导致内部域名无法正常访问，可能出现插件异常、节点重置升级等基本功能异常\n\n 说明：\n\n如果业务需要使用自建DNS，可以在工作负载中配置DNS，请勿修改节点本身的DNS地址，详情请参见工作负载DNS配置说明。\n误操作后解决方案：参考新建节点中的DNS配置还原。",
+            "content_hash": "92f9fca2f546380a7b99f6055b0938b7df0fad23fa934ec92e7e3e164ae88f5e",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7861898
+          },
+          {
+            "id": "B7IUL7OSULLCR2EGTBHFHLFHZK",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r18 集群/节点 / Node节点",
+            "start_line": 150,
+            "end_line": 155,
+            "content": "分类：Node节点\n高危操作：修改操作系统配置\n导致后果：可能导致节点不可用\n误操作后解决方案：尝试还原配置项或重置节点，具体请参见重置节点。",
+            "content_hash": "4047821222b11a1433ffa1e73beb2d44521935ff70493d08ad64959b20dc5633",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7849078
+          },
+          {
+            "id": "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r13 集群/节点 / Node节点",
+            "start_line": 107,
+            "end_line": 112,
+            "content": "分类：Node节点\n高危操作：节点使用的弹性网卡被删除\n导致后果：该节点上的容器网络不可用\n误操作后解决方案：不可恢复。",
+            "content_hash": "5c7daa3178d37b1d7e0f7d4e063b26e3f19ff2b9212d56cdfa3532efba5f6ade",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7842201
+          },
+          {
+            "id": "DL52JJRFWSTU7JHQRM2TUYHFFD",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r22 集群/节点 / Node节点",
+            "start_line": 197,
+            "end_line": 202,
+            "content": "分类：Node节点\n高危操作：在节点上安装自己的其他软件\n导致后果：导致安装在节点上的Kubernetes组件异常，节点状态变成不可用，无法部署工作负载到此节点\n误操作后解决方案：卸载已安装软件，尝试恢复或重置节点，具体请参见重置节点。",
+            "content_hash": "579b8fd0bad78e8f00859f3e1609226b302356c3a1bb5eee214ff090aef96335",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.78362775
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "e5c652870a9caf627ad3c50a3c30851c"
+      },
+      "started_at": "2026-09-19T21:48:41.401731+00:00",
+      "ended_at": "2026-09-19T21:48:41.415163+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjozNQ=="
+    },
+    {
+      "id": "cce-q025",
+      "question": "绕过节点池，在 ECS 控制台改节点规格，为什么弹性扩缩容数量可能不符合预期？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r25"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r25",
+        "cce-t1-r13",
+        "cce-t1-r17",
+        "cce-t1-r18",
+        "cce-t1-r23"
+      ],
+      "latency_ms": 12.737375000142492,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "ROOOBBW2HGQXNAOMJHXYYQE2LZ",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r25 集群/节点 / Node节点",
+            "start_line": 218,
+            "end_line": 223,
+            "content": "分类：Node节点\n高危操作：在ECS侧对节点池下的节点进行规格变更\n导致后果：节点的规格与节点池定义的规格不一致，导致在弹性扩缩容时出现非预期现象（多扩或者少扩）\n误操作后解决方案：重新将节点规格变更为节点池下定义的规格，或者删除该节点重新扩容。",
+            "content_hash": "d97398fcf0feb4218dccb38fa7d29082004962244b85260ca20098c5e724174e",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.79799104
+          },
+          {
+            "id": "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r13 集群/节点 / Node节点",
+            "start_line": 107,
+            "end_line": 112,
+            "content": "分类：Node节点\n高危操作：节点使用的弹性网卡被删除\n导致后果：该节点上的容器网络不可用\n误操作后解决方案：不可恢复。",
+            "content_hash": "5c7daa3178d37b1d7e0f7d4e063b26e3f19ff2b9212d56cdfa3532efba5f6ade",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7470641
+          },
+          {
+            "id": "X2AEYRDOYZPUNS4P2IRZNMQ7FB",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r17 集群/节点 / Node节点",
+            "start_line": 139,
+            "end_line": 148,
+            "content": "分类：Node节点\n高危操作：自行修改核心组件（kubelet、kube-proxy等）参数\n导致后果：可能导致节点不可用、修改安全相关配置导致组件不安全等\n\n即使修改完后当时未出现上述情况，在后续集群升级时还可能导致自行修改的参数被重置的问题，详情请参见注意事项。\n误操作后解决方案：如果出现节点不可用问题，建议按照推荐配置参数恢复，详情请参见节点池配置管理。\n\n同时，建议您通过CCE控制台修改相关配置，以便在集群升级时自动继承。",
+            "content_hash": "3439d6785eabec4c043fccdc853cb906615a2a652a798fafaf77ed90953e2d26",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.74407375
+          },
+          {
+            "id": "B7IUL7OSULLCR2EGTBHFHLFHZK",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r18 集群/节点 / Node节点",
+            "start_line": 150,
+            "end_line": 155,
+            "content": "分类：Node节点\n高危操作：修改操作系统配置\n导致后果：可能导致节点不可用\n误操作后解决方案：尝试还原配置项或重置节点，具体请参见重置节点。",
+            "content_hash": "4047821222b11a1433ffa1e73beb2d44521935ff70493d08ad64959b20dc5633",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7415106
+          },
+          {
+            "id": "IZJEZRRCGV2KA7YAJZEXOCTH6S",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r23 集群/节点 / Node节点",
+            "start_line": 204,
+            "end_line": 209,
+            "content": "分类：Node节点\n高危操作：修改NetworkManager的配置\n导致后果：节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "ed3ffd9e4af954bb903ce87c865e0508812fc566a8358c4564aa3377dedca813",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.74045587
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "07224969bdddb56bc97372620a206a94"
+      },
+      "started_at": "2026-09-19T21:48:41.437711+00:00",
+      "ended_at": "2026-09-19T21:48:41.450451+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjozNg=="
+    },
+    {
+      "id": "cce-q028",
+      "question": "把 IPv4 转发开关设成 0 后网络不通，应改成什么值？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "网络",
+      "relevant_evidence_ids": [
+        "cce-t2-r01"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r03",
+        "cce-t2-r01",
+        "cce-t2-r02",
+        "cce-t2-r03",
+        "cce-t2-r06"
+      ],
+      "latency_ms": 11.692500003846362,
+      "metrics": {
+        "recall_at_1": 0.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.5,
+        "ndcg_at_5": 0.6309297535714575
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r03 负载均衡 / 负载均衡",
+            "start_line": 328,
+            "end_line": 333,
+            "content": "高危操作：通过ELB的控制台修改ELB的IPv4私有IP\n导致后果：基于IPv4私有IP进行私网流量转发功能会出现中断\nService/Ingress的YAML中status字段下的IP变化\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "b4188c9a3b36a3fd13a10ae9ba5708e6c561a929f8853839e926fdafc20f9ff0",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7991272
+          },
+          {
+            "id": "Q7JO7CXVIM56R2KCN2T5QK3UON",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t2-r01 网络 / 网络",
+            "start_line": 250,
+            "end_line": 254,
+            "content": "高危操作：修改内核参数net.ipv4.ip_forward=0\n导致后果：网络不通\n误操作后解决方案：修改内核参数为 net.ipv4.ip_forward=1",
+            "content_hash": "9da3f1575700d417a9b302edb8115656ef877023ac432b13a3dd9645214e51c6",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7921344
+          },
+          {
+            "id": "APWPDQMZVOJAEAOI36GTI52MEW",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t2-r02 网络 / 网络",
+            "start_line": 256,
+            "end_line": 260,
+            "content": "高危操作：修改内核参数net.ipv4.tcp_tw_recycle=1\n导致后果：导致nat异常\n误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_recycle=0",
+            "content_hash": "7e515f30d0afc72849ced4ed1ac0619e31cdc73dd2c78bb136437873f7400e0a",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7874687
+          },
+          {
+            "id": "SR7ENK3HNC6YCW3FHRUNNO3YOL",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t2-r03 网络 / 网络",
+            "start_line": 262,
+            "end_line": 266,
+            "content": "高危操作：修改内核参数net.ipv4.tcp_tw_reuse=1\n导致后果：导致网络异常\n误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_reuse=0",
+            "content_hash": "96ae952a9953578c78a36aee3f1906d381251bae37d221f49633e51813f840f4",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.78678656
+          },
+          {
+            "id": "24Z7UL56FJDKLWXWM7RRRBWG4W",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t2-r06 网络 / 网络",
+            "start_line": 282,
+            "end_line": 290,
+            "content": "高危操作：启动iptables防火墙\n导致后果：CCE默认不开启iptables防火墙，开启后可能造成网络不通\n\n 说明：\n\n不建议开启iptables防火墙。如必须启动iptables防火墙，请在测试环境中确认/etc/sysconfig/iptables和/etc/sysconfig/ip6tables中配置的规则是否会对网络连通性造成影响。\n误操作后解决方案：关闭iptables防火墙，并检查/etc/sysconfig/iptables和/etc/sysconfig/ip6tables中配置的规则。",
+            "content_hash": "4c54e8f4e3bf83e3618c89654bc5b32acd67168b2146d937623e46625cdc6a24",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.786435
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "a45ab9470e4cda77413d78b9451cd159"
+      },
+      "started_at": "2026-09-19T21:48:41.472996+00:00",
+      "ended_at": "2026-09-19T21:48:41.484692+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjozNw=="
+    },
+    {
+      "id": "cce-q036",
+      "question": "用 hostPath 挂载 /var/lib/docker，为什么系统组件重启后容器可能读不了原内容？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "容器",
+      "relevant_evidence_ids": [
+        "cce-t3-r02"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t3-r02",
+        "cce-t1-r15",
+        "cce-t3-r01",
+        "cce-t1-r22",
+        "cce-t2-r07"
+      ],
+      "latency_ms": 12.735625001369044,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "7U64KZA4GIQSJRLS2WMRN33YNA",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t3-r02 容器 / 容器",
+            "start_line": 310,
+            "end_line": 314,
+            "content": "高危操作：使用hostPath方式挂载系统组件目录，如挂载/var/lib/docker下的文件\n导致后果：系统组件重启后可能会导致节点上的系统组件目录重建，打断了挂载的inode链接，导致容器内无法正常使用挂载内容\n误操作后解决方案：不建议挂载系统组件目录",
+            "content_hash": "089126d28716c88f75759fcdcb4f7eb456df0da6c6d575708e1a3d1c02ff92fb",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.864568
+          },
+          {
+            "id": "GVSV4MVQ7ITNOLT4AUXSASIFL3",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r15 集群/节点 / Node节点",
+            "start_line": 121,
+            "end_line": 130,
+            "content": "分类：Node节点\n高危操作：升级内核或容器平台依赖组件（如openvswitch/ipvlan/docker/containerd）\n导致后果：可能导致节点无法使用或网络异常\n\n 说明：\n\n节点运行依赖系统内核版本，如非必要，请不要使用yum update命令更新或重装节点的操作系统内核（使用原镜像或其它镜像重装均属高危操作）\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "40ecd30f1b4167c5a88ef3d84f80ccdb1708582c3024af49a023c5f7c95d0181",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.80323243
+          },
+          {
+            "id": "F32T7U5WIEY72AKXXE4E2BBB4Y",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t3-r01 容器 / 容器",
+            "start_line": 302,
+            "end_line": 308,
+            "content": "高危操作：将负载设置为特权容器，并直接操作主机的硬件设备，误操作节点系统文件等。\n\n例如将启动命令配置为/usr/sbin/init，在容器内使用systemctl，影响节点/lib路径下的系统文件。\n导致后果：此操作可能会导致节点所有挂载点被卸载，导致节点异常，并且会影响节点上的Pod正常运行及存储插件功能。\n误操作后解决方案：禁止移除节点/lib路径下的挂载点，通过重置节点恢复，具体请参见重置节点。",
+            "content_hash": "998264dc7e6ea6f8023528fc41171080303942c45ddd8cce6450cd3b570e343c",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.79013765
+          },
+          {
+            "id": "DL52JJRFWSTU7JHQRM2TUYHFFD",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r22 集群/节点 / Node节点",
+            "start_line": 197,
+            "end_line": 202,
+            "content": "分类：Node节点\n高危操作：在节点上安装自己的其他软件\n导致后果：导致安装在节点上的Kubernetes组件异常，节点状态变成不可用，无法部署工作负载到此节点\n误操作后解决方案：卸载已安装软件，尝试恢复或重置节点，具体请参见重置节点。",
+            "content_hash": "579b8fd0bad78e8f00859f3e1609226b302356c3a1bb5eee214ff090aef96335",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7868459
+          },
+          {
+            "id": "GKOROF7KVEPGLLUB2RKFBDEL4F",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t2-r07 网络 / 网络",
+            "start_line": 292,
+            "end_line": 300,
+            "content": "高危操作：容器隧道网络集群节点升级内核或升级openvswitch\n导致后果：容器网络不通\n\n 说明：\n\n容器隧道网络集群数据面组件采用的是华为优化后的openvswitch组件，不支持自行升级为操作系统自带的openvswitch。\n误操作后解决方案：恢复方式请参见如何解决yum update升级操作系统导致容器网络不可用问题？",
+            "content_hash": "ca994cae09b8aa264e2f02e522c1cb8c0f5c8795e7b672a5850b810d129f3dd3",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.78682756
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "cd4797f38c818bf1b42e670b2b9c63bb"
+      },
+      "started_at": "2026-09-19T21:48:41.507038+00:00",
+      "ended_at": "2026-09-19T21:48:41.519776+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjozOA=="
+    },
+    {
+      "id": "cce-q037",
+      "question": "在 ELB 控制台直接删除已绑定 CCE 的负载均衡实例会有什么影响？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "负载均衡",
+      "relevant_evidence_ids": [
+        "cce-t4-r01"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r01",
+        "cce-t4-r05",
+        "cce-t4-r02",
+        "cce-t4-r04",
+        "cce-t4-r06"
+      ],
+      "latency_ms": 20.753374992636964,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "XJ3743I2YP4MMAZAH57FHDMD3A",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r01 负载均衡 / 负载均衡",
+            "start_line": 316,
+            "end_line": 320,
+            "content": "高危操作：禁止通过ELB的控制台删除已绑定CCE集群的ELB实例\n导致后果：导致Service/Ingress访问不通。\n误操作后解决方案：不建议删除。",
+            "content_hash": "4459d98b034dced44c1d7b8d39a42fa233dfd359ac984fb49dfa1fc93c18efec",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8499396
+          },
+          {
+            "id": "G3BDOMUT473X7NO3FJTWLWDVPV",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r05 负载均衡 / 负载均衡",
+            "start_line": 341,
+            "end_line": 345,
+            "content": "高危操作：通过ELB的控制台在CCE管理的ELB创建自定义的监听器\n导致后果：若ELB是创建Service/Ingress时自动创建的，在Service/Ingress删除时无法删除ELB的自定义监听器，会导致无法自动删除ELB。\n误操作后解决方案：通过Service/Ingress自动创建监听器，否则需要手动删除ELB。",
+            "content_hash": "1ceb66dae0a041ff1155fbbc5fb6a3fbcdd5efa789d517c7331460ecbb50d414",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8454187
+          },
+          {
+            "id": "UHA5GQBEA4VNTSUOE55KXLFH3Y",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r02 负载均衡 / 负载均衡",
+            "start_line": 322,
+            "end_line": 326,
+            "content": "高危操作：通过ELB的控制台停用已绑定CCE集群的ELB实例\n导致后果：导致Service/Ingress访问不通。\n误操作后解决方案：不建议停用，请自行恢复。",
+            "content_hash": "9a427a0fe6f35a2f8c0f7d4bd542b5976f1e9dcd3f7f32d5ff8f5caffb5976f2",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8377497
+          },
+          {
+            "id": "53KETM5MBHQ3KBZYR4IZJRNXD4",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r04 负载均衡 / 负载均衡",
+            "start_line": 335,
+            "end_line": 339,
+            "content": "高危操作：通过ELB的控制台解绑ELB的IPv4公网IP\n导致后果：解绑公网IP后，该弹性负载均衡器变更为私网类型，无法进行公网流量转发。\n误操作后解决方案：请自行恢复。",
+            "content_hash": "bbc51634c2d25be6d1fbc28963f21c9fc3cface213b49ae7b710ac7a8c310a9c",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.83735
+          },
+          {
+            "id": "XOLPYMR6BZQPKS3IFXLH4OYZS6",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r06 负载均衡 / 负载均衡",
+            "start_line": 347,
+            "end_line": 352,
+            "content": "高危操作：通过ELB的控制台删除CCE自动创建的监听器\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：重新创建或更新Service/Ingress。",
+            "content_hash": "d4e385c730ce211ec108e1f109d05e7ede2ab072eb061ab1bc87551e93beb17f",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.82249546
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "fcfcda81e5a4bcec30929fae853bc9e9"
+      },
+      "started_at": "2026-09-19T21:48:41.544939+00:00",
+      "ended_at": "2026-09-19T21:48:41.565695+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjozOQ=="
+    },
+    {
+      "id": "cce-q039",
+      "question": "从 ELB 控制台改了负载均衡器的私有 IPv4 地址，会影响流量和 YAML 哪些内容？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "负载均衡",
+      "relevant_evidence_ids": [
+        "cce-t4-r03"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r03",
+        "cce-t4-r04",
+        "cce-t4-r07",
+        "cce-t4-r10",
+        "cce-t4-r09"
+      ],
+      "latency_ms": 12.259833994903602,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r03 负载均衡 / 负载均衡",
+            "start_line": 328,
+            "end_line": 333,
+            "content": "高危操作：通过ELB的控制台修改ELB的IPv4私有IP\n导致后果：基于IPv4私有IP进行私网流量转发功能会出现中断\nService/Ingress的YAML中status字段下的IP变化\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "b4188c9a3b36a3fd13a10ae9ba5708e6c561a929f8853839e926fdafc20f9ff0",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.83382833
+          },
+          {
+            "id": "53KETM5MBHQ3KBZYR4IZJRNXD4",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r04 负载均衡 / 负载均衡",
+            "start_line": 335,
+            "end_line": 339,
+            "content": "高危操作：通过ELB的控制台解绑ELB的IPv4公网IP\n导致后果：解绑公网IP后，该弹性负载均衡器变更为私网类型，无法进行公网流量转发。\n误操作后解决方案：请自行恢复。",
+            "content_hash": "bbc51634c2d25be6d1fbc28963f21c9fc3cface213b49ae7b710ac7a8c310a9c",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.80362964
+          },
+          {
+            "id": "TTLD25XCOIY3LVOSJ6XG2E7I4K",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r07 负载均衡 / 负载均衡",
+            "start_line": 354,
+            "end_line": 358,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器名称、访问控制、超时时间、描述等基本配置\n导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "365f817e6d9a01221f9218523450f747755640ee27ba0d43391550bc9dd5f8f0",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7551669
+          },
+          {
+            "id": "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r10 负载均衡 / 负载均衡",
+            "start_line": 376,
+            "end_line": 381,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器转发策略，添加、删除转发规则\n导致后果：导致Service/Ingress访问不通。\n如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "f5995e38cd71284bf2f658a272a5543f6e959e57c5c85274c1eb4d694dfb54a4",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.75130355
+          },
+          {
+            "id": "L7BT4SI3OP6IUZD5BCTUXK3YQR",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r09 负载均衡 / 负载均衡",
+            "start_line": 369,
+            "end_line": 374,
+            "content": "高危操作：通过ELB的控制台更换CCE创建的监听器后端服务器组\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，后端服务器组中的后端服务器会被CCE侧重置。\n误操作后解决方案：重新创建或更新Service/Ingress。",
+            "content_hash": "b14edce4084825234ef1dcd31c9cebfcef826a7a326aef4700bfbf430d7390ad",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7499393
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "daacc030566c52910866ffdd9e3839c8"
+      },
+      "started_at": "2026-09-19T21:48:41.588281+00:00",
+      "ended_at": "2026-09-19T21:48:41.600543+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjo0MA=="
+    },
+    {
+      "id": "cce-q042",
+      "question": "有人在 ELB 控制台删除了 CCE 自动创建的监听器，业务访问不通应如何修复？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "负载均衡",
+      "relevant_evidence_ids": [
+        "cce-t4-r06"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r05",
+        "cce-t4-r07",
+        "cce-t4-r10",
+        "cce-t4-r06",
+        "cce-t4-r08"
+      ],
+      "latency_ms": 10.866249998798594,
+      "metrics": {
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.25,
+        "ndcg_at_5": 0.43067655807339306
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "G3BDOMUT473X7NO3FJTWLWDVPV",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r05 负载均衡 / 负载均衡",
+            "start_line": 341,
+            "end_line": 345,
+            "content": "高危操作：通过ELB的控制台在CCE管理的ELB创建自定义的监听器\n导致后果：若ELB是创建Service/Ingress时自动创建的，在Service/Ingress删除时无法删除ELB的自定义监听器，会导致无法自动删除ELB。\n误操作后解决方案：通过Service/Ingress自动创建监听器，否则需要手动删除ELB。",
+            "content_hash": "1ceb66dae0a041ff1155fbbc5fb6a3fbcdd5efa789d517c7331460ecbb50d414",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8461497
+          },
+          {
+            "id": "TTLD25XCOIY3LVOSJ6XG2E7I4K",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r07 负载均衡 / 负载均衡",
+            "start_line": 354,
+            "end_line": 358,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器名称、访问控制、超时时间、描述等基本配置\n导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "365f817e6d9a01221f9218523450f747755640ee27ba0d43391550bc9dd5f8f0",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8289337
+          },
+          {
+            "id": "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r10 负载均衡 / 负载均衡",
+            "start_line": 376,
+            "end_line": 381,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器转发策略，添加、删除转发规则\n导致后果：导致Service/Ingress访问不通。\n如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "f5995e38cd71284bf2f658a272a5543f6e959e57c5c85274c1eb4d694dfb54a4",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8250458
+          },
+          {
+            "id": "XOLPYMR6BZQPKS3IFXLH4OYZS6",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r06 负载均衡 / 负载均衡",
+            "start_line": 347,
+            "end_line": 352,
+            "content": "高危操作：通过ELB的控制台删除CCE自动创建的监听器\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：重新创建或更新Service/Ingress。",
+            "content_hash": "d4e385c730ce211ec108e1f109d05e7ede2ab072eb061ab1bc87551e93beb17f",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.81849957
+          },
+          {
+            "id": "KI6XHF5UKFL6YYJTU6AZBFNZNS",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r08 负载均衡 / 负载均衡",
+            "start_line": 360,
+            "end_line": 367,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器后端服务器组，添加、删除后端服务器\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置：\n用户删除的后端服务器会恢复\n用户添加的后端服务器会被移除\n误操作后解决方案：重新创建或更新Service/Ingress。",
+            "content_hash": "6ffe835452bedc06e519c2b0762a7479ceba4684a6e8d5f500807d9189bc4373",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.81212413
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "b06c1bac0881df69d82a1887ba2cac72"
+      },
+      "started_at": "2026-09-19T21:48:41.621188+00:00",
+      "ended_at": "2026-09-19T21:48:41.632056+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjo0MQ=="
+    },
+    {
+      "id": "cce-q043",
+      "question": "在 ELB 侧改了 CCE 监听器的名称和超时时间，集群升级后能保证保留吗？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "负载均衡",
+      "relevant_evidence_ids": [
+        "cce-t4-r07"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r07",
+        "cce-t4-r10",
+        "cce-t4-r06",
+        "cce-t4-r11",
+        "cce-t4-r05"
+      ],
+      "latency_ms": 11.929209009394981,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "TTLD25XCOIY3LVOSJ6XG2E7I4K",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r07 负载均衡 / 负载均衡",
+            "start_line": 354,
+            "end_line": 358,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器名称、访问控制、超时时间、描述等基本配置\n导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "365f817e6d9a01221f9218523450f747755640ee27ba0d43391550bc9dd5f8f0",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8144189
+          },
+          {
+            "id": "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r10 负载均衡 / 负载均衡",
+            "start_line": 376,
+            "end_line": 381,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器转发策略，添加、删除转发规则\n导致后果：导致Service/Ingress访问不通。\n如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "f5995e38cd71284bf2f658a272a5543f6e959e57c5c85274c1eb4d694dfb54a4",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8009621
+          },
+          {
+            "id": "XOLPYMR6BZQPKS3IFXLH4OYZS6",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r06 负载均衡 / 负载均衡",
+            "start_line": 347,
+            "end_line": 352,
+            "content": "高危操作：通过ELB的控制台删除CCE自动创建的监听器\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：重新创建或更新Service/Ingress。",
+            "content_hash": "d4e385c730ce211ec108e1f109d05e7ede2ab072eb061ab1bc87551e93beb17f",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.78360415
+          },
+          {
+            "id": "DVLHX3EFKXP6CYO5U56KH6AXBO",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r11 负载均衡 / 负载均衡",
+            "start_line": 383,
+            "end_line": 387,
+            "content": "高危操作：通过ELB的控制台给CCE创建的监听器更换证书，或者在ELB的证书管理界面修改CCE通过TLS密钥创建的服务器证书。\n导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置, 可能导致Service/Ingress访问不通。\n误操作后解决方案：通过CCE控制台或YAML方式更新Service/Ingress关联的证书，或者更新Service/Ingress关联的TLS密钥资源。",
+            "content_hash": "1f4b9b2748fbf60f3ccae2df4e36d00087c4c18e606524244b82f574eabf06a1",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7824997
+          },
+          {
+            "id": "G3BDOMUT473X7NO3FJTWLWDVPV",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r05 负载均衡 / 负载均衡",
+            "start_line": 341,
+            "end_line": 345,
+            "content": "高危操作：通过ELB的控制台在CCE管理的ELB创建自定义的监听器\n导致后果：若ELB是创建Service/Ingress时自动创建的，在Service/Ingress删除时无法删除ELB的自定义监听器，会导致无法自动删除ELB。\n误操作后解决方案：通过Service/Ingress自动创建监听器，否则需要手动删除ELB。",
+            "content_hash": "1ceb66dae0a041ff1155fbbc5fb6a3fbcdd5efa789d517c7331460ecbb50d414",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7823199
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "f563fcfee3e231e31f2318880eb1e7ab"
+      },
+      "started_at": "2026-09-19T21:48:41.653804+00:00",
+      "ended_at": "2026-09-19T21:48:41.665735+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjo0Mg=="
+    },
+    {
+      "id": "cce-q044",
+      "question": "手工从监听器后端组删除一台服务器又添加一台，CCE 控制节点重启后这些更改会怎样？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "负载均衡",
+      "relevant_evidence_ids": [
+        "cce-t4-r08"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r08",
+        "cce-t4-r07",
+        "cce-t4-r10",
+        "cce-t4-r06",
+        "cce-t4-r09"
+      ],
+      "latency_ms": 11.737207998521626,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "KI6XHF5UKFL6YYJTU6AZBFNZNS",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r08 负载均衡 / 负载均衡",
+            "start_line": 360,
+            "end_line": 367,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器后端服务器组，添加、删除后端服务器\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置：\n用户删除的后端服务器会恢复\n用户添加的后端服务器会被移除\n误操作后解决方案：重新创建或更新Service/Ingress。",
+            "content_hash": "6ffe835452bedc06e519c2b0762a7479ceba4684a6e8d5f500807d9189bc4373",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.83351576
+          },
+          {
+            "id": "TTLD25XCOIY3LVOSJ6XG2E7I4K",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r07 负载均衡 / 负载均衡",
+            "start_line": 354,
+            "end_line": 358,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器名称、访问控制、超时时间、描述等基本配置\n导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "365f817e6d9a01221f9218523450f747755640ee27ba0d43391550bc9dd5f8f0",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.83240056
+          },
+          {
+            "id": "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r10 负载均衡 / 负载均衡",
+            "start_line": 376,
+            "end_line": 381,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器转发策略，添加、删除转发规则\n导致后果：导致Service/Ingress访问不通。\n如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "f5995e38cd71284bf2f658a272a5543f6e959e57c5c85274c1eb4d694dfb54a4",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.83168447
+          },
+          {
+            "id": "XOLPYMR6BZQPKS3IFXLH4OYZS6",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r06 负载均衡 / 负载均衡",
+            "start_line": 347,
+            "end_line": 352,
+            "content": "高危操作：通过ELB的控制台删除CCE自动创建的监听器\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：重新创建或更新Service/Ingress。",
+            "content_hash": "d4e385c730ce211ec108e1f109d05e7ede2ab072eb061ab1bc87551e93beb17f",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8242792
+          },
+          {
+            "id": "L7BT4SI3OP6IUZD5BCTUXK3YQR",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r09 负载均衡 / 负载均衡",
+            "start_line": 369,
+            "end_line": 374,
+            "content": "高危操作：通过ELB的控制台更换CCE创建的监听器后端服务器组\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，后端服务器组中的后端服务器会被CCE侧重置。\n误操作后解决方案：重新创建或更新Service/Ingress。",
+            "content_hash": "b14edce4084825234ef1dcd31c9cebfcef826a7a326aef4700bfbf430d7390ad",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8220836
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "2554723d556e2072a1cba722983cd4f8"
+      },
+      "started_at": "2026-09-19T21:48:41.688782+00:00",
+      "ended_at": "2026-09-19T21:48:41.700522+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjo0Mw=="
+    },
+    {
+      "id": "cce-q051",
+      "question": "在控制台把正在用的 EVS 卸载后 Pod 写入报 IO Error，文档建议怎样处理？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "云硬盘",
+      "relevant_evidence_ids": [
+        "cce-t7-r01"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t7-r01",
+        "cce-t7-r02",
+        "cce-t4-r03",
+        "cce-t7-r03",
+        "cce-t4-r04"
+      ],
+      "latency_ms": 12.407999995048158,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "TCWUTC2DCHWM7HMY7HKDL64QRY",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t7-r01 云硬盘 / 云硬盘",
+            "start_line": 407,
+            "end_line": 412,
+            "content": "高危操作：控制台手动解除挂载EVS\n导致后果：Pod写入出现IO Error故障\n误操作后解决方案：删除节点上mount目录，重新调度Pod\n备注：Pod里面的文件记录了文件的采集位置",
+            "content_hash": "a0547f3aa1f38c705d7271c676e3ad107e39947180836aeb38ee0636dce55324",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.84987354
+          },
+          {
+            "id": "6QIDDFHBKYHBCDCQOYVHSVYYF2",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t7-r02 云硬盘 / 云硬盘",
+            "start_line": 414,
+            "end_line": 419,
+            "content": "高危操作：节点上umount磁盘挂载路径\n导致后果：Pod写入本地磁盘\n误操作后解决方案：重新mount对应目录到Pod中\n备注：Buffer里面是待消费的日志缓存文件",
+            "content_hash": "d4d9d94b07d9434f3a207c70f1edd3655512855f187bd234abfceb73d2f8d95a",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.81055
+          },
+          {
+            "id": "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r03 负载均衡 / 负载均衡",
+            "start_line": 328,
+            "end_line": 333,
+            "content": "高危操作：通过ELB的控制台修改ELB的IPv4私有IP\n导致后果：基于IPv4私有IP进行私网流量转发功能会出现中断\nService/Ingress的YAML中status字段下的IP变化\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "b4188c9a3b36a3fd13a10ae9ba5708e6c561a929f8853839e926fdafc20f9ff0",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.80242836
+          },
+          {
+            "id": "75UTS7WQ2KIW4CZ7XQ4LTOYCUA",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t7-r03 云硬盘 / 云硬盘",
+            "start_line": 421,
+            "end_line": 426,
+            "content": "高危操作：节点上直接操作EVS\n导致后果：Pod写入本地磁盘\n误操作后解决方案：无\n备注：无",
+            "content_hash": "f2c47a4a123c0557838eee8e8201eb1fe325c79b063cbf1f3c689971670c93cf",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8006567
+          },
+          {
+            "id": "53KETM5MBHQ3KBZYR4IZJRNXD4",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r04 负载均衡 / 负载均衡",
+            "start_line": 335,
+            "end_line": 339,
+            "content": "高危操作：通过ELB的控制台解绑ELB的IPv4公网IP\n导致后果：解绑公网IP后，该弹性负载均衡器变更为私网类型，无法进行公网流量转发。\n误操作后解决方案：请自行恢复。",
+            "content_hash": "bbc51634c2d25be6d1fbc28963f21c9fc3cface213b49ae7b710ac7a8c310a9c",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7890719
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "647f7fe1180c3e87445a4e594f45adb2"
+      },
+      "started_at": "2026-09-19T21:48:41.725242+00:00",
+      "ended_at": "2026-09-19T21:48:41.737653+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjo0NA=="
+    },
+    {
+      "id": "cce-q054",
+      "question": "创建 PV 的 YAML 带着 status、spec.claimRef 和 set-disk-metadata，会有什么风险，删除前如何纠正？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "云硬盘",
+      "relevant_evidence_ids": [
+        "cce-t7-r04"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t7-r04",
+        "cce-t4-r03",
+        "cce-t3-r02",
+        "cce-t1-r24",
+        "cce-t1-r19"
+      ],
+      "latency_ms": 12.191708010504954,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "EYUOCMLGVA5KJD63PWQ447WZLK",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t7-r04 云硬盘 / 云硬盘",
+            "start_line": 428,
+            "end_line": 435,
+            "content": "高危操作：创建PV时带有未在文档中声明的参数\n\n例如，创建PV时，Yaml文件中涉及status、spec.claimRef以及annotation.everest.io/set-disk-metadata等参数，可能造成PV异常\n导致后果：此操作可能会绕过创建PV的某些标准流程，从而导致PV状态不符预期（功能不可用或被异常删除）\n误操作后解决方案：在PV被异常删除前，可以修改对应PV的Yaml文件，手动删除相关参数\n备注：无",
+            "content_hash": "8ff5725065244e23c2c77c10661068438d9cff95422e3051324fed7aa19b1da9",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8213382
+          },
+          {
+            "id": "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r03 负载均衡 / 负载均衡",
+            "start_line": 328,
+            "end_line": 333,
+            "content": "高危操作：通过ELB的控制台修改ELB的IPv4私有IP\n导致后果：基于IPv4私有IP进行私网流量转发功能会出现中断\nService/Ingress的YAML中status字段下的IP变化\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "b4188c9a3b36a3fd13a10ae9ba5708e6c561a929f8853839e926fdafc20f9ff0",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7637383
+          },
+          {
+            "id": "7U64KZA4GIQSJRLS2WMRN33YNA",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t3-r02 容器 / 容器",
+            "start_line": 310,
+            "end_line": 314,
+            "content": "高危操作：使用hostPath方式挂载系统组件目录，如挂载/var/lib/docker下的文件\n导致后果：系统组件重启后可能会导致节点上的系统组件目录重建，打断了挂载的inode链接，导致容器内无法正常使用挂载内容\n误操作后解决方案：不建议挂载系统组件目录",
+            "content_hash": "089126d28716c88f75759fcdcb4f7eb456df0da6c6d575708e1a3d1c02ff92fb",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.75823987
+          },
+          {
+            "id": "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r24 集群/节点 / Node节点",
+            "start_line": 211,
+            "end_line": 216,
+            "content": "分类：Node节点\n高危操作：删除节点上的cce-pause等系统镜像\n导致后果：导致无法正常创建容器，且无法拉取系统镜像\n误操作后解决方案：请从其他正常节点复制该镜像恢复",
+            "content_hash": "5df7d8da94db00fc51e75ca9d7713360719f3bbd4a81e31443548abfc991ca80",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7581744
+          },
+          {
+            "id": "JERYHXCYRILOIFKGNBJAQM7CNC",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r19 集群/节点 / Node节点",
+            "start_line": 157,
+            "end_line": 162,
+            "content": "分类：Node节点\n高危操作：删除或修改/opt/cloud/cce、/var/paas目录，删除数据盘\n导致后果：节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "bffc0b33fa30a00dcbe30ec834325c116b1cb2f5562474f2c43f904a448f980d",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7519134
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "921a00a1f73ce31e88915a903bf02333"
+      },
+      "started_at": "2026-09-19T21:48:41.760808+00:00",
+      "ended_at": "2026-09-19T21:48:41.773002+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjo0NQ=="
+    },
+    {
+      "id": "cce-q055",
+      "question": "直接在后台改插件资源后升级丢了配置，应该通过哪些入口修改插件？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "插件",
+      "relevant_evidence_ids": [
+        "cce-t8-r01"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t8-r01",
+        "cce-t4-r03",
+        "cce-t3-r02",
+        "cce-t4-r10",
+        "cce-t2-r05"
+      ],
+      "latency_ms": 12.874375010142103,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "QQITILAHPHWIDJY3RIKMDFRIGQ",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t8-r01 插件 / 插件",
+            "start_line": 437,
+            "end_line": 441,
+            "content": "高危操作：后台修改插件相关资源\n导致后果：插件异常或引入其他非预期问题（例如升级后参数配置被覆盖等）\n误操作后解决方案：通过插件配置页面或开放的插件管理API进行操作",
+            "content_hash": "55bb7ee8d624cfbe66e29a1867bfaa0b14c29d4cf126525156c804ffcee75167",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.80390453
+          },
+          {
+            "id": "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r03 负载均衡 / 负载均衡",
+            "start_line": 328,
+            "end_line": 333,
+            "content": "高危操作：通过ELB的控制台修改ELB的IPv4私有IP\n导致后果：基于IPv4私有IP进行私网流量转发功能会出现中断\nService/Ingress的YAML中status字段下的IP变化\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "b4188c9a3b36a3fd13a10ae9ba5708e6c561a929f8853839e926fdafc20f9ff0",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.78171337
+          },
+          {
+            "id": "7U64KZA4GIQSJRLS2WMRN33YNA",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t3-r02 容器 / 容器",
+            "start_line": 310,
+            "end_line": 314,
+            "content": "高危操作：使用hostPath方式挂载系统组件目录，如挂载/var/lib/docker下的文件\n导致后果：系统组件重启后可能会导致节点上的系统组件目录重建，打断了挂载的inode链接，导致容器内无法正常使用挂载内容\n误操作后解决方案：不建议挂载系统组件目录",
+            "content_hash": "089126d28716c88f75759fcdcb4f7eb456df0da6c6d575708e1a3d1c02ff92fb",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.771778
+          },
+          {
+            "id": "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r10 负载均衡 / 负载均衡",
+            "start_line": 376,
+            "end_line": 381,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器转发策略，添加、删除转发规则\n导致后果：导致Service/Ingress访问不通。\n如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "f5995e38cd71284bf2f658a272a5543f6e959e57c5c85274c1eb4d694dfb54a4",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.76765406
+          },
+          {
+            "id": "C6VNW6GJJYBX6IECUMIH7QD4DU",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t2-r05 网络 / 网络",
+            "start_line": 276,
+            "end_line": 280,
+            "content": "高危操作：删除default-network的network-attachment-definitions的CRD资源\n导致后果：容器网络不通，集群删除失败等\n误操作后解决方案：误删除该资源需要使用正确的配置重新创建default-network资源。",
+            "content_hash": "da324a516eb2e19b82a7b954304bebef3e695f72dfd677b33233c3eab969e0d7",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7642125
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "9c77837299fb31329c45ee771e5c1c7a"
+      },
+      "started_at": "2026-09-19T21:48:41.796236+00:00",
+      "ended_at": "2026-09-19T21:48:41.809114+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjo0Ng=="
+    },
+    {
+      "id": "cce-q056",
+      "question": "重装控制节点和普通工作节点的操作系统，文档给出的恢复结论有什么不同？",
+      "answerable": true,
+      "question_type": "comparison",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r04",
+        "cce-t1-r14"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r04",
+        "cce-t1-r21",
+        "cce-t1-r24",
+        "cce-t1-r14",
+        "cce-t1-r22"
+      ],
+      "latency_ms": 12.293833002331667,
+      "metrics": {
+        "recall_at_1": 0.5,
+        "recall_at_3": 0.5,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 0.8772153153380493
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "274FGZVXA73JVT5DSNXG7R4AKE",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r04 集群/节点 / 控制节点",
+            "start_line": 36,
+            "end_line": 41,
+            "content": "分类：控制节点\n高危操作：重装操作系统\n导致后果：控制节点组件被删除\n误操作后解决方案：不可恢复。",
+            "content_hash": "85df2bf6103fb27facabb79b1b8c01bfa032c818b4a8fa3dbea860c7b2ae0bc5",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.78234136
+          },
+          {
+            "id": "WU2TZZNKLVLIWI6CHKLMVKEHNM",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r21 集群/节点 / Node节点",
+            "start_line": 190,
+            "end_line": 195,
+            "content": "分类：Node节点\n高危操作：对节点进行磁盘格式化或分区，包括系统盘、容器运行时和kubelet组件使用的数据盘\n导致后果：可能导致节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "7a1ab9b1e7fece916c782d4344e7303cb2f0abcd71e1ac49f87b029079b80cb7",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.77342105
+          },
+          {
+            "id": "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r24 集群/节点 / Node节点",
+            "start_line": 211,
+            "end_line": 216,
+            "content": "分类：Node节点\n高危操作：删除节点上的cce-pause等系统镜像\n导致后果：导致无法正常创建容器，且无法拉取系统镜像\n误操作后解决方案：请从其他正常节点复制该镜像恢复",
+            "content_hash": "5df7d8da94db00fc51e75ca9d7713360719f3bbd4a81e31443548abfc991ca80",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7715341
+          },
+          {
+            "id": "QUAG6SLXXOWY4TGYAA3XCPFJK6",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r14 集群/节点 / Node节点",
+            "start_line": 114,
+            "end_line": 119,
+            "content": "分类：Node节点\n高危操作：重装操作系统\n导致后果：节点组件被删除，节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+            "content_hash": "c30112cfd5546dd19aa110c816f1739d916af810e7abd3fc7d1502dc34dd5e52",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7707964
+          },
+          {
+            "id": "DL52JJRFWSTU7JHQRM2TUYHFFD",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r22 集群/节点 / Node节点",
+            "start_line": 197,
+            "end_line": 202,
+            "content": "分类：Node节点\n高危操作：在节点上安装自己的其他软件\n导致后果：导致安装在节点上的Kubernetes组件异常，节点状态变成不可用，无法部署工作负载到此节点\n误操作后解决方案：卸载已安装软件，尝试恢复或重置节点，具体请参见重置节点。",
+            "content_hash": "579b8fd0bad78e8f00859f3e1609226b302356c3a1bb5eee214ff090aef96335",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.76666355
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "d8e3bba3bdcefc253ba430061bd53dd7"
+      },
+      "started_at": "2026-09-19T21:48:41.833217+00:00",
+      "ended_at": "2026-09-19T21:48:41.845514+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjo0Nw=="
+    },
+    {
+      "id": "cce-q060",
+      "question": "在 ELB 侧删除整个 CCE 负载均衡实例与删除 CCE 自动创建的监听器，文档给出的建议有何区别？",
+      "answerable": true,
+      "question_type": "comparison",
+      "section": "负载均衡",
+      "relevant_evidence_ids": [
+        "cce-t4-r01",
+        "cce-t4-r06"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r05",
+        "cce-t4-r07",
+        "cce-t4-r06",
+        "cce-t4-r01",
+        "cce-t4-r10"
+      ],
+      "latency_ms": 11.525958994752727,
+      "metrics": {
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.5,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.3333333333333333,
+        "ndcg_at_5": 0.5706417189553201
+      },
+      "result": {
+        "documents": [
+          {
+            "id": "G3BDOMUT473X7NO3FJTWLWDVPV",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r05 负载均衡 / 负载均衡",
+            "start_line": 341,
+            "end_line": 345,
+            "content": "高危操作：通过ELB的控制台在CCE管理的ELB创建自定义的监听器\n导致后果：若ELB是创建Service/Ingress时自动创建的，在Service/Ingress删除时无法删除ELB的自定义监听器，会导致无法自动删除ELB。\n误操作后解决方案：通过Service/Ingress自动创建监听器，否则需要手动删除ELB。",
+            "content_hash": "1ceb66dae0a041ff1155fbbc5fb6a3fbcdd5efa789d517c7331460ecbb50d414",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.86811614
+          },
+          {
+            "id": "TTLD25XCOIY3LVOSJ6XG2E7I4K",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r07 负载均衡 / 负载均衡",
+            "start_line": 354,
+            "end_line": 358,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器名称、访问控制、超时时间、描述等基本配置\n导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "365f817e6d9a01221f9218523450f747755640ee27ba0d43391550bc9dd5f8f0",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8383324
+          },
+          {
+            "id": "XOLPYMR6BZQPKS3IFXLH4OYZS6",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r06 负载均衡 / 负载均衡",
+            "start_line": 347,
+            "end_line": 352,
+            "content": "高危操作：通过ELB的控制台删除CCE自动创建的监听器\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：重新创建或更新Service/Ingress。",
+            "content_hash": "d4e385c730ce211ec108e1f109d05e7ede2ab072eb061ab1bc87551e93beb17f",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.8375578
+          },
+          {
+            "id": "XJ3743I2YP4MMAZAH57FHDMD3A",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r01 负载均衡 / 负载均衡",
+            "start_line": 316,
+            "end_line": 320,
+            "content": "高危操作：禁止通过ELB的控制台删除已绑定CCE集群的ELB实例\n导致后果：导致Service/Ingress访问不通。\n误操作后解决方案：不建议删除。",
+            "content_hash": "4459d98b034dced44c1d7b8d39a42fa233dfd359ac984fb49dfa1fc93c18efec",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.83685243
+          },
+          {
+            "id": "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r10 负载均衡 / 负载均衡",
+            "start_line": 376,
+            "end_line": 381,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器转发策略，添加、删除转发规则\n导致后果：导致Service/Ingress访问不通。\n如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "f5995e38cd71284bf2f658a272a5543f6e959e57c5c85274c1eb4d694dfb54a4",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.83620274
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "b710f057b4d3ef5f54bb036a763f2fbb"
+      },
+      "started_at": "2026-09-19T21:48:41.867531+00:00",
+      "ended_at": "2026-09-19T21:48:41.879059+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjo0OA=="
+    },
+    {
+      "id": "cce-u001",
+      "question": "根据这篇文档，CCE 集群按小时收费的准确价格是多少？",
+      "answerable": false,
+      "question_type": "unanswerable",
+      "section": "文档范围之外",
+      "relevant_evidence_ids": [],
+      "retrieved_evidence_ids": [
+        "cce-t1-r01",
+        "cce-t6-r01",
+        "cce-t1-r09",
+        "cce-t1-r05",
+        "cce-t1-r02"
+      ],
+      "latency_ms": 11.538417005795054,
+      "metrics": {},
+      "result": {
+        "documents": [
+          {
+            "id": "YVX4B6IBMDWBOWW3WAW3ZILBUC",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r01 集群/节点 / 集群",
+            "start_line": 9,
+            "end_line": 16,
+            "content": "分类：集群\n高危操作：通过kube-apiserver一次性查询大量数据。例如一次性发起大量LIST请求，或单个LIST请求查询大量数据。\n导致后果：控制节点内存负载过高，影响系统稳定性。\n误操作后解决方案：停止大批量查询行为。\n\n如果需要增强集群抗过载能力，您可以变更集群规格至更大的规模，详情请参见变更集群规格。",
+            "content_hash": "5203bb0ab412ab1ea2f4bdcd451a23cf868629f94c9b6d0f438978cad845e385",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.75161576
+          },
+          {
+            "id": "7MCPJKLCDYI4OTZTJLQJBSUXEF",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t6-r01 监控 / 监控",
+            "start_line": 401,
+            "end_line": 405,
+            "content": "高危操作：云原生监控插件配置中设置的采集分片数量超过推荐值（建议每50个节点配置一个采集分片）\n导致后果：增加采集分片数会消耗更多的资源，容易导致集群控制节点内存负载过高，影响系统稳定性。\n误操作后解决方案：修改云原生监控插件的采集分片数，调整为推荐值。",
+            "content_hash": "09aa02d20d77fbe71c8e64f95e83a744165fd49fbf2b14779d7ad3c2517648ab",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.74699247
+          },
+          {
+            "id": "FWFO3HYYZQMXQR5M6MUDFEMSOD",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r09 集群/节点 / 控制节点",
+            "start_line": 71,
+            "end_line": 76,
+            "content": "分类：控制节点\n高危操作：自行更换控制节点或etcd证书\n导致后果：可能导致集群不可用\n误操作后解决方案：不可恢复。",
+            "content_hash": "8c8dc64ac031086de16e3df57be326a40bc35b5af0cdeec2caa7946e4c710595",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7390926
+          },
+          {
+            "id": "5JAXJXPC354A2HMCOE6D6JKQOW",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r05 集群/节点 / 控制节点",
+            "start_line": 43,
+            "end_line": 48,
+            "content": "分类：控制节点\n高危操作：自行升级控制节点或者etcd组件版本\n导致后果：可能导致集群无法使用\n误操作后解决方案：回退到原始版本。",
+            "content_hash": "5aafe67e29f9c31340f806c1d58e68b0584ef0b2934f59d6e7c1884537de6ee4",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.73806226
+          },
+          {
+            "id": "KEY3FPO4OBOW4K6F2TNDIXPT6J",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r02 集群/节点 / 控制节点",
+            "start_line": 18,
+            "end_line": 27,
+            "content": "分类：控制节点\n高危操作：修改集群控制节点安全组\n\n 说明：\n\n控制节点安全组命名规则：集群名称-cce-control-随机数\n导致后果：可能导致控制节点无法使用\n误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。",
+            "content_hash": "0b7996d9fb8ba0f179499a3726a07bbb9a7b0ff2c3e43a544dda91bce55f39b5",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.736179
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "01f045d20023cf5cc90f70cc5aa32bf2"
+      },
+      "started_at": "2026-09-19T21:48:41.902238+00:00",
+      "ended_at": "2026-09-19T21:48:41.913778+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjo0OQ=="
+    },
+    {
+      "id": "cce-u002",
+      "question": "这篇文档明确要求升级到哪个 Kubernetes 小版本才能修复 CVE-2026-12345？",
+      "answerable": false,
+      "question_type": "unanswerable",
+      "section": "文档范围之外",
+      "relevant_evidence_ids": [],
+      "retrieved_evidence_ids": [
+        "cce-t4-r03",
+        "cce-t4-r10",
+        "cce-t4-r07",
+        "cce-t1-r17",
+        "cce-t4-r08"
+      ],
+      "latency_ms": 12.142625011620112,
+      "metrics": {},
+      "result": {
+        "documents": [
+          {
+            "id": "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r03 负载均衡 / 负载均衡",
+            "start_line": 328,
+            "end_line": 333,
+            "content": "高危操作：通过ELB的控制台修改ELB的IPv4私有IP\n导致后果：基于IPv4私有IP进行私网流量转发功能会出现中断\nService/Ingress的YAML中status字段下的IP变化\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "b4188c9a3b36a3fd13a10ae9ba5708e6c561a929f8853839e926fdafc20f9ff0",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.77026474
+          },
+          {
+            "id": "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r10 负载均衡 / 负载均衡",
+            "start_line": 376,
+            "end_line": 381,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器转发策略，添加、删除转发规则\n导致后果：导致Service/Ingress访问不通。\n如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "f5995e38cd71284bf2f658a272a5543f6e959e57c5c85274c1eb4d694dfb54a4",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7691555
+          },
+          {
+            "id": "TTLD25XCOIY3LVOSJ6XG2E7I4K",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r07 负载均衡 / 负载均衡",
+            "start_line": 354,
+            "end_line": 358,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器名称、访问控制、超时时间、描述等基本配置\n导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+            "content_hash": "365f817e6d9a01221f9218523450f747755640ee27ba0d43391550bc9dd5f8f0",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.7612891
+          },
+          {
+            "id": "X2AEYRDOYZPUNS4P2IRZNMQ7FB",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t1-r17 集群/节点 / Node节点",
+            "start_line": 139,
+            "end_line": 148,
+            "content": "分类：Node节点\n高危操作：自行修改核心组件（kubelet、kube-proxy等）参数\n导致后果：可能导致节点不可用、修改安全相关配置导致组件不安全等\n\n即使修改完后当时未出现上述情况，在后续集群升级时还可能导致自行修改的参数被重置的问题，详情请参见注意事项。\n误操作后解决方案：如果出现节点不可用问题，建议按照推荐配置参数恢复，详情请参见节点池配置管理。\n\n同时，建议您通过CCE控制台修改相关配置，以便在集群升级时自动继承。",
+            "content_hash": "3439d6785eabec4c043fccdc853cb906615a2a652a798fafaf77ed90953e2d26",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.75858355
+          },
+          {
+            "id": "KI6XHF5UKFL6YYJTU6AZBFNZNS",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "section": "cce-t4-r08 负载均衡 / 负载均衡",
+            "start_line": 360,
+            "end_line": 367,
+            "content": "高危操作：通过ELB的控制台修改CCE创建的监听器后端服务器组，添加、删除后端服务器\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置：\n用户删除的后端服务器会恢复\n用户添加的后端服务器会被移除\n误操作后解决方案：重新创建或更新Service/Ingress。",
+            "content_hash": "6ffe835452bedc06e519c2b0762a7479ceba4684a6e8d5f500807d9189bc4373",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "title": "华为云 CCE 高危操作一览",
+            "score": 0.75752735
+          }
+        ],
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "c3dd917f2ff1b0b70672cd7a8dcb67e8"
+      },
+      "started_at": "2026-09-19T21:48:41.920669+00:00",
+      "ended_at": "2026-09-19T21:48:41.932814+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjo1MA=="
+    }
+  ],
+  "summary": {
+    "count": 25,
+    "answerable_count": 23,
+    "means": {
+      "hit_at_5": 1.0,
+      "mrr_at_5": 0.8188405797101449,
+      "ndcg_at_5": 0.8623012680315646,
+      "precision_at_5": 0.2173913043478261,
+      "recall_at_1": 0.6739130434782609,
+      "recall_at_3": 0.8695652173913043,
+      "recall_at_5": 1.0
+    },
+    "latency_ms": {
+      "mean": 12.536915081436746,
+      "p50": 12.191708010504954,
+      "p95": 17.257708008401096
+    }
+  }
+}

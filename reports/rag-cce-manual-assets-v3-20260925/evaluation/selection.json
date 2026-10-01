@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "created_at": "2026-09-25T10:29:03.015691+00:00",
+  "development_run": "asset-v3-dev-r02-query-rewrite",
+  "development_dataset_sha256": "0831cba954957a20cf588da7864c6b03c1a7133adc28f3274a710593c5987fe5",
+  "heldout_dataset_sha256": "0831cba954957a20cf588da7864c6b03c1a7133adc28f3274a710593c5987fe5",
+  "config": {
+    "strategy": "hybrid",
+    "answers": false,
+    "top_k": 5,
+    "candidate_k": 20,
+    "context_bytes": 49152,
+    "rrf": 1,
+    "evidence_selection": true,
+    "query_rewrite": true,
+    "multi_vector": true,
+    "selection_extra_candidates": 8,
+    "selection_input_bytes_limit": 262144,
+    "temperature": 0,
+    "binary_sha256": "b8bfbfce1144b3dfd49fa3a3077760eff7d0b1413920665e86598ce7b35e584e",
+    "index": "hwops-cce-manual-v3",
+    "state_path": ".local/rag/hwops-cce-manual-v3-final-state.json",
+    "corpus_sha256": "527101b5c146ec9b3961f4b4252b2ab009bc7b9209b16abc6f8e9d3ce0d41559",
+    "code_sha256": "14629965e692e396b5a230b52b123a692d145c5bc2196d4a62f03d9fc5ec9208",
+    "model": null,
+    "model_endpoint": null,
+    "rewrite_model": "deepseek-v4.1-flash",
+    "mode": "REAL_RETRIEVAL_ONLY"
+  }
+}

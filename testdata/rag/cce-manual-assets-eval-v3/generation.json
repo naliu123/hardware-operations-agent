@@ -1,0 +1,390 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-25T11:43:37.223439+00:00",
+  "status": "complete",
+  "candidate_sha256": "06328a783f1aa080302d65f083b4eecdc7f5cc83078a3541fbd33097da01a98b",
+  "prompt_sha256": "a07f213fee84e9d46d9ab0effa722733534d5440c5bbcd91a458f2539037d8dc",
+  "review_prompt_sha256": "2cf923d9446d28dcb6984973f0eb063a5e6c35cc8d94be9efd78a9132fc1af72",
+  "model": "deepseek-v4.1-flash",
+  "cases": {
+    "cce_10_0154:table-002-p01": {
+      "question": "在《CCE集群弹性引擎》的“安装插件”中，多可用区部署参数包含哪几种模式？",
+      "required_facts": [
+        "包含优先模式、均分模式和强制模式。"
+      ]
+    },
+    "cce_10_0929:table-003-p01": {
+      "question": "在《为负载均衡类型的Service配置区间端口监听》的“创建负载均衡并配置区间端口监听”中，服务亲和参数用于选择什么？",
+      "required_facts": [
+        "用于选择将外部流量路由到节点本地或集群范围的端点。"
+      ]
+    },
+    "cce_10_0868:table-002-p01": {
+      "question": "在《为ELB Ingress配置gzip数据压缩》的“配置gzip数据压缩”中，参数kubernetes.io/elb.gzip-enabled的默认取值是什么？",
+      "required_facts": [
+        "默认情况下数据压缩为关闭。"
+      ]
+    },
+    "cce_10_0681:table-008-p01": {
+      "question": "在《创建负载均衡类型的服务》的“创建负载均衡类型的服务”中，注解kubernetes.io/elb.class在创建完成后是否可以修改？",
+      "required_facts": [
+        "该参数在创建完成后不可修改。"
+      ]
+    },
+    "cce_10_0753:table-004-p03": {
+      "question": "在《集群视图》的“指标清单”中，指标container_fs_reads_bytes_total的指标类型是什么？",
+      "required_facts": [
+        "指标类型为counter。"
+      ]
+    },
+    "cce_10_0012:table-003-p01": {
+      "question": "在《创建节点池》的“操作步骤”中，系统盘参数的缺省值是多少？",
+      "required_facts": [
+        "缺省值为50GiB。"
+      ]
+    },
+    "cce_10_1149:table-001-p01": {
+      "question": "在《NGINX Ingress迁移至Envoy Gateway》的“支持迁移的功能”中，请求头修改功能对应的Gateway API资源是什么？",
+      "required_facts": [
+        "对应的Gateway API资源为HTTPRoute（RequestHeaderModifier过滤器）。"
+      ]
+    },
+    "cce_10_0740:table-001-p01": {
+      "question": "在《健康中心概述》的“使用场景”中，健康诊断的检查项包括哪些？",
+      "required_facts": [
+        "检查项包括集群运维能力、集群安全组配置正确性、集群资源规划合理性以及租户配额是否充足。"
+      ]
+    },
+    "cce_10_0945:table-003-p01": {
+      "question": "在《DataPlane V2网络加速说明》的“配置管理”中，ConfigMap配置yangtse-cilium-config的优先级是多少？",
+      "required_facts": [
+        "优先级为1。"
+      ]
+    },
+    "cce_10_0409:table-001-p01": {
+      "question": "在《可优化的节点系统参数列表》的“可优化的节点系统参数列表”中，参数kernel.pid_max位于哪个文件？",
+      "required_facts": [
+        "位于/etc/sysctl.conf。"
+      ]
+    },
+    "cce_10_0921:table-003-p01": {
+      "question": "在VPA策略的containerRecommendation关键字段中，uncappedTarget字段表示什么？",
+      "required_facts": [
+        "uncappedTarget字段表示实际计算的VPA建议值",
+        "该值是未结合containerPolicy字段配置的资源上下限的计算结果"
+      ]
+    },
+    "cce_10_0949:table-014-p01": {
+      "question": "在ELB Ingress高级转发动作注解中，参数kubernetes.io/elb.actions.*${svc_name}*的类型是什么，其最大长度是多少？",
+      "required_facts": [
+        "类型为String",
+        "最大长度为51个字符"
+      ]
+    },
+    "cce_10_0370:table-007-p01": {
+      "question": "在CCE密钥管理（对接DEW）的基础挂载配置中，objects参数下的objectVersion参数是什么类型，是否为必选参数？",
+      "required_facts": [
+        "String类型",
+        "是必选参数"
+      ]
+    },
+    "cce_10_0363:table-004-p02": {
+      "question": "在创建节点的高级配置中，每个节点最多可以配置多少条K8S污点？",
+      "required_facts": [
+        "每个节点最多配置20条污点"
+      ]
+    },
+    "cce_10_0841:table-004-p01": {
+      "question": "在填写访问设置参数时，参数“后端分配策略”的全局配置在什么情况下无法对多种协议同时生效？",
+      "required_facts": [
+        "当添加多个端口时，如果部分端口选择的监听器前端协议不同，后端分配策略的全局配置无法对多种协议同时生效",
+        "未匹配成功的协议将使用默认配置"
+      ]
+    },
+    "cce_10_0865:table-004-p01": {
+      "question": "在创建负载均衡并配置HTTP/HTTPS头字段时，服务亲和参数中“集群级别”的含义是什么？",
+      "required_facts": [
+        "集群下所有节点的IP+节点端口均可以访问到此服务关联的负载",
+        "服务访问会因路由跳转导致一定性能损失，且无法获取到客户端源IP"
+      ]
+    },
+    "cce_10_0902:table-001-p03": {
+      "question": "在CCE事件列表的集群数据面事件中，工作负载相关事件“删除失败”的事件名称是什么，事件级别是什么？",
+      "required_facts": [
+        "事件名称为FailedDelete",
+        "事件级别为重要"
+      ]
+    },
+    "cce_10_0278:table-001-p01": {
+      "question": "在创建命名空间时，参数“名称”的作用是什么？",
+      "required_facts": [
+        "用于指定新建命名空间的名称",
+        "命名必须唯一"
+      ]
+    },
+    "cce_10_0209:table-004-p01": {
+      "question": "在创建节点弹性策略的YAML样例中，spec.rules[x].action.type参数当前仅支持什么值？",
+      "required_facts": [
+        "当前仅支持ScaleUp"
+      ]
+    },
+    "cce_10_0787:table-007-p02": {
+      "question": "在Kubernetes原生配置的负载弹性伸缩控制器配置中，参数horizontal-pod-autoscaler-initial-readiness-delay的默认值是多少？",
+      "required_facts": [
+        "默认值为30s"
+      ]
+    },
+    "cce_10_0361:image-005": {
+      "question": "在《使用CoreDNS实现自定义域名解析》的“使用CoreDNS Forward插件将自建DNS设为上游DNS”截图中，被红色矩形框选中的JSON配置行包含哪些字段和值？",
+      "required_facts": [
+        "被红色矩形框选中的行内容为：\"name\": \"forward\", \"parameters\": \". 192.168.1.1\"。"
+      ]
+    },
+    "cce_10_0107:image-008": {
+      "question": "在《通过kubectl连接集群》的“常见问题”截图中，围绕“DataPlane”，被红框标注的“集群控制面所在网段”字段的值是什么？",
+      "required_facts": [
+        "集群控制面所在网段字段的值为10.1.34.0/24。"
+      ]
+    },
+    "cce_10_1080:image-002": {
+      "question": "在《更新集群证书》的“更新CCE集群证书”截图中，围绕“Standard”，红色横幅提示的集群证书将在多少天后过期？",
+      "required_facts": [
+        "红色横幅提示集群证书将在18天后过期。"
+      ]
+    },
+    "cce_10_0184:image-002": {
+      "question": "在《同步云服务器》的“同步全部云服务器”截图中，围绕“CPU...”，工具栏中哪个按钮被红框标注？",
+      "required_facts": [
+        "工具栏中被红框标注的按钮是“同步全部云服务器”。"
+      ]
+    },
+    "cce_10_0189:image-010": {
+      "question": "在《配置命名空间权限（Kubernetes RBAC授权）》的“示例：授予命名空间运维权限（admin）”截图中，“添加权限”弹窗的权限类型选项卡中哪个选项处于选中状态？",
+      "required_facts": [
+        "权限类型选项卡中“运维权限”处于选中状态。"
+      ]
+    },
+    "cce_10_0016:image-004": {
+      "question": "在《使用密钥》的“使用密钥设置工作负载的环境变量”截图中，围绕“mysecret”，被红框标注的环境变量行中，变量名称输入框填写的内容是什么？",
+      "required_facts": [
+        "变量名称输入框填写的内容是“username”。"
+      ]
+    },
+    "cce_10_0978:image-008": {
+      "question": "在《大规模集群中的云原生监控插件配置最佳实践》的“kube-state-metrics规格调整”截图中，围绕“DaemonSet”，被红框标注的kube-state-metrics组件的副本数是多少？",
+      "required_facts": [
+        "kube-state-metrics组件的副本数为1。"
+      ]
+    },
+    "cce_10_0429:image-003": {
+      "question": "在《将容器应用从SFS 1.0迁移到通用文件系统（原SFS 3.0 容量型）或SFS Turbo》的“静态挂载存储的迁移”截图中，围绕“YAML”，被红色边框标注的存储卷声明类型是哪个？",
+      "required_facts": [
+        "被红色边框标注的存储卷声明类型是“极速文件存储”。"
+      ]
+    },
+    "cce_10_0015:image-004": {
+      "question": "在《使用配置项》的“通过配置项设置命令行参数”截图中，被红色矩形框标出的变量/变量引用下拉框选中的配置项名称是什么？",
+      "required_facts": [
+        "变量/变量引用下拉框选中的配置项名称是“cce-configmap”。"
+      ]
+    },
+    "cce_10_0715:image-001": {
+      "question": "在《Pod监控》的“Pod列表”截图中，围绕“default”，第三行Pod的CPU申请值是多少？",
+      "required_facts": [
+        "第三行Pod的CPU申请值为0.25 Cores。"
+      ]
+    },
+    "cce_10_0462:table-008-p01": {
+      "question": "在《容器运行时说明》的“容器运行时版本说明”中，表8针对集群版本v1.36、架构x86、操作系统Huawei Cloud EulerOS 2.0这一行，最新Docker版本和最新containerd版本分别是什么？",
+      "required_facts": [
+        "最新Docker版本为“-”",
+        "最新containerd版本为containerd-2.2.1-26.04.130941168.gitb72de14b.x86_64"
+      ]
+    },
+    "cce_10_0719:table-006-p03": {
+      "question": "在《节点规格说明》的“通用计算增强型”表格中，ac8.16xlarge.4规格的云硬盘最大IOPS是多少万？",
+      "required_facts": [
+        "ac8.16xlarge.4规格的云硬盘最大IOPS为10万。"
+      ]
+    },
+    "cce_10_0870:table-001-p01": {
+      "question": "在《专属存储概述》的“专属存储性能规格”表格中，高IO和超高IO在IO读写时延（单队列，4KiB数据块大小）上的取值分别是什么？",
+      "required_facts": [
+        "高IO的IO读写时延为1 ms ~ 3 ms",
+        "超高IO的IO读写时延为1 ms"
+      ]
+    },
+    "cce_10_0613:table-001-p01": {
+      "question": "在云硬盘性能规格表中，IOPS突发上限这一行对应的极速型SSD、通用SSD、超高IO和高IO的数值分别是多少？",
+      "required_facts": [
+        "极速型SSD的IOPS突发上限为64000，通用SSD为8000，超高IO为16000，高IO为5000"
+      ]
+    },
+    "cce_10_0129:table-001-p01": {
+      "question": "在《CoreDNS域名解析》的“安装插件”表格中，节点数量为2000时，推荐配置的QPS值是多少？",
+      "required_facts": [
+        "20000QPS"
+      ]
+    },
+    "cce_10_1162:table-001-p01": {
+      "question": "在Velero文档的“安装插件”部分，表1中集群资源数量为20000时，建议的CPU申请值和内存限制值分别是多少？",
+      "required_facts": [
+        "建议CPU申请值为250m",
+        "建议内存限制值为2000Mi"
+      ]
+    },
+    "cce_10_0700:table-002-p01": {
+      "question": "在《CPU Burst弹性限流》的‘操作步骤’中，表1对比未开启和开启CPU Burst的性能数据，未开启CPU Burst时p99时延和nr_throttled限流次数分别是多少？",
+      "required_facts": [
+        "p99时延为2.96ms",
+        "nr_throttled限流次数为986"
+      ]
+    },
+    "cce_10_0193:table-001-p01": {
+      "question": "在《Volcano调度器》的‘安装插件’章节中，volcano-admission在200节点规模下的建议CPU Limit(m)和Memory Limit(Mi)分别是多少？",
+      "required_facts": [
+        "CPU Limit为1000m",
+        "Memory Limit为2000Mi"
+      ]
+    },
+    "cce_10_1155:table-004-p01": {
+      "question": "Envoy Gateway插件版本记录表中，插件版本1.0.9对应的更新特性是什么？",
+      "required_facts": [
+        "插件版本1.0.9的更新特性为新增Envoy Gateway插件。"
+      ]
+    },
+    "cce_10_0287:table-001-p01": {
+      "question": "在《设置资源配额及限制》的默认资源配额表中，200节点集群规模对应的Pod配额是多少？",
+      "required_facts": [
+        "200节点集群规模对应的Pod配额为2000。"
+      ]
+    },
+    "cce_10_0820:image-005": {
+      "question": "在《开通监控中心》的“开通监控中心”截图中，区域标题“数据存储配置（至少开启一项）”下方，开关项“监控数据上报至AOM服务”处于什么状态？",
+      "required_facts": [
+        "开关项“监控数据上报至AOM服务”处于开启状态（蓝色）。"
+      ]
+    },
+    "cce_10_0999:image-003": {
+      "question": "在《AI数据加速引擎插件》的“使用示例”截图中，围绕“juicefs-data”，桶配置页面里“已购存储包”显示的内容是什么？",
+      "required_facts": [
+        "已购存储包显示“标准存储包（多AZ） 剩余：39.897 GB”。"
+      ]
+    },
+    "cce_10_1141:image-003": {
+      "question": "在《Notebook》的“使用示例”截图中，JupyterLab界面左侧文件浏览器中哪个文件被蓝色高亮选中？",
+      "required_facts": [
+        "'Untitled.ipynb'（Modified 57m ago）被蓝色高亮选中。"
+      ]
+    },
+    "cce_10_0642:image-003": {
+      "question": "在《在存储池中导入持久卷》的“导入存储池”截图中，围绕“存储卷声明”，节点192.168.0.42的“已挂载/可挂载”列显示什么值？",
+      "required_facts": [
+        "节点192.168.0.42的“已挂载/可挂载”列显示“2/3”。"
+      ]
+    },
+    "cce_10_0415:image-007": {
+      "question": "在《创建CronHPA定时策略》的“使用控制台创建”截图中，CronHPA策略配置界面的“策略规则”表格中，触发时间列显示什么？",
+      "required_facts": [
+        "触发时间为“在00:00”。"
+      ]
+    },
+    "cce_10_0245:image-001": {
+      "question": "在《RBAC示例：某部门权限设计及配置》的“权限设计”截图中，开发工程师LINDA被授予的权限是什么？",
+      "required_facts": [
+        "命名空间project-a的编辑权限 其他命名空间的只读权限"
+      ]
+    },
+    "cce_10_1007:image-001": {
+      "question": "在《GPU虚拟化Burst调度》的“GPU虚拟化Burst调度”截图中，围绕“policy”，Burst调度下半部分容器3的算力单元分配情况如何？",
+      "required_facts": [
+        "容器3分配显存单元4、5，算力单元为空。"
+      ]
+    },
+    "cce_10_0007:image-006": {
+      "question": "在《管理工作负载》的“回退（仅无状态工作负载可用）”截图中，版本记录表格中哪个按钮被红框标出？",
+      "required_facts": [
+        "“回退到此版本”按钮被红框标出。"
+      ]
+    },
+    "cce_10_0749:image-002": {
+      "question": "在《应用资源规格推荐》的“开通应用规格推荐”截图中，围绕“testcluster”，成本优化建议区域显示“应用资源规格推荐”标签的推荐等级是什么？",
+      "required_facts": [
+        "“强烈推荐”"
+      ]
+    },
+    "cce_10_11010:image-001": {
+      "question": "在《为ELB Ingress监听器配置新建与并发连接限速》的“通过kubectl命令行配置”截图中，围绕“k8s_HTTPS_443”，ELB控制台监听器详情页的“每秒新建连接限速（每可用区）”字段值是多少？",
+      "required_facts": [
+        "每秒新建连接限速（每可用区）“100”"
+      ]
+    },
+    "cce_10_0960:image-008": {
+      "question": "在《Grafana插件自定义配置迁移》的“步骤三：导入自定义视图”截图中，Grafana“Import dashboard”页面的“Options”区域里，“Unique identifier (UID)”说明文字下方输入框显示的值是什么？",
+      "required_facts": [
+        "4xFqwVNNk"
+      ]
+    },
+    "cce_10_1138:image-001": {
+      "question": "在《低优先级工作负载CPU限流》的“配置示例”截图中，右侧“混部配置”面板的“出口网络带宽”区域中，“在线作业带宽占用超水位线时离线作业带宽占比上限(%)”输入框显示的值是多少？",
+      "required_facts": [
+        "10"
+      ]
+    },
+    "cce_10_0694:image-002": {
+      "question": "在《为ELB Ingress配置HTTP/2》的“Ingress配置HTTP/2”截图中，围绕“HTTPS”，监听器配置表单的“服务器证书”下拉框显示的名称是什么？",
+      "required_facts": [
+        "cert-test"
+      ]
+    },
+    "cce_10_0559:image-003": {
+      "question": "在《使用Prometheus监控控制节点组件指标》的“通过监控中心查看控制节点组件指标”截图中，右侧“采集配置”面板的ServiceMonitor表格里，命名空间为monitoring且标签包含app.kubernetes.io/name: dcgm-exporter的表格行，其“启用”列显示的状态是什么？",
+      "required_facts": [
+        "关闭"
+      ]
+    },
+    "cce_10_0879:image-005": {
+      "question": "在《单集群视角的成本洞察》的“命名空间维度”截图中，命名空间概览区域显示的“CPU 申请量”是多少 Cores？",
+      "required_facts": [
+        "4.95 Cores"
+      ]
+    },
+    "cce_10_0403:image-005": {
+      "question": "在《变更集群规格》的“自动升配”截图中，自动升配触发流程图中“控制节点滚动更新”节点有一条向右的“失败”分支指向哪个节点？",
+      "required_facts": [
+        "升配失败 自动退避重试"
+      ]
+    },
+    "cce_10_1111:image-002": {
+      "question": "在《禁用集群中静态存储的临时凭据说明》的“禁用临时凭据操作指导”截图中，底部被红色矩形框标出的三个配置项中，“默认镜像访问凭证（default-secret）”的状态是什么？",
+      "required_facts": [
+        "已开启"
+      ]
+    },
+    "cce_10_0849:image-002": {
+      "question": "在《通过节点池升级节点的GPU驱动版本》的“步骤一：指定节点池驱动版本”截图中，nvidia-smi 回显的 GPU 信息表格里，GPU 编号 0 的“Memory-Usage”显示的值是什么？",
+      "required_facts": [
+        "0MiB / 7680MiB"
+      ]
+    },
+    "cce_10_0630:image-001": {
+      "question": "在《通过动态存储卷使用对象存储》的“动态创建对象存储”截图中，容器配置页面“已有存储卷声明 (PVC)”区域的“挂载路径”输入框显示的值是什么？",
+      "required_facts": [
+        "/data"
+      ]
+    },
+    "cce_10_1066:image-001": {
+      "question": "在《集群关联子网可用IP余量监控及告警配置》的“方案原理”截图中，架构流程图里标注“3.指标聚合”的箭头是由哪两个实例指向“实例C”的？",
+      "required_facts": [
+        "实例A和实例B"
+      ]
+    }
+  },
+  "usage": {
+    "calls": 31,
+    "prompt_tokens": 60772,
+    "completion_tokens": 9467,
+    "total_tokens": 70239
+  },
+  "completed_at": "2026-09-25T11:47:15.967994+00:00"
+}

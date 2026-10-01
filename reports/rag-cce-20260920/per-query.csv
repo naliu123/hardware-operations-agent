@@ -1,0 +1,1177 @@
+﻿experiment,split,id,question,answerable,question_type,section,reference_answer,relevant_evidence_ids,retrieved_evidence_ids,latency_ms,recall_at_1,recall_at_3,recall_at_5,precision_at_5,hit_at_5,mrr_at_5,ndcg_at_5,status,answer,trace_id,phoenix_run_id,processing_success,answer_rate,citation_recall,citation_precision,citation_hit,citation_integrity,llm_correctness,llm_faithfulness,llm_relevance,llm_explanation,judge_trace_id,generation_prompt_tokens,generation_completion_tokens,generation_total_tokens,generation_calls,judge_prompt_tokens,judge_completion_tokens,judge_total_tokens,abstention_accuracy
+dev-bm25-baseline,development,cce-q004,给控制节点重新装了一遍系统后组件不见了，可以用重置节点恢复吗？,True,single,集群/节点,"[cce-t1-r04] 控制节点
+分类：控制节点
+高危操作：重装操作系统
+导致后果：控制节点组件被删除
+误操作后解决方案：不可恢复。",cce-t1-r04,cce-t1-r04 cce-t1-r14 cce-t3-r01 cce-t1-r26 cce-t1-r21,14.948333002394065,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,5048f63de9df962e7b3ba1b9fc2016ce,RXhwZXJpbWVudFJ1bjox,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q005,自行把控制节点的 etcd 升了版本，集群出问题后怎么办？,True,single,集群/节点,"[cce-t1-r05] 控制节点
+分类：控制节点
+高危操作：自行升级控制节点或者etcd组件版本
+导致后果：可能导致集群无法使用
+误操作后解决方案：回退到原始版本。",cce-t1-r05,cce-t1-r05 cce-t1-r09 cce-t1-r08 cce-t4-r07 cce-t4-r10,9.327708001364954,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,5ce03da25dfc70b24e2df539ebb09bf1,RXhwZXJpbWVudFJ1bjoy,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q008,手工调过 kube-apiserver 和 etcd 的启动参数后控制节点异常，应该恢复到什么配置？,True,single,集群/节点,"[cce-t1-r08] 控制节点
+分类：控制节点
+高危操作：自行修改核心组件（etcd、kube-apiserver、docker等）参数
+导致后果：可能导致控制节点不可用
+误操作后解决方案：按照推荐配置参数恢复，详情请参见修改CCE集群配置。",cce-t1-r08,cce-t1-r08 cce-t2-r06 cce-t1-r09 cce-t3-r01 cce-t1-r17,7.703958006459288,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,c31c4a2a645f12206a953cffb6c30243,RXhwZXJpbWVudFJ1bjoz,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q009,自行给控制节点换了一套 etcd 证书导致集群不可用，能恢复吗？,True,single,集群/节点,"[cce-t1-r09] 控制节点
+分类：控制节点
+高危操作：自行更换控制节点或etcd证书
+导致后果：可能导致集群不可用
+误操作后解决方案：不可恢复。",cce-t1-r09,cce-t1-r09 cce-t1-r05 cce-t1-r08 cce-t1-r03 cce-t4-r11,8.39554199774284,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,7f4febaab26a5d41706d0b9cdaf98440,RXhwZXJpbWVudFJ1bjo0,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q012,工作节点被误删了，文档对恢复是怎么说的？,True,single,集群/节点,"[cce-t1-r12] Node节点
+分类：Node节点
+高危操作：节点被删除
+导致后果：该节点不可用
+误操作后解决方案：不可恢复。",cce-t1-r12,cce-t3-r01 cce-t1-r12 source-preamble cce-t1-r22 cce-t2-r05,6.80724999983795,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,RETRIEVAL_ONLY,,21cddf33fda0d08f112bdef80911341a,RXhwZXJpbWVudFJ1bjo1,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q014,普通 Node 节点被重新安装操作系统后组件丢失，应采取什么恢复动作？,True,single,集群/节点,"[cce-t1-r14] Node节点
+分类：Node节点
+高危操作：重装操作系统
+导致后果：节点组件被删除，节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r14,cce-t1-r04 cce-t1-r14 cce-t1-r22 cce-t2-r07 cce-t1-r12,7.026708000921644,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,RETRIEVAL_ONLY,,666769140614b6a38438834549c72558,RXhwZXJpbWVudFJ1bjo2,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q015,可以直接在 CCE 工作节点执行 yum update 更新内核和运行时吗？出问题怎么办？,True,single,集群/节点,"[cce-t1-r15] Node节点
+分类：Node节点
+高危操作：升级内核或容器平台依赖组件（如openvswitch/ipvlan/docker/containerd）
+导致后果：可能导致节点无法使用或网络异常
+
+ 说明：
+
+节点运行依赖系统内核版本，如非必要，请不要使用yum update命令更新或重装节点的操作系统内核（使用原镜像或其它镜像重装均属高危操作）
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r15,cce-t1-r15 cce-t2-r07 cce-t3-r01 cce-t1-r21 cce-t1-r11,6.587833006051369,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,55be293c1cf67e516edae990bbcf97d9,RXhwZXJpbWVudFJ1bjo3,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q017,直接改 kubelet 和 kube-proxy 参数以后，当时正常，升级集群时还会有什么风险？,True,single,集群/节点,"[cce-t1-r17] Node节点
+分类：Node节点
+高危操作：自行修改核心组件（kubelet、kube-proxy等）参数
+导致后果：可能导致节点不可用、修改安全相关配置导致组件不安全等
+
+即使修改完后当时未出现上述情况，在后续集群升级时还可能导致自行修改的参数被重置的问题，详情请参见注意事项。
+误操作后解决方案：如果出现节点不可用问题，建议按照推荐配置参数恢复，详情请参见节点池配置管理。
+
+同时，建议您通过CCE控制台修改相关配置，以便在集群升级时自动继承。",cce-t1-r17,cce-t1-r17 cce-t1-r08 cce-t2-r06 cce-t7-r03 cce-t1-r01,5.761832988355309,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,0fec186874b9ff541ecf376ca62f47a1,RXhwZXJpbWVudFJ1bjo4,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q018,修改了节点操作系统配置后节点不可用，可以尝试哪两种处理方式？,True,single,集群/节点,"[cce-t1-r18] Node节点
+分类：Node节点
+高危操作：修改操作系统配置
+导致后果：可能导致节点不可用
+误操作后解决方案：尝试还原配置项或重置节点，具体请参见重置节点。",cce-t1-r18,cce-t1-r18 cce-t1-r14 cce-t2-r07 cce-t1-r23 cce-t1-r08,5.915707995882258,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,a9501bbcd3ec7228d89c364f8c6e058d,RXhwZXJpbWVudFJ1bjo5,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q023,改动 NetworkManager 的配置后节点失联，文档建议怎么处理？,True,single,集群/节点,"[cce-t1-r23] Node节点
+分类：Node节点
+高危操作：修改NetworkManager的配置
+导致后果：节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r23,cce-t1-r23 cce-t2-r05 source-preamble cce-t1-r17 cce-t6-r01,5.597458002739586,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,60eebc0347c74d2a69e086deec3d62f5,RXhwZXJpbWVudFJ1bjoxMA==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q025,绕过节点池，在 ECS 控制台改节点规格，为什么弹性扩缩容数量可能不符合预期？,True,single,集群/节点,"[cce-t1-r25] Node节点
+分类：Node节点
+高危操作：在ECS侧对节点池下的节点进行规格变更
+导致后果：节点的规格与节点池定义的规格不一致，导致在弹性扩缩容时出现非预期现象（多扩或者少扩）
+误操作后解决方案：重新将节点规格变更为节点池下定义的规格，或者删除该节点重新扩容。",cce-t1-r25,cce-t1-r25 cce-t7-r04 cce-t1-r07 cce-t1-r17 cce-t4-r04,5.604457997833379,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,3231ce59c55e2c98378129f4e4c9ab10,RXhwZXJpbWVudFJ1bjoxMQ==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q028,把 IPv4 转发开关设成 0 后网络不通，应改成什么值？,True,single,网络,"[cce-t2-r01] 网络
+高危操作：修改内核参数net.ipv4.ip_forward=0
+导致后果：网络不通
+误操作后解决方案：修改内核参数为 net.ipv4.ip_forward=1",cce-t2-r01,cce-t2-r01 cce-t2-r07 cce-t4-r03 cce-t2-r05 cce-t4-r04,5.229417001828551,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,ab4b84bec4b977dbb2c9a99ebf4bce33,RXhwZXJpbWVudFJ1bjoxMg==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q036,用 hostPath 挂载 /var/lib/docker，为什么系统组件重启后容器可能读不了原内容？,True,single,容器,"[cce-t3-r02] 容器
+高危操作：使用hostPath方式挂载系统组件目录，如挂载/var/lib/docker下的文件
+导致后果：系统组件重启后可能会导致节点上的系统组件目录重建，打断了挂载的inode链接，导致容器内无法正常使用挂载内容
+误操作后解决方案：不建议挂载系统组件目录",cce-t3-r02,cce-t3-r02 cce-t1-r20 cce-t3-r01 cce-t1-r15 cce-t1-r26,5.675374995917082,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,6996c82316d92d45294e0e741c0d6468,RXhwZXJpbWVudFJ1bjoxMw==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q037,在 ELB 控制台直接删除已绑定 CCE 的负载均衡实例会有什么影响？,True,single,负载均衡,"[cce-t4-r01] 负载均衡
+高危操作：禁止通过ELB的控制台删除已绑定CCE集群的ELB实例
+导致后果：导致Service/Ingress访问不通。
+误操作后解决方案：不建议删除。",cce-t4-r01,cce-t4-r01 cce-t4-r02 cce-t4-r04 cce-t4-r05 cce-t4-r06,5.671000006259419,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,ce5c8076c39bccf4a440a683ccab879f,RXhwZXJpbWVudFJ1bjoxNA==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q039,从 ELB 控制台改了负载均衡器的私有 IPv4 地址，会影响流量和 YAML 哪些内容？,True,single,负载均衡,"[cce-t4-r03] 负载均衡
+高危操作：通过ELB的控制台修改ELB的IPv4私有IP
+导致后果：基于IPv4私有IP进行私网流量转发功能会出现中断
+Service/Ingress的YAML中status字段下的IP变化
+误操作后解决方案：不建议修改，请自行恢复。",cce-t4-r03,cce-t4-r04 cce-t4-r03 cce-t4-r11 cce-t3-r01 cce-t4-r10,6.216707988642156,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,RETRIEVAL_ONLY,,842c104369f3e3962f8b69689ca9aa93,RXhwZXJpbWVudFJ1bjoxNQ==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q042,有人在 ELB 控制台删除了 CCE 自动创建的监听器，业务访问不通应如何修复？,True,single,负载均衡,"[cce-t4-r06] 负载均衡
+高危操作：通过ELB的控制台删除CCE自动创建的监听器
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r06,cce-t4-r06 cce-t4-r05 cce-t4-r09 cce-t4-r10 cce-t4-r11,6.073750002542511,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,e45a7f30185065788f7a75122df76754,RXhwZXJpbWVudFJ1bjoxNg==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q043,在 ELB 侧改了 CCE 监听器的名称和超时时间，集群升级后能保证保留吗？,True,single,负载均衡,"[cce-t4-r07] 负载均衡
+高危操作：通过ELB的控制台修改CCE创建的监听器名称、访问控制、超时时间、描述等基本配置
+导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：不建议修改，请自行恢复。",cce-t4-r07,cce-t4-r07 cce-t4-r05 cce-t4-r06 cce-t4-r09 cce-t4-r10,5.619791991193779,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,8f185d3061fb72f0f1fc7c794a0ad0a6,RXhwZXJpbWVudFJ1bjoxNw==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q044,手工从监听器后端组删除一台服务器又添加一台，CCE 控制节点重启后这些更改会怎样？,True,single,负载均衡,"[cce-t4-r08] 负载均衡
+高危操作：通过ELB的控制台修改CCE创建的监听器后端服务器组，添加、删除后端服务器
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置：
+用户删除的后端服务器会恢复
+用户添加的后端服务器会被移除
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r08,cce-t4-r08 cce-t4-r09 cce-t4-r10 cce-t4-r11 cce-t4-r06,5.7556659885449335,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,8b6bdea67a46bbc9572aa0bba44b3dc8,RXhwZXJpbWVudFJ1bjoxOA==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q051,在控制台把正在用的 EVS 卸载后 Pod 写入报 IO Error，文档建议怎样处理？,True,single,云硬盘,"[cce-t7-r01] 云硬盘
+高危操作：控制台手动解除挂载EVS
+导致后果：Pod写入出现IO Error故障
+误操作后解决方案：删除节点上mount目录，重新调度Pod
+备注：Pod里面的文件记录了文件的采集位置",cce-t7-r01,cce-t7-r01 cce-t7-r03 cce-t7-r02 cce-t4-r01 cce-t4-r02,5.208250004216097,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,9fdd72f462878fcbf92bf22c5160cbb1,RXhwZXJpbWVudFJ1bjoxOQ==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q054,创建 PV 的 YAML 带着 status、spec.claimRef 和 set-disk-metadata，会有什么风险，删除前如何纠正？,True,single,云硬盘,"[cce-t7-r04] 云硬盘
+高危操作：创建PV时带有未在文档中声明的参数
+
+例如，创建PV时，Yaml文件中涉及status、spec.claimRef以及annotation.everest.io/set-disk-metadata等参数，可能造成PV异常
+导致后果：此操作可能会绕过创建PV的某些标准流程，从而导致PV状态不符预期（功能不可用或被异常删除）
+误操作后解决方案：在PV被异常删除前，可以修改对应PV的Yaml文件，手动删除相关参数
+备注：无",cce-t7-r04,cce-t7-r04 cce-t4-r03 cce-t2-r05 cce-t2-r06 cce-t4-r05,5.156541999895126,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,1af7c506c14cf40ba78cb8250d8918fb,RXhwZXJpbWVudFJ1bjoyMA==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q055,直接在后台改插件资源后升级丢了配置，应该通过哪些入口修改插件？,True,single,插件,"[cce-t8-r01] 插件
+高危操作：后台修改插件相关资源
+导致后果：插件异常或引入其他非预期问题（例如升级后参数配置被覆盖等）
+误操作后解决方案：通过插件配置页面或开放的插件管理API进行操作",cce-t8-r01,cce-t8-r01 cce-t6-r01 cce-t1-r11 cce-t1-r17 cce-t3-r01,5.269542001769878,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,aa116c6e334afc39e96ce2f4b6057e2e,RXhwZXJpbWVudFJ1bjoyMQ==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q056,重装控制节点和普通工作节点的操作系统，文档给出的恢复结论有什么不同？,True,comparison,集群/节点,"[cce-t1-r04] 控制节点
+分类：控制节点
+高危操作：重装操作系统
+导致后果：控制节点组件被删除
+误操作后解决方案：不可恢复。
+
+[cce-t1-r14] Node节点
+分类：Node节点
+高危操作：重装操作系统
+导致后果：节点组件被删除，节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r04 cce-t1-r14,cce-t1-r04 cce-t1-r15 cce-t1-r14 cce-t2-r07 cce-t3-r01,5.228500012890436,0.5,1.0,1.0,0.4,1.0,1.0,0.9197207891481876,RETRIEVAL_ONLY,,493a299b3f7ab50afa9066eea802f9e5,RXhwZXJpbWVudFJ1bjoyMg==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-q060,在 ELB 侧删除整个 CCE 负载均衡实例与删除 CCE 自动创建的监听器，文档给出的建议有何区别？,True,comparison,负载均衡,"[cce-t4-r01] 负载均衡
+高危操作：禁止通过ELB的控制台删除已绑定CCE集群的ELB实例
+导致后果：导致Service/Ingress访问不通。
+误操作后解决方案：不建议删除。
+
+[cce-t4-r06] 负载均衡
+高危操作：通过ELB的控制台删除CCE自动创建的监听器
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r01 cce-t4-r06,cce-t4-r05 cce-t4-r06 cce-t4-r10 cce-t4-r07 cce-t4-r08,5.492458993103355,0.0,0.5,0.5,0.2,1.0,0.5,0.38685280723454163,RETRIEVAL_ONLY,,04e66bbbb8330392cbed386d4d56edb2,RXhwZXJpbWVudFJ1bjoyMw==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-u001,根据这篇文档，CCE 集群按小时收费的准确价格是多少？,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,source-preamble cce-t7-r02 cce-t1-r10 cce-t1-r02 cce-t4-r06,4.878874999121763,,,,,,,,RETRIEVAL_ONLY,,f36d6f57cd1051083015b20c2c4cd3f2,RXhwZXJpbWVudFJ1bjoyNA==,,,,,,,,,,,,,,,,,,,
+dev-bm25-baseline,development,cce-u002,这篇文档明确要求升级到哪个 Kubernetes 小版本才能修复 CVE-2026-12345？,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,source-preamble cce-t1-r05 cce-t1-r15 cce-t1-r20 cce-t1-r06,4.987334003089927,,,,,,,,RETRIEVAL_ONLY,,a0e22c82b67e52b65e04937e4f4960d4,RXhwZXJpbWVudFJ1bjoyNQ==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q004,给控制节点重新装了一遍系统后组件不见了，可以用重置节点恢复吗？,True,single,集群/节点,"[cce-t1-r04] 控制节点
+分类：控制节点
+高危操作：重装操作系统
+导致后果：控制节点组件被删除
+误操作后解决方案：不可恢复。",cce-t1-r04,cce-t1-r24 cce-t1-r22 cce-t1-r14 cce-t1-r04 cce-t1-r21,17.257708008401096,0.0,0.0,1.0,0.2,1.0,0.25,0.43067655807339306,RETRIEVAL_ONLY,,6107ec290ab0dcaaba2670592b067494,RXhwZXJpbWVudFJ1bjoyNg==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q005,自行把控制节点的 etcd 升了版本，集群出问题后怎么办？,True,single,集群/节点,"[cce-t1-r05] 控制节点
+分类：控制节点
+高危操作：自行升级控制节点或者etcd组件版本
+导致后果：可能导致集群无法使用
+误操作后解决方案：回退到原始版本。",cce-t1-r05,cce-t1-r05 cce-t1-r09 cce-t1-r08 cce-t1-r07 cce-t1-r02,13.218000007327646,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,dfee89217c615dfc26aa7950d2da7516,RXhwZXJpbWVudFJ1bjoyNw==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q008,手工调过 kube-apiserver 和 etcd 的启动参数后控制节点异常，应该恢复到什么配置？,True,single,集群/节点,"[cce-t1-r08] 控制节点
+分类：控制节点
+高危操作：自行修改核心组件（etcd、kube-apiserver、docker等）参数
+导致后果：可能导致控制节点不可用
+误操作后解决方案：按照推荐配置参数恢复，详情请参见修改CCE集群配置。",cce-t1-r08,cce-t1-r22 cce-t1-r08 cce-t1-r24 cce-t1-r17 cce-t1-r21,12.236334005137905,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,RETRIEVAL_ONLY,,90bb77c19d8517863b2ebda9acdc09de,RXhwZXJpbWVudFJ1bjoyOA==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q009,自行给控制节点换了一套 etcd 证书导致集群不可用，能恢复吗？,True,single,集群/节点,"[cce-t1-r09] 控制节点
+分类：控制节点
+高危操作：自行更换控制节点或etcd证书
+导致后果：可能导致集群不可用
+误操作后解决方案：不可恢复。",cce-t1-r09,cce-t1-r09 cce-t1-r05 cce-t1-r08 cce-t1-r04 cce-t1-r03,11.46100000187289,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,f81d92d2859906d452d1a1c0b92a1c85,RXhwZXJpbWVudFJ1bjoyOQ==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q012,工作节点被误删了，文档对恢复是怎么说的？,True,single,集群/节点,"[cce-t1-r12] Node节点
+分类：Node节点
+高危操作：节点被删除
+导致后果：该节点不可用
+误操作后解决方案：不可恢复。",cce-t1-r12,cce-t1-r24 cce-t1-r12 cce-t1-r13 cce-t1-r04 cce-t1-r14,10.400750004919246,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,RETRIEVAL_ONLY,,cd824577f72fb2fe4f4676f26c49bf39,RXhwZXJpbWVudFJ1bjozMA==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q014,普通 Node 节点被重新安装操作系统后组件丢失，应采取什么恢复动作？,True,single,集群/节点,"[cce-t1-r14] Node节点
+分类：Node节点
+高危操作：重装操作系统
+导致后果：节点组件被删除，节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r14,cce-t1-r22 cce-t1-r14 cce-t1-r24 cce-t1-r12 cce-t1-r13,10.788874991703779,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,RETRIEVAL_ONLY,,2ef836418d862abed0cd95dea0a7cdb6,RXhwZXJpbWVudFJ1bjozMQ==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q015,可以直接在 CCE 工作节点执行 yum update 更新内核和运行时吗？出问题怎么办？,True,single,集群/节点,"[cce-t1-r15] Node节点
+分类：Node节点
+高危操作：升级内核或容器平台依赖组件（如openvswitch/ipvlan/docker/containerd）
+导致后果：可能导致节点无法使用或网络异常
+
+ 说明：
+
+节点运行依赖系统内核版本，如非必要，请不要使用yum update命令更新或重装节点的操作系统内核（使用原镜像或其它镜像重装均属高危操作）
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r15,cce-t1-r15 cce-t2-r07 cce-t1-r22 cce-t1-r23 cce-t1-r18,11.175124993314967,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,27dfc74869d7ed33375334ce81731323,RXhwZXJpbWVudFJ1bjozMg==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q017,直接改 kubelet 和 kube-proxy 参数以后，当时正常，升级集群时还会有什么风险？,True,single,集群/节点,"[cce-t1-r17] Node节点
+分类：Node节点
+高危操作：自行修改核心组件（kubelet、kube-proxy等）参数
+导致后果：可能导致节点不可用、修改安全相关配置导致组件不安全等
+
+即使修改完后当时未出现上述情况，在后续集群升级时还可能导致自行修改的参数被重置的问题，详情请参见注意事项。
+误操作后解决方案：如果出现节点不可用问题，建议按照推荐配置参数恢复，详情请参见节点池配置管理。
+
+同时，建议您通过CCE控制台修改相关配置，以便在集群升级时自动继承。",cce-t1-r17,cce-t1-r17 cce-t1-r08 cce-t1-r01 cce-t1-r22 cce-t4-r10,11.290041991742328,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,1203fdf30d46e208c994e83d8443a70e,RXhwZXJpbWVudFJ1bjozMw==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q018,修改了节点操作系统配置后节点不可用，可以尝试哪两种处理方式？,True,single,集群/节点,"[cce-t1-r18] Node节点
+分类：Node节点
+高危操作：修改操作系统配置
+导致后果：可能导致节点不可用
+误操作后解决方案：尝试还原配置项或重置节点，具体请参见重置节点。",cce-t1-r18,cce-t1-r18 cce-t1-r23 cce-t1-r22 cce-t1-r15 cce-t1-r21,12.47950000106357,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,bc6846db9de4279e99493f57d1f212b5,RXhwZXJpbWVudFJ1bjozNA==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q023,改动 NetworkManager 的配置后节点失联，文档建议怎么处理？,True,single,集群/节点,"[cce-t1-r23] Node节点
+分类：Node节点
+高危操作：修改NetworkManager的配置
+导致后果：节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r23,cce-t1-r23 cce-t1-r11 cce-t1-r18 cce-t1-r13 cce-t1-r22,13.42925000062678,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,e5c652870a9caf627ad3c50a3c30851c,RXhwZXJpbWVudFJ1bjozNQ==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q025,绕过节点池，在 ECS 控制台改节点规格，为什么弹性扩缩容数量可能不符合预期？,True,single,集群/节点,"[cce-t1-r25] Node节点
+分类：Node节点
+高危操作：在ECS侧对节点池下的节点进行规格变更
+导致后果：节点的规格与节点池定义的规格不一致，导致在弹性扩缩容时出现非预期现象（多扩或者少扩）
+误操作后解决方案：重新将节点规格变更为节点池下定义的规格，或者删除该节点重新扩容。",cce-t1-r25,cce-t1-r25 cce-t1-r13 cce-t1-r17 cce-t1-r18 cce-t1-r23,12.737375000142492,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,07224969bdddb56bc97372620a206a94,RXhwZXJpbWVudFJ1bjozNg==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q028,把 IPv4 转发开关设成 0 后网络不通，应改成什么值？,True,single,网络,"[cce-t2-r01] 网络
+高危操作：修改内核参数net.ipv4.ip_forward=0
+导致后果：网络不通
+误操作后解决方案：修改内核参数为 net.ipv4.ip_forward=1",cce-t2-r01,cce-t4-r03 cce-t2-r01 cce-t2-r02 cce-t2-r03 cce-t2-r06,11.692500003846362,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,RETRIEVAL_ONLY,,a45ab9470e4cda77413d78b9451cd159,RXhwZXJpbWVudFJ1bjozNw==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q036,用 hostPath 挂载 /var/lib/docker，为什么系统组件重启后容器可能读不了原内容？,True,single,容器,"[cce-t3-r02] 容器
+高危操作：使用hostPath方式挂载系统组件目录，如挂载/var/lib/docker下的文件
+导致后果：系统组件重启后可能会导致节点上的系统组件目录重建，打断了挂载的inode链接，导致容器内无法正常使用挂载内容
+误操作后解决方案：不建议挂载系统组件目录",cce-t3-r02,cce-t3-r02 cce-t1-r15 cce-t3-r01 cce-t1-r22 cce-t2-r07,12.735625001369044,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,cd4797f38c818bf1b42e670b2b9c63bb,RXhwZXJpbWVudFJ1bjozOA==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q037,在 ELB 控制台直接删除已绑定 CCE 的负载均衡实例会有什么影响？,True,single,负载均衡,"[cce-t4-r01] 负载均衡
+高危操作：禁止通过ELB的控制台删除已绑定CCE集群的ELB实例
+导致后果：导致Service/Ingress访问不通。
+误操作后解决方案：不建议删除。",cce-t4-r01,cce-t4-r01 cce-t4-r05 cce-t4-r02 cce-t4-r04 cce-t4-r06,20.753374992636964,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,fcfcda81e5a4bcec30929fae853bc9e9,RXhwZXJpbWVudFJ1bjozOQ==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q039,从 ELB 控制台改了负载均衡器的私有 IPv4 地址，会影响流量和 YAML 哪些内容？,True,single,负载均衡,"[cce-t4-r03] 负载均衡
+高危操作：通过ELB的控制台修改ELB的IPv4私有IP
+导致后果：基于IPv4私有IP进行私网流量转发功能会出现中断
+Service/Ingress的YAML中status字段下的IP变化
+误操作后解决方案：不建议修改，请自行恢复。",cce-t4-r03,cce-t4-r03 cce-t4-r04 cce-t4-r07 cce-t4-r10 cce-t4-r09,12.259833994903602,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,daacc030566c52910866ffdd9e3839c8,RXhwZXJpbWVudFJ1bjo0MA==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q042,有人在 ELB 控制台删除了 CCE 自动创建的监听器，业务访问不通应如何修复？,True,single,负载均衡,"[cce-t4-r06] 负载均衡
+高危操作：通过ELB的控制台删除CCE自动创建的监听器
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r06,cce-t4-r05 cce-t4-r07 cce-t4-r10 cce-t4-r06 cce-t4-r08,10.866249998798594,0.0,0.0,1.0,0.2,1.0,0.25,0.43067655807339306,RETRIEVAL_ONLY,,b06c1bac0881df69d82a1887ba2cac72,RXhwZXJpbWVudFJ1bjo0MQ==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q043,在 ELB 侧改了 CCE 监听器的名称和超时时间，集群升级后能保证保留吗？,True,single,负载均衡,"[cce-t4-r07] 负载均衡
+高危操作：通过ELB的控制台修改CCE创建的监听器名称、访问控制、超时时间、描述等基本配置
+导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：不建议修改，请自行恢复。",cce-t4-r07,cce-t4-r07 cce-t4-r10 cce-t4-r06 cce-t4-r11 cce-t4-r05,11.929209009394981,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,f563fcfee3e231e31f2318880eb1e7ab,RXhwZXJpbWVudFJ1bjo0Mg==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q044,手工从监听器后端组删除一台服务器又添加一台，CCE 控制节点重启后这些更改会怎样？,True,single,负载均衡,"[cce-t4-r08] 负载均衡
+高危操作：通过ELB的控制台修改CCE创建的监听器后端服务器组，添加、删除后端服务器
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置：
+用户删除的后端服务器会恢复
+用户添加的后端服务器会被移除
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r08,cce-t4-r08 cce-t4-r07 cce-t4-r10 cce-t4-r06 cce-t4-r09,11.737207998521626,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,2554723d556e2072a1cba722983cd4f8,RXhwZXJpbWVudFJ1bjo0Mw==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q051,在控制台把正在用的 EVS 卸载后 Pod 写入报 IO Error，文档建议怎样处理？,True,single,云硬盘,"[cce-t7-r01] 云硬盘
+高危操作：控制台手动解除挂载EVS
+导致后果：Pod写入出现IO Error故障
+误操作后解决方案：删除节点上mount目录，重新调度Pod
+备注：Pod里面的文件记录了文件的采集位置",cce-t7-r01,cce-t7-r01 cce-t7-r02 cce-t4-r03 cce-t7-r03 cce-t4-r04,12.407999995048158,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,647f7fe1180c3e87445a4e594f45adb2,RXhwZXJpbWVudFJ1bjo0NA==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q054,创建 PV 的 YAML 带着 status、spec.claimRef 和 set-disk-metadata，会有什么风险，删除前如何纠正？,True,single,云硬盘,"[cce-t7-r04] 云硬盘
+高危操作：创建PV时带有未在文档中声明的参数
+
+例如，创建PV时，Yaml文件中涉及status、spec.claimRef以及annotation.everest.io/set-disk-metadata等参数，可能造成PV异常
+导致后果：此操作可能会绕过创建PV的某些标准流程，从而导致PV状态不符预期（功能不可用或被异常删除）
+误操作后解决方案：在PV被异常删除前，可以修改对应PV的Yaml文件，手动删除相关参数
+备注：无",cce-t7-r04,cce-t7-r04 cce-t4-r03 cce-t3-r02 cce-t1-r24 cce-t1-r19,12.191708010504954,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,921a00a1f73ce31e88915a903bf02333,RXhwZXJpbWVudFJ1bjo0NQ==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q055,直接在后台改插件资源后升级丢了配置，应该通过哪些入口修改插件？,True,single,插件,"[cce-t8-r01] 插件
+高危操作：后台修改插件相关资源
+导致后果：插件异常或引入其他非预期问题（例如升级后参数配置被覆盖等）
+误操作后解决方案：通过插件配置页面或开放的插件管理API进行操作",cce-t8-r01,cce-t8-r01 cce-t4-r03 cce-t3-r02 cce-t4-r10 cce-t2-r05,12.874375010142103,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,9c77837299fb31329c45ee771e5c1c7a,RXhwZXJpbWVudFJ1bjo0Ng==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q056,重装控制节点和普通工作节点的操作系统，文档给出的恢复结论有什么不同？,True,comparison,集群/节点,"[cce-t1-r04] 控制节点
+分类：控制节点
+高危操作：重装操作系统
+导致后果：控制节点组件被删除
+误操作后解决方案：不可恢复。
+
+[cce-t1-r14] Node节点
+分类：Node节点
+高危操作：重装操作系统
+导致后果：节点组件被删除，节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r04 cce-t1-r14,cce-t1-r04 cce-t1-r21 cce-t1-r24 cce-t1-r14 cce-t1-r22,12.293833002331667,0.5,0.5,1.0,0.4,1.0,1.0,0.8772153153380493,RETRIEVAL_ONLY,,d8e3bba3bdcefc253ba430061bd53dd7,RXhwZXJpbWVudFJ1bjo0Nw==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-q060,在 ELB 侧删除整个 CCE 负载均衡实例与删除 CCE 自动创建的监听器，文档给出的建议有何区别？,True,comparison,负载均衡,"[cce-t4-r01] 负载均衡
+高危操作：禁止通过ELB的控制台删除已绑定CCE集群的ELB实例
+导致后果：导致Service/Ingress访问不通。
+误操作后解决方案：不建议删除。
+
+[cce-t4-r06] 负载均衡
+高危操作：通过ELB的控制台删除CCE自动创建的监听器
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r01 cce-t4-r06,cce-t4-r05 cce-t4-r07 cce-t4-r06 cce-t4-r01 cce-t4-r10,11.525958994752727,0.0,0.5,1.0,0.4,1.0,0.3333333333333333,0.5706417189553201,RETRIEVAL_ONLY,,b710f057b4d3ef5f54bb036a763f2fbb,RXhwZXJpbWVudFJ1bjo0OA==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-u001,根据这篇文档，CCE 集群按小时收费的准确价格是多少？,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,cce-t1-r01 cce-t6-r01 cce-t1-r09 cce-t1-r05 cce-t1-r02,11.538417005795054,,,,,,,,RETRIEVAL_ONLY,,01f045d20023cf5cc90f70cc5aa32bf2,RXhwZXJpbWVudFJ1bjo0OQ==,,,,,,,,,,,,,,,,,,,
+dev-dense-v1,development,cce-u002,这篇文档明确要求升级到哪个 Kubernetes 小版本才能修复 CVE-2026-12345？,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,cce-t4-r03 cce-t4-r10 cce-t4-r07 cce-t1-r17 cce-t4-r08,12.142625011620112,,,,,,,,RETRIEVAL_ONLY,,c3dd917f2ff1b0b70672cd7a8dcb67e8,RXhwZXJpbWVudFJ1bjo1MA==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q004,给控制节点重新装了一遍系统后组件不见了，可以用重置节点恢复吗？,True,single,集群/节点,"[cce-t1-r04] 控制节点
+分类：控制节点
+高危操作：重装操作系统
+导致后果：控制节点组件被删除
+误操作后解决方案：不可恢复。",cce-t1-r04,cce-t1-r04 cce-t1-r14 cce-t1-r22 cce-t1-r21 cce-t1-r18,15.455583998118527,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,cfe465076526e664141740bc00cd533c,RXhwZXJpbWVudFJ1bjo1MQ==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q005,自行把控制节点的 etcd 升了版本，集群出问题后怎么办？,True,single,集群/节点,"[cce-t1-r05] 控制节点
+分类：控制节点
+高危操作：自行升级控制节点或者etcd组件版本
+导致后果：可能导致集群无法使用
+误操作后解决方案：回退到原始版本。",cce-t1-r05,cce-t1-r05 cce-t1-r09 cce-t1-r08 cce-t1-r02 cce-t1-r17,15.950458007864654,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,c7958e2bd096990aacd320f976a61425,RXhwZXJpbWVudFJ1bjo1Mg==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q008,手工调过 kube-apiserver 和 etcd 的启动参数后控制节点异常，应该恢复到什么配置？,True,single,集群/节点,"[cce-t1-r08] 控制节点
+分类：控制节点
+高危操作：自行修改核心组件（etcd、kube-apiserver、docker等）参数
+导致后果：可能导致控制节点不可用
+误操作后解决方案：按照推荐配置参数恢复，详情请参见修改CCE集群配置。",cce-t1-r08,cce-t1-r08 cce-t1-r17 cce-t1-r09 cce-t1-r05 cce-t1-r26,15.311082999687642,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,68db60f8e19a21ada200b63bc6c4956a,RXhwZXJpbWVudFJ1bjo1Mw==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q009,自行给控制节点换了一套 etcd 证书导致集群不可用，能恢复吗？,True,single,集群/节点,"[cce-t1-r09] 控制节点
+分类：控制节点
+高危操作：自行更换控制节点或etcd证书
+导致后果：可能导致集群不可用
+误操作后解决方案：不可恢复。",cce-t1-r09,cce-t1-r09 cce-t1-r05 cce-t1-r08 cce-t1-r03 cce-t1-r06,14.912541999365203,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,9acc381ee0a6be5e099170e9d8fc27a2,RXhwZXJpbWVudFJ1bjo1NA==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q012,工作节点被误删了，文档对恢复是怎么说的？,True,single,集群/节点,"[cce-t1-r12] Node节点
+分类：Node节点
+高危操作：节点被删除
+导致后果：该节点不可用
+误操作后解决方案：不可恢复。",cce-t1-r12,cce-t1-r12 cce-t1-r22 cce-t1-r13 cce-t1-r04 cce-t1-r24,14.550375010003336,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,86db84ac9f2bcc7550c4729b9a40c54b,RXhwZXJpbWVudFJ1bjo1NQ==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q014,普通 Node 节点被重新安装操作系统后组件丢失，应采取什么恢复动作？,True,single,集群/节点,"[cce-t1-r14] Node节点
+分类：Node节点
+高危操作：重装操作系统
+导致后果：节点组件被删除，节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r14,cce-t1-r22 cce-t1-r14 cce-t1-r12 cce-t1-r18 cce-t1-r24,14.4089170062216,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,RETRIEVAL_ONLY,,f598886b6eb3595bf4cce24cd852a878,RXhwZXJpbWVudFJ1bjo1Ng==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q015,可以直接在 CCE 工作节点执行 yum update 更新内核和运行时吗？出问题怎么办？,True,single,集群/节点,"[cce-t1-r15] Node节点
+分类：Node节点
+高危操作：升级内核或容器平台依赖组件（如openvswitch/ipvlan/docker/containerd）
+导致后果：可能导致节点无法使用或网络异常
+
+ 说明：
+
+节点运行依赖系统内核版本，如非必要，请不要使用yum update命令更新或重装节点的操作系统内核（使用原镜像或其它镜像重装均属高危操作）
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r15,cce-t1-r15 cce-t2-r07 cce-t1-r27 cce-t1-r22 cce-t1-r11,16.02912500675302,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,c1bb5008a08ff3f1c94e1088ca747186,RXhwZXJpbWVudFJ1bjo1Nw==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q017,直接改 kubelet 和 kube-proxy 参数以后，当时正常，升级集群时还会有什么风险？,True,single,集群/节点,"[cce-t1-r17] Node节点
+分类：Node节点
+高危操作：自行修改核心组件（kubelet、kube-proxy等）参数
+导致后果：可能导致节点不可用、修改安全相关配置导致组件不安全等
+
+即使修改完后当时未出现上述情况，在后续集群升级时还可能导致自行修改的参数被重置的问题，详情请参见注意事项。
+误操作后解决方案：如果出现节点不可用问题，建议按照推荐配置参数恢复，详情请参见节点池配置管理。
+
+同时，建议您通过CCE控制台修改相关配置，以便在集群升级时自动继承。",cce-t1-r17,cce-t1-r17 cce-t1-r08 cce-t1-r01 cce-t1-r21 cce-t4-r06,14.567499994882382,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,9313a9144bb0b9ee3ec65f0992833473,RXhwZXJpbWVudFJ1bjo1OA==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q018,修改了节点操作系统配置后节点不可用，可以尝试哪两种处理方式？,True,single,集群/节点,"[cce-t1-r18] Node节点
+分类：Node节点
+高危操作：修改操作系统配置
+导致后果：可能导致节点不可用
+误操作后解决方案：尝试还原配置项或重置节点，具体请参见重置节点。",cce-t1-r18,cce-t1-r18 cce-t1-r23 cce-t1-r14 cce-t1-r21 cce-t1-r19,15.036500000860542,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,81c58f20308361cd980f9b2dab0bcef5,RXhwZXJpbWVudFJ1bjo1OQ==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q023,改动 NetworkManager 的配置后节点失联，文档建议怎么处理？,True,single,集群/节点,"[cce-t1-r23] Node节点
+分类：Node节点
+高危操作：修改NetworkManager的配置
+导致后果：节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r23,cce-t1-r23 cce-t2-r05 cce-t1-r11 cce-t1-r18 cce-t1-r17,14.856624999083579,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,2f143a266e38350013d7c4940ee37e1f,RXhwZXJpbWVudFJ1bjo2MA==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q025,绕过节点池，在 ECS 控制台改节点规格，为什么弹性扩缩容数量可能不符合预期？,True,single,集群/节点,"[cce-t1-r25] Node节点
+分类：Node节点
+高危操作：在ECS侧对节点池下的节点进行规格变更
+导致后果：节点的规格与节点池定义的规格不一致，导致在弹性扩缩容时出现非预期现象（多扩或者少扩）
+误操作后解决方案：重新将节点规格变更为节点池下定义的规格，或者删除该节点重新扩容。",cce-t1-r25,cce-t1-r25 cce-t1-r17 cce-t1-r13 cce-t1-r08 cce-t1-r16,14.924833012628369,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,6b2af96485c7da76f4e49e4c6ab726b2,RXhwZXJpbWVudFJ1bjo2MQ==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q028,把 IPv4 转发开关设成 0 后网络不通，应改成什么值？,True,single,网络,"[cce-t2-r01] 网络
+高危操作：修改内核参数net.ipv4.ip_forward=0
+导致后果：网络不通
+误操作后解决方案：修改内核参数为 net.ipv4.ip_forward=1",cce-t2-r01,cce-t2-r01 cce-t4-r03 cce-t2-r07 cce-t2-r03 cce-t2-r06,13.377958006458357,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,170dddc0c0bc3cc8685c7c61d68966c8,RXhwZXJpbWVudFJ1bjo2Mg==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q036,用 hostPath 挂载 /var/lib/docker，为什么系统组件重启后容器可能读不了原内容？,True,single,容器,"[cce-t3-r02] 容器
+高危操作：使用hostPath方式挂载系统组件目录，如挂载/var/lib/docker下的文件
+导致后果：系统组件重启后可能会导致节点上的系统组件目录重建，打断了挂载的inode链接，导致容器内无法正常使用挂载内容
+误操作后解决方案：不建议挂载系统组件目录",cce-t3-r02,cce-t3-r02 cce-t1-r15 cce-t3-r01 cce-t2-r07 cce-t1-r20,13.323874998604879,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,a1d1ddbcd2d89a1646d6ac71daa3d488,RXhwZXJpbWVudFJ1bjo2Mw==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q037,在 ELB 控制台直接删除已绑定 CCE 的负载均衡实例会有什么影响？,True,single,负载均衡,"[cce-t4-r01] 负载均衡
+高危操作：禁止通过ELB的控制台删除已绑定CCE集群的ELB实例
+导致后果：导致Service/Ingress访问不通。
+误操作后解决方案：不建议删除。",cce-t4-r01,cce-t4-r01 cce-t4-r02 cce-t4-r05 cce-t4-r04 cce-t4-r06,12.892707993160002,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,4efc93d6b7bdcda44dc161003b6aa9ba,RXhwZXJpbWVudFJ1bjo2NA==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q039,从 ELB 控制台改了负载均衡器的私有 IPv4 地址，会影响流量和 YAML 哪些内容？,True,single,负载均衡,"[cce-t4-r03] 负载均衡
+高危操作：通过ELB的控制台修改ELB的IPv4私有IP
+导致后果：基于IPv4私有IP进行私网流量转发功能会出现中断
+Service/Ingress的YAML中status字段下的IP变化
+误操作后解决方案：不建议修改，请自行恢复。",cce-t4-r03,cce-t4-r04 cce-t4-r03 cce-t4-r10 cce-t4-r07 cce-t4-r09,14.27745800174307,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,RETRIEVAL_ONLY,,7059be186c6e460c78917dfde64e3e6c,RXhwZXJpbWVudFJ1bjo2NQ==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q042,有人在 ELB 控制台删除了 CCE 自动创建的监听器，业务访问不通应如何修复？,True,single,负载均衡,"[cce-t4-r06] 负载均衡
+高危操作：通过ELB的控制台删除CCE自动创建的监听器
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r06,cce-t4-r05 cce-t4-r06 cce-t4-r10 cce-t4-r07 cce-t4-r11,13.61991600424517,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,RETRIEVAL_ONLY,,f8a23a14d8066a4b80b00a6366940328,RXhwZXJpbWVudFJ1bjo2Ng==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q043,在 ELB 侧改了 CCE 监听器的名称和超时时间，集群升级后能保证保留吗？,True,single,负载均衡,"[cce-t4-r07] 负载均衡
+高危操作：通过ELB的控制台修改CCE创建的监听器名称、访问控制、超时时间、描述等基本配置
+导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：不建议修改，请自行恢复。",cce-t4-r07,cce-t4-r07 cce-t4-r06 cce-t4-r10 cce-t4-r05 cce-t4-r11,13.614959010737948,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,fa293f5339e38bd671162eea5baf5977,RXhwZXJpbWVudFJ1bjo2Nw==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q044,手工从监听器后端组删除一台服务器又添加一台，CCE 控制节点重启后这些更改会怎样？,True,single,负载均衡,"[cce-t4-r08] 负载均衡
+高危操作：通过ELB的控制台修改CCE创建的监听器后端服务器组，添加、删除后端服务器
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置：
+用户删除的后端服务器会恢复
+用户添加的后端服务器会被移除
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r08,cce-t4-r08 cce-t4-r10 cce-t4-r09 cce-t4-r07 cce-t4-r06,12.561875002575107,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,3d385be34739211e333cb62ffe80965c,RXhwZXJpbWVudFJ1bjo2OA==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q051,在控制台把正在用的 EVS 卸载后 Pod 写入报 IO Error，文档建议怎样处理？,True,single,云硬盘,"[cce-t7-r01] 云硬盘
+高危操作：控制台手动解除挂载EVS
+导致后果：Pod写入出现IO Error故障
+误操作后解决方案：删除节点上mount目录，重新调度Pod
+备注：Pod里面的文件记录了文件的采集位置",cce-t7-r01,cce-t7-r01 cce-t7-r02 cce-t7-r03 cce-t4-r03 cce-t4-r02,12.982708009076305,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,405169253d9d613fd70c13384a41ddbb,RXhwZXJpbWVudFJ1bjo2OQ==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q054,创建 PV 的 YAML 带着 status、spec.claimRef 和 set-disk-metadata，会有什么风险，删除前如何纠正？,True,single,云硬盘,"[cce-t7-r04] 云硬盘
+高危操作：创建PV时带有未在文档中声明的参数
+
+例如，创建PV时，Yaml文件中涉及status、spec.claimRef以及annotation.everest.io/set-disk-metadata等参数，可能造成PV异常
+导致后果：此操作可能会绕过创建PV的某些标准流程，从而导致PV状态不符预期（功能不可用或被异常删除）
+误操作后解决方案：在PV被异常删除前，可以修改对应PV的Yaml文件，手动删除相关参数
+备注：无",cce-t7-r04,cce-t7-r04 cce-t4-r03 cce-t4-r05 cce-t1-r24 cce-t1-r19,13.680584001122043,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,46433d5845d45a347cdda515b057ef4e,RXhwZXJpbWVudFJ1bjo3MA==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q055,直接在后台改插件资源后升级丢了配置，应该通过哪些入口修改插件？,True,single,插件,"[cce-t8-r01] 插件
+高危操作：后台修改插件相关资源
+导致后果：插件异常或引入其他非预期问题（例如升级后参数配置被覆盖等）
+误操作后解决方案：通过插件配置页面或开放的插件管理API进行操作",cce-t8-r01,cce-t8-r01 cce-t6-r01 cce-t1-r17 cce-t2-r05 cce-t4-r10,15.999249997548759,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,8976fc916fc10ff603369ed7427f04a6,RXhwZXJpbWVudFJ1bjo3MQ==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q056,重装控制节点和普通工作节点的操作系统，文档给出的恢复结论有什么不同？,True,comparison,集群/节点,"[cce-t1-r04] 控制节点
+分类：控制节点
+高危操作：重装操作系统
+导致后果：控制节点组件被删除
+误操作后解决方案：不可恢复。
+
+[cce-t1-r14] Node节点
+分类：Node节点
+高危操作：重装操作系统
+导致后果：节点组件被删除，节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r04 cce-t1-r14,cce-t1-r04 cce-t1-r14 cce-t1-r15 cce-t1-r03 cce-t1-r18,13.592542003607377,0.5,1.0,1.0,0.4,1.0,1.0,1.0,RETRIEVAL_ONLY,,ed8e008eb55793500f838f4e3e374754,RXhwZXJpbWVudFJ1bjo3Mg==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-q060,在 ELB 侧删除整个 CCE 负载均衡实例与删除 CCE 自动创建的监听器，文档给出的建议有何区别？,True,comparison,负载均衡,"[cce-t4-r01] 负载均衡
+高危操作：禁止通过ELB的控制台删除已绑定CCE集群的ELB实例
+导致后果：导致Service/Ingress访问不通。
+误操作后解决方案：不建议删除。
+
+[cce-t4-r06] 负载均衡
+高危操作：通过ELB的控制台删除CCE自动创建的监听器
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r01 cce-t4-r06,cce-t4-r05 cce-t4-r06 cce-t4-r07 cce-t4-r10 cce-t4-r08,14.150458009680733,0.0,0.5,0.5,0.2,1.0,0.5,0.38685280723454163,RETRIEVAL_ONLY,,c03ad8d1ffeb0a93b9dfdd24f4b76ce7,RXhwZXJpbWVudFJ1bjo3Mw==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-u001,根据这篇文档，CCE 集群按小时收费的准确价格是多少？,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,cce-t1-r10 cce-t1-r02 cce-t1-r01 cce-t7-r02 cce-t1-r08,13.10195800033398,,,,,,,,RETRIEVAL_ONLY,,c41645592cfe20789cae2d5f03545a8f,RXhwZXJpbWVudFJ1bjo3NA==,,,,,,,,,,,,,,,,,,,
+dev-hybrid-v1,development,cce-u002,这篇文档明确要求升级到哪个 Kubernetes 小版本才能修复 CVE-2026-12345？,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,cce-t1-r22 cce-t4-r07 cce-t1-r17 cce-t4-r10 cce-t2-r07,13.460082991514355,,,,,,,,RETRIEVAL_ONLY,,c446218dbaffd059e77a13ae765eec45,RXhwZXJpbWVudFJ1bjo3NQ==,,,,,,,,,,,,,,,,,,,
+dev-dense-answers,development,cce-q004,给控制节点重新装了一遍系统后组件不见了，可以用重置节点恢复吗？,True,single,集群/节点,"[cce-t1-r04] 控制节点
+分类：控制节点
+高危操作：重装操作系统
+导致后果：控制节点组件被删除
+误操作后解决方案：不可恢复。",cce-t1-r04,cce-t1-r24 cce-t1-r22 cce-t1-r14 cce-t1-r04 cce-t1-r21,889.2920420039445,0.0,0.0,1.0,0.2,1.0,0.25,0.43067655807339306,ANSWERED,控制节点重装操作系统会导致控制节点组件被删除，且误操作后的解决方案是不可恢复。,7bb227f5e94976a5a3fad990623da2e5,RXhwZXJpbWVudFJ1bjo3Ng==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出控制节点重装系统导致组件被删除，且不可恢复，完全符合参考资料，直接回答了能否用重置节点恢复的问题。,d53c0c3480e8df36272f680c1e12f168,832,51,883,1,1287,57,1344,
+dev-dense-answers,development,cce-q005,自行把控制节点的 etcd 升了版本，集群出问题后怎么办？,True,single,集群/节点,"[cce-t1-r05] 控制节点
+分类：控制节点
+高危操作：自行升级控制节点或者etcd组件版本
+导致后果：可能导致集群无法使用
+误操作后解决方案：回退到原始版本。",cce-t1-r05,cce-t1-r05 cce-t1-r09 cce-t1-r08 cce-t1-r07 cce-t1-r02,886.4285419986118,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"自行升级控制节点或者etcd组件版本属于高危操作，可能导致集群无法使用。
+
+自行升级控制节点或etcd版本后的解决方案是回退到原始版本。",b1199ae8aee45e7093172dc489349623,RXhwZXJpbWVudFJ1bjo3Nw==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确对应参考中自行升级控制节点或etcd版本的高危操作，给出了后果和回退原始版本的解决方案，且所有断言均来自检索上下文中匹配的行。,e317c9bccb5817ca77030b2d00d96732,834,96,930,1,1328,64,1392,
+dev-dense-answers,development,cce-q008,手工调过 kube-apiserver 和 etcd 的启动参数后控制节点异常，应该恢复到什么配置？,True,single,集群/节点,"[cce-t1-r08] 控制节点
+分类：控制节点
+高危操作：自行修改核心组件（etcd、kube-apiserver、docker等）参数
+导致后果：可能导致控制节点不可用
+误操作后解决方案：按照推荐配置参数恢复，详情请参见修改CCE集群配置。",cce-t1-r08,cce-t1-r22 cce-t1-r08 cce-t1-r24 cce-t1-r17 cce-t1-r21,997.428000002401,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,ANSWERED,自行修改核心组件（etcd、kube-apiserver、docker等）参数可能导致控制节点不可用，误操作后应按推荐配置参数恢复，详情参见修改CCE集群配置。,ed7714cd4869132a7ad755646ab9bcad,RXhwZXJpbWVudFJ1bjo3OA==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确传达了控制节点核心组件参数被修改后应按推荐配置恢复并参见修改CCE集群配置，与参考资料中对应条目一致，且直接回答问题。,86f6d36aff2cfe3aa9d3decf2ae1e743,955,71,1026,1,1457,61,1518,
+dev-dense-answers,development,cce-q009,自行给控制节点换了一套 etcd 证书导致集群不可用，能恢复吗？,True,single,集群/节点,"[cce-t1-r09] 控制节点
+分类：控制节点
+高危操作：自行更换控制节点或etcd证书
+导致后果：可能导致集群不可用
+误操作后解决方案：不可恢复。",cce-t1-r09,cce-t1-r09 cce-t1-r05 cce-t1-r08 cce-t1-r04 cce-t1-r03,681.3525000034133,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,自行更换控制节点或etcd证书属于高危操作，可能导致集群不可用，误操作后解决方案为不可恢复。,daf0e982ede2aa9cde057705b886ea86,RXhwZXJpbWVudFJ1bjo3OQ==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出自行更换控制节点或etcd证书是导致集群不可用的高危操作，且误操作后不可恢复，与参考回答和所提供的上下文完全一致。,d9c5fd3a7e5d8cd95f87d91383e6e015,786,56,842,1,1265,62,1327,
+dev-dense-answers,development,cce-q012,工作节点被误删了，文档对恢复是怎么说的？,True,single,集群/节点,"[cce-t1-r12] Node节点
+分类：Node节点
+高危操作：节点被删除
+导致后果：该节点不可用
+误操作后解决方案：不可恢复。",cce-t1-r12,cce-t1-r24 cce-t1-r12 cce-t1-r13 cce-t1-r04 cce-t1-r14,910.7963330025086,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,ANSWERED,工作节点（Node节点）被删除的误操作后解决方案是：不可恢复。,c2b4bcdec024f40186c80f59e1eca046,RXhwZXJpbWVudFJ1bjo4MA==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确回答了节点被删除后不可恢复，与参考一致，且所有断言均可在检索上下文中找到依据。,96448535ee059d5a1455c65806ab18e4,775,50,825,1,1231,52,1283,
+dev-dense-answers,development,cce-q014,普通 Node 节点被重新安装操作系统后组件丢失，应采取什么恢复动作？,True,single,集群/节点,"[cce-t1-r14] Node节点
+分类：Node节点
+高危操作：重装操作系统
+导致后果：节点组件被删除，节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r14,cce-t1-r22 cce-t1-r14 cce-t1-r24 cce-t1-r12 cce-t1-r13,691.8306669977028,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,ANSWERED,普通 Node 节点被重装操作系统后，节点组件被删除，节点不可用；误操作后的解决方案是重置节点。,fe1bdc00d7f9472ec460b1a6134ef281,RXhwZXJpbWVudFJ1bjo4MQ==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确回答了普通 Node 节点重装操作系统后的后果（节点组件被删除，节点不可用）和恢复动作（重置节点），与参考回答和检索到的 cce-t1-r14 上下文完全一致，没有无关内容。,a36fa89ba486a5f2a73b3a16941e70ab,815,59,874,1,1284,83,1367,
+dev-dense-answers,development,cce-q015,可以直接在 CCE 工作节点执行 yum update 更新内核和运行时吗？出问题怎么办？,True,single,集群/节点,"[cce-t1-r15] Node节点
+分类：Node节点
+高危操作：升级内核或容器平台依赖组件（如openvswitch/ipvlan/docker/containerd）
+导致后果：可能导致节点无法使用或网络异常
+
+ 说明：
+
+节点运行依赖系统内核版本，如非必要，请不要使用yum update命令更新或重装节点的操作系统内核（使用原镜像或其它镜像重装均属高危操作）
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r15,cce-t1-r15 cce-t2-r07 cce-t1-r22 cce-t1-r23 cce-t1-r18,1562.2142920037732,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"不建议直接使用 yum update 命令更新或重装节点的操作系统内核，属于高危操作，可能导致节点无法使用或网络异常。
+
+在容器隧道网络集群中，升级内核或升级 openvswitch 属于高危操作，会导致容器网络不通；该组件为华为优化后的 openvswitch，不支持自行升级为操作系统自带的 openvswitch。
+
+若误操作升级内核导致节点问题，解决方案为重置节点。
+
+若因 yum update 升级操作系统导致容器网络不可用，需按专门文档恢复。",dc7647aca0512bef7deef0ade626032e,RXhwZXJpbWVudFJ1bjo4Mg==,1.0,1.0,1.0,0.5,1.0,1.0,1,1,1,答案准确回答了两个问题：不建议直接 yum update 更新内核/运行时，属于高危操作；误操作后解决方案为重置节点，并补充了容器隧道网络下升级内核/openvswitch导致容器网络不通及需按专门文档恢复，均有检索资料依据。,906eba94cbc27556baddbab34e55ea8c,923,220,1143,1,1546,84,1630,
+dev-dense-answers,development,cce-q017,直接改 kubelet 和 kube-proxy 参数以后，当时正常，升级集群时还会有什么风险？,True,single,集群/节点,"[cce-t1-r17] Node节点
+分类：Node节点
+高危操作：自行修改核心组件（kubelet、kube-proxy等）参数
+导致后果：可能导致节点不可用、修改安全相关配置导致组件不安全等
+
+即使修改完后当时未出现上述情况，在后续集群升级时还可能导致自行修改的参数被重置的问题，详情请参见注意事项。
+误操作后解决方案：如果出现节点不可用问题，建议按照推荐配置参数恢复，详情请参见节点池配置管理。
+
+同时，建议您通过CCE控制台修改相关配置，以便在集群升级时自动继承。",cce-t1-r17,cce-t1-r17 cce-t1-r08 cce-t1-r01 cce-t1-r22 cce-t4-r10,1105.36304199195,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"自行修改 kubelet、kube-proxy 等核心组件参数，即使修改完当时未出现问题，在后续集群升级时也可能导致自行修改的参数被重置。
+
+自行修改核心组件参数可能导致节点不可用，或修改安全相关配置导致组件不安全。
+
+建议通过 CCE 控制台修改相关配置，以便在集群升级时自动继承。",c67aabe2462318404c85a14e0be82fa5,RXhwZXJpbWVudFJ1bjo4Mw==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确覆盖了参考回答的核心要点：升级时参数可能被重置，同时保留了节点不可用和不安全等风险，并给出了通过CCE控制台修改以便自动继承的建议。所有实质性断言均可在提供的资料中找到依据，且直接回答了问题，无多余内容。,fbfdb3c685d5823a6622409d05c3291e,1019,163,1182,1,1626,85,1711,
+dev-dense-answers,development,cce-q018,修改了节点操作系统配置后节点不可用，可以尝试哪两种处理方式？,True,single,集群/节点,"[cce-t1-r18] Node节点
+分类：Node节点
+高危操作：修改操作系统配置
+导致后果：可能导致节点不可用
+误操作后解决方案：尝试还原配置项或重置节点，具体请参见重置节点。",cce-t1-r18,cce-t1-r18 cce-t1-r23 cce-t1-r22 cce-t1-r15 cce-t1-r21,691.8295410141582,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,修改操作系统配置可能导致节点不可用，误操作后可以尝试还原配置项或重置节点。,e19eacf6fb018b8782ac804eaae49c21,RXhwZXJpbWVudFJ1bjo4NA==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确回答了修改操作系统配置导致节点不可用后的两种处理方式：还原配置项或重置节点，与参考一致且完全基于检索到的相关资料。,357ca8dd0080fa45725e43bc40bdda71,894,50,944,1,1352,59,1411,
+dev-dense-answers,development,cce-q023,改动 NetworkManager 的配置后节点失联，文档建议怎么处理？,True,single,集群/节点,"[cce-t1-r23] Node节点
+分类：Node节点
+高危操作：修改NetworkManager的配置
+导致后果：节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r23,cce-t1-r23 cce-t1-r11 cce-t1-r18 cce-t1-r13 cce-t1-r22,998.8612919987645,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"修改NetworkManager的配置属于高危操作，会导致节点不可用。
+
+误操作后解决方案是重置节点，具体请参见重置节点。",2c8ce2e5c51365b9484def1112a370a3,RXhwZXJpbWVudFJ1bjo4NQ==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确覆盖了参考要点的核心内容（高危操作、节点不可用、重置节点），且所有断言均严格源于retrieved_context中对应的NetworkManager配置条目，无额外无关内容。,41568beb8f660d8d8636e3f00d994187,867,89,956,1,1341,68,1409,
+dev-dense-answers,development,cce-q025,绕过节点池，在 ECS 控制台改节点规格，为什么弹性扩缩容数量可能不符合预期？,True,single,集群/节点,"[cce-t1-r25] Node节点
+分类：Node节点
+高危操作：在ECS侧对节点池下的节点进行规格变更
+导致后果：节点的规格与节点池定义的规格不一致，导致在弹性扩缩容时出现非预期现象（多扩或者少扩）
+误操作后解决方案：重新将节点规格变更为节点池下定义的规格，或者删除该节点重新扩容。",cce-t1-r25,cce-t1-r25 cce-t1-r13 cce-t1-r17 cce-t1-r18 cce-t1-r23,656.7789590044413,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,在ECS侧对节点池下的节点进行规格变更，会导致节点的规格与节点池定义的规格不一致，进而导致在弹性扩缩容时出现非预期现象（多扩或者少扩）。,7630aa6e95a832d49b8cd8f91e98c7bb,RXhwZXJpbWVudFJ1bjo4Ng==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出在ECS侧修改节点池下节点规格会导致规格与节点池定义不一致，从而导致弹性扩缩容时多扩或少扩，与参考回答完全一致；所有断言均可在检索到的资料cce-t1-r25中找到依据，且直接回答了问题，没有无关内容。,041c817b453ac1b10b7ca592207027d8,915,72,987,1,1432,89,1521,
+dev-dense-answers,development,cce-q028,把 IPv4 转发开关设成 0 后网络不通，应改成什么值？,True,single,网络,"[cce-t2-r01] 网络
+高危操作：修改内核参数net.ipv4.ip_forward=0
+导致后果：网络不通
+误操作后解决方案：修改内核参数为 net.ipv4.ip_forward=1",cce-t2-r01,cce-t4-r03 cce-t2-r01 cce-t2-r02 cce-t2-r03 cce-t2-r06,795.0951250095386,0.0,1.0,1.0,0.2,1.0,0.5,0.6309297535714575,ANSWERED,修改内核参数net.ipv4.ip_forward=0会导致网络不通；误操作后应修改内核参数为net.ipv4.ip_forward=1。,ebcfe4dd0e851a16f6693a59e4814266,RXhwZXJpbWVudFJ1bjo4Nw==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出将net.ipv4.ip_forward改为1，与参考一致；断言完全基于提供的上下文，且直接回答所问没有无关内容。,d9732cb766436b647b630b1b725a1b62,903,69,972,1,1383,60,1443,
+dev-dense-answers,development,cce-q036,用 hostPath 挂载 /var/lib/docker，为什么系统组件重启后容器可能读不了原内容？,True,single,容器,"[cce-t3-r02] 容器
+高危操作：使用hostPath方式挂载系统组件目录，如挂载/var/lib/docker下的文件
+导致后果：系统组件重启后可能会导致节点上的系统组件目录重建，打断了挂载的inode链接，导致容器内无法正常使用挂载内容
+误操作后解决方案：不建议挂载系统组件目录",cce-t3-r02,cce-t3-r02 cce-t1-r15 cce-t3-r01 cce-t1-r22 cce-t2-r07,993.5064169985708,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"使用 hostPath 方式挂载系统组件目录（如挂载 /var/lib/docker 下的文件）属于高危操作，系统组件重启后可能导致节点上的系统组件目录重建，打断挂载的 inode 链接，导致容器内无法正常使用挂载内容。
+
+对于此类误操作，不建议挂载系统组件目录。",42cd27b249670eda932c21c56d0c1161,RXhwZXJpbWVudFJ1bjo4OA==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确复述了参考要点：系统组件重启后节点目录重建、打断 inode 链接，导致容器内无法正常使用挂载内容，并给出不建议挂载的解决方案；所有断言均可在检索资料中找到依据。,3cbe4bb97ffd36add57bf21e92f899a7,1034,131,1165,1,1581,76,1657,
+dev-dense-answers,development,cce-q037,在 ELB 控制台直接删除已绑定 CCE 的负载均衡实例会有什么影响？,True,single,负载均衡,"[cce-t4-r01] 负载均衡
+高危操作：禁止通过ELB的控制台删除已绑定CCE集群的ELB实例
+导致后果：导致Service/Ingress访问不通。
+误操作后解决方案：不建议删除。",cce-t4-r01,cce-t4-r01 cce-t4-r05 cce-t4-r02 cce-t4-r04 cce-t4-r06,1003.3727499976521,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"禁止通过ELB控制台删除已绑定CCE集群的ELB实例，属于高危操作。
+
+删除已绑定CCE集群的ELB实例会导致Service/Ingress访问不通。
+
+对于此类误操作，不建议删除该ELB实例。",3bea59a8a43b217e458af6d8937459c9,RXhwZXJpbWVudFJ1bjo4OQ==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案完整准确地覆盖了参考要点：禁止通过ELB控制台删除已绑定CCE的ELB实例、后果为Service/Ingress访问不通、误操作后不建议删除。所有断言均来自检索资料cce-t4-r01，无额外无关内容。,a369774c95f357a5122a1a370c0c878e,893,165,1058,1,1407,84,1491,
+dev-dense-answers,development,cce-q039,从 ELB 控制台改了负载均衡器的私有 IPv4 地址，会影响流量和 YAML 哪些内容？,True,single,负载均衡,"[cce-t4-r03] 负载均衡
+高危操作：通过ELB的控制台修改ELB的IPv4私有IP
+导致后果：基于IPv4私有IP进行私网流量转发功能会出现中断
+Service/Ingress的YAML中status字段下的IP变化
+误操作后解决方案：不建议修改，请自行恢复。",cce-t4-r03,cce-t4-r03 cce-t4-r04 cce-t4-r07 cce-t4-r10 cce-t4-r09,1012.7812499995343,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"通过ELB控制台修改ELB的IPv4私有IP会导致基于IPv4私有IP进行私网流量转发功能出现中断。
+
+通过ELB控制台修改ELB的IPv4私有IP会导致Service/Ingress的YAML中status字段下的IP变化。
+
+该操作不建议修改，误操作后请自行恢复。",01e7b46c33c4f81383750f3ebb266bac,RXhwZXJpbWVudFJ1bjo5MA==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确覆盖了修改ELB私有IPv4地址的两个关键影响：私网流量转发中断和Service/Ingress YAML中status字段IP变化，并给出不建议修改、请自行恢复的说明，与参考资料完全一致。,02a4ee571733a5cc69fe01fba0c861ec,940,154,1094,1,1482,76,1558,
+dev-dense-answers,development,cce-q042,有人在 ELB 控制台删除了 CCE 自动创建的监听器，业务访问不通应如何修复？,True,single,负载均衡,"[cce-t4-r06] 负载均衡
+高危操作：通过ELB的控制台删除CCE自动创建的监听器
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r06,cce-t4-r05 cce-t4-r07 cce-t4-r10 cce-t4-r06 cce-t4-r08,1027.566457996727,0.0,0.0,1.0,0.2,1.0,0.25,0.43067655807339306,ANSWERED,"通过ELB控制台删除CCE自动创建的监听器会导致Service/Ingress访问不通。
+
+此类误操作的解决方案是重新创建或更新Service/Ingress。
+
+在集群升级等需要重启控制节点的场景，所做的修改会被CCE侧重置。",f4c02d607012b885f93039899c7dfdab,RXhwZXJpbWVudFJ1bjo5MQ==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确回答了误操作场景、后果及修复方案（重新创建或更新Service/Ingress），与参考资料cce-t4-r06完全一致；所有实质性断言均有依据，且直接回应用户问题，无多余无关内容。,9d5c935dba10d128270c4bd00c59558e,982,141,1123,1,1504,77,1581,
+dev-dense-answers,development,cce-q043,在 ELB 侧改了 CCE 监听器的名称和超时时间，集群升级后能保证保留吗？,True,single,负载均衡,"[cce-t4-r07] 负载均衡
+高危操作：通过ELB的控制台修改CCE创建的监听器名称、访问控制、超时时间、描述等基本配置
+导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：不建议修改，请自行恢复。",cce-t4-r07,cce-t4-r07 cce-t4-r10 cce-t4-r06 cce-t4-r11 cce-t4-r05,896.4773330080789,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,在 ELB 控制台修改 CCE 创建的监听器名称、超时时间等基本配置，在集群升级等需要重启控制节点的场景，所做修改会被 CCE 侧重置。,cf60073090da97808eac97e52a19bd97,RXhwZXJpbWVudFJ1bjo5Mg==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出在ELB控制台修改CCE创建的监听器名称、超时时间等配置，在集群升级需重启控制节点时会被CCE侧重置，完整覆盖了问题的关键点，且内容有检索资料支撑。,22d61b5217d75a3b160648bcf280c820,1003,76,1079,1,1514,77,1591,
+dev-dense-answers,development,cce-q044,手工从监听器后端组删除一台服务器又添加一台，CCE 控制节点重启后这些更改会怎样？,True,single,负载均衡,"[cce-t4-r08] 负载均衡
+高危操作：通过ELB的控制台修改CCE创建的监听器后端服务器组，添加、删除后端服务器
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置：
+用户删除的后端服务器会恢复
+用户添加的后端服务器会被移除
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r08,cce-t4-r08 cce-t4-r07 cce-t4-r10 cce-t4-r06 cce-t4-r09,890.8383340021828,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"手工从监听器后端组删除服务器又添加服务器，在集群升级等需要重启控制节点的场景，所做修改会被 CCE 侧重置：删除的后端服务器会恢复，添加的后端服务器会被移除。
+
+此类操作会导致 Service/Ingress 访问不通。
+
+误操作后的解决方案是重新创建或更新 Service/Ingress。",2f186a95c710981b53cdd23ed69ddc0d,RXhwZXJpbWVudFJ1bjo5Mw==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案完整覆盖了参考要点的三个关键点：CCE 侧重置、删除的后端服务器会恢复、添加的后端服务器会被移除，且额外说明了访问不通和误操作解决方案，均能在检索上下文中找到依据，无无关内容。,2eabff1ceb2e002f2695b8aa87c46e97,972,153,1125,1,1535,80,1615,
+dev-dense-answers,development,cce-q051,在控制台把正在用的 EVS 卸载后 Pod 写入报 IO Error，文档建议怎样处理？,True,single,云硬盘,"[cce-t7-r01] 云硬盘
+高危操作：控制台手动解除挂载EVS
+导致后果：Pod写入出现IO Error故障
+误操作后解决方案：删除节点上mount目录，重新调度Pod
+备注：Pod里面的文件记录了文件的采集位置",cce-t7-r01,cce-t7-r01 cce-t7-r02 cce-t4-r03 cce-t7-r03 cce-t4-r04,781.2368750019232,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,文档建议的误操作后解决方案是：删除节点上mount目录，重新调度Pod。,6f14d5e426c6c5c9117b5504e260b7ff,RXhwZXJpbWVudFJ1bjo5NA==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确复述了参考资料中对应场景（控制台手动解除挂载EVS导致Pod写入IO Error）的解决方案，无遗漏或错误；所有实质断言均有检索上下文依据；直接回答所问且无多余无关内容。,9319d01940f11037707579b41faacd52,840,50,890,1,1317,77,1394,
+dev-dense-answers,development,cce-q054,创建 PV 的 YAML 带着 status、spec.claimRef 和 set-disk-metadata，会有什么风险，删除前如何纠正？,True,single,云硬盘,"[cce-t7-r04] 云硬盘
+高危操作：创建PV时带有未在文档中声明的参数
+
+例如，创建PV时，Yaml文件中涉及status、spec.claimRef以及annotation.everest.io/set-disk-metadata等参数，可能造成PV异常
+导致后果：此操作可能会绕过创建PV的某些标准流程，从而导致PV状态不符预期（功能不可用或被异常删除）
+误操作后解决方案：在PV被异常删除前，可以修改对应PV的Yaml文件，手动删除相关参数
+备注：无",cce-t7-r04,cce-t7-r04 cce-t4-r03 cce-t3-r02 cce-t1-r24 cce-t1-r19,1114.346292000846,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"创建PV时YAML中涉及status、spec.claimRef以及annotation.everest.io/set-disk-metadata等参数属于带有未在文档中声明的参数的高危操作，可能造成PV异常。
+
+该操作可能绕过创建PV的某些标准流程，导致PV状态不符预期（功能不可用或被异常删除）。
+
+误操作后，在PV被异常删除前，可以修改对应PV的Yaml文件，手动删除相关参数。",f6945f8e4b723e81fb704e5df658e02b,RXhwZXJpbWVudFJ1bjo5NQ==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确覆盖了风险（带有未声明参数、可能绕过标准流程、导致PV状态不符预期）和纠正方法（在PV被异常删除前修改YAML手动删除相关参数），且所有实质性断言均可在检索到的云硬盘文档中找到依据，直接回答了问题，无多余无关内容。,c8af383370c20848583a8d0aff76ec6f,948,177,1125,1,1564,90,1654,
+dev-dense-answers,development,cce-q055,直接在后台改插件资源后升级丢了配置，应该通过哪些入口修改插件？,True,single,插件,"[cce-t8-r01] 插件
+高危操作：后台修改插件相关资源
+导致后果：插件异常或引入其他非预期问题（例如升级后参数配置被覆盖等）
+误操作后解决方案：通过插件配置页面或开放的插件管理API进行操作",cce-t8-r01,cce-t8-r01 cce-t4-r03 cce-t3-r02 cce-t4-r10 cce-t2-r05,687.4702499917476,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,修改插件相关资源应通过插件配置页面或开放的插件管理API进行操作，直接在后台修改会导致插件异常或引入其他非预期问题（例如升级后参数配置被覆盖等）。,36929f88edf2399e291d8f6913fbc183,RXhwZXJpbWVudFJ1bjo5Ng==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确复述了参考资料中插件相关资源的正确操作入口（插件配置页面或开放的插件管理API），并指出了直接在后台修改的后果，与参考回答一致，且所有断言均有检索证据支持，无无关内容。,8e0987eeac9af5172dd3273edc3c37c3,894,69,963,1,1389,75,1464,
+dev-dense-answers,development,cce-q056,重装控制节点和普通工作节点的操作系统，文档给出的恢复结论有什么不同？,True,comparison,集群/节点,"[cce-t1-r04] 控制节点
+分类：控制节点
+高危操作：重装操作系统
+导致后果：控制节点组件被删除
+误操作后解决方案：不可恢复。
+
+[cce-t1-r14] Node节点
+分类：Node节点
+高危操作：重装操作系统
+导致后果：节点组件被删除，节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r04 cce-t1-r14,cce-t1-r04 cce-t1-r21 cce-t1-r24 cce-t1-r14 cce-t1-r22,1325.6159160082461,0.5,0.5,1.0,0.4,1.0,1.0,0.8772153153380493,ANSWERED,"控制节点重装操作系统的高危操作会导致控制节点组件被删除，误操作后解决方案为不可恢复。
+
+Node节点（普通工作节点）重装操作系统的高危操作会导致节点组件被删除、节点不可用，误操作后解决方案为重置节点。
+
+两者恢复结论不同：控制节点重装操作系统后不可恢复，而普通工作节点可通过重置节点恢复。",4004f7bbd6d251d2d9e6e2c4b42eda04,RXhwZXJpbWVudFJ1bjo5Nw==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确区分了控制节点重装操作系统不可恢复、普通工作节点重装操作系统可通过重置节点恢复，与参考资料一致，且直接回应问题。,d55224b24caa3c03d2eb5f13f834172d,833,179,1012,1,1401,59,1460,
+dev-dense-answers,development,cce-q060,在 ELB 侧删除整个 CCE 负载均衡实例与删除 CCE 自动创建的监听器，文档给出的建议有何区别？,True,comparison,负载均衡,"[cce-t4-r01] 负载均衡
+高危操作：禁止通过ELB的控制台删除已绑定CCE集群的ELB实例
+导致后果：导致Service/Ingress访问不通。
+误操作后解决方案：不建议删除。
+
+[cce-t4-r06] 负载均衡
+高危操作：通过ELB的控制台删除CCE自动创建的监听器
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r01 cce-t4-r06,cce-t4-r05 cce-t4-r07 cce-t4-r06 cce-t4-r01 cce-t4-r10,1022.6616669970099,0.0,0.5,1.0,0.4,1.0,0.3333333333333333,0.5706417189553201,ANSWERED,"删除绑定 CCE 集群的 ELB 实例属于高危操作，文档明确禁止，后果是 Service/Ingress 访问不通，误操作后建议是不建议删除。
+
+删除 CCE 自动创建的监听器属于高危操作，后果是 Service/Ingress 访问不通；在集群升级等需要重启控制节点的场景，所做修改会被 CCE 侧重置；误操作后的解决方案是重新创建或更新 Service/Ingress。",1c0d7b9907620f785c12b16b79b7ab7a,RXhwZXJpbWVudFJ1bjo5OA==,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确区分了删除整个ELB实例（禁止，不建议删除）与删除CCE自动创建的监听器（后果含重置，解决方案为重新创建或更新Service/Ingress），所有断言均能在检索上下文cce-t4-r01和cce-t4-r06中找到依据，直接回应问题且无无关内容。,d9d871105a11a919d85f53fa6a656657,943,152,1095,1,1558,96,1654,
+dev-dense-answers,development,cce-u001,根据这篇文档，CCE 集群按小时收费的准确价格是多少？,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,cce-t1-r01 cce-t6-r01 cce-t1-r09 cce-t1-r05 cce-t1-r02,574.9754999997094,,,,,,,,UNRESOLVED,,96984e06fcc111f311b689dde934dc63,RXhwZXJpbWVudFJ1bjo5OQ==,1.0,0.0,,,,,1,,1,答案为空，且检索资料均为集群高危操作说明，未涉及 CCE 集群按小时收费的价格，因此按未解答且应说明缺口处理，正确性和相关性为1；空答案忠实度返回 null。,23c2dcb71bdf0c2c28b98e6f35614f85,912,5,917,1,1341,72,1413,1.0
+dev-dense-answers,development,cce-u002,这篇文档明确要求升级到哪个 Kubernetes 小版本才能修复 CVE-2026-12345？,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,cce-t4-r03 cce-t4-r10 cce-t4-r07 cce-t1-r17 cce-t4-r08,564.3485409964342,,,,,,,,UNRESOLVED,,8d032831822b65de5d039409ed1ef7e5,RXhwZXJpbWVudFJ1bjoxMDA=,1.0,0.0,,,,,1,,1,问题无依据，答案为空且状态为未解决，符合正确拒答要求；检索上下文均与 CVE 和 Kubernetes 版本无关，未提供任何依据，因此忠实度不适用。,11f7c2414e3ab6aed41ddcf448b5a817,1020,5,1025,1,1441,68,1509,1.0
+heldout-dense-final,heldout,cce-q001,CCE 管理面内存突然升高，大量客户端在全量拉取资源列表，该怎么处理？,True,single,集群/节点,"[cce-t1-r01] 集群
+分类：集群
+高危操作：通过kube-apiserver一次性查询大量数据。例如一次性发起大量LIST请求，或单个LIST请求查询大量数据。
+导致后果：控制节点内存负载过高，影响系统稳定性。
+误操作后解决方案：停止大批量查询行为。
+
+如果需要增强集群抗过载能力，您可以变更集群规格至更大的规模，详情请参见变更集群规格。",cce-t1-r01,cce-t7-r02 cce-t2-r05 cce-t4-r03 cce-t7-r01 cce-t2-r07,13.768250006251037,0.0,0.0,0.0,0.0,0.0,0,0.0,RETRIEVAL_ONLY,,1fa2f09ebbabbfc8907e91e68d3bbe1f,RXhwZXJpbWVudFJ1bjoxMDE=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q002,有人改了名字带 cce-control 的安全组，主控节点不可用了，应参照什么恢复？,True,single,集群/节点,"[cce-t1-r02] 控制节点
+分类：控制节点
+高危操作：修改集群控制节点安全组
+
+ 说明：
+
+控制节点安全组命名规则：集群名称-cce-control-随机数
+导致后果：可能导致控制节点无法使用
+误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。",cce-t1-r02,cce-t1-r02 cce-t1-r07 cce-t1-r09 cce-t1-r04 cce-t4-r07,11.66562498838175,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,e2d5b5c24cfbb91bbbd99c3a70658a51,RXhwZXJpbWVudFJ1bjoxMDI=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q003,控制节点过期销毁了，文档认为能恢复吗？,True,single,集群/节点,"[cce-t1-r03] 控制节点
+分类：控制节点
+高危操作：节点到期或被销毁
+导致后果：该控制节点不可用
+误操作后解决方案：不可恢复。",cce-t1-r03,cce-t1-r03 cce-t1-r24 cce-t1-r04 cce-t1-r09 cce-t1-r06,11.233583994908258,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,6a76b1490a6cf929ee448765d186a35e,RXhwZXJpbWVudFJ1bjoxMDM=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q006,误格式化控制节点的 /etc/kubernetes 数据，文档给出的恢复结论是什么？,True,single,集群/节点,"[cce-t1-r06] 控制节点
+分类：控制节点
+高危操作：删除或格式化节点/etc/kubernetes等核心目录数据
+导致后果：该控制节点不可用
+误操作后解决方案：不可恢复。",cce-t1-r06,cce-t1-r06 cce-t1-r21 cce-t1-r09 cce-t1-r24 cce-t1-r22,12.139457990997471,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,af9d4b6931101ef2fd1ad5d8c51652df,RXhwZXJpbWVudFJ1bjoxMDQ=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q007,CCE 控制节点换 IP 后不可用，应该怎么恢复？,True,single,集群/节点,"[cce-t1-r07] 控制节点
+分类：控制节点
+高危操作：更改节点IP
+导致后果：该控制节点不可用
+误操作后解决方案：改回原IP。",cce-t1-r07,cce-t1-r07 cce-t1-r09 cce-t1-r16 cce-t1-r04 cce-t1-r24,11.243708009715192,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,a68c90424aad7c1834f69b2100a3fbc8,RXhwZXJpbWVudFJ1bjoxMDU=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q010,工作节点 cce-node 安全组被调整后无法使用，应该如何修复？,True,single,集群/节点,"[cce-t1-r10] Node节点
+分类：Node节点
+高危操作：修改集群Node节点安全组
+
+ 说明：
+
+Node节点安全组命名规则：集群名称-cce-node-随机数
+导致后果：可能导致节点无法使用
+误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。",cce-t1-r10,cce-t1-r10 cce-t1-r12 cce-t1-r22 cce-t1-r18 cce-t1-r14,10.901166999246925,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,f651062bb19c7ff8ffb2ea79d672344d,RXhwZXJpbWVudFJ1bjoxMDY=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q011,想让业务用自建域名服务器，直接改宿主机 resolv.conf 有什么风险？正确做法是什么？,True,single,集群/节点,"[cce-t1-r11] Node节点
+分类：Node节点
+高危操作：修改节点DNS配置（/etc/resolv.conf）
+导致后果：导致内部域名无法正常访问，可能出现插件异常、节点重置升级等基本功能异常
+
+ 说明：
+
+如果业务需要使用自建DNS，可以在工作负载中配置DNS，请勿修改节点本身的DNS地址，详情请参见工作负载DNS配置说明。
+误操作后解决方案：参考新建节点中的DNS配置还原。",cce-t1-r11,cce-t1-r11 cce-t3-r02 cce-t1-r23 cce-t2-r07 cce-t1-r15,11.188374992343597,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,2a1013b09d18fb3ac9384ef0b2b2099b,RXhwZXJpbWVudFJ1bjoxMDc=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q013,节点绑定的弹性网卡删掉了会影响什么，还能恢复吗？,True,single,集群/节点,"[cce-t1-r13] Node节点
+分类：Node节点
+高危操作：节点使用的弹性网卡被删除
+导致后果：该节点上的容器网络不可用
+误操作后解决方案：不可恢复。",cce-t1-r13,cce-t1-r13 cce-t4-r04 cce-t1-r24 cce-t4-r03 cce-t2-r05,11.188707998371683,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,61348d5d19c2722110a91751b5c4fb6b,RXhwZXJpbWVudFJ1bjoxMDg=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q016,修改工作节点的地址后节点变为不可用，文档的解决办法是什么？,True,single,集群/节点,"[cce-t1-r16] Node节点
+分类：Node节点
+高危操作：更改节点IP
+导致后果：节点不可用
+误操作后解决方案：改回原IP。",cce-t1-r16,cce-t1-r16 cce-t1-r22 cce-t1-r18 cce-t1-r23 cce-t1-r14,11.38599999831058,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,f873d9ecc5e5049c7661dcb0c6e32386,RXhwZXJpbWVudFJ1bjoxMDk=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q019,清理 /opt/cloud/cce 和 /var/paas 时误删了内容，节点不可用了怎么恢复？,True,single,集群/节点,"[cce-t1-r19] Node节点
+分类：Node节点
+高危操作：删除或修改/opt/cloud/cce、/var/paas目录，删除数据盘
+导致后果：节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r19,cce-t1-r19 cce-t1-r24 cce-t1-r12 cce-t1-r13 cce-t1-r22,11.407542013330385,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,4fba3b91438fb5f240ef9c118972823d,RXhwZXJpbWVudFJ1bjoxMTA=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q020,能自行更改 /etc/sudoers.d/sudoerspaas 和容器运行目录的权限吗？误改后怎么办？,True,single,集群/节点,"[cce-t1-r20] Node节点
+分类：Node节点
+高危操作：修改节点内目录权限、容器目录权限等。涉及的目录如下：
+
+/usr/lib/systemd/system/kubelet.service
+/usr/lib/systemd/system/containerd-monit.service
+/usr/lib/systemd/system/docker-monit.service
+/opt/cloud/cce
+/var/paas
+/var/paas/script
+/var/paas/sys/log
+/var/paas/kubernetes
+/var/script/docker
+/var/script/kubelet
+/etc/containerd
+/etc/rc.local
+/etc/sudoers.d/sudoerspaas
+/etc/sysconfig/docker
+/etc/docker/daemon.json
+/var/lib/docker
+/mnt/paas/kubernetes
+/mnt/paas/runtime
+导致后果：权限异常
+误操作后解决方案：不建议修改，请自行恢复。",cce-t1-r20,cce-t1-r20 cce-t3-r02 cce-t4-r03 cce-t1-r15 cce-t2-r07,11.10550000157673,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,e17d90eb13c2a4d4aacba84186c005b3,RXhwZXJpbWVudFJ1bjoxMTE=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q021,给 kubelet 使用的数据盘重新分区可能造成什么后果，应如何恢复？,True,single,集群/节点,"[cce-t1-r21] Node节点
+分类：Node节点
+高危操作：对节点进行磁盘格式化或分区，包括系统盘、容器运行时和kubelet组件使用的数据盘
+导致后果：可能导致节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r21,cce-t1-r21 cce-t1-r22 cce-t1-r19 cce-t7-r02 cce-t1-r24,11.084541998570785,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,6c50e288d0631ed448470d0db7ca1212,RXhwZXJpbWVudFJ1bjoxMTI=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q022,在工作节点安装额外的软件以后调度不了工作负载，应该先做什么？,True,single,集群/节点,"[cce-t1-r22] Node节点
+分类：Node节点
+高危操作：在节点上安装自己的其他软件
+导致后果：导致安装在节点上的Kubernetes组件异常，节点状态变成不可用，无法部署工作负载到此节点
+误操作后解决方案：卸载已安装软件，尝试恢复或重置节点，具体请参见重置节点。",cce-t1-r22,cce-t1-r22 cce-t3-r01 cce-t1-r15 cce-t4-r10 cce-t1-r23,11.268417001701891,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,d24dc94ebbe19f2ee45bdbddd2df8356,RXhwZXJpbWVudFJ1bjoxMTM=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q024,清理了 cce-pause 系统镜像后无法创建容器，而且拉不回来镜像，怎么办？,True,single,集群/节点,"[cce-t1-r24] Node节点
+分类：Node节点
+高危操作：删除节点上的cce-pause等系统镜像
+导致后果：导致无法正常创建容器，且无法拉取系统镜像
+误操作后解决方案：请从其他正常节点复制该镜像恢复",cce-t1-r24,cce-t1-r24 cce-t3-r02 cce-t3-r01 cce-t1-r08 cce-t2-r05,11.229291994823143,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,7defab48436401512840407c1627607d,RXhwZXJpbWVudFJ1bjoxMTQ=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q026,误删 /usr/local/bin/crictl 后 containerd 一直重启，是什么原因，如何修复？,True,single,集群/节点,"[cce-t1-r26] Node节点
+分类：Node节点
+高危操作：删除或者移动containerd组件运行所需的二进制和配置文件
+
+/etc/containerd/config.toml
+/etc/crictl.yaml
+/usr/bin/runc
+/usr/lib/systemd/system/containerd.service
+/usr/local/bin/containerd
+/usr/local/bin/containerd-shim-runc-v2
+/usr/local/bin/crictl
+/usr/local/bin/ctr
+导致后果：删除/usr/local/bin/crictl会导致containerd健康检查异常，containerd不断重启
+
+删除其他文件可能导致容器不能启动，节点无法使用
+误操作后解决方案：重置节点恢复containerd二进制和配置文件，具体请参见重置节点。",cce-t1-r26,cce-t1-r26 cce-t4-r03 cce-t3-r02 cce-t1-r11 cce-t5-r01,11.650500004179776,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,4b2899f3466efdcd6c37edef1ce4bc88,RXhwZXJpbWVudFJ1bjoxMTU=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q027,自己创建或改动 paas 用户组，会影响哪些对象，应怎样恢复？,True,single,集群/节点,"[cce-t1-r27] Node节点
+分类：Node节点
+高危操作：修改或手动创建paas用户/用户组
+导致后果：影响CCE组件和业务Pod正常运行，详情请参见节点paas用户/用户组说明。
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r27,cce-t1-r27 cce-t1-r24 cce-t1-r08 cce-t1-r09 cce-t1-r13,11.39066599716898,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,4112ad857723fd4810b7cfaa47b2eb41,RXhwZXJpbWVudFJ1bjoxMTY=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q029,启用 tcp_tw_recycle 导致 NAT 出现异常，应该设回多少？,True,single,网络,"[cce-t2-r02] 网络
+高危操作：修改内核参数net.ipv4.tcp_tw_recycle=1
+导致后果：导致nat异常
+误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_recycle=0",cce-t2-r02,cce-t2-r02 cce-t4-r03 cce-t2-r03 cce-t4-r04 cce-t2-r04,11.530167001183145,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,4070f3f11570a5a00d94bd81fa146b7e,RXhwZXJpbWVudFJ1bjoxMTc=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q030,tcp_tw_reuse 设置为 1 后出现网络异常，这篇文档建议如何处理？,True,single,网络,"[cce-t2-r03] 网络
+高危操作：修改内核参数net.ipv4.tcp_tw_reuse=1
+导致后果：导致网络异常
+误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_reuse=0",cce-t2-r03,cce-t2-r03 cce-t2-r02 cce-t4-r03 cce-t2-r04 cce-t2-r05,11.4131250011269,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,6c5b5e994aae29f50df1ed650ae663fa,RXhwZXJpbWVudFJ1bjoxMTg=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q031,集群里 DNS 解析不正常，安全组应检查容器网段的哪个端口和协议？,True,single,网络,"[cce-t2-r04] 网络
+高危操作：节点安全组配置未放通容器CIDR的53端口udp
+导致后果：集群内DNS无法正常工作
+误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。
+
+详情请参见集群安全组规则配置。",cce-t2-r04,cce-t2-r04 cce-t1-r11 cce-t2-r05 cce-t1-r13 cce-t1-r23,11.374916008207947,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,860ff6d90c7d088a492fa78b10caadc5,RXhwZXJpbWVudFJ1bjoxMTk=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q032,误删 default-network 的 network-attachment-definitions CRD，会影响什么，如何恢复？,True,single,网络,"[cce-t2-r05] 网络
+高危操作：删除default-network的network-attachment-definitions的CRD资源
+导致后果：容器网络不通，集群删除失败等
+误操作后解决方案：误删除该资源需要使用正确的配置重新创建default-network资源。",cce-t2-r05,cce-t2-r05 cce-t1-r13 cce-t1-r23 cce-t4-r03 cce-t4-r04,11.9096249982249,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,94342ef3226b7919e9c658ee96023349,RXhwZXJpbWVudFJ1bjoxMjA=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q033,节点打开 iptables 防火墙后容器之间不通，需要关闭什么并检查哪些规则文件？,True,single,网络,"[cce-t2-r06] 网络
+高危操作：启动iptables防火墙
+导致后果：CCE默认不开启iptables防火墙，开启后可能造成网络不通
+
+ 说明：
+
+不建议开启iptables防火墙。如必须启动iptables防火墙，请在测试环境中确认/etc/sysconfig/iptables和/etc/sysconfig/ip6tables中配置的规则是否会对网络连通性造成影响。
+误操作后解决方案：关闭iptables防火墙，并检查/etc/sysconfig/iptables和/etc/sysconfig/ip6tables中配置的规则。",cce-t2-r06,cce-t2-r06 cce-t2-r07 cce-t1-r16 cce-t1-r24 cce-t1-r23,11.979292001342401,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,7ef9549efcb397f1bcbb242d5757a6db,RXhwZXJpbWVudFJ1bjoxMjE=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q034,隧道网络集群里能把 openvswitch 换成发行版自带的新版吗？,True,single,网络,"[cce-t2-r07] 网络
+高危操作：容器隧道网络集群节点升级内核或升级openvswitch
+导致后果：容器网络不通
+
+ 说明：
+
+容器隧道网络集群数据面组件采用的是华为优化后的openvswitch组件，不支持自行升级为操作系统自带的openvswitch。
+误操作后解决方案：恢复方式请参见如何解决yum update升级操作系统导致容器网络不可用问题？",cce-t2-r07,cce-t2-r07 cce-t7-r02 cce-t4-r04 cce-t1-r13 cce-t1-r23,11.888041990459897,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,b94bcffc2efcfb0bc70e64fd05ef6aee,RXhwZXJpbWVudFJ1bjoxMjI=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q035,特权容器运行 systemctl 后宿主机挂载点异常，可能是什么操作造成的，怎么恢复？,True,single,容器,"[cce-t3-r01] 容器
+高危操作：将负载设置为特权容器，并直接操作主机的硬件设备，误操作节点系统文件等。
+
+例如将启动命令配置为/usr/sbin/init，在容器内使用systemctl，影响节点/lib路径下的系统文件。
+导致后果：此操作可能会导致节点所有挂载点被卸载，导致节点异常，并且会影响节点上的Pod正常运行及存储插件功能。
+误操作后解决方案：禁止移除节点/lib路径下的挂载点，通过重置节点恢复，具体请参见重置节点。",cce-t3-r01,cce-t3-r02 cce-t4-r03 cce-t3-r01 cce-t1-r24 cce-t1-r22,11.245165995205753,0.0,1.0,1.0,0.2,1.0,0.3333333333333333,0.5,RETRIEVAL_ONLY,,7354f7ba7e171f4700257a9e375e69c8,RXhwZXJpbWVudFJ1bjoxMjM=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q038,暂时在 ELB 控制台停用已绑定 CCE 的实例，会影响 Service 和 Ingress 吗？,True,single,负载均衡,"[cce-t4-r02] 负载均衡
+高危操作：通过ELB的控制台停用已绑定CCE集群的ELB实例
+导致后果：导致Service/Ingress访问不通。
+误操作后解决方案：不建议停用，请自行恢复。",cce-t4-r02,cce-t4-r02 cce-t4-r01 cce-t4-r06 cce-t4-r05 cce-t4-r08,11.309916008030996,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,d7930a26b2d0829113b1056b09067870,RXhwZXJpbWVudFJ1bjoxMjQ=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q040,把 CCE 使用的负载均衡器公网 IP 解绑后，它会变成什么类型，公网流量还能转发吗？,True,single,负载均衡,"[cce-t4-r04] 负载均衡
+高危操作：通过ELB的控制台解绑ELB的IPv4公网IP
+导致后果：解绑公网IP后，该弹性负载均衡器变更为私网类型，无法进行公网流量转发。
+误操作后解决方案：请自行恢复。",cce-t4-r04,cce-t4-r04 cce-t4-r03 cce-t4-r10 cce-t4-r07 cce-t2-r07,12.383291992591694,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,f5c74028b4046e2617dbb628996dbac3,RXhwZXJpbWVudFJ1bjoxMjU=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q041,在 CCE 自动创建的 ELB 上手动加了监听器，删除 Service 时为什么 ELB 可能删不掉？,True,single,负载均衡,"[cce-t4-r05] 负载均衡
+高危操作：通过ELB的控制台在CCE管理的ELB创建自定义的监听器
+导致后果：若ELB是创建Service/Ingress时自动创建的，在Service/Ingress删除时无法删除ELB的自定义监听器，会导致无法自动删除ELB。
+误操作后解决方案：通过Service/Ingress自动创建监听器，否则需要手动删除ELB。",cce-t4-r05,cce-t4-r05 cce-t4-r01 cce-t4-r06 cce-t4-r10 cce-t4-r08,11.436624990892597,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,4bb698e9d80b2c62d57d0b7b24e1b991,RXhwZXJpbWVudFJ1bjoxMjY=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q045,直接替换 CCE 监听器关联的整个后端服务器组，可能有什么后果，应该怎么处理？,True,single,负载均衡,"[cce-t4-r09] 负载均衡
+高危操作：通过ELB的控制台更换CCE创建的监听器后端服务器组
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，后端服务器组中的后端服务器会被CCE侧重置。
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r09,cce-t4-r09 cce-t4-r07 cce-t4-r08 cce-t4-r10 cce-t4-r06,11.118875001557171,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,caaea93b54810692146e601edb944ebd,RXhwZXJpbWVudFJ1bjoxMjc=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q046,在 ELB 侧手工改了 Ingress 产生的转发规则，控制节点重启时会发生什么？,True,single,负载均衡,"[cce-t4-r10] 负载均衡
+高危操作：通过ELB的控制台修改CCE创建的监听器转发策略，添加、删除转发规则
+导致后果：导致Service/Ingress访问不通。
+如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：不建议修改，请自行恢复。",cce-t4-r10,cce-t4-r10 cce-t4-r06 cce-t1-r07 cce-t4-r09 cce-t1-r18,11.284958003670909,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,357e1315721b896a4534cc8b8d2ed5b8,RXhwZXJpbWVudFJ1bjoxMjg=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q047,要更换 CCE 监听器的服务器证书，怎样更新才能避免集群升级时被覆盖？,True,single,负载均衡,"[cce-t4-r11] 负载均衡
+高危操作：通过ELB的控制台给CCE创建的监听器更换证书，或者在ELB的证书管理界面修改CCE通过TLS密钥创建的服务器证书。
+导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置, 可能导致Service/Ingress访问不通。
+误操作后解决方案：通过CCE控制台或YAML方式更新Service/Ingress关联的证书，或者更新Service/Ingress关联的TLS密钥资源。",cce-t4-r11,cce-t4-r11 cce-t4-r07 cce-t4-r10 cce-t4-r08 cce-t4-r09,11.786292001488619,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,6492d63791e7527a234a993036a240d4,RXhwZXJpbWVudFJ1bjoxMjk=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q048,删掉日志采集器的 pos 目录后日志为什么可能重复收集？,True,single,日志,"[cce-t5-r01] 日志
+高危操作：删除宿主机/tmp/ccs-log-collector/pos目录
+导致后果：日志重复采集
+误操作后解决方案：无",cce-t5-r01,cce-t5-r01 cce-t5-r02 cce-t1-r24 cce-t3-r02 cce-t1-r19,11.017959011951461,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,5c10414d68bd914027aafd988e0d205d,RXhwZXJpbWVudFJ1bjoxMzA=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q049,清理宿主机上的 ccs-log-collector/buffer 目录会丢失什么？,True,single,日志,"[cce-t5-r02] 日志
+高危操作：删除宿主机/tmp/ccs-log-collector/buffer目录
+导致后果：日志丢失
+误操作后解决方案：无",cce-t5-r02,cce-t5-r02 cce-t5-r01 cce-t3-r02 cce-t1-r24 cce-t7-r02,10.957708000205457,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,3c5dbc3f479961a3ab69277ee3660e2b,RXhwZXJpbWVudFJ1bjoxMzE=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q050,100 个节点的集群，云原生监控采集分片通常该配多少，配太多有什么风险？,True,single,监控,"[cce-t6-r01] 监控
+高危操作：云原生监控插件配置中设置的采集分片数量超过推荐值（建议每50个节点配置一个采集分片）
+导致后果：增加采集分片数会消耗更多的资源，容易导致集群控制节点内存负载过高，影响系统稳定性。
+误操作后解决方案：修改云原生监控插件的采集分片数，调整为推荐值。",cce-t6-r01,cce-t6-r01 cce-t1-r02 cce-t1-r08 cce-t1-r07 cce-t1-r05,10.685041997930966,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,d14a98ce0d0d39a4873a0530dd80ac30,RXhwZXJpbWVudFJ1bjoxMzI=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q052,在节点直接 umount 云盘挂载路径后，Pod 的数据可能写到哪儿，该怎么恢复？,True,single,云硬盘,"[cce-t7-r02] 云硬盘
+高危操作：节点上umount磁盘挂载路径
+导致后果：Pod写入本地磁盘
+误操作后解决方案：重新mount对应目录到Pod中
+备注：Buffer里面是待消费的日志缓存文件",cce-t7-r02,cce-t7-r02 cce-t7-r01 cce-t7-r03 cce-t3-r02 cce-t1-r21,11.131375009426847,1.0,1.0,1.0,0.2,1.0,1.0,1.0,RETRIEVAL_ONLY,,d990560e31a477b934c7f5944105ca8d,RXhwZXJpbWVudFJ1bjoxMzM=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q053,绕过容器平台在节点上直接操作 EVS，会让 Pod 写到哪里，文档是否提供恢复方法？,True,single,云硬盘,"[cce-t7-r03] 云硬盘
+高危操作：节点上直接操作EVS
+导致后果：Pod写入本地磁盘
+误操作后解决方案：无
+备注：无",cce-t7-r03,cce-t7-r01 cce-t1-r27 cce-t1-r13 cce-t1-r24 cce-t7-r02,10.982042003888637,0.0,0.0,0.0,0.0,0.0,0,0.0,RETRIEVAL_ONLY,,f105f056d5edbdbc74d7d356ce384867,RXhwZXJpbWVudFJ1bjoxMzQ=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q057,修改控制节点 IP 和修改 Node 节点 IP 后，文档各建议怎样恢复？,True,comparison,集群/节点,"[cce-t1-r07] 控制节点
+分类：控制节点
+高危操作：更改节点IP
+导致后果：该控制节点不可用
+误操作后解决方案：改回原IP。
+
+[cce-t1-r16] Node节点
+分类：Node节点
+高危操作：更改节点IP
+导致后果：节点不可用
+误操作后解决方案：改回原IP。",cce-t1-r07 cce-t1-r16,cce-t1-r16 cce-t1-r23 cce-t1-r12 cce-t1-r13 cce-t1-r18,11.024291990906931,0.5,0.5,0.5,0.2,1.0,1.0,0.6131471927654584,RETRIEVAL_ONLY,,11244434e81cc9299d1dac8d743c00d0,RXhwZXJpbWVudFJ1bjoxMzU=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q058,集群控制节点与工作节点的安全组分别按什么规则命名，误改后如何修复？,True,comparison,集群/节点,"[cce-t1-r02] 控制节点
+分类：控制节点
+高危操作：修改集群控制节点安全组
+
+ 说明：
+
+控制节点安全组命名规则：集群名称-cce-control-随机数
+导致后果：可能导致控制节点无法使用
+误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。
+
+[cce-t1-r10] Node节点
+分类：Node节点
+高危操作：修改集群Node节点安全组
+
+ 说明：
+
+Node节点安全组命名规则：集群名称-cce-node-随机数
+导致后果：可能导致节点无法使用
+误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。",cce-t1-r02 cce-t1-r10,cce-t1-r02 cce-t1-r10 cce-t1-r07 cce-t1-r04 cce-t1-r09,10.924041998805478,0.5,1.0,1.0,0.4,1.0,1.0,1.0,RETRIEVAL_ONLY,,2784ec348a25f3bf7c9b2daafe26dd41,RXhwZXJpbWVudFJ1bjoxMzY=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q059,日志采集器的 pos 和 buffer 目录误删后，造成的结果分别是什么？,True,comparison,日志,"[cce-t5-r01] 日志
+高危操作：删除宿主机/tmp/ccs-log-collector/pos目录
+导致后果：日志重复采集
+误操作后解决方案：无
+
+[cce-t5-r02] 日志
+高危操作：删除宿主机/tmp/ccs-log-collector/buffer目录
+导致后果：日志丢失
+误操作后解决方案：无",cce-t5-r01 cce-t5-r02,cce-t5-r01 cce-t5-r02 cce-t1-r24 cce-t1-r13 cce-t7-r02,10.984208012814634,0.5,1.0,1.0,0.4,1.0,1.0,1.0,RETRIEVAL_ONLY,,567b328a4e7844a8ea64360428229db3,RXhwZXJpbWVudFJ1bjoxMzc=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-q061,tcp_tw_recycle 和 tcp_tw_reuse 设成 1 后分别可能产生什么问题，文档建议的值是什么？,True,comparison,网络,"[cce-t2-r02] 网络
+高危操作：修改内核参数net.ipv4.tcp_tw_recycle=1
+导致后果：导致nat异常
+误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_recycle=0
+
+[cce-t2-r03] 网络
+高危操作：修改内核参数net.ipv4.tcp_tw_reuse=1
+导致后果：导致网络异常
+误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_reuse=0",cce-t2-r02 cce-t2-r03,cce-t2-r02 cce-t2-r03 cce-t4-r03 cce-t1-r16 cce-t2-r01,11.015915995812975,0.5,1.0,1.0,0.4,1.0,1.0,1.0,RETRIEVAL_ONLY,,f46e76fee1b4421bad2ac009d7db8c79,RXhwZXJpbWVudFJ1bjoxMzg=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-u003,帮我判断生产集群现在的 CPU 使用率是否正常，并给出实时数值。,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,cce-t1-r01 cce-t6-r01 cce-t1-r21 cce-t1-r08 cce-t1-r27,11.828167000203393,,,,,,,,RETRIEVAL_ONLY,,43e5ed2eabcf382f92ecb4c473b0034d,RXhwZXJpbWVudFJ1bjoxMzk=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-u004,本文列出了所有地区节点操作系统镜像的 SHA256 校验值吗？请给出这些值。,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,cce-t1-r24 cce-t1-r15 cce-t1-r18 cce-t1-r27 cce-t1-r21,10.999124991940334,,,,,,,,RETRIEVAL_ONLY,,9f4b8d00e7049256aaf220f3412e56bd,RXhwZXJpbWVudFJ1bjoxNDA=,,,,,,,,,,,,,,,,,,,
+heldout-dense-final,heldout,cce-u005,我的集群现在有多少个故障 Pod？请直接报告实际数量。,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,cce-t7-r01 cce-t1-r27 cce-t2-r04 cce-t1-r01 cce-t1-r02,11.26470899907872,,,,,,,,RETRIEVAL_ONLY,,f6d63c88aca6c56b68653094a9b6535f,RXhwZXJpbWVudFJ1bjoxNDE=,,,,,,,,,,,,,,,,,,,
+heldout-dense-answers,heldout,cce-q001,CCE 管理面内存突然升高，大量客户端在全量拉取资源列表，该怎么处理？,True,single,集群/节点,"[cce-t1-r01] 集群
+分类：集群
+高危操作：通过kube-apiserver一次性查询大量数据。例如一次性发起大量LIST请求，或单个LIST请求查询大量数据。
+导致后果：控制节点内存负载过高，影响系统稳定性。
+误操作后解决方案：停止大批量查询行为。
+
+如果需要增强集群抗过载能力，您可以变更集群规格至更大的规模，详情请参见变更集群规格。",cce-t1-r01,cce-t7-r02 cce-t2-r05 cce-t4-r03 cce-t7-r01 cce-t2-r07,575.3042909927899,0.0,0.0,0.0,0.0,0.0,0,0.0,UNRESOLVED,,34d5738cd536a8f52c9815411853809f,RXhwZXJpbWVudFJ1bjoxNDI=,1.0,0.0,0.0,0,0.0,,0,,0,答案为空，未给出任何处理建议，而问题有明确可回答的参考内容；提供的资料也均与 CCE 管理面内存升高无关。,1bb17becc49a0818ea44eaed1049db16,876,5,881,1,1386,59,1445,
+heldout-dense-answers,heldout,cce-q002,有人改了名字带 cce-control 的安全组，主控节点不可用了，应参照什么恢复？,True,single,集群/节点,"[cce-t1-r02] 控制节点
+分类：控制节点
+高危操作：修改集群控制节点安全组
+
+ 说明：
+
+控制节点安全组命名规则：集群名称-cce-control-随机数
+导致后果：可能导致控制节点无法使用
+误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。",cce-t1-r02,cce-t1-r02 cce-t1-r07 cce-t1-r09 cce-t1-r04 cce-t4-r07,702.3397500015562,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,修改集群控制节点安全组后，误操作解决方案是参照新建集群的安全组进行修复，放通安全组，详情参见集群安全组规则配置。,23b0c7eba713aa212cc9d9a096e67aff,RXhwZXJpbWVudFJ1bjoxNDM=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确复现了参考中修改控制节点安全组的误操作解决方案（参照新建集群的安全组修复、放通安全组、参见集群安全组规则配置），且所有断言均可在检索到的 cce-t1-r02 条目中找到依据。,bde15b0e53973920720a7966a4e9f254,840,66,906,1,1360,80,1440,
+heldout-dense-answers,heldout,cce-q003,控制节点过期销毁了，文档认为能恢复吗？,True,single,集群/节点,"[cce-t1-r03] 控制节点
+分类：控制节点
+高危操作：节点到期或被销毁
+导致后果：该控制节点不可用
+误操作后解决方案：不可恢复。",cce-t1-r03,cce-t1-r03 cce-t1-r24 cce-t1-r04 cce-t1-r09 cce-t1-r06,890.9749580052448,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,控制节点到期或被销毁后，文档认为不可恢复。,37277e490bba095cc2e4bb5f0278b7d2,RXhwZXJpbWVudFJ1bjoxNDQ=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确对应参考内容：控制节点到期或被销毁属于高危操作，后果为节点不可用，解决方案为不可恢复，直接回答了“文档认为不可恢复”。检索上下文中的表格行也支持该结论。,c2f01c94f255517f3eac9b25637f2929,774,42,816,1,1228,71,1299,
+heldout-dense-answers,heldout,cce-q006,误格式化控制节点的 /etc/kubernetes 数据，文档给出的恢复结论是什么？,True,single,集群/节点,"[cce-t1-r06] 控制节点
+分类：控制节点
+高危操作：删除或格式化节点/etc/kubernetes等核心目录数据
+导致后果：该控制节点不可用
+误操作后解决方案：不可恢复。",cce-t1-r06,cce-t1-r06 cce-t1-r21 cce-t1-r09 cce-t1-r24 cce-t1-r22,794.7150840045651,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,误格式化控制节点的 /etc/kubernetes 数据会导致该控制节点不可用，误操作后不可恢复。,07af2f08e717309c3730b20026f76e05,RXhwZXJpbWVudFJ1bjoxNDU=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确复述了控制节点误格式化 /etc/kubernetes 的后果与恢复结论，且所有断言均来自对应检索片段，直接回答了问题。,1a6ad527bd1a7a1f89c655b45536a819,839,56,895,1,1304,61,1365,
+heldout-dense-answers,heldout,cce-q007,CCE 控制节点换 IP 后不可用，应该怎么恢复？,True,single,集群/节点,"[cce-t1-r07] 控制节点
+分类：控制节点
+高危操作：更改节点IP
+导致后果：该控制节点不可用
+误操作后解决方案：改回原IP。",cce-t1-r07,cce-t1-r07 cce-t1-r09 cce-t1-r16 cce-t1-r04 cce-t1-r24,680.0333330029389,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,CCE 控制节点更改节点IP会导致该控制节点不可用，误操作后的解决方案是改回原IP。,23e4c7ae2db896afd560c6f5877b9e1b,RXhwZXJpbWVudFJ1bjoxNDY=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出控制节点更改IP导致不可用，并给出误操作后改回原IP的解决方案，与参考要点完全一致；所有断言均可在检索到的cce-t1-r07行中找到依据，回答直接针对问题且无多余内容。,fa460b5ea038a19e63c747ee17ca9c21,771,57,828,1,1235,81,1316,
+heldout-dense-answers,heldout,cce-q010,工作节点 cce-node 安全组被调整后无法使用，应该如何修复？,True,single,集群/节点,"[cce-t1-r10] Node节点
+分类：Node节点
+高危操作：修改集群Node节点安全组
+
+ 说明：
+
+Node节点安全组命名规则：集群名称-cce-node-随机数
+导致后果：可能导致节点无法使用
+误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。",cce-t1-r10,cce-t1-r10 cce-t1-r12 cce-t1-r22 cce-t1-r18 cce-t1-r14,787.9093329975149,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,修改集群Node节点安全组可能导致节点无法使用，误操作后应参照新建集群的安全组进行修复并放通安全组（详见集群安全组规则配置）。,228e96356c2c25726df090ab88636d40,RXhwZXJpbWVudFJ1bjoxNDc=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确复述了参考资料中关于修改Node节点安全组的误操作后果和解决方案，核心断言均有依据，且直接回答所问。,b3e23d948fb1ec9c4d516240c019c2bd,842,70,912,1,1350,57,1407,
+heldout-dense-answers,heldout,cce-q011,想让业务用自建域名服务器，直接改宿主机 resolv.conf 有什么风险？正确做法是什么？,True,single,集群/节点,"[cce-t1-r11] Node节点
+分类：Node节点
+高危操作：修改节点DNS配置（/etc/resolv.conf）
+导致后果：导致内部域名无法正常访问，可能出现插件异常、节点重置升级等基本功能异常
+
+ 说明：
+
+如果业务需要使用自建DNS，可以在工作负载中配置DNS，请勿修改节点本身的DNS地址，详情请参见工作负载DNS配置说明。
+误操作后解决方案：参考新建节点中的DNS配置还原。",cce-t1-r11,cce-t1-r11 cce-t3-r02 cce-t1-r23 cce-t2-r07 cce-t1-r15,893.4450830129208,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"直接修改宿主机/节点上的DNS配置（/etc/resolv.conf）属于高危操作，会导致内部域名无法正常访问，可能出现插件异常、节点重置升级等基本功能异常。
+
+如果业务需要使用自建DNS，正确做法是在工作负载中配置DNS，请勿修改节点本身的DNS地址。
+
+误操作修改节点DNS后，可参考新建节点中的DNS配置进行还原。",d7f43820e5825b5336c082f754ec1b79,RXhwZXJpbWVudFJ1bjoxNDg=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确覆盖了风险与正确做法，且所有断言均可在检索到的文档中直接找到依据。,36a7293f0f180d9705ff18523314e348,988,167,1155,1,1584,49,1633,
+heldout-dense-answers,heldout,cce-q013,节点绑定的弹性网卡删掉了会影响什么，还能恢复吗？,True,single,集群/节点,"[cce-t1-r13] Node节点
+分类：Node节点
+高危操作：节点使用的弹性网卡被删除
+导致后果：该节点上的容器网络不可用
+误操作后解决方案：不可恢复。",cce-t1-r13,cce-t1-r13 cce-t4-r04 cce-t1-r24 cce-t4-r03 cce-t2-r05,588.954457998625,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"节点使用的弹性网卡被删除会导致该节点上的容器网络不可用。
+
+节点使用的弹性网卡被删除后不可恢复。",c8f105c3da2e4e887683f8dd626f9957,RXhwZXJpbWVudFJ1bjoxNDk=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确覆盖了参考要点的两个关键点：删除节点弹性网卡会导致该节点容器网络不可用，且不可恢复；所有断言均可在检索上下文中找到依据，无无关内容。,61875a976fcb63114692a68b5c361f93,846,88,934,1,1329,69,1398,
+heldout-dense-answers,heldout,cce-q016,修改工作节点的地址后节点变为不可用，文档的解决办法是什么？,True,single,集群/节点,"[cce-t1-r16] Node节点
+分类：Node节点
+高危操作：更改节点IP
+导致后果：节点不可用
+误操作后解决方案：改回原IP。",cce-t1-r16,cce-t1-r16 cce-t1-r22 cce-t1-r18 cce-t1-r23 cce-t1-r14,807.9622499935795,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,修改工作节点的地址（更改节点IP）会导致节点不可用，误操作后的解决办法是改回原IP。,ee5cda08efb11a65a693c38ac389cd67,RXhwZXJpbWVudFJ1bjoxNTA=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,回答准确对应“更改节点IP”这一高危操作及其解决方案“改回原IP”，与参考资料和参考答案一致，且没有无关内容。,67d002aa9625b63a860d9423d8039fc1,800,56,856,1,1246,57,1303,
+heldout-dense-answers,heldout,cce-q019,清理 /opt/cloud/cce 和 /var/paas 时误删了内容，节点不可用了怎么恢复？,True,single,集群/节点,"[cce-t1-r19] Node节点
+分类：Node节点
+高危操作：删除或修改/opt/cloud/cce、/var/paas目录，删除数据盘
+导致后果：节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r19,cce-t1-r19 cce-t1-r24 cce-t1-r12 cce-t1-r13 cce-t1-r22,1014.3897910020314,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"删除或修改 /opt/cloud/cce、/var/paas 目录会导致节点不可用。
+
+该误操作的解决方案是重置节点。",3e68b268db2b2dce1d47a6d39e564ad0,RXhwZXJpbWVudFJ1bjoxNTE=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出删除/修改 /opt/cloud/cce、/var/paas 目录会导致节点不可用，并给出唯一正确解决方案“重置节点”，与参考回答和检索上下文完全一致；没有多余或无关内容。,93e35ec84efd1654fe311f4aefded46c,835,87,922,1,1325,76,1401,
+heldout-dense-answers,heldout,cce-q020,能自行更改 /etc/sudoers.d/sudoerspaas 和容器运行目录的权限吗？误改后怎么办？,True,single,集群/节点,"[cce-t1-r20] Node节点
+分类：Node节点
+高危操作：修改节点内目录权限、容器目录权限等。涉及的目录如下：
+
+/usr/lib/systemd/system/kubelet.service
+/usr/lib/systemd/system/containerd-monit.service
+/usr/lib/systemd/system/docker-monit.service
+/opt/cloud/cce
+/var/paas
+/var/paas/script
+/var/paas/sys/log
+/var/paas/kubernetes
+/var/script/docker
+/var/script/kubelet
+/etc/containerd
+/etc/rc.local
+/etc/sudoers.d/sudoerspaas
+/etc/sysconfig/docker
+/etc/docker/daemon.json
+/var/lib/docker
+/mnt/paas/kubernetes
+/mnt/paas/runtime
+导致后果：权限异常
+误操作后解决方案：不建议修改，请自行恢复。",cce-t1-r20,cce-t1-r20 cce-t3-r02 cce-t4-r03 cce-t1-r15 cce-t2-r07,1137.4636250111507,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"修改节点内目录权限、容器目录权限等属于高危操作，涉及的目录包括 /etc/sudoers.d/sudoerspaas 和 /mnt/paas/runtime。
+
+此类权限修改可能导致权限异常。
+
+误操作后不建议修改，请自行恢复。",b2b50f6b26ccbf8f5ff82869bf019e66,RXhwZXJpbWVudFJ1bjoxNTI=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确覆盖了问题核心：明确不能自行更改，属于高危操作，列出 /etc/sudoers.d/sudoerspaas 和 /mnt/paas/runtime 等目录，说明后果为权限异常，误操作后不建议修改并需自行恢复，与参考内容一致。,fa8f404882831018467d1b10dc688177,1113,139,1252,1,1781,90,1871,
+heldout-dense-answers,heldout,cce-q021,给 kubelet 使用的数据盘重新分区可能造成什么后果，应如何恢复？,True,single,集群/节点,"[cce-t1-r21] Node节点
+分类：Node节点
+高危操作：对节点进行磁盘格式化或分区，包括系统盘、容器运行时和kubelet组件使用的数据盘
+导致后果：可能导致节点不可用
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r21,cce-t1-r21 cce-t1-r22 cce-t1-r19 cce-t7-r02 cce-t1-r24,1121.9280420045834,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"对节点进行磁盘格式化或分区（包括系统盘、容器运行时和kubelet组件使用的数据盘）属于高危操作，可能导致节点不可用。
+
+该误操作后的解决方案是重置节点。",2b0eb34732ba148d901f08412a58fc2f,RXhwZXJpbWVudFJ1bjoxNTM=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出对kubelet数据盘所在范围的分区格式化会导致节点不可用，并给出重置节点的恢复方案，与参考资料cce-t1-r21完全一致，无额外无关内容。,8b3e5c1d550f10ef98373f8db423b58b,859,100,959,1,1363,69,1432,
+heldout-dense-answers,heldout,cce-q022,在工作节点安装额外的软件以后调度不了工作负载，应该先做什么？,True,single,集群/节点,"[cce-t1-r22] Node节点
+分类：Node节点
+高危操作：在节点上安装自己的其他软件
+导致后果：导致安装在节点上的Kubernetes组件异常，节点状态变成不可用，无法部署工作负载到此节点
+误操作后解决方案：卸载已安装软件，尝试恢复或重置节点，具体请参见重置节点。",cce-t1-r22,cce-t1-r22 cce-t3-r01 cce-t1-r15 cce-t4-r10 cce-t1-r23,1022.6403330016183,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"在节点上安装其他软件属于高危操作，会导致节点上的Kubernetes组件异常，节点状态变为不可用，无法部署工作负载到此节点。
+
+误操作后应先卸载已安装软件，再尝试恢复或重置节点，具体可参见重置节点。",94481d113c1080907ebed44d26abd94c,RXhwZXJpbWVudFJ1bjoxNTQ=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确覆盖了参考回答的关键点：先卸载已安装软件，再尝试恢复或重置节点，并说明可参见重置节点，与参考资料完全一致，没有遗漏或无关内容。,b0c46200681f5df9034d386815364eb6,995,113,1108,1,1514,67,1581,
+heldout-dense-answers,heldout,cce-q024,清理了 cce-pause 系统镜像后无法创建容器，而且拉不回来镜像，怎么办？,True,single,集群/节点,"[cce-t1-r24] Node节点
+分类：Node节点
+高危操作：删除节点上的cce-pause等系统镜像
+导致后果：导致无法正常创建容器，且无法拉取系统镜像
+误操作后解决方案：请从其他正常节点复制该镜像恢复",cce-t1-r24,cce-t1-r24 cce-t3-r02 cce-t3-r01 cce-t1-r08 cce-t2-r05,717.4721670016879,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"删除节点上的 cce-pause 等系统镜像会导致无法正常创建容器，且无法拉取系统镜像。
+
+误操作后的解决方案是从其他正常节点复制该镜像恢复。",de228169f310505359ea6adb9100bc71,RXhwZXJpbWVudFJ1bjoxNTU=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确涵盖了删除 cce-pause 系统镜像导致的后果及恢复方案，且所有断言均能在提供的检索上下文中找到依据。,32c7bc61a6d48f9a7cb31ae4962a2223,935,98,1033,1,1429,56,1485,
+heldout-dense-answers,heldout,cce-q026,误删 /usr/local/bin/crictl 后 containerd 一直重启，是什么原因，如何修复？,True,single,集群/节点,"[cce-t1-r26] Node节点
+分类：Node节点
+高危操作：删除或者移动containerd组件运行所需的二进制和配置文件
+
+/etc/containerd/config.toml
+/etc/crictl.yaml
+/usr/bin/runc
+/usr/lib/systemd/system/containerd.service
+/usr/local/bin/containerd
+/usr/local/bin/containerd-shim-runc-v2
+/usr/local/bin/crictl
+/usr/local/bin/ctr
+导致后果：删除/usr/local/bin/crictl会导致containerd健康检查异常，containerd不断重启
+
+删除其他文件可能导致容器不能启动，节点无法使用
+误操作后解决方案：重置节点恢复containerd二进制和配置文件，具体请参见重置节点。",cce-t1-r26,cce-t1-r26 cce-t4-r03 cce-t3-r02 cce-t1-r11 cce-t5-r01,1014.1005000041332,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"删除 /usr/local/bin/crictl 会导致 containerd 健康检查异常，containerd 不断重启。
+
+误操作后的解决方案是重置节点，恢复 containerd 二进制和配置文件。",14d092b105d23344b417a5179b650a04,RXhwZXJpbWVudFJ1bjoxNTY=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案完整准确地说明了删除 /usr/local/bin/crictl 导致 containerd 健康检查异常并不断重启的原因，以及通过重置节点恢复二进制和配置文件的解决方案，与参考资料一致且直接回答问题。,a6d05e9156e8bcc83319125d21211aa7,1008,100,1108,1,1611,70,1681,
+heldout-dense-answers,heldout,cce-q027,自己创建或改动 paas 用户组，会影响哪些对象，应怎样恢复？,True,single,集群/节点,"[cce-t1-r27] Node节点
+分类：Node节点
+高危操作：修改或手动创建paas用户/用户组
+导致后果：影响CCE组件和业务Pod正常运行，详情请参见节点paas用户/用户组说明。
+误操作后解决方案：重置节点，具体请参见重置节点。",cce-t1-r27,cce-t1-r27 cce-t1-r24 cce-t1-r08 cce-t1-r09 cce-t1-r13,809.7969999944326,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"修改或手动创建paas用户/用户组会影响CCE组件和业务Pod正常运行。
+
+误操作后解决方案为重置节点。",902a0c1f7431d97aae36e22bee51b3b0,RXhwZXJpbWVudFJ1bjoxNTc=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确回答了影响对象（CCE组件和业务Pod）和恢复方式（重置节点），与参考资料和参考答案一致，且无多余内容。,d0ddc20db4e9fad26a5a914eaf018960,832,86,918,1,1340,58,1398,
+heldout-dense-answers,heldout,cce-q029,启用 tcp_tw_recycle 导致 NAT 出现异常，应该设回多少？,True,single,网络,"[cce-t2-r02] 网络
+高危操作：修改内核参数net.ipv4.tcp_tw_recycle=1
+导致后果：导致nat异常
+误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_recycle=0",cce-t2-r02,cce-t2-r02 cce-t4-r03 cce-t2-r03 cce-t4-r04 cce-t2-r04,816.2775000091642,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,启用 net.ipv4.tcp_tw_recycle=1 会导致 NAT 异常，误操作后应将其修改为 net.ipv4.tcp_tw_recycle=0。,c2cd4091eeabdb585e4c6b329747c083,RXhwZXJpbWVudFJ1bjoxNTg=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出了应设回 net.ipv4.tcp_tw_recycle=0，与参考一致；所有实质性断言均来自检索到的相关上下文；直接回答所问，无无关内容。,a66bcbb7d5ba69e3fd5cef1bb0a8b3e0,862,69,931,1,1356,69,1425,
+heldout-dense-answers,heldout,cce-q030,tcp_tw_reuse 设置为 1 后出现网络异常，这篇文档建议如何处理？,True,single,网络,"[cce-t2-r03] 网络
+高危操作：修改内核参数net.ipv4.tcp_tw_reuse=1
+导致后果：导致网络异常
+误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_reuse=0",cce-t2-r03,cce-t2-r03 cce-t2-r02 cce-t4-r03 cce-t2-r04 cce-t2-r05,911.8421660095919,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"修改内核参数 net.ipv4.tcp_tw_reuse=1 属于高危操作，会导致网络异常。
+
+tcp_tw_reuse 设置为 1 后出现网络异常，解决方案是修改内核参数 net.ipv4.tcp_tw_reuse=0。",01cdeaf5b0342115d91b48041d7ecfd1,RXhwZXJpbWVudFJ1bjoxNTk=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出高危操作会导致网络异常，并正确给出恢复方案为修改tcp_tw_reuse=0，完全基于检索资料中对应tcp_tw_reuse的条目，无无关内容。,a0b14db4ab8e64ee585d97f30f559a49,851,119,970,1,1367,71,1438,
+heldout-dense-answers,heldout,cce-q031,集群里 DNS 解析不正常，安全组应检查容器网段的哪个端口和协议？,True,single,网络,"[cce-t2-r04] 网络
+高危操作：节点安全组配置未放通容器CIDR的53端口udp
+导致后果：集群内DNS无法正常工作
+误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。
+
+详情请参见集群安全组规则配置。",cce-t2-r04,cce-t2-r04 cce-t1-r11 cce-t2-r05 cce-t1-r13 cce-t1-r23,1112.5854589918163,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,节点安全组未放通容器网段（容器CIDR）的53端口UDP，会导致集群内DNS无法正常工作，需参照新建集群的安全组修复并放通安全组。,0d77f9202bd5b5083250a73b669754a2,RXhwZXJpbWVudFJ1bjoxNjA=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出需检查节点安全组容器CIDR的53端口UDP，并说明后果和修复方式，与参考完全一致；所有实质断言均来自检索资料。,ad7491a46365148413740340cfca0d47,871,72,943,1,1385,64,1449,
+heldout-dense-answers,heldout,cce-q032,误删 default-network 的 network-attachment-definitions CRD，会影响什么，如何恢复？,True,single,网络,"[cce-t2-r05] 网络
+高危操作：删除default-network的network-attachment-definitions的CRD资源
+导致后果：容器网络不通，集群删除失败等
+误操作后解决方案：误删除该资源需要使用正确的配置重新创建default-network资源。",cce-t2-r05,cce-t2-r05 cce-t1-r13 cce-t1-r23 cce-t4-r03 cce-t4-r04,809.1402499994729,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"删除 default-network 的 network-attachment-definitions CRD 资源属于高危操作。
+
+会导致容器网络不通、集群删除失败等后果。
+
+误删后需使用正确的配置重新创建 default-network 资源来恢复。",2a63973ac4a786662ed09f2d88efa0e2,RXhwZXJpbWVudFJ1bjoxNjE=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确覆盖了误删 default-network 的 network-attachment-definitions CRD 的影响（容器网络不通、集群删除失败）及恢复方法（用正确配置重新创建 default-network），与参考资料完全一致，无多余或无关内容。,7a9609a371d5b6ed94afb1c60fa7330c,837,134,971,1,1350,78,1428,
+heldout-dense-answers,heldout,cce-q033,节点打开 iptables 防火墙后容器之间不通，需要关闭什么并检查哪些规则文件？,True,single,网络,"[cce-t2-r06] 网络
+高危操作：启动iptables防火墙
+导致后果：CCE默认不开启iptables防火墙，开启后可能造成网络不通
+
+ 说明：
+
+不建议开启iptables防火墙。如必须启动iptables防火墙，请在测试环境中确认/etc/sysconfig/iptables和/etc/sysconfig/ip6tables中配置的规则是否会对网络连通性造成影响。
+误操作后解决方案：关闭iptables防火墙，并检查/etc/sysconfig/iptables和/etc/sysconfig/ip6tables中配置的规则。",cce-t2-r06,cce-t2-r06 cce-t2-r07 cce-t1-r16 cce-t1-r24 cce-t1-r23,802.2454159945482,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,节点开启 iptables 防火墙可能导致网络不通；误操作后应关闭 iptables 防火墙，并检查 /etc/sysconfig/iptables 和 /etc/sysconfig/ip6tables 中配置的规则。,388106df3a8720a28be9b6046a607c2c,RXhwZXJpbWVudFJ1bjoxNjI=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出需关闭iptables防火墙，并检查/etc/sysconfig/iptables和/etc/sysconfig/ip6tables规则，与参考一致且有检索上下文支撑。,996dab944e0263a8590930004712ca50,911,82,993,1,1481,65,1546,
+heldout-dense-answers,heldout,cce-q034,隧道网络集群里能把 openvswitch 换成发行版自带的新版吗？,True,single,网络,"[cce-t2-r07] 网络
+高危操作：容器隧道网络集群节点升级内核或升级openvswitch
+导致后果：容器网络不通
+
+ 说明：
+
+容器隧道网络集群数据面组件采用的是华为优化后的openvswitch组件，不支持自行升级为操作系统自带的openvswitch。
+误操作后解决方案：恢复方式请参见如何解决yum update升级操作系统导致容器网络不可用问题？",cce-t2-r07,cce-t2-r07 cce-t7-r02 cce-t4-r04 cce-t1-r13 cce-t1-r23,793.5588330001337,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"容器隧道网络集群数据面组件采用的是华为优化后的openvswitch组件，不支持自行升级为操作系统自带的openvswitch。
+
+在容器隧道网络集群节点升级openvswitch属于高危操作，会导致容器网络不通。",bf1cf7f995d69714f44ec08647bfaf11,RXhwZXJpbWVudFJ1bjoxNjM=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出容器隧道网络集群不支持将华为优化后的 openvswitch 自行升级为系统自带版本，并补充了高危操作及后果，与参考要点一致，且所有断言均有检索资料支撑。,7cd346ac0638b3c573b398b364f5a2ea,851,103,954,1,1399,71,1470,
+heldout-dense-answers,heldout,cce-q035,特权容器运行 systemctl 后宿主机挂载点异常，可能是什么操作造成的，怎么恢复？,True,single,容器,"[cce-t3-r01] 容器
+高危操作：将负载设置为特权容器，并直接操作主机的硬件设备，误操作节点系统文件等。
+
+例如将启动命令配置为/usr/sbin/init，在容器内使用systemctl，影响节点/lib路径下的系统文件。
+导致后果：此操作可能会导致节点所有挂载点被卸载，导致节点异常，并且会影响节点上的Pod正常运行及存储插件功能。
+误操作后解决方案：禁止移除节点/lib路径下的挂载点，通过重置节点恢复，具体请参见重置节点。",cce-t3-r01,cce-t3-r02 cce-t4-r03 cce-t3-r01 cce-t1-r24 cce-t1-r22,1028.5204999963753,0.0,1.0,1.0,0.2,1.0,0.3333333333333333,0.5,ANSWERED,"将负载设置为特权容器、启动命令配置为/usr/sbin/init、在容器内使用systemctl操作，会影响节点/lib路径下的系统文件，可能导致节点所有挂载点被卸载，造成节点异常并影响节点上的Pod正常运行及存储插件功能。
+
+该误操作的恢复方式是禁止移除节点/lib路径下的挂载点，通过重置节点恢复。",c9264efabaf5066d5d88d1101f03c47d,RXhwZXJpbWVudFJ1bjoxNjQ=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确覆盖了参考回答中的原因、后果与恢复方式，且所有实质断言均能在提供的资料 cce-t3-r01 中找到依据，没有无关内容。,3149c39283669e6150349648c15b5bc5,959,139,1098,1,1553,63,1616,
+heldout-dense-answers,heldout,cce-q038,暂时在 ELB 控制台停用已绑定 CCE 的实例，会影响 Service 和 Ingress 吗？,True,single,负载均衡,"[cce-t4-r02] 负载均衡
+高危操作：通过ELB的控制台停用已绑定CCE集群的ELB实例
+导致后果：导致Service/Ingress访问不通。
+误操作后解决方案：不建议停用，请自行恢复。",cce-t4-r02,cce-t4-r02 cce-t4-r01 cce-t4-r06 cce-t4-r05 cce-t4-r08,1120.8536659978563,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"通过ELB控制台停用已绑定CCE集群的ELB实例，会导致Service/Ingress访问不通。
+
+针对该停用操作，不建议停用，需要自行恢复。",9d307ebd9fe55b63d6cb79670e34b5ee,RXhwZXJpbWVudFJ1bjoxNjU=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确覆盖了停用已绑定CCE的ELB实例会导致Service/Ingress访问不通，以及不建议停用、需自行恢复两个关键点；所有实质性断言均有检索资料支持，且直接回应该问题。,62c09afc1e5eb2f99ab4b129b923e903,926,98,1024,1,1427,75,1502,
+heldout-dense-answers,heldout,cce-q040,把 CCE 使用的负载均衡器公网 IP 解绑后，它会变成什么类型，公网流量还能转发吗？,True,single,负载均衡,"[cce-t4-r04] 负载均衡
+高危操作：通过ELB的控制台解绑ELB的IPv4公网IP
+导致后果：解绑公网IP后，该弹性负载均衡器变更为私网类型，无法进行公网流量转发。
+误操作后解决方案：请自行恢复。",cce-t4-r04,cce-t4-r04 cce-t4-r03 cce-t4-r10 cce-t4-r07 cce-t2-r07,694.7832500009099,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,通过ELB的控制台解绑ELB的IPv4公网IP后，该弹性负载均衡器变更为私网类型，无法进行公网流量转发。,c9d5ea93fd6f80a2552ecfb091806dc2,RXhwZXJpbWVudFJ1bjoxNjY=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案完整准确地回答了两个关键点：解绑后变为私网类型，且无法进行公网流量转发，均与参考资料一致，无额外无关内容。,b8956937f0231e48581f94dcb28e9f74,951,67,1018,1,1459,61,1520,
+heldout-dense-answers,heldout,cce-q041,在 CCE 自动创建的 ELB 上手动加了监听器，删除 Service 时为什么 ELB 可能删不掉？,True,single,负载均衡,"[cce-t4-r05] 负载均衡
+高危操作：通过ELB的控制台在CCE管理的ELB创建自定义的监听器
+导致后果：若ELB是创建Service/Ingress时自动创建的，在Service/Ingress删除时无法删除ELB的自定义监听器，会导致无法自动删除ELB。
+误操作后解决方案：通过Service/Ingress自动创建监听器，否则需要手动删除ELB。",cce-t4-r05,cce-t4-r05 cce-t4-r01 cce-t4-r06 cce-t4-r10 cce-t4-r08,890.9931250091176,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"若ELB是创建Service/Ingress时自动创建的，在Service/Ingress删除时无法删除ELB的自定义监听器，会导致无法自动删除ELB。
+
+误操作后的解决方案：通过Service/Ingress自动创建监听器，否则需要手动删除ELB。",32dc7b53ed5c3293c30f7d4b4f26936b,RXhwZXJpbWVudFJ1bjoxNjc=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确说明了在CCE自动创建的ELB上手动添加监听器会导致删除Service时无法自动删除ELB，并给出了误操作后的解决方案，所有断言均有检索上下文依据。,3a6442384ac2bc4535815e72524e0f38,961,115,1076,1,1508,66,1574,
+heldout-dense-answers,heldout,cce-q045,直接替换 CCE 监听器关联的整个后端服务器组，可能有什么后果，应该怎么处理？,True,single,负载均衡,"[cce-t4-r09] 负载均衡
+高危操作：通过ELB的控制台更换CCE创建的监听器后端服务器组
+导致后果：导致Service/Ingress访问不通。
+在集群升级等需要重启控制节点的场景，后端服务器组中的后端服务器会被CCE侧重置。
+误操作后解决方案：重新创建或更新Service/Ingress。",cce-t4-r09,cce-t4-r09 cce-t4-r07 cce-t4-r08 cce-t4-r10 cce-t4-r06,1021.9131659978302,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"通过ELB的控制台更换CCE创建的监听器后端服务器组属于高危操作，会导致Service/Ingress访问不通。
+
+在集群升级等需要重启控制节点的场景，后端服务器组中的后端服务器会被CCE侧重置。
+
+误操作后的解决方案是重新创建或更新Service/Ingress。",3a443b1fd14e43f4978c21602a35525e,RXhwZXJpbWVudFJ1bjoxNjg=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案完整准确地回答了直接替换整个后端服务器组的后果（Service/Ingress访问不通、后端服务器被CCE重置）及处理方法（重新创建或更新Service/Ingress），所有实质性断言均能在提供的资料中找到依据，且内容直接针对问题，没有无关信息。,dbef59f0b281b2ddc3a456185680a74a,969,151,1120,1,1506,85,1591,
+heldout-dense-answers,heldout,cce-q046,在 ELB 侧手工改了 Ingress 产生的转发规则，控制节点重启时会发生什么？,True,single,负载均衡,"[cce-t4-r10] 负载均衡
+高危操作：通过ELB的控制台修改CCE创建的监听器转发策略，添加、删除转发规则
+导致后果：导致Service/Ingress访问不通。
+如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+误操作后解决方案：不建议修改，请自行恢复。",cce-t4-r10,cce-t4-r10 cce-t4-r06 cce-t1-r07 cce-t4-r09 cce-t1-r18,1260.7917499990435,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"通过ELB控制台修改CCE创建的监听器转发策略（添加、删除转发规则）会导致Service/Ingress访问不通。
+
+如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。
+
+误操作后不建议修改，请自行恢复。",1612b4cad20ba254af5eae1419869d74,RXhwZXJpbWVudFJ1bjoxNjk=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确回答了在ELB侧手工修改Ingress转发规则后，控制节点重启时所作修改会被CCE侧重置，并涵盖了访问不通和恢复建议，与参考一致且完全有据。,282cf1da0b428d3467b657bb0796f09d,885,157,1042,1,1435,70,1505,
+heldout-dense-answers,heldout,cce-q047,要更换 CCE 监听器的服务器证书，怎样更新才能避免集群升级时被覆盖？,True,single,负载均衡,"[cce-t4-r11] 负载均衡
+高危操作：通过ELB的控制台给CCE创建的监听器更换证书，或者在ELB的证书管理界面修改CCE通过TLS密钥创建的服务器证书。
+导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置, 可能导致Service/Ingress访问不通。
+误操作后解决方案：通过CCE控制台或YAML方式更新Service/Ingress关联的证书，或者更新Service/Ingress关联的TLS密钥资源。",cce-t4-r11,cce-t4-r11 cce-t4-r07 cce-t4-r10 cce-t4-r08 cce-t4-r09,793.4775830071885,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"在ELB控制台给CCE创建的监听器更换证书，或在ELB证书管理界面修改CCE通过TLS密钥创建的服务器证书属于高危操作，在集群升级等需要重启控制节点的场景所做修改会被CCE侧重置，可能导致Service/Ingress访问不通。
+
+正确做法是通过CCE控制台或YAML方式更新Service/Ingress关联的证书，或者更新Service/Ingress关联的TLS密钥资源。",004fd91c7557699fabd72e45c8ad4266,RXhwZXJpbWVudFJ1bjoxNzA=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确指出应通过CCE控制台或YAML方式更新Service/Ingress关联的证书或TLS密钥资源，并说明ELB控制台修改会被CCE侧重置，完整匹配参考要点，所有实质性断言均有检索上下文依据。,50125f7fe1c994ba0a870d9253919673,1009,153,1162,1,1615,80,1695,
+heldout-dense-answers,heldout,cce-q048,删掉日志采集器的 pos 目录后日志为什么可能重复收集？,True,single,日志,"[cce-t5-r01] 日志
+高危操作：删除宿主机/tmp/ccs-log-collector/pos目录
+导致后果：日志重复采集
+误操作后解决方案：无",cce-t5-r01,cce-t5-r01 cce-t5-r02 cce-t1-r24 cce-t3-r02 cce-t1-r19,802.9174999974202,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,删除宿主机/tmp/ccs-log-collector/pos目录属于高危操作，其导致的后果为日志重复采集。,07618cf96ee18584b885121e76c5a0bc,RXhwZXJpbWVudFJ1bjoxNzE=,1.0,1.0,1.0,1.0,1.0,1.0,0.5,1,1,答案正确指出了删除pos目录会导致日志重复采集，但未解释问题中的“为什么”（即缺少机制说明），且参考资料本身仅列出后果，未提供原因。答案完全基于检索到的第一条证据，无编造内容。,f9a763401f4bfd67429d1df8ae938e64,824,60,884,1,1286,77,1363,
+heldout-dense-answers,heldout,cce-q049,清理宿主机上的 ccs-log-collector/buffer 目录会丢失什么？,True,single,日志,"[cce-t5-r02] 日志
+高危操作：删除宿主机/tmp/ccs-log-collector/buffer目录
+导致后果：日志丢失
+误操作后解决方案：无",cce-t5-r02,cce-t5-r02 cce-t5-r01 cce-t3-r02 cce-t1-r24 cce-t7-r02,797.4201659963,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"删除宿主机/tmp/ccs-log-collector/buffer目录会导致日志丢失。
+
+删除宿主机/tmp/ccs-log-collector/buffer目录属于高危操作，误操作后无解决方案。",752077774b5abf674b630029ca547c0a,RXhwZXJpbWVudFJ1bjoxNzI=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确回答删除宿主机/tmp/ccs-log-collector/buffer目录会导致日志丢失，并补充了高危操作及无解决方案的细节，与参考资料完全一致，无多余无关内容。,4f149df6c6d3b6c524dcde7e8b85b2cd,821,105,926,1,1305,76,1381,
+heldout-dense-answers,heldout,cce-q050,100 个节点的集群，云原生监控采集分片通常该配多少，配太多有什么风险？,True,single,监控,"[cce-t6-r01] 监控
+高危操作：云原生监控插件配置中设置的采集分片数量超过推荐值（建议每50个节点配置一个采集分片）
+导致后果：增加采集分片数会消耗更多的资源，容易导致集群控制节点内存负载过高，影响系统稳定性。
+误操作后解决方案：修改云原生监控插件的采集分片数，调整为推荐值。",cce-t6-r01,cce-t6-r01 cce-t1-r02 cce-t1-r08 cce-t1-r07 cce-t1-r05,1114.292583995848,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"云原生监控采集分片的推荐配置为每50个节点配置一个采集分片，因此100个节点的集群推荐配置约2个采集分片。
+
+采集分片数量超过推荐值会增加资源消耗，容易导致集群控制节点内存负载过高，影响系统稳定性。
+
+误操作后应将云原生监控插件的采集分片数调整为推荐值。",4d14f3f60bb8ac07dbed63bc2e961d0e,RXhwZXJpbWVudFJ1bjoxNzM=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,回答准确给出了每50节点一个分片的推荐值，并据此为100节点集群建议约2个分片，同时正确说明了超过推荐值的风险（资源消耗增加、控制节点内存负载过高、影响稳定性），与参考信息完全一致，无多余无关内容。,84629e7decdcef3c8fa70384f5e5f01a,882,160,1042,1,1461,90,1551,
+heldout-dense-answers,heldout,cce-q052,在节点直接 umount 云盘挂载路径后，Pod 的数据可能写到哪儿，该怎么恢复？,True,single,云硬盘,"[cce-t7-r02] 云硬盘
+高危操作：节点上umount磁盘挂载路径
+导致后果：Pod写入本地磁盘
+误操作后解决方案：重新mount对应目录到Pod中
+备注：Buffer里面是待消费的日志缓存文件",cce-t7-r02,cce-t7-r02 cce-t7-r01 cce-t7-r03 cce-t3-r02 cce-t1-r21,909.4444590009516,1.0,1.0,1.0,0.2,1.0,1.0,1.0,ANSWERED,"在节点直接 umount 云盘挂载路径，会导致 Pod 写入本地磁盘。
+
+误操作后的解决方案是重新 mount 对应目录到 Pod 中。",1d70de2bc675cdf1e9fa443b01c39b76,RXhwZXJpbWVudFJ1bjoxNzQ=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确回答了节点 umount 云盘挂载路径后 Pod 会写入本地磁盘，并给出重新 mount 对应目录到 Pod 中的恢复方案，与参考回答和检索资料完全一致，无无关内容。,0041dcf8113c9680728b74521377871b,843,91,934,1,1333,74,1407,
+heldout-dense-answers,heldout,cce-q053,绕过容器平台在节点上直接操作 EVS，会让 Pod 写到哪里，文档是否提供恢复方法？,True,single,云硬盘,"[cce-t7-r03] 云硬盘
+高危操作：节点上直接操作EVS
+导致后果：Pod写入本地磁盘
+误操作后解决方案：无
+备注：无",cce-t7-r03,cce-t7-r01 cce-t1-r27 cce-t1-r13 cce-t1-r24 cce-t7-r02,1006.1208340048324,0.0,0.0,0.0,0.0,0.0,0,0.0,ANSWERED,"绕过容器平台在节点上直接操作 EVS（如控制台手动解除挂载 EVS）会导致 Pod 写入出现 IO Error 故障。
+
+文档提供了恢复方法：删除节点上 mount 目录，重新调度 Pod。
+
+节点上 umount 磁盘挂载路径会导致 Pod 写入本地磁盘；恢复方法是重新 mount 对应目录到 Pod 中。",785b71a7d8b540ccea6f62f0bffea4a5,RXhwZXJpbWVudFJ1bjoxNzU=,1.0,1.0,0.0,0.0,0.0,1.0,0,0.5,0.5,问题问的是“节点上直接操作EVS”这一操作，对应参考资料 cce-t7-r03（节点上直接操作EVS，后果Pod写入本地磁盘，无恢复方法），而回答错误地引用了两条不同操作的后果（r01控制台手动解除挂载EVS和r02节点上umount磁盘挂载路径），并据此声称存在恢复方法，结论与参考要点（无恢复方法）相反，属核心结论错误；额外内容部分来源于资料但与所问操作对象不匹配。,ba5917fba7cea0372d4c0db68c4d3145,838,158,996,1,1364,140,1504,
+heldout-dense-answers,heldout,cce-q057,修改控制节点 IP 和修改 Node 节点 IP 后，文档各建议怎样恢复？,True,comparison,集群/节点,"[cce-t1-r07] 控制节点
+分类：控制节点
+高危操作：更改节点IP
+导致后果：该控制节点不可用
+误操作后解决方案：改回原IP。
+
+[cce-t1-r16] Node节点
+分类：Node节点
+高危操作：更改节点IP
+导致后果：节点不可用
+误操作后解决方案：改回原IP。",cce-t1-r07 cce-t1-r16,cce-t1-r16 cce-t1-r23 cce-t1-r12 cce-t1-r13 cce-t1-r18,686.3894999987679,0.5,0.5,0.5,0.2,1.0,1.0,0.6131471927654584,ANSWERED,Node节点更改节点IP导致节点不可用，误操作后解决方案是改回原IP。,fe430bc6553b72a087cfcae75b044a93,RXhwZXJpbWVudFJ1bjoxNzY=,1.0,1.0,0.5,1.0,1.0,1.0,0.5,1,0.5,答案只回答了 Node 节点的恢复方式（改回原 IP），完全遗漏了问题所问的控制节点 IP 修改后的恢复方式，因此只算部分正确；关于 Node 节点的断言在检索到的上下文中均有依据，忠实。但内容仅覆盖一半问题，存在明显遗漏。,2f0637fd866998e05154215b53c0b384,768,52,820,1,1263,92,1355,
+heldout-dense-answers,heldout,cce-q058,集群控制节点与工作节点的安全组分别按什么规则命名，误改后如何修复？,True,comparison,集群/节点,"[cce-t1-r02] 控制节点
+分类：控制节点
+高危操作：修改集群控制节点安全组
+
+ 说明：
+
+控制节点安全组命名规则：集群名称-cce-control-随机数
+导致后果：可能导致控制节点无法使用
+误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。
+
+[cce-t1-r10] Node节点
+分类：Node节点
+高危操作：修改集群Node节点安全组
+
+ 说明：
+
+Node节点安全组命名规则：集群名称-cce-node-随机数
+导致后果：可能导致节点无法使用
+误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。",cce-t1-r02 cce-t1-r10,cce-t1-r02 cce-t1-r10 cce-t1-r07 cce-t1-r04 cce-t1-r09,1153.410790997441,0.5,1.0,1.0,0.4,1.0,1.0,1.0,ANSWERED,"控制节点安全组命名规则：集群名称-cce-control-随机数
+
+Node节点安全组命名规则：集群名称-cce-node-随机数
+
+修改集群控制节点安全组属高危操作，可能导致控制节点无法使用；误操作后应参照新建集群的安全组进行修复，放通安全组
+
+修改集群Node节点安全组属高危操作，可能导致节点无法使用；误操作后应参照新建集群的安全组进行修复，放通安全组",6aeda6b4f6e6613abde67244587a0f31,RXhwZXJpbWVudFJ1bjoxNzc=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案完整准确回答了两个安全组的命名规则及误改后的修复方案，且所有内容均可在检索资料中找到依据，无冗余或无关信息。,a8309c3be3a00fdb1a04ce6830e3c108,848,214,1062,1,1528,59,1587,
+heldout-dense-answers,heldout,cce-q059,日志采集器的 pos 和 buffer 目录误删后，造成的结果分别是什么？,True,comparison,日志,"[cce-t5-r01] 日志
+高危操作：删除宿主机/tmp/ccs-log-collector/pos目录
+导致后果：日志重复采集
+误操作后解决方案：无
+
+[cce-t5-r02] 日志
+高危操作：删除宿主机/tmp/ccs-log-collector/buffer目录
+导致后果：日志丢失
+误操作后解决方案：无",cce-t5-r01 cce-t5-r02,cce-t5-r01 cce-t5-r02 cce-t1-r24 cce-t1-r13 cce-t7-r02,925.4622089938493,0.5,1.0,1.0,0.4,1.0,1.0,1.0,ANSWERED,"删除宿主机/tmp/ccs-log-collector/pos目录会导致日志重复采集，且误操作后无解决方案。
+
+删除宿主机/tmp/ccs-log-collector/buffer目录会导致日志丢失，且误操作后无解决方案。",0d06a9d6d5c0ec6cb879278acfb74baa,RXhwZXJpbWVudFJ1bjoxNzg=,1.0,1.0,1.0,1.0,1.0,1.0,1,1,1,答案准确对应两个目录误删的后果（pos 目录导致日志重复采集，buffer 目录导致日志丢失），且与参考回答和检索上下文完全一致，无遗漏或多余内容。,cb5c5f6660ff5db5bf4058a99ceaacae,790,114,904,1,1334,68,1402,
+heldout-dense-answers,heldout,cce-q061,tcp_tw_recycle 和 tcp_tw_reuse 设成 1 后分别可能产生什么问题，文档建议的值是什么？,True,comparison,网络,"[cce-t2-r02] 网络
+高危操作：修改内核参数net.ipv4.tcp_tw_recycle=1
+导致后果：导致nat异常
+误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_recycle=0
+
+[cce-t2-r03] 网络
+高危操作：修改内核参数net.ipv4.tcp_tw_reuse=1
+导致后果：导致网络异常
+误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_reuse=0",cce-t2-r02 cce-t2-r03,cce-t2-r02 cce-t2-r03 cce-t4-r03 cce-t1-r16 cce-t2-r01,1242.2991250059567,0.5,1.0,1.0,0.4,1.0,1.0,1.0,ANSWERED,"修改内核参数 net.ipv4.tcp_tw_recycle=1 属高危操作，可能导致 NAT 异常；误操作后应将其改回 0（net.ipv4.tcp_tw_recycle=0）。
+
+修改内核参数 net.ipv4.tcp_tw_reuse=1 属高危操作，可能导致网络异常；误操作后应将其改回 0（net.ipv4.tcp_tw_reuse=0）。",997249811f4d505e5eaa41da43b3f168,RXhwZXJpbWVudFJ1bjoxNzk=,1.0,1.0,1.0,1.0,1.0,1.0,0.5,1,0.5,答案准确覆盖了 tcp_tw_recycle 和 tcp_tw_reuse 设为 1 时的后果及误操作后改回 0 的解决方案，但完全没有回答文档建议的值是什么这一关键点，存在遗漏。,a6f4f8118d907beb9af1dca5bc44cd83,829,153,982,1,1434,82,1516,
+heldout-dense-answers,heldout,cce-u003,帮我判断生产集群现在的 CPU 使用率是否正常，并给出实时数值。,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,cce-t1-r01 cce-t6-r01 cce-t1-r21 cce-t1-r08 cce-t1-r27,583.8844999962021,,,,,,,,UNRESOLVED,,7ddbe469ed34ec57bc66d0be17782fed,RXhwZXJpbWVudFJ1bjoxODA=,1.0,0.0,,,,,1,,1,问题无法根据提供的资料回答，答案为空且 status 为 UNRESOLVED，正确说明资料不足，未编造实时 CPU 使用率或正常性判断。检索资料仅涉及高危操作与节点管理，均无生产集群实时 CPU 使用率数据。,da1d9c9dd984d2bed7995f5a4c21e477,932,5,937,1,1361,83,1444,1.0
+heldout-dense-answers,heldout,cce-u004,本文列出了所有地区节点操作系统镜像的 SHA256 校验值吗？请给出这些值。,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,cce-t1-r24 cce-t1-r15 cce-t1-r18 cce-t1-r27 cce-t1-r21,576.5547079936368,,,,,,,,UNRESOLVED,,6bf4a3df85fc73c0463ae5ac0d046f97,RXhwZXJpbWVudFJ1bjoxODE=,1.0,0.0,,,,,1,,1,该问题无依据回答，答案为空，正确拒答并说明召回资料不足以回答，符合要求；无答案故忠实度为null。,687b6bfb2665a71b52c120337c574324,906,5,911,1,1331,55,1386,1.0
+heldout-dense-answers,heldout,cce-u005,我的集群现在有多少个故障 Pod？请直接报告实际数量。,False,unanswerable,文档范围之外,该页面没有足够依据回答此问题，应说明缺口，不能编造。,,cce-t7-r01 cce-t1-r27 cce-t2-r04 cce-t1-r01 cce-t1-r02,471.750124997925,,,,,,,,UNRESOLVED,,00091377732ccea18c3442a93764a934,RXhwZXJpbWVudFJ1bjoxODI=,1.0,0.0,,,,,1,,1,问题无法从召回资料中获得答案，标准要求说明证据缺口并拒绝编造；空答案未包含任何可核验的实质性断言，故忠实度为 null，正确性与相关性按正确拒答处理。,ae87e6970050c3b3fd87af054a764fbd,920,5,925,1,1349,70,1419,1.0

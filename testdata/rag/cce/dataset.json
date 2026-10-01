@@ -1,0 +1,790 @@
+[
+  {
+    "id": "cce-q001",
+    "question": "CCE 管理面内存突然升高，大量客户端在全量拉取资源列表，该怎么处理？",
+    "reference_answer": "[cce-t1-r01] 集群\n分类：集群\n高危操作：通过kube-apiserver一次性查询大量数据。例如一次性发起大量LIST请求，或单个LIST请求查询大量数据。\n导致后果：控制节点内存负载过高，影响系统稳定性。\n误操作后解决方案：停止大批量查询行为。\n\n如果需要增强集群抗过载能力，您可以变更集群规格至更大的规模，详情请参见变更集群规格。",
+    "relevant_evidence_ids": [
+      "cce-t1-r01"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q002",
+    "question": "有人改了名字带 cce-control 的安全组，主控节点不可用了，应参照什么恢复？",
+    "reference_answer": "[cce-t1-r02] 控制节点\n分类：控制节点\n高危操作：修改集群控制节点安全组\n\n 说明：\n\n控制节点安全组命名规则：集群名称-cce-control-随机数\n导致后果：可能导致控制节点无法使用\n误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。",
+    "relevant_evidence_ids": [
+      "cce-t1-r02"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q003",
+    "question": "控制节点过期销毁了，文档认为能恢复吗？",
+    "reference_answer": "[cce-t1-r03] 控制节点\n分类：控制节点\n高危操作：节点到期或被销毁\n导致后果：该控制节点不可用\n误操作后解决方案：不可恢复。",
+    "relevant_evidence_ids": [
+      "cce-t1-r03"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q004",
+    "question": "给控制节点重新装了一遍系统后组件不见了，可以用重置节点恢复吗？",
+    "reference_answer": "[cce-t1-r04] 控制节点\n分类：控制节点\n高危操作：重装操作系统\n导致后果：控制节点组件被删除\n误操作后解决方案：不可恢复。",
+    "relevant_evidence_ids": [
+      "cce-t1-r04"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q005",
+    "question": "自行把控制节点的 etcd 升了版本，集群出问题后怎么办？",
+    "reference_answer": "[cce-t1-r05] 控制节点\n分类：控制节点\n高危操作：自行升级控制节点或者etcd组件版本\n导致后果：可能导致集群无法使用\n误操作后解决方案：回退到原始版本。",
+    "relevant_evidence_ids": [
+      "cce-t1-r05"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q006",
+    "question": "误格式化控制节点的 /etc/kubernetes 数据，文档给出的恢复结论是什么？",
+    "reference_answer": "[cce-t1-r06] 控制节点\n分类：控制节点\n高危操作：删除或格式化节点/etc/kubernetes等核心目录数据\n导致后果：该控制节点不可用\n误操作后解决方案：不可恢复。",
+    "relevant_evidence_ids": [
+      "cce-t1-r06"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q007",
+    "question": "CCE 控制节点换 IP 后不可用，应该怎么恢复？",
+    "reference_answer": "[cce-t1-r07] 控制节点\n分类：控制节点\n高危操作：更改节点IP\n导致后果：该控制节点不可用\n误操作后解决方案：改回原IP。",
+    "relevant_evidence_ids": [
+      "cce-t1-r07"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q008",
+    "question": "手工调过 kube-apiserver 和 etcd 的启动参数后控制节点异常，应该恢复到什么配置？",
+    "reference_answer": "[cce-t1-r08] 控制节点\n分类：控制节点\n高危操作：自行修改核心组件（etcd、kube-apiserver、docker等）参数\n导致后果：可能导致控制节点不可用\n误操作后解决方案：按照推荐配置参数恢复，详情请参见修改CCE集群配置。",
+    "relevant_evidence_ids": [
+      "cce-t1-r08"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q009",
+    "question": "自行给控制节点换了一套 etcd 证书导致集群不可用，能恢复吗？",
+    "reference_answer": "[cce-t1-r09] 控制节点\n分类：控制节点\n高危操作：自行更换控制节点或etcd证书\n导致后果：可能导致集群不可用\n误操作后解决方案：不可恢复。",
+    "relevant_evidence_ids": [
+      "cce-t1-r09"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q010",
+    "question": "工作节点 cce-node 安全组被调整后无法使用，应该如何修复？",
+    "reference_answer": "[cce-t1-r10] Node节点\n分类：Node节点\n高危操作：修改集群Node节点安全组\n\n 说明：\n\nNode节点安全组命名规则：集群名称-cce-node-随机数\n导致后果：可能导致节点无法使用\n误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。",
+    "relevant_evidence_ids": [
+      "cce-t1-r10"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q011",
+    "question": "想让业务用自建域名服务器，直接改宿主机 resolv.conf 有什么风险？正确做法是什么？",
+    "reference_answer": "[cce-t1-r11] Node节点\n分类：Node节点\n高危操作：修改节点DNS配置（/etc/resolv.conf）\n导致后果：导致内部域名无法正常访问，可能出现插件异常、节点重置升级等基本功能异常\n\n 说明：\n\n如果业务需要使用自建DNS，可以在工作负载中配置DNS，请勿修改节点本身的DNS地址，详情请参见工作负载DNS配置说明。\n误操作后解决方案：参考新建节点中的DNS配置还原。",
+    "relevant_evidence_ids": [
+      "cce-t1-r11"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q012",
+    "question": "工作节点被误删了，文档对恢复是怎么说的？",
+    "reference_answer": "[cce-t1-r12] Node节点\n分类：Node节点\n高危操作：节点被删除\n导致后果：该节点不可用\n误操作后解决方案：不可恢复。",
+    "relevant_evidence_ids": [
+      "cce-t1-r12"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q013",
+    "question": "节点绑定的弹性网卡删掉了会影响什么，还能恢复吗？",
+    "reference_answer": "[cce-t1-r13] Node节点\n分类：Node节点\n高危操作：节点使用的弹性网卡被删除\n导致后果：该节点上的容器网络不可用\n误操作后解决方案：不可恢复。",
+    "relevant_evidence_ids": [
+      "cce-t1-r13"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q014",
+    "question": "普通 Node 节点被重新安装操作系统后组件丢失，应采取什么恢复动作？",
+    "reference_answer": "[cce-t1-r14] Node节点\n分类：Node节点\n高危操作：重装操作系统\n导致后果：节点组件被删除，节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+    "relevant_evidence_ids": [
+      "cce-t1-r14"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q015",
+    "question": "可以直接在 CCE 工作节点执行 yum update 更新内核和运行时吗？出问题怎么办？",
+    "reference_answer": "[cce-t1-r15] Node节点\n分类：Node节点\n高危操作：升级内核或容器平台依赖组件（如openvswitch/ipvlan/docker/containerd）\n导致后果：可能导致节点无法使用或网络异常\n\n 说明：\n\n节点运行依赖系统内核版本，如非必要，请不要使用yum update命令更新或重装节点的操作系统内核（使用原镜像或其它镜像重装均属高危操作）\n误操作后解决方案：重置节点，具体请参见重置节点。",
+    "relevant_evidence_ids": [
+      "cce-t1-r15"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q016",
+    "question": "修改工作节点的地址后节点变为不可用，文档的解决办法是什么？",
+    "reference_answer": "[cce-t1-r16] Node节点\n分类：Node节点\n高危操作：更改节点IP\n导致后果：节点不可用\n误操作后解决方案：改回原IP。",
+    "relevant_evidence_ids": [
+      "cce-t1-r16"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q017",
+    "question": "直接改 kubelet 和 kube-proxy 参数以后，当时正常，升级集群时还会有什么风险？",
+    "reference_answer": "[cce-t1-r17] Node节点\n分类：Node节点\n高危操作：自行修改核心组件（kubelet、kube-proxy等）参数\n导致后果：可能导致节点不可用、修改安全相关配置导致组件不安全等\n\n即使修改完后当时未出现上述情况，在后续集群升级时还可能导致自行修改的参数被重置的问题，详情请参见注意事项。\n误操作后解决方案：如果出现节点不可用问题，建议按照推荐配置参数恢复，详情请参见节点池配置管理。\n\n同时，建议您通过CCE控制台修改相关配置，以便在集群升级时自动继承。",
+    "relevant_evidence_ids": [
+      "cce-t1-r17"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q018",
+    "question": "修改了节点操作系统配置后节点不可用，可以尝试哪两种处理方式？",
+    "reference_answer": "[cce-t1-r18] Node节点\n分类：Node节点\n高危操作：修改操作系统配置\n导致后果：可能导致节点不可用\n误操作后解决方案：尝试还原配置项或重置节点，具体请参见重置节点。",
+    "relevant_evidence_ids": [
+      "cce-t1-r18"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q019",
+    "question": "清理 /opt/cloud/cce 和 /var/paas 时误删了内容，节点不可用了怎么恢复？",
+    "reference_answer": "[cce-t1-r19] Node节点\n分类：Node节点\n高危操作：删除或修改/opt/cloud/cce、/var/paas目录，删除数据盘\n导致后果：节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+    "relevant_evidence_ids": [
+      "cce-t1-r19"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q020",
+    "question": "能自行更改 /etc/sudoers.d/sudoerspaas 和容器运行目录的权限吗？误改后怎么办？",
+    "reference_answer": "[cce-t1-r20] Node节点\n分类：Node节点\n高危操作：修改节点内目录权限、容器目录权限等。涉及的目录如下：\n\n/usr/lib/systemd/system/kubelet.service\n/usr/lib/systemd/system/containerd-monit.service\n/usr/lib/systemd/system/docker-monit.service\n/opt/cloud/cce\n/var/paas\n/var/paas/script\n/var/paas/sys/log\n/var/paas/kubernetes\n/var/script/docker\n/var/script/kubelet\n/etc/containerd\n/etc/rc.local\n/etc/sudoers.d/sudoerspaas\n/etc/sysconfig/docker\n/etc/docker/daemon.json\n/var/lib/docker\n/mnt/paas/kubernetes\n/mnt/paas/runtime\n导致后果：权限异常\n误操作后解决方案：不建议修改，请自行恢复。",
+    "relevant_evidence_ids": [
+      "cce-t1-r20"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q021",
+    "question": "给 kubelet 使用的数据盘重新分区可能造成什么后果，应如何恢复？",
+    "reference_answer": "[cce-t1-r21] Node节点\n分类：Node节点\n高危操作：对节点进行磁盘格式化或分区，包括系统盘、容器运行时和kubelet组件使用的数据盘\n导致后果：可能导致节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+    "relevant_evidence_ids": [
+      "cce-t1-r21"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q022",
+    "question": "在工作节点安装额外的软件以后调度不了工作负载，应该先做什么？",
+    "reference_answer": "[cce-t1-r22] Node节点\n分类：Node节点\n高危操作：在节点上安装自己的其他软件\n导致后果：导致安装在节点上的Kubernetes组件异常，节点状态变成不可用，无法部署工作负载到此节点\n误操作后解决方案：卸载已安装软件，尝试恢复或重置节点，具体请参见重置节点。",
+    "relevant_evidence_ids": [
+      "cce-t1-r22"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q023",
+    "question": "改动 NetworkManager 的配置后节点失联，文档建议怎么处理？",
+    "reference_answer": "[cce-t1-r23] Node节点\n分类：Node节点\n高危操作：修改NetworkManager的配置\n导致后果：节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+    "relevant_evidence_ids": [
+      "cce-t1-r23"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q024",
+    "question": "清理了 cce-pause 系统镜像后无法创建容器，而且拉不回来镜像，怎么办？",
+    "reference_answer": "[cce-t1-r24] Node节点\n分类：Node节点\n高危操作：删除节点上的cce-pause等系统镜像\n导致后果：导致无法正常创建容器，且无法拉取系统镜像\n误操作后解决方案：请从其他正常节点复制该镜像恢复",
+    "relevant_evidence_ids": [
+      "cce-t1-r24"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q025",
+    "question": "绕过节点池，在 ECS 控制台改节点规格，为什么弹性扩缩容数量可能不符合预期？",
+    "reference_answer": "[cce-t1-r25] Node节点\n分类：Node节点\n高危操作：在ECS侧对节点池下的节点进行规格变更\n导致后果：节点的规格与节点池定义的规格不一致，导致在弹性扩缩容时出现非预期现象（多扩或者少扩）\n误操作后解决方案：重新将节点规格变更为节点池下定义的规格，或者删除该节点重新扩容。",
+    "relevant_evidence_ids": [
+      "cce-t1-r25"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q026",
+    "question": "误删 /usr/local/bin/crictl 后 containerd 一直重启，是什么原因，如何修复？",
+    "reference_answer": "[cce-t1-r26] Node节点\n分类：Node节点\n高危操作：删除或者移动containerd组件运行所需的二进制和配置文件\n\n/etc/containerd/config.toml\n/etc/crictl.yaml\n/usr/bin/runc\n/usr/lib/systemd/system/containerd.service\n/usr/local/bin/containerd\n/usr/local/bin/containerd-shim-runc-v2\n/usr/local/bin/crictl\n/usr/local/bin/ctr\n导致后果：删除/usr/local/bin/crictl会导致containerd健康检查异常，containerd不断重启\n\n删除其他文件可能导致容器不能启动，节点无法使用\n误操作后解决方案：重置节点恢复containerd二进制和配置文件，具体请参见重置节点。",
+    "relevant_evidence_ids": [
+      "cce-t1-r26"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q027",
+    "question": "自己创建或改动 paas 用户组，会影响哪些对象，应怎样恢复？",
+    "reference_answer": "[cce-t1-r27] Node节点\n分类：Node节点\n高危操作：修改或手动创建paas用户/用户组\n导致后果：影响CCE组件和业务Pod正常运行，详情请参见节点paas用户/用户组说明。\n误操作后解决方案：重置节点，具体请参见重置节点。",
+    "relevant_evidence_ids": [
+      "cce-t1-r27"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q028",
+    "question": "把 IPv4 转发开关设成 0 后网络不通，应改成什么值？",
+    "reference_answer": "[cce-t2-r01] 网络\n高危操作：修改内核参数net.ipv4.ip_forward=0\n导致后果：网络不通\n误操作后解决方案：修改内核参数为 net.ipv4.ip_forward=1",
+    "relevant_evidence_ids": [
+      "cce-t2-r01"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "网络",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q029",
+    "question": "启用 tcp_tw_recycle 导致 NAT 出现异常，应该设回多少？",
+    "reference_answer": "[cce-t2-r02] 网络\n高危操作：修改内核参数net.ipv4.tcp_tw_recycle=1\n导致后果：导致nat异常\n误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_recycle=0",
+    "relevant_evidence_ids": [
+      "cce-t2-r02"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "网络",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q030",
+    "question": "tcp_tw_reuse 设置为 1 后出现网络异常，这篇文档建议如何处理？",
+    "reference_answer": "[cce-t2-r03] 网络\n高危操作：修改内核参数net.ipv4.tcp_tw_reuse=1\n导致后果：导致网络异常\n误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_reuse=0",
+    "relevant_evidence_ids": [
+      "cce-t2-r03"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "网络",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q031",
+    "question": "集群里 DNS 解析不正常，安全组应检查容器网段的哪个端口和协议？",
+    "reference_answer": "[cce-t2-r04] 网络\n高危操作：节点安全组配置未放通容器CIDR的53端口udp\n导致后果：集群内DNS无法正常工作\n误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。\n\n详情请参见集群安全组规则配置。",
+    "relevant_evidence_ids": [
+      "cce-t2-r04"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "网络",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q032",
+    "question": "误删 default-network 的 network-attachment-definitions CRD，会影响什么，如何恢复？",
+    "reference_answer": "[cce-t2-r05] 网络\n高危操作：删除default-network的network-attachment-definitions的CRD资源\n导致后果：容器网络不通，集群删除失败等\n误操作后解决方案：误删除该资源需要使用正确的配置重新创建default-network资源。",
+    "relevant_evidence_ids": [
+      "cce-t2-r05"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "网络",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q033",
+    "question": "节点打开 iptables 防火墙后容器之间不通，需要关闭什么并检查哪些规则文件？",
+    "reference_answer": "[cce-t2-r06] 网络\n高危操作：启动iptables防火墙\n导致后果：CCE默认不开启iptables防火墙，开启后可能造成网络不通\n\n 说明：\n\n不建议开启iptables防火墙。如必须启动iptables防火墙，请在测试环境中确认/etc/sysconfig/iptables和/etc/sysconfig/ip6tables中配置的规则是否会对网络连通性造成影响。\n误操作后解决方案：关闭iptables防火墙，并检查/etc/sysconfig/iptables和/etc/sysconfig/ip6tables中配置的规则。",
+    "relevant_evidence_ids": [
+      "cce-t2-r06"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "网络",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q034",
+    "question": "隧道网络集群里能把 openvswitch 换成发行版自带的新版吗？",
+    "reference_answer": "[cce-t2-r07] 网络\n高危操作：容器隧道网络集群节点升级内核或升级openvswitch\n导致后果：容器网络不通\n\n 说明：\n\n容器隧道网络集群数据面组件采用的是华为优化后的openvswitch组件，不支持自行升级为操作系统自带的openvswitch。\n误操作后解决方案：恢复方式请参见如何解决yum update升级操作系统导致容器网络不可用问题？",
+    "relevant_evidence_ids": [
+      "cce-t2-r07"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "网络",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q035",
+    "question": "特权容器运行 systemctl 后宿主机挂载点异常，可能是什么操作造成的，怎么恢复？",
+    "reference_answer": "[cce-t3-r01] 容器\n高危操作：将负载设置为特权容器，并直接操作主机的硬件设备，误操作节点系统文件等。\n\n例如将启动命令配置为/usr/sbin/init，在容器内使用systemctl，影响节点/lib路径下的系统文件。\n导致后果：此操作可能会导致节点所有挂载点被卸载，导致节点异常，并且会影响节点上的Pod正常运行及存储插件功能。\n误操作后解决方案：禁止移除节点/lib路径下的挂载点，通过重置节点恢复，具体请参见重置节点。",
+    "relevant_evidence_ids": [
+      "cce-t3-r01"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "容器",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q036",
+    "question": "用 hostPath 挂载 /var/lib/docker，为什么系统组件重启后容器可能读不了原内容？",
+    "reference_answer": "[cce-t3-r02] 容器\n高危操作：使用hostPath方式挂载系统组件目录，如挂载/var/lib/docker下的文件\n导致后果：系统组件重启后可能会导致节点上的系统组件目录重建，打断了挂载的inode链接，导致容器内无法正常使用挂载内容\n误操作后解决方案：不建议挂载系统组件目录",
+    "relevant_evidence_ids": [
+      "cce-t3-r02"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "容器",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q037",
+    "question": "在 ELB 控制台直接删除已绑定 CCE 的负载均衡实例会有什么影响？",
+    "reference_answer": "[cce-t4-r01] 负载均衡\n高危操作：禁止通过ELB的控制台删除已绑定CCE集群的ELB实例\n导致后果：导致Service/Ingress访问不通。\n误操作后解决方案：不建议删除。",
+    "relevant_evidence_ids": [
+      "cce-t4-r01"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "负载均衡",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q038",
+    "question": "暂时在 ELB 控制台停用已绑定 CCE 的实例，会影响 Service 和 Ingress 吗？",
+    "reference_answer": "[cce-t4-r02] 负载均衡\n高危操作：通过ELB的控制台停用已绑定CCE集群的ELB实例\n导致后果：导致Service/Ingress访问不通。\n误操作后解决方案：不建议停用，请自行恢复。",
+    "relevant_evidence_ids": [
+      "cce-t4-r02"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "负载均衡",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q039",
+    "question": "从 ELB 控制台改了负载均衡器的私有 IPv4 地址，会影响流量和 YAML 哪些内容？",
+    "reference_answer": "[cce-t4-r03] 负载均衡\n高危操作：通过ELB的控制台修改ELB的IPv4私有IP\n导致后果：基于IPv4私有IP进行私网流量转发功能会出现中断\nService/Ingress的YAML中status字段下的IP变化\n误操作后解决方案：不建议修改，请自行恢复。",
+    "relevant_evidence_ids": [
+      "cce-t4-r03"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "负载均衡",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q040",
+    "question": "把 CCE 使用的负载均衡器公网 IP 解绑后，它会变成什么类型，公网流量还能转发吗？",
+    "reference_answer": "[cce-t4-r04] 负载均衡\n高危操作：通过ELB的控制台解绑ELB的IPv4公网IP\n导致后果：解绑公网IP后，该弹性负载均衡器变更为私网类型，无法进行公网流量转发。\n误操作后解决方案：请自行恢复。",
+    "relevant_evidence_ids": [
+      "cce-t4-r04"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "负载均衡",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q041",
+    "question": "在 CCE 自动创建的 ELB 上手动加了监听器，删除 Service 时为什么 ELB 可能删不掉？",
+    "reference_answer": "[cce-t4-r05] 负载均衡\n高危操作：通过ELB的控制台在CCE管理的ELB创建自定义的监听器\n导致后果：若ELB是创建Service/Ingress时自动创建的，在Service/Ingress删除时无法删除ELB的自定义监听器，会导致无法自动删除ELB。\n误操作后解决方案：通过Service/Ingress自动创建监听器，否则需要手动删除ELB。",
+    "relevant_evidence_ids": [
+      "cce-t4-r05"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "负载均衡",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q042",
+    "question": "有人在 ELB 控制台删除了 CCE 自动创建的监听器，业务访问不通应如何修复？",
+    "reference_answer": "[cce-t4-r06] 负载均衡\n高危操作：通过ELB的控制台删除CCE自动创建的监听器\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：重新创建或更新Service/Ingress。",
+    "relevant_evidence_ids": [
+      "cce-t4-r06"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "负载均衡",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q043",
+    "question": "在 ELB 侧改了 CCE 监听器的名称和超时时间，集群升级后能保证保留吗？",
+    "reference_answer": "[cce-t4-r07] 负载均衡\n高危操作：通过ELB的控制台修改CCE创建的监听器名称、访问控制、超时时间、描述等基本配置\n导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+    "relevant_evidence_ids": [
+      "cce-t4-r07"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "负载均衡",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q044",
+    "question": "手工从监听器后端组删除一台服务器又添加一台，CCE 控制节点重启后这些更改会怎样？",
+    "reference_answer": "[cce-t4-r08] 负载均衡\n高危操作：通过ELB的控制台修改CCE创建的监听器后端服务器组，添加、删除后端服务器\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置：\n用户删除的后端服务器会恢复\n用户添加的后端服务器会被移除\n误操作后解决方案：重新创建或更新Service/Ingress。",
+    "relevant_evidence_ids": [
+      "cce-t4-r08"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "负载均衡",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q045",
+    "question": "直接替换 CCE 监听器关联的整个后端服务器组，可能有什么后果，应该怎么处理？",
+    "reference_answer": "[cce-t4-r09] 负载均衡\n高危操作：通过ELB的控制台更换CCE创建的监听器后端服务器组\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，后端服务器组中的后端服务器会被CCE侧重置。\n误操作后解决方案：重新创建或更新Service/Ingress。",
+    "relevant_evidence_ids": [
+      "cce-t4-r09"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "负载均衡",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q046",
+    "question": "在 ELB 侧手工改了 Ingress 产生的转发规则，控制节点重启时会发生什么？",
+    "reference_answer": "[cce-t4-r10] 负载均衡\n高危操作：通过ELB的控制台修改CCE创建的监听器转发策略，添加、删除转发规则\n导致后果：导致Service/Ingress访问不通。\n如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：不建议修改，请自行恢复。",
+    "relevant_evidence_ids": [
+      "cce-t4-r10"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "负载均衡",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q047",
+    "question": "要更换 CCE 监听器的服务器证书，怎样更新才能避免集群升级时被覆盖？",
+    "reference_answer": "[cce-t4-r11] 负载均衡\n高危操作：通过ELB的控制台给CCE创建的监听器更换证书，或者在ELB的证书管理界面修改CCE通过TLS密钥创建的服务器证书。\n导致后果：在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置, 可能导致Service/Ingress访问不通。\n误操作后解决方案：通过CCE控制台或YAML方式更新Service/Ingress关联的证书，或者更新Service/Ingress关联的TLS密钥资源。",
+    "relevant_evidence_ids": [
+      "cce-t4-r11"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "负载均衡",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q048",
+    "question": "删掉日志采集器的 pos 目录后日志为什么可能重复收集？",
+    "reference_answer": "[cce-t5-r01] 日志\n高危操作：删除宿主机/tmp/ccs-log-collector/pos目录\n导致后果：日志重复采集\n误操作后解决方案：无",
+    "relevant_evidence_ids": [
+      "cce-t5-r01"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "日志",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q049",
+    "question": "清理宿主机上的 ccs-log-collector/buffer 目录会丢失什么？",
+    "reference_answer": "[cce-t5-r02] 日志\n高危操作：删除宿主机/tmp/ccs-log-collector/buffer目录\n导致后果：日志丢失\n误操作后解决方案：无",
+    "relevant_evidence_ids": [
+      "cce-t5-r02"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "日志",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q050",
+    "question": "100 个节点的集群，云原生监控采集分片通常该配多少，配太多有什么风险？",
+    "reference_answer": "[cce-t6-r01] 监控\n高危操作：云原生监控插件配置中设置的采集分片数量超过推荐值（建议每50个节点配置一个采集分片）\n导致后果：增加采集分片数会消耗更多的资源，容易导致集群控制节点内存负载过高，影响系统稳定性。\n误操作后解决方案：修改云原生监控插件的采集分片数，调整为推荐值。",
+    "relevant_evidence_ids": [
+      "cce-t6-r01"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "监控",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q051",
+    "question": "在控制台把正在用的 EVS 卸载后 Pod 写入报 IO Error，文档建议怎样处理？",
+    "reference_answer": "[cce-t7-r01] 云硬盘\n高危操作：控制台手动解除挂载EVS\n导致后果：Pod写入出现IO Error故障\n误操作后解决方案：删除节点上mount目录，重新调度Pod\n备注：Pod里面的文件记录了文件的采集位置",
+    "relevant_evidence_ids": [
+      "cce-t7-r01"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "云硬盘",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q052",
+    "question": "在节点直接 umount 云盘挂载路径后，Pod 的数据可能写到哪儿，该怎么恢复？",
+    "reference_answer": "[cce-t7-r02] 云硬盘\n高危操作：节点上umount磁盘挂载路径\n导致后果：Pod写入本地磁盘\n误操作后解决方案：重新mount对应目录到Pod中\n备注：Buffer里面是待消费的日志缓存文件",
+    "relevant_evidence_ids": [
+      "cce-t7-r02"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "云硬盘",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q053",
+    "question": "绕过容器平台在节点上直接操作 EVS，会让 Pod 写到哪里，文档是否提供恢复方法？",
+    "reference_answer": "[cce-t7-r03] 云硬盘\n高危操作：节点上直接操作EVS\n导致后果：Pod写入本地磁盘\n误操作后解决方案：无\n备注：无",
+    "relevant_evidence_ids": [
+      "cce-t7-r03"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "云硬盘",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q054",
+    "question": "创建 PV 的 YAML 带着 status、spec.claimRef 和 set-disk-metadata，会有什么风险，删除前如何纠正？",
+    "reference_answer": "[cce-t7-r04] 云硬盘\n高危操作：创建PV时带有未在文档中声明的参数\n\n例如，创建PV时，Yaml文件中涉及status、spec.claimRef以及annotation.everest.io/set-disk-metadata等参数，可能造成PV异常\n导致后果：此操作可能会绕过创建PV的某些标准流程，从而导致PV状态不符预期（功能不可用或被异常删除）\n误操作后解决方案：在PV被异常删除前，可以修改对应PV的Yaml文件，手动删除相关参数\n备注：无",
+    "relevant_evidence_ids": [
+      "cce-t7-r04"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "云硬盘",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q055",
+    "question": "直接在后台改插件资源后升级丢了配置，应该通过哪些入口修改插件？",
+    "reference_answer": "[cce-t8-r01] 插件\n高危操作：后台修改插件相关资源\n导致后果：插件异常或引入其他非预期问题（例如升级后参数配置被覆盖等）\n误操作后解决方案：通过插件配置页面或开放的插件管理API进行操作",
+    "relevant_evidence_ids": [
+      "cce-t8-r01"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "插件",
+    "question_type": "single"
+  },
+  {
+    "id": "cce-q056",
+    "question": "重装控制节点和普通工作节点的操作系统，文档给出的恢复结论有什么不同？",
+    "reference_answer": "[cce-t1-r04] 控制节点\n分类：控制节点\n高危操作：重装操作系统\n导致后果：控制节点组件被删除\n误操作后解决方案：不可恢复。\n\n[cce-t1-r14] Node节点\n分类：Node节点\n高危操作：重装操作系统\n导致后果：节点组件被删除，节点不可用\n误操作后解决方案：重置节点，具体请参见重置节点。",
+    "relevant_evidence_ids": [
+      "cce-t1-r04",
+      "cce-t1-r14"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "集群/节点",
+    "question_type": "comparison"
+  },
+  {
+    "id": "cce-q057",
+    "question": "修改控制节点 IP 和修改 Node 节点 IP 后，文档各建议怎样恢复？",
+    "reference_answer": "[cce-t1-r07] 控制节点\n分类：控制节点\n高危操作：更改节点IP\n导致后果：该控制节点不可用\n误操作后解决方案：改回原IP。\n\n[cce-t1-r16] Node节点\n分类：Node节点\n高危操作：更改节点IP\n导致后果：节点不可用\n误操作后解决方案：改回原IP。",
+    "relevant_evidence_ids": [
+      "cce-t1-r07",
+      "cce-t1-r16"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "comparison"
+  },
+  {
+    "id": "cce-q058",
+    "question": "集群控制节点与工作节点的安全组分别按什么规则命名，误改后如何修复？",
+    "reference_answer": "[cce-t1-r02] 控制节点\n分类：控制节点\n高危操作：修改集群控制节点安全组\n\n 说明：\n\n控制节点安全组命名规则：集群名称-cce-control-随机数\n导致后果：可能导致控制节点无法使用\n误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。\n\n[cce-t1-r10] Node节点\n分类：Node节点\n高危操作：修改集群Node节点安全组\n\n 说明：\n\nNode节点安全组命名规则：集群名称-cce-node-随机数\n导致后果：可能导致节点无法使用\n误操作后解决方案：参照新建集群的安全组进行修复，放通安全组。详情请参见集群安全组规则配置。",
+    "relevant_evidence_ids": [
+      "cce-t1-r02",
+      "cce-t1-r10"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "集群/节点",
+    "question_type": "comparison"
+  },
+  {
+    "id": "cce-q059",
+    "question": "日志采集器的 pos 和 buffer 目录误删后，造成的结果分别是什么？",
+    "reference_answer": "[cce-t5-r01] 日志\n高危操作：删除宿主机/tmp/ccs-log-collector/pos目录\n导致后果：日志重复采集\n误操作后解决方案：无\n\n[cce-t5-r02] 日志\n高危操作：删除宿主机/tmp/ccs-log-collector/buffer目录\n导致后果：日志丢失\n误操作后解决方案：无",
+    "relevant_evidence_ids": [
+      "cce-t5-r01",
+      "cce-t5-r02"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "日志",
+    "question_type": "comparison"
+  },
+  {
+    "id": "cce-q060",
+    "question": "在 ELB 侧删除整个 CCE 负载均衡实例与删除 CCE 自动创建的监听器，文档给出的建议有何区别？",
+    "reference_answer": "[cce-t4-r01] 负载均衡\n高危操作：禁止通过ELB的控制台删除已绑定CCE集群的ELB实例\n导致后果：导致Service/Ingress访问不通。\n误操作后解决方案：不建议删除。\n\n[cce-t4-r06] 负载均衡\n高危操作：通过ELB的控制台删除CCE自动创建的监听器\n导致后果：导致Service/Ingress访问不通。\n在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n误操作后解决方案：重新创建或更新Service/Ingress。",
+    "relevant_evidence_ids": [
+      "cce-t4-r01",
+      "cce-t4-r06"
+    ],
+    "answerable": true,
+    "split": "development",
+    "section": "负载均衡",
+    "question_type": "comparison"
+  },
+  {
+    "id": "cce-q061",
+    "question": "tcp_tw_recycle 和 tcp_tw_reuse 设成 1 后分别可能产生什么问题，文档建议的值是什么？",
+    "reference_answer": "[cce-t2-r02] 网络\n高危操作：修改内核参数net.ipv4.tcp_tw_recycle=1\n导致后果：导致nat异常\n误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_recycle=0\n\n[cce-t2-r03] 网络\n高危操作：修改内核参数net.ipv4.tcp_tw_reuse=1\n导致后果：导致网络异常\n误操作后解决方案：修改内核参数 net.ipv4.tcp_tw_reuse=0",
+    "relevant_evidence_ids": [
+      "cce-t2-r02",
+      "cce-t2-r03"
+    ],
+    "answerable": true,
+    "split": "heldout",
+    "section": "网络",
+    "question_type": "comparison"
+  },
+  {
+    "id": "cce-u001",
+    "question": "根据这篇文档，CCE 集群按小时收费的准确价格是多少？",
+    "reference_answer": "该页面没有足够依据回答此问题，应说明缺口，不能编造。",
+    "relevant_evidence_ids": [],
+    "answerable": false,
+    "split": "development",
+    "section": "文档范围之外",
+    "question_type": "unanswerable"
+  },
+  {
+    "id": "cce-u002",
+    "question": "这篇文档明确要求升级到哪个 Kubernetes 小版本才能修复 CVE-2026-12345？",
+    "reference_answer": "该页面没有足够依据回答此问题，应说明缺口，不能编造。",
+    "relevant_evidence_ids": [],
+    "answerable": false,
+    "split": "development",
+    "section": "文档范围之外",
+    "question_type": "unanswerable"
+  },
+  {
+    "id": "cce-u003",
+    "question": "帮我判断生产集群现在的 CPU 使用率是否正常，并给出实时数值。",
+    "reference_answer": "该页面没有足够依据回答此问题，应说明缺口，不能编造。",
+    "relevant_evidence_ids": [],
+    "answerable": false,
+    "split": "heldout",
+    "section": "文档范围之外",
+    "question_type": "unanswerable"
+  },
+  {
+    "id": "cce-u004",
+    "question": "本文列出了所有地区节点操作系统镜像的 SHA256 校验值吗？请给出这些值。",
+    "reference_answer": "该页面没有足够依据回答此问题，应说明缺口，不能编造。",
+    "relevant_evidence_ids": [],
+    "answerable": false,
+    "split": "heldout",
+    "section": "文档范围之外",
+    "question_type": "unanswerable"
+  },
+  {
+    "id": "cce-u005",
+    "question": "我的集群现在有多少个故障 Pod？请直接报告实际数量。",
+    "reference_answer": "该页面没有足够依据回答此问题，应说明缺口，不能编造。",
+    "relevant_evidence_ids": [],
+    "answerable": false,
+    "split": "heldout",
+    "section": "文档范围之外",
+    "question_type": "unanswerable"
+  }
+]

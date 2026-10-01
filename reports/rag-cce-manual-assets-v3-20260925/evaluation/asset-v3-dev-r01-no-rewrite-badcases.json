@@ -1,0 +1,371 @@
+[
+  {
+    "case": {
+      "id": "cce-asset-image-032",
+      "group": "cce_10_0842",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "在“负载监听器配置”表单的“更多配置”区域中，安全策略下拉框当前选中的具体策略名称是什么？",
+      "answerable": true,
+      "required_facts": [
+        "安全策略下拉框选择“安全策略 tls-1-2”。"
+      ],
+      "reference_answer": "安全策略下拉框选择“安全策略 tls-1-2”。",
+      "evidence": [
+        {
+          "document_id": "cce_10_0842",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0842.html",
+          "title": "为负载均衡类型的Service配置HTTP/2",
+          "file": "documents/cce_10_0842.md",
+          "content_sha256": "2b810d8491938d7952265dfabcdb6cb503afadc71a5ffad2e082aa44c80706b5",
+          "start_line": 95,
+          "end_line": 95,
+          "section": "步骤二：创建负载均衡并配置HTTP/2",
+          "anchor": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002408397125.png \"点击放大\")",
+          "quote": "   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002408397125.png \"点击放大\")",
+          "quote_sha256": "f15d0c22e492c2148f8429e12cc46db5458e9d10d393246ad8e3803ebf3a9f12"
+        }
+      ],
+      "split": "development",
+      "asset_id": "cce_10_0842:image-005",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-032",
+      "question": "在“负载监听器配置”表单的“更多配置”区域中，安全策略下拉框当前选中的具体策略名称是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "6IFNTHXATA6OWHAE4EYUBY32Q3",
+          "revision_id": "W3N3FDAZMNQ2ZQSETWMKEECHW6",
+          "section": "步骤二：创建负载均衡并配置SNI",
+          "start_line": 97,
+          "end_line": 103,
+          "content": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002374529642.png \"点击放大\")\n7. 设置后端分配策略。\n\n   | 参数 | 说明 | 使用限制 | 示例 |\n   | --- | --- | --- | --- |\n   | 后端协议 | 负载均衡器转发请求给后端服务器时使用的协议，后端服务器需监听此协议并响应。  当“监听器前端协议”选择“HTTPS”时支持后端协议为“HTTP”或“HTTPS”，默认为HTTP。  说明：  当添加多个端口时，如果部分端口选择的监听器前端协议非HTTPS，该配置仅对HTTPS端口生效。 | v1.23.14-r0、v1.25.9-r0、v1.27.6-r0、v1.28.4-r0及以上版本的集群支持。 | HTTP |\n8. 单击“创建”，创建Service。",
+          "content_hash": "3ebf7715ec10eebd6646f472356f705b712288ccb63c3d48f7a22889a508ce10",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "设置后端分配策略时，后端协议如何选择？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "后端协议配置在哪些集群版本中支持？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "创建Service的步骤是什么？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "后端协议是负载均衡器转发请求给后端服务器时使用的协议，后端服务器需监听此协议并响应，当监听器前端协议选择HTTPS时支持后端协议为HTTP或HTTPS，默认为HTTP，说明：当添加多个端口时，如果部分端口选择的监听器前端协议非HTTPS，该配置仅对HTTPS端口生效，v1.23.14-r0、v1.25.9-r0、v1.27.6-r0、v1.28.4-r0及以上版本的集群支持，示例为HTTP。",
+              "start_line": 102,
+              "end_line": 102
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片位于“步骤二：创建负载均衡并配置SNI”章节。 图片可见内容：负载监听器配置界面。标题为“负载监听器配置”，下方为“基础配置”。SSL解析方式提供“单向认证”和“双向认证”两个选项，当前选中“单向认证”，其下方说明文字为“单向认证，仅进行服务器端认证。如需认证客户端身份，请选择双向认证。”。服务器证书下拉框当前选中“cert-test”，右侧有放大镜图标和“查看ELB证书”链接。访问控制下拉框当前选中“继承ELB已有配置”。下方为可展开的“更多配置”区域，包含“SNI证书”和“安全策略”两项。SNI证书下拉框当前选中“cert-sni-test”，右侧有放大镜图标和“查看ELB证书”链接；安全策略下拉框当前选中“安全策略 tls-1-2”，右侧有放大镜图标和“创建自定义策略”链接。 图片相邻原文：设置后端分配策略。",
+              "start_line": 97,
+              "end_line": 97
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "图片 点击放大\n[图片说明] 图片位于“步骤二：创建负载均衡并配置SNI”章节。 图片可见内容：负载监听器配置界面。标题为“负载监听器配置”，下方为“基础配置”。SSL解析方式提供“单向认证”和“双向认证”两个选项，当前选中“单向认证”，其下方说明文字为“单向认证，仅进行服务器端认证。如需认证客户端身份，请选择双向认证。”。服务器证书下拉框当前选中“cert-test”，右侧有放大镜图标和“查看ELB证书”链接。访问控制下拉框当前选中“继承ELB已有配置”。下方为可展开的“更多配置”区域，包含“SNI证书”和“安全策略”两项。SNI证书下拉框当前选中“cert-sni-test”，右侧有放大镜图标和“查看ELB证书”链接；安全策略下拉框当前选中“安全策略 tls-1-2”，右侧有放大镜图标和“创建自定义策略”链接。 图片相邻原文：设置后端分配策略。\n设置后端分配策略。\n参数 说明 使用限制 示例\n--- --- --- ---\n后端协议 负载均衡器转发请求给后端服务器时使用的协议，后端服务器需监听此协议并响应。 当“监听器前端协议”选择“HTTPS”时支持后端协议为“HTTP”"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "议 负载均衡器转发请求给后端服务器时使用的协议，后端服务器需监听此协议并响应。 当“监听器前端协议”选择“HTTPS”时支持后端协议为“HTTP”或“HTTPS”，默认为HTTP。 说明： 当添加多个端口时，如果部分端口选择的监听器前端协议非HTTPS，该配置仅对HTTPS端口生效。 v1.23.14-r0、v1.25.9-r0、v1.27.6-r0、v1.28.4-r0及以上版本的集群支持。 HTTP\n[表格说明] 后端协议是负载均衡器转发请求给后端服务器时使用的协议，后端服务器需监听此协议并响应，当监听器前端协议选择HTTPS时支持后端协议为HTTP或HTTPS，默认为HTTP，说明：当添加多个端口时，如果部分端口选择的监听器前端协议非HTTPS，该配置仅对HTTPS端口生效，v1.23.14-r0、v1.25.9-r0、v1.27.6-r0、v1.28.4-r0及以上版本的集群支持，示例为HTTP。\n单击“创建”，创建Service。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0841.html",
+          "title": "为负载均衡类型的Service配置服务器名称指示（SNI）",
+          "document_context": "目录：用户指南 > 网络 > 服务（Service） > 负载均衡（LoadBalancer） > 证书与安全管理 > 为负载均衡类型的Service配置服务器名称指示（SNI）\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.5,
+          "citation": {
+            "document_id": "D33IYR24DKLN5DHTTVPZIDF3N3",
+            "revision_id": "W3N3FDAZMNQ2ZQSETWMKEECHW6",
+            "fragment_id": "6IFNTHXATA6OWHAE4EYUBY32Q3",
+            "title": "为负载均衡类型的Service配置服务器名称指示（SNI）",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0841.html",
+            "section": "步骤二：创建负载均衡并配置SNI",
+            "document_context": "目录：用户指南 > 网络 > 服务（Service） > 负载均衡（LoadBalancer） > 证书与安全管理 > 为负载均衡类型的Service配置服务器名称指示（SNI）\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "3ebf7715ec10eebd6646f472356f705b712288ccb63c3d48f7a22889a508ce10",
+            "url": "/v1/knowledge/revisions/W3N3FDAZMNQ2ZQSETWMKEECHW6/fragments/6IFNTHXATA6OWHAE4EYUBY32Q3",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "XJHSVUJ2Y3LJ53CBR6QGERGKNO",
+          "revision_id": "KRYUTXPD7RRBABH556SR7DM2O6",
+          "section": "创建负载均衡并配置黑名单/白名单访问策略",
+          "start_line": 62,
+          "end_line": 69,
+          "content": "6. 设置负载监听器相关配置参数。\n\n   | 参数 | 说明 | 示例 |\n   | --- | --- | --- |\n   | 访问控制 | - 继承ELB已有配置：CCE不对ELB侧已有的访问控制进行修改。 - 允许所有IP访问：不设置访问控制。 - 白名单：仅所选IP地址组可以访问ELB地址。 - 黑名单：所选IP地址组无法访问ELB地址。 说明：  v1.25.16-r10、v1.27.16-r10、v1.28.15-r0、v1.29.10-r0、v1.30.6-r0、v1.31.1-r0及以上版本的集群中，使用独享型ELB时访问控制可同时选择多个IP地址组，最多同时选择5个。 | 黑名单 |\n   | 访问控制开关 | 仅配置黑/白名单时需要设置，可单独控制黑/白名单配置是否生效。 | 开启 |\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002414424517.png \"点击放大\")",
+          "content_hash": "a5ccd143d66c6fef56407b6391ef83f759c748d18a967995caddaeb4360bf339",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "设置负载监听器相关配置参数时，访问控制参数有哪些选项？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "访问控制开关的作用是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在哪些集群版本中，使用独享型ELB时访问控制可同时选择多个IP地址组？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在创建负载均衡并配置黑名单/白名单访问策略时，参数“访问控制”的说明为：继承ELB已有配置表示CCE不对ELB侧已有的访问控制进行修改；允许所有IP访问表示不设置访问控制；白名单表示仅所选IP地址组可以访问ELB地址；黑名单表示所选IP地址组无法访问ELB地址。说明：在v1.25.16-r10、v1.27.16-r10、v1.28.15-r0、v1.29.10-r0、v1.30.6-r0、v1.31.1-r0及以上版本的集群中，使用独享型ELB时访问控制可同时选择多个IP地址组，最多同时选择5个。示例值为“黑名单”。",
+              "start_line": 66,
+              "end_line": 66
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在创建负载均衡并配置黑名单/白名单访问策略时，参数“访问控制开关”的说明为：仅配置黑/白名单时需要设置，可单独控制黑/白名单配置是否生效。示例值为“开启”。",
+              "start_line": 67,
+              "end_line": 67
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片位于“创建负载均衡并配置黑名单/白名单访问策略”章节。 图片可见内容：负载监听器配置界面。标题“负载监听器配置”，子标题“基础配置”。字段“访问控制”下拉框显示“黑名单”。字段“IP地址组”下拉框显示已选标签“ipGroup-14d5”并带删除叉号；右侧有放大镜图标和“管理IP地址组”链接。 图片相邻原文：单击“创建”，创建Service。 以使用已有ELB创建Service的场景为例，YAML配置示例如下：",
+              "start_line": 69,
+              "end_line": 69
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "设置负载监听器相关配置参数。\n参数 说明 示例\n--- --- ---\n访问控制 - 继承ELB已有配置：CCE不对ELB侧已有的访问控制进行修改。 - 允许所有IP访问：不设置访问控制。 - 白名单：仅所选IP地址组可以访问ELB地址。 - 黑名单：所选IP地址组无法访问ELB地址。 说明： v1.25.16-r10、v1.27.16-r10、v1.28.15-r0、v1.29.10-r0、v1.30.6-r0、v1.31.1-r0及以上版本的集群中，使用独享型ELB时访问控制可同时选择多个IP地址组，最多同时选择5个。 黑名单\n[表格说明] 在创建负载均衡并配置黑名单/白名单访问策略时，参数“访问控制”的说明为：继承ELB已有配置表示CCE不对ELB侧已有的访问控制进行修改；允许所有IP访问表示不设置访问控制；白名单表示仅所选IP地址组可以访问ELB地址；黑名单表示所选IP地址组无法访问ELB地址。说明：在v1.25.16-r10、v1.27.16-r10、v1.28.15-r0、v1.29.10-r0、v1.30.6-r0、v1.31.1-r0及以上版本的集群中，使用独享型ELB时访问控制可同时选择多个IP地址组，最多同时选择5个"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": ".10-r0、v1.30.6-r0、v1.31.1-r0及以上版本的集群中，使用独享型ELB时访问控制可同时选择多个IP地址组，最多同时选择5个。示例值为“黑名单”。\n访问控制开关 仅配置黑/白名单时需要设置，可单独控制黑/白名单配置是否生效。 开启\n[表格说明] 在创建负载均衡并配置黑名单/白名单访问策略时，参数“访问控制开关”的说明为：仅配置黑/白名单时需要设置，可单独控制黑/白名单配置是否生效。示例值为“开启”。\n图片 点击放大\n[图片说明] 图片位于“创建负载均衡并配置黑名单/白名单访问策略”章节。 图片可见内容：负载监听器配置界面。标题“负载监听器配置”，子标题“基础配置”。字段“访问控制”下拉框显示“黑名单”。字段“IP地址组”下拉框显示已选标签“ipGroup-14d5”并带删除叉号；右侧有放大镜图标和“管理IP地址组”链接。 图片相邻原文：单击“创建”，创建Service。 以使用已有ELB创建Service的场景为例，YAML配置示例如下："
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0831.html",
+          "title": "为负载均衡类型的Service配置黑名单/白名单访问策略",
+          "document_context": "目录：用户指南 > 网络 > 服务（Service） > 负载均衡（LoadBalancer） > 证书与安全管理 > 为负载均衡类型的Service配置黑名单/白名单访问策略\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.5,
+          "citation": {
+            "document_id": "3QQPOBMUSZWEWIJMH2ROPO6S4V",
+            "revision_id": "KRYUTXPD7RRBABH556SR7DM2O6",
+            "fragment_id": "XJHSVUJ2Y3LJ53CBR6QGERGKNO",
+            "title": "为负载均衡类型的Service配置黑名单/白名单访问策略",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0831.html",
+            "section": "创建负载均衡并配置黑名单/白名单访问策略",
+            "document_context": "目录：用户指南 > 网络 > 服务（Service） > 负载均衡（LoadBalancer） > 证书与安全管理 > 为负载均衡类型的Service配置黑名单/白名单访问策略\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "a5ccd143d66c6fef56407b6391ef83f759c748d18a967995caddaeb4360bf339",
+            "url": "/v1/knowledge/revisions/KRYUTXPD7RRBABH556SR7DM2O6/fragments/XJHSVUJ2Y3LJ53CBR6QGERGKNO",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "OVHVG3IU3LAOP5NIZUNNJBFZAX",
+          "revision_id": "5TFQHA2BFZESLTQT5XLBXTX37K",
+          "section": "解决方案",
+          "start_line": 15,
+          "end_line": 15,
+          "content": "如果配置项存在错误，请参考[为负载均衡类型的Service配置黑名单/白名单访问策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0831.html)进行重新配置。",
+          "content_hash": "a3f19a108880a98b8aef90e7903991b877f1c0a957efa2e436abf804c54e903c",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "如果ELB监听器访问控制配置项存在错误，解决方案建议参考哪个文档进行重新配置？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "解决方案中，为负载均衡类型的Service配置黑名单/白名单访问策略的参考链接是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "当ELB监听器访问控制配置项存在错误时，应参考什么进行重新配置？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0513.html",
+          "title": "ELB监听器访问控制配置项检查异常处理",
+          "document_context": "目录：用户指南 > 集群 > 升级管理 > 升级前检查异常问题排查 > ELB监听器访问控制配置项检查异常处理\n更新时间：2024-11-12 GMT+08:00",
+          "score": 0.3333333333333333,
+          "citation": {
+            "document_id": "WVINS4JMPQIDKE7EBSF46NBPV6",
+            "revision_id": "5TFQHA2BFZESLTQT5XLBXTX37K",
+            "fragment_id": "OVHVG3IU3LAOP5NIZUNNJBFZAX",
+            "title": "ELB监听器访问控制配置项检查异常处理",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0513.html",
+            "section": "解决方案",
+            "document_context": "目录：用户指南 > 集群 > 升级管理 > 升级前检查异常问题排查 > ELB监听器访问控制配置项检查异常处理\n更新时间：2024-11-12 GMT+08:00",
+            "content_hash": "a3f19a108880a98b8aef90e7903991b877f1c0a957efa2e436abf804c54e903c",
+            "url": "/v1/knowledge/revisions/5TFQHA2BFZESLTQT5XLBXTX37K/fragments/OVHVG3IU3LAOP5NIZUNNJBFZAX",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "ZYRMXQO3P6I6OEPJEC6NW3DXCI",
+          "revision_id": "AW5PC2H6KI3RRUWUNE5XJ7LGDL",
+          "section": "步骤二：创建负载均衡并配置HTTP/HTTPS协议",
+          "start_line": 92,
+          "end_line": 93,
+          "content": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002374501986.png \"点击放大\")\n7. 单击“创建”，创建Service。",
+          "content_hash": "3f58f9ef2633eedb61d76ce55ea40c0a31591a00249cd3de88ee5f0e997d947a",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "创建Service的步骤是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "单击“创建”后完成什么操作？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "创建Service前需要完成哪些配置？"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片位于“步骤二：创建负载均衡并配置HTTP/HTTPS协议”章节。 图片可见内容：“负载监听器配置”区域。基础配置下SSL解析方式提供“单向认证”和“双向认证”（当前选中，蓝色）两个按钮，说明文字“双向认证需要负载均衡实例与访问用户互相提供身份认证，从而允许通过认证的用户访问负载均衡实例，后端服务器无需额外配置双向认证。”CA证书下拉框值为“cert-ca-test”，右侧有“查看ELB证书”链接。服务器证书下拉框值为“cert-test”，右侧有“查看ELB证书”链接。访问控制下拉框值为“继承ELB已有配置”。展开的“更多配置”下，SNI证书下拉框值为“cert-sni-test”（带删除标记），右侧有“查看ELB证书”链接；安全策略下拉框值为“安全策略 tls-1-2”，右侧有“创建自定义策略”链接。 图片相邻原文：单击“创建”，创建Service。 Service使用HTTP/HTTPS协议时，需要注意以下配置要求：",
+              "start_line": 92,
+              "end_line": 92
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0683.html",
+          "title": "为负载均衡类型的Service配置HTTP/HTTPS协议",
+          "document_context": "目录：用户指南 > 网络 > 服务（Service） > 负载均衡（LoadBalancer） > 协议与监听配置 > 为负载均衡类型的Service配置HTTP/HTTPS协议\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.3333333333333333,
+          "citation": {
+            "document_id": "NQBTUDQB2SXWBOXGKL6KCJUMSN",
+            "revision_id": "AW5PC2H6KI3RRUWUNE5XJ7LGDL",
+            "fragment_id": "ZYRMXQO3P6I6OEPJEC6NW3DXCI",
+            "title": "为负载均衡类型的Service配置HTTP/HTTPS协议",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0683.html",
+            "section": "步骤二：创建负载均衡并配置HTTP/HTTPS协议",
+            "document_context": "目录：用户指南 > 网络 > 服务（Service） > 负载均衡（LoadBalancer） > 协议与监听配置 > 为负载均衡类型的Service配置HTTP/HTTPS协议\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "3f58f9ef2633eedb61d76ce55ea40c0a31591a00249cd3de88ee5f0e997d947a",
+            "url": "/v1/knowledge/revisions/AW5PC2H6KI3RRUWUNE5XJ7LGDL/fragments/ZYRMXQO3P6I6OEPJEC6NW3DXCI",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "SLNT2VPEQYPI5IFUSOYXBP3USS",
+          "revision_id": "5LJUBDJVOO3NYETZVV4Q5HZESI",
+          "section": "步骤二：创建负载均衡并配置QUIC协议",
+          "start_line": 100,
+          "end_line": 106,
+          "content": "6. 设置负载监听器QUIC相关配置参数，其余参数可保持默认。\n\n   | 参数 | 说明 | 使用限制 | 示例 |\n   | --- | --- | --- | --- |\n   | 服务器证书 | 选择一个服务器证书。如果当前无可选证书，需前往弹性负载均衡控制台进行创建，详情请参见[创建证书](https://support.huaweicloud.com/intl/zh-cn/usermanual-elb/elb_ug_zs_0004.html)。 | 本示例中“监听器前端协议”需要选择QUIC。 | cert-test |\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002510527690.png \"点击放大\")",
+          "content_hash": "2e9698e5225ae55226f482397d7439d1dea3a5835a79e11a14ce80e5f331020b",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "设置负载监听器QUIC相关配置参数时，服务器证书如何选择？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如果当前无可选证书，应如何操作？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "本示例中服务器证书的示例值是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "监听器前端协议需要选择什么？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "服务器证书参数用于选择一个服务器证书。如果当前无可选证书，需前往弹性负载均衡控制台进行创建，详情请参见创建证书。使用限制：本示例中“监听器前端协议”需要选择QUIC。示例为cert-test。",
+              "start_line": 104,
+              "end_line": 104
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片位于“步骤二：创建负载均衡并配置QUIC协议”章节。 图片可见内容：负载监听器配置表单。标题“负载监听器配置”，下方“基础配置”区域含“服务器证书”下拉框，当前选中值为“cert-test”，右侧有放大镜图标和链接“查看 ELB 证书 ↗”。其下“访问控制”下拉框当前选中“继承ELB已有配置”。底部为可展开的“更多配置”，展开后显示一行标签：SNI证书: --、获取监听器端口: 继承ELB已有配置、重写X-Forwarded-Host: 继承ELB已有配置、数据压缩: 继承ELB已有配置、空闲超时时间(秒): 继承ELB已有配置、请求超时时间(秒): 继承ELB已有配置、响应超时时间(秒): 继承ELB已有配置。 图片相邻原文：单击“创建”，创建Service。 Service使用QUIC协议时，需要注意以下配置要求：",
+              "start_line": 106,
+              "end_line": 106
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "设置负载监听器QUIC相关配置参数，其余参数可保持默认。\n参数 说明 使用限制 示例\n--- --- --- ---\n服务器证书 选择一个服务器证书。如果当前无可选证书，需前往弹性负载均衡控制台进行创建，详情请参见 创建证书 。 本示例中“监听器前端协议”需要选择QUIC。 cert-test\n[表格说明] 服务器证书参数用于选择一个服务器证书。如果当前无可选证书，需前往弹性负载均衡控制台进行创建，详情请参见创建证书。使用限制：本示例中“监听器前端协议”需要选择QUIC。示例为cert-test。\n图片 点击放大\n[图片说明] 图片位于“步骤二：创建负载均衡并配置QUIC协议”章节。 图片可见内容：负载监听器配置表单。标题“负载监听器配置”，下方“基础配置”区域含“服务器证书”下拉框，当前选中值为“cert-test”，右侧有放大镜图标和链接“查看 ELB 证书 ↗”。其下“访问控制”下拉框当前选中“继承ELB已有配置”。底部为可展开的“更多配置”，展开后显示一行标签：SNI证书: --、获取监听器端口: 继承ELB已有配置、重写X-Forwarded-Host: 继承ELB已有配置、数据压缩: 继承ELB已有配置、空闲超时时间(秒): 继"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "：SNI证书: --、获取监听器端口: 继承ELB已有配置、重写X-Forwarded-Host: 继承ELB已有配置、数据压缩: 继承ELB已有配置、空闲超时时间(秒): 继承ELB已有配置、请求超时时间(秒): 继承ELB已有配置、响应超时时间(秒): 继承ELB已有配置。 图片相邻原文：单击“创建”，创建Service。 Service使用QUIC协议时，需要注意以下配置要求："
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1100.html",
+          "title": "为负载均衡类型的Service配置QUIC监听器",
+          "document_context": "目录：用户指南 > 网络 > 服务（Service） > 负载均衡（LoadBalancer） > 协议与监听配置 > 为负载均衡类型的Service配置QUIC监听器\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.25,
+          "citation": {
+            "document_id": "SBMJ2AB2Z5F2R4LG24SZID2JWE",
+            "revision_id": "5LJUBDJVOO3NYETZVV4Q5HZESI",
+            "fragment_id": "SLNT2VPEQYPI5IFUSOYXBP3USS",
+            "title": "为负载均衡类型的Service配置QUIC监听器",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1100.html",
+            "section": "步骤二：创建负载均衡并配置QUIC协议",
+            "document_context": "目录：用户指南 > 网络 > 服务（Service） > 负载均衡（LoadBalancer） > 协议与监听配置 > 为负载均衡类型的Service配置QUIC监听器\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "2e9698e5225ae55226f482397d7439d1dea3a5835a79e11a14ce80e5f331020b",
+            "url": "/v1/knowledge/revisions/5LJUBDJVOO3NYETZVV4Q5HZESI/fragments/SLNT2VPEQYPI5IFUSOYXBP3USS",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": {
+        "trace_id": "88ed1f422d620d1c3610a6de41c37de7",
+        "retrieval_queries": []
+      },
+      "citation_integrity": false,
+      "latency_ms": 940.0432079855818
+    }
+  }
+]

@@ -1,0 +1,2287 @@
+[
+  {
+    "case": {
+      "id": "cce-manual-001",
+      "group": "cce_10_0430",
+      "category": "集群",
+      "question_type": "comparison",
+      "question": "CCE Standard和Turbo的网络选择有什么区别，Turbo的Pod地址如何分配？",
+      "answerable": true,
+      "required_facts": [
+        "Standard可选择容器隧道或VPC网络",
+        "Turbo采用云原生网络2.0",
+        "Turbo的Pod直接从VPC网段分配IP，可与节点在不同子网"
+      ],
+      "reference_answer": "Standard可选择容器隧道或VPC网络；Turbo采用云原生网络2.0；Turbo的Pod直接从VPC网段分配IP，可与节点在不同子网",
+      "evidence": [
+        {
+          "document_id": "cce_10_0430",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0430.html",
+          "title": "集群概述",
+          "file": "documents/cce_10_0430.md",
+          "content_sha256": "8e6ac6ce30b1d113ffd0d45863b0056200e412aed04481534a17aa694b047872",
+          "start_line": 11,
+          "end_line": 11,
+          "section": "集群类型",
+          "anchor": "CCE Standard集群",
+          "quote": "- CCE Standard集群：是云容器引擎服务的标准版本集群，提供商用级容器集群服务，并完全兼容开源Kubernetes集群标准功能。无需管理和运维控制节点，可根据业务场景选择使用容器隧道网络模型或VPC网络模型，适合对性能和规模没有特殊要求的通用场景。",
+          "quote_sha256": "80ac443d3f561750b3a077f1eb94967f12362923ebefb3d4f4c4822bebf48e05"
+        },
+        {
+          "document_id": "cce_10_0430",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0430.html",
+          "title": "集群概述",
+          "file": "documents/cce_10_0430.md",
+          "content_sha256": "8e6ac6ce30b1d113ffd0d45863b0056200e412aed04481534a17aa694b047872",
+          "start_line": 12,
+          "end_line": 12,
+          "section": "集群类型",
+          "anchor": "CCE Turbo集群",
+          "quote": "- CCE Turbo集群：基于云原生基础设施构建的云原生2.0容器引擎服务，具备软硬协同、网络无损、安全可靠、调度智能的优势，为用户提供一站式、高性价比的全新容器服务体验。提供了面向大规模高性能的场景云原生2.0网络，Pod直接从VPC网段内分配IP地址，Pod和节点可以分属不同子网，支持VPC内的外部网络与Pod IP直通，享有高性能。",
+          "quote_sha256": "55167b03f6b3b749f19e4d67de9587897dd94680a60938aa15f33b15bbad65e0"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-001",
+      "question": "CCE Standard和Turbo的网络选择有什么区别，Turbo的Pod地址如何分配？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "集群",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "HTRRWFA6CK4H7ZMNMQOPLDXPOG",
+          "revision_id": "XZFTSB3QSMZBTPHTVDJUFA3UP2",
+          "section": "在CCE Turbo集群中为Pod配置固定IP",
+          "start_line": 2,
+          "end_line": 4,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_0603.html\n目录：用户指南 > 网络 > 容器网络 > 云原生网络2.0模型 > 在CCE Turbo集群中为Pod配置固定IP\n更新时间：2026-09-20 GMT+08:00",
+          "content_hash": "6d53d5cb49b891d1c6dcd691138c0a218182ebea99e36d9a2f06400637b3186e",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0603.html",
+          "title": "在CCE Turbo集群中为Pod配置固定IP",
+          "score": 0.8633339
+        },
+        {
+          "id": "4EQJPKC7LILJ2AHU3HSCGNCZTE",
+          "revision_id": "JBOS4LDVWGBHF3QX4BCOZQOPXR",
+          "section": "在CCE Turbo集群中为Pod配置EIP",
+          "start_line": 2,
+          "end_line": 4,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_0734.html\n目录：用户指南 > 网络 > 容器网络 > 云原生网络2.0模型 > 在CCE Turbo集群中为Pod配置EIP\n更新时间：2026-09-20 GMT+08:00",
+          "content_hash": "38028aa86f9a33aea4817eddf70b656239523f642cd417d76590232439c8a285",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0734.html",
+          "title": "在CCE Turbo集群中为Pod配置EIP",
+          "score": 0.856093
+        },
+        {
+          "id": "SIKMT43OLBLHDZ3BSAV3AJS5QK",
+          "revision_id": "NB6SMY36EF76WYAJFKBA5T7HK7",
+          "section": "在CCE Turbo集群中为Pod配置固定EIP",
+          "start_line": 2,
+          "end_line": 4,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_0651.html\n目录：用户指南 > 网络 > 容器网络 > 云原生网络2.0模型 > 在CCE Turbo集群中为Pod配置固定EIP\n更新时间：2026-09-20 GMT+08:00",
+          "content_hash": "8fae68bced847b2b2e03ef8c40447b1a1d5c572ccae9cef80c5fe1b8b1f9e6d4",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0651.html",
+          "title": "在CCE Turbo集群中为Pod配置固定EIP",
+          "score": 0.85281485
+        },
+        {
+          "id": "3X4VHPXRLDK7UM4N4BZYX5PATZ",
+          "revision_id": "IV4KTV6EJTTEUB4NXG6MX2ADX3",
+          "section": "在CCE Turbo集群中为IPv6双栈网卡的Pod配置共享带宽",
+          "start_line": 2,
+          "end_line": 4,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_0604.html\n目录：用户指南 > 网络 > 容器网络 > 云原生网络2.0模型 > 在CCE Turbo集群中为IPv6双栈网卡的Pod配置共享带宽\n更新时间：2026-05-26 GMT+08:00",
+          "content_hash": "1acc707e40dba6d25aa729c44acd4e1c760a6418b773fabd2e8af82b096fe48a",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0604.html",
+          "title": "在CCE Turbo集群中为IPv6双栈网卡的Pod配置共享带宽",
+          "score": 0.8502589
+        },
+        {
+          "id": "WXR2NRFY5GJQGXAORF4FVCDPUW",
+          "revision_id": "IV4KTV6EJTTEUB4NXG6MX2ADX3",
+          "section": "通过控制台设置",
+          "start_line": 24,
+          "end_line": 24,
+          "content": "您可以在创建工作负载时，选择“高级配置 > 网络配置”设置IPv6共享带宽。",
+          "content_hash": "71299cff0bd54ac40b0a4ad0f3030078f211407507c61887af44505d9e0aff1a",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0604.html",
+          "title": "在CCE Turbo集群中为IPv6双栈网卡的Pod配置共享带宽",
+          "score": 0.84792286
+        }
+      ],
+      "result": {
+        "trace_id": "8fbd759eecc2ffa7f677afa7d8d6bebe"
+      },
+      "citation_integrity": false,
+      "latency_ms": 813.1731659959769
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-002",
+      "group": "cce_10_0430",
+      "category": "集群",
+      "question_type": "scope",
+      "question": "CCE Autopilot是否需要用户自行部署、管理节点，它按什么资源付费？",
+      "answerable": true,
+      "required_facts": [
+        "无需维护节点的部署管理和安全性",
+        "按CPU和内存资源用量按需付费"
+      ],
+      "reference_answer": "无需维护节点的部署管理和安全性；按CPU和内存资源用量按需付费",
+      "evidence": [
+        {
+          "document_id": "cce_10_0430",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0430.html",
+          "title": "集群概述",
+          "file": "documents/cce_10_0430.md",
+          "content_sha256": "8e6ac6ce30b1d113ffd0d45863b0056200e412aed04481534a17aa694b047872",
+          "start_line": 13,
+          "end_line": 13,
+          "section": "集群类型",
+          "anchor": "CCE Autopilot集群",
+          "quote": "- CCE Autopilot集群：是云容器引擎服务推出的Serverless版集群，提供免运维的容器服务，并提供经过优化的Kubernetes兼容能力。用户无需对节点的部署、管理和安全性进行维护，并根据CPU和内存资源用量按需付费。",
+          "quote_sha256": "4711d32c52d902893460461ca8ae7e6a5f1e5b081fe8427f619be7c16140efb5"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-002",
+      "question": "CCE Autopilot是否需要用户自行部署、管理节点，它按什么资源付费？",
+      "answerable": true,
+      "question_type": "scope",
+      "category": "集群",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "4H4BPBTIN5RX4O2KPN6JTTZCBD",
+          "revision_id": "JFVULMYAYXM6W2EAMMHGUZMDYL",
+          "section": "使用约束",
+          "start_line": 14,
+          "end_line": 22,
+          "content": "- 仅支持在v1.19及以上版本的CCE Turbo集群中安装此插件，插件实例仅支持部署在X86/ARM架构的Huawei Cloud EulerOS 2.0节点（1.4.5及以上版本的插件支持）或X86架构的EulerOS的节点（1.4.38以下版本的插件支持）上。\n- 支持节点使用Containerd或Docker容器运行时。其中Containerd节点可实时跟踪Pod更新，Docker节点以轮询方式查询，非实时更新。\n- 仅支持普通容器，暂不支持安全容器。\n- 安装插件后默认将不进行流量监控，用户需通过创建MonitorPolicy来配置监控任务进行流量监控，且MonitorPolicy资源必须创建在kube-system命名空间下。\n- 不支持HostNetwork类型Pod监控。\n- 安装时请确保节点有足够的资源安装本插件。\n- 监控标签及用户标签的来源必须为新创建Pod时就具有的。\n- 用户指定的标签最多5个标签（1.3.4版本后最多支持10个标签），且不可以指定系统使用的label用作用户指定label。系统使用label包括：pod、task、ipfamily、srcip、dstip、srcport、dstport、protocol。\n- Huawei Cloud EulerOS 2.0 x86节点不支持tcp drop监控项。",
+          "content_hash": "15ec4dac93dc72ae34f8e67c87cc6ad07e28c19b8bf2efb516906f02b74005c9",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0371.html",
+          "title": "CCE容器网络扩展指标",
+          "score": 0.81142515
+        },
+        {
+          "id": "URTDNYU4UERZA33DNTYDZLEVCH",
+          "revision_id": "EG7AREQ64OCVF2LWPDKU2OVE5G",
+          "section": "前提条件",
+          "start_line": 23,
+          "end_line": 27,
+          "content": "在开始部署前，请确保满足以下条件：\n\n- 集群准备：已创建v1.28及以上版本的CCE Standard或CCE Turbo集群。\n- 依赖插件：集群已安装1.21.7及以上版本的**Volcano调度器**插件。\n- 网络访问：推理节点需可访问外网，以便拉取镜像和模型，请参见[配置公网访问](https://support.huaweicloud.com/intl/zh-cn/bestpractice-eip/eip_bestpractice_0001.html)。",
+          "content_hash": "185df5fd8896bf17b535dd2aade7faa32174288976d56199f677c06e05d02af3",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1154.html",
+          "title": "部署AI应用模板",
+          "score": 0.81105804
+        },
+        {
+          "id": "QQYOBWJCQQX3O4JE7MIMLMNMI6",
+          "revision_id": "V7V7C4SJGBHVW53EKCMECVU2PX",
+          "section": "前提条件",
+          "start_line": 24,
+          "end_line": 31,
+          "content": "- 已安装v1.30及以上版本的CCE Standard/Turbo集群。\n- 请根据业务类型创建对应类型的节点和插件，且节点资源充足。\n  - NPU业务：已创建NPU节点，且已安装[CCE AI套件（Ascend NPU）](https://support.huaweicloud.com/usermanual-cce/cce_10_0239.html)插件。\n  - GPU业务：已创建GPU节点，且已安装[CCE AI套件（NVIDIA GPU）](https://support.huaweicloud.com/usermanual-cce/cce_10_0141.html)插件。\n- 已安装Istio（dev版本：1.26-alpha.80c74f7f43482c226f4f4b10b4dda6261b67a71f），并启用Gateway API相关能力，具体操作请参见[Istio / Getting Started](https://istio.io/latest/docs/setup/getting-started/#download)和[Istio / Kubernetes Gateway API](https://istio.io/latest/docs/tasks/traffic-management/ingress/gateway-api/)。\n  - 使用Istio作为基础路由能力，通过安装AI推理网关插件，在流量入口层实现AI场景下基于模型名等业务维度的智能流量分发和自定义路由策略，从而确保外部请求能够根据业务需求被正确转发到相应的AI模型服务实例。\n  - 启用Gateway API相关能力，用于定义外部流量进入Kubernetes集群的入口，指定监听的端口、协议和绑定的网关地址，作为所有HTTP流量（如/v1/completions等API调用）进入AI推理服务的统一入口。\n- （可选）当用户业务有需求（例如业务流量较大时），建议提前创建LoadBalancer类型的Service，作为生产流量入口，具体操作请参见[负载均衡（LoadBalancer）](https://support.huaweicloud.com/usermanual-cce/cce_10_0014.html)。",
+          "content_hash": "6efe166f52e8dcceee1834c71b2626ee67e2a0242ee44b2d91132ed56e6bf9e2",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1003.html",
+          "title": "AI推理网关插件",
+          "score": 0.8103266
+        },
+        {
+          "id": "LEZJ3SLGSWC6EHQEQJ464ECXIA",
+          "revision_id": "SSA6DFVBLS3C5YSIAYCZILQ5RO",
+          "section": "相关文档",
+          "start_line": 111,
+          "end_line": 117,
+          "content": "- CCE需要预留一定的节点资源，供kubelet组件和system进程使用，详情请参见[节点预留资源策略说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0178.html)了解更多详情。\n- 如果您需要根据业务实际情况配置节点数据盘空间的大小，请参见[默认数据盘空间分配说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0341.html)了解更多详情。\n- 每个节点支持的最大Pod数受不同的参数配置影响，请参见[节点可创建的最大Pod数量说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)了解更多详情。\n- 如果您在创建节点时，需要自动执行脚本进行自定义配置，可以参考[创建节点时执行安装前/后脚本](https://support.huaweicloud.com/usermanual-cce/cce_10_4659.html)进行操作。\n- 当您需要将节点池中的某个节点从集群移除时，请勿直接删除该节点，您需要调整节点池的节点数量，详情请参见[扩缩容节点池](https://support.huaweicloud.com/usermanual-cce/cce_10_0658.html)。\n- 如果您需要批量操作相同配置的节点，推荐使用[创建节点池](https://support.huaweicloud.com/usermanual-cce/cce_10_0012.html)功能，方便快捷地创建、管理和销毁节点，并且支持启用节点伸缩自动扩缩容节点资源，可以提高资源的利用率。\n- 如果您在创建节点时遇到异常，请参见[CCE集群新增节点时的问题与排查方法？](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00027.html)进行定位。",
+          "content_hash": "bab1bb39da02563e51590f8deb3d016d8d6a9febaaa0f043e5d6e589ec8a7216",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0363.html",
+          "title": "创建节点",
+          "score": 0.8096431
+        },
+        {
+          "id": "MZIONF47V7KZ4LZ6KOBV2NK3IH",
+          "revision_id": "B4VCNJQGXJ5UZRA22NDTUVHKXL",
+          "section": "相关文档",
+          "start_line": 213,
+          "end_line": 213,
+          "content": "安装CCE节点故障检测插件后，您可以对节点故障检测策略进行自定义配置，支持筛选节点检测范围或调整故障阈值等，详情请参见[配置节点故障检测策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0659.html)。",
+          "content_hash": "6e1321d4248f25e412c1dc2cda7367ea67c538c077ee575a8bd99f6439a0b29b",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0132.html",
+          "title": "CCE节点故障检测",
+          "score": 0.80764896
+        }
+      ],
+      "result": {
+        "trace_id": "6e00a759bb17d0afa68055aedac0e6da"
+      },
+      "citation_integrity": false,
+      "latency_ms": 973.7220829993021
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-008",
+      "group": "cce_10_0476",
+      "category": "节点",
+      "question_type": "version",
+      "question": "为什么CCE 1.35及以上不再支持EulerOS 2.10和kata安全运行时？",
+      "answerable": true,
+      "required_facts": [
+        "1.35默认nftables要求内核至少5.13",
+        "EulerOS 2.10内核不满足",
+        "kata仅适配EulerOS 2.10所以也不再支持"
+      ],
+      "reference_answer": "1.35默认nftables要求内核至少5.13；EulerOS 2.10内核不满足；kata仅适配EulerOS 2.10所以也不再支持",
+      "evidence": [
+        {
+          "document_id": "cce_10_0476",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0476.html",
+          "title": "节点操作系统说明",
+          "file": "documents/cce_10_0476.md",
+          "content_sha256": "aca6488de6220fa89a8b2b789743942e8b872d2ab6189e5cfb0ca17000563095",
+          "start_line": 22,
+          "end_line": 22,
+          "section": "操作系统说明",
+          "anchor": "v1.35及以上版本的集群默认采用nftables",
+          "quote": "v1.35及以上版本的集群默认采用nftables转发模式，该模式要求操作系统内核版本≥5.13，而Huawei Cloud EulerOS 1.1、EulerOS 2.9、EulerOS 2.10、CentOS 7.6的内核版本均不满足该要求，因此集群版本≥1.35时不再支持上述操作系统。同时因kata安全运行时仅适配EulerOS 2.10系统，故v1.35及以上版本集群也不再支持kata安全运行时。",
+          "quote_sha256": "d3f847431b945facd7e4796f6f8ef669351f05956facb1f705c0064eac2e9ae1"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-008",
+      "question": "为什么CCE 1.35及以上不再支持EulerOS 2.10和kata安全运行时？",
+      "answerable": true,
+      "question_type": "version",
+      "category": "节点",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "2AMPEMO6J5D27KUFRQGGA6M4HU",
+          "revision_id": "B4VCNJQGXJ5UZRA22NDTUVHKXL",
+          "section": "约束与限制",
+          "start_line": 14,
+          "end_line": 16,
+          "content": "- 使用NPD插件时，不可对节点磁盘进行格式化或分区。\n- 节点上每个NPD进程标准占用30mCPU，100MB内存。\n- 当NPD插件为1.18.45及以上版本时，不再支持宿主机的操作系统为EulerOS 2.5以下版本。",
+          "content_hash": "c73a853d849c3a1387d0d170809e1fdbca4bec7456ef19c878078a3bb86a2f25",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0132.html",
+          "title": "CCE节点故障检测",
+          "score": 0.81623214
+        },
+        {
+          "id": "7MEYQYANY6CQL3A3D665I7Z7YI",
+          "revision_id": "JPHXRWJFL6DXTXEMX3N2H2A2OQ",
+          "section": "v1.28版本（第1部分）",
+          "start_line": 214,
+          "end_line": 250,
+          "content": "**表9** v1.28补丁版本发布说明\n\n| **CCE集群补丁版本号** | **Kubernetes社区版本** | **特性更新** | **优化增强** | **安全漏洞修复** |\n| --- | --- | --- | --- | --- |\n| v1.28.15-r94 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - | - | 修复部分安全问题。 |\n| v1.28.15-r92 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - | - | 修复部分安全问题。 |\n| v1.28.15-r90 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - Service/Ingress健康检查支持HTTPS类型。 - 集群支持自定义委托。 | 在购买CCE节点时，系统盘的磁盘空间可以支持调小到20G。 | 修复部分安全问题。 |\n| v1.28.15-r80 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - CCE支持Pod Identity，可为Pod提供安全动态的身份凭证。 - CCE插件支持配置自定义委托。 - Service/Ingress支持QUIC协议监听器。 | 在CCE Turbo集群中，Pod自动绑定EIP时支持指定EIP的企业项目和资源标签。 | 修复部分安全问题。 |\n| v1.28.15-r74 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - | - | 修复部分安全问题。 |\n| v1.28.15-r72 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - | - | 修复runc容器逃逸漏洞（[CVE-2025-31133](https://github.com/opencontainers/runc/security/advisories/GHSA-9493-h29p-rfm2)、[CVE-2025-52565](https://github.com/opencontainers/runc/security/advisories/GHSA-qw9x-cqr3-wc7r)、[CVE-2025-52881](https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc8f-2prm)） |\n| v1.28.15-r70 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - ELB Ingress高级转发策略支持流量镜像功能。 - 支持集群证书到期提醒及更新轮转。 - 节点池支持配置镜像免密下载，节点上运行的工作负载可利用节点的委托权限自动下载镜像。 - 使用VPC网络模型的集群支持在“配置中心>网络配置”中开启VPC容器网段预留能力，避免后续新增子网网段与容器网段发生冲突。 | - 使用TokenRequest方式的ServiceAccount具备节点鉴权的增强能力。 - 伸缩组节点数量展示优化，已支持显示实际就绪节点数。 | 修复部分安全问题。 |\n| v1.28.15-r60 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - 支持通过节点池配置管理修改集群IPVS调度策略。 - 支持通过节点池配置管理修改CPU、临时存储、PID的系统预留大小。 - VPC路由网络模型的集群支持删除容器子网。 - 支持通过集群配置管理修改HPA缩容稳定窗口（horizontal-pod-autoscaler-downscale-stabilization）。 - 负载均衡类型的Service和ELB Ingress支持配置双向认证。 | - | 修复部分安全问题。 |\n| v1.28.15-r50 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - 支持修改节点池的kubelet配置，允许通过HTTP协议访问127.0.0.1:10255端口采集监控数据。该配置默认为关闭。 - 支持修改节点池的配置，启用容器资源视图隔离，容器内的进程只能查询或操作分配给该容器的资源。 | - | 修复部分安全问题。 |\n| v1.28.15-r40 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - 共享ELB Ingress支持HTTP重定向HTTPS。 - CCE Standard集群支持使用自定义委托，实现集群粒度的权限收缩。 | - | 修复部分安全问题。 |\n| v1.28.15-r32 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - | 优化CCE Turbo集群容器网卡动态预热在大规模场景下的性能。 | 修复部分安全问题。 |\n| v1.28.15-r30 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | 对象桶类型的对象存储支持AK/SK自动更新。 | - | 修复CVE-2025-5187漏洞。 |\n| v1.28.15-r20 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - 节点安装后执行脚本安装未完成时禁止业务Pod调度。 - 新建VPC网络模型的集群支持开启DataPlane V2，开启后集群中可配置NetworkPolicy。 - 并行文件系统类型的对象存储支持AK/SK自动更新。 - 负载均衡类型的Service和ELB Ingress支持重写HTTP/HTTPS请求头中的X-Real-IP字段。 - 创建负载均衡类型的Service时，ELB侧的后端类型支持配置为IP类型后端。 | - 支持Streaming Encode，降低LIST请求造成的控制节点内存压力。 - cce-pause容器镜像支持防误删。 - 节点本地域名解析加速插件使用的系统标签支持防误删。 | 修复部分安全问题。 |\n| v1.28.15-r10 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - 节点池扩容包周期节点时支持自动支付功能。 - 节点池扩容节点支持自动绑定EIP。 - ELB Ingress支持指定后端转发服务器组。 | - | 修复部分安全问题。 |\n| v1.28.15-r4 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - | - 优化负载均衡类型的Service和Ingress的ELB超时时间配置体验。 - 优化集群升级时对特殊节点池配置的兼容性。 - 优化裸金属服务器使用的私有镜像兼容性。 - 优化弹性云服务器-物理机的容器网络性能。 | 修复部分安全问题。 |\n| v1.28.15-r2 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - | Docker运行时安全性提升。 | 修复部分安全问题。 |\n| v1.28.15-r0 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - ELB Ingress支持更多高级转发动作，支持返回固定响应体等。 - 新建CCE Turbo集群支持开启DataPlane V2，开启后集群中可配置NetworkPolicy。 | - 集群升级过程中支持节点扩容。 - ELB Ingress配置访问控制支持选择多个黑/白名单。 | 修复部分安全问题。 |\n| v1.28.13-r4 | [v1.28.13](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12813) | - | - 优化集群升级稳定性。 - 优化集群过载保护的计算模式。 | 修复部分安全问题。 |\n| v1.28.13-r2 | [v1.28.13](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12813) | - | 修复部分场景下模板上传失败问题。 | 修复部分安全问题。 |\n| v1.28.13-r0 | [v1.28.13](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12813) | - ELB Ingress支持根据HTTP请求方法、HTTP请求头、查询字符串、网段、Cookie等请求参数进行转发。 - ELB Ingress支持配置跨域访问。 | - 更新节点池时支持修改节点密码。 - 创建节点时支持只使用系统盘。 - 更新ELB Ingress时支持修改HTTP重定向到HTTPS的配置。 - 使用Docker容器运行时的节点池时支持自定义配置默认镜像地址。 | 修复部分安全问题。 |\n| v1.28.8-r2 | [v1.28.8](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1288) | - | 增强系统稳定性。 | 修复部分安全问题。 |\n| v1.28.8-r0 | [v1.28.8](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1288) | - CCE删除集群，支持勾选删除日志组。 - 创建集群时支持选择用户自己管理的KMS实例来进行Secret加密落盘ETCD。 - 通过私有镜像创建节点，支持保留镜像密码选项。 - CCE支持GPU渲染场景。 | CCE支持ELB全端口类型监听器。 | 修复部分安全问题。 |\n| v1.28.8-r0 | [v1.28.8](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1288) | - | - | 修复部分安全问题。 |\n| v1.28.7-r2 | [v1.28.8](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1288) | - 支持RAM实现跨账号密钥共享。 - 自定义节点池支持迁移节点。 - 支持Flexus云服务器X实例。 | - 节点池配置管理新增containerd默认镜像地址配置项。 - CCE节点池列表页面支持自定义排序。 | 修复部分安全问题。 |\n| v1.28.6-r4 | [v1.28.8](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1288) | - | 增强了早期版本集群在跨度较大的升级场景下负载均衡服务的稳定性。 | 修复部分安全问题。 |\n| v1.28.6-r2 | [v1.28.8](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1288) | - | 增强了集群升级场景的容器日志采集的可靠性。 | 修复部分安全问题。 |\n| v1.28.6-r0 | [v1.28.8](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1288) | - CCE Ingress支持基于HTTP头部自定义Header进行流量分发。 - 支持为第三方工作负载应用配置扩缩容优先级策略。 - （仅CCE Turbo集群）支持使用annotation为Pod配置安全组。 - （仅CCE Turbo集群）为Pod绑定EIP时支持使用已有EIP。 | - 节点排水过程支持取消。 - 创建节点池时不再区分按需计费和包年/包月计费。 - 更新节点池时支持修改委托及前后缀名称。 - 通过控制台重置节点将默认保留K8s标签和污点。 - 开放Kubernetes服务账号令牌卷投射配置和负载弹性伸缩控制器配置。 | 修复部分安全问题。 |\n| v1.28.5-r0 | [v1.28.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1285) | - CCE Ingress转发策略支持优先级排序。 - StatefulSet配置volumeClaimTemplates时可以配置PV和底层存储的名称前缀（Everest版本要求为2.4.15及以上）。 - 包周期节点池支持选择多个节点规格。 - 更新节点池时支持删除默认规格。 - 自定义节点池支持纳管节点。 | - 增加CoreDNS解析失败的告警规则。 - 节点退订前支持排水操作。 - 节点池更新后将展示各节点的配置差异点。 | 修复部分安全问题。 |\n| v1.28.4-r0 | [v1.28.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1285) | - 创建节点支持选择Docker容器运行时。  - 支持使用通用型SSD v2类型的云硬盘。 - ELB Ingress支持配置灰度发布。 - ELB Ingress支持配置URL重定向、Rewrite重写、HTTP重定向到HTTPS能力。 | 开放高频使用的集群参数、节点池参数配置。 | 修复部分安全问题。 |\n| v1.28.3-r0 | [v1.28.3](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) | 负载均衡类型的Service和ELB Ingress能力新增：  - 支持配置SNI。 - 支持开启HTTP/2。 - 支持配置空闲超时时间、请求超时时间、响应超时时间。 - 支持从HTTP报文的请求头中获取监听器端口号、客户端请求端口号、重写X-Forwarded-Host。 | - | 修复部分安全问题。 |\n| v1.28.2-r0 | [v1.28.3](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) | - 创建Service或Ingress支持设置ELB黑/白名单访问控制。 - CCE的节点镜像支持安全加固（满足等保三级基线要求）。 | - | 修复部分安全问题。 |\n| v1.28.1-r4 | [v1.28.3](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) | - | - | 修复[CVE-2024-21626](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2024-21626)安全漏洞。 |\n| v1.28.1-r2 | [v1.28.3](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v1283) | - | 修复Ingress配置SNI证书并同时开启HTTP/2的场景下偶现配置冲突的问题。 | - |",
+          "content_hash": "42dd8e44328b8a7a602cce3820a33c3c46cd5a2a140847ab1925f53550d7ccea",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+          "title": "CCE补丁版本发布记录",
+          "score": 0.80235964
+        },
+        {
+          "id": "ZNKQHCTQTBWXWVI555IP5WAF7C",
+          "revision_id": "JPHXRWJFL6DXTXEMX3N2H2A2OQ",
+          "section": "v1.25版本",
+          "start_line": 290,
+          "end_line": 325,
+          "content": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/notice_3.0-zh-cn.png)\n\n除EulerOS 2.5操作系统外，CCE v1.25集群的节点均默认采用Containerd容器运行时，且v1.25以上集群将不再支持EulerOS 2.5操作系统。\n\n**表11** v1.25补丁版本发布说明\n\n| **CCE集群补丁版本号** | **Kubernetes社区版本** | **特性更新** | **优化增强** | **安全漏洞修复** |\n| --- | --- | --- | --- | --- |\n| v1.25.16-r40 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | 对象桶类型的对象存储支持AK/SK自动更新。 | - | 修复部分安全问题。 |\n| v1.25.16-r30 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - 节点安装后执行脚本安装未完成时禁止业务Pod调度。 - 新建VPC网络模型的集群支持开启DataPlane V2，开启后集群中可配置NetworkPolicy。 - 并行文件系统类型的对象存储支持AK/SK自动更新。 - 负载均衡类型的Service和ELB Ingress支持重写HTTP/HTTPS请求头中的X-Real-IP字段。 - 创建负载均衡类型的Service时，ELB侧的后端类型支持配置为IP类型后端。 | - 支持Streaming Encode，降低LIST请求造成的控制节点内存压力。 - cce-pause容器镜像支持防误删。 - 节点本地域名解析加速插件使用的系统标签支持防误删。 | 修复部分安全问题。 |\n| v1.25.16-r20 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - 节点池扩容包周期节点时支持自动支付功能。 - 节点池扩容节点支持自动绑定EIP。 - ELB Ingress支持指定后端转发服务器组。 | - | 修复部分安全问题。 |\n| v1.25.16-r14 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - | - 优化负载均衡类型的Service和Ingress的ELB超时时间配置体验。 - 优化集群升级时对特殊节点池配置的兼容性。 - 优化裸金属服务器使用的私有镜像兼容性。 - 优化弹性云服务器-物理机的容器网络性能。 | 修复部分安全问题。 |\n| v1.25.16-r12 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - | Docker运行时安全性提升。 | 修复部分安全问题。 |\n| v1.25.16-r10 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - ELB Ingress支持更多高级转发动作，支持返回固定响应体等。 - 新建CCE Turbo集群支持开启DataPlane V2，开启后集群中可配置NetworkPolicy。 | - 集群升级过程中支持节点扩容。 - ELB Ingress配置访问控制支持选择多个黑/白名单。 | 修复部分安全问题。 |\n| v1.25.16-r4 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - | - 优化集群升级稳定性。 - 优化集群过载保护的计算模式。 | 修复部分安全问题。 |\n| v1.25.16-r2 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - | 修复部分场景下模板上传失败问题。 | 修复部分安全问题。 |\n| v1.25.16-r0 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - ELB Ingress支持根据HTTP请求方法、HTTP请求头、查询字符串、网段、Cookie等请求参数进行转发。 - ELB Ingress支持配置跨域访问。 | - 更新节点池时支持修改节点密码。 - 创建节点时支持只使用系统盘。 - 更新ELB Ingress时支持修改HTTP重定向到HTTPS的配置。 - 使用Docker容器运行时的节点池时支持自定义配置默认镜像地址。 | 修复部分安全问题。 |\n| v1.25.13-r2 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - | 增强系统稳定性。 | 修复部分安全问题。 |\n| v1.25.13-r0 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - CCE删除集群，支持勾选删除日志组。 - 创建集群时支持选择用户自己管理的KMS实例来进行Secret加密落盘ETCD。 - 通过私有镜像创建节点，支持保留镜像密码选项。 - CCE支持GPU渲染场景。 | CCE支持ELB全端口类型监听器。 | 修复部分安全问题。 |\n| v1.25.12-r0 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - 支持RAM实现跨账号密钥共享。 - 自定义节点池支持迁移节点。 - 支持Flexus云服务器X实例。 | - 节点池配置管理新增containerd默认镜像地址配置项。 - CCE节点池列表页面支持自定义排序。 | 修复部分安全问题。 |\n| v1.25.11-r4 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - | 增强了早期版本集群在跨度较大的升级场景下负载均衡服务的稳定性。 | 修复部分安全问题。 |\n| v1.25.11-r2 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - | 增强了集群升级场景的容器日志采集的可靠性。 | 修复部分安全问题。 |\n| v1.25.11-r0 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - CCE Ingress支持基于HTTP头部自定义Header进行流量分发。 - 支持为第三方工作负载应用配置扩缩容优先级策略。 - （仅CCE Turbo集群）支持使用annotation为Pod配置安全组。 - （仅CCE Turbo集群）为Pod绑定EIP时支持使用已有EIP。 | - 节点排水过程支持取消。 - 创建节点池时不再区分按需计费和包年/包月计费。 - 更新节点池时支持修改委托及前后缀名称。 - 通过控制台重置节点将默认保留K8s标签和污点。 - 开放Kubernetes服务账号令牌卷投射配置和负载弹性伸缩控制器配置。 | 修复部分安全问题。 |\n| v1.25.10-r0 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - CCE Ingress转发策略支持优先级排序。 - StatefulSet配置volumeClaimTemplates时可以配置PV和底层存储的名称前缀（Everest版本要求为2.4.15及以上）。 - 包周期节点池支持选择多个节点规格。 - 更新节点池时支持删除默认规格。 - 自定义节点池支持纳管节点。 | - 增加CoreDNS解析失败的告警规则。 - 节点退订前支持排水操作。 - 节点池更新后将展示各节点的配置差异点。 | 修复部分安全问题。 |\n| v1.25.9-r0 | [v1.25.16](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12516) | - 支持使用通用型SSD v2类型的云硬盘。 - ELB Ingress支持配置灰度发布。 - ELB Ingress支持配置URL重定向、Rewrite重写、HTTP重定向到HTTPS能力。 | 开放高频使用的集群参数、节点池参数配置。 | 修复部分安全问题。 |\n| v1.25.8-r0 | [v1.25.10](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12510) | 负载均衡类型的Service和ELB Ingress能力新增：  - 支持配置SNI。 - 支持开启HTTP/2。 - 支持配置空闲超时时间、请求超时时间、响应超时时间。 - 支持从HTTP报文的请求头中获取监听器端口号、客户端请求端口号、重写X-Forwarded-Host。 | - | 修复部分安全问题。 |\n| v1.25.7-r0 | [v1.25.10](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12510) | - 创建Service或Ingress支持设置ELB黑/白名单访问控制。 - CCE的节点镜像支持安全加固（满足等保三级基线要求）。 | - | 修复部分安全问题。 |\n| v1.25.6-r4 | [v1.25.10](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12510) | - | - | 修复[CVE-2024-21626](https://cve.mitre.org/cgi-bin/cvename.cgi?name=2024-21626)安全漏洞。 |\n| v1.25.6-r2 | [v1.25.10](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12510) | - | 修复Ingress配置SNI证书并同时开启HTTP/2的场景下偶现配置冲突的问题。 | - |\n| v1.25.6-r0 | [v1.25.10](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v12510) | - 节点池支持节点的自定义前缀和后缀命名 - CCE Turbo集群中，支持创建工作负载类型的容器网络配置，可指定Pod子网。 - ELB Ingress支持GRPC协议。 - 负载均衡类型的服务在通过YAML创建时支持指定ELB私有IP。 | - 优化CCE Turbo集群中大批量创建安全容器的启动速度。 - 提升CCE Turbo集群中反复创建删除安全容器时的稳定性。 - 修复kubelet在特定场景下偶现启动卡死的问题。 - 优化autoscaler扩容节点池时的事件上报逻辑，去除规格售罄的重复事件。 - 修复特定场景下kubelet重启，出现Succeed状态的Pod变为Failed的问题。 | 修复部分安全问题。 |\n| v1.25.5-r0 | [v1.25.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v1255) | - Volcano支持节点池亲和调度。 - Volcano支持负载重调度能力。 | - | 修复部分安全问题。 |\n| v1.25.4-r10 | [v1.25.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v1255) | - | 优化节点池伸缩时的事件信息。 | 修复部分安全问题。 |\n| v1.25.4-r0 | [v1.25.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v1255) | - 节点池配置管理支持软驱逐和硬驱逐的设置。 - 支持为自动创建的EVS块存储添加TMS资源标签，以便于成本管理。 | - | 修复部分安全问题。 |\n| v1.25.3-r10 | [v1.25.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v1255) | - CCE集群支持对接使用弹性规格的独享型ELB。 - 负载均衡支持设置超时时间。 | kube-apiserver高频参数支持配置。 | 修复部分安全问题。 |\n| v1.25.3-r0 | [v1.25.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v1255) | - CCE Turbo容器网卡支持固定IP。详情请参见[为Pod配置固定IP](https://support.huaweicloud.com/usermanual-cce/cce_10_0603.html)。 - CCE Turbo容器网卡支持自动创建和自动绑定EIP。详情请参见[为Pod配置固定EIP](https://support.huaweicloud.com/usermanual-cce/cce_10_0651.html)。  - CCE Turbo集群在离线混部增强：支持Pod网络优先级限制。详情请参见[出口网络带宽保障](https://support.huaweicloud.com/usermanual-cce/cce_10_0701.html)。 - CCE Turbo集群支持命名空间关联容器网段。详情请参见[网络配置（NetworkAttachmentDefinition）](https://support.huaweicloud.com/usermanual-cce/cce_10_0196.html)。 - 集群支持CPU Burst特性，避免CPU限流影响时延敏感型容器业务。详情请参见[CPU Burst弹性限流](https://support.huaweicloud.com/usermanual-cce/cce_10_0700.html)。 | 增强CCE Turbo集群在规格变更场景时网络的稳定性。 | 修复部分安全问题。 |\n| v1.25.1-r0 | [v1.25.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v1255) | 首次发布CCE v1.25集群，有关更多信息请参见[Kubernetes 1.25版本说明](https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0058.html)。 | - | - |",
+          "content_hash": "704995a9e5bede039be58b5254c959319369b8be05e26e18bf180c2143ea21f8",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+          "title": "CCE补丁版本发布记录",
+          "score": 0.79972893
+        },
+        {
+          "id": "YDFFNX3KBKPBRKYEZ4KIZNJLNS",
+          "revision_id": "B4VCNJQGXJ5UZRA22NDTUVHKXL",
+          "section": "权限说明",
+          "start_line": 20,
+          "end_line": 25,
+          "content": "NPD插件为监控内核日志，需要读取宿主机/dev/kmsg设备，为此需要开启容器特权，详见[privileged](https://kubernetes.io/docs/concepts/policy/pod-security-policy/#privileged)。\n\n同时CCE根据最小化权限原则进行了风险消减，NPD运行限制只拥有以下特权：\n\n- cap\\_dac\\_read\\_search，为访问/run/log/journal\n- cap\\_sys\\_admin，为访问/dev/kmsg",
+          "content_hash": "f256aed390a24360911e5ae84227d66990d882af4f6179a7bf8ec83222f77ccf",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0132.html",
+          "title": "CCE节点故障检测",
+          "score": 0.79556507
+        },
+        {
+          "id": "F7P2IP7GLEGGHEKUHFPFHMOYED",
+          "revision_id": "4DRPNYAPS2YVAQTPE6YAIXXQDT",
+          "section": "CCE对Kubernetes 1.25版本的增强",
+          "start_line": 122,
+          "end_line": 124,
+          "content": "在版本维护周期中，CCE会对Kubernetes 1.25版本进行定期的更新，并提供功能增强。\n\n关于CCE集群版本的更新说明，请参见[CCE集群版本发布说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html)。",
+          "content_hash": "9430bc81eb4fe114265e8f0c45d0f38af3c405aa047ca00fc5e83780263ce347",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0058.html",
+          "title": "（停止维护）Kubernetes 1.25版本说明",
+          "score": 0.79470444
+        }
+      ],
+      "result": {
+        "trace_id": "d0c258e849ecbd604f27dae6d9250d4e"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1110.4614159994526
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-009",
+      "group": "family:cce_10_0180",
+      "category": "节点",
+      "question_type": "constraint",
+      "question": "为什么不能给所有区域的CCE Turbo节点承诺同一个可用规格和最大Pod数？",
+      "answerable": true,
+      "required_facts": [
+        "区域规格可能新增、售罄或下线，需看创建节点页面",
+        "Turbo最大Pod数量与节点可用弹性网卡/辅助弹性网卡数量有关"
+      ],
+      "reference_answer": "区域规格可能新增、售罄或下线，需看创建节点页面；Turbo最大Pod数量与节点可用弹性网卡/辅助弹性网卡数量有关",
+      "evidence": [
+        {
+          "document_id": "cce_10_0719",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0719.html",
+          "title": "节点规格说明",
+          "file": "documents/cce_10_0719.md",
+          "content_sha256": "504183f45a8fd8eba74f0943d325cdaba90736652ffc6b635cc83d6fe8d38597",
+          "start_line": 11,
+          "end_line": 11,
+          "section": "节点规格说明",
+          "anchor": "不同区域支持的节点规格",
+          "quote": "不同区域支持的节点规格（flavor）不同，且节点规格存在新增、售罄下线等情况，建议您在使用前登录CCE控制台，在创建节点界面查看您需要的节点规格是否支持。",
+          "quote_sha256": "052a137fccf9990cf63aed1847dd5340919edeeb7a03eebfbe53d77f188cb7b9"
+        },
+        {
+          "document_id": "cce_10_0719",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0719.html",
+          "title": "节点规格说明",
+          "file": "documents/cce_10_0719.md",
+          "content_sha256": "504183f45a8fd8eba74f0943d325cdaba90736652ffc6b635cc83d6fe8d38597",
+          "start_line": 13,
+          "end_line": 13,
+          "section": "节点规格说明",
+          "anchor": "每个节点可以创建最大Pod数量",
+          "quote": "对于CCE Turbo集群，由于Pod需要占用节点弹性网卡/辅助弹性网卡，每个节点可以创建最大Pod数量与节点可使用网卡数量相关，因此您需要评估节点的可使用网卡数量，可用网卡数量确定了该节点支持的负载实例上限，详细说明请参见[节点可创建的最大Pod数量说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。",
+          "quote_sha256": "95489cc36d8b16a6ff2b29b69f1b25074438603f8cd373c9e5ccc330f04a8891"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-009",
+      "question": "为什么不能给所有区域的CCE Turbo节点承诺同一个可用规格和最大Pod数？",
+      "answerable": true,
+      "question_type": "constraint",
+      "category": "节点",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "7D7FM7YZKS5BWLFHJKHJ67HWZE",
+          "revision_id": "SRFDGMCSLDQ3QUH5JHJE4OPO4P",
+          "section": "常见问题",
+          "start_line": 77,
+          "end_line": 84,
+          "content": "- **CCE Turbo集群如何查看节点规格支持的最大Pod数？**\n\n  CCE Turbo集群节点可创建的Pod数与节点网卡数量有关，不同规格支持的网卡数量可能不同。您可以在创建节点时查看每个规格支持的负载实例上限。\n\n  ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002602443981.png \"点击放大\")\n- **为什么相同CPU和内存规格的节点，可创建的Pod数却不一样？**\n\n  节点可创建的Pod数并非根据节点规格单一因素决定，是根据集群类型和其他参数共同作用的结果，详情参见[节点最大Pod数量计算方式](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。",
+          "content_hash": "022db6a766af95956675dcac127555eb342367d555daed25b5d2c50c40764c83",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html",
+          "title": "节点可创建的最大Pod数量说明",
+          "score": 0.8668928
+        },
+        {
+          "id": "4S2GRAWZNEL33MACANVFWQMYWD",
+          "revision_id": "SRFDGMCSLDQ3QUH5JHJE4OPO4P",
+          "section": "节点网卡数量说明（仅CCE Turbo集群）",
+          "start_line": 54,
+          "end_line": 57,
+          "content": "CCE Turbo集群ECS节点使用弹性辅助网卡，裸金属节点使用弹性网卡，节点可以创建最大Pod数量与节点可使用网卡数量相关。\n\n**图3** 节点网卡数\n ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001981150861.png \"点击放大\")",
+          "content_hash": "f616aef2072d6ae6564959cd4546fc231a13bc892c1d3f09942d4d728c69cda3",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html",
+          "title": "节点可创建的最大Pod数量说明",
+          "score": 0.8593578
+        },
+        {
+          "id": "UHHVPLC2PTAIP5CDV4V4SV7RQ4",
+          "revision_id": "SRFDGMCSLDQ3QUH5JHJE4OPO4P",
+          "section": "节点最大Pod数量计算方式",
+          "start_line": 8,
+          "end_line": 14,
+          "content": "根据集群类型不同，节点可创建的最大Pod数量计算方式如下：\n\n| 网络模型 | 节点可创建的最大Pod数量计算方式 | 建议 |\n| --- | --- | --- |\n| “容器隧道网络”集群 | 仅取决于[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html) | - |\n| “VPC网络”集群 | 取决于[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)和[每个节点预留的Pod IP数说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)中的最小值 | 建议节点最大实例数不要超过节点可分配Pod IP数，否则当节点Pod IP数不足时，新建Pod将无法在该节点上正常运行。 |\n| “云原生2.0网络”集群（CCE Turbo集群） | 取决于[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)和[CCE Turbo集群节点网卡数量](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)中的最小值 | 建议节点最大实例数不要超过节点网卡数，否则当节点可分配网卡不足时，新建Pod将无法在该节点上正常运行。 |",
+          "content_hash": "c8505b932d7eadcd00d7d808fd5853303b66f1f4716187060d78ee081bb0412d",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html",
+          "title": "节点可创建的最大Pod数量说明",
+          "score": 0.83921033
+        },
+        {
+          "id": "UE5LCJDOG5SRIYFAUXIDBROYHK",
+          "revision_id": "JEYMYX53XDOHA26FOPT37IWT2M",
+          "section": "使用节点池配置为节点池上的Pod绑定默认的安全组",
+          "start_line": 2,
+          "end_line": 14,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_1079.html\n目录：用户指南 > 网络 > 容器网络 > 云原生网络2.0模型 > 在CCE Turbo集群中为工作负载配置安全组 > 使用节点池配置为节点池上的Pod绑定默认的安全组\n更新时间：2026-06-17 GMT+08:00\n\n云原生网络2.0网络模式下，Pod使用的是VPC的弹性网卡/辅助弹性网卡，可直接绑定安全组，CCE Turbo支持为节点池上的Pod配置默认的安全组。适用于以下场景：\n\n- 节点池维度的访问控制：如果您的业务是按照节点池维度划分的，您可以采用此方案进行节点池维度的安全访问控制，请结合您的业务合理规划不同节点池上的Pod默认安全组的安全规则。\n- 扩展单个CCE Turbo集群的Pod数规模：当前一个安全组最多关联5万张网卡，如果您单个CCE Turbo集群的Pod数会超过5万，可以为不同的节点池配置不同的安全组，相当于每个节点池都可以调度5万个Pod，从而扩展CCE Turbo集群最大可支持的Pod数。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/caution_3.0-zh-cn.png)\n\n- 如果为节点池上的Pod绑定默认的安全组，建议您按照节点池维度划分业务，结合您的业务配置联动的调度策略。否则可能出现工作负载调度到其他节点池后出现安全组不一致的问题。关于设置工作负载调度策略的详细步骤请参见[设置节点亲和调度（nodeAffinity）](https://support.huaweicloud.com/usermanual-cce/cce_10_0892.html)。\n- 为工作负载绑定安全组存在多种配置方式（如注解、安全组策略、节点池配置、容器网络配置），当您同时使用多种配置方式时，只生效优先级最高的配置方式，优先级详情请参见[不同方法配置工作负载安全组的对比](https://support.huaweicloud.com/usermanual-cce/cce_10_1078.html)。",
+          "content_hash": "b76514e37a57bce53696cbeb0b8baadafe69dd08ea0cf3ab299c6166c1cf257b",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1079.html",
+          "title": "使用节点池配置为节点池上的Pod绑定默认的安全组",
+          "score": 0.8386094
+        },
+        {
+          "id": "JZR2RW2JNRNIASVIYWXHML65HZ",
+          "revision_id": "SRFDGMCSLDQ3QUH5JHJE4OPO4P",
+          "section": "节点最大实例数说明",
+          "start_line": 29,
+          "end_line": 50,
+          "content": "在创建节点时，可以配置节点可以创建的最大实例数（maxPods）。该参数是kubelet的配置参数，决定kubelet最多可创建多少个Pod。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/notice_3.0-zh-cn.png)\n\n对于默认节点池（DefaultPool）中的节点，节点创建完成后，最大实例数不支持修改。\n\n对于自定义节点池中的节点，创建完成后可通过修改节点池配置中的max-pods参数，修改节点最大实例数。详情请参见[节点池配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0652.html)。\n\n**图2** 创建节点时的最大实例数配置\n ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001981030921.png \"点击放大\")\n\n根据节点规格不同，节点默认最大实例数如[表1](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)所示。\n\n**表1** 节点默认最大实例数\n\n| 内存 | 节点默认最大实例数 |\n| --- | --- |\n| 4G | 20 |\n| 8G | 40 |\n| 16G | 60 |\n| 32G | 80 |\n| 64G及以上 | 110 |",
+          "content_hash": "55bcf85910ef6e138d456ff29452ca394a82cb2a7b27e43a478bfcef9110869f",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html",
+          "title": "节点可创建的最大Pod数量说明",
+          "score": 0.8305287
+        }
+      ],
+      "result": {
+        "trace_id": "15c696ffca17ade4f54f0b04d76b3638"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1177.2189170005731
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-018",
+      "group": "cce_10_0216",
+      "category": "工作负载",
+      "question_type": "scenario",
+      "question": "我想在集群每个节点部署日志采集器和节点监控，应选择哪类工作负载？",
+      "answerable": true,
+      "required_facts": [
+        "DaemonSet守护进程集",
+        "日志采集进程和节点监控进程适合逐节点部署"
+      ],
+      "reference_answer": "DaemonSet守护进程集；日志采集进程和节点监控进程适合逐节点部署",
+      "evidence": [
+        {
+          "document_id": "cce_10_0216",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0216.html",
+          "title": "创建守护进程集（DaemonSet）",
+          "file": "documents/cce_10_0216.md",
+          "content_sha256": "4d276365268b5f99eda31eb6ec79a75db2cbf768bce678f2aba110298d91dadb",
+          "start_line": 13,
+          "end_line": 13,
+          "section": "创建守护进程集（DaemonSet）",
+          "anchor": "日志采集进程",
+          "quote": "- **日志采集进程**：例如Fluentd或Logstash，需要部署在每个节点上采集节点的日志数据，并转发到统一的日志系统。",
+          "quote_sha256": "92ceaa619a03bdd0a89ee83ea595e5ce282f5ab3de667e38933aab93c475af73"
+        },
+        {
+          "document_id": "cce_10_0216",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0216.html",
+          "title": "创建守护进程集（DaemonSet）",
+          "file": "documents/cce_10_0216.md",
+          "content_sha256": "4d276365268b5f99eda31eb6ec79a75db2cbf768bce678f2aba110298d91dadb",
+          "start_line": 14,
+          "end_line": 14,
+          "section": "创建守护进程集（DaemonSet）",
+          "anchor": "监控进程",
+          "quote": "- **监控进程**：例如Prometheus Node Exporter等，部署在每个节点上收集节点层面的性能数据。",
+          "quote_sha256": "83499ee4e434e61ed2fc6c92b3ae5f618bae885e51c0a82c68b9805594938b32"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-018",
+      "question": "我想在集群每个节点部署日志采集器和节点监控，应选择哪类工作负载？",
+      "answerable": true,
+      "question_type": "scenario",
+      "category": "工作负载",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "AYFVUA3YCDO45532HZ22AL7B2U",
+          "revision_id": "M77ZJDEG7S52ZD67FP2SBBBFVW",
+          "section": "守护进程集（DaemonSet）",
+          "start_line": 59,
+          "end_line": 64,
+          "content": "DaemonSet（守护进程集）在集群的每个节点上运行一个Pod，且保证只有一个Pod，非常适合一些系统层面的应用，例如日志收集、资源监控等，这类应用需要每个节点都运行，且不需要太多实例，一个比较好的例子就是Kubernetes的kube-proxy。\n\nDaemonSet跟节点相关，如果节点异常，属于该节点的DaemonSet Pod也不会迁移到其他节点重新创建。\n\n**图4** DaemonSet\n ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0258871213.png \"点击放大\")",
+          "content_hash": "c06503b169422abefe2f1802502a05be2d08a21232d8380348202b4c0cad8786",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0006.html",
+          "title": "工作负载概述",
+          "score": 0.84337336
+        },
+        {
+          "id": "RJW5HXT3QXHKLBLWADETT7JLQW",
+          "revision_id": "CWBA2MHRC4UOE6EZJNY5L6B3JQ",
+          "section": "集群控制节点可用区",
+          "start_line": 54,
+          "end_line": 54,
+          "content": "您可查看集群控制节点数量，如果需要查看控制节点资源使用率等数据，请单击右上角“查看监控”，前往[监控中心](https://support.huaweicloud.com/usermanual-cce/cce_10_0710.html)页面查看。",
+          "content_hash": "61897b0d93d302a707e21bba6c91ad9897a46ce21e469a07ac6f2467bf420da6",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0782.html",
+          "title": "集群配置概览",
+          "score": 0.832829
+        },
+        {
+          "id": "GU4QZZBQMBURXNBIND4TQB6HLI",
+          "revision_id": "7LDOCNUQ3CBFU6SBZ3YDLM7CTH",
+          "section": "节点负载过多，采集日志时缺少部分Pod信息",
+          "start_line": 173,
+          "end_line": 196,
+          "content": "**问题**：插件版本在1.5.0以上，采集容器内日志或容器标准输出过程中出现日志缺少部分Pod信息，例如podID、podName等。\n\n**排查方法**：\n\n进入“插件中心”，单击“云原生日志采集插件”，选择实例列表，找到对应节点的log-agent-fluent-bit，单击“更多>日志”。\n\n**图11** 查看log-agent-fluent-bit实例日志\n ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002248378137.png \"点击放大\")\n\n容器选择fluent-bit，并在日志中查看关键字“cannot increase buffer: current=512000 requested=\\*\\*\\* max=512000”。\n\n**图12** 查看fluent-bit容器日志\n ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001836693162.png \"点击放大\")\n\n**解决方案**：\n\n前往节点执行**kubectl edit deploy -n monitoring log-agent-log-operator**， 编辑log-operator容器的命令行参数，添加命令行--kubernetes-buffer-size=20MB，当前默认值为16MB，请根据节点pod信息总大小估算该值大小。0为无限制。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/caution_3.0-zh-cn.png)\n\n若升级插件，则需要重新配置该参数。\n\n**图13** 修改log-operator容器命令行参数\n ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002072169465.png \"点击放大\")",
+          "content_hash": "6f5c5a17c32d6ce0146fd317746e54a060723d9ae190b819ba5c91f8201a7e8d",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0809.html",
+          "title": "日志中心FAQ",
+          "score": 0.8238619
+        },
+        {
+          "id": "AGPMDQNB57JYWCO6LBEI43FK5Y",
+          "revision_id": "DY3PPGJM6H4EY7NGJ4GFWYMQCH",
+          "section": "功能入口",
+          "start_line": 10,
+          "end_line": 13,
+          "content": "1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群。\n2. 在左侧导航栏中选择“监控中心”，单击“工作负载”页签。\n\n   [工作负载列表](https://support.huaweicloud.com/usermanual-cce/cce_10_0714.html)页面呈现了所有工作负载的综合信息，如需深入了解单个工作负载的监控情况，可单击工作负载名称，进入该工作负载的“[概览](https://support.huaweicloud.com/usermanual-cce/cce_10_0714.html)”页面，通过切换“[Pod列表](https://support.huaweicloud.com/usermanual-cce/cce_10_0714.html)”、“[监控](https://support.huaweicloud.com/usermanual-cce/cce_10_0714.html)”页签查看相应内容。",
+          "content_hash": "99acdebe1490b26a3c77de8e55b4695a3d417826d4831258285e36fd871fa3bb",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0714.html",
+          "title": "工作负载监控",
+          "score": 0.8236323
+        },
+        {
+          "id": "TYUZ3NQKZUT24OHZUYXDRIVXTJ",
+          "revision_id": "U4Z6JNKHIYXKET47A3R7QGPWOZ",
+          "section": "节点监控",
+          "start_line": 2,
+          "end_line": 6,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_0713.html\n目录：用户指南 > 云原生观测 > 监控中心 > 节点监控\n更新时间：2026-09-20 GMT+08:00\n\n如果您需要监控节点的资源使用情况，可以前往“监控中心 > 节点”页面查看。该页面提供了指定集群下所有节点的综合信息，以及单个节点的详细监控数据，包括CPU/内存使用率、网络流入/流出速率、磁盘读/写IO等。",
+          "content_hash": "2483f4b267a5898aaf4324545c292565d7eab6cdfe65e901fae65a3106cbfe26",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0713.html",
+          "title": "节点监控",
+          "score": 0.81805784
+        }
+      ],
+      "result": {
+        "trace_id": "a83dfab26e80e7a8564e3a0da45c3e9e"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1134.8187910043634
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-024",
+      "group": "family:cce_10_0010",
+      "category": "网络",
+      "question_type": "comparison",
+      "question": "CCE的VPC网络与容器隧道网络，在封装和节点规模方面有何区别？",
+      "answerable": true,
+      "required_facts": [
+        "VPC网络无隧道封装但节点数量受VPC路由配额限制",
+        "容器隧道网络使用VXLAN和Open vSwitch"
+      ],
+      "reference_answer": "VPC网络无隧道封装但节点数量受VPC路由配额限制；容器隧道网络使用VXLAN和Open vSwitch",
+      "evidence": [
+        {
+          "document_id": "cce_10_0281",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html",
+          "title": "容器网络模型对比",
+          "file": "documents/cce_10_0281.md",
+          "content_sha256": "4e4bbb934ee97c13b84e2c32a7f4b46c78794bd70ccabcae6ea1a25b20404854",
+          "start_line": 10,
+          "end_line": 10,
+          "section": "容器网络模型对比",
+          "anchor": "节点数量受限于虚拟私有云VPC的路由配额",
+          "quote": "- [VPC网络模型](https://support.huaweicloud.com/usermanual-cce/cce_10_0283.html)将虚拟私有云VPC的路由方式与底层网络深度整合，适用于性能要求较高的场景，但节点数量受限于虚拟私有云VPC的路由配额，适合中小规模组网。",
+          "quote_sha256": "d479cec29342cee8019e979fd149d743b3a3fa39bc8d5e8d66be4c31a735deb5"
+        },
+        {
+          "document_id": "cce_10_0281",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html",
+          "title": "容器网络模型对比",
+          "file": "documents/cce_10_0281.md",
+          "content_sha256": "4e4bbb934ee97c13b84e2c32a7f4b46c78794bd70ccabcae6ea1a25b20404854",
+          "start_line": 13,
+          "end_line": 13,
+          "section": "容器网络模型对比",
+          "anchor": "CCE集群容器隧道网络使用了VXLAN",
+          "quote": "- [容器隧道网络模型](https://support.huaweicloud.com/usermanual-cce/cce_10_0282.html)是在主机网络平面的基础上，通过隧道封装技术来构建一个独立的容器网络平面。CCE集群容器隧道网络使用了VXLAN作为隧道封装协议，并使用了Open vSwitch作为后端虚拟交换机。VXLAN是一种将以太网报文封装成UDP报文进行隧道传输的协议，而Open vSwitch是一款开源的虚拟交换机软件，提供网络隔离和数据转发等功能。",
+          "quote_sha256": "c47292a532a08dc6f239859e4428d77909e466656cb923c7c895066c6f21a5d3"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-024",
+      "question": "CCE的VPC网络与容器隧道网络，在封装和节点规模方面有何区别？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "网络",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "L4QTUGLUIMTKO24QDK4ZZLEEEE",
+          "revision_id": "3Q2BD7DYVSQLKOTYL27JABVUMA",
+          "section": "应用场景",
+          "start_line": 37,
+          "end_line": 38,
+          "content": "- 对性能要求不高：由于需要额外的VXLAN隧道封装，相对于另外两种容器网络模式，性能存在一定的损耗（约5%-15%）。所以容器隧道网络适用于对性能要求不是特别高的业务场景，比如：Web应用、访问量不大的数据中台、后台服务等。\n- 大规模组网：相比VPC路由网络受限于VPC路由条目配额的限制，容器隧道网络没有网络基础设施的任何限制；同时容器隧道网络把广播域控制到了节点级别，容器隧道网络最大可支持2000节点规模。",
+          "content_hash": "61bdfd077eee6ae7646886f383b20033dc4d13169326f3131394c79bcaf2d137",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0282.html",
+          "title": "容器隧道网络模型说明",
+          "score": 0.8914367
+        },
+        {
+          "id": "POGF2C4ABCMCGQ7LBVXT74TYTR",
+          "revision_id": "24FXARY6GKNPFBXXA6GVRUYK2R",
+          "section": "网络模型对比",
+          "start_line": 18,
+          "end_line": 37,
+          "content": "[表1](https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html)主要介绍CCE所支持的网络模型，您可根据实际业务需求进行选择。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/caution_3.0-zh-cn.png)\n\n集群创建成功后，网络模型不可更改，请谨慎选择。\n\n**表1** 网络模型对比\n\n| **对比维度** | **容器隧道网络** | **VPC网络** | **云原生网络2.0** |\n| --- | --- | --- | --- |\n| 适用场景 | - 对性能要求不高：由于需要额外的VXLAN隧道封装，相对于另外两种容器网络模式，性能存在一定的损耗（约5%-15%）。所以容器隧道网络适用于对性能要求不是特别高的业务场景，比如：Web应用、访问量不大的数据中台、后台服务等。 - 大规模组网：相比VPC路由网络受限于VPC路由条目配额的限制，容器隧道网络没有网络基础设施的任何限制；同时容器隧道网络把广播域控制到了节点级别，容器隧道网络最大可支持2000节点规模。 | - 性能要求较高：由于没有额外的隧道封装，相比于容器隧道网络模式，VPC网络模型集群的容器网络性能接近于VPC网络性能，所以适用于对性能要求较高的业务场景，比如：AI计算、大数据计算等。 - 中小规模组网：由于VPC路由网络受限于VPC路由表条目配额的限制，建议集群规模为1000节点及以下。 | - 性能要求高：由于云原生网络2.0直接使用VPC网络构建容器网络，容器通信不需要进行隧道封装和NAT转换，所以适用于对带宽、时延要求极高的业务场景，比如：线上直播、电商抢购等。 - 大规模组网：云原生网络2.0当前默认可支持2000个节点（最大支持20000节点），10万个Pod。 |\n| 核心技术 | OVS | IPVlan，VPC路由 | VPC弹性网卡/弹性辅助网卡 |\n| 适用集群 | CCE Standard集群 | CCE Standard集群 | CCE Turbo集群 |\n| 容器网络隔离 | Pod支持Kubernetes原生NetworkPolicy | 否 | Pod支持使用安全组隔离 |\n| ELB对接Pod | ELB对接Pod需要通过节点NodePort转发 | ELB对接Pod需要通过节点NodePort转发 | 使用独享型ELB时可直接对接Pod  使用共享型ELB对接Pod需要通过节点NodePort转发 |\n| Pod IP地址管理 | - 需设置单独的容器网段。容器网段独立于VPC网段，不能与之重叠。 - 集群创建完成后不支持容器网段扩容。为避免IP地址不足，建议将容器网段掩码最大设置为19位。 | - 需设置单独的容器网段。容器网段独立于VPC网段，不能与之重叠。 - 支持添加多个容器网段。 - 集群创建完成后支持添加容器网段，详情请参见[扩展VPC网络集群的容器网段](https://support.huaweicloud.com/usermanual-cce/cce_10_0680.html)。 - 分配Pod IP地址时，会先从容器网段中为每个节点配置一个固定的子网网段，节点内所有Pod的IP地址从该网段中分配。 | - 直接指定VPC子网作为容器网段。 - 集群创建完成后支持添加容器网段，详情请参见[添加/删除CCE Turbo集群的默认容器子网](https://support.huaweicloud.com/usermanual-cce/cce_10_0906.html)。 - Pod IP地址直接在VPC中分配，因此对VPC的地址消耗较高，建议在使用前规划较大的VPC网段。 |\n| 每个节点上可运行的Pod数量 | 取决于**节点可以创建的最大实例数**，由kubelet的配置参数**maxPods**决定，详情请参见[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 | 由**节点可以创建的最大实例数**和**每个节点预留的Pod IP数**中的最小值决定：   - 节点可以创建的最大实例数，即kubelet的配置参数**maxPods**，详情请参见[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 - 每个节点预留的Pod IP数，详情请参见[每个节点预留的Pod IP数说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 | 由**节点可以创建的最大实例数**和**每个节点预留的Pod IP数**中的最小值决定：   - 节点可以创建的最大实例数，即kubelet的配置参数**maxPods**，详情请参见[节点最大实例数](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 - 节点的网卡数量，详情请参见[CCE Turbo集群节点网卡数量](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 |\n| 网络性能 | 基于VxLAN隧道封装，有一定性能损耗。 | 无隧道封装，跨节点通过VPC路由器转发，性能较好，可媲美主机网络，但存在NAT转换损耗。 | 容器网络与VPC网络融合，性能无损耗。 |\n| 组网规模 | 最大可支持2000节点 | 受限于VPC路由表能力，适合中小规模组网，建议规模为1000节点及以下。  VPC网络模式下，集群每添加一个节点，会在VPC的路由表中添加一条路由（包括默认路由表和自定义路由表），因此集群本身规模受VPC路由表上限限制，创建前请提前评估集群规模。路由表配额请参见[使用限制](https://support.huaweicloud.com/intl/zh-cn/productdesc-vpc/overview_0003.html)。 | 默认支持2000节点，最大支持20000节点  由于云原生网络2.0集群中的容器从VPC网段内分配IP地址，消耗VPC的地址空间，实际支持规模受限于VPC子网网段大小，因此创建前请提前评估集群规模。 |\n| IPv4/IPv6双栈 | 支持创建IPv4/IPv6双栈集群 | 不支持 | 支持创建IPv4/IPv6双栈集群 |",
+          "content_hash": "3404daee75c0b8d3fb8a58cab1eb32d6bb862b99fab0ea2d6387bd57efd9a9d2",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html",
+          "title": "容器网络模型对比",
+          "score": 0.8878125
+        },
+        {
+          "id": "O2BP347T77TZGWC5TTNRK4MU6U",
+          "revision_id": "3Q2BD7DYVSQLKOTYL27JABVUMA",
+          "section": "容器隧道网络模型",
+          "start_line": 8,
+          "end_line": 18,
+          "content": "容器隧道网络是在主机网络平面的基础上，通过隧道封装技术来构建一个独立的容器网络平面。CCE集群容器隧道网络使用了VXLAN作为隧道封装协议，并使用了Open vSwitch作为后端虚拟交换机。VXLAN是一种将以太网报文封装成UDP报文进行隧道传输的协议，而Open vSwitch是一款开源的虚拟交换机软件，提供网络隔离和数据转发等功能。\n\n容器隧道网络虽然会有少量隧道封装性能损耗，但具有通用性强、互通性强、高级特性支持全面（例如NetworkPolicy网络隔离）等优势，适用于大多数性能要求不高的场景。\n\n**图1** 容器隧道网络\n ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001701593453.png \"点击放大\")\n\n在容器隧道模型的集群中，节点内Pod间通信和跨节点Pod间通信路径不同：\n\n- 节点内Pod间通信：同节点的Pod间通信通过本节点的OVS网桥直接转发。\n- 跨节点Pod间通信：所有跨节点Pod间的通信通过OVS隧道网桥进行封装后，通过主机网卡转发到另一个节点上的Pod。",
+          "content_hash": "a681f0bdb281979836572b51b0049f9b1eef69aa3184dfd6ca4b372a2de2abb7",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0282.html",
+          "title": "容器隧道网络模型说明",
+          "score": 0.88703454
+        },
+        {
+          "id": "I6265MP3TATG5ZAXM5HHVBRB7U",
+          "revision_id": "3Q2BD7DYVSQLKOTYL27JABVUMA",
+          "section": "优缺点",
+          "start_line": 22,
+          "end_line": 33,
+          "content": "**优点**\n\n- 容器网络和节点网络解耦，不受VPC配额规格、响应速度的限制（如VPC路由条目数、弹性网卡数、创建速度限制）。\n- 支持网络隔离，具体请参见[配置网络策略（NetworkPolicy）限制Pod访问的对象](https://support.huaweicloud.com/usermanual-cce/cce_10_0059.html)。\n- 支持带宽限制。\n- 支持大规模组网，最大可支持2000节点规模。\n\n**缺点**\n\n- 由于隧道封装，网络问题排查难度较大，整体性能较低。\n- Pod无法直接利用EIP、安全组等能力。\n- 不支持外部网络与Pod IP直接进行网络通信。",
+          "content_hash": "d06f867055ca65680f3efe52775c3830fda8b1881511968d45da5d25977627ac",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0282.html",
+          "title": "容器隧道网络模型说明",
+          "score": 0.8793909
+        },
+        {
+          "id": "JUFRXYPUSKRACAKIQYBZF6CT3D",
+          "revision_id": "U2G4EURAI2WC3NI4CNSFGSXBWE",
+          "section": "应用场景",
+          "start_line": 46,
+          "end_line": 47,
+          "content": "- 性能要求较高：由于没有额外的隧道封装，相比于容器隧道网络模式，VPC网络模型集群的容器网络性能接近于VPC网络性能，所以适用于对性能要求较高的业务场景，比如：AI计算、大数据计算等。\n- 中小规模组网：由于VPC路由网络受限于VPC路由表条目配额的限制，建议集群规模为1000节点及以下。",
+          "content_hash": "6bd0ed55cb8ecac21b68ed44ddcde1065687b581f772e1bfaebb35ab371575e7",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0283.html",
+          "title": "VPC网络模型说明",
+          "score": 0.8791851
+        }
+      ],
+      "result": {
+        "trace_id": "739b580d547e9fb0a6fa65053df91969"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1190.678917002515
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-029",
+      "group": "family:cce_10_0613",
+      "category": "存储",
+      "question_type": "constraint",
+      "question": "使用EVS保存容器数据时，删掉容器会丢失卷中数据吗，迁移有何可用区前提？",
+      "answerable": true,
+      "required_facts": [
+        "删除容器后卷数据仍在存储系统",
+        "随容器迁移要求同一可用区"
+      ],
+      "reference_answer": "删除容器后卷数据仍在存储系统；随容器迁移要求同一可用区",
+      "evidence": [
+        {
+          "document_id": "cce_10_0613",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0613.html",
+          "title": "云硬盘概述",
+          "file": "documents/cce_10_0613.md",
+          "content_sha256": "babb2edd4dff3b2ee20fdca31b942596b15ae087767c8ba90ee27dff60ae8965",
+          "start_line": 7,
+          "end_line": 7,
+          "section": "云硬盘概述",
+          "anchor": "当容器在同一可用区内迁移时",
+          "quote": "为满足数据持久化的需求，CCE支持将云硬盘（EVS）创建的存储卷挂载到容器的某一路径下，当容器在同一可用区内迁移时，挂载的云硬盘将一同迁移。通过云硬盘，可以将存储系统的远端文件目录挂载到容器中，数据卷中的数据将被永久保存，即使删除了容器，数据卷中的数据依然保存在存储系统中。",
+          "quote_sha256": "fb5a371c47adf97f8854452a5f2e2d710578b05921bc3fdeee6de3d23c3e02ee"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-029",
+      "question": "使用EVS保存容器数据时，删掉容器会丢失卷中数据吗，迁移有何可用区前提？",
+      "answerable": true,
+      "question_type": "constraint",
+      "category": "存储",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "JR4YJRF2DGPOXTWPL32N74QAQ7",
+          "revision_id": "TKPITLQDVT4UFLKG373JJGB76U",
+          "section": "注意事项",
+          "start_line": 15,
+          "end_line": 17,
+          "content": "- 删除节点池会同时删除节点池下的全部节点，请及时备份数据，避免重要数据丢失。\n- 删除节点会涉及Pod迁移，可能会影响业务，请在业务低峰期操作。如果Pod具有特定的节点选择器，且集群中的其他节点均不符合标准，则工作负载实例可能仍处于无法安排的状态。\n- 删除过程中，系统会把当前节点池中的节点均设置为不可调度状态。",
+          "content_hash": "aad1e4c3cde5b01db417e73ee8dae642c99bcc6eab18650a2a07253d661ae372",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0657.html",
+          "title": "删除节点池",
+          "score": 0.8248081
+        },
+        {
+          "id": "4PXBOM5QGNL7YNSVF42I743MTW",
+          "revision_id": "TKPITLQDVT4UFLKG373JJGB76U",
+          "section": "约束与限制",
+          "start_line": 10,
+          "end_line": 11,
+          "content": "- 对于包周期（包年/包月）预付费的节点池不能直接删除，请先移除节点池下全部的节点。\n- 删除节点会导致与节点关联的[本地持久存储卷](https://support.huaweicloud.com/usermanual-cce/cce_10_0391.html)类型的PVC/PV数据丢失，无法恢复，且PVC/PV无法再正常使用。删除节点时使用了本地持久存储卷的Pod会从删除的节点上驱逐，并重新创建Pod，Pod会一直处于pending状态，因为Pod使用的PVC带有节点标签，由于冲突无法调度成功。",
+          "content_hash": "57be97471d04cc87977c619e652f7b2133b7dc74eef1a324693f9ad1f6b6b4fd",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0657.html",
+          "title": "删除节点池",
+          "score": 0.8229195
+        },
+        {
+          "id": "XKFMDUXC3XFK67T666TPWSY5IO",
+          "revision_id": "22D4PMNZGAX7EFZYFV3267Q6YP",
+          "section": "约束与限制",
+          "start_line": 27,
+          "end_line": 29,
+          "content": "- 本地临时卷仅在集群版本 >= v1.21.2-r0 时支持，且需要everest插件版本>=1.2.29。\n- 请勿在节点上手动删除对应的存储池或卸载数据盘，否则会导致数据丢失等异常情况。\n- 请确保节点上Pod不要挂载/var/lib/kubelet/pods/目录，否则可能会导致使用了临时存储卷的Pod无法正常删除。",
+          "content_hash": "ee8b9a42db0e4d715c99b9b9fa7fbe513ffc9f4b71f8592cfba743055eea2c97",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0637.html",
+          "title": "临时存储卷概述",
+          "score": 0.8136401
+        },
+        {
+          "id": "JXGL3HO4MSENXDISW3BATFHDNJ",
+          "revision_id": "ZSPNV3JJF3OANCFW35G2NSUFBN",
+          "section": "约束与限制",
+          "start_line": 10,
+          "end_line": 15,
+          "content": "- 本地临时卷仅在集群版本 >= v1.21.2-r0 时支持，且需要everest插件版本>=1.2.29。\n\n- 供容器运行时与K8s组件使用的数据盘不支持导入存储池。\n- 条带化模式的存储池不支持扩容，条带化存储池扩容后可能造成碎片空间，无法使用。\n- 存储池不支持缩容和删除。\n- 如果删除节点上存储池的磁盘，会导致存储池异常。",
+          "content_hash": "b00a65a05aefcd6d1fd4b03b7e07b99f9cce4df11374da426940537eeac85b12",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0725.html",
+          "title": "在存储池中导入临时卷",
+          "score": 0.8130073
+        },
+        {
+          "id": "WSZ6L5RHQOVYQO46X5JAPJTDIV",
+          "revision_id": "YCOVC6GDQ5B363R7KKMTFBCLFO",
+          "section": "约束与限制",
+          "start_line": 16,
+          "end_line": 19,
+          "content": "- 使用通用文件系统（原SFS 3.0 容量型）SFS存储卷时，集群中需要安装2.0.9及以上版本的[CCE容器存储（Everest）](https://support.huaweicloud.com/usermanual-cce/cce_10_0066.html)。\n- 使用通用文件系统（原SFS 3.0 容量型）SFS存储卷时，挂载点不支持修改属组和权限，挂载点默认属主为root。\n- 使用通用文件系统（原SFS 3.0 容量型）时，创建、删除PVC和PV过程中可能存在时延，实际计费时长请以SFS侧创建、删除时刻为准。\n- CCE容器存储（Everest）插件版本在2.4.105以下，或区域为华南-广州时，若通用文件系统（原SFS 3.0 容量型）需要使用Delete回收策略，建议先删除文件系统内文件，否则可能会导致对应PV和PVC删除失败。插件版本在2.4.105及以上，且区域非华南-广州时，无该限制。",
+          "content_hash": "58ead74ad845ae852a91f6722fdd16734d46892a3d177c77ea3b92fb7223bb10",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0620.html",
+          "title": "通过动态存储卷使用文件存储",
+          "score": 0.812174
+        }
+      ],
+      "result": {
+        "trace_id": "976b1537c032eed13307f57f479dd35a"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1166.9196669972735
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-051",
+      "group": "family:cce_10_11511",
+      "category": "AI容器",
+      "question_type": "concept",
+      "question": "Kthena ModelServing要补足Deployment/StatefulSet处理LLM推理时的哪些局限？",
+      "answerable": true,
+      "required_facts": [
+        "拓扑感知",
+        "原子调度",
+        "复杂推理工作流编排",
+        "为PD分离等模式提供声明式生命周期管理"
+      ],
+      "reference_answer": "拓扑感知；原子调度；复杂推理工作流编排；为PD分离等模式提供声明式生命周期管理",
+      "evidence": [
+        {
+          "document_id": "cce_10_1123",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html",
+          "title": "Kthena ModelServing",
+          "file": "documents/cce_10_1123.md",
+          "content_sha256": "7d3e61273eeedb0fb3e5cec8eb53c59092d8178d921a215b21b3998008107e00",
+          "start_line": 13,
+          "end_line": 13,
+          "section": "Kthena ModelServing",
+          "anchor": "Kthena ModelServing专为云原生环境下的LLM推理设计",
+          "quote": "Kthena ModelServing专为云原生环境下的LLM推理设计，提供声明式的生命周期管理。其核心目标是突破Kubernetes原生负载（如Deployment/StatefulSet）在拓扑感知、原子调度及复杂推理工作流编排上的局限，为PD分离等高级模式构建坚实底座。",
+          "quote_sha256": "b413f01c2c2abadb8a8087a9b60cd71147f42ab1f00ea729c1101a255740174a"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-051",
+      "question": "Kthena ModelServing要补足Deployment/StatefulSet处理LLM推理时的哪些局限？",
+      "answerable": true,
+      "question_type": "concept",
+      "category": "AI容器",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "YXBCQFDDLKVCVIF62YM43KO3AB",
+          "revision_id": "PLZ3AQGKBSIZF7BUDL4URTQKTV",
+          "section": "Eviction保护（Eviction Protection）",
+          "start_line": 164,
+          "end_line": 237,
+          "content": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\nEviction保护需Volcano插件版本不低于1.22.24，并在插件YAML中开启kthena.enable\\_evictionWebhook: true后方可生效。\n\nKthena提供面向ModelServing推理拓扑的驱逐保护能力，在节点维护、节点缩容、kubectl drain等主动驱逐场景下，防止关键推理实例被过量驱逐，保障在线推理服务的最小可用性。\n\nKubernetes原生的PodDisruptionBudget（PDB）仅支持基于Pod数量的保护粒度，难以适配ModelServing的多层结构。ModelServing采用ModelServing **→** ServingGroup **→** Role的层级模型，尤其在大语言模型（LLM）推理场景中，单Pod通常无法代表一个完整可用的推理实例。在PD分离、分布式推理及多Role协作等架构下，需以ServingGroup或Role为维度评估服务可用性。\n\nKthena支持两种保护粒度：\n\n- ServingGroup级保护：以ServingGroup为保护单元，确保可用ServingGroup数量不低于minAvailable，保障整体推理服务完整性。\n- Role级保护：以Role为保护单元，分别保障Prefill、Decode等关键Role的可用实例数不低于设定阈值，避免核心推理阶段受损。\n\n工作机制：当系统接收到Pod驱逐请求时，Kthena会识别目标Pod所属的ModelServing、ServingGroup及Role，并结合已配置的保护策略进行预判断。若本次驱逐后，可用实例数仍能满足最小可用性要求，则允许驱逐；否则将拒绝该驱逐请求。\n\n**示例配置**\n\n- ServingGroup级保护\n\n  本示例中，replicas: 3表示ModelServing包含3个ServingGroup，minAvailable: 2表示系统需保障至少2个ServingGroup处于可用状态。在节点维护等主动驱逐场景下，系统最多允许1个ServingGroup不可用。若继续驱逐将导致可用ServingGroup数量低于minAvailable阈值，Kthena将拒绝该Eviction请求。\n\n  ```\n  apiVersion: workload.serving.volcano.sh/v1alpha1\n  kind: ModelServing\n  metadata:\n    name: sample\n    namespace: default\n  spec:\n    schedulerName: volcano\n    replicas: 3\n    rolloutStrategy:\n      evictionStrategy:\n        protectionLevel: ServingGroup\n        minAvailable: 2\n  ```\n- Role级保护\n\n  本示例分别对prefill和decode两个关键Role的可用实例数进行保护。即便所属ServingGroup中仍有其他副本在线，只要本次驱逐将导致任一受保护Role的可用实例数低于配置阈值，Kthena都将拒绝该Eviction请求。\n\n  ```\n  apiVersion: workload.serving.volcano.sh/v1alpha1\n  kind: ModelServing\n  metadata:\n    name: sample\n    namespace: default\n  spec:\n    schedulerName: volcano\n    replicas: 2\n    template:\n      roles:\n        - name: prefill\n          replicas: 2\n        - name: decode\n          replicas: 3\n    rolloutStrategy:\n      evictionStrategy:\n        protectionLevel: Role\n        roleMinAvailable:\n          prefill: 1\n          decode: 2\n  ```\n\n**配置建议**\n\nminAvailable和roleMinAvailable均支持绝对值和百分比两种配置形式，例如：minAvailable: 2或minAvailable: 80%。\n\n- 普通多副本推理服务：建议使用ServingGroup级保护，保障完整推理实例数量。\n- PD分离或多Role协作场景：建议使用Role级保护，分别保障Prefill、Decode等关键Role的可用性。\n- 允许节点维护期间少量实例被驱逐：minAvailable应小于总副本数。\n- 业务容量随自动扩缩容动态变化：建议使用百分比形式配置保护阈值。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/caution_3.0-zh-cn.png)\n\n该功能参考Kubernetes原生PDB的使用机制，仅保护Pod驱逐场景，不保护Pod删除场景。需特别注意的是通过节点打污点触发的Pod驱逐，实际执行的是删除动作，因此该机制无法保护节点打污点场景。",
+          "content_hash": "4e216617f56809792fd863c077a34442a225e1f4816c6dad73a5c56fe4ae544a",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html",
+          "title": "Kthena ModelServing",
+          "score": 0.8236058
+        },
+        {
+          "id": "KDEU7XTG3RDAVNNVPNH56RGWFG",
+          "revision_id": "PLZ3AQGKBSIZF7BUDL4URTQKTV",
+          "section": "架构设计",
+          "start_line": 16,
+          "end_line": 41,
+          "content": "为解决Kubernetes原生资源（如Deployment或StatefulSet）在处理多角色协作场景下的局限性，Kthena采用ModelServing → ServingGroup → Role的三层结构，每一层承担不同的职责，共同协作以实现高性能、可扩展的推理服务。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002555468265.png \"点击放大\")\n\n**表1** 架构层级与职责\n\n| 层级 | 管理对象 | 核心职责 |\n| --- | --- | --- |\n| ModelServing | ServingGroup集合 | 作为全生命周期的统一控制平面，负责维护全局配置一致性，实现版本控制（Revision），提供推理集群的状态查询能力。提供统一接口，管理全局副本和版本。 |\n| ServingGroup | Role集合 | 作为推理服务的独立功能单元，是连接顶层控制与底层执行的逻辑分组。包含完成一次端到端推理所需的所有角色，确保推理逻辑的完整性和独立性。 |\n| Role | Pod集合 | 作为最小的功能执行单元，负责具体的计算任务，由一组具有确定性编号的Pod组成。执行特定的计算或分发任务，例如Prefill和Decode角色的执行。 |\n\n在Role层级内部，Kthena采用双Pod模板设计，以支持分布式推理场景中的职责解耦，并通过定义特定的环境变量对Pod进行精细化控制和协作。\n\n- Entry Pod：充当流量入口与任务协调器 。负责接收外部请求并分发计算任务。\n- Worker Pod：计算执行单元。专注于执行实际的张量计算与推理任务。\n\n  为便于客户在业务中识别Pod的角色身份，控制器将自动为Entry和Worker Pod注入以下关键环境变量。\n\n  **表2** 关键环境变量\n\n  | 环境变量 | 说明 |\n  | --- | --- |\n  | GROUP\\_SIZE | 定义当前Role实例中Pod的总数，用于协调Pod之间的协作逻辑。 |\n  | ENTRY\\_ADDRESS | Entry Pod的内网地址（格式为Headless Service），用于Worker Pod通信。 |\n  | WORKER\\_INDEX | 每个Worker Pod在当前Role实例中的唯一索引，用于身份识别与任务分配。 |",
+          "content_hash": "fcad512f1b0ee7980ae21bd021e2a6ff3f6a8718bdea304a618f9a3693344fa7",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html",
+          "title": "Kthena ModelServing",
+          "score": 0.82203823
+        },
+        {
+          "id": "3OEZRMZH6NNIHRZEBQFQURXDUH",
+          "revision_id": "PLZ3AQGKBSIZF7BUDL4URTQKTV",
+          "section": "作业调度（Gang Scheduling）",
+          "start_line": 64,
+          "end_line": 99,
+          "content": "Kthena深度集成了Volcano调度器，支持“All or Nothing”的原子调度逻辑，有效避免了在分布式推理组中由于部分Pod无法就绪而导致的调度死锁和资源浪费问题。其核心思想为检查Job下的Pod已调度数量是否满足了最小运行数量，当Job的最小运行数量得到满足时，为Job下的所有Pod执行调度动作，否则不执行。\n\n系统通过minMember计算每个ModelServing实例所需的最小Pod数，保障调度的高效与可控。minMember计算逻辑如下：\n\n- 默认模式：若未配置minRoleReplicas，系统将基于所有Role的副本数进行统一计算。\n\n  ```\n  minMember = replicas × role.replicas × (1 + role.workerReplicas)\n  ```\n- 精细化模式：若配置了minRoleReplicas，系统将根据索引逻辑（从0至minRoleReplicas[roleName] - 1），为每个Role独立计算其必须就绪的最小Pod数量，从而支持更灵活的启动策略。\n\n  配置示例：在本示例中，prefill和decode两个Role各有4个副本，但系统将确保至少2个副本成功调度和就绪，从而提升整体调度效率和资源利用率。\n\n  ```\n  apiVersion: workload.serving.volcano.sh/v1alpha1\n  kind: ModelServing\n  metadata:\n    name: sample\n    namespace: default\n  spec:\n    schedulerName: volcano\n    replicas: 1  # servingGroup replicas\n    template:\n      restartGracePeriodSeconds: 60\n      gangPolicy:\n        minRoleReplicas:\n          prefill: 2\n          decode: 2\n      roles:\n        - name: prefill\n          replicas: 4\n          # ... additional role pod configuration\n        - name: decode\n          replicas: 4\n          # ... additional role pod configuration\n  ```",
+          "content_hash": "c538168841a9bf423869e8f6ca47878b256406fe9b6826b9d1e67f443ab17afb",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html",
+          "title": "Kthena ModelServing",
+          "score": 0.8214527
+        },
+        {
+          "id": "RYTQUGVOA4L2F2J7I4PN3J3JN7",
+          "revision_id": "PLZ3AQGKBSIZF7BUDL4URTQKTV",
+          "section": "约束与限制",
+          "start_line": 56,
+          "end_line": 58,
+          "content": "- ModelServing依赖Volcano调度器插件，若集群未安装该插件，相关功能将无法生效。\n- 当前CCE控制台暂不支持图形化创建ModelServing，需通过kubectl或YAML文件进行部署。\n- 若使用minRoleReplicas，需确保集群资源充足，否则可能导致作业长期处于Pending状态。",
+          "content_hash": "05c8c084d2397b6b09270d75b8c7386eb85682841e5062027b82b49c7b83779b",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html",
+          "title": "Kthena ModelServing",
+          "score": 0.805722
+        },
+        {
+          "id": "MIW2JEOBKGKRTWU7VWXHGXOTQ3",
+          "revision_id": "PLZ3AQGKBSIZF7BUDL4URTQKTV",
+          "section": "使用示例：ModelServing负载完整用例（以Nginx负载为例）",
+          "start_line": 241,
+          "end_line": 322,
+          "content": "本示例包含prefill和decode两个Role，其中prefill角色有2个副本，每个副本包含1个Entry和1个Worker，共两个Pod；Decode角色有3个副本，每个副本包含1个Entry和2个Worker，共3个Pod。关于其他调度特性的描述，请查看[关键特性解析](https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html)。\n\n```\napiVersion: workload.serving.volcano.sh/v1alpha1\nkind: ModelServing\nmetadata:\n  name: sample\n  namespace: default\nspec:\n  schedulerName: volcano\n  replicas: 1  # servingGroup replicas\n  recoveryPolicy: RoleRecreate # 重启策略\n  template:\n    restartGracePeriodSeconds: 60\n    gangPolicy: # Gang Scheduling策略\n      minRoleReplicas:\n        prefill: 2\n        decode: 1\n    roles:\n      - name: prefill\n        replicas: 2       # role replicas\n        entryTemplate:\n          spec:\n            containers:\n              - name: worker\n                image: nginx:latest\n                resources:\n                  limits:\n                    cpu: 250m\n                    memory: 512Mi\n                  requests:\n                    cpu: 250m\n                    memory: 512Mi\n            imagePullSecrets:\n            - name: default-secret\n        workerReplicas: 1\n        workerTemplate:\n          spec:\n            containers:\n              - name: worker\n                image: nginx:latest\n                resources:\n                  limits:\n                    cpu: 250m\n                    memory: 512Mi\n                  requests:\n                    cpu: 250m\n                    memory: 512Mi\n            imagePullSecrets:\n            - name: default-secret\n      - name: decode\n        replicas: 3  # role replicas\n        entryTemplate:\n          spec:\n            containers:\n              - name: worker\n                image: nginx:latest\n                resources:\n                  limits:\n                    cpu: 250m\n                    memory: 512Mi\n                  requests:\n                    cpu: 250m\n                    memory: 512Mi\n            imagePullSecrets:\n            - name: default-secret\n        workerReplicas: 2\n        workerTemplate:\n          spec:\n            containers:\n              - name: worker\n                image: nginx:latest\n                resources:\n                  limits:\n                    cpu: 250m\n                    memory: 512Mi\n                  requests:\n                    cpu: 250m\n                    memory: 512Mi\n            imagePullSecrets:\n            - name: default-secret\n```",
+          "content_hash": "d43d1317b70d90bf6b1bc430686418e5a65e63f3e1fcb558a9bee8dda404a6e5",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1123.html",
+          "title": "Kthena ModelServing",
+          "score": 0.8053633
+        }
+      ],
+      "result": {
+        "trace_id": "b39a098cbc1aa6f3ed6f9e22929857d1"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1110.0810839998303
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-055",
+      "group": "cce_10_0285",
+      "category": "命名空间",
+      "question_type": "scenario",
+      "question": "想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？",
+      "answerable": true,
+      "required_facts": [
+        "为不同环境建立对应命名空间",
+        "创建和查询工作负载时选择对应命名空间",
+        "不要宣称这等同于完整网络安全隔离"
+      ],
+      "reference_answer": "为不同环境建立对应命名空间；创建和查询工作负载时选择对应命名空间；不要宣称这等同于完整网络安全隔离",
+      "evidence": [
+        {
+          "document_id": "cce_10_0285",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "file": "documents/cce_10_0285.md",
+          "content_sha256": "d0eaed4dded12d85d8eac6419e236f92048a9e8661f35deffb2e18f2013e6cb5",
+          "start_line": 9,
+          "end_line": 9,
+          "section": "使用命名空间",
+          "anchor": "创建工作负载时，您可以选择对应的命名空间",
+          "quote": "- 创建工作负载时，您可以选择对应的命名空间，实现资源或租户的隔离。",
+          "quote_sha256": "1bb41cad7bb282da433d127c84266be595c5306936e74c02d3d329b87893a2a1"
+        },
+        {
+          "document_id": "cce_10_0285",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "file": "documents/cce_10_0285.md",
+          "content_sha256": "d0eaed4dded12d85d8eac6419e236f92048a9e8661f35deffb2e18f2013e6cb5",
+          "start_line": 21,
+          "end_line": 21,
+          "section": "命名空间使用实践",
+          "anchor": "不同环境创建对应命名空间",
+          "quote": "  - 不同环境创建对应命名空间。",
+          "quote_sha256": "d5bd35649dd972b99a7481ae565fefd378b3b016ce9a19f19878a092ac218a59"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-055",
+      "question": "想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？",
+      "answerable": true,
+      "question_type": "scenario",
+      "category": "命名空间",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "LM22IS5IY2IAU5A4WLND4CWAFJ",
+          "revision_id": "HS62WBISREKMYS7EWPCAPBOVRH",
+          "section": "前提条件",
+          "start_line": 41,
+          "end_line": 41,
+          "content": "已创建v1.29及以上版本的CCE Standard/Turbo集群。",
+          "content_hash": "824eadabea778bd337919a89cf47f904cf9691625733774077710a0b5bc834ad",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11112.html",
+          "title": "使用FlexNPU实现NPU资源虚拟化与隔离",
+          "score": 0.8297521
+        },
+        {
+          "id": "RMNINLV3WW2T7VBCGDKD7OBIEO",
+          "revision_id": "B4TRPMQBRBOUSTLF74HH2MXLCA",
+          "section": "网络组件配置（canal-controller）（仅容器隧道网络模型的集群支持）",
+          "start_line": 189,
+          "end_line": 191,
+          "content": "| 名称 | 参数 | 详情 | 取值 | 配置方式 |\n| --- | --- | --- | --- | --- |\n| 容器隧道网络集群开启NetworkPolicy | enable-canal-network-policy | 容器隧道集群开启NetworkPolicy能力。  **仅支持新建集群时配置，存量集群不支持修改**。 | 默认：true | 仅支持通过API配置 |",
+          "content_hash": "e73ed3ef312efa9e4bb6ba1495947ed11136db4a6b36409a9ebc481380dab5c3",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html",
+          "title": "修改CCE集群配置",
+          "score": 0.81310695
+        },
+        {
+          "id": "X6ECT3UXOT2HY5KQGMDGY7RYQX",
+          "revision_id": "B4TRPMQBRBOUSTLF74HH2MXLCA",
+          "section": "集群配置参数说明",
+          "start_line": 111,
+          "end_line": 111,
+          "content": "集群支持以下配置参数。",
+          "content_hash": "9ff472d8ad01904332c511d0fb8dbf9c0e9be569f15322176b7bfec72632d15e",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html",
+          "title": "修改CCE集群配置",
+          "score": 0.8066495
+        },
+        {
+          "id": "32UYBDBXMQVDIY6SPSTIP4JNBF",
+          "revision_id": "HS62WBISREKMYS7EWPCAPBOVRH",
+          "section": "步骤一：安装CCE AI套件（Ascend NPU）并开启FlexNPU特性",
+          "start_line": 78,
+          "end_line": 84,
+          "content": "1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群。\n2. 在左侧导航栏中选择“插件中心”，在右侧找到**CCE AI套件（Ascend NPU）**插件，单击“安装”。\n3. 在“安装插件”面板中，插件版本选择2.8.11及以上。\n4. 单击“YAML安装”，在“spec.values.custom”中添加“enable\\_flexnpu”参数，并将其值设置为“true”，然后单击“提交”。\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002561976491.png \"点击放大\")\n5. 在“插件中心”页面，查看已安装插件的详情。确认插件的实例状态为运行中。",
+          "content_hash": "8512d465b3c512a68bd732baffb8a8c9946a669b1097dd7f2e37a0c112a6f0c1",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11112.html",
+          "title": "使用FlexNPU实现NPU资源虚拟化与隔离",
+          "score": 0.8032848
+        },
+        {
+          "id": "FMBNH4QDG5J353KQFKU3J6DK7L",
+          "revision_id": "NCCDQYJVR55HIG275G6EQTZUDK",
+          "section": "前提条件",
+          "start_line": 10,
+          "end_line": 11,
+          "content": "- 在集群控制节点安全组（安全组名称：集群名称-cce-control-随机数）的5443端口中，已放通**198.19.0.0/16**网段，具体请参见[如何配置集群的访问策略](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00417.html)。\n- 集群中已安装CoreDNS插件。",
+          "content_hash": "9364c9cb3de5ea83357f459cc4760f08ca6664e9b2e858217356bd29350cca8e",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0671.html",
+          "title": "通过CloudShell连接集群",
+          "score": 0.80267173
+        }
+      ],
+      "result": {
+        "trace_id": "6bc006678d82eee3b920de7c2805a8d7"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1117.8970420005498
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-058",
+      "group": "family:cce_10_0152",
+      "category": "配置项与密钥",
+      "question_type": "concept",
+      "question": "ConfigMap适合保存敏感密码吗，应用可以用哪两种方式读取？",
+      "answerable": true,
+      "required_facts": [
+        "用于非敏感配置，密码应使用Secret等适当机制",
+        "文件挂载",
+        "环境变量注入"
+      ],
+      "reference_answer": "用于非敏感配置，密码应使用Secret等适当机制；文件挂载；环境变量注入",
+      "evidence": [
+        {
+          "document_id": "cce_10_0152",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0152.html",
+          "title": "创建配置项",
+          "file": "documents/cce_10_0152.md",
+          "content_sha256": "81c84ae2f20df6d9cc6da4d35fca01b1c115288e9f78e8cc5479b6f44165630d",
+          "start_line": 9,
+          "end_line": 9,
+          "section": "操作场景",
+          "anchor": "用于存储非敏感配置信息的资源类型",
+          "quote": "配置项（ConfigMap）是Kubernetes中用于存储非敏感配置信息的资源类型，其内容可由用户灵活定义。配置项创建完成后，支持以文件挂载或环境变量注入两种方式，被容器工作负载直接调用。",
+          "quote_sha256": "e40a83f67e818e2aeedf453934beeecbf19bd1ba2a5ad868c97361d6d265456a"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-058",
+      "question": "ConfigMap适合保存敏感密码吗，应用可以用哪两种方式读取？",
+      "answerable": true,
+      "question_type": "concept",
+      "category": "配置项与密钥",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "NS4RY2NLJCEHHD7CB546ZT25JA",
+          "revision_id": "23ODZE2Z67QKK7IJ46XJBGZ4JN",
+          "section": "操作场景",
+          "start_line": 8,
+          "end_line": 10,
+          "content": "密钥（Secret）是Kubernetes中用于存储敏感信息等的资源类型，例如工作负载所需要认证信息、密钥等。Secret的内容由用户决定，创建完成后，支持以文件挂载或环境变量注入两种方式，被容器工作负载安全调用。\n\n借助Secret，能够将敏感信息与容器镜像解耦，避免敏感数据明文暴露在镜像或配置文件中，大幅降低数据泄露风险，同时提升工作负载的安全性与可移植性。",
+          "content_hash": "1dc51c1c2650bf9b6e400803044a7890ce31a6ca38cd5c11131ccc771ed938ad",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0153.html",
+          "title": "创建密钥",
+          "score": 0.8162177
+        },
+        {
+          "id": "QRXXAJT5VM3T2W5Q2FEXASNS3R",
+          "revision_id": "V42ENTIFS3MWJJJSDZRLS3XVRB",
+          "section": "default-secret",
+          "start_line": 16,
+          "end_line": 61,
+          "content": "default-secret的类型为kubernetes.io/dockerconfigjson，其data内容是登录SWR镜像仓库的凭据，用于从SWR拉取镜像。在CCE中创建工作负载时如果需要从SWR拉取镜像，需要配置imagePullSecrets的取值为default-secret，如下所示。\n\n```\napiVersion: v1\nkind: Pod\nmetadata:\n  name: nginx\nspec:\n  containers:\n  - image: nginx:alpine\n    name: container-0\n    resources:\n      limits:\n        cpu: 100m\n        memory: 200Mi\n      requests:\n        cpu: 100m\n        memory: 200Mi\n  imagePullSecrets:\n  - name: default-secret\n```\n\n**default-secret的data数据会定期更新**，**且当前的data内容会在一定时间后会过期失效**。您可以使用describe命令在default-secret中查看到具体的过期时间，如下所示。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/notice_3.0-zh-cn.png)\n\n在使用时请直接使用default-secret，而不要复制secret内容重新创建，因为secret里面的凭据会过期，从而导致无法拉取镜像。\n\n```\nkubectl describe secret default-secret\n```\n\n回显如下：\n\n```\nName:         default-secret\nNamespace:    default\nLabels:       secret-generated-by=cce\nAnnotations:  swr-auth-may-expires-at: 2021-11-26 20:55:31.380909 +0000 UTC\n\nType:  kubernetes.io/dockerconfigjson\n\nData\n====\n.dockerconfigjson:  347 bytes\n```",
+          "content_hash": "e964bc77d08fa480d2a8f7d32ccbe301db8d39843fe2f2ac40db9e51707bbe6a",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0388.html",
+          "title": "集群系统密钥说明",
+          "score": 0.813605
+        },
+        {
+          "id": "VIB7LGQEOSYGWTAECTKQL5ABIG",
+          "revision_id": "SW6FNN7APYYPLAEPRNGOYEWYRZ",
+          "section": "容器安全插件",
+          "start_line": 64,
+          "end_line": 67,
+          "content": "| 插件名称 | 插件简介 |\n| --- | --- |\n| [CCE密钥管理（对接 DEW）](https://support.huaweicloud.com/usermanual-cce/cce_10_0370.html) | CCE密钥管理插件用于对接[密码安全中心](https://support.huaweicloud.com/intl/zh-cn/productdesc-dew/dew_01_0093.html)(Data Encryption Workshop, DEW)。该插件允许用户将存储在集群外部（即专门存储敏感信息的数据加密服务）的凭据挂载至业务Pod内，从而将敏感信息与集群环境解耦，有效避免程序硬编码或明文配置等问题导致的敏感信息泄密。 |\n| [容器镜像签名验证](https://support.huaweicloud.com/usermanual-cce/cce_10_0743.html) | 容器镜像签名验证插件（swr-cosign）提供镜像验签功能，可以对镜像文件进行数字签名验证，以确保镜像文件的完整性和真实性，有效地防止软件被篡改或植入恶意代码，保障用户的安全。 |",
+          "content_hash": "7a93614493d21a5faac30ca93d60059251785a108206aff1062251b0da3d2bcd",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0277.html",
+          "title": "插件概述",
+          "score": 0.8104438
+        },
+        {
+          "id": "TQV75YD23Z72PT2RDWGIYKJGA6",
+          "revision_id": "23ODZE2Z67QKK7IJ46XJBGZ4JN",
+          "section": "Secret资源文件配置示例",
+          "start_line": 79,
+          "end_line": 170,
+          "content": "本章节主要介绍Secret资源描述文件的配置示例。\n\n- Opaque类型\n\n  定义的Secret文件secret.yaml内容如下。其中data字段以键值对的形式填写，value需要用Base64编码，Base64编码方法请参见[如何进行Base64编码](https://support.huaweicloud.com/usermanual-cce/cce_10_0153.html)。\n\n  ```\n  apiVersion: v1\n  kind: Secret\n  metadata:\n    name: mysecret           # secret的名称\n    namespace: default       #命名空间，默认为default\n  data:\n    <your_key>: <your_value>  #填写键值对，其中value需要用Base64编码\n  type: Opaque\n  ```\n- kubernetes.io/dockerconfigjson类型\n\n  定义的Secret文件secret.yaml内容如下。其中.dockerconfigjson需要用Base64，Base64编码方法请参见[如何进行Base64编码](https://support.huaweicloud.com/usermanual-cce/cce_10_0153.html)。\n\n  ```\n  apiVersion: v1\n  kind: Secret\n  metadata:\n    name: mysecret           # secret的名称\n    namespace: default       #命名空间，默认为default\n  data:\n    .dockerconfigjson: eyJh*****    #Base64编码后的内容\n  type: kubernetes.io/dockerconfigjson\n  ```\n\n  获取.dockerconfigjson内容的步骤如下：\n\n  1. 获取镜像仓库的登录信息：\n     - 镜像仓库地址：本文中以address为例，请根据实际信息替换。\n     - 用户名：本文中以username为例，请根据实际信息替换。\n     - 密码：本文中以password为例，请根据实际信息替换。\n  2. 使用Base64将键值对username:password进行编码，获取编码后的内容填入[3](https://support.huaweicloud.com/usermanual-cce/cce_10_0153.html)中。\n\n     ```\n     echo -n \"username:password\" | base64\n     ```\n\n     回显如下：\n\n     ```\n     dXNlcm5hbWU6cGFzc3dvcmQ=\n     ```\n  3. 使用Base64对以下JSON内容进行编码。\n\n     ```\n     echo -n '{\"auths\":{\"address\":{\"username\":\"username\",\"password\":\"password\",\"auth\":\"dXNlcm5hbWU6cGFzc3dvcmQ=\"}}}' | base64\n     ```\n\n     回显如下：\n\n     ```\n     eyJhdXRocyI6eyJhZGRyZXNzIjp7InVzZXJuYW1lIjoidXNlcm5hbWUiLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiYXV0aCI6ImRYTmxjbTVoYldVNmNHRnpjM2R2Y21RPSJ9fX0=\n     ```\n\n     编码后的内容即为.dockerconfigjson内容。\n\n- kubernetes.io/tls类型\n\n  其中tls.crt和tls.key需要用Base64，Base64编码方法请参见[如何进行Base64编码](https://support.huaweicloud.com/usermanual-cce/cce_10_0153.html)。\n\n  ```\n  kind: Secret\n  apiVersion: v1\n  metadata:\n    name: mysecret           # secret的名称\n    namespace: default       #命名空间，默认为default\n  data:\n    tls.crt: LS0tLS1CRU*****FURS0tLS0t  #证书内容，需要Base64编码\n    tls.key: LS0tLS1CRU*****VZLS0tLS0=  #私钥内容，需要Base64编码\n  type: kubernetes.io/tls\n  ```\n- IngressTLS类型\n\n  其中tls.crt和tls.key需要用Base64，Base64编码方法请参见[如何进行Base64编码](https://support.huaweicloud.com/usermanual-cce/cce_10_0153.html)。\n\n  ```\n  kind: Secret\n  apiVersion: v1\n  metadata:\n    name: mysecret           # secret的名称\n    namespace: default       #命名空间，默认为default\n  data:\n    tls.crt: LS0tLS1CRU*****FURS0tLS0t  #证书内容，需要Base64编码\n    tls.key: LS0tLS1CRU*****VZLS0tLS0=  #私钥内容，需要Base64编码\n  type: IngressTLS\n  ```",
+          "content_hash": "d0de994b4cb56bed2c02edf579160e1a7fadec62e44f7032fa31750c25f6e1b2",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0153.html",
+          "title": "创建密钥",
+          "score": 0.8005087
+        },
+        {
+          "id": "2PA5ZILYEAN62ZHXG43EZSMHPF",
+          "revision_id": "VA2RBPOKUTOFMTGEZWLNBY5BHK",
+          "section": "配置KMS权限",
+          "start_line": 70,
+          "end_line": 88,
+          "content": "1. 登录[IAM控制台](https://console-intl.huaweicloud.com/iam/#/iam/agencies)，在左侧导航栏单击“委托”。在右侧搜索框中，搜索“cce\\_cluster\\_agency”。在搜索结果中，单击“cce\\_cluster\\_agency”名称，进入基本信息页。\n2. 切换至“授权记录”页签，单击“授权”，右上角单击“新建策略”。\n3. 在“新建策略”步骤中，配置相关参数。本示例仅介绍必要参数，更多参数说明请参见[创建自定义策略](https://support.huaweicloud.com/intl/zh-cn/usermanual-iam/iam_01_0605.html)。\n\n   **图1** 配置权限\n    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002331582633.png \"点击放大\")\n\n   **表2**\n\n   | 参数 | 说明 |\n   | --- | --- |\n   | 策略名称 | 请根据需求自定义策略名称。  命名规范：长度不超过128个字符，仅支持大小写字母、中文、数字、空格或特殊字符(-\\_.,)。 |\n   | 策略内容 | 用于配置具体策略，配置如下：  - 允许：请选择“允许”。 - 云服务：请选择“密码安全中心（KMS）”。 - 操作：请勾选“kms:cmk:create”和“kms:dek:create”权限。 - 所有资源：请选择“所有资源” |\n4. 在右下角单击“下一步”，在“确认”弹窗中单击“确定”。当策略列表中出现新建的策略名称，则说明策略创建成功。\n5. 在“授权 > 选择策略”页面，勾选新建的策略名称，并在右下角单击“下一步”。\n\n   **图2** 选择策略\n    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002331590213.png \"点击放大\")\n6. 在“授权 > 设置最小授权范围”页面，选择“所有资源”，并在右下角单击“确定”。在“授权 > 完成”页面，单击“完成”。",
+          "content_hash": "741b10989c70e5bb4f402e1f3832df990f455da5c26aa4c01018d7e41092c65d",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1011.html",
+          "title": "加密对象存储卷",
+          "score": 0.7983399
+        }
+      ],
+      "result": {
+        "trace_id": "0b29725c43cc9c36246a2b9b86150e50"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1116.0505829902831
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-080",
+      "group": "family:cce_10_0613",
+      "category": "存储管理-Flexvolume（已弃用）",
+      "question_type": "constraint",
+      "question": "已弃用Flexvolume云硬盘文档中，两个Pod用同一EVS却调度到不同节点会怎样？",
+      "answerable": true,
+      "required_facts": [
+        "云硬盘非共享，不能同时被多个节点挂载",
+        "必有一个Pod无法挂载而不能启动",
+        "需指出这是历史Flexvolume文档范围"
+      ],
+      "reference_answer": "云硬盘非共享，不能同时被多个节点挂载；必有一个Pod无法挂载而不能启动；需指出这是历史Flexvolume文档范围",
+      "evidence": [
+        {
+          "document_id": "cce_10_0310",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0310.html",
+          "title": "云硬盘存储卷概述",
+          "file": "documents/cce_10_0310.md",
+          "content_sha256": "57b902c1865dd46c816a528d4edc50dc3cf8b45cefcea0825b6e66368c221bae",
+          "start_line": 19,
+          "end_line": 19,
+          "section": "使用说明",
+          "anchor": "当这两个Pod被调度到不同的节点时",
+          "quote": "- **应用场景：**主要面向HPC高性能计算、企业核心集群应用、企业应用系统和开发测试等。适用于供单实例部署的无状态负载（Deployment）和普通任务（Job），以及有状态工作负载（StatefulSet）的每个实例独占式使用。因为云硬盘属于非共享存储，不能同时被多个节点挂载，若两个Pod配置了使用同一个云硬盘，当这两个Pod被调度到不同的节点时，必然有一个Pod会因为无法挂载云硬盘导致无法成功启动。",
+          "quote_sha256": "8d97cf71ff601d511d550707a35e6a894e035400f1d80e5b04a92b258f8352b9"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-080",
+      "question": "已弃用Flexvolume云硬盘文档中，两个Pod用同一EVS却调度到不同节点会怎样？",
+      "answerable": true,
+      "question_type": "constraint",
+      "category": "存储管理-Flexvolume（已弃用）",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "MRUNMQ3363EOKIXW5JWV6PMJBJ",
+          "revision_id": "V3U5MAYNW5PTL5XW7FQQ5L4VIB",
+          "section": "约束与限制",
+          "start_line": 23,
+          "end_line": 26,
+          "content": "- 云硬盘不支持跨可用区挂载，且不支持被多个工作负载、同一个工作负载的多个实例或多个任务使用。由于CCE集群各节点之间暂不支持共享盘的数据共享功能，多个节点挂载使用同一个云硬盘可能会出现读写冲突、数据缓存冲突等问题，所以创建无状态工作负载时，若使用了EVS云硬盘，建议工作负载只选择一个实例。\n- 1.19.10以下版本的集群中，如果使用HPA策略对挂载了EVS卷的负载进行扩容，当新Pod被调度到另一个节点时，会导致之前Pod不能正常读写。\n\n  1.19.10及以上版本集群中，如果使用HPA策略对挂载了EVS卷的负载进行扩容，新Pod会因为无法挂载云硬盘导致无法成功启动。",
+          "content_hash": "7f1439567c83739e46bc5f4a527f26e6fa6044ea6543852d42b9125621924cd9",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html",
+          "title": "通过静态存储卷使用已有云硬盘",
+          "score": 0.8329499
+        },
+        {
+          "id": "6V2LN5DV7TG2EUMKHE6FIYWWFF",
+          "revision_id": "AHPNLFYYNNWLS5KIR4AKHRRFIZ",
+          "section": "为什么指定了节点范围，Pod 仍可能被调度到范围外的节点？",
+          "start_line": 1036,
+          "end_line": 1036,
+          "content": "scope.nodes只限定腾空目标，不限定接收节点。若工作负载必须保留在指定节点范围，应使用节点亲和性、节点选择器或污点/容忍等调度约束限制其候选节点。",
+          "content_hash": "e6856198ec8b1396db67de66b7a49c7b4319fe5255d188992657e0eba2ef9382",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11252.html",
+          "title": "Volcano异构资源碎片整理",
+          "score": 0.8311812
+        },
+        {
+          "id": "AGCVHYNTRTIMOOSDEXKDOTTB64",
+          "revision_id": "RTVFZBGM2MUE3ONDS76T5NCAXG",
+          "section": "为什么同一批新建的Pod没有被全部调度到CPU或内存使用率最低的节点？",
+          "start_line": 494,
+          "end_line": 494,
+          "content": "这是Volcano负载感知调度的预期行为。调度器不会简单地将同一批新Pod全部调度到当前指标值最低的节点。节点负载来源于监控系统，上报过程存在采集和聚合延迟；Pod刚被分配到节点后，其后续的CPU、内存消耗通常还未能及时反映到node\\_cpu\\_usage\\_avg和node\\_memory\\_usage\\_avg中。如果调度器继续依据这些滞后指标将后续Pod调度到同一节点，该节点可能很快成为新的热点。",
+          "content_hash": "9bc648f4429138e2f3e830bfa080d50f9920f774c9c64aed62e2b6968de2096c",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0789.html",
+          "title": "负载感知调度",
+          "score": 0.8295897
+        },
+        {
+          "id": "U2UKQMTHKQB45AMJSYJ3A2UEQR",
+          "revision_id": "LXZQJQKWQZ7X7P3SZXVUQHLE43",
+          "section": "约束与限制",
+          "start_line": 15,
+          "end_line": 20,
+          "content": "- 云硬盘不支持跨可用区挂载，且不支持被多个工作负载、同一个工作负载的多个实例或多个任务使用。由于CCE集群各节点之间暂不支持共享盘的数据共享功能，多个节点挂载使用同一个云硬盘可能会出现读写冲突、数据缓存冲突等问题，所以创建无状态工作负载时，若使用了EVS云硬盘，建议工作负载只选择一个实例。\n- 1.19.10以下版本的集群中，如果使用HPA策略对挂载了EVS卷的负载进行扩容，当新Pod被调度到另一个节点时，会导致之前Pod不能正常读写。\n\n  1.19.10及以上版本集群中，如果使用HPA策略对挂载了EVS卷的负载进行扩容，新Pod会因为无法挂载云硬盘导致无法成功启动。\n\n- 动态创建云硬盘存储卷时支持添加资源标签，且云硬盘创建完成后无法在CCE侧更新资源标签，需要前往云服务器控制台的云硬盘页面更新。如果使用已有的云硬盘创建存储卷，也需要在云服务器控制台的云硬盘页面添加或更新资源标签。",
+          "content_hash": "5f892f6f3d23d38bac8032ac13fa01fff011676a854aa809122a7b17cdae2d2b",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0615.html",
+          "title": "通过动态存储卷使用云硬盘",
+          "score": 0.8280483
+        },
+        {
+          "id": "B6DG2A5WLBKKUP5XWWZODQZ5L7",
+          "revision_id": "AUBWXDBI4P3YKH6U2YSUOS65KM",
+          "section": "解决方案",
+          "start_line": 12,
+          "end_line": 13,
+          "content": "- **请在业务低峰时进行集群升级。**\n- 请检查该节点的Pod部署数量是否过多，适当驱逐该节点上Pod到其他空闲节点。",
+          "content_hash": "d9a3379ec0ec4c0ff00880b0a906750a53ad8941dd7269ab6fe5e11f74e1f654",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0443.html",
+          "title": "节点CPU使用率检查异常处理",
+          "score": 0.82064605
+        }
+      ],
+      "result": {
+        "trace_id": "810149951675139d7de1900896313c56"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1223.0590830004076
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-081",
+      "group": "family:cce_10_0613",
+      "category": "存储管理-Flexvolume（已弃用）",
+      "question_type": "command",
+      "question": "历史Flexvolume示例pvc-evs-auto-example.yaml申请容量与访问模式分别是什么，可用区有什么要求？",
+      "answerable": true,
+      "required_facts": [
+        "10Gi",
+        "ReadWriteOnce",
+        "可用区必须与工作负载规划一致",
+        "仅说明历史Flexvolume示例，不作为当前CSI YAML"
+      ],
+      "reference_answer": "10Gi；ReadWriteOnce；可用区必须与工作负载规划一致；仅说明历史Flexvolume示例，不作为当前CSI YAML",
+      "evidence": [
+        {
+          "document_id": "cce_10_0312",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0312.html",
+          "title": "使用kubectl自动创建云硬盘",
+          "file": "documents/cce_10_0312.md",
+          "content_sha256": "6f4eb30eeca6ef273d395e87678b089ab747edd2e809b92bf24f184135cdad20",
+          "start_line": 23,
+          "end_line": 38,
+          "section": "操作步骤",
+          "anchor": "apiVersion: v1",
+          "quote": "   apiVersion: v1\n   kind: PersistentVolumeClaim\n   metadata:\n     name: pvc-evs-auto-example\n     namespace: default\n     annotations:\n       volume.beta.kubernetes.io/storage-class: sas\n     labels:\n       failure-domain.beta.kubernetes.io/region: ap-southeast-1\n       failure-domain.beta.kubernetes.io/zone: ap-southeast-1a\n   spec:\n     accessModes:\n     - ReadWriteOnce\n     resources:\n       requests:\n         storage: 10Gi",
+          "quote_sha256": "88db059e0c7269dbd50cd01adef01f6f76e0b27eb0615cce1528be2bc8b1a8f5"
+        },
+        {
+          "document_id": "cce_10_0312",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0312.html",
+          "title": "使用kubectl自动创建云硬盘",
+          "file": "documents/cce_10_0312.md",
+          "content_sha256": "6f4eb30eeca6ef273d395e87678b089ab747edd2e809b92bf24f184135cdad20",
+          "start_line": 47,
+          "end_line": 47,
+          "section": "操作步骤",
+          "anchor": "创建云硬盘所在的可用区，必须和工作负载规划的可用区保持一致",
+          "quote": "   | failure-domain.beta.kubernetes.io/zone | 创建云硬盘所在的可用区，必须和工作负载规划的可用区保持一致。 |",
+          "quote_sha256": "4f6db70d58a2db4926d5fc6c1ec7c3ba6cda41c2dc69ceee10c6e8e8d9d321d2"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-081",
+      "question": "历史Flexvolume示例pvc-evs-auto-example.yaml申请容量与访问模式分别是什么，可用区有什么要求？",
+      "answerable": true,
+      "question_type": "command",
+      "category": "存储管理-Flexvolume（已弃用）",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "JWRN4F3XKRBK2YLCCPNLIVG3X2",
+          "revision_id": "J73PO5MTA7AIRNK3C65CTV4ZHI",
+          "section": "操作步骤（第2部分）",
+          "start_line": 323,
+          "end_line": 507,
+          "content": "**表8** 极速文件存储卷PVC配置参数说明\n\n   | 参数 | 描述 |\n   | --- | --- |\n   | name | PVC资源名称，同namespace下唯一。保证在namespace下唯一即可。（若PVC是由有状态应用动态创建，则保持和FlexVolume PVC的name一致）。 |\n   | namespace | PVC资源命名空间。可参考FlexVolume PVC的相同字段。 |\n   | storageClassName | 指定K8s storage class名称；需配置为“csi-sfsturbo”。 |\n   | storage | 存储容量，单位Gi，必须和已有pv的storage大小保持一致。 |\n   | volumeName | PV的名称。参考上述步骤创建的静态PV的名称。 |\n4. 应用升级替换成新的PVC。\n\n   **无状态应用**\n   1. 通过kubectl create -f的形式创建pv和pvc。\n\n      **kubectl create -f pv-example.yaml**\n\n      **kubectl create -f pvc-example.yaml**\n\n      ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n      命令中的yaml名称是示例，请以实际步骤[2](https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html)和步骤[3](https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html)创建的pv和pvc的yaml名字为准。\n   2. 进入应用更新升级界面：更新升级 - 高级设置 - 数据存储 - 云存储。\n\n      ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001088946827.png \"点击放大\")\n   3. 卸载老存储，同时添加CSI格式的PVC的云存储，容器内挂载路径和以前保持一致，实现存储迁移。\n   4. 单击提交，确认后升级生效。\n   5. 等待pod running。\n\n   **升级使用已有存储的有状态应用**\n\n   1. 通过kubectl create -f的形式创建pv和pvc\n\n      **kubectl create -f pv-example.yaml**\n\n      **kubectl create -f pvc-example.yaml**\n\n      ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n      命令中的yaml名称是示例，请以实际步骤[2](https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html)和步骤[3](https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html)创建的pv和pvc的yaml名字为准。\n   2. 通过kubectl edit的方式修改有状态应使用新建的PVC。\n\n      **kubectl edit sts sts-example -n** xxx\n\n      ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001097062729.png \"点击放大\")\n\n      ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n      命令中的sts-example为待升级的有状态应用的名称，请以实际为准。xxx指代有状态应用所在的命名空间。\n   3. 等待pod running。\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n   当前界面暂未提供有状态应用添加新的云存储，因此升级替换成新PVC需要通过后台kubectl命令实现。\n\n   **升级使用动态分配存储的有状态应用**\n\n   1. 备份当前有状态应用使用的flexVolume格式的PV和PVC。\n\n      **kubectl get pvc xxx -n {namespaces} -oyaml > pvc-backup.yaml**\n\n      **kubectl get pv xxx -n {namespaces} -oyaml > pv-backup.yaml**\n   2. 将应用的实例数修改成0。\n   3. 在存储界面解关联有状态应用使用的flexVolume格式的PVC。\n   4. 通过kubectl create -f的形式创建pv和pvc。\n\n      **kubectl create -f pv-example.yaml**\n\n      **kubectl create -f pvc-example.yaml**\n\n      ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n      命令中的yaml名称是示例，请以实际步骤[2](https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html)和步骤[3](https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html)创建的pv和pvc的yaml名字为准。\n   5. 将应用的实例数恢复，等待pod running。\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n   有状态应用动态创建存储是通过volumeClaimTemplates机制实现，而该字段K8s无法修改，因此无法通过更换新PVC的方式实现数据迁移。\n\n   volumeClaimTemplates的PVC命名格式是固定的，当符合命名格式的PVC已经存在的时候则直接使用该PVC。\n\n   因此需要先将原有PVC解除关联之后，创建同名的CSI格式的PVC来实现存储迁移。\n\n   6. 迁移完成，但是如果不重建有状态应用，扩容时仍是FlexVolume格式的PVC（按需操作）。\n\n   - 获取当前有状态应用yaml：\n\n   **kubectl get sts xxx -n {namespaces} -oyaml > sts.yaml**\n\n   - 备份当前有状态应用yaml：\n\n   **cp sts.yaml sts-backup.yaml**\n\n   - 修改有状态应用yaml中volumeClaimTemplates的定义：\n\n   **vi sts.yaml**\n\n   **云硬盘存储卷volumeClaimTemplates**的配置示例如下：\n\n   ```\n     volumeClaimTemplates:\n       - metadata:\n           name: pvc-161070049798261342\n           namespace: default\n           creationTimestamp: null\n           annotations:\n             everest.io/disk-volume-type: SAS\n         spec:\n           accessModes:\n             - ReadWriteOnce\n           resources:\n             requests:\n               storage: 10Gi\n           storageClassName: csi-disk\n   ```\n\n   其中参数和上述步骤创建的云硬盘存储卷的PVC保持一致。\n\n   **文件存储卷volumeClaimTemplates**配置示例如下：\n\n   ```\n     volumeClaimTemplates:\n       - metadata:\n           name: pvc-161063441560279697\n           namespace: default\n           creationTimestamp: null\n         spec:\n           accessModes:\n             - ReadWriteMany\n           resources:\n             requests:\n               storage: 10Gi\n           storageClassName: csi-nas\n   ```\n\n   其中参数和上述步骤创建的文件存储卷PVC保持一致。\n\n   **对象存储卷PVC**配置示例如下：\n\n   ```\n     volumeClaimTemplates:\n       - metadata:\n           name: pvc-161070100417416148\n           namespace: default\n           creationTimestamp: null\n           annotations:\n             csi.storage.k8s.io/fstype: s3fs\n             everest.io/obs-volume-type: STANDARD\n         spec:\n           accessModes:\n             - ReadWriteMany\n           resources:\n             requests:\n               storage: 1Gi\n           storageClassName: csi-obs\n   ```\n\n   其中参数和上述步骤创建的对象存储卷PVC保持一致。\n\n   - 删除原有状态应用：\n\n   **kubectl delete sts xxx -n** {namespaces}\n\n   - 创建新的有状态应用\n\n   **kubectl create -f sts.yaml**\n5. 检查业务功能。\n   1. 检查业务功能是否正常。\n   2. 检查数据是否丢失。\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n   若功能或数据检查异常需要回退，请执行步骤[4](https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html)，选择FlexVolume格式的PVC并单击提交升级。\n6. 卸载FlexVolume格式的PVC。\n\n   检查正常，存储管理界面执行解关联操作。\n\n   也可以后台通过kubectl指令删除Flexvolume格式的PVC和PV。\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/caution_3.0-zh-cn.png)\n\n   在删除之前需要修改PV的回收策略persistentVolumeReclaimPolicy为Retain，否则底层存储会被回收。\n\n   在存储迁移执行前已完成集群升级可能会导致无法删除PV，可以去除PV的保护字段finalizers来实现PV删除\n\n   kubectl patch pv {pv\\_name} -p '{\"metadata\":{\"finalizers\":null}}'",
+          "content_hash": "54623df67a2aa7a3f931415cf8c81674143ad08ac72f8fb6c14d9568d383fd0a",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0343.html",
+          "title": "1.15集群如何从Flexvolume存储类型迁移到CSI Everest存储类型",
+          "score": 0.838694
+        },
+        {
+          "id": "YXLWJ5O2LZOCI5RIY34WUI3Q2N",
+          "revision_id": "PPN7YSXVIWRGGQXIOCERWRPU7P",
+          "section": "创建Deployment挂载已有数据卷",
+          "start_line": 109,
+          "end_line": 156,
+          "content": "1. 新建一个Deployment的YAML文件，例如deployment-test.yaml。\n\n   配置示例：\n\n   ```\n   apiVersion: apps/v1\n   kind: Deployment\n   metadata:\n     name: test-turbo-subpath-example   #创建的工作负载名称\n     namespace: default\n     generation: 1\n     labels:\n       appgroup: ''\n   spec:\n     replicas: 1\n     selector:\n       matchLabels:\n         app: test-turbo-subpath-example\n     template:\n       metadata:\n         labels:\n           app: test-turbo-subpath-example\n       spec:\n         containers:\n         - image: nginx:latest  #工作负载的镜像\n           name: container-0\n           volumeMounts:\n           - mountPath: /tmp   #容器内挂载路径\n             name: pvc-sfs-turbo-example\n         restartPolicy: Always\n         imagePullSecrets:\n         - name: default-secret\n         volumes:\n         - name: pvc-sfs-turbo-example\n           persistentVolumeClaim:\n             claimName: sfs-turbo-test   #已有的PVC名称\n   ```\n\n   其中：\n\n   - name：创建的工作负载名称。\n   - image：工作负载的镜像。\n   - mountPath：容器内挂载路径，示例中挂载到“/tmp”路径。\n   - claimName：已有的PVC名称。\n\n2. 创建Deployment负载。\n\n   **kubectl create -f deployment-test.yaml**",
+          "content_hash": "56a87c46e8e9d076c68ee3639331841541911ec399e9b7365c5542cd28a497fc",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_bestpractice_00253.html",
+          "title": "通过StorageClass动态创建SFS Turbo子目录",
+          "score": 0.83516604
+        },
+        {
+          "id": "LH27KXKLCS5SLYTRGLA3IDA226",
+          "revision_id": "PPN7YSXVIWRGGQXIOCERWRPU7P",
+          "section": "StatefulSet动态创建subpath模式的数据卷",
+          "start_line": 160,
+          "end_line": 233,
+          "content": "1. 新建一个StatefulSet的YAML文件，例如statefulset-test.yaml。\n\n   配置示例：\n\n   ```\n   apiVersion: apps/v1\n   kind: StatefulSet\n   metadata:\n     name: test-turbo-subpath #创建的工作负载名称\n     namespace: default\n     generation: 1\n     labels:\n       appgroup: ''\n   spec:\n     replicas: 2\n     selector:\n       matchLabels:\n         app: test-turbo-subpath\n     template:\n       metadata:\n         labels:\n           app: test-turbo-subpath\n         annotations:\n           metrics.alpha.kubernetes.io/custom-endpoints: '[{\"api\":\"\",\"path\":\"\",\"port\":\"\",\"names\":\"\"}]'\n           pod.alpha.kubernetes.io/initialized: 'true'\n       spec:\n         containers:\n           - name: container-0\n             image: 'nginx:latest'  #工作负载的镜像\n             resources: {}\n             volumeMounts:\n               - name: sfs-turbo-160024548582479676\n                 mountPath: /tmp  #容器内挂载路径\n             terminationMessagePath: /dev/termination-log\n             terminationMessagePolicy: File\n             imagePullPolicy: IfNotPresent\n         restartPolicy: Always\n         terminationGracePeriodSeconds: 30\n         dnsPolicy: ClusterFirst\n         securityContext: {}\n         imagePullSecrets:\n           - name: default-secret\n         affinity: {}\n         schedulerName: default-scheduler\n     volumeClaimTemplates:\n       - metadata:\n           name: sfs-turbo-160024548582479676\n           namespace: default\n           annotations: {}\n         spec:\n           accessModes:\n             - ReadWriteMany\n           resources:\n             requests:\n               storage: 10Gi\n           storageClassName: sfsturbo-subpath-sc #填写自建的SC名称\n     serviceName: wwww\n     podManagementPolicy: OrderedReady\n     updateStrategy:\n       type: RollingUpdate\n     revisionHistoryLimit: 10\n   ```\n\n   其中：\n\n   - name：创建的工作负载名称。\n   - image：工作负载的镜像。\n   - mountPath：容器内挂载路径，示例中挂载到“/tmp”路径。\n   - “spec.template.spec.containers.volumeMounts.name ”和 “spec.volumeClaimTemplates.metadata.name”有映射关系，必须保持一致。\n   - storageClassName: 填写自建的SC名称。\n\n2. 创建StatefulSet负载。\n\n   **kubectl create -f statefulset-test.yaml**",
+          "content_hash": "061fc2dee4b7e15478580b7da91695c6839a4efee9d38eae13f25a3a28610f05",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_bestpractice_00253.html",
+          "title": "通过StorageClass动态创建SFS Turbo子目录",
+          "score": 0.8173517
+        },
+        {
+          "id": "BZEBJ6XGWHVI3JT6TXBI3SLDYU",
+          "revision_id": "WJUFUDHDBVQ2SAATJRGCNWZQKN",
+          "section": "操作步骤",
+          "start_line": 16,
+          "end_line": 53,
+          "content": "1. 请参见[通过kubectl连接集群](https://support.huaweicloud.com/usermanual-cce/cce_10_0107.html)，使用kubectl连接集群。\n2. 执行如下命令，配置名为“pvc-obs-auto-example.yaml”的创建PVC的yaml文件。\n\n   **touch pvc-obs-auto-example.yaml**\n\n   **vi pvc-obs-auto-example.yaml**\n\n   **yaml****示例如下：**\n\n   ```\n   apiVersion: v1\n   kind: PersistentVolumeClaim\n   metadata:\n     annotations:\n       volume.beta.kubernetes.io/storage-class: obs-standard  # 对象存储桶类型，当前支持标准（obs-standard）和低频（obs-standard-ia）\n     name: pvc-obs-auto-example  # PVC名称\n     namespace: default\n   spec:\n     accessModes:\n     - ReadWriteMany\n     resources:\n       requests:\n         storage: 1Gi   # 存储容量，单位为Gi，对OBS桶来说，此处仅为校验需要（不能为空和0），设置的大小不起作用，此处设定为固定值1Gi\n   ```\n\n   **表1** 关键参数说明\n\n   | 参数 | 描述 |\n   | --- | --- |\n   | volume.beta.kubernetes.io/storage-class | 桶类型，当前支持标准（obs-standard）和低频（obs-standard-ia）两种桶。 |\n   | name | 创建的PVC名称。 |\n   | accessModes | 只支持ReadWriteMany，不支持ReadWriteOnce。 |\n   | storage | 存储容量，单位为Gi，对OBS桶来说，此处仅为校验需要（不能为空和0），设置的大小不起作用，此处设定为固定值1Gi。 |\n3. 执行如下命令创建PVC。\n\n   **kubectl create -f pvc-obs-auto-example.yaml**\n\n   命令执行完成后会在集群所在VPC内创建一个对象存储桶，您可以在“存储管理 > 对象存储卷”中单击桶名称查看该桶，也可以在OBS的控制台查看该桶。",
+          "content_hash": "3afc84a0c37d74dab79ceba539c4c5fbb408ec9a6f5ad2f1cdba7722ed836bb9",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0325.html",
+          "title": "使用kubectl自动创建对象存储",
+          "score": 0.8158137
+        },
+        {
+          "id": "XOJ6WEAGMMBEVLRITRHNI54RFA",
+          "revision_id": "MYDI3O5H3JUWMM2IM2ROT73MTI",
+          "section": "操作步骤",
+          "start_line": 16,
+          "end_line": 175,
+          "content": "1. 登录OBS控制台，创建对象存储桶，记录桶名称和存储类型。\n2. 请参见[通过kubectl连接集群](https://support.huaweicloud.com/usermanual-cce/cce_10_0107.html)，使用kubectl连接集群。\n3. 新建两个yaml文件，用于创建PersistentVolume（PV）、PersistentVolumeClaim（PVC），假设文件名为**pv-obs-example.yaml、pvc-obs-example.yaml。**\n\n   **touch pv-obs-example.yaml** **pvc-obs-example.yaml**\n\n   | K8s集群版本（K8s version） | 说明 | yaml示例 |\n   | --- | --- | --- |\n   | 1.11 ≤ K8s version ≤ 1.13 | 1.11以上及1.13版本集群 | 请参见[1.11~1.13 yaml文件配置示例](https://support.huaweicloud.com/usermanual-cce/cce_10_0326.html) |\n   | K8s version = 1.9 | 1.9版本集群 | 请参见[1.9 yaml文件配置示例](https://support.huaweicloud.com/usermanual-cce/cce_10_0326.html) |\n\n   **1.11 ≤ K8s version ≤ 1.13（1.11以上及1.13版本集群）**\n\n   - **PV yaml文件配置示例：**\n\n     ```\n     apiVersion: v1\n     kind: PersistentVolume\n     metadata:\n       name: pv-obs-example\n       annotations:\n         pv.kubernetes.io/provisioned-by: flexvolume-huawei.com/fuxiobs\n     spec:\n       accessModes:\n       - ReadWriteMany\n       capacity:\n         storage: 1Gi\n       claimRef:\n         apiVersion: v1\n         kind: PersistentVolumeClaim\n         name: pvc-obs-example\n         namespace: default\n       flexVolume:\n         driver: huawei.com/fuxiobs\n         fsType: obs\n         options:\n           fsType: obs\n           region: ap-southeast-1\n           storage_class: STANDARD\n           volumeID: test-obs\n       persistentVolumeReclaimPolicy: Delete\n       storageClassName: obs-standard\n     ```\n\n     **表1** 关键参数说明\n\n     | 参数 | 描述 |\n     | --- | --- |\n     | driver | 挂载依赖的存储驱动，对象存储配置为“huawei.com/fuxiobs”。 |\n     | storage\\_class | 存储类型，包括STANDARD（标准桶）、STANDARD\\_IA（低频访问桶）。 |\n     | region | 集群所在的region。 |\n     | volumeID | 对象存储的桶名称。  获取方法：在CCE控制台，单击左侧栏目树中的“资源管理-存储管理”，在“对象存储卷”页签下单击PVC的名称，在PVC详情页的“PV详情”页签下复制“PV名称”后的内容即可。 |\n     | storage | 存储容量，单位为Gi。此处配置为固定值1Gi。 |\n     | storageClassName | 对象存储支持的存储类型，包括obs-standard（标准）、obs-standard-ia（低频）。 |\n     | spec.claimRef.apiVersion | 固定值\"v1\"。 |\n     | spec.claimRef.kind | 固定值\"PersistentVolumeClaim\"。 |\n     | spec.claimRef.name | 与下一步创建的pvc的name一致。 |\n     | spec.claimRef.namespace | 与下一步创建的pvc的namespace一致。 |\n   - **PVC yaml文件配置示例：**\n\n     ```\n     apiVersion: v1\n     kind: PersistentVolumeClaim\n     metadata:\n       annotations:\n         volume.beta.kubernetes.io/storage-class: obs-standard\n         volume.beta.kubernetes.io/storage-provisioner: flexvolume-huawei.com/fuxiobs\n       name: pvc-obs-example\n       namespace: default\n     spec:\n       accessModes:\n       - ReadWriteMany\n       resources:\n         requests:\n           storage: 1Gi\n       volumeName: pv-obs-example\n     ```\n\n     **表2** 关键参数说明\n\n     | 参数 | 描述 |\n     | --- | --- |\n     | volume.beta.kubernetes.io/storage-class | 对象存储支持的存储类型，包括obs-standard、obs-standard-ia。 |\n     | volume.beta.kubernetes.io/storage-provisioner | 必须使用flexvolume-huawei.com/fuxiobs。 |\n     | volumeName | PV的名称。 |\n     | storage | 存储容量，单位为Gi。此处配置为固定值1Gi。 |\n\n   **K8s version = 1.9（1.9版本集群）**\n\n   - **PV yaml文件配置示例：**\n\n     ```\n     apiVersion: v1\n     kind: PersistentVolume\n     metadata:\n       name: pv-obs-example\n       namespace: default\n     spec:\n       accessModes:\n       - ReadWriteMany\n       capacity:\n         storage: 1Gi\n       flexVolume:\n         driver: huawei.com/fuxiobs\n         fsType: obs\n         options:\n           fsType: obs\n           kubernetes.io/namespace: default\n           region: ap-southeast-1\n           storage_class: STANDARD\n           volumeID: test-obs\n       persistentVolumeReclaimPolicy: Delete\n       storageClassName: obs-standard\n     ```\n\n     **表3** 关键参数说明\n\n     | 参数 | 描述 |\n     | --- | --- |\n     | driver | 挂载依赖的存储驱动，对象存储配置为“huawei.com/fuxiobs”。 |\n     | storage\\_class | 存储类型，包括STANDARD（标准桶）、STANDARD\\_IA（低频访问桶）。 |\n     | region | 集群所在的region。 |\n     | volumeID | 对象存储的桶名称。  获取方法：在CCE控制台，单击左侧栏目树中的“资源管理-存储管理”，在“对象存储卷”页签下单击PVC的名称，在PVC详情页的“PV详情”页签下复制“PV名称”后的内容即可。 |\n     | storage | 存储容量，单位为Gi。此处配置为固定值1Gi。 |\n     | storageClassName | 对象存储支持的存储类型，包括obs-standard（标准）、obs-standard-ia（低频）。 |\n   - **PVC yaml文件配置示例：**\n\n     ```\n     apiVersion: v1\n     kind: PersistentVolumeClaim\n     metadata:\n       annotations:\n         volume.beta.kubernetes.io/storage-class: obs-standard\n         volume.beta.kubernetes.io/storage-provisioner: flexvolume-huawei.com/fuxiobs\n       name: pvc-obs-example\n       namespace: default\n     spec:\n       accessModes:\n       - ReadWriteMany\n       resources:\n         requests:\n           storage: 1Gi\n       volumeName: pv-obs-example\n       volumeNamespace: default\n     ```\n\n     **表4** 关键参数说明\n\n     | 参数 | 描述 |\n     | --- | --- |\n     | volume.beta.kubernetes.io/storage-class | 对象存储支持的存储类型，包括obs-standard、obs-standard-ia。 |\n     | volume.beta.kubernetes.io/storage-provisioner | 必须使用flexvolume-huawei.com/fuxiobs。 |\n     | volumeName | PV的名称。 |\n     | storage | 存储容量，单位为Gi。此处配置为固定值1Gi。 |\n4. 创建PV。\n\n   **kubectl create -f pv-obs-example.yaml**\n5. 创建PVC。\n\n   **kubectl create -f pvc-obs-example.yaml**",
+          "content_hash": "dee58b2afd80a402c7986a55b9d6e49ff58ce5f7028915eef596327f002fe824",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0326.html",
+          "title": "使用kubectl对接已有对象存储",
+          "score": 0.81514287
+        }
+      ],
+      "result": {
+        "trace_id": "f7a3de7811894c497c3df54c42ae0b45"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1217.72745900671
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-084",
+      "group": "cce_10_0054",
+      "category": "高危操作一览",
+      "question_type": "comparison",
+      "question": "重装CCE控制节点和Node节点操作系统后，手册给出的恢复结论相同吗？",
+      "answerable": true,
+      "required_facts": [
+        "控制节点重装后组件删除，不可恢复",
+        "Node节点重装后可按文档重置节点"
+      ],
+      "reference_answer": "控制节点重装后组件删除，不可恢复；Node节点重装后可按文档重置节点",
+      "evidence": [
+        {
+          "document_id": "cce_10_0054",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+          "title": "高危操作一览",
+          "file": "documents/cce_10_0054.md",
+          "content_sha256": "74606d65851002a616dc9b9dc58670e72fa4a6370f23b4bb59ffe9b650fbe352",
+          "start_line": 18,
+          "end_line": 18,
+          "section": "集群/节点",
+          "anchor": "控制节点组件被删除",
+          "quote": "| 重装操作系统 | 控制节点组件被删除 | 不可恢复。 |",
+          "quote_sha256": "2ff4ec90e7efcab53451593181ed86b278e494dfa316c053499e550068f6901b"
+        },
+        {
+          "document_id": "cce_10_0054",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+          "title": "高危操作一览",
+          "file": "documents/cce_10_0054.md",
+          "content_sha256": "74606d65851002a616dc9b9dc58670e72fa4a6370f23b4bb59ffe9b650fbe352",
+          "start_line": 28,
+          "end_line": 28,
+          "section": "集群/节点",
+          "anchor": "节点组件被删除，节点不可用",
+          "quote": "| 重装操作系统 | 节点组件被删除，节点不可用 | 重置节点，具体请参见[重置节点](https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html)。 |",
+          "quote_sha256": "95df11dbbc1000590064d7e96fed5b3b44896be89611acb88f306e621f3c5186"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-084",
+      "question": "重装CCE控制节点和Node节点操作系统后，手册给出的恢复结论相同吗？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "高危操作一览",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "5TKCRWABTPH6SR4HJVHTUSC44G",
+          "revision_id": "IVDWYOR2OM5TBVQP77Q7OJIGJQ",
+          "section": "节点自愈后残留node.cce.io/repair污点",
+          "start_line": 122,
+          "end_line": 130,
+          "content": "- 问题现象\n\n  节点状态已恢复为“运行中”，但仍存在node.cce.io/repair污点，导致新Pod无法调度至该节点。\n- 原因分析\n\n  节点重启后，节点状态先恢复为可用，但部分组件尚未完全就绪，系统保留污点以防止业务调度到未就绪的节点。\n- 处理步骤\n\n  检查节点上的组件是否都恢复正常，如果组件都恢复正常，可以手动去除污点恢复节点调度。如果未恢复，请提交工单联系技术支持人员。",
+          "content_hash": "dac12a7f5e4e3f6ad694532fc567888697b99342b9a9fa03161592c49683cef5",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+          "title": "节点自愈功能",
+          "score": 0.84530073
+        },
+        {
+          "id": "IVLTIX74AEVZPH6VVXQTSMKKEO",
+          "revision_id": "RAI3RIDMGNW3FYDUADDAI3Y2AK",
+          "section": "操作场景",
+          "start_line": 8,
+          "end_line": 10,
+          "content": "当您不再需要该节点继续工作时，请您在CCE控制台的节点列表中执行删除按需节点或退订包年/包月节点的标准化操作，请勿使用**kubectl delete node**的方式手动移除节点，以免带来不符合预期的效果。\n\n在CCE集群中删除/退订节点会将该节点以及节点内运行的业务都销毁，请您在操作前提前进行排水和数据备份，确保正常业务运行不受影响。",
+          "content_hash": "4aa970c7e656cd3cfdd3f5ba5b051418e6af337fe81b861706671bbc2f701717",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0186.html",
+          "title": "删除/退订节点",
+          "score": 0.841433
+        },
+        {
+          "id": "HFKNJ73QPJKLDN5NZZW5FKUR73",
+          "revision_id": "2DB5H64MTS7ZDE6D4GCJZ4WBFO",
+          "section": "重置DefaultPool中的节点",
+          "start_line": 43,
+          "end_line": 87,
+          "content": "1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群。\n2. 在集群控制台左侧导航栏中选择“节点管理”，切换至“节点”页签。\n3. 在节点列表中选择一个或多个DefaultPool中的节点，单击“更多 > 重置节点”。\n4. 配置节点参数。\n\n   **计算配置**\n\n   **表1** 计算配置参数\n\n   | 参数 | 参数说明 |\n   | --- | --- |\n   | 节点规格 | 重置节点时不支持修改节点规格。 |\n   | 容器运行时（原容器引擎） | CCE支持Docker和Containerd容器运行时，不同的集群类型、集群版本、操作系统可能导致支持的容器运行时类型不同，请根据控制台呈现进行选择。具体场景请参见[节点操作系统与容器运行时对应关系](https://support.huaweicloud.com/usermanual-cce/cce_10_0462.html)。 |\n   | 操作系统 | 选择操作系统类型，不同类型节点支持的操作系统有所不同。 - 公共镜像：请选择节点对应的操作系统。 说明：  Ubuntu 24.04镜像依赖的插件版本为：Everest 2.5.93、NPD 1.19.86、Volcano 1.22.40、NVIDIA GPU 2.17.1及以上版本。 - 私有镜像：支持使用私有镜像，私有镜像制作方法具体请参见[制作CCE节点自定义镜像](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cce/cce_bestpractice_00026.html)。 - 共享镜像：可选择其他人已共享的私有镜像。裸金属服务器、物理机节点支持。 说明：  由于业务容器运行时共享节点的内核及底层调用，为保证兼容性，建议节点的操作系统选择与最终业务容器镜像相同或接近的Linux发行版本。 |\n   | cgroup版本 | v1.31及以上版本的集群中，使用Ubuntu 22.04操作系统支持选择cgroup版本。  采用cgroup v2时，对于部分直接采集cgroup文件系统的软件，可能存在兼容性问题。详情请参见[将节点迁移到cgroup v2](https://support.huaweicloud.com/usermanual-cce/cce_10_1136.html)。 |\n   | 登录方式 | - **密码** 用户名默认为“root”，请输入登录节点的密码，并确认密码。  登录节点时需要使用该密码，请妥善管理密码，系统无法获取您设置的密码内容。 - **密钥对** 选择用于登录本节点的密钥对，其中私有密钥对仅限本用户使用，账户密钥对账户下其他用户也可使用。  密钥对用于远程登录节点时的身份认证。若没有密钥对，可单击选项框右侧的“创建密钥对”来新建，创建密钥对操作步骤请参见[创建密钥对](https://support.huaweicloud.com/intl/zh-cn/usermanual-ecs/zh-cn_topic_0014250631.html)。 - **使用镜像密码**（当节点类型为弹性云服务器虚拟机或物理机，且操作系统选择私有镜像时支持） 保留所选择镜像的密码。为了保证您的正常使用，请确保所选择镜像中已经设置了密码。 |\n\n   **存储配置**\n\n   配置节点云服务器上的存储资源，方便节点上的容器软件与容器应用使用。\n\n   **表2** 存储配置参数\n\n   | 参数 | 参数说明 |\n   | --- | --- |\n   | 系统盘 | 直接使用云服务器的系统盘。 |\n   | 保留数据盘 | 开启后，挂载设置为指定目录或作为持久存储卷的普通数据盘的数据将被保留。该功能仅支持v1.29.15-r90、v1.30.14-r90、v1.31.14-r50、v1.32.13-r20、v1.33.12-r0、v1.34.8-r0、v1.35.5-r0、v1.36.1-r10及以上版本的集群。  注意：  无论是否开启保留数据盘功能，系统组件（容器运行时和 Kubelet 组件）使用的默认数据盘和挂载设置为临时存储卷的普通数据盘将会被清空，挂载设置为默认的普通数据盘的数据均会被保留。详情请参见[节点磁盘挂载类型与数据盘的保留情况说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html)。 |\n   | 选择默认数据盘 | 选择一块供容器运行时和Kubelet组件使用的数据盘。 |\n   | 系统组件存储 | 选择系统组件的存储位置：  - 数据盘：必须添加一块默认数据盘，供容器运行时和Kubelet组件使用。该数据盘不能被卸载，否则会导致节点不可用。 - 系统盘：CCE将下载的镜像、容器的临时存储、容器的stdout标准输出日志等资源都存储在系统盘中，过多占用系统盘可能影响节点运行稳定性。 说明：  v1.23.18-r0、v1.25.13-r0、v1.27.10-r0、v1.28.8-r0、v1.29.4-r0及以上版本的集群中支持选择系统组件的存储位置，且配套使用[CCE节点故障检测](https://support.huaweicloud.com/usermanual-cce/cce_10_0132.html)插件时需安装1.19.2及以上版本的插件。 |\n   | 数据盘 | - 如果“系统组件存储”选择“数据盘”，**至少需要添加一块默认数据盘**，供容器运行时和Kubelet组件使用，**该数据盘不能被卸载，否则会导致节点不可用。**v1.23.18-r0、v1.25.13-r0、v1.27.10-r0、v1.28.8-r0、v1.29.4-r0以下版本的集群支持。 - 如果“系统组件存储”选择“系统盘”，则可以不添加默认数据盘。所有数据盘均为普通数据盘。v1.23.18-r0、v1.25.13-r0、v1.27.10-r0、v1.28.8-r0、v1.29.4-r0及以上版本的集群支持。 单击“展开高级配置”可设置数据盘空间分配，对数据盘上存在的容器运行时、镜像、临时存储等进行空间划分，避免因磁盘空间不足导致业务异常。数据盘空间分配详细说明请参见[默认数据盘空间分配说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0341.html)。  **其他数据盘**默认情况直接创建为裸盘，不做任何处理。您也可以展开高级配置，将磁盘挂载到指定目录。另外还可以作为持久存储卷或临时存储卷，具体使用请参见[本地持久卷](https://support.huaweicloud.com/usermanual-cce/cce_10_0391.html)和[本地临时卷](https://support.huaweicloud.com/usermanual-cce/cce_10_0726.html)。 |\n\n   **高级配置**\n\n   **表3** 高级配置参数\n\n   | 参数 | 参数说明 |\n   | --- | --- |\n   | 资源标签 | 通过为资源添加标签，可以对资源进行自定义标记，实现资源的分类。最多可以添加15条资源标签。  您可以在TMS中创建“预定义标签”，预定义标签对所有支持标签功能的服务资源可见，通过使用预定义标签可以提升标签创建和迁移效率。具体请参见[创建预定义标签](https://support.huaweicloud.com/intl/zh-cn/usermanual-tms/zh-cn_topic_0144368884.html)。  CCE服务会自动帮您创建CCE-Dynamic-Provisioning-Node=节点id的标签。 |\n   | K8S标签（Labels） | 单击“添加标签”可以设置附加到Kubernetes 对象（比如Pods）上的键值对，最多可以添加20条标签。  使用该标签可区分不同节点，可结合工作负载的亲和能力实现容器Pod调度到指定节点的功能。详细请参见[Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)。 |\n   | K8S污点（Taints） | 默认为空。支持给节点加污点来设置反亲和性，每个节点最多配置20条污点，每条污点包含以下3个参数： - Key：必须以字母或数字开头和结尾，可以包含字母、数字、连字符、下划线和点，最长63个字符；另外可以使用DNS子域作为前缀。 - Value：必须以字母或数字开头和结尾，可以包含字母、数字、连字符、下划线和点，最长63个字符。 - Effect：只可选NoSchedule，PreferNoSchedule或NoExecute。  说明：  污点配置时需要配合Pod的toleration使用，否则可能导致扩容失败或者Pod无法调度到扩容节点。 |\n   | 最大实例数 | 节点最大可以正常运行的实例数(Pod)，该数量包含系统默认实例，取值范围为16~256。  该设置的目的为防止节点因管理过多实例而负载过重，请根据您的业务需要进行设置。 |\n   | 安装前执行脚本 | 请输入脚本命令，命令中不能包含中文字符。脚本命令会进行Base64转码。安装前/后执行脚本统一计算字符，转码后的字符总数不能超过10240。  脚本将在Kubernetes软件安装前执行，可能导致Kubernetes软件无法正常安装，需谨慎使用。 |\n   | 安装后执行脚本 | 请输入脚本命令，命令中不能包含中文字符。脚本命令会进行Base64转码。安装前/后执行脚本统一计算字符，转码后的字符总数不能超过10240。  脚本将在Kubernetes软件安装后执行，不影响Kubernetes软件安装。安装后脚本执行期间，Pod可以正常调度，但如果脚本执行安装超时，会导致节点安装失败，这种情况下，您可以选择“勾选后，安装后执行脚本执行完成前节点不可调度”，避免将Pod调度到安装后脚本未执行完成的节点上。 注意：  请不要在安装后执行脚本中使用**reboot**命令立即重启，如果需要重启，可以使用**shutdown -r 1**命令延迟1分钟重启。 |\n5. 单击“下一步：规格确认”。\n6. 阅读使用说明并勾选确认，单击“提交”。",
+          "content_hash": "aaa1c1b562bf500cf8500dd683874a28050ee7246d20bc45dfe9e124551183d6",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html",
+          "title": "重置节点",
+          "score": 0.83080155
+        },
+        {
+          "id": "BB2CJ4MNXOUS53J6IZ6JAY53ZE",
+          "revision_id": "PZJN6U4FJ3HJEMVA6DE23OQCEY",
+          "section": "检查项内容",
+          "start_line": 8,
+          "end_line": 8,
+          "content": "检查节点操作系统内核版本是否为CCE支持的版本。",
+          "content_hash": "af662eac9b7f517cf43c310f37eddc3835dbbbbf3454def0c309c78126c2bec9",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0451.html",
+          "title": "节点OS检查异常处理",
+          "score": 0.8280993
+        },
+        {
+          "id": "T4NT7BJZHHLSXUPNW2CO2K5E2S",
+          "revision_id": "IVDWYOR2OM5TBVQP77Q7OJIGJQ",
+          "section": "节点重启后故障未恢复",
+          "start_line": 101,
+          "end_line": 118,
+          "content": "- 失败信息示例\n\n  ```\n  auto repair for read-only filesystem failed: node not recovered in 15m0s\n  auto repair for kubelet PLEG failed: node not recovered in 15m0s\n  ```\n- 原因分析\n\n  节点重启后故障依然存在，说明问题并非由临时性异常引起，而是存在更底层的系统性故障（如磁盘损坏、内核异常、系统文件损坏等），单纯重启无法修复。\n- 处理步骤\n  1. 对故障节点执行**重置节点**操作，将节点操作系统重装为初始状态并重新加入集群。详情请参见[重置节点](https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html)。\n\n     ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/caution_3.0-zh-cn.png)\n\n     - 确认节点上无不可迁移的有状态数据，或已完成数据备份；\n     - 重置会销毁节点上所有Pod，请确保业务已具备高可用部署或已做好驱逐准备。\n  2. 重置完成后，确认节点正常加入集群且Pod可正常调度运行。\n  3. 若重置后故障依旧，说明底层硬件可能存在不可逆损坏，请提交工单联系技术支持人员。",
+          "content_hash": "a4f0a47edd315f69ed06477217dc3160965f3492b93d0d76f85a652f36a5c360",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+          "title": "节点自愈功能",
+          "score": 0.8265454
+        }
+      ],
+      "result": {
+        "trace_id": "bf2332151aad41dd2b95cbd0bbeec5ca"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1321.0052079957677
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-086",
+      "group": "cce_10_0054",
+      "category": "高危操作一览",
+      "question_type": "procedure",
+      "question": "删除/usr/local/bin/crictl后containerd持续重启，文档给出的原因与恢复方法是什么？",
+      "answerable": true,
+      "required_facts": [
+        "crictl丢失使containerd健康检查异常",
+        "按文档重置节点恢复二进制和配置文件"
+      ],
+      "reference_answer": "crictl丢失使containerd健康检查异常；按文档重置节点恢复二进制和配置文件",
+      "evidence": [
+        {
+          "document_id": "cce_10_0054",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+          "title": "高危操作一览",
+          "file": "documents/cce_10_0054.md",
+          "content_sha256": "74606d65851002a616dc9b9dc58670e72fa4a6370f23b4bb59ffe9b650fbe352",
+          "start_line": 40,
+          "end_line": 40,
+          "section": "集群/节点",
+          "anchor": "删除/usr/local/bin/crictl会导致containerd健康检查异常",
+          "quote": "| 删除或者移动containerd组件运行所需的二进制和配置文件   ``` /etc/containerd/config.toml /etc/crictl.yaml /usr/bin/runc /usr/lib/systemd/system/containerd.service /usr/local/bin/containerd /usr/local/bin/containerd-shim-runc-v2 /usr/local/bin/crictl /usr/local/bin/ctr ``` | 删除/usr/local/bin/crictl会导致containerd健康检查异常，containerd不断重启  删除其他文件可能导致容器不能启动，节点无法使用 | 重置节点恢复containerd二进制和配置文件，具体请参见[重置节点](https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html)。 |",
+          "quote_sha256": "55878763b4deb0b842c6dc4504524cd4bedfdf2270f0ac971e781c3ef116f73d"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-086",
+      "question": "删除/usr/local/bin/crictl后containerd持续重启，文档给出的原因与恢复方法是什么？",
+      "answerable": true,
+      "question_type": "procedure",
+      "category": "高危操作一览",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "4ZUBSWZNJF3FZG2IW6WPT57R4E",
+          "revision_id": "5JV5DGPLXT53HMRYZPOXYSF5O7",
+          "section": "解决方案",
+          "start_line": 12,
+          "end_line": 14,
+          "content": "检测到您的节点上的containerd服务存在重启风险；请确保在业务影响可控的前提下（如业务低峰期）进行集群升级，以消减业务容器重启带来的影响；\n\n如需帮助，请提交工单联系运维人员获取支持。",
+          "content_hash": "da907232b6b6f90755e875c0806c1f7bc1fd4676a24448ece8c7d4f69d10deb8",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0510.html",
+          "title": "Containerd Pod重启风险检查异常处理",
+          "score": 0.81881607
+        },
+        {
+          "id": "HOLG5UCREU4OB5YJPLK6J6KT6B",
+          "revision_id": "IVDWYOR2OM5TBVQP77Q7OJIGJQ",
+          "section": "重启失败",
+          "start_line": 86,
+          "end_line": 97,
+          "content": "- 失败信息示例\n\n  ```\n  auto repair for kubelet failed: reboot job xxx failed: instance not found\n  auto repair for container runtime (containerd/docker) failed: reboot job xxx failed: internal server error\n  ```\n- 原因分析\n\n  CCE已下发节点重启指令，但由于ECS层面异常（如实例状态异常、底层硬件故障等），导致重启操作未能实际执行。\n- 处理步骤\n  1. 登录ECS控制台，找到对应节点，手动执行重启操作，并观察节点是否恢复正常。\n  2. 若ECS侧重启仍然失败，说明可能存在底层资源问题，请提交工单联系技术支持人员协助处理。",
+          "content_hash": "b438b0b17f9230342bf289169894d9d9ceeb00b3d2aa6ad93eaccddc2baa0c3e",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+          "title": "节点自愈功能",
+          "score": 0.8173292
+        },
+        {
+          "id": "XD2XVAV3B53QHCKEC6ZWFMXMGX",
+          "revision_id": "PHT5NULB32MXTO6CQXJVGE2K3M",
+          "section": "解决方案",
+          "start_line": 12,
+          "end_line": 14,
+          "content": "- **问题场景一： 错误信息为“user paas must have at least read and execute permissions on the root directory”**。\n\n  解决方案：节点根目录权限被修改导致paas用户没有根目录的读权限，这会导致升级时组件重启失败，建议将根目录权限修正为默认权限555。",
+          "content_hash": "e8d6f24a30a3b83f4038896fbd9a37da235ce6c39a07966d0f108cce218e08b9",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0447.html",
+          "title": "节点关键目录文件权限检查异常处理",
+          "score": 0.8166016
+        },
+        {
+          "id": "7P7PQ6CSXG752NHRQAYWLY6QFR",
+          "revision_id": "5JV5DGPLXT53HMRYZPOXYSF5O7",
+          "section": "检查项内容",
+          "start_line": 8,
+          "end_line": 8,
+          "content": "检查当前集群内使用containerd的节点在升级containerd组件时，节点上运行的业务容器是否可能发生重启，造成业务影响。",
+          "content_hash": "8fbdfbbb37d279f5e0b16b9472d2d195f9cfb14d68f61476d61a18621c7954be",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0510.html",
+          "title": "Containerd Pod重启风险检查异常处理",
+          "score": 0.8163347
+        },
+        {
+          "id": "ZF25WBNXWGLDRFPSVPTQPBRM43",
+          "revision_id": "5P5KKKJHQZD4K7OZGC7W72RLEH",
+          "section": "工作负载回退",
+          "start_line": 169,
+          "end_line": 189,
+          "content": "回退也称为回滚，当发现升级出现问题时，可以采用回退的方式将Deployment类型工作负载回退至之前版本。Deployment支持回滚，是因为每次升级都会保留旧版本的ReplicaSet。回滚操作本质上是重新启用旧ReplicaSet来替换当前版本，可通过revisionHistoryLimit控制最多保留的历史版本数量（默认10个）。\n\n- **控制台方式**\n  1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群。\n  2. 在左侧导航栏中选择“工作负载”，在右侧对应工作负载操作列单击“更多 > 回退”。\n\n     **图2** 回退操作\n      ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002349903401.png \"点击放大\")\n- **kubectl命令方式**\n\n  您可以通过以下命令进行回退操作：\n\n  ```\n  kubectl rollout undo deployment nginx\n  ```\n\n  回显结果如下，则说明回退成功。\n\n  ```\n  deployment.apps/nginx rolled back\n  ```",
+          "content_hash": "d05e114bed4f63b0b5dc86f8ec69864dcf87fdf53498bf5817b2a456a8ed1e79",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0397.html",
+          "title": "工作负载升级与回退",
+          "score": 0.81517535
+        }
+      ],
+      "result": {
+        "trace_id": "1e4f20335c004c25fb294939cc9d4d41"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1198.9974589960184
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-090",
+      "group": "family:cce_10_0279",
+      "category": "弹性伸缩",
+      "question_type": "numeric",
+      "question": "按HPA文档公式，当前3副本、指标150m、目标100m，不考虑冷却和限额，应建议几个副本？",
+      "answerable": true,
+      "required_facts": [
+        "ceil(3×150/100)=5",
+        "向上取整，不是4"
+      ],
+      "reference_answer": "ceil(3×150/100)=5；向上取整，不是4",
+      "evidence": [
+        {
+          "document_id": "cce_10_0290",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "file": "documents/cce_10_0290.md",
+          "content_sha256": "13dd681a175e1ef00fd415a682dee09adaf26418aa3898ee97ec649d736cb338",
+          "start_line": 47,
+          "end_line": 47,
+          "section": "HPA工作原理",
+          "anchor": "期望实例数 = 向上取整",
+          "quote": "  **期望实例数 = 向上取整[当前实例数 \\* ( 当前的指标值 / 目标值 )]**",
+          "quote_sha256": "a7584a090cb3269615e7b5d1517f0edf075e79bcfece4d414f4a11d6b3d078c9"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-090",
+      "question": "按HPA文档公式，当前3副本、指标150m、目标100m，不考虑冷却和限额，应建议几个副本？",
+      "answerable": true,
+      "question_type": "numeric",
+      "category": "弹性伸缩",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "I3Y24EPXFUZM47KRNEFOQPE7UJ",
+          "revision_id": "A7QEXN4W7KXAH7S7M5HMSIAPHU",
+          "section": "相关文档",
+          "start_line": 59,
+          "end_line": 67,
+          "content": "- 如果您希望使用自定义指标进行弹性伸缩，请参见[创建使用自定义指标的HPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0944.html)。\n- 如果您期望按照指标（CPU利用率、内存利用率）或周期（每天、每周、每月或每年的具体时间点）进行弹性伸缩，可参考[创建CustomedHPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0292.html)。\n- 您的应用如果存在资源使用率的周期性变化，且希望按类似Crontab的策略定时扩缩容Pod，可参考[创建CronHPA定时策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0415.html)。\n- 若需要基于Pod实际资源使用情况自动调整其资源限制（以保证Pod获得充足的计算资源），可参考[创建VPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0921.html)。\n- 如果资源使用率虽有周期性变化，但难以用固定规则定义，推荐使用AHPA策略，它能根据业务历史指标自动识别水位周期并完成扩缩容，详情请参见[创建AHPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0934.html)。\n- 您可以将HPA与节点自动伸缩功能搭配使用，在集群节点资源不足时，实现节点的自动扩缩，详情请参见[使用HPA+CA实现工作负载和节点联动弹性伸缩](https://support.huaweicloud.com/usermanual-cce/cce_10_0300.html)。\n- 如果该应用使用GPU资源，您可以通过GPU监控指标为使用GPU资源的工作负载配置弹性伸缩（HPA），详情请参见[基于GPU监控指标配置工作负载弹性伸缩](https://support.huaweicloud.com/usermanual-cce/cce_10_0844.html)。\n- 如果该应用使用ELB对外提供访问，您可以根据ELB的监控指标（如QPS）进行弹性伸缩，详情请参见[基于ELB监控指标的弹性伸缩实践](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cce/cce_bestpractice_00283.html)。\n- 如果该应用使用Nginx Ingress实现流量路由转发，您可以根据Nginx Ingress监控指标进行弹性伸缩，详情请参见[通过Nginx Ingress对多个应用进行弹性伸缩](https://support.huaweicloud.com/intl/zh-cn/bestpractice-cce/cce_bestpractice_10038.html)。",
+          "content_hash": "a338792557b1911e0a2da7603c105c4400b432f5eb6cf1918c1410b443fb4eeb",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0208.html",
+          "title": "创建HPA策略",
+          "score": 0.82719016
+        },
+        {
+          "id": "BQIR7YHV5CLAZ3D5S4HSDUUIE4",
+          "revision_id": "7O2D4PH5JTZX2PXNN56KBG653P",
+          "section": "创建HPA策略",
+          "start_line": 186,
+          "end_line": 216,
+          "content": "创建HPA策略，如下所示，该策略关联了名为hpa-example的负载，期望CPU使用率为50%。\n\n另外有两条注解annotations，一条是CPU的阈值范围，最低30，最高70，表示CPU使用率在30%到70%之间时，不会扩缩容，防止小幅度波动造成影响。另一条是扩缩容时间窗，表示策略成功触发后，在缩容/扩容冷却时间内，不会再次触发缩容/扩容，以防止短期波动造成影响。\n\n```\napiVersion: autoscaling/v2\nkind: HorizontalPodAutoscaler\nmetadata:\n  name: hpa-policy\n  annotations:\n    extendedhpa.metrics: '[{\"type\":\"Resource\",\"name\":\"cpu\",\"targetType\":\"Utilization\",\"targetRange\":{\"low\":\"30\",\"high\":\"70\"}}]'\n    extendedhpa.option: '{\"downscaleWindow\":\"5m\",\"upscaleWindow\":\"3m\"}'\nspec:\n  scaleTargetRef:\n    kind: Deployment\n    name: hpa-example\n    apiVersion: apps/v1\n  minReplicas: 1\n  maxReplicas: 100\n  metrics:\n    - type: Resource\n      resource:\n        name: cpu\n        target:\n          type: Utilization\n          averageUtilization: 50\n```\n\n在控制台创建则参数填写如下所示。\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001102275448.png \"点击放大\")",
+          "content_hash": "819d6d13b36c49b628c5818767c5b542bd400e7848fb31876b64b43511b5fe84",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0300.html",
+          "title": "使用HPA+CA实现工作负载和节点联动弹性伸缩",
+          "score": 0.8203787
+        },
+        {
+          "id": "Q73PHQ5IX2CO665F3HQSX65H3V",
+          "revision_id": "7O2D4PH5JTZX2PXNN56KBG653P",
+          "section": "应用场景",
+          "start_line": 8,
+          "end_line": 10,
+          "content": "企业应用的流量大小不是每时每刻都一样，有高峰，有低谷，如果每时每刻都要保持能够扛住高峰流量的机器数目，那么成本会很高。通常解决这个问题的办法就是根据流量大小或资源占用率自动调节机器的数量，也就是弹性伸缩。\n\n当使用Pod/容器部署应用时，通常会设置容器的申请/限制值来确定可使用的资源上限，以避免在流量高峰期无限制地占用节点资源。然而，这种方法可能会存在资源瓶颈，达到资源使用上限后可能会导致应用出现异常。为了解决这个问题，可以通过伸缩Pod的数量来分摊每个应用实例的压力。如果增加Pod数量后，节点资源使用率上升到一定程度，继续扩容出来的Pod无法调度，则可以根据节点资源使用率继续伸缩节点数量。",
+          "content_hash": "538b49747fdbf33cc79e9555cafef8e8a2d3978fa242f1116617fbc46a3fbef7",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0300.html",
+          "title": "使用HPA+CA实现工作负载和节点联动弹性伸缩",
+          "score": 0.8171539
+        },
+        {
+          "id": "EFYL7NLVPOMBFMR25O6F5S2WSO",
+          "revision_id": "STBB3JY2NGVYMTWWHBODZAPNXJ",
+          "section": "相关文档",
+          "start_line": 125,
+          "end_line": 129,
+          "content": "- 如果您需要基于CPU使用率、内存使用率进行扩缩容，请参见[创建HPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0208.html)。\n- 如果您希望使用自定义指标进行弹性伸缩，请参见[创建使用自定义指标的HPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0944.html)。\n- 您的应用如果存在资源使用率的周期性变化，且希望按类似Crontab的策略定时扩缩容Pod，可参考[创建CronHPA定时策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0415.html)。\n- 若需要基于Pod实际资源使用情况自动调整其资源限制（以保证Pod获得充足的计算资源），可参考[创建VPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0921.html)。\n- 如果资源使用率虽有周期性变化，但难以用固定规则定义，推荐使用AHPA策略，它能根据业务历史指标自动识别水位周期并完成扩缩容，详情请参见[创建AHPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0934.html)。",
+          "content_hash": "d653a15e16c63e4982ff8cca83f33c22aae744402b88417bcc81950191bc757e",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0292.html",
+          "title": "创建CustomedHPA策略",
+          "score": 0.81624293
+        },
+        {
+          "id": "AHDYXBFLQA3AIXZ75ZIRCOQHQZ",
+          "revision_id": "FZWWAD3TLI63FV2DCDTZ7LJP33",
+          "section": "相关文档",
+          "start_line": 214,
+          "end_line": 218,
+          "content": "- 如果您需要基于CPU使用率、内存使用率进行扩缩容，请参见[创建HPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0208.html)。\n- 如果您希望使用自定义指标进行弹性伸缩，请参见[创建使用自定义指标的HPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0944.html)。\n- 如果您期望按照指标（CPU利用率、内存利用率）或周期（每天、每周、每月或每年的具体时间点）进行弹性伸缩，可参考[创建CustomedHPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0292.html)。\n- 您的应用如果存在资源使用率的周期性变化，且希望按类似Crontab的策略定时扩缩容Pod，可参考[创建CronHPA定时策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0415.html)。\n- 若需要基于Pod实际资源使用情况自动调整其资源限制（以保证Pod获得充足的计算资源），可参考[创建VPA策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0921.html)。",
+          "content_hash": "930ec51e8309498a5b1ac64977d9681fbc974764683c8af4d92875d73600a219",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0934.html",
+          "title": "创建AHPA策略",
+          "score": 0.8155839
+        }
+      ],
+      "result": {
+        "trace_id": "a9036d103e85b871c97bcf95b697e7c5"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1196.2645840103505
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-091",
+      "group": "family:cce_10_0279",
+      "category": "弹性伸缩",
+      "question_type": "comparison",
+      "question": "metrics.k8s.io、custom.metrics.k8s.io和external.metrics.k8s.io分别提供什么指标？",
+      "answerable": true,
+      "required_facts": [
+        "metrics提供Pod/Node的CPU内存",
+        "custom提供Kubernetes对象关联的自定义指标",
+        "external来自外部、不关联Kubernetes资源"
+      ],
+      "reference_answer": "metrics提供Pod/Node的CPU内存；custom提供Kubernetes对象关联的自定义指标；external来自外部、不关联Kubernetes资源",
+      "evidence": [
+        {
+          "document_id": "cce_10_0290",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "file": "documents/cce_10_0290.md",
+          "content_sha256": "13dd681a175e1ef00fd415a682dee09adaf26418aa3898ee97ec649d736cb338",
+          "start_line": 40,
+          "end_line": 40,
+          "section": "HPA工作原理",
+          "anchor": "metrics.k8s.io：",
+          "quote": "  - metrics.k8s.io： 主要提供Pod和Node的CPU和Memory相关的监控指标。",
+          "quote_sha256": "7c0f7bcf77c0a5af50a3a0d374055e623fb4994661b82031c7ebd3ac207fd790"
+        },
+        {
+          "document_id": "cce_10_0290",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "file": "documents/cce_10_0290.md",
+          "content_sha256": "13dd681a175e1ef00fd415a682dee09adaf26418aa3898ee97ec649d736cb338",
+          "start_line": 41,
+          "end_line": 41,
+          "section": "HPA工作原理",
+          "anchor": "custom.metrics.k8s.io：",
+          "quote": "  - custom.metrics.k8s.io： 主要提供Kubernetes Object相关的自定义监控指标。",
+          "quote_sha256": "328b24cd51d3b2699c4834395a4804e7de48f5ae753d051d7833d9a601dd3ef2"
+        },
+        {
+          "document_id": "cce_10_0290",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "file": "documents/cce_10_0290.md",
+          "content_sha256": "13dd681a175e1ef00fd415a682dee09adaf26418aa3898ee97ec649d736cb338",
+          "start_line": 42,
+          "end_line": 42,
+          "section": "HPA工作原理",
+          "anchor": "external.metrics.k8s.io：",
+          "quote": "  - external.metrics.k8s.io：指标来源外部，与任何的Kubernetes资源的指标无关。",
+          "quote_sha256": "3819f33629303012b3c28785a77aa904bb8d96bb55430058eb35af2d19036873"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-091",
+      "question": "metrics.k8s.io、custom.metrics.k8s.io和external.metrics.k8s.io分别提供什么指标？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "弹性伸缩",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "NLZ53U4JU6FMDC5QC6EH47OHXJ",
+          "revision_id": "Y7MUW7MFHBUXQ4K4ZJ6EIQDSGN",
+          "section": "相关文档",
+          "start_line": 411,
+          "end_line": 411,
+          "content": "更多关于Kubernetes系统组件指标的说明，请参见[Kubernetes Metrics Reference](https://kubernetes.io/docs/reference/instrumentation/metrics/)。",
+          "content_hash": "4f308b5fc19d2bd801e7ea4fcdf07bae598bebb4c7178a80574476b670424a53",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0559.html",
+          "title": "使用Prometheus监控控制节点组件指标",
+          "score": 0.8003386
+        },
+        {
+          "id": "ELTF4OROE5FLRYTCO3N6F7U6HH",
+          "revision_id": "S5NGEUQNOF73HWPFRFGSBUJJCP",
+          "section": "检查项内容",
+          "start_line": 8,
+          "end_line": 8,
+          "content": "检查K8s组件例如etcd、kube-controller-manager等组件是否资源超出限制。",
+          "content_hash": "7a8539a6dc971bc87c00ef1167e09fc53990df9fa38bcc9dc47fed0c2ae54d6a",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0486.html",
+          "title": "K8s组件内存资源限制检查异常处理",
+          "score": 0.7909638
+        },
+        {
+          "id": "AGIDP35DLKI7BTKIJMPTJ7YBNT",
+          "revision_id": "R6CSYAPYCQGCSBSUYCE6FSKSAQ",
+          "section": "组件说明",
+          "start_line": 41,
+          "end_line": 45,
+          "content": "**表2** metrics-server组件\n\n| 容器组件 | 说明 | 资源类型 |\n| --- | --- | --- |\n| metrics-server | 集群核心资源监控数据的聚合器，用于收集和聚合集群中通过Metrics API提供的资源使用指标。 | Deployment |",
+          "content_hash": "9a5b4666537070c8527a6f9294104f588e5055702b49212bb61715ee0483d1e4",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0205.html",
+          "title": "Kubernetes Metrics Server",
+          "score": 0.7894745
+        },
+        {
+          "id": "5ZH35JCDE37HB3NPQWNBB7LULH",
+          "revision_id": "NLGHD3AYSUDMBZUJ6CEYQ2IDEX",
+          "section": "通过Metrics API提供资源指标",
+          "start_line": 65,
+          "end_line": 111,
+          "content": "容器和节点的资源指标，如CPU、内存使用量，可通过Kubernetes的Metrics API获得。这些指标可以直接被用户访问，比如用kubectl top命令，也可以被HPA或者CustomedHPA使用，根据资源使用率使负载弹性伸缩。\n\n插件可为Kubernetes提供Metrics API，但默认未开启，若要将其开启，需要创建以下APIService对象：\n\n```\napiVersion: apiregistration.k8s.io/v1\nkind: APIService\nmetadata:\n  labels:\n    app: custom-metrics-apiserver\n    release: cceaddon-prometheus\n  name: v1beta1.metrics.k8s.io\nspec:\n  group: metrics.k8s.io\n  groupPriorityMinimum: 100\n  insecureSkipTLSVerify: true\n  service:\n    name: custom-metrics-apiserver\n    namespace: monitoring\n    port: 443\n  version: v1beta1\n  versionPriority: 100\n```\n\n可以将该对象保存为文件，命名为metrics-apiservice.yaml，然后执行以下命令：\n\n```\nkubectl create -f metrics-apiservice.yaml\n```\n\n执行kubectl top pod -n monitoring命令，若显示如下，则表示Metrics API能正常访问：\n\n```\n# kubectl top pod -n monitoring\nNAME                                                      CPU(cores)   MEMORY(bytes)\n......\ncustom-metrics-apiserver-d4f556ff9-l2j2m                  38m          44Mi\n......\n```\n\n![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/notice_3.0-zh-cn.png)\n\n卸载插件时，需要执行以下kubectl命令，同时删除APIService对象，否则残留的APIService资源将导致metrics-server插件安装失败。\n\n```\nkubectl delete APIService v1beta1.metrics.k8s.io\n```",
+          "content_hash": "51b6ee1e8cb47b4b496927f50cccec5ce103ddef09776510da373315c54b35f5",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0221.html",
+          "title": "Prometheus（停止维护）",
+          "score": 0.7818473
+        },
+        {
+          "id": "HK4QK3AGUAZKKKDXZGS6FN3RR2",
+          "revision_id": "S5NGEUQNOF73HWPFRFGSBUJJCP",
+          "section": "K8s组件内存资源限制检查异常处理",
+          "start_line": 2,
+          "end_line": 4,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_0486.html\n目录：用户指南 > 集群 > 升级管理 > 升级前检查异常问题排查 > K8s组件内存资源限制检查异常处理\n更新时间：2024-08-17 GMT+08:00",
+          "content_hash": "bd6db861c4bdcf091ddde50966ffaaf65846f9e31a2facad5cc1996a83b21646",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0486.html",
+          "title": "K8s组件内存资源限制检查异常处理",
+          "score": 0.77901405
+        }
+      ],
+      "result": {
+        "trace_id": "c67bb25a480f2be1215da33c64cce284"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1191.476917010732
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-093",
+      "group": "family:cce_10_0191",
+      "category": "模板（Helm Chart）",
+      "question_type": "constraint",
+      "question": "Helm v3 chart的crds目录，升级release会更新CRD吗，删除release会删CRD吗？",
+      "answerable": true,
+      "required_facts": [
+        "crds目录仅安装release时部署",
+        "升级不更新",
+        "删除不卸载",
+        "推荐分离CRD和使用CRD资源的chart管理"
+      ],
+      "reference_answer": "crds目录仅安装release时部署；升级不更新；删除不卸载；推荐分离CRD和使用CRD资源的chart管理",
+      "evidence": [
+        {
+          "document_id": "cce_10_0421",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0421.html",
+          "title": "Helm v2与Helm v3的差异及适配方案",
+          "file": "documents/cce_10_0421.md",
+          "content_sha256": "a536d66454b5f46899d03d6e9703738b111aae9759f2d0e2510df75a950474b5",
+          "start_line": 34,
+          "end_line": 34,
+          "section": "Helm v2与Helm v3的差异及适配方案",
+          "anchor": "crds目录中的资源只有在release安装时会部署",
+          "quote": "   Helm v3删除了crd-install hook， 并用chart中的crds目录替换。需要注意的是，crds目录中的资源只有在release安装时会部署，升级时不会更新，删除时不会卸载crds目录中的资源。若crd已存在，则重复安装不会报错。",
+          "quote_sha256": "7e999a5bd6d2068735b087d727171b972afbd301b13e917beabc22c6720e78ba"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-093",
+      "question": "Helm v3 chart的crds目录，升级release会更新CRD吗，删除release会删CRD吗？",
+      "answerable": true,
+      "question_type": "constraint",
+      "category": "模板（Helm Chart）",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "MO4IKMCZKEVMGP4NLY55Z42Y53",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "注意事项：",
+          "start_line": 14,
+          "end_line": 15,
+          "content": "- Helm v2 release信息存储在configmap中，Helm v3 release信息存储在secrets中。\n- 若用户通过前端console操作，在获取实例、更新实例等操作中CCE会自动尝试转换v2模板实例到v3模板实例。若用户仅在后台操作实例，需通过该指南进行转换操作。",
+          "content_hash": "c7760f810e735efeabd888c0852285896007f1e6556ded8863a4cbf03ab548c0",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.83835673
+        },
+        {
+          "id": "GXWXVJVXDCNCVHPALFWKXXKYK6",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "背景介绍",
+          "start_line": 8,
+          "end_line": 10,
+          "content": "当前CCE已全面支持Helm v3版本，用户可通过本指南将已创建的v2 release转换成v3 release，从而更好地使用v3的特性。因Helm v3底层相对于Helm v2来说，一些功能已被弃用或重构，因此转换会有一定风险，需转换前进行模拟转换。\n\n该指南参考社区文档：<https://github.com/helm/helm-2to3>",
+          "content_hash": "e44fb88acb57c4adbafa0241d9e7ca5e97b4a7cb262679616723e2f6ea763ede",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.83707696
+        },
+        {
+          "id": "APPITJOCNWCC3VG5RRTR3TH4YA",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "Helm v2 Release转换成Helm v3 Release",
+          "start_line": 2,
+          "end_line": 4,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html\n目录：用户指南 > 模板（Helm Chart） > Helm v2 Release转换成Helm v3 Release\n更新时间：2026-05-26 GMT+08:00",
+          "content_hash": "5abd8b33d76c6bf05845e71dbde670ecca1a3ac02b7ecac8efccb62366b6d6e6",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.8323686
+        },
+        {
+          "id": "AAWPLNXNSGPA4CTQBTRTSYNFMC",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "转换流程（不使用Helm v3客户端）",
+          "start_line": 19,
+          "end_line": 83,
+          "content": "1. 在CCE节点上下载[helm 2to3](https://github.com/helm/helm-2to3/releases/download/v0.10.2/helm-2to3_0.10.2_linux_amd64.tar.gz)转换插件。\n\n   ```\n   wget https://github.com/helm/helm-2to3/releases/download/v0.10.2/helm-2to3_0.10.2_linux_amd64.tar.gz\n   ```\n\n2. 解压插件包。\n\n   ```\n   tar -xzvf helm-2to3_0.10.2_linux_amd64.tar.gz\n   ```\n\n3. 模拟转换。\n\n   以test-convert实例为例，执行以下命令进行转换的模拟。若出现以下提示，说明模拟转换成功。\n\n   ```\n   # ./2to3 convert --dry-run --tiller-out-cluster -s configmaps test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   ```\n4. 执行正式转换。若出现以下提示，说明转换成功。\n\n   ```\n   # ./2to3 convert --tiller-out-cluster -s configmaps test-convert\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" created.\n   [Helm 3] Release \"test-convert\" created.\n   Release \"test-convert\" was converted successfully from Helm v2 to Helm v3.\n   Note: The v2 release information still remains and should be removed to avoid conflicts with the migrated v3 release.\n   v2 release information should only be removed using `helm 2to3` cleanup and when all releases have been migrated over.\n   ```\n5. 转换完成后进行v2 release资源的清理，同样先进行模拟清理，成功后正式清理v2 release资源。\n\n   模拟清理：\n\n   ```\n   # ./2to3 cleanup --dry-run --tiller-out-cluster -s configmaps --name test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   ```\n\n   正式清理：\n\n   ```\n   # ./2to3 cleanup --tiller-out-cluster -s configmaps --name test-convert\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" d\n   ```",
+          "content_hash": "85b2aa66309d47422d664ca9e2203d9456e390900935fd4a1ad4d67e9aa82bae",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.81606805
+        },
+        {
+          "id": "DQTDDCME772PPTBDUJ7VVCVKPN",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "转换流程（使用Helm v3客户端）",
+          "start_line": 87,
+          "end_line": 164,
+          "content": "1. 安装Helm v3客户端，参见[安装Helm v3](https://support.huaweicloud.com/usermanual-cce/cce_10_0144.html)。\n2. 安装转换插件。\n\n   ```\n   # helm plugin install https://github.com/helm/helm-2to3\n   Downloading and installing helm-2to3 v0.10.2 ...\n   https://github.com/helm/helm-2to3/releases/download/v0.10.2/helm-2to3_0.10.2_linux_amd64.tar.gz\n   Installed plugin: 2to3\n   ```\n3. 查看已安装的插件，确认插件已安装。\n\n   ```\n   # helm plugin list\n   NAME VERSION DESCRIPTION\n   2to3  0.10.2      migrate and cleanup Helm v2 configuration and releases in-place to Helm v3\n   ```\n4. 模拟转换。\n\n   以test-convert实例为例，执行以下命令进行转换的模拟。若出现以下相关提示，说明模拟转换成功。\n\n   ```\n   # helm 2to3 convert --dry-run --tiller-out-cluster -s configmaps test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   ```\n5. 执行正式转换。若出现以下提示，说明转换成功。\n\n   ```\n   # helm 2to3 convert --tiller-out-cluster -s configmaps test-convert\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" created.\n   [Helm 3] Release \"test-convert\" created.\n   Release \"test-convert\" was converted successfully from Helm v2 to Helm v3.\n   Note: The v2 release information still remains and should be removed to avoid conflicts with the migrated v3 release.\n   v2 release information should only be removed using `helm 2to3` cleanup and when all releases have been migrated over.\n   ```\n6. 正式转换成功后，用户可通过helm list查看已转换成功的模板实例。\n\n   ```\n   # helm list\n   NAME                NAMESPACE    REVISION UPDATED                           STATUS      CHART              APP VERSION\n   test-convert      default   1                2022-08-29 06:56:28.166918487 +0000 UTC       deployed    test-helmold-1\n   ```\n7. 转换完成后进行V2 release资源的清理，同样先进行模拟清理，成功后正式清理V2 release资源。\n\n   模拟清理：\n\n   ```\n   # helm 2to3 cleanup --dry-run --tiller-out-cluster -s configmaps --name test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   ```\n\n   正式清理：\n\n   ```\n   # helm 2to3 cleanup --tiller-out-cluster -s configmaps --name test-convert\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" deleted.\n   [Helm 2] Release 'test-convert' deleted.\n   Helm v2 data was cleaned up successfully.\n   ```",
+          "content_hash": "b7d93c20931e8e03d62d5eff246a7bf14949e59c44c27b4c72d067b23aaab1a9",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.8108292
+        }
+      ],
+      "result": {
+        "trace_id": "13b5644bb728fc3e56865cc695d0a721"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1198.8667499972507
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-094",
+      "group": "family:cce_10_0191",
+      "category": "模板（Helm Chart）",
+      "question_type": "comparison",
+      "question": "Helm v2与v3默认用什么存release信息，v3允许跨命名空间重用release名字吗？",
+      "answerable": true,
+      "required_facts": [
+        "v2默认ConfigMap",
+        "v3默认Secret",
+        "v3可在不同命名空间重用release名称"
+      ],
+      "reference_answer": "v2默认ConfigMap；v3默认Secret；v3可在不同命名空间重用release名称",
+      "evidence": [
+        {
+          "document_id": "cce_10_0421",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0421.html",
+          "title": "Helm v2与Helm v3的差异及适配方案",
+          "file": "documents/cce_10_0421.md",
+          "content_sha256": "a536d66454b5f46899d03d6e9703738b111aae9759f2d0e2510df75a950474b5",
+          "start_line": 23,
+          "end_line": 23,
+          "section": "Helm v2与Helm v3的差异及适配方案",
+          "anchor": "Helm v2 默认情况下使用 ConfigMaps",
+          "quote": "   Helm v2 默认情况下使用 ConfigMaps 存储发行信息，而在 Helm v3 中默认使用 Secrets。",
+          "quote_sha256": "8c02d862c944da842a43b8d5a7966b414c6496070dd9c47879ff4f82f9e8024c"
+        },
+        {
+          "document_id": "cce_10_0421",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0421.html",
+          "title": "Helm v2与Helm v3的差异及适配方案",
+          "file": "documents/cce_10_0421.md",
+          "content_sha256": "a536d66454b5f46899d03d6e9703738b111aae9759f2d0e2510df75a950474b5",
+          "start_line": 26,
+          "end_line": 26,
+          "section": "Helm v2与Helm v3的差异及适配方案",
+          "anchor": "release名称可在不同命名空间重用",
+          "quote": "   Helm v2 只使用tiller 的namespace 作为release信息的存储，这样全集群的release名字都不能重复。Helm v3只会在release安装的所在namespace记录对应的信息，这样release名称可在不同命名空间重用。应用和release命名空间一致。",
+          "quote_sha256": "d74b7885eb81787b36304dae9f1e7962dc5f6b02b94731bdc1f4d30810e3e0ef"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-094",
+      "question": "Helm v2与v3默认用什么存release信息，v3允许跨命名空间重用release名字吗？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "模板（Helm Chart）",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "MO4IKMCZKEVMGP4NLY55Z42Y53",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "注意事项：",
+          "start_line": 14,
+          "end_line": 15,
+          "content": "- Helm v2 release信息存储在configmap中，Helm v3 release信息存储在secrets中。\n- 若用户通过前端console操作，在获取实例、更新实例等操作中CCE会自动尝试转换v2模板实例到v3模板实例。若用户仅在后台操作实例，需通过该指南进行转换操作。",
+          "content_hash": "c7760f810e735efeabd888c0852285896007f1e6556ded8863a4cbf03ab548c0",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.89159864
+        },
+        {
+          "id": "GXWXVJVXDCNCVHPALFWKXXKYK6",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "背景介绍",
+          "start_line": 8,
+          "end_line": 10,
+          "content": "当前CCE已全面支持Helm v3版本，用户可通过本指南将已创建的v2 release转换成v3 release，从而更好地使用v3的特性。因Helm v3底层相对于Helm v2来说，一些功能已被弃用或重构，因此转换会有一定风险，需转换前进行模拟转换。\n\n该指南参考社区文档：<https://github.com/helm/helm-2to3>",
+          "content_hash": "e44fb88acb57c4adbafa0241d9e7ca5e97b4a7cb262679616723e2f6ea763ede",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.88330984
+        },
+        {
+          "id": "APPITJOCNWCC3VG5RRTR3TH4YA",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "Helm v2 Release转换成Helm v3 Release",
+          "start_line": 2,
+          "end_line": 4,
+          "content": "来源：https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html\n目录：用户指南 > 模板（Helm Chart） > Helm v2 Release转换成Helm v3 Release\n更新时间：2026-05-26 GMT+08:00",
+          "content_hash": "5abd8b33d76c6bf05845e71dbde670ecca1a3ac02b7ecac8efccb62366b6d6e6",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.86160845
+        },
+        {
+          "id": "AAWPLNXNSGPA4CTQBTRTSYNFMC",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "转换流程（不使用Helm v3客户端）",
+          "start_line": 19,
+          "end_line": 83,
+          "content": "1. 在CCE节点上下载[helm 2to3](https://github.com/helm/helm-2to3/releases/download/v0.10.2/helm-2to3_0.10.2_linux_amd64.tar.gz)转换插件。\n\n   ```\n   wget https://github.com/helm/helm-2to3/releases/download/v0.10.2/helm-2to3_0.10.2_linux_amd64.tar.gz\n   ```\n\n2. 解压插件包。\n\n   ```\n   tar -xzvf helm-2to3_0.10.2_linux_amd64.tar.gz\n   ```\n\n3. 模拟转换。\n\n   以test-convert实例为例，执行以下命令进行转换的模拟。若出现以下提示，说明模拟转换成功。\n\n   ```\n   # ./2to3 convert --dry-run --tiller-out-cluster -s configmaps test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   ```\n4. 执行正式转换。若出现以下提示，说明转换成功。\n\n   ```\n   # ./2to3 convert --tiller-out-cluster -s configmaps test-convert\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" created.\n   [Helm 3] Release \"test-convert\" created.\n   Release \"test-convert\" was converted successfully from Helm v2 to Helm v3.\n   Note: The v2 release information still remains and should be removed to avoid conflicts with the migrated v3 release.\n   v2 release information should only be removed using `helm 2to3` cleanup and when all releases have been migrated over.\n   ```\n5. 转换完成后进行v2 release资源的清理，同样先进行模拟清理，成功后正式清理v2 release资源。\n\n   模拟清理：\n\n   ```\n   # ./2to3 cleanup --dry-run --tiller-out-cluster -s configmaps --name test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   ```\n\n   正式清理：\n\n   ```\n   # ./2to3 cleanup --tiller-out-cluster -s configmaps --name test-convert\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" d\n   ```",
+          "content_hash": "85b2aa66309d47422d664ca9e2203d9456e390900935fd4a1ad4d67e9aa82bae",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.85670453
+        },
+        {
+          "id": "DQTDDCME772PPTBDUJ7VVCVKPN",
+          "revision_id": "5HON76GUFMINYSRWGR6DTSMHL6",
+          "section": "转换流程（使用Helm v3客户端）",
+          "start_line": 87,
+          "end_line": 164,
+          "content": "1. 安装Helm v3客户端，参见[安装Helm v3](https://support.huaweicloud.com/usermanual-cce/cce_10_0144.html)。\n2. 安装转换插件。\n\n   ```\n   # helm plugin install https://github.com/helm/helm-2to3\n   Downloading and installing helm-2to3 v0.10.2 ...\n   https://github.com/helm/helm-2to3/releases/download/v0.10.2/helm-2to3_0.10.2_linux_amd64.tar.gz\n   Installed plugin: 2to3\n   ```\n3. 查看已安装的插件，确认插件已安装。\n\n   ```\n   # helm plugin list\n   NAME VERSION DESCRIPTION\n   2to3  0.10.2      migrate and cleanup Helm v2 configuration and releases in-place to Helm v3\n   ```\n4. 模拟转换。\n\n   以test-convert实例为例，执行以下命令进行转换的模拟。若出现以下相关提示，说明模拟转换成功。\n\n   ```\n   # helm 2to3 convert --dry-run --tiller-out-cluster -s configmaps test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   ```\n5. 执行正式转换。若出现以下提示，说明转换成功。\n\n   ```\n   # helm 2to3 convert --tiller-out-cluster -s configmaps test-convert\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" created.\n   [Helm 3] Release \"test-convert\" created.\n   Release \"test-convert\" was converted successfully from Helm v2 to Helm v3.\n   Note: The v2 release information still remains and should be removed to avoid conflicts with the migrated v3 release.\n   v2 release information should only be removed using `helm 2to3` cleanup and when all releases have been migrated over.\n   ```\n6. 正式转换成功后，用户可通过helm list查看已转换成功的模板实例。\n\n   ```\n   # helm list\n   NAME                NAMESPACE    REVISION UPDATED                           STATUS      CHART              APP VERSION\n   test-convert      default   1                2022-08-29 06:56:28.166918487 +0000 UTC       deployed    test-helmold-1\n   ```\n7. 转换完成后进行V2 release资源的清理，同样先进行模拟清理，成功后正式清理V2 release资源。\n\n   模拟清理：\n\n   ```\n   # helm 2to3 cleanup --dry-run --tiller-out-cluster -s configmaps --name test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   ```\n\n   正式清理：\n\n   ```\n   # helm 2to3 cleanup --tiller-out-cluster -s configmaps --name test-convert\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" deleted.\n   [Helm 2] Release 'test-convert' deleted.\n   Helm v2 data was cleaned up successfully.\n   ```",
+          "content_hash": "b7d93c20931e8e03d62d5eff246a7bf14949e59c44c27b4c72d067b23aaab1a9",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "score": 0.8551391
+        }
+      ],
+      "result": {
+        "trace_id": "bf00b269e9948c78c3e5b2c63ca28f29"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1139.1598749905825
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-096",
+      "group": "family:cce_10_0613",
+      "category": "存储",
+      "question_type": "comparison",
+      "question": "EVS静态PV回收策略Delete下，设置与不设置everest.io/reclaim-policy=retain-volume-only，删除PVC结果有何不同？",
+      "answerable": true,
+      "required_facts": [
+        "不设置时PV和云硬盘都删除",
+        "设置retain-volume-only时PV删除、底层云硬盘保留",
+        "该参数要求Everest至少1.2.9且Delete策略"
+      ],
+      "reference_answer": "不设置时PV和云硬盘都删除；设置retain-volume-only时PV删除、底层云硬盘保留；该参数要求Everest至少1.2.9且Delete策略",
+      "evidence": [
+        {
+          "document_id": "cce_10_0614",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html",
+          "title": "通过静态存储卷使用已有云硬盘",
+          "file": "documents/cce_10_0614.md",
+          "content_sha256": "5f837c83554b1ea305241a0d41e097971199ef0ebab9655cffe1bb6becbcbc81",
+          "start_line": 128,
+          "end_line": 128,
+          "section": "使用已有云硬盘",
+          "anchor": "everest.io/reclaim-policy: retain-volume-only | 否",
+          "quote": "      | everest.io/reclaim-policy: retain-volume-only | 否 | 目前仅支持配置“retain-volume-only”  everest插件版本需 >= 1.2.9且回收策略为Delete时生效。如果回收策略是Delete且当前值设置为“retain-volume-only”删除PVC回收逻辑为：删除PV，保留底层存储卷。 |",
+          "quote_sha256": "11d2c13cf84246f174d33ce534b5cef61f608920c455ef712f1c3d42f49d0918"
+        },
+        {
+          "document_id": "cce_10_0614",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0614.html",
+          "title": "通过静态存储卷使用已有云硬盘",
+          "file": "documents/cce_10_0614.md",
+          "content_sha256": "5f837c83554b1ea305241a0d41e097971199ef0ebab9655cffe1bb6becbcbc81",
+          "start_line": 141,
+          "end_line": 141,
+          "section": "使用已有云硬盘",
+          "anchor": "Delete且不设置everest.io/reclaim-policy",
+          "quote": "      | persistentVolumeReclaimPolicy | 是 | 集群版本号>=1.19.10且everest插件版本>=1.2.9时正式开放回收策略支持。  支持Delete、Retain回收策略，详情请参见[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)。如果数据安全性要求较高，建议使用**Retain**以免误删数据。  **Delete**:  - Delete且不设置everest.io/reclaim-policy：删除PVC，PV资源与云硬盘均被删除。 - Delete且设置everest.io/reclaim-policy=retain-volume-only：删除PVC，PV资源被删除，云硬盘资源会保留。 **Retain**：删除PVC，PV资源与底层存储资源均不会被删除，需要手动删除回收。PVC删除后PV资源状态为“已释放（Released）”，不能直接再次被PVC绑定使用。若希望继续使用该底层存储资源，需先删除PV，再新建PV、PVC和底层存储关联。 |",
+          "quote_sha256": "33ee6ae0190b4b4a06731251b9049a221c86500417df1e12a2d86fcc990cbd40"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-096",
+      "question": "EVS静态PV回收策略Delete下，设置与不设置everest.io/reclaim-policy=retain-volume-only，删除PVC结果有何不同？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "存储",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "FJ3NHGP5M5GC7L7K4FYI2B75QN",
+          "revision_id": "42CHS7CIIWNYZYG6NLGQULMQEC",
+          "section": "使用已有对象存储（第2部分）",
+          "start_line": 134,
+          "end_line": 221,
+          "content": "| persistentVolumeReclaimPolicy | 是 | 集群版本号>=1.19.10且everest插件版本>=1.2.9时正式开放回收策略支持。  支持Delete、Retain回收策略，详情请参见[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)。多个PV使用同一个对象存储时建议使用**Retain**，避免级联删除底层卷。  **Delete**:  - Delete且不设置everest.io/reclaim-policy：删除PVC，PV资源与存储均被删除。 - Delete且设置everest.io/reclaim-policy=retain-volume-only：删除PVC，PV资源被删除，存储资源会保留。 **Retain**：删除PVC，PV资源与底层存储资源均不会被删除，需要手动删除回收。PVC删除后PV资源状态为“已释放（Released）”，不能直接再次被PVC绑定使用。若希望继续使用该底层存储资源，需先删除PV，再新建PV、PVC和底层存储关联。 |\n      | storage | 是 | 存储容量，单位为Gi。  对于对象存储来说，此处仅为校验需要（不能为空和0），设置的大小不起作用，此处设定为固定值1Gi。 |\n      | storageClassName | 是 | 对象存储对应的存储类名称为csi-obs。 |\n   2. 执行以下命令，创建PV。\n\n      ```\n      kubectl apply -f pv-obs.yaml\n      ```\n3. 创建PVC。\n   1. 创建pvc-obs.yaml文件。\n\n      ```\n      apiVersion: v1\n      kind: PersistentVolumeClaim\n      metadata:\n        name: pvc-obs\n        namespace: default\n        annotations:\n          volume.beta.kubernetes.io/storage-provisioner: everest-csi-provisioner\n          everest.io/obs-volume-type: STANDARD\n          csi.storage.k8s.io/fstype: obsfs\n          csi.storage.k8s.io/node-publish-secret-name: <your_secret_name>  # 自定义密钥的名称\n          csi.storage.k8s.io/node-publish-secret-namespace: <your_namespace>        # 自定义密钥的命名空间\n          everest.io/enterprise-project-id: <your_enterprise_project_id>     # 可选字段，填写对象存储对应的企业项目ID，同时注意创建PVC时填写的企业项目ID要和PV中的一致，否则PVC无法绑定PV\n      spec:\n        accessModes:\n        - ReadWriteMany                  # 对象存储必须为ReadWriteMany\n        resources:\n          requests:\n            storage: 1Gi\n        storageClassName: csi-obs       # 存储类名称，必须与PV的存储类一致。\n        volumeName: pv-obs    # PV的名称\n      ```\n\n      **表3** 关键参数说明\n\n      | 参数 | 是否必填 | 描述 |\n      | --- | --- | --- |\n      | csi.storage.k8s.io/node-publish-secret-name | 否 | PV中指定的自定义密钥的名称。 |\n      | csi.storage.k8s.io/node-publish-secret-namespace | 否 | PV中指定的自定义密钥的命名空间。 |\n      | everest.io/enterprise-project-id | 否 | 填写对象存储对应的企业项目ID，仅限于已开通企业项目的企业客户账号使用。了解更多企业项目相关信息，请查看[企业管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-em/zh-cn_topic_0123692049.html)。  获取方法：在对象存储服务控制台，单击左侧栏目树中的“桶列表”或“并行文件系统”，单击要对接的对象存储名称进入详情页，在“概览 > 基本信息”页签下找到企业项目，单击并进入对应的企业项目控制台，复制对应的ID值即可获取对象存储所属的企业项目的ID。 |\n      | storage | 是 | PVC申请容量，单位为Gi。  对于对象存储来说，此处仅为校验需要（不能为空和0），设置的大小不起作用，此处设定为固定值1Gi。 |\n      | storageClassName | 是 | 存储类名称，必须与[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0379.html)中PV的存储类一致。  对象存储对应的存储类名称为csi-obs。 |\n      | volumeName | 是 | PV的名称，必须与[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0379.html)中PV名称一致。 |\n   2. 执行以下命令，创建PVC。\n\n      ```\n      kubectl apply -f pvc-obs.yaml\n      ```\n4. 创建应用。\n   1. 创建web-demo.yaml文件，本示例中将对象存储挂载至/data路径。\n\n      ```\n      apiVersion: apps/v1\n      kind: Deployment\n      metadata:\n        name: web-demo\n        namespace: default\n      spec:\n        replicas: 2\n        selector:\n          matchLabels:\n            app: web-demo\n        template:\n          metadata:\n            labels:\n              app: web-demo\n          spec:\n            containers:\n            - name: container-1\n              image: nginx:latest\n              volumeMounts:\n              - name: pvc-obs-volume    #卷名称，需与volumes字段中的卷名称对应\n                mountPath: /data  #存储卷挂载的位置\n            imagePullSecrets:\n              - name: default-secret\n            volumes:\n              - name: pvc-obs-volume    #卷名称，可自定义\n                persistentVolumeClaim:\n                  claimName: pvc-obs    #已创建的PVC名称\n      ```\n   2. 执行以下命令，创建一个挂载对象存储的应用。\n\n      ```\n      kubectl apply -f web-demo.yaml\n      ```\n\n      工作负载创建成功后，您可以尝试[验证数据持久化及共享性](https://support.huaweicloud.com/usermanual-cce/cce_10_0379.html)。",
+          "content_hash": "336551535e196d5457cca37ffa35713803b361f755dcb5452bd911ba6d5f5006",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0379.html",
+          "title": "通过静态存储卷使用已有对象存储",
+          "score": 0.9019006
+        },
+        {
+          "id": "O6YLVQREKBQMT3LYD7ICE3KI5E",
+          "revision_id": "2LI6ETCVHPH4ANPKEIW5DOMCLI",
+          "section": "PV回收策略",
+          "start_line": 85,
+          "end_line": 153,
+          "content": "PV回收策略用于指定删除PVC时，底层卷的回收策略，支持设定Delete、Retain回收策略。\n\n- Delete：删除PVC的动作会将PV对象从Kubernetes中移除，同时也会从外部基础设施中移除所关联的底层存储资产。\n\n  ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n  包周期云硬盘资源支持通过Delete回收策略进行级联删除，而其他类型的包周期资源则无法通过Delete回收策略实现级联删除。\n- Retain：当PVC对象被删除时，PV对象与底层存储资源均不会被删除，需要手动删除回收。PVC删除后PV资源状态为“已释放（Released）”，且不能直接再次被PVC绑定使用。\n\n  您可以通过以下步骤来手动删除回收：\n\n  1. 手动删除PersistentVolume对象。\n  2. 根据情况，手动清除所关联的底层存储资源上的数据。\n  3. 手动删除所关联的底层存储资源。\n\n  若希望继续使用该底层存储资源，需先删除PV，再新建PV、PVC和底层存储关联。\n\nCCE还支持一种删除PVC时不删除底层存储资源的使用方法，当前仅支持使用YAML创建：PV回收策略设置为Delete，并添加annotations“everest.io/reclaim-policy: retain-volume-only”。这样在删除PVC时，PV会被删除，但底层存储资源会保留。\n\n以云硬盘为例，YAML示例如下：\n\n```\napiVersion: v1\nkind: PersistentVolumeClaim\nmetadata:\n  name: test\n  namespace: default\n  annotations:\n    volume.beta.kubernetes.io/storage-provisioner: everest-csi-provisioner\n    everest.io/disk-volume-type: SAS\n  labels:\n    failure-domain.beta.kubernetes.io/region: <your_region>   # 替换为您待部署应用的节点所在的区域\n    failure-domain.beta.kubernetes.io/zone: <your_zone>       # 替换为您待部署应用的节点所在的可用区\nspec:\n  accessModes:\n    - ReadWriteOnce\n  resources:\n    requests:\n      storage: 10Gi\n  storageClassName: csi-disk\n  volumeName: pv-evs-test\n\n---\napiVersion: v1\nkind: PersistentVolume\nmetadata:\n  annotations:\n    pv.kubernetes.io/provisioned-by: everest-csi-provisioner\n    everest.io/reclaim-policy: retain-volume-only\n  name: pv-evs-test\n  labels:\n    failure-domain.beta.kubernetes.io/region: <your_region>   # 替换为您待部署应用的节点所在的区域\n    failure-domain.beta.kubernetes.io/zone: <your_zone>       # 替换为您待部署应用的节点所在的可用区\nspec:\n  accessModes:\n    - ReadWriteOnce\n  capacity:\n    storage: 10Gi\n  csi:\n    driver: disk.csi.everest.io\n    fsType: ext4\n    volumeHandle: 2af98016-6082-4ad6-bedc-1a9c673aef20   #云硬盘ID\n    volumeAttributes:\n      storage.kubernetes.io/csiProvisionerIdentity: everest-csi-provisioner\n      everest.io/disk-mode: SCSI\n      everest.io/disk-volume-type: SAS\n  persistentVolumeReclaimPolicy: Delete\n  storageClassName: csi-disk\n```",
+          "content_hash": "0b1a2c6a5548ea603d260e8a7f8b658330c763cd79dba7563e1eac1a6b265af9",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html",
+          "title": "存储基础知识",
+          "score": 0.8950556
+        },
+        {
+          "id": "NZTK2D5YDRWQY3GRBRO3QMRKXO",
+          "revision_id": "ZTBYNTZX7JSF2HOFBMUB6SBXKH",
+          "section": "StorageClass高级配置（第3部分）",
+          "start_line": 393,
+          "end_line": 499,
+          "content": "| reclaimPolicy | 用于指定删除PVC时底层存储的回收策略，详情请参见[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)。该参数未指定时，默认为**Delete**。  - **Delete**：存储卷声明PVC删除时，会将关联的底层存储资源删除，并同步移除PV资源，请谨慎使用。 - **Retain**：存储卷声明PVC删除时，PV和关联的底层存储资源均会保留，需要手动删除。 |\n   | allowVolumeExpansion | 表示由该存储类创建的PV是否支持动态扩容，即是否允许通过修改PVC的方式动态扩容其绑定的存储卷，默认为false。  该参数仅为开启动态扩容的开关，动态扩容能否生效取决于底层存储插件的支持情况。若底层存储插件不支持，即使该参数设置为true，仍无法实现扩容。**目前仅云硬盘、SFS Turbo(无子目录或子目录有限额)支持动态扩容**。 |\n   | volumeBindingMode | 表示卷绑定模式，即动态创建PV的时间，分为立即创建（Immediate）和延迟创建（WaitForFirstConsumer）。  - **Immediate**：PVC创建后，会立即创建底层存储资源及存储卷PV，并与PVC绑定。 - **WaitForFirstConsumer**：PVC创建后，不会立即与存储卷PV绑定，而是等需要挂载该PVC的Pod被调度后，再创建底层存储资源及存储卷PV，并与PVC绑定。 |\n\n   **表10** parameters参数说明\n\n   | 参数 | 是否必选 | 描述 |\n   | --- | --- | --- |\n   | csi.storage.k8s.io/csi-driver-name | 是 | 表示驱动类型，使用专属存储类型时，参数取值固定为“disk.csi.everest.io”。 |\n   | csi.storage.k8s.io/fstype | 是 | 用于设置文件系统类型，仅支持设置为ext4。 |\n   | everest.io/disk-volume-type | 是 | 表示专属存储类型，全大写。 - SAS：高I/O - SSD：超高I/O |\n   | everest.io/passthrough | 是 | 参数取值固定为“true”，表示专属存储的设备类型为SCSI类型，不允许设置为其他值。 |\n   | everest.io/resource-type | 是 | 表示资源类型，专属存储固定为“dss”。 |\n   | everest.io/enterprise-project-id | 否 | 用于指定底层存储资源的企业项目ID，仅限于已开通企业项目的企业客户账号使用。建议设置为集群所属的企业项目或default企业项目**，**以便资源统一管理。了解更多企业项目相关信息，请查看[企业管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-em/zh-cn_topic_0123692049.html)。  **获取方法**：在企业项目管理控制台，单击要对接的企业项目名称，复制企业项目ID值即可。  说明：  该功能需要everest插件升级到1.2.33及以上版本。 |\n3. 执行以下命令，创建上述StorageClass。\n\n   ```\n   kubectl apply -f dss-storageclass.yaml\n   ```\n\n   回显结果如下：\n\n   ```\n   storageclass.storage.k8s.io/csi-disk-dsstest created\n   ```\n4. 执行以下命令，可以查看csi-disk-dsstest的详细信息。\n\n   ```\n   kubectl describe sc csi-disk-dsstest\n   ```\n\n   回显结果如下：\n\n   ```\n   Name:            csi-disk-dsstest\n   IsDefaultClass:  No\n   Annotations:     kubectl.kubernetes.io/last-applied-configuration={\"apiVersion\":\"storage.k8s.io/v1\",\"kind\":\"StorageClass\",\"metadata\":{\"annotations\":{\"storageclass.kubernetes.io/is-default-class\":\"false\"},...\n   ```\n\n**本地持久卷**\n\n1. [通过kubectl连接集群](https://support.huaweicloud.com/usermanual-cce/cce_10_0107.html)。\n2. 执行以下命令，创建StorageClass的YAML文件，文件名支持自定义。\n\n   ```\n   vim local-storageclass.yaml\n   ```\n\n   文件内容如下：\n\n   ```\n   kind: StorageClass\n   apiVersion: storage.k8s.io/v1\n   metadata:\n     name: csi-local-test\n     annotations:\n       storageclass.kubernetes.io/is-default-class: \"false\"   # 非必选项，指定集群中默认的StorageClass，一个集群中只能有一个默认的StorageClass\n   provisioner: everest-csi-provisioner\n   parameters:\n     csi.storage.k8s.io/csi-driver-name: local.csi.everest.io\n     csi.storage.k8s.io/fstype: ext4\n     volume-type: persistent\n   reclaimPolicy: Delete\n   volumeBindingMode: WaitForFirstConsumer\n   ```\n\n   **表11** 参数说明\n\n   | 参数 | 说明 |\n   | --- | --- |\n   | metadata.annotations.storageclass.kubernetes.io/is-default-class | 用于指定默认StorageClass，一个集群中建议只设置一个默认的StorageClass。如果存在多个默认StorageClass，CCE不会报错，但行为可能不确定。  - **true**：表示该StorageClass为默认StorageClass。创建PVC时，如果未显式指定StorageClassName，系统将自动使用默认StorageClass。 - **false或不设置该参数**：表示该StorageClass为非默认StorageClass。 |\n   | provisioner | 表示存储资源提供商。CCE均由Everest插件提供，此处只能填写everest-csi-provisioner。 |\n   | parameters | 用于定义存储类的具体配置参数，详情请参见[表12](https://support.huaweicloud.com/usermanual-cce/cce_10_0380.html)。 |\n   | reclaimPolicy | 用于指定删除PVC时底层存储的回收策略，详情请参见[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)。该参数未指定时，默认为**Delete**。  - **Delete**：存储卷声明PVC删除时，会将关联的底层存储资源删除，并同步移除PV资源，请谨慎使用。 - **Retain**：存储卷声明PVC删除时，PV和关联的底层存储资源均会保留，需要手动删除。 |\n   | volumeBindingMode | 表示卷绑定模式，即动态创建PV的时间，分为立即创建（Immediate）和延迟创建（WaitForFirstConsumer）。**本地持久卷仅支持****WaitForFirstConsumer****模式**。  - **Immediate**：PVC创建后，会立即创建底层存储资源及存储卷PV，并与PVC绑定。 - **WaitForFirstConsumer**：PVC创建后，不会立即与存储卷PV绑定，而是等需要挂载该PVC的Pod被调度后，再创建底层存储资源及存储卷PV，并与PVC绑定。 |\n\n   **表12** parameters参数说明\n\n   | 参数 | 是否必选 | 描述 |\n   | --- | --- | --- |\n   | csi.storage.k8s.io/csi-driver-name | 是 | 表示驱动类型，使用本地持久卷类型时，参数取值固定为“local.csi.everest.io”。 |\n   | csi.storage.k8s.io/fstype | 是 | 表示文件系统类型，仅支持设置为“ext4”。 |\n   | volume-type | 是 | 表示卷类型，仅支持设置为“persistent”。 |\n3. 执行以下命令，创建上述StorageClass。\n\n   ```\n   kubectl apply -f dss-storageclass.yaml\n   ```\n\n   回显结果如下：\n\n   ```\n   storageclass.storage.k8s.io/csi-local-test created\n   ```\n4. 执行以下命令，可以查看csi-local-test的详细信息。\n\n   ```\n   kubectl describe sc csi-local-test\n   ```\n\n   回显结果如下：\n\n   ```\n   Name:            csi-local-test\n   IsDefaultClass:  No\n   Annotations:     kubectl.kubernetes.io/last-applied-configuration={\"apiVersion\":\"storage.k8s.io/v1\",\"kind\":\"StorageClass\",\"metadata\":{\"annotations\":{\"storageclass.kubernetes.io/is-default-class\":\"false\"},...\n   ```",
+          "content_hash": "45999b2806ccb5d233f7b85dff77856a53510b9de5ccf2b2be59773e039e4213",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0380.html",
+          "title": "自定义存储类（StorageClass）",
+          "score": 0.87066114
+        },
+        {
+          "id": "RJYBW7GJHVQFAY3Q6NV2Y3GGGO",
+          "revision_id": "UVXHHWIXJQMCWEVTY5ZD2JIK6M",
+          "section": "约束与限制",
+          "start_line": 17,
+          "end_line": 24,
+          "content": "- 支持多个PV挂载同一个SFS或SFS Turbo，但有如下限制：\n  - 多个不同的PVC/PV使用同一个底层SFS或SFS Turbo卷时，如果挂载至同一Pod使用，会因为PV的volumeHandle参数值相同导致无法为Pod挂载所有PVC，出现Pod无法启动的问题，请避免在同一个Pod中挂载相同的SFS或SFS Turbo。\n  - PV中persistentVolumeReclaimPolicy参数建议设置为Retain，否则可能存在一个PV删除时级联删除底层卷，其他关联这个底层卷的PV会由于底层存储被删除导致使用出现异常。\n  - 重复用底层存储时，建议在应用层做好多读多写的隔离保护，防止产生的数据覆盖和丢失。\n- 使用通用文件系统（原SFS 3.0 容量型）存储卷时，集群中需要安装2.0.9及以上版本的CCE容器存储（Everest）插件。\n- 使用通用文件系统（原SFS 3.0 容量型）存储卷时，挂载点不支持修改属组和权限，挂载点默认属主为root。\n- 使用通用文件系统（原SFS 3.0 容量型）时，创建、删除PVC和PV过程中可能存在时延，实际计费时长请以SFS侧创建、删除时刻为准。\n- CCE容器存储（Everest）插件版本在2.4.105以下，或区域为华南-广州时，若通用文件系统（原SFS 3.0 容量型）需要使用Delete回收策略，建议先删除文件系统内文件，否则可能会导致对应PV和PVC删除失败。插件版本在2.4.105及以上，且区域非华南-广州时，无该限制。",
+          "content_hash": "885a057c5de0daf1273a09ca9e198dd45f75b479edee47b563bcbd8f3abb0734",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html",
+          "title": "通过静态存储卷使用已有文件存储",
+          "score": 0.8532748
+        },
+        {
+          "id": "GR7JE72S75LNGSHVBEUL4ZJYYP",
+          "revision_id": "UVXHHWIXJQMCWEVTY5ZD2JIK6M",
+          "section": "通过kubectl命令行使用已有文件存储（第2部分）",
+          "start_line": 276,
+          "end_line": 458,
+          "content": "- ReadWriteMany                  # 文件存储必须为ReadWriteMany\n        resources:\n          requests:\n            storage: 1Gi               # 文件存储大小\n        storageClassName: csi-sfs     # 存储类名称，必须与PV的存储类一致\n        volumeName: pv-sfs    # PV的名称\n      ```\n\n      **表5** 关键参数说明\n\n      | 参数 | 是否必选 | 描述 |\n      | --- | --- | --- |\n      | everest.io/csi.volume-as | 是 | 固定取值为“absolute-path”，表示使用动态创建SFS子目录。  集群中需安装2.4.41及以上版本的Everest插件。 |\n      | everest.io/csi.path | 是 | 请填写子目录的绝对路径。  - 当Everest插件版本在2.4.176及以上，且非安全容器场景时，如果子目录不存在，系统将自动创建。 - 在上述情况以外，需确保子目录已存在且可用。 |\n      | everest.io/csi.sfs30-name | 是 | 仅动态创建SFS子目录时使用，参数值为SFS实例的名称。 |\n      | everest.io/csi.reclaim-policy | 是 | 仅动态创建SFS子目录时使用，表示删除PVC时是否保留子目录，该参数需与[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)配合使用。仅当PV回收策略为\"Delete\"时生效，取值如下：  - retain-volume-only：表示删除PVC时，PV会被删除，但**PV关联的子目录会被保留**。 - delete：表示删除PVC，**PV及其关联的子目录均会被删除**。 说明：  删除子目录时，仅删除PVC参数中设置的子目录绝对路径，不会级联删除上层目录。 |\n      | storage | 是 | PVC申请容量，单位为Gi。  必须和已有PV的storage大小保持一致。 |\n      | storageClassName | 是 | 存储类名称，填写csi-sfs，必须与[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html)中PV的存储类一致，表示使用通用文件系统（原SFS 3.0 容量型）。 |\n      | volumeName | 是 | PV的名称，必须与[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html)中PV的名称一致。 |\n   2. 执行以下命令，创建PVC。\n\n      ```\n      kubectl apply -f pvc-sfs.yaml\n      ```\n4. 创建应用。\n   1. 创建web-demo.yaml文件，本示例中将文件存储挂载至/data路径。\n\n      ```\n      apiVersion: apps/v1\n      kind: Deployment\n      metadata:\n        name: web-demo\n        namespace: default\n      spec:\n        replicas: 2\n        selector:\n          matchLabels:\n            app: web-demo\n        template:\n          metadata:\n            labels:\n              app: web-demo\n          spec:\n            containers:\n            - name: container-1\n              image: nginx:latest\n              volumeMounts:\n              - name: pvc-sfs-volume    #卷名称，需与volumes字段中的卷名称对应\n                mountPath: /data  #存储卷挂载的位置\n            imagePullSecrets:\n              - name: default-secret\n            volumes:\n              - name: pvc-sfs-volume    #卷名称，可自定义\n                persistentVolumeClaim:\n                  claimName: pvc-sfs    #已创建的PVC名称\n      ```\n   2. 执行以下命令，创建一个挂载文件存储的应用。\n\n      ```\n      kubectl apply -f web-demo.yaml\n      ```\n\n      工作负载创建成功后，容器挂载目录下的数据将会持久化保持，您可以参考[验证数据持久化及共享性](https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html)中的步骤进行验证。\n\n1. 使用kubectl连接集群。\n2. 创建PV。\n   1. 创建pv-sfs.yaml文件。\n\n      示例如下：\n\n      ```\n      apiVersion: v1\n      kind: PersistentVolume\n      metadata:\n        annotations:\n          pv.kubernetes.io/provisioned-by: everest-csi-provisioner\n          everest.io/reclaim-policy: retain-volume-only      # 可选字段，删除PV，保留底层存储卷\n        name: pv-sfs    # PV的名称\n      spec:\n        accessModes:\n        - ReadWriteMany      # 访问模式，文件存储必须为ReadWriteMany\n        capacity:\n          storage: 1Gi       # 存储容量大小，此处仅为校验需要（不能为空和0），设置的大小不起作用\n        csi:\n          driver: nas.csi.everest.io    # 挂载依赖的存储驱动\n          fsType: nfs\n          volumeHandle: <your_volume_id>   # SFS容量型文件存储的ID\n          volumeAttributes:\n            everest.io/share-export-location: <your_location>  #文件存储的共享路径\n            storage.kubernetes.io/csiProvisionerIdentity: everest-csi-provisioner\n        persistentVolumeReclaimPolicy: Retain    # 回收策略\n        storageClassName: csi-nas               # 存储类名称，csi-nas表示使用SFS容量型\n        mountOptions: []                         # 挂载参数\n      ```\n\n      **表6** 关键参数说明\n\n      | 参数 | 是否必选 | 描述 |\n      | --- | --- | --- |\n      | everest.io/reclaim-policy | 否 | 目前仅支持配置“retain-volume-only”  everest插件版本需 >= 1.2.9且回收策略为Delete时生效。如果回收策略是Delete且当前值设置为“retain-volume-only”删除PVC回收逻辑为：删除PV，保留底层存储卷。 |\n      | volumeHandle | 是 | 使用SFS容量型文件存储时，填写文件存储的ID。  获取方法：在CCE控制台，单击顶部的“服务列表 > 存储 > 弹性文件服务”，并选择SFS容量型。在列表中单击对应的弹性文件存储名称，在详情页中复制“ID”后的内容即可。 |\n      | everest.io/share-export-location | 是 | 文件存储的共享路径。  获取方法：在CCE控制台，单击顶部的“服务列表 > 存储 > 弹性文件服务”，在弹性文件服务列表中可以看到“挂载地址”列，即为文件存储的共享路径。 |\n      | mountOptions | 否 | 挂载参数。  不设置时默认配置为如下配置，具体说明请参见[设置文件存储挂载参数](https://support.huaweicloud.com/usermanual-cce/cce_10_0337.html)。   ``` mountOptions: - vers=3 - timeo=600 - nolock - hard ``` |\n      | persistentVolumeReclaimPolicy | 是 | 集群版本号>=1.19.10且everest插件版本>=1.2.9时正式开放回收策略支持。  支持Delete、Retain回收策略，详情请参见[PV回收策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0378.html)。多个PV使用同一个文件存储时建议使用**Retain**，避免级联删除底层卷。  **Retain**：PVC删除时，PV和关联的底层存储资源均会保留，其中PV状态被设置为“已释放（Released）”，不能直接再次被PVC绑定使用。若希望继续使用该底层存储资源，需先删除PV，再新建PV、PVC和底层存储关联。  **Delete**：PVC删除时，会将关联的底层存储资源删除，并同步移除PV资源，请谨慎使用。 |\n      | storage | 是 | PVC申请容量，单位为Gi，需与已有SFS容量型存储实例一致。 |\n      | storageClassName | 是 | 存储类名称csi-nas，表示使用SFS 1.0容量型文件存储。 |\n   2. 执行以下命令，创建PV。\n\n      ```\n      kubectl apply -f pv-sfs.yaml\n      ```\n3. 创建PVC。\n   1. 创建pvc-sfs.yaml文件。\n\n      ```\n      apiVersion: v1\n      kind: PersistentVolumeClaim\n      metadata:\n        name: pvc-sfs\n        namespace: default\n        annotations:\n          volume.beta.kubernetes.io/storage-provisioner: everest-csi-provisioner\n      spec:\n        accessModes:\n        - ReadWriteMany                  # 文件存储必须为ReadWriteMany\n        resources:\n          requests:\n            storage: 1Gi               # 文件存储大小\n        storageClassName: csi-nas     # 存储类名称，必须与PV的存储类一致\n        volumeName: pv-sfs    # PV的名称\n      ```\n\n      **表7** 关键参数说明\n\n      | 参数 | 是否必选 | 描述 |\n      | --- | --- | --- |\n      | storage | 是 | PVC申请容量，单位为Gi。  必须和已有PV的storage大小保持一致。 |\n      | storageClassName | 是 | 存储类名称，填写csi-nas，必须与[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html)中PV的存储类一致，表示使用SFS 1.0容量型文件存储。 |\n      | volumeName | 是 | PV的名称，必须与[1](https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html)中PV的名称一致。 |\n   2. 执行以下命令，创建PVC。\n\n      ```\n      kubectl apply -f pvc-sfs.yaml\n      ```\n4. 创建应用。\n   1. 创建web-demo.yaml文件，本示例中将文件存储挂载至/data路径。\n\n      ```\n      apiVersion: apps/v1\n      kind: Deployment\n      metadata:\n        name: web-demo\n        namespace: default\n      spec:\n        replicas: 2\n        selector:\n          matchLabels:\n            app: web-demo\n        template:\n          metadata:\n            labels:\n              app: web-demo\n          spec:\n            containers:\n            - name: container-1\n              image: nginx:latest\n              volumeMounts:\n              - name: pvc-sfs-volume    #卷名称，需与volumes字段中的卷名称对应\n                mountPath: /data  #存储卷挂载的位置\n            imagePullSecrets:\n              - name: default-secret\n            volumes:\n              - name: pvc-sfs-volume    #卷名称，可自定义\n                persistentVolumeClaim:\n                  claimName: pvc-sfs    #已创建的PVC名称\n      ```\n   2. 执行以下命令，创建一个挂载文件存储的应用。\n\n      ```\n      kubectl apply -f web-demo.yaml\n      ```\n\n      工作负载创建成功后，容器挂载目录下的数据将会持久化保持，您可以参考[验证数据持久化及共享性](https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html)中的步骤进行验证。",
+          "content_hash": "9d9bef72e5fc4334d167afad04a8ba8b211bc3978a208e3cf1a3ccbecc7d58bc",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0619.html",
+          "title": "通过静态存储卷使用已有文件存储",
+          "score": 0.8517349
+        }
+      ],
+      "result": {
+        "trace_id": "7190d5e5b9abd06eb078e7813e5ebfba"
+      },
+      "citation_integrity": false,
+      "latency_ms": 1143.0621250037802
+    }
+  }
+]

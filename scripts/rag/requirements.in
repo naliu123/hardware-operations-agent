@@ -1,0 +1,8 @@
+arize-phoenix==20.14.0
+arize-phoenix-client==3.5.0
+beautifulsoup4
+markdownify
+playwright==1.55.0
+sentence-transformers==6.1.0
+matplotlib
+psutil

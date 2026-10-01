@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-09-19T22:02:15.936556+00:00",
+  "python_compileall": "passed",
+  "offline_report_run": "passed",
+  "chart_visual_inspection": "passed",
+  "csv_query_rows": 182,
+  "csv_summary_rows": 6,
+  "independent_recall_recalculation": 0.9342105263157895,
+  "answer_flow_retrieval_matches_final": true,
+  "local_links_checked": 65,
+  "broken_local_links": [],
+  "source_files_hashed": 43,
+  "source_hash_file": "source-code-sha256.json",
+  "all_resources_released": true
+}

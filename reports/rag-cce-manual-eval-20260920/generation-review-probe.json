@@ -1,0 +1,274 @@
+[
+  {
+    "id": "cce-manual-016",
+    "mode": "LIVE_EXPLORATORY_REVIEW_NOT_PUBLIC_HTTP",
+    "input_probe": "generation-scope-probe.json",
+    "review_prompt": "请基于原始问题及所有提供片段，检查上面的草稿并重新输出完整JSON。检查每个直接相关段落/列表中是否漏了必要功能、用途、机制、前置条件或建议；保留这些完整要点。问题指定的历史/来源范围必须在答案中显式说明。区分同一资源的不同操作目的，不把销毁步骤用作复用步骤。示例值不得泛化。删除所有不能对应用户实际所问内容的gaps，问题已完整回答就保持gaps为空。不要把新增旁支步骤带入答复。若没有问题就原样保留。",
+    "response": {
+      "id": "7ee625fd-2f74-4a5f-909b-c9a4485d7d21",
+      "object": "chat.completion",
+      "created": 1789956113,
+      "model": "deepseek-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"claims\":[{\"text\":\"删除或扩缩有状态负载（StatefulSet）时，为保证数据安全，系统并不会删除它所关联的存储卷。\",\"fragment_ids\":[\"7ATDJSEND5GPWAW7QWXZ2653NX\"]},{\"text\":\"删除有状态负载时，为实现其中的Pod有序停止，应在删除之前将副本数缩容到0。\",\"fragment_ids\":[\"7ATDJSEND5GPWAW7QWXZ2653NX\"]},{\"text\":\"StatefulSet中的Pod按固定顺序进行部署、扩展或删除：扩展时先增加序号较高的Pod，缩容时先删除序号较高的Pod，这种有序机制对需要有序启动或停止的有状态应用至关重要。\",\"fragment_ids\":[\"YJO7L5MIMNDAPBWG3PQ3FVUIOB\"]}],\"gaps\":[]}"
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2818,
+        "completion_tokens": 186,
+        "total_tokens": 3004,
+        "prompt_tokens_details": {
+          "cached_tokens": 2560
+        },
+        "prompt_cache_hit_tokens": 2560,
+        "prompt_cache_miss_tokens": 258
+      },
+      "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    }
+  },
+  {
+    "id": "cce-manual-018",
+    "mode": "LIVE_EXPLORATORY_REVIEW_NOT_PUBLIC_HTTP",
+    "input_probe": "generation-scope-probe.json",
+    "review_prompt": "请基于原始问题及所有提供片段，检查上面的草稿并重新输出完整JSON。检查每个直接相关段落/列表中是否漏了必要功能、用途、机制、前置条件或建议；保留这些完整要点。问题指定的历史/来源范围必须在答案中显式说明。区分同一资源的不同操作目的，不把销毁步骤用作复用步骤。示例值不得泛化。删除所有不能对应用户实际所问内容的gaps，问题已完整回答就保持gaps为空。不要把新增旁支步骤带入答复。若没有问题就原样保留。",
+    "response": {
+      "id": "a592ccbb-efd4-4f62-9131-8ab60225e894",
+      "object": "chat.completion",
+      "created": 1789956114,
+      "model": "deepseek-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"claims\":[{\"text\":\"在集群每个节点部署日志采集器和节点监控，应选择守护进程集（DaemonSet）类工作负载。DaemonSet在集群的每个节点上运行一个Pod，且保证只有一个Pod，非常适合日志收集、资源监控等系统层面的应用，这类应用需要每个节点都运行，且不需要太多实例。\",\"fragment_ids\":[\"AYFVUA3YCDO45532HZ22AL7B2U\"]},{\"text\":\"DaemonSet可以确保全部（或者某些）节点上始终运行着一个Pod实例；一旦有新节点加入集群，DaemonSet控制器会自动在这个新节点上创建一个新的Pod；当某个节点从集群中移除时，该节点上的Pod会被自动清理掉。\",\"fragment_ids\":[\"DM3T3CBWKDORH4WOX77Q5UQO52\"]},{\"text\":\"DaemonSet适用于需要在集群范围内提供一致服务的场景，例如：集群存储进程（部署在每个节点上确保所有节点都能访问存储后端，如GlusterFS或Ceph）；日志采集进程（如Fluentd或Logstash，部署在每个节点上采集节点日志数据并转发到统一的日志系统）；监控进程（如Prometheus Node Exporter等，部署在每个节点上收集节点层面的性能数据）。\",\"fragment_ids\":[\"DM3T3CBWKDORH4WOX77Q5UQO52\"]},{\"text\":\"DaemonSet跟节点相关，如果节点异常，属于该节点的DaemonSet Pod也不会迁移到其他节点重新创建。\",\"fragment_ids\":[\"AYFVUA3YCDO45532HZ22AL7B2U\"]},{\"text\":\"云原生日志采集插件中，fluent-bit（轻量级的日志收集器和转发器，部署在每个节点上采集日志）和cop-logs（负责生成采集文件的软链接，与fluent-bit运行在同一Pod）的资源类型均为DaemonSet。\",\"fragment_ids\":[\"F3EFGBHFECSWGTWNJLJXLYJERX\"]}],\"gaps\":[]}"
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 3191,
+        "completion_tokens": 438,
+        "total_tokens": 3629,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 247
+      },
+      "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    }
+  },
+  {
+    "id": "cce-manual-022",
+    "mode": "LIVE_EXPLORATORY_REVIEW_NOT_PUBLIC_HTTP",
+    "input_probe": "generation-scope-probe.json",
+    "review_prompt": "请基于原始问题及所有提供片段，检查上面的草稿并重新输出完整JSON。检查每个直接相关段落/列表中是否漏了必要功能、用途、机制、前置条件或建议；保留这些完整要点。问题指定的历史/来源范围必须在答案中显式说明。区分同一资源的不同操作目的，不把销毁步骤用作复用步骤。示例值不得泛化。删除所有不能对应用户实际所问内容的gaps，问题已完整回答就保持gaps为空。不要把新增旁支步骤带入答复。若没有问题就原样保留。",
+    "response": {
+      "id": "68b739ad-3f06-44e7-9b65-3fb3bb647e3b",
+      "object": "chat.completion",
+      "created": 1789956116,
+      "model": "deepseek-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"claims\":[{\"text\":\"在CCE容器使用场景下，GPU驱动是安装在节点上的，而CUDA Toolkit一般会在应用程序的容器镜像构建时预安装，或者可直接使用Nvidia官方已预装CUDA Toolkit的基础镜像构建应用容器镜像。\",\"fragment_ids\":[\"Q7S3XL2ZGGHCICJNMKKL2E3KRL\"]},{\"text\":\"GPU驱动和CUDA Toolkit版本需要配套才可以正常使用GPU资源，不能随意组合。\",\"fragment_ids\":[\"Q7S3XL2ZGGHCICJNMKKL2E3KRL\"]},{\"text\":\"可使用nvidia-smi命令查看节点上的驱动信息，以确定Nvidia驱动与CUDA Toolkit版本的配套关系；例如驱动版本为470.141.03时，对应支持的CUDA Toolkit最大版本为11.4（该数值为示例）。\",\"fragment_ids\":[\"Q7S3XL2ZGGHCICJNMKKL2E3KRL\"]},{\"text\":\"选择Nvidia驱动版本时需确保其与所使用的CUDA Toolkit版本兼容，具体兼容关系参见CUDA Toolkit和驱动的版本兼容性列表；可根据应用所使用的CUDA Toolkit版本选择合适的NVIDIA驱动版本。\",\"fragment_ids\":[\"UIW4PZWWIKDK7LGGKLBCQB5COV\"]},{\"text\":\"在满足CUDA版本和驱动版本配套关系的前提下，建议优先选择CCE推荐的GPU驱动版本列表中提供的GPU驱动版本；若CCE推荐的驱动版本无法匹配所使用的CUDA Toolkit版本而必须使用非推荐驱动版本，则需要自行验证机型、系统及驱动版本间的配套兼容性。\",\"fragment_ids\":[\"UIW4PZWWIKDK7LGGKLBCQB5COV\"]},{\"text\":\"对于CCE集群，各系统推荐使用驱动版本见CCE推荐的GPU驱动版本列表；若使用非CCE推荐驱动版本，需要自行验证机型、系统及驱动版本间的配套兼容性，并可根据应用所使用的CUDA Toolkit版本对照CUDA Toolkit与NVIDIA驱动的版本兼容性列表选择合适的NVIDIA驱动版本。\",\"fragment_ids\":[\"JCPVZYWFWWSRTOJ4MGICE3BK42\"]},{\"text\":\"对于GPU驱动版本与业务应用的兼容性（GPU驱动版本与CUDA库版本的兼容性），CCE不做保证，需自行验证。\",\"fragment_ids\":[\"IGLYAXUAQ5QSBEXGRGIS4SAQ3W\"]}],\"gaps\":[]}"
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 3336,
+        "completion_tokens": 529,
+        "total_tokens": 3865,
+        "prompt_tokens_details": {
+          "cached_tokens": 3200
+        },
+        "prompt_cache_hit_tokens": 3200,
+        "prompt_cache_miss_tokens": 136
+      },
+      "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    }
+  },
+  {
+    "id": "cce-manual-051",
+    "mode": "LIVE_EXPLORATORY_REVIEW_NOT_PUBLIC_HTTP",
+    "input_probe": "generation-scope-probe.json",
+    "review_prompt": "请基于原始问题及所有提供片段，检查上面的草稿并重新输出完整JSON。检查每个直接相关段落/列表中是否漏了必要功能、用途、机制、前置条件或建议；保留这些完整要点。问题指定的历史/来源范围必须在答案中显式说明。区分同一资源的不同操作目的，不把销毁步骤用作复用步骤。示例值不得泛化。删除所有不能对应用户实际所问内容的gaps，问题已完整回答就保持gaps为空。不要把新增旁支步骤带入答复。若没有问题就原样保留。",
+    "response": {
+      "id": "954371c5-d97a-4de4-a81b-61ef5b35f949",
+      "object": "chat.completion",
+      "created": 1789956119,
+      "model": "deepseek-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"claims\":[{\"text\":\"Kthena ModelServing专为云原生环境下的LLM推理设计，提供声明式的生命周期管理，其核心目标是突破Kubernetes原生负载（如Deployment/StatefulSet）在拓扑感知、原子调度及复杂推理工作流编排上的局限，为PD分离等高级模式构建坚实底座。\",\"fragment_ids\":[\"WL2PFAGVO2MX2CLCKMACO227VQ\"]},{\"text\":\"为解决Kubernetes原生资源（如Deployment或StatefulSet）在处理多角色协作场景下的局限性，Kthena采用ModelServing → ServingGroup → Role的三层结构，每一层承担不同职责，共同协作以实现高性能、可扩展的推理服务。\",\"fragment_ids\":[\"KDEU7XTG3RDAVNNVPNH56RGWFG\"]},{\"text\":\"Kthena深度集成Volcano调度器，支持“All or Nothing”的原子调度逻辑，有效避免在分布式推理组中由于部分Pod无法就绪而导致的调度死锁和资源浪费问题。\",\"fragment_ids\":[\"3OEZRMZH6NNIHRZEBQFQURXDUH\"]}],\"gaps\":[]}"
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 4257,
+        "completion_tokens": 255,
+        "total_tokens": 4512,
+        "prompt_tokens_details": {
+          "cached_tokens": 4096
+        },
+        "prompt_cache_hit_tokens": 4096,
+        "prompt_cache_miss_tokens": 161
+      },
+      "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    }
+  },
+  {
+    "id": "cce-manual-071",
+    "mode": "LIVE_EXPLORATORY_REVIEW_NOT_PUBLIC_HTTP",
+    "input_probe": "generation-scope-probe.json",
+    "review_prompt": "请基于原始问题及所有提供片段，检查上面的草稿并重新输出完整JSON。检查每个直接相关段落/列表中是否漏了必要功能、用途、机制、前置条件或建议；保留这些完整要点。问题指定的历史/来源范围必须在答案中显式说明。区分同一资源的不同操作目的，不把销毁步骤用作复用步骤。示例值不得泛化。删除所有不能对应用户实际所问内容的gaps，问题已完整回答就保持gaps为空。不要把新增旁支步骤带入答复。若没有问题就原样保留。",
+    "response": {
+      "id": "64d6ed2d-9a9c-4b63-b85e-82fb7c069bf4",
+      "object": "chat.completion",
+      "created": 1789956120,
+      "model": "deepseek-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"claims\":[{\"text\":\"在旧版IAM（角色与策略授权）下，可以通过统一身份认证服务（IAM），根据企业的业务组织，在账号中给不同职能部门的员工创建IAM用户，让员工拥有唯一安全凭证并使用CCE资源；并根据企业用户的职能设置不同的访问权限，以达到用户之间的权限隔离。\",\"fragment_ids\":[\"HDRX6PH7UAP3FCVHC5JD2BK4LN\"]},{\"text\":\"CCE权限管理支持集群级别、命名空间级别的权限控制，可对租户下的IAM用户、用户组设定不同的操作权限，用于限制不同部门的员工拥有部门内资源的细粒度权限。\",\"fragment_ids\":[\"4FPMHRAZMAYKXWS2424U5S2SGR\"]},{\"text\":\"集群权限仅针对与集群相关的资源（如集群、节点等）有效，必须确保同时配置了命名空间权限，才能有操作Kubernetes资源（如工作负载、Service等）的权限。\",\"fragment_ids\":[\"HDRX6PH7UAP3FCVHC5JD2BK4LN\"]},{\"text\":\"CCE控制台“权限管理 > 集群权限”页面中创建用户组和具体权限设置均跳转到IAM控制台进行具体操作，设置完后在集群权限页面能看到用户组所拥有的权限。\",\"fragment_ids\":[\"FPZZ7OJC6HC2EEEKCZGSTHKELT\"]}],\"gaps\":[]}"
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 3149,
+        "completion_tokens": 312,
+        "total_tokens": 3461,
+        "prompt_tokens_details": {
+          "cached_tokens": 2944
+        },
+        "prompt_cache_hit_tokens": 2944,
+        "prompt_cache_miss_tokens": 205
+      },
+      "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    }
+  },
+  {
+    "id": "cce-manual-080",
+    "mode": "LIVE_EXPLORATORY_REVIEW_NOT_PUBLIC_HTTP",
+    "input_probe": "generation-scope-probe.json",
+    "review_prompt": "请基于原始问题及所有提供片段，检查上面的草稿并重新输出完整JSON。检查每个直接相关段落/列表中是否漏了必要功能、用途、机制、前置条件或建议；保留这些完整要点。问题指定的历史/来源范围必须在答案中显式说明。区分同一资源的不同操作目的，不把销毁步骤用作复用步骤。示例值不得泛化。删除所有不能对应用户实际所问内容的gaps，问题已完整回答就保持gaps为空。不要把新增旁支步骤带入答复。若没有问题就原样保留。",
+    "response": {
+      "id": "4458597a-e318-42f8-9547-8b0c7e432c18",
+      "object": "chat.completion",
+      "created": 1789956122,
+      "model": "deepseek-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"claims\":[{\"text\":\"两个Pod配置使用同一个云硬盘时，当这两个Pod被调度到不同节点，必然有一个Pod会因为无法挂载云硬盘导致无法成功启动。\",\"fragment_ids\":[\"6YWLEF53WTGOPVLLHXK3TCRXPQ\"]},{\"text\":\"云硬盘不支持跨可用区挂载，且不支持被多个工作负载、同一个工作负载的多个实例或多个任务使用；由于CCE集群各节点之间暂不支持共享盘的数据共享功能，多个节点挂载使用同一个云硬盘可能会出现读写冲突、数据缓存冲突等问题，所以创建无状态工作负载时，若使用了EVS云硬盘，建议工作负载只选择一个实例。\",\"fragment_ids\":[\"MRUNMQ3363EOKIXW5JWV6PMJBJ\",\"U2UKQMTHKQB45AMJSYJ3A2UEQR\"]},{\"text\":\"在1.19.10以下版本的集群中，如果使用HPA策略对挂载了EVS卷的负载进行扩容，当新Pod被调度到另一个节点时，会导致之前Pod不能正常读写。\",\"fragment_ids\":[\"MRUNMQ3363EOKIXW5JWV6PMJBJ\",\"U2UKQMTHKQB45AMJSYJ3A2UEQR\"]},{\"text\":\"在1.19.10及以上版本集群中，如果使用HPA策略对挂载了EVS卷的负载进行扩容，新Pod会因为无法挂载云硬盘导致无法成功启动。\",\"fragment_ids\":[\"MRUNMQ3363EOKIXW5JWV6PMJBJ\",\"U2UKQMTHKQB45AMJSYJ3A2UEQR\"]}],\"gaps\":[]}"
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2320,
+        "completion_tokens": 368,
+        "total_tokens": 2688,
+        "prompt_tokens_details": {
+          "cached_tokens": 2176
+        },
+        "prompt_cache_hit_tokens": 2176,
+        "prompt_cache_miss_tokens": 144
+      },
+      "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    }
+  },
+  {
+    "id": "cce-manual-095",
+    "mode": "LIVE_EXPLORATORY_REVIEW_NOT_PUBLIC_HTTP",
+    "input_probe": "generation-scope-probe.json",
+    "review_prompt": "请基于原始问题及所有提供片段，检查上面的草稿并重新输出完整JSON。检查每个直接相关段落/列表中是否漏了必要功能、用途、机制、前置条件或建议；保留这些完整要点。问题指定的历史/来源范围必须在答案中显式说明。区分同一资源的不同操作目的，不把销毁步骤用作复用步骤。示例值不得泛化。删除所有不能对应用户实际所问内容的gaps，问题已完整回答就保持gaps为空。不要把新增旁支步骤带入答复。若没有问题就原样保留。",
+    "response": {
+      "id": "fbca7082-1fdf-4938-abc9-1c5abec2eb4e",
+      "object": "chat.completion",
+      "created": 1789956124,
+      "model": "deepseek-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"claims\":[{\"text\":\"《模板概述》称CCE使用的Helm版本为v3.8.2，支持上传Helm v3语法的模板包。\",\"fragment_ids\":[\"LJINRXT4U4DGLDUYDU4JX2H7RA\"]},{\"text\":\"《通过模板部署应用》的“约束与限制”称CCE使用的Helm版本为v3.18.6，支持上传Helm v3版本语法的模板包。\",\"fragment_ids\":[\"7OIWDVTBKSUIXHIFI4AJIINW4I\"]},{\"text\":\"两份资料对CCE控制台Helm版本的说法不一致：一处为v3.8.2，另一处为v3.18.6。\",\"fragment_ids\":[\"LJINRXT4U4DGLDUYDU4JX2H7RA\",\"7OIWDVTBKSUIXHIFI4AJIINW4I\"]},{\"text\":\"《通过模板部署应用》正文还说明CCE从2022年9月开始各region将逐步切换至Helm v3，模板管理不再支持Helm v2版本的模板；若短期内不能切换至Helm v3，可通过Helm v2客户端在后台管理v2版本的模板。\",\"fragment_ids\":[\"4R3LOSNM4D42EHCOK7LZ5FXDTQ\"]},{\"text\":\"不能仅凭这些资料确定唯一版本，因为两份资料给出了不同的具体版本号，建议核对当前界面或权威版本。\",\"fragment_ids\":[\"LJINRXT4U4DGLDUYDU4JX2H7RA\",\"7OIWDVTBKSUIXHIFI4AJIINW4I\"]}],\"gaps\":[]}"
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 2235,
+        "completion_tokens": 381,
+        "total_tokens": 2616,
+        "prompt_tokens_details": {
+          "cached_tokens": 2048
+        },
+        "prompt_cache_hit_tokens": 2048,
+        "prompt_cache_miss_tokens": 187
+      },
+      "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    }
+  },
+  {
+    "id": "cce-manual-097",
+    "mode": "LIVE_EXPLORATORY_REVIEW_NOT_PUBLIC_HTTP",
+    "input_probe": "generation-scope-probe.json",
+    "review_prompt": "请基于原始问题及所有提供片段，检查上面的草稿并重新输出完整JSON。检查每个直接相关段落/列表中是否漏了必要功能、用途、机制、前置条件或建议；保留这些完整要点。问题指定的历史/来源范围必须在答案中显式说明。区分同一资源的不同操作目的，不把销毁步骤用作复用步骤。示例值不得泛化。删除所有不能对应用户实际所问内容的gaps，问题已完整回答就保持gaps为空。不要把新增旁支步骤带入答复。若没有问题就原样保留。",
+    "response": {
+      "id": "8515f58f-b3c0-4716-a81f-f53bee47a261",
+      "object": "chat.completion",
+      "created": 1789956126,
+      "model": "deepseek-flash",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"claims\":[{\"text\":\"EVS的PV回收策略为Retain时，删除PVC后PV对象与底层存储资源均不会被删除，需要手动删除回收；PVC删除后PV资源状态为“已释放（Released）”，且不能直接再次被PVC绑定使用。\",\"fragment_ids\":[\"O6YLVQREKBQMT3LYD7ICE3KI5E\",\"FJ3NHGP5M5GC7L7K4FYI2B75QN\"]},{\"text\":\"若希望继续使用该底层存储资源，需先删除PV，再新建PV、PVC和底层存储关联。\",\"fragment_ids\":[\"O6YLVQREKBQMT3LYD7ICE3KI5E\",\"FJ3NHGP5M5GC7L7K4FYI2B75QN\"]},{\"text\":\"Retain策略下手动删除回收的步骤为：1. 手动删除PersistentVolume对象；2. 根据情况，手动清除所关联的底层存储资源上的数据；3. 手动删除所关联的底层存储资源。\",\"fragment_ids\":[\"O6YLVQREKBQMT3LYD7ICE3KI5E\"]}],\"gaps\":[]}"
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 11695,
+        "completion_tokens": 264,
+        "total_tokens": 11959,
+        "prompt_tokens_details": {
+          "cached_tokens": 11520
+        },
+        "prompt_cache_hit_tokens": 11520,
+        "prompt_cache_miss_tokens": 175
+      },
+      "system_fingerprint": "aeb56401ca74e127821c4f9126dcb669"
+    }
+  }
+]

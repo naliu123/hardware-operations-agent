@@ -1,0 +1,19 @@
+{
+  "selected_on": "2026-09-20",
+  "selected_before_heldout": true,
+  "strategy": "dense",
+  "top_k": 5,
+  "candidate_k": 20,
+  "embedding_model": "BAAI/bge-small-zh-v1.5",
+  "embedding_revision": "7999e1d3359715c523056ef9478215996d62a620",
+  "embedding_dimensions": 512,
+  "embedding_pooling": "CLS + L2 normalization",
+  "query_instruction": "为这个句子生成表示以用于检索相关文章:",
+  "generator": "deepseek-flash",
+  "thinking": "disabled",
+  "generation_prompt": "existing evidence-only JSON claims prompt; no case-specific rules",
+  "selection_rule": "Highest development macro Recall@5; ties use MRR@5, Recall@1 and latency.",
+  "reason": "Dense recalls both evidence rows for cce-q060 and raises development macro Recall@5 from 0.9782608695652174 to 1.0. RRF does not recover the missing row. Dense sacrifices early ranking quality.",
+  "development_answer_check": "25/25 processed; 23 answerable answered, 2 unanswerable abstained; DeepSeek self-judge gives full correctness/relevance and full faithfulness on 23 non-empty answers, not human-certified.",
+  "dataset_sha256": "c08c4b67938d20506a1e58aa278778ab65e907871ac95cb10bab41981ee2cc10"
+}

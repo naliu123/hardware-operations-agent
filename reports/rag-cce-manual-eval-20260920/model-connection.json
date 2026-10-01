@@ -1,0 +1,14 @@
+{
+  "model": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "http_status": 200,
+  "returned_model": "deepseek-flash",
+  "valid_reply": true,
+  "credential_source": "workspace-private persistent file",
+  "credential_file_mode": "0600",
+  "usage": {
+    "prompt_tokens": 8,
+    "completion_tokens": 1,
+    "total_tokens": 9
+  }
+}

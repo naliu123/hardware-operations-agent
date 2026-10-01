@@ -1,0 +1,66 @@
+[
+  {
+    "id": "cce-asset-table-explanatory-014",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "答案给出的资源维度“集群”和事件名称“GetOnePartition”均与引用表格行一致。",
+    "evidence_checked": ["原始表格行", "TABLE_TEXT派生文本", "引用哈希"],
+    "answer_sha256": "25799f34586915f557719da155b3178ecaf3a9eb02248e8a9b69b58be85c1eb8"
+  },
+  {
+    "id": "cce-asset-table-explanatory-017",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "答案明确说明Init容器不支持健康检查，且补充内容均由同一引用片段支持。",
+    "evidence_checked": ["原始表格行", "相邻原文", "引用哈希"],
+    "answer_sha256": "d1048f51858d9048b9721e9e4eb5ef8e28977a7b162b7b2bb9ff844008f6b1d8"
+  },
+  {
+    "id": "cce-asset-table-data-025",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "200000资源对应4000Mi申请值和16000Mi限制值，与原始数据表完全一致。",
+    "evidence_checked": ["原始数据表", "TABLE_SUMMARY派生文本", "引用哈希"],
+    "answer_sha256": "6f8c096ddc7ed48a8eec2ecabb39624b594bde13bdf0ee35cea4bd6a652fbbbe"
+  },
+  {
+    "id": "cce-asset-table-data-029",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "开启CPU Burst时456us和469两项数值均与原始数据表一致。",
+    "evidence_checked": ["原始数据表", "TABLE_SUMMARY派生文本", "引用哈希"],
+    "answer_sha256": "58c690d6f78188fe31b4eb329e23dcc132ce51719bb3873b8d80d06a253388f6"
+  },
+  {
+    "id": "cce-asset-image-038",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "回答“选择已有”与视觉描述一致，引用原文保留对应图片Markdown位置。",
+    "evidence_checked": ["IMAGE视觉描述", "图片位置标记", "引用哈希"],
+    "answer_sha256": "5916f6c46b533c5e3a951606bec3374eeb68447cf50b632cddba165a898dd392"
+  },
+  {
+    "id": "cce-asset-image-044",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "回答“开启”与指标观测截图的视觉描述一致，未加入截图外事实。",
+    "evidence_checked": ["IMAGE视觉描述", "图片位置标记", "引用哈希"],
+    "answer_sha256": "80ac1a9fa6cb734f54d792b72d28ec223e65ef4e174bda5a830ab0e1c7720259"
+  },
+  {
+    "id": "cce-asset-image-058",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "80到10080/TCP及30961/TCP均出现在目标服务行的视觉描述中。",
+    "evidence_checked": ["IMAGE视觉描述", "服务名限定", "图片位置标记", "引用哈希"],
+    "answer_sha256": "cce90cbd57e14bcd1cd44ed948e7ad51cba57e15abcd5ed936d3041dee8c02be"
+  },
+  {
+    "id": "cce-asset-image-059",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "答案先直接给出目标表格两条权重均为10，并明确区分另一截图中的12和18。",
+    "evidence_checked": ["IMAGE视觉描述", "页面区域限定", "图片位置标记", "引用哈希"],
+    "answer_sha256": "60e4d7589b65d668945fb57e90d72cc23eeb6f8e3efa05f240c2245711a148dc"
+  }
+]

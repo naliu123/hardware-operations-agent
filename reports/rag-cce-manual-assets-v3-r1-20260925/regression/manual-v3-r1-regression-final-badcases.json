@@ -1,0 +1,2461 @@
+[
+  {
+    "case": {
+      "id": "cce-manual-001",
+      "group": "cce_10_0430",
+      "category": "集群",
+      "question_type": "comparison",
+      "question": "CCE Standard和Turbo的网络选择有什么区别，Turbo的Pod地址如何分配？",
+      "answerable": true,
+      "required_facts": [
+        "Standard可选择容器隧道或VPC网络",
+        "Turbo采用云原生网络2.0",
+        "Turbo的Pod直接从VPC网段分配IP，可与节点在不同子网"
+      ],
+      "reference_answer": "Standard可选择容器隧道或VPC网络；Turbo采用云原生网络2.0；Turbo的Pod直接从VPC网段分配IP，可与节点在不同子网",
+      "evidence": [
+        {
+          "document_id": "cce_10_0430",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0430.html",
+          "title": "集群概述",
+          "file": "documents/cce_10_0430.md",
+          "content_sha256": "8e6ac6ce30b1d113ffd0d45863b0056200e412aed04481534a17aa694b047872",
+          "start_line": 11,
+          "end_line": 11,
+          "section": "集群类型",
+          "anchor": "CCE Standard集群",
+          "quote": "- CCE Standard集群：是云容器引擎服务的标准版本集群，提供商用级容器集群服务，并完全兼容开源Kubernetes集群标准功能。无需管理和运维控制节点，可根据业务场景选择使用容器隧道网络模型或VPC网络模型，适合对性能和规模没有特殊要求的通用场景。",
+          "quote_sha256": "80ac443d3f561750b3a077f1eb94967f12362923ebefb3d4f4c4822bebf48e05"
+        },
+        {
+          "document_id": "cce_10_0430",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0430.html",
+          "title": "集群概述",
+          "file": "documents/cce_10_0430.md",
+          "content_sha256": "8e6ac6ce30b1d113ffd0d45863b0056200e412aed04481534a17aa694b047872",
+          "start_line": 12,
+          "end_line": 12,
+          "section": "集群类型",
+          "anchor": "CCE Turbo集群",
+          "quote": "- CCE Turbo集群：基于云原生基础设施构建的云原生2.0容器引擎服务，具备软硬协同、网络无损、安全可靠、调度智能的优势，为用户提供一站式、高性价比的全新容器服务体验。提供了面向大规模高性能的场景云原生2.0网络，Pod直接从VPC网段内分配IP地址，Pod和节点可以分属不同子网，支持VPC内的外部网络与Pod IP直通，享有高性能。",
+          "quote_sha256": "55167b03f6b3b749f19e4d67de9587897dd94680a60938aa15f33b15bbad65e0"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-001",
+      "question": "CCE Standard和Turbo的网络选择有什么区别，Turbo的Pod地址如何分配？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "集群",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "Z7HQHPWF5CK2VVXAHOWAXKGC5B",
+          "revision_id": "COJ3ZDRTCL73TLYCMQV746FF6J",
+          "section": "步骤二：进行网络配置",
+          "start_line": 123,
+          "end_line": 134,
+          "content": "3. 配置服务网络参数，具体说明请参见[图8](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)和[表7](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)。\n\n   **图8** 服务网络配置\n    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002282335218.png \"点击放大\")\n\n   **表7** 服务网络配置\n\n   | 参数 | 说明 | 集群创建后是否支持修改 |\n   | --- | --- | --- |\n   | 服务网段（Service CIDR ） | 用于为ClusterIP类型Service分配IP地址（用于集群内容器间通信），并决定该类Service的数量上限。服务网段不能与节点子网、容器网段重叠。 | × |\n   | 服务转发模式 | 用于实现Service流量的负载均衡和路由转发，支持多种转发模式，具体请参见[nftables、iptables与IPVS如何选择](https://support.huaweicloud.com/usermanual-cce/cce_10_0349.html)。  - nftables：nftables为新一代转发模式，解决iptables性能瓶颈与扩展难题，适配大规模服务场景，提供统一配置框架整合多协议规则管理。仅v1.35及以上集群版本支持。 - iptables：社区传统的kube-proxy模式。适用于Service数量较少或客户端会出现大量并发短链接的场景。IPv6集群不支持iptables模式。 - IPVS：吞吐更高，速度更快的转发模式。适用于集群规模较大或Service数量较多的场景。 | × |\n   | IPv6服务网段 | 用于配置Service的IPv6地址，**仅“开启IPv6”时需要设置**。更多介绍，请参见[创建CCE Turbo集群时如何设置IPv6服务网段](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00406.html) | × |",
+          "content_hash": "faf804e8a919b8799dbc45d29ad86e2dadf338f1657e412609a14ebf1461ae33",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "服务网段（Service CIDR）的作用是什么？是否支持集群创建后修改？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "服务转发模式支持哪些类型？分别适用于什么场景？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "IPv6服务网段在什么情况下需要设置？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "nftables转发模式支持哪些集群版本？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在购买Standard/Turbo集群的步骤二网络配置中，表7服务网络配置的“服务网段（Service CIDR）”参数用于为ClusterIP类型Service分配IP地址（用于集群内容器间通信），并决定该类Service的数量上限；服务网段不能与节点子网、容器网段重叠；该参数在集群创建后不支持修改。",
+              "start_line": 132,
+              "end_line": 132
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在购买Standard/Turbo集群的步骤二网络配置中，表7服务网络配置的“服务转发模式”参数用于实现Service流量的负载均衡和路由转发，支持多种转发模式，具体请参见nftables、iptables与IPVS如何选择；nftables为新一代转发模式，解决iptables性能瓶颈与扩展难题，适配大规模服务场景，提供统一配置框架整合多协议规则管理，仅v1.35及以上集群版本支持；iptables为社区传统的kube-proxy模式，适用于Service数量较少或客户端会出现大量并发短链接的场景，IPv6集群不支持iptables模式；IPVS为吞吐更高、速度更快的转发模式，适用于集群规模较大或Service数量较多的场景；该参数在集群创建后不支持修改。",
+              "start_line": 133,
+              "end_line": 133
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在购买Standard/Turbo集群的步骤二网络配置中，表7服务网络配置的“IPv6服务网段”参数用于配置Service的IPv6地址，仅“开启IPv6”时需要设置；更多介绍请参见创建CCE Turbo集群时如何设置IPv6服务网段；该参数在集群创建后不支持修改。",
+              "start_line": 134,
+              "end_line": 134
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片位于“步骤二：进行网络配置”章节。 图片可见内容：服务网络配置界面（IPv6及IPVS模式）。标题为“服务网络配置”。字段“服务网段(Service CIDR)”由四个输入框和一个下拉框组成，当前值为 10 . 247 . 0 . 0 / 16。下方说明：“当前服务网段最多支持 65,536 个Service。”其中“65,536”为红色。以及“创建后不可修改，为集群配置Kubernetes的ClusterIP类型服务的IP地址范围。”字段“IPv6 服务网段(IPv6 Service CIDR)”为一个输入框，当前值为 fc00::/112。下方说明：“创建后不可修改，当前服务网段最多支持 65,536 个Service IPv6 地址。”其中“65,536”为红色。以及蓝色链接“如何设置IPv6网段”。字段“服务转发模式”为两个按钮选项：左侧未选中按钮“iptables”，右侧蓝色选中按钮“IPVS”，右侧有蓝色链接“iptables与IPVS如何选择”。下方说明：“创建后不可修改，使用IPVS作为Service和其后端容器Pod之间负载均衡方式，性能较好，适用于大规模、服务和容器部署数量较多的场景”。以及橙色文字：“CentOS在高负载网络下容易出现IPVS、Conntrack相关稳定性问题，选择IPVS时不推荐您使用CentOS作为集群节点的操作系统。 查看详情”。再下方为蓝色信息提示框，内容：“IPVS 模式下，Ingress 和 Service",
+              "start_line": 126,
+              "end_line": 126
+            },
+            {
+              "kind": "IMAGE",
+              "text": "统。 查看详情”。再下方为蓝色信息提示框，内容：“IPVS 模式下，Ingress 和 Service 使用相同的 ELB 实例时，无法在集群内的节点和容器中访问 Ingress。” 图片相邻原文：配置服务网络参数，具体说明请参见 图8 和 表7 。 图8 服务网络配置 表7 服务网络配置",
+              "start_line": 126,
+              "end_line": 126
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "配置服务网络参数，具体说明请参见 图8 和 表7 。\n图8 服务网络配置\n图片 点击放大\n[图片说明] 图片位于“步骤二：进行网络配置”章节。 图片可见内容：服务网络配置界面（IPv6及IPVS模式）。标题为“服务网络配置”。字段“服务网段(Service CIDR)”由四个输入框和一个下拉框组成，当前值为 10 . 247 . 0 . 0 / 16。下方说明：“当前服务网段最多支持 65,536 个Service。”其中“65,536”为红色。以及“创建后不可修改，为集群配置Kubernetes的ClusterIP类型服务的IP地址范围。”字段“IPv6 服务网段(IPv6 Service CIDR)”为一个输入框，当前值为 fc00::/112。下方说明：“创建后不可修改，当前服务网段最多支持 65,536 个Service IPv6 地址。”其中“65,536”为红色。以及蓝色链接“如何设置IPv6网段”。字段“服务转发模式”为两个按钮选项：左侧未选中按钮“iptables”，右侧蓝色选中按钮“IPVS”，右侧有蓝色链接“iptables与IPVS如何选择”。下方说明：“创建后不可修改，使用IPVS作为Service和其后端容器Pod之间负载均衡方式，性能较好，适用于大规模、服务和容器部署数量较多的场景”。以及橙色文字：“CentOS在高负载网络下容易出现IPVS、Conntrack相关稳定性问题，选择IPVS时不推荐您使用CentOS"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "用于大规模、服务和容器部署数量较多的场景”。以及橙色文字：“CentOS在高负载网络下容易出现IPVS、Conntrack相关稳定性问题，选择IPVS时不推荐您使用CentOS作为集群节点的操作系统。 查看详情”。再下方为蓝色信息提示框，内容：“IPVS 模式下，Ingress 和 Service\n[图片说明] 统。 查看详情”。再下方为蓝色信息提示框，内容：“IPVS 模式下，Ingress 和 Service 使用相同的 ELB 实例时，无法在集群内的节点和容器中访问 Ingress。” 图片相邻原文：配置服务网络参数，具体说明请参见 图8 和 表7 。 图8 服务网络配置 表7 服务网络配置\n表7 服务网络配置\n参数 说明 集群创建后是否支持修改\n--- --- ---\n服务网段（Service CIDR ） 用于为ClusterIP类型Service分配IP地址（用于集群内容器间通信），并决定该类Service的数量上限。服务网段不能与节点子网、容器网段重叠。 ×\n[表格说明] 在购买Standard/Turbo集群的步骤二网络配置中，表7服务网络配置的“服务网段（Service CIDR）”参数用于为ClusterIP类型Service分配IP地址（用于集群内容器间通信），并决定该类Service的数量上限；服务网段不能与节点子网、容器网段重叠；该参数在集群创建后不支持修改。\n服务转发模式 用于实现Service流量的负载均衡和路由转发，支持多种转发模式，"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "段不能与节点子网、容器网段重叠；该参数在集群创建后不支持修改。\n服务转发模式 用于实现Service流量的负载均衡和路由转发，支持多种转发模式，具体请参见 nftables、iptables与IPVS如何选择 。 - nftables：nftables为新一代转发模式，解决iptables性能瓶颈与扩展难题，适配大规模服务场景，提供统一配置框架整合多协议规则管理。仅v1.35及以上集群版本支持。 - iptables：社区传统的kube-proxy模式。适用于Service数量较少或客户端会出现大量并发短链接的场景。IPv6集群不支持iptables模式。 - IPVS：吞吐更高，速度更快的转发模式。适用于集群规模较大或Service数量较多的场景。 ×\n[表格说明] 在购买Standard/Turbo集群的步骤二网络配置中，表7服务网络配置的“服务转发模式”参数用于实现Service流量的负载均衡和路由转发，支持多种转发模式，具体请参见nftables、iptables与IPVS如何选择；nftables为新一代转发模式，解决iptables性能瓶颈与扩展难题，适配大规模服务场景，提供统一配置框架整合多协议规则管理，仅v1.35及以上集群版本支持；iptables为社区传统的kube-proxy模式，适用于Service数量较少或客户端会出现大量并发短链接的场景，IPv6集群不支持"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "，仅v1.35及以上集群版本支持；iptables为社区传统的kube-proxy模式，适用于Service数量较少或客户端会出现大量并发短链接的场景，IPv6集群不支持iptables模式；IPVS为吞吐更高、速度更快的转发模式，适用于集群规模较大或Service数量较多的场景；该参数在集群创建后不支持修改。\nIPv6服务网段 用于配置Service的IPv6地址， 仅“开启IPv6”时需要设置 。更多介绍，请参见 创建CCE Turbo集群时如何设置IPv6服务网段 ×\n[表格说明] 在购买Standard/Turbo集群的步骤二网络配置中，表7服务网络配置的“IPv6服务网段”参数用于配置Service的IPv6地址，仅“开启IPv6”时需要设置；更多介绍请参见创建CCE Turbo集群时如何设置IPv6服务网段；该参数在集群创建后不支持修改。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+          "title": "购买Standard/Turbo集群",
+          "document_context": "目录：用户指南 > 集群 > 购买集群 > 购买Standard/Turbo集群\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.5,
+          "citation": {
+            "document_id": "BDDV4CFI32QALMX5FKZZ3DGMXG",
+            "revision_id": "COJ3ZDRTCL73TLYCMQV746FF6J",
+            "fragment_id": "Z7HQHPWF5CK2VVXAHOWAXKGC5B",
+            "title": "购买Standard/Turbo集群",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+            "section": "步骤二：进行网络配置",
+            "document_context": "目录：用户指南 > 集群 > 购买集群 > 购买Standard/Turbo集群\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "faf804e8a919b8799dbc45d29ad86e2dadf338f1657e412609a14ebf1461ae33",
+            "url": "/v1/knowledge/revisions/COJ3ZDRTCL73TLYCMQV746FF6J/fragments/Z7HQHPWF5CK2VVXAHOWAXKGC5B",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "I2362WH2MS5PXIUYS4MKAKIJRT",
+          "revision_id": "PAF6SZAYPHHAP764WFF2U2ZYR5",
+          "section": "使用场景",
+          "start_line": 9,
+          "end_line": 11,
+          "content": "在云原生网络2.0下，会为每个Pod分配用户VPC网络下的一张网卡，支持为StatefulSet工作负载的Pod（容器网卡）固定IP，适用于需要针对具体IP地址做访问控制、服务注册、服务发现、日志审计等场景。\n\n例如，当有一个需要访问云上数据库的StatefulSet类型业务，需要对云上数据库进行严格的访问控制，只允许该业务进行访问，则可固定该业务的Pod IP，配置云上数据库的安全组只允许该业务的Pod IP可进行访问。",
+          "content_hash": "006d3fb1a09b405f52e823f3925223cb006a50019ad1b5fe0f1f45f0cf7d4935",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "在云原生网络2.0下，为每个Pod分配的是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE Turbo集群中为Pod固定IP适用于哪些场景？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何通过固定Pod IP实现对云上数据库的严格访问控制？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0603.html",
+          "title": "在CCE Turbo集群中为Pod配置固定IP",
+          "document_context": "目录：用户指南 > 网络 > 容器网络 > 云原生网络2.0模型 > 在CCE Turbo集群中为Pod配置固定IP\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.2,
+          "citation": {
+            "document_id": "4WQRFS3K5ZE3WGPDEUUMUXWKHZ",
+            "revision_id": "PAF6SZAYPHHAP764WFF2U2ZYR5",
+            "fragment_id": "I2362WH2MS5PXIUYS4MKAKIJRT",
+            "title": "在CCE Turbo集群中为Pod配置固定IP",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0603.html",
+            "section": "使用场景",
+            "document_context": "目录：用户指南 > 网络 > 容器网络 > 云原生网络2.0模型 > 在CCE Turbo集群中为Pod配置固定IP\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "006d3fb1a09b405f52e823f3925223cb006a50019ad1b5fe0f1f45f0cf7d4935",
+            "url": "/v1/knowledge/revisions/PAF6SZAYPHHAP764WFF2U2ZYR5/fragments/I2362WH2MS5PXIUYS4MKAKIJRT",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "GMDANICUU4UKL7UFYSZTWZUDUF",
+          "revision_id": "ENMLDNMXOGDG6MXIH3HSJX442A",
+          "section": "集群类型对比",
+          "start_line": 9,
+          "end_line": 23,
+          "content": "CCE支持多种类型的集群创建，以满足您各种业务需求，如下为集群类型之间的区别，可帮助您选择合适的集群：\n\n|  |  |  |  |\n| --- | --- | --- | --- |\n| 集群类型 | CCE Standard | CCE Turbo | CCE Autopilot |\n| 产品定位 | 标准版本集群，提供高可靠、安全的商业级容器集群服务。 | 面向云原生2.0的新一代容器集群产品，计算、网络、调度全面加速。 | 无用户节点的Serverless版集群，无需对节点的部署、管理和安全性进行维护，并根据CPU和内存资源用量按需付费。 |\n| 使用场景 | 面向有云原生数字化转型诉求的用户，期望通过容器集群管理应用，获得灵活弹性的算力资源，简化对计算、网络、存储的资源管理复杂度。 | 适合对极致性能、资源利用率提升和全场景覆盖有更高诉求的客户。 | 适合具有明显的波峰波谷特征的业务负载，例如在线教育、电子商务等行业。 |\n| 网络模型 | 面向性能和规模要求不高的场景，提供以下网络模型：   - 容器隧道网络模型 - VPC网络模型   详情请参见[容器网络模型对比](https://support.huaweicloud.com/usermanual-cce/cce_10_0281.html)。 | 云原生网络2.0模型：面向大规模和高性能的场景。  组网规模默认支持2000节点，最大支持20000节点 | 云原生网络2.0模型：面向大规模和高性能的场景。 |\n| Pod使用主机端口（hostPort） | 支持 | 默认不支持，开启DataPlane V2后支持 | 不支持 |\n| 网络性能 | VPC网络叠加容器网络，性能有一定损耗 | VPC网络和容器网络融合，性能无损耗 | VPC网络和容器网络融合，性能无损耗 |\n| 容器网络隔离 | - 容器隧道网络模式：集群内部网络隔离策略，支持NetworkPolicy。 - VPC网络模式：开启DataPlane V2后支持NetworkPolicy，详情请参见[DataPlane V2网络加速说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0945.html)。 | Pod可直接关联安全组，基于安全组的隔离策略，支持集群内外部统一的安全隔离。  开启DataPlane V2后支持NetworkPolicy，详情请参见[DataPlane V2网络加速说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0945.html)。 | Pod可直接关联安全组，基于安全组的隔离策略，支持集群内外部统一的安全隔离。 |\n| Pod绑定公网IP | 不支持 | 支持 | 支持 |\n| **Pod配置固定IP** | 不支持 | StatefulSet工作负载支持，且可以和绑定EIP同时使用，实现固定公网IP | StatefulSet工作负载支持，且可以和绑定EIP同时使用，实现固定公网IP |\n| 容器资源隔离 | 普通容器：Cgroups隔离 | - 安全容器：当前仅物理机支持，提供虚机级别的隔离 - 普通容器：Cgroups隔离 | 提供虚机级别的隔离 |\n| 边缘基础设施管理 | 不支持 | 支持管理边缘云资源，详情请参见[在CCE Turbo分布式集群中使用边缘云资源](https://support.huaweicloud.com/usermanual-cce/cce_10_0840.html) | 不支持 |",
+          "content_hash": "9f1487b480b24e7fe57db9e65fb41e4592fb1569c78f327aa549fb8b4c923946",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "CCE支持哪些类型的集群创建？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE Standard、CCE Turbo和CCE Autopilot的产品定位分别是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE Standard、CCE Turbo和CCE Autopilot分别适合什么使用场景？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE Standard、CCE Turbo和CCE Autopilot的网络模型分别是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE Standard、CCE Turbo和CCE Autopilot对Pod使用主机端口（hostPort）的支持情况如何？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "集群类型包括CCE Standard、CCE Turbo和CCE Autopilot。",
+              "start_line": 13,
+              "end_line": 13
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "产品定位：CCE Standard是标准版本集群，提供高可靠、安全的商业级容器集群服务；CCE Turbo是面向云原生2.0的新一代容器集群产品，计算、网络、调度全面加速；CCE Autopilot是无用户节点的Serverless版集群，无需对节点的部署、管理和安全性进行维护，并根据CPU和内存资源用量按需付费。",
+              "start_line": 14,
+              "end_line": 14
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "使用场景：CCE Standard面向有云原生数字化转型诉求的用户，期望通过容器集群管理应用，获得灵活弹性的算力资源，简化对计算、网络、存储的资源管理复杂度；CCE Turbo适合对极致性能、资源利用率提升和全场景覆盖有更高诉求的客户；CCE Autopilot适合具有明显的波峰波谷特征的业务负载，例如在线教育、电子商务等行业。",
+              "start_line": 15,
+              "end_line": 15
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "网络模型：CCE Standard面向性能和规模要求不高的场景，提供容器隧道网络模型和VPC网络模型，详情请参见容器网络模型对比；CCE Turbo采用云原生网络2.0模型，面向大规模和高性能的场景，组网规模默认支持2000节点，最大支持20000节点；CCE Autopilot采用云原生网络2.0模型，面向大规模和高性能的场景。",
+              "start_line": 16,
+              "end_line": 16
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "Pod使用主机端口（hostPort）：CCE Standard支持；CCE Turbo默认不支持，开启DataPlane V2后支持；CCE Autopilot不支持。",
+              "start_line": 17,
+              "end_line": 17
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "网络性能：CCE Standard的VPC网络叠加容器网络，性能有一定损耗；CCE Turbo的VPC网络和容器网络融合，性能无损耗；CCE Autopilot的VPC网络和容器网络融合，性能无损耗。",
+              "start_line": 18,
+              "end_line": 18
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "容器网络隔离：CCE Standard的容器隧道网络模式支持集群内部网络隔离策略，支持NetworkPolicy；VPC网络模式开启DataPlane V2后支持NetworkPolicy，详情请参见DataPlane V2网络加速说明。CCE Turbo的Pod可直接关联安全组，基于安全组的隔离策略，支持集群内外部统一的安全隔离；开启DataPlane V2后支持NetworkPolicy，详情请参见DataPlane V2网络加速说明。CCE Autopilot的Pod可直接关联安全组，基于安全组的隔离策略，支持集群内外部统一的安全隔离。",
+              "start_line": 19,
+              "end_line": 19
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "Pod绑定公网IP：CCE Standard不支持；CCE Turbo支持；CCE Autopilot支持。",
+              "start_line": 20,
+              "end_line": 20
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "Pod配置固定IP：CCE Standard不支持；CCE Turbo的StatefulSet工作负载支持，且可以和绑定EIP同时使用，实现固定公网IP；CCE Autopilot的StatefulSet工作负载支持，且可以和绑定EIP同时使用，实现固定公网IP。",
+              "start_line": 21,
+              "end_line": 21
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "容器资源隔离：CCE Standard的普通容器使用Cgroups隔离；CCE Turbo的安全容器当前仅物理机支持，提供虚机级别的隔离，普通容器使用Cgroups隔离；CCE Autopilot提供虚机级别的隔离。",
+              "start_line": 22,
+              "end_line": 22
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "边缘基础设施管理：CCE Standard不支持；CCE Turbo支持管理边缘云资源，详情请参见在CCE Turbo分布式集群中使用边缘云资源；CCE Autopilot不支持。",
+              "start_line": 23,
+              "end_line": 23
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "CCE支持多种类型的集群创建，以满足您各种业务需求，如下为集群类型之间的区别，可帮助您选择合适的集群：\n--- --- --- ---\n集群类型 CCE Standard CCE Turbo CCE Autopilot\n[表格说明] 集群类型包括CCE Standard、CCE Turbo和CCE Autopilot。\n产品定位 标准版本集群，提供高可靠、安全的商业级容器集群服务。 面向云原生2.0的新一代容器集群产品，计算、网络、调度全面加速。 无用户节点的Serverless版集群，无需对节点的部署、管理和安全性进行维护，并根据CPU和内存资源用量按需付费。\n[表格说明] 产品定位：CCE Standard是标准版本集群，提供高可靠、安全的商业级容器集群服务；CCE Turbo是面向云原生2.0的新一代容器集群产品，计算、网络、调度全面加速；CCE Autopilot是无用户节点的Serverless版集群，无需对节点的部署、管理和安全性进行维护，并根据CPU和内存资源用量按需付费。\n使用场景 面向有云原生数字化转型诉求的用户，期望通过容器集群管理应用，获得灵活弹性的算力资源，简化对计算、网络、存储的资源管理复杂度。 适合对极致性能、资源利用率提升和全场景覆盖有更高诉求的客户。 适合具有明显的波峰波谷特征的业务负载，例如在线教育、电子商务等行业。\n[表格说明] 使用场景：CCE"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "率提升和全场景覆盖有更高诉求的客户。 适合具有明显的波峰波谷特征的业务负载，例如在线教育、电子商务等行业。\n[表格说明] 使用场景：CCE Standard面向有云原生数字化转型诉求的用户，期望通过容器集群管理应用，获得灵活弹性的算力资源，简化对计算、网络、存储的资源管理复杂度；CCE Turbo适合对极致性能、资源利用率提升和全场景覆盖有更高诉求的客户；CCE Autopilot适合具有明显的波峰波谷特征的业务负载，例如在线教育、电子商务等行业。\n网络模型 面向性能和规模要求不高的场景，提供以下网络模型： - 容器隧道网络模型 - VPC网络模型 详情请参见 容器网络模型对比 。 云原生网络2.0模型：面向大规模和高性能的场景。 组网规模默认支持2000节点，最大支持20000节点 云原生网络2.0模型：面向大规模和高性能的场景。\n[表格说明] 网络模型：CCE Standard面向性能和规模要求不高的场景，提供容器隧道网络模型和VPC网络模型，详情请参见容器网络模型对比；CCE Turbo采用云原生网络2.0模型，面向大规模和高性能的场景，组网规模默认支持2000节点，最大支持20000节点；CCE Autopilot采用云原生网络2.0模型，面向大规模和高性能的场景。\nPod使用主机端口（hostPort） 支持 默认"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "景，组网规模默认支持2000节点，最大支持20000节点；CCE Autopilot采用云原生网络2.0模型，面向大规模和高性能的场景。\nPod使用主机端口（hostPort） 支持 默认不支持，开启DataPlane V2后支持 不支持\n[表格说明] Pod使用主机端口（hostPort）：CCE Standard支持；CCE Turbo默认不支持，开启DataPlane V2后支持；CCE Autopilot不支持。\n网络性能 VPC网络叠加容器网络，性能有一定损耗 VPC网络和容器网络融合，性能无损耗 VPC网络和容器网络融合，性能无损耗\n[表格说明] 网络性能：CCE Standard的VPC网络叠加容器网络，性能有一定损耗；CCE Turbo的VPC网络和容器网络融合，性能无损耗；CCE Autopilot的VPC网络和容器网络融合，性能无损耗。\n容器网络隔离 - 容器隧道网络模式：集群内部网络隔离策略，支持NetworkPolicy。 - VPC网络模式：开启DataPlane V2后支持NetworkPolicy，详情请参见 DataPlane V2网络加速说明 。 Pod可直接关联安全组，基于安全组的隔离策略，支持集群内外部统一的安全隔离。 开启DataPlane V2后支持NetworkPolicy，详情请参见 DataPlane V2网络加速说明 。 Pod可直接关联安全组，基于安全组的隔离策略，支持集群内外部统一的安全隔离。\n[表格说明] 容器网络隔离：CCE Standard的容器隧道网络模式支持集群内部网络隔离策略，支持NetworkPolicy；VPC网络模式开启DataPlane V2后支持NetworkPolicy，详情请参见DataPlane V2网络加"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "表格说明] 容器网络隔离：CCE Standard的容器隧道网络模式支持集群内部网络隔离策略，支持NetworkPolicy；VPC网络模式开启DataPlane V2后支持NetworkPolicy，详情请参见DataPlane V2网络加速说明。CCE Turbo的Pod可直接关联安全组，基于安全组的隔离策略，支持集群内外部统一的安全隔离；开启DataPlane V2后支持NetworkPolicy，详情请参见DataPlane V2网络加速说明。CCE Autopilot的Pod可直接关联安全组，基于安全组的隔离策略，支持集群内外部统一的安全隔离。\nPod绑定公网IP 不支持 支持 支持\n[表格说明] Pod绑定公网IP：CCE Standard不支持；CCE Turbo支持；CCE Autopilot支持。\nPod配置固定IP 不支持 StatefulSet工作负载支持，且可以和绑定EIP同时使用，实现固定公网IP StatefulSet工作负载支持，且可以和绑定EIP同时使用，实现固定公网IP\n[表格说明] Pod配置固定IP：CCE Standard不支持；CCE Turbo的StatefulSet工作负载支持，且可以和绑定EIP同时使用，实现固定公网IP；CCE Autopilot的StatefulSet工作负载支持，且可以和绑定EIP同时使用，实现固定公网IP。\n容器资源隔离 普通容器：Cgroups隔离 - 安全容器：当前仅物理机支持，提供虚机级别的隔离 - 普通容器：Cgroups隔离 提供虚机级别的隔离\n[表格说明] 容器资源隔离：CCE Standard的普通容器使用Cgroups隔离；CCE Turbo的安全容器当前仅物理机支持，提供虚机级别的隔离，普通容器使"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "虚机级别的隔离\n[表格说明] 容器资源隔离：CCE Standard的普通容器使用Cgroups隔离；CCE Turbo的安全容器当前仅物理机支持，提供虚机级别的隔离，普通容器使用Cgroups隔离；CCE Autopilot提供虚机级别的隔离。\n边缘基础设施管理 不支持 支持管理边缘云资源，详情请参见 在CCE Turbo分布式集群中使用边缘云资源 不支持\n[表格说明] 边缘基础设施管理：CCE Standard不支持；CCE Turbo支持管理边缘云资源，详情请参见在CCE Turbo分布式集群中使用边缘云资源；CCE Autopilot不支持。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0342.html",
+          "title": "集群类型对比",
+          "document_context": "目录：用户指南 > 集群 > 购买集群 > 集群类型对比\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.8666666666666667,
+          "citation": {
+            "document_id": "RCXXMCJ5XL4LYZ4NQF4FLJ226C",
+            "revision_id": "ENMLDNMXOGDG6MXIH3HSJX442A",
+            "fragment_id": "GMDANICUU4UKL7UFYSZTWZUDUF",
+            "title": "集群类型对比",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0342.html",
+            "section": "集群类型对比",
+            "document_context": "目录：用户指南 > 集群 > 购买集群 > 集群类型对比\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "9f1487b480b24e7fe57db9e65fb41e4592fb1569c78f327aa549fb8b4c923946",
+            "url": "/v1/knowledge/revisions/ENMLDNMXOGDG6MXIH3HSJX442A/fragments/GMDANICUU4UKL7UFYSZTWZUDUF",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "PCWV7PR7JX66EQLJ32MGNLCKF4",
+          "revision_id": "COJ3ZDRTCL73TLYCMQV746FF6J",
+          "section": "步骤二：进行网络配置",
+          "start_line": 70,
+          "end_line": 75,
+          "content": "2. 配置容器网络参数，具体说明请参见[图4](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)和[表3](https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html)。\n\n   **图4** 容器网络配置\n    ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000002567776059.png \"点击放大\")\n\n   **表3** 容器网络配置",
+          "content_hash": "0a645c821650db2366ae38a7288baa6aada24495be4d49e193d30eca7af2e927",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "如何配置容器网络参数？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "容器网络配置的说明在哪里查看？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "容器网络配置界面在哪里查看？"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片位于“步骤二：进行网络配置”章节。 图片可见内容：容器网络配置界面截图。可见字段：容器网络模型（两个选项卡：VPC网络，描述“适用于性能要求较高的业务场景，采用VPC路由方式与底层网络深度整合，组网规模受限于VPC路由表配额”；容器隧道网络，描述“适用于大规模组网场景，在节点网络基础上通过隧道封装构建容器网络，隧道的封装会损耗一定的性能”，VPC网络被选中，提示“创建后不可修改，集群下容器网络使用的模型框架。”及“网络模型对比”链接）；DataPlane V2（开关关闭，提示“DataPlane V2 采用 eBPF 技术实现 Service ClusterIP，NetworkPolicy，Bandwidth 等功能。”及“DataPlane V2网络加速说明”链接）；容器网段（手动设置网段、自动设置网段，手动设置网段被选中，有“如何规划网段”链接，IP输入框显示10.0.0.0/16，有加号按钮，警告提示“创建后不可修改，若涉及跨VPC网络直接通信等场景，请确保容器网段与要连接VPC网段区分，避免网段冲突。”及“了解更多”链接）；VPC容器网段预留（开关开启，提示“在 VPC 中预留容器网段的 IP 地址，避免后续新增子网网段与容器网段发生冲突。”）；每节点预留的Pod IP数（下拉框显示128，有“节点最多可",
+              "start_line": 73,
+              "end_line": 73
+            },
+            {
+              "kind": "IMAGE",
+              "text": "发生冲突。”）；每节点预留的Pod IP数（下拉框显示128，有“节点最多可以创建多少个Pod”链接，提示“创建后不可修改，当前网络配置可支持的用户节点上限为512。”）。 图片相邻原文：配置容器网络参数，具体说明请参见 图4 和 表3 。 图4 容器网络配置 表3 容器网络配置",
+              "start_line": 73,
+              "end_line": 73
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "配置容器网络参数，具体说明请参见 图4 和 表3 。\n图4 容器网络配置\n图片 点击放大\n[图片说明] 图片位于“步骤二：进行网络配置”章节。 图片可见内容：容器网络配置界面截图。可见字段：容器网络模型（两个选项卡：VPC网络，描述“适用于性能要求较高的业务场景，采用VPC路由方式与底层网络深度整合，组网规模受限于VPC路由表配额”；容器隧道网络，描述“适用于大规模组网场景，在节点网络基础上通过隧道封装构建容器网络，隧道的封装会损耗一定的性能”，VPC网络被选中，提示“创建后不可修改，集群下容器网络使用的模型框架。”及“网络模型对比”链接）；DataPlane V2（开关关闭，提示“DataPlane V2 采用 eBPF 技术实现 Service ClusterIP，NetworkPolicy，Bandwidth 等功能。”及“DataPlane V2网络加速说明”链接）；容器网段（手动设置网段、自动设置网段，手动设置网段被选中，有“如何规划网段”链接，IP输入框显示10.0.0.0/16，有加号按钮，警告提示“创建后不可修改，若涉及跨VPC网络直接通信等场景，请确保容器网段与要连接VPC网段区分，避免网段冲突。”及“了解更多”链接）；VPC容器网段预留（开关开启，提示“在 VPC 中预留容器网段的 IP 地址，避免后续新"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "与要连接VPC网段区分，避免网段冲突。”及“了解更多”链接）；VPC容器网段预留（开关开启，提示“在 VPC 中预留容器网段的 IP 地址，避免后续新增子网网段与容器网段发生冲突。”）；每节点预留的Pod IP数（下拉框显示128，有“节点最多可\n[图片说明] 发生冲突。”）；每节点预留的Pod IP数（下拉框显示128，有“节点最多可以创建多少个Pod”链接，提示“创建后不可修改，当前网络配置可支持的用户节点上限为512。”）。 图片相邻原文：配置容器网络参数，具体说明请参见 图4 和 表3 。 图4 容器网络配置 表3 容器网络配置\n表3 容器网络配置"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+          "title": "购买Standard/Turbo集群",
+          "document_context": "目录：用户指南 > 集群 > 购买集群 > 购买Standard/Turbo集群\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.8333333333333333,
+          "citation": {
+            "document_id": "BDDV4CFI32QALMX5FKZZ3DGMXG",
+            "revision_id": "COJ3ZDRTCL73TLYCMQV746FF6J",
+            "fragment_id": "PCWV7PR7JX66EQLJ32MGNLCKF4",
+            "title": "购买Standard/Turbo集群",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+            "section": "步骤二：进行网络配置",
+            "document_context": "目录：用户指南 > 集群 > 购买集群 > 购买Standard/Turbo集群\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "0a645c821650db2366ae38a7288baa6aada24495be4d49e193d30eca7af2e927",
+            "url": "/v1/knowledge/revisions/COJ3ZDRTCL73TLYCMQV746FF6J/fragments/PCWV7PR7JX66EQLJ32MGNLCKF4",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "CHCRBPGOZKFOSHG3TBIMIUGCAI",
+          "revision_id": "COJ3ZDRTCL73TLYCMQV746FF6J",
+          "section": "步骤二：进行网络配置",
+          "start_line": 84,
+          "end_line": 84,
+          "content": "| 每节点预留的PodIP数（VPC网络支持） | 表示容器网络可分配的Pod IP个数（即alpha.cce/fixPoolMask参数），决定每个节点可创建的Pod的最大数量。使用主机网络（HostNetwork）的Pod不会占用这些预留的IP数。  使用[容器网络](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)时，每个Pod会占用一个IP地址。如果节点预留的Pod IP数量不够的话，则无法创建Pod，具体说明请参见[每个节点预留的Pod IP数说明](https://support.huaweicloud.com/usermanual-cce/cce_10_0348.html)。 | × |",
+          "content_hash": "6d98b1e2dc5464da3e9354ab1b6210b516e4b992d17d7690a9a763d6833ddb27",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "每节点预留的PodIP数参数的作用是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "使用主机网络的Pod是否占用预留的Pod IP数？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如果节点预留的Pod IP数量不够，会有什么影响？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "每节点预留的PodIP数创建后是否支持修改？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "每节点预留的PodIP数（VPC网络支持）表示容器网络可分配的Pod IP个数（即alpha.cce/fixPoolMask参数），决定每个节点可创建的Pod的最大数量。使用主机网络（HostNetwork）的Pod不会占用这些预留的IP数。使用容器网络时，每个Pod会占用一个IP地址。如果节点预留的Pod IP数量不够的话，则无法创建Pod，具体说明请参见每个节点预留的Pod IP数说明。集群创建后不支持修改。",
+              "start_line": 84,
+              "end_line": 84
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+          "title": "购买Standard/Turbo集群",
+          "document_context": "目录：用户指南 > 集群 > 购买集群 > 购买Standard/Turbo集群\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.6666666666666666,
+          "citation": {
+            "document_id": "BDDV4CFI32QALMX5FKZZ3DGMXG",
+            "revision_id": "COJ3ZDRTCL73TLYCMQV746FF6J",
+            "fragment_id": "CHCRBPGOZKFOSHG3TBIMIUGCAI",
+            "title": "购买Standard/Turbo集群",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0028.html",
+            "section": "步骤二：进行网络配置",
+            "document_context": "目录：用户指南 > 集群 > 购买集群 > 购买Standard/Turbo集群\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "6d98b1e2dc5464da3e9354ab1b6210b516e4b992d17d7690a9a763d6833ddb27",
+            "url": "/v1/knowledge/revisions/COJ3ZDRTCL73TLYCMQV746FF6J/fragments/CHCRBPGOZKFOSHG3TBIMIUGCAI",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": {
+        "trace_id": "1e924634eb05add2ee6a0bd512ce4bd3",
+        "retrieval_queries": [
+          "CCE Standard和Turbo的网络选择有什么区别，Turbo的Pod地址如何分配？",
+          "CCE Standard 与 CCE Turbo 在网络选择上有哪些差异，CCE Turbo 的 Pod 地址是怎样分配的？",
+          "CCE Standard 和 CCE Turbo 的网络方案区别是什么，Turbo 集群的 Pod IP 如何分配？",
+          "对比 CCE Standard 与 Turbo 的网络选型差异，并说明 Turbo 中 Pod 地址的分配方式。"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 4587.968042003922
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-033",
+      "group": "family:cce_10_0279",
+      "category": "弹性伸缩",
+      "question_type": "concept",
+      "question": "HPA怎样把监控到的负载变化转为副本数变化？",
+      "answerable": true,
+      "required_facts": [
+        "周期检查Pod度量数据",
+        "计算达到目标数值所需副本数",
+        "调整Deployment等目标资源的replicas字段"
+      ],
+      "reference_answer": "周期检查Pod度量数据；计算达到目标数值所需副本数；调整Deployment等目标资源的replicas字段",
+      "evidence": [
+        {
+          "document_id": "cce_10_0290",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "file": "documents/cce_10_0290.md",
+          "content_sha256": "13dd681a175e1ef00fd415a682dee09adaf26418aa3898ee97ec649d736cb338",
+          "start_line": 20,
+          "end_line": 20,
+          "section": "HPA工作原理",
+          "anchor": "HPA周期性检查Pod的度量数据",
+          "quote": "HPA（Horizontal Pod Autoscaler）是用来控制Pod水平伸缩的控制器，HPA周期性检查Pod的度量数据，计算满足HPA资源所配置的目标数值所需的副本数量，进而调整目标资源（如Deployment）的replicas字段。",
+          "quote_sha256": "2f161f6b129229a043aaeede8211fe32a4115a266881ae1b64c955dd2b057893"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-033",
+      "question": "HPA怎样把监控到的负载变化转为副本数变化？",
+      "answerable": true,
+      "question_type": "concept",
+      "category": "弹性伸缩",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "F6WC776NICLGGUKFXEIKLU4GXQ",
+          "revision_id": "ACWSGJAIIHXJ3DCDJ4IDXLFGFE",
+          "section": "CronHPA工作原理",
+          "start_line": 66,
+          "end_line": 82,
+          "content": "CronHPA（Cron Horizontal Pod Autoscaler）是Kubernetes中的一种基于时间的自动扩展机制，用于在特定时间段内根据预设的规则自动调整Pod的数量。\n\n1. **用户定义CronHPA CRD**\n\n   用户通过Kubernetes YAML文件定义CronHPA资源，指定时间规则、最小/最大副本数等。\n2. **CronHPA Controller 监控**\n\n   CronHPA Controller会定期检查当前时间和定义的Cron表达式，判断是否需要执行扩缩容操作。\n3. **时间匹配**\n\n   当前时间与Cron表达式匹配时，CronHPA Controller会触发扩缩容操作。\n4. **调整副本数量**\n\n   CronHPA Controller通过Kubernetes API调用，调整ReplicaSet、Deployment或StatefulSet的副本数量。\n5. **Pod数量变化**\n\n   目标控制器（如Deployment）根据新的副本数量创建或删除Pod，以实现自动扩缩容。",
+          "content_hash": "5d8746b719bb8e27a7eead9d8f63f0e45f110c6b6bbd8145998afea66799e937",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "CronHPA是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CronHPA的工作流程包括哪些步骤？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CronHPA Controller如何触发扩缩容？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CronHPA可以调整哪些资源的副本数量？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "document_context": "目录：用户指南 > 弹性伸缩 > 工作负载弹性伸缩 > 工作负载伸缩原理\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.4,
+          "citation": {
+            "document_id": "LLQL5FT54ALU4ZI2ILTQJDBFQ6",
+            "revision_id": "ACWSGJAIIHXJ3DCDJ4IDXLFGFE",
+            "fragment_id": "F6WC776NICLGGUKFXEIKLU4GXQ",
+            "title": "工作负载伸缩原理",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+            "section": "CronHPA工作原理",
+            "document_context": "目录：用户指南 > 弹性伸缩 > 工作负载弹性伸缩 > 工作负载伸缩原理\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "5d8746b719bb8e27a7eead9d8f63f0e45f110c6b6bbd8145998afea66799e937",
+            "url": "/v1/knowledge/revisions/ACWSGJAIIHXJ3DCDJ4IDXLFGFE/fragments/F6WC776NICLGGUKFXEIKLU4GXQ",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "UMJ4VSI6YMWCS5XUXZDMSGXWHW",
+          "revision_id": "ACWSGJAIIHXJ3DCDJ4IDXLFGFE",
+          "section": "HPA工作原理",
+          "start_line": 45,
+          "end_line": 60,
+          "content": "HPA controller根据当前指标和期望指标来计算缩放比例，计算公式如下：\n\n  **期望实例数 = 向上取整[当前实例数 \\* ( 当前的指标值 / 目标值 )]**\n\n  例如当前的指标值是200m，目标值是100m，那么按照公式计算期望的实例数就会翻倍。那么在实际过程中，可能会遇到实例数值反复伸缩，导致集群震荡。为了保证稳定性，HPA controller从以下几个方面进行优化：\n\n  - 冷却时间：在1.11版本以及之前的版本，社区引入了horizontal-pod-autoscaler-downscale-stabilization-window和horizontal-pod-autoScaler-upscale-stabilization-window这两个启动参数代表缩容冷却时间和扩容冷却时间，这样保证在冷却时间内，跳过扩缩容。1.14版本之后引入延迟队列，保存一段时间内每一次检测的决策建议，然后根据当前所有有效的决策建议来进行决策，从而保证期望的副本数尽量少地发生变更，保证稳定性。\n  - 忍受度：可以看成一个缓冲区，当实例变化范围在忍受范围之内的话，保持原有的实例数不变。\n\n    首先定义**ratio =** **当前的指标值 / 目标值**\n\n    当|ratio – 1.0| <= 忍受度时，则会忽略，跳过scale。\n\n    当|ratio – 1.0| > 忍受度时， 就会根据之前的公式计算期望值。\n\n    当前社区版本中默认值为0.1。",
+          "content_hash": "b26c26900b650f766d8db1c42672cb6dc65079ba4414308fecd149a4ca803da8",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "HPA期望实例数的计算公式是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "HPA如何保证稳定性？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "HPA的冷却时间机制是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "HPA的忍受度是什么？默认值是多少？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "当ratio与1.0的差值在忍受度范围内时，HPA会如何处理？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "document_context": "目录：用户指南 > 弹性伸缩 > 工作负载弹性伸缩 > 工作负载伸缩原理\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.25,
+          "citation": {
+            "document_id": "LLQL5FT54ALU4ZI2ILTQJDBFQ6",
+            "revision_id": "ACWSGJAIIHXJ3DCDJ4IDXLFGFE",
+            "fragment_id": "UMJ4VSI6YMWCS5XUXZDMSGXWHW",
+            "title": "工作负载伸缩原理",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+            "section": "HPA工作原理",
+            "document_context": "目录：用户指南 > 弹性伸缩 > 工作负载弹性伸缩 > 工作负载伸缩原理\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "b26c26900b650f766d8db1c42672cb6dc65079ba4414308fecd149a4ca803da8",
+            "url": "/v1/knowledge/revisions/ACWSGJAIIHXJ3DCDJ4IDXLFGFE/fragments/UMJ4VSI6YMWCS5XUXZDMSGXWHW",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "EOAZZGHFMCWRA4RYY37YCE3LWU",
+          "revision_id": "4NE44DFQR2YOAH6VL6VN6HZDYI",
+          "section": "添加事件类告警",
+          "start_line": 41,
+          "end_line": 62,
+          "content": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n- 基于事件触发的告警规则依赖安装云原生日志采集插件，详情请参见[云原生日志采集插件](https://support.huaweicloud.com/usermanual-cce/cce_10_0416.html)。\n- 部分指标模板依赖[CCE节点故障检测](https://support.huaweicloud.com/usermanual-cce/cce_10_0132.html)插件（NPD）进行上报，指标详情请参见[表1](https://support.huaweicloud.com/usermanual-cce/cce_10_0724.html)。如需要使用相关的告警规则，请确保节点故障检测插件（NPD）已安装且正常运行。\n\n1. 登录[CCE控制台](https://console-intl.huaweicloud.com/cce2.0/#/cce/cluster/list)，单击集群名称进入集群。\n2. 在左侧导航栏选择“告警中心”，切换至“告警规则 > 自定义告警规则”页签，单击“创建告警规则”。\n3. 设置告警规则，在创建告警规则面板填写配置。\n   - 规则类型：选择“事件告警”，设置基于事件触发的告警规则，常见事件来源为Kubernetes事件和云服务事件。\n   - 规则详情：\n\n     | 参数 | 说明 | 场景示例 |\n     | --- | --- | --- |\n     | 规则名称 | 自定义告警规则的名称 | ReplicaSet副本数变化 |\n     | 描述（可选） | 添加告警规则描述。 | ReplicaSet副本数在5分钟内变化次数超过3次 |\n     | 事件名称 | 输入事件的名称，该名称需要与实际产生的Kubernetes事件或云服务事件相匹配。具体事件名称可请参见[CCE事件列表](https://support.huaweicloud.com/usermanual-cce/cce_10_0902.html)。 | ScalingReplicaSet |\n     | 触发方式 | - 立即触发：只要事件出现即发生告警。 - 累计触发：在指定的监控周期内，累计次数满足数值要求，才会发生告警。 | 选择“累计触发”，并设置监控周期为“5分钟”，累计次数为“> 3”。 |\n     | 告警等级 | 根据重要性选择告警等级，分为“紧急”、“重要”、“次要”、“提示”四个等级。 | 次要 |\n     | 联系组 | 选择一个已有的联系组。您也可以单击“新建联系组”进行创建，配置参数详情请参见[绑定联系组](https://support.huaweicloud.com/usermanual-cce/cce_10_0724.html)。 | CCEGroup |\n\n     上述示例为ScalingReplicaSet事件设置一条名为“ReplicaSet副本数变化”的告警，告警等级为次要。当5分钟内累计次数超过3次时，CCEGroup内的所有告警联系人发送通知 （通知方式为短信或邮件）。\n4. 单击“确定”，然后可前往自定义告警规则列表中查看规则是否创建成功。",
+          "content_hash": "21f4c3fe5d3045fc0f0001039e286e5b0511e1ff797976d8609a4282332d88c0",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "在CCE中创建事件类告警规则时，规则类型应选择什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "事件类告警规则依赖安装哪个插件？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "事件类告警的常见事件来源有哪些？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "创建事件类告警规则时，事件名称参数需要输入什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "触发方式有哪两种？分别是什么含义？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在通过CCE配置自定义告警的事件类告警中，规则名称参数用于自定义告警规则的名称，场景示例为“ReplicaSet副本数变化”。",
+              "start_line": 54,
+              "end_line": 54
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在通过CCE配置自定义告警的事件类告警中，描述（可选）参数用于添加告警规则描述，场景示例为“ReplicaSet副本数在5分钟内变化次数超过3次”。",
+              "start_line": 55,
+              "end_line": 55
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在通过CCE配置自定义告警的事件类告警中，事件名称参数用于输入事件的名称，该名称需要与实际产生的Kubernetes事件或云服务事件相匹配，具体事件名称可请参见CCE事件列表，场景示例为“ScalingReplicaSet”。",
+              "start_line": 56,
+              "end_line": 56
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在通过CCE配置自定义告警的事件类告警中，触发方式参数包括立即触发（只要事件出现即发生告警）和累计触发（在指定的监控周期内，累计次数满足数值要求，才会发生告警），场景示例为选择“累计触发”，并设置监控周期为“5分钟”，累计次数为“ 3”。",
+              "start_line": 57,
+              "end_line": 57
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在通过CCE配置自定义告警的事件类告警中，告警等级参数根据重要性选择告警等级，分为“紧急”、“重要”、“次要”、“提示”四个等级，场景示例为“次要”。",
+              "start_line": 58,
+              "end_line": 58
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在通过CCE配置自定义告警的事件类告警中，联系组参数选择一个已有的联系组，您也可以单击“新建联系组”进行创建，配置参数详情请参见绑定联系组，场景示例为“CCEGroup”。",
+              "start_line": 59,
+              "end_line": 59
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片位于“添加事件类告警”章节。 图片可见内容：一个说明图标，左侧为打开的书本图形，右侧为中文文字“说明”。 图片相邻原文：单击“确定”，然后可前往自定义告警规则列表中查看规则是否创建成功。 #### 添加事件类告警 - 基于事件触发的告警规则依赖安装云原生日志采集插件，详情请参见 云原生日志采集插件 。 - 部分指标模板依赖 CCE节点故障检测 插件（NPD）进行上报，指标详情请参见 表1 。如需要使用相关的告警规则，请确保节点故障检测插件（NPD）已安装且正常运行。",
+              "start_line": 41,
+              "end_line": 41
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "图片\n[图片说明] 图片位于“添加事件类告警”章节。 图片可见内容：一个说明图标，左侧为打开的书本图形，右侧为中文文字“说明”。 图片相邻原文：单击“确定”，然后可前往自定义告警规则列表中查看规则是否创建成功。 #### 添加事件类告警 - 基于事件触发的告警规则依赖安装云原生日志采集插件，详情请参见 云原生日志采集插件 。 - 部分指标模板依赖 CCE节点故障检测 插件（NPD）进行上报，指标详情请参见 表1 。如需要使用相关的告警规则，请确保节点故障检测插件（NPD）已安装且正常运行。\n基于事件触发的告警规则依赖安装云原生日志采集插件，详情请参见 云原生日志采集插件 。\n部分指标模板依赖 CCE节点故障检测 插件（NPD）进行上报，指标详情请参见 表1 。如需要使用相关的告警规则，请确保节点故障检测插件（NPD）已安装且正常运行。\n登录 CCE控制台 ，单击集群名称进入集群。\n在左侧导航栏选择“告警中心”，切换至“告警规则 自定义告警规则”页签，单击“创建告警规则”。\n设置告警规则，在创建告警规则面板填写配置。\n规则类型：选择“事件告警”，设置基于事件触发的告警规则，常见事件来源为Kubernetes事件和云服务事"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "设置告警规则，在创建告警规则面板填写配置。\n规则类型：选择“事件告警”，设置基于事件触发的告警规则，常见事件来源为Kubernetes事件和云服务事件。\n规则详情：\n参数 说明 场景示例\n--- --- ---\n规则名称 自定义告警规则的名称 ReplicaSet副本数变化\n[表格说明] 在通过CCE配置自定义告警的事件类告警中，规则名称参数用于自定义告警规则的名称，场景示例为“ReplicaSet副本数变化”。\n描述（可选） 添加告警规则描述。 ReplicaSet副本数在5分钟内变化次数超过3次\n[表格说明] 在通过CCE配置自定义告警的事件类告警中，描述（可选）参数用于添加告警规则描述，场景示例为“ReplicaSet副本数在5分钟内变化次数超过3次”。\n事件名称 输入事件的名称，该名称需要与实际产生的Kubernetes事件或云服务事件相匹配。具体事件名称可请参见 CCE事件列表 。 ScalingReplicaSet\n[表格说明] 在通过CCE配置自定义告警的事件类告警中，事件名称参数用于输入事件的名称，该名称需要与实际产生的Kubernetes事件或云服务事件相匹配，具体事件名称可请参见CCE事件列表，场景示例为“ScalingReplicaSet”。\n触发方式 - 立即触发：只要事件出现即发生告警。 - 累计触发：在指定的监控周期内，累计次数满足数值要求，才会发生"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "表，场景示例为“ScalingReplicaSet”。\n触发方式 - 立即触发：只要事件出现即发生告警。 - 累计触发：在指定的监控周期内，累计次数满足数值要求，才会发生告警。 选择“累计触发”，并设置监控周期为“5分钟”，累计次数为“ 3”。\n[表格说明] 在通过CCE配置自定义告警的事件类告警中，触发方式参数包括立即触发（只要事件出现即发生告警）和累计触发（在指定的监控周期内，累计次数满足数值要求，才会发生告警），场景示例为选择“累计触发”，并设置监控周期为“5分钟”，累计次数为“ 3”。\n告警等级 根据重要性选择告警等级，分为“紧急”、“重要”、“次要”、“提示”四个等级。 次要\n[表格说明] 在通过CCE配置自定义告警的事件类告警中，告警等级参数根据重要性选择告警等级，分为“紧急”、“重要”、“次要”、“提示”四个等级，场景示例为“次要”。\n联系组 选择一个已有的联系组。您也可以单击“新建联系组”进行创建，配置参数详情请参见 绑定联系组 。 CCEGroup\n[表格说明] 在通过CCE配置自定义告警的事件类告警中，联系组参数选择一个已有的联系组，您也可以单击“新建联系组”进行创建，配置参数详情请参见绑定联"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "通过CCE配置自定义告警的事件类告警中，联系组参数选择一个已有的联系组，您也可以单击“新建联系组”进行创建，配置参数详情请参见绑定联系组，场景示例为“CCEGroup”。\n上述示例为ScalingReplicaSet事件设置一条名为“ReplicaSet副本数变化”的告警，告警等级为次要。当5分钟内累计次数超过3次时，CCEGroup内的所有告警联系人发送通知 （通知方式为短信或邮件）。\n单击“确定”，然后可前往自定义告警规则列表中查看规则是否创建成功。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0835.html",
+          "title": "通过CCE配置自定义告警",
+          "document_context": "目录：用户指南 > 云原生观测 > 告警中心 > 通过CCE配置自定义告警\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1,
+          "citation": {
+            "document_id": "JZ5Y5OKGFMYQT54RCILQP6XQYQ",
+            "revision_id": "4NE44DFQR2YOAH6VL6VN6HZDYI",
+            "fragment_id": "EOAZZGHFMCWRA4RYY37YCE3LWU",
+            "title": "通过CCE配置自定义告警",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0835.html",
+            "section": "添加事件类告警",
+            "document_context": "目录：用户指南 > 云原生观测 > 告警中心 > 通过CCE配置自定义告警\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "21f4c3fe5d3045fc0f0001039e286e5b0511e1ff797976d8609a4282332d88c0",
+            "url": "/v1/knowledge/revisions/4NE44DFQR2YOAH6VL6VN6HZDYI/fragments/EOAZZGHFMCWRA4RYY37YCE3LWU",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "ZS25BPY46PC34QBN5GIONKMW3S",
+          "revision_id": "ACWSGJAIIHXJ3DCDJ4IDXLFGFE",
+          "section": "HPA工作原理",
+          "start_line": 34,
+          "end_line": 43,
+          "content": "**HPA的核心有如下2个部分：**\n\n- 监控数据来源\n\n  最早社区只提供基于CPU和内存的HPA，随着应用越来越多搬迁到K8s上以及Prometheus的发展，开发者已经不满足于CPU和内存，开发者需要应用自身的业务指标，或者是一些接入层的监控信息，例如：Load Balancer的QPS、网站的实时在线人数等。社区经过思考之后，定义了一套标准的Metrics API，通过聚合API对外提供服务。\n\n  - metrics.k8s.io： 主要提供Pod和Node的CPU和Memory相关的监控指标。\n  - custom.metrics.k8s.io： 主要提供Kubernetes Object相关的自定义监控指标。\n  - external.metrics.k8s.io：指标来源外部，与任何的Kubernetes资源的指标无关。\n- 扩缩容决策算法",
+          "content_hash": "7452c053ffe010d316b29a5576c0607e514dc41ef5c1b67adc72b8fbe71e8778",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "HPA的核心组成部分有哪些？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "HPA的监控数据来源包括哪些？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "metrics.k8s.io、custom.metrics.k8s.io和external.metrics.k8s.io分别提供什么指标？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "为什么需要自定义监控指标？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+          "title": "工作负载伸缩原理",
+          "document_context": "目录：用户指南 > 弹性伸缩 > 工作负载弹性伸缩 > 工作负载伸缩原理\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1,
+          "citation": {
+            "document_id": "LLQL5FT54ALU4ZI2ILTQJDBFQ6",
+            "revision_id": "ACWSGJAIIHXJ3DCDJ4IDXLFGFE",
+            "fragment_id": "ZS25BPY46PC34QBN5GIONKMW3S",
+            "title": "工作负载伸缩原理",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0290.html",
+            "section": "HPA工作原理",
+            "document_context": "目录：用户指南 > 弹性伸缩 > 工作负载弹性伸缩 > 工作负载伸缩原理\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "7452c053ffe010d316b29a5576c0607e514dc41ef5c1b67adc72b8fbe71e8778",
+            "url": "/v1/knowledge/revisions/ACWSGJAIIHXJ3DCDJ4IDXLFGFE/fragments/ZS25BPY46PC34QBN5GIONKMW3S",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "VNZTFFNQVZKDMDSNV4O2P4NIRW",
+          "revision_id": "3XLGNK34EMJO5L2OW5EMN6HSNE",
+          "section": "负载弹性伸缩控制器（horizontal-pod-autoscaler-controller）配置",
+          "start_line": 129,
+          "end_line": 131,
+          "content": "| HPA CPU初始化期间 | horizontal-pod-autoscaler-cpu-initialization-period | 该期间内，只有Pod当前处于就绪状态并完成了最近一次指标采集，其指标才会被HPA统计使用。设置该字段可以在Pod启动初期过滤掉不稳定的CPU使用数据，进而防止基于瞬时峰值做出错误的扩缩容决策。  **配置建议**：如果您观察到Pods在启动阶段的CPU使用率波动导致HPA做出错误的扩展决策，可以适当增加此值。  **配置风险**：设置值过低可能导致基于CPU峰值做出过度反应的扩容；而设置的过高则可能在实际需要扩容时造成延迟反应。  **适用集群版本**：v1.23.16-r0、v1.25.11-r0、v1.27.8-r0、v1.28.6-r0、v1.29.2-r0及以上版本的集群支持该参数。 | 默认：5分钟 |\n| HPA 初始就绪状态延迟 | horizontal-pod-autoscaler-initial-readiness-delay | 在HPA的CPU初始化期间后，该就绪延迟期间允许HPA以一个较宽松的标准筛选CPU度量数据。在这段时间内，即使Pod的就绪状态有所变化，HPA也会统计使用它们的CPU使用数据进行扩缩容。该字段有助于在Pod状态频繁变化时，确保CPU使用数据被持续追踪。  **配置建议**：如果Pods在启动后的就绪状态发生波动，并且您需要避免此波动导致HPA的误判，可以适当增加此值。  **配置风险**：参数值设置过低可能会在Pod刚进入就绪状态时，因CPU数据波动导致不恰当的扩容行为；而设置过高则可能导致在需要快速反应时HPA无法立即做出决策。  **适用集群版本**：v1.23.16-r0、v1.25.11-r0、v1.27.8-r0、v1.28.6-r0、v1.29.2-r0及以上版本的集群支持该参数。 | 默认：30s |\n| HPA 缩容稳定窗口 | horizontal-pod-autoscaler-downscale-stabilization | 在稳定窗口时间内，HPA控制器会持续观察历史缩容推荐值并选择该时间段内最大的推荐副本数。设置该参数可以在负载下降阶段过滤掉短暂的指标波动，避免因此导致Pod数量频繁变化。  **配置建议**：如果观察到因短期负载下降导致HPA 频繁缩容后又快速扩容的抖动现象，可以适当增加此值来提升系统稳定性。  **配置风险**：设置过低可能导致对短期负载下降的过度反应，造成Pod频繁创建销毁；而设置得过高则可能在真实负载降低时资源释放延迟，造成资源浪费，超出上限（153,722,867分钟）会导致HPA控制器启动异常。当HPA控制器重启时，缩容稳定窗口会重新开始计时。  **适用集群版本**：v1.28.15-r60、v1.29.15-r20、v1.30.14-r20、v1.31.10-r20、v1.32.6-r20、v1.33.5-r10及以上版本的集群支持该参数。 | 默认：5分0秒 |",
+          "content_hash": "c472c9630caaff74cc9c695b9bcd7cbae449bb95a0f2997e0306d07b37f7b8d3",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "HPA CPU初始化期间的默认值是多少？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何调整HPA初始就绪状态延迟以适应特定场景？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "HPA缩容稳定窗口的适用集群版本是什么？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在Kubernetes原生配置的负载弹性伸缩控制器（horizontal-pod-autoscaler-controller）配置中，参数horizontal-pod-autoscaler-cpu-initialization-period用于设置HPA CPU初始化期间，该期间内只有Pod当前处于就绪状态并完成了最近一次指标采集，其指标才会被HPA统计使用。设置该字段可以在Pod启动初期过滤掉不稳定的CPU使用数据，进而防止基于瞬时峰值做出错误的扩缩容决策。配置建议为如果您观察到Pods在启动阶段的CPU使用率波动导致HPA做出错误的扩展决策，可以适当增加此值。配置风险为设置值过低可能导致基于CPU峰值做出过度反应的扩容；而设置的过高则可能在实际需要扩容时造成延迟反应。适用集群版本为v1.23.16-r0、v1.25.11-r0、v1.27.8-r0、v1.28.6-r0、v1.29.2-r0及以上版本的集群支持该参数。该参数默认值为5分钟。",
+              "start_line": 129,
+              "end_line": 129
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在Kubernetes原生配置的负载弹性伸缩控制器（horizontal-pod-autoscaler-controller）配置中，参数horizontal-pod-autoscaler-initial-readiness-delay用于设置HPA初始就绪状态延迟，在HPA的CPU初始化期间后，该就绪延迟期间允许HPA以一个较宽松的标准筛选CPU度量数据。在这段时间内，即使Pod的就绪状态有所变化，HPA也会统计使用它们的CPU使用数据进行扩缩容。该字段有助于在Pod状态频繁变化时，确保CPU使用数据被持续追踪。配置建议为如果Pods在启动后的就绪状态发生波动，并且您需要避免此波动导致HPA的误判，可以适当增加此值。配置风险为参数值设置过低可能会在Pod刚进入就绪状态时，因CPU数据波动导致不恰当的扩容行为；而设置过高则可能导致在需要快速反应时HPA无法立即做出决策。适用集群版本为v1.23.16-r0、v1.25.11-r0、v1.27.8-r0、v1.28.6-r0、v1.29.2-r0及以上版本的集群支持该参数。该参数默认值为30s。",
+              "start_line": 130,
+              "end_line": 130
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在Kubernetes原生配置的负载弹性伸缩控制器（horizontal-pod-autoscaler-controller）配置中，参数horizontal-pod-autoscaler-downscale-stabilization用于设置HPA缩容稳定窗口，在稳定窗口时间内，HPA控制器会持续观察历史缩容推荐值并选择该时间段内最大的推荐副本数。设置该参数可以在负载下降阶段过滤掉短暂的指标波动，避免因此导致Pod数量频繁变化。配置建议为如果观察到因短期负载下降导致HPA频繁缩容后又快速扩容的抖动现象，可以适当增加此值来提升系统稳定性。配置风险为设置过低可能导致对短期负载下降的过度反应，造成Pod频繁创建销毁；而设置得过高则可能在真实负载降低时资源释放延迟，造成资源浪费，超出上限（153,722,867分钟）会导致HPA控制器启动异常。当HPA控制器重启时，缩容稳定窗口会重新开始计时。适用集群版本为v1.28.15-r60、v1.29.15-r20、v1.30.14-r20、v1.31.10-r20、v1.32.6-r20、v1.33.5-r10及以上版本的集群支持该参数。该参数默认值为5分0秒。",
+              "start_line": 131,
+              "end_line": 131
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "HPA CPU初始化期间 horizontal-pod-autoscaler-cpu-initialization-period 该期间内，只有Pod当前处于就绪状态并完成了最近一次指标采集，其指标才会被HPA统计使用。设置该字段可以在Pod启动初期过滤掉不稳定的CPU使用数据，进而防止基于瞬时峰值做出错误的扩缩容决策。 配置建议 ：如果您观察到Pods在启动阶段的CPU使用率波动导致HPA做出错误的扩展决策，可以适当增加此值。 配置风险 ：设置值过低可能导致基于CPU峰值做出过度反应的扩容；而设置的过高则可能在实际需要扩容时造成延迟反应。 适用集群版本 ：v1.23.16-r0、v1.25.11-r0、v1.27.8-r0、v1.28.6-r0、v1.29.2-r0及以上版本的集群支持该参数。 默认：5分钟\n[表格说明] 在Kubernetes原生配置的负载弹性伸缩控制器（horizontal-pod-autoscaler-controller）配置中，参数horizontal-pod-autoscaler-cpu-initialization-period用于设置HPA CPU初始化期间，该期间内只有Pod当前处于就绪状态并完成了最近一次指标采集，其指标才会被HPA统计使用。设置该字段可以在Pod启动初期过滤掉不稳定的CPU使用数据，进而防止基于瞬时峰"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "就绪状态并完成了最近一次指标采集，其指标才会被HPA统计使用。设置该字段可以在Pod启动初期过滤掉不稳定的CPU使用数据，进而防止基于瞬时峰值做出错误的扩缩容决策。配置建议为如果您观察到Pods在启动阶段的CPU使用率波动导致HPA做出错误的扩展决策，可以适当增加此值。配置风险为设置值过低可能导致基于CPU峰值做出过度反应的扩容；而设置的过高则可能在实际需要扩容时造成延迟反应。适用集群版本为v1.23.16-r0、v1.25.11-r0、v1.27.8-r0、v1.28.6-r0、v1.29.2-r0及以上版本的集群支持该参数。该参数默认值为5分钟。\nHPA 初始就绪状态延迟 horizontal-pod-autoscaler-initial-readiness-delay 在HPA的CPU初始化期间后，该就绪延迟期间允许HPA以一个较宽松的标准筛选CPU度量数据。在这段时间内，即使Pod的就绪状态有所变化，HPA也会统计使用它们的CPU使用数据进行扩缩容。该字段有助于在Pod状态频繁变化时，确保CPU使用数据被持续追踪。 配置建议 ：如果Pods在启动后的就绪状态发生波动，并且您需要避免此波动导致HPA的误判，可以适当增加此值。 配置风险 ：参数值"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "数据被持续追踪。 配置建议 ：如果Pods在启动后的就绪状态发生波动，并且您需要避免此波动导致HPA的误判，可以适当增加此值。 配置风险 ：参数值设置过低可能会在Pod刚进入就绪状态时，因CPU数据波动导致不恰当的扩容行为；而设置过高则可能导致在需要快速反应时HPA无法立即做出决策。 适用集群版本 ：v1.23.16-r0、v1.25.11-r0、v1.27.8-r0、v1.28.6-r0、v1.29.2-r0及以上版本的集群支持该参数。 默认：30s\n[表格说明] 在Kubernetes原生配置的负载弹性伸缩控制器（horizontal-pod-autoscaler-controller）配置中，参数horizontal-pod-autoscaler-initial-readiness-delay用于设置HPA初始就绪状态延迟，在HPA的CPU初始化期间后，该就绪延迟期间允许HPA以一个较宽松的标准筛选CPU度量数据。在这段时间内，即使Pod的就绪状态有所变化，HPA也会统计使用它们的CPU使用数据进行扩缩容。该字段有助于在Pod状态频繁变化时，确保CPU使用数据被持续追踪。配置建议为如果Pods在启动后的就绪状态发生波动，并且您需要避免此波动导致HPA的误判，可以适当增加此值。配置风险为参数值设置过低"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "续追踪。配置建议为如果Pods在启动后的就绪状态发生波动，并且您需要避免此波动导致HPA的误判，可以适当增加此值。配置风险为参数值设置过低可能会在Pod刚进入就绪状态时，因CPU数据波动导致不恰当的扩容行为；而设置过高则可能导致在需要快速反应时HPA无法立即做出决策。适用集群版本为v1.23.16-r0、v1.25.11-r0、v1.27.8-r0、v1.28.6-r0、v1.29.2-r0及以上版本的集群支持该参数。该参数默认值为30s。\nHPA 缩容稳定窗口 horizontal-pod-autoscaler-downscale-stabilization 在稳定窗口时间内，HPA控制器会持续观察历史缩容推荐值并选择该时间段内最大的推荐副本数。设置该参数可以在负载下降阶段过滤掉短暂的指标波动，避免因此导致Pod数量频繁变化。 配置建议 ：如果观察到因短期负载下降导致HPA 频繁缩容后又快速扩容的抖动现象，可以适当增加此值来提升系统稳定性。 配置风险 ：设置过低可能导致对短期负载下降的过度反应，造成Pod频繁创建销毁；而设置得过高则可能在真实负载降低时资源释放延迟，造成资源浪费，超出上限（153,722,867分钟）会导致HPA"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "过度反应，造成Pod频繁创建销毁；而设置得过高则可能在真实负载降低时资源释放延迟，造成资源浪费，超出上限（153,722,867分钟）会导致HPA控制器启动异常。当HPA控制器重启时，缩容稳定窗口会重新开始计时。 适用集群版本 ：v1.28.15-r60、v1.29.15-r20、v1.30.14-r20、v1.31.10-r20、v1.32.6-r20、v1.33.5-r10及以上版本的集群支持该参数。 默认：5分0秒\n[表格说明] 在Kubernetes原生配置的负载弹性伸缩控制器（horizontal-pod-autoscaler-controller）配置中，参数horizontal-pod-autoscaler-downscale-stabilization用于设置HPA缩容稳定窗口，在稳定窗口时间内，HPA控制器会持续观察历史缩容推荐值并选择该时间段内最大的推荐副本数。设置该参数可以在负载下降阶段过滤掉短暂的指标波动，避免因此导致Pod数量频繁变化。配置建议为如果观察到因短期负载下降导致HPA频繁缩容后又快速扩容的抖动现象，可以适当增加此值来提升系统稳定性。配置风险为设置过低可能导致对短期负载下降的过度反应，造成Pod频繁创建销毁；而设置得过高则可能在真实负载降低时资源释放"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "升系统稳定性。配置风险为设置过低可能导致对短期负载下降的过度反应，造成Pod频繁创建销毁；而设置得过高则可能在真实负载降低时资源释放延迟，造成资源浪费，超出上限（153,722,867分钟）会导致HPA控制器启动异常。当HPA控制器重启时，缩容稳定窗口会重新开始计时。适用集群版本为v1.28.15-r60、v1.29.15-r20、v1.30.14-r20、v1.31.10-r20、v1.32.6-r20、v1.33.5-r10及以上版本的集群支持该参数。该参数默认值为5分0秒。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0787.html",
+          "title": "Kubernetes原生配置",
+          "document_context": "目录：用户指南 > 配置中心 > Kubernetes原生配置\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.8666666666666667,
+          "citation": {
+            "document_id": "WQBPE54K7YVFDNDT4PRIJTW7P7",
+            "revision_id": "3XLGNK34EMJO5L2OW5EMN6HSNE",
+            "fragment_id": "VNZTFFNQVZKDMDSNV4O2P4NIRW",
+            "title": "Kubernetes原生配置",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0787.html",
+            "section": "负载弹性伸缩控制器（horizontal-pod-autoscaler-controller）配置",
+            "document_context": "目录：用户指南 > 配置中心 > Kubernetes原生配置\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "c472c9630caaff74cc9c695b9bcd7cbae449bb95a0f2997e0306d07b37f7b8d3",
+            "url": "/v1/knowledge/revisions/3XLGNK34EMJO5L2OW5EMN6HSNE/fragments/VNZTFFNQVZKDMDSNV4O2P4NIRW",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": {
+        "trace_id": "cb8b8513eaff014f4df970ef1ba1d0f3",
+        "retrieval_queries": [
+          "HPA怎样把监控到的负载变化转为副本数变化？",
+          "HPA如何根据监控到的负载变化计算并调整副本数？",
+          "Horizontal Pod Autoscaler 是怎样把负载指标变化映射为副本数量变化的？",
+          "HPA 将观测到的负载变化转换为副本数变化的过程是什么？"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 3188.725624990184
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-055",
+      "group": "cce_10_0285",
+      "category": "命名空间",
+      "question_type": "scenario",
+      "question": "想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？",
+      "answerable": true,
+      "required_facts": [
+        "为不同环境建立对应命名空间",
+        "创建和查询工作负载时选择对应命名空间",
+        "不要宣称这等同于完整网络安全隔离"
+      ],
+      "reference_answer": "为不同环境建立对应命名空间；创建和查询工作负载时选择对应命名空间；不要宣称这等同于完整网络安全隔离",
+      "evidence": [
+        {
+          "document_id": "cce_10_0285",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "file": "documents/cce_10_0285.md",
+          "content_sha256": "d0eaed4dded12d85d8eac6419e236f92048a9e8661f35deffb2e18f2013e6cb5",
+          "start_line": 9,
+          "end_line": 9,
+          "section": "使用命名空间",
+          "anchor": "创建工作负载时，您可以选择对应的命名空间",
+          "quote": "- 创建工作负载时，您可以选择对应的命名空间，实现资源或租户的隔离。",
+          "quote_sha256": "1bb41cad7bb282da433d127c84266be595c5306936e74c02d3d329b87893a2a1"
+        },
+        {
+          "document_id": "cce_10_0285",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "file": "documents/cce_10_0285.md",
+          "content_sha256": "d0eaed4dded12d85d8eac6419e236f92048a9e8661f35deffb2e18f2013e6cb5",
+          "start_line": 21,
+          "end_line": 21,
+          "section": "命名空间使用实践",
+          "anchor": "不同环境创建对应命名空间",
+          "quote": "  - 不同环境创建对应命名空间。",
+          "quote_sha256": "d5bd35649dd972b99a7481ae565fefd378b3b016ce9a19f19878a092ac218a59"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-055",
+      "question": "想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？",
+      "answerable": true,
+      "question_type": "scenario",
+      "category": "命名空间",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "GRPHHXFJIGGKVMGA2MZY63ADZ7",
+          "revision_id": "SEQCJYQBYZSSV4KC2KUS42QQUZ",
+          "section": "前提条件",
+          "start_line": 42,
+          "end_line": 42,
+          "content": "已创建v1.29及以上版本的CCE Standard/Turbo集群。",
+          "content_hash": "824eadabea778bd337919a89cf47f904cf9691625733774077710a0b5bc834ad",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "使用FlexNPU的前提条件是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "需要创建什么版本的CCE集群才能使用FlexNPU？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11112.html",
+          "title": "使用FlexNPU实现NPU资源虚拟化与隔离",
+          "document_context": "目录：用户指南 > 调度 > NPU调度 > NPU动态虚拟化 > 使用FlexNPU实现NPU资源虚拟化与隔离\n更新时间：2026-09-20 GMT+08:00",
+          "score": 2,
+          "citation": {
+            "document_id": "UKTKYQNGYYCEVN74H3ZFCF6AYA",
+            "revision_id": "SEQCJYQBYZSSV4KC2KUS42QQUZ",
+            "fragment_id": "GRPHHXFJIGGKVMGA2MZY63ADZ7",
+            "title": "使用FlexNPU实现NPU资源虚拟化与隔离",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11112.html",
+            "section": "前提条件",
+            "document_context": "目录：用户指南 > 调度 > NPU调度 > NPU动态虚拟化 > 使用FlexNPU实现NPU资源虚拟化与隔离\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "824eadabea778bd337919a89cf47f904cf9691625733774077710a0b5bc834ad",
+            "url": "/v1/knowledge/revisions/SEQCJYQBYZSSV4KC2KUS42QQUZ/fragments/GRPHHXFJIGGKVMGA2MZY63ADZ7",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "UVOV7KLSA7FIDVERDQL3XLYZDO",
+          "revision_id": "3YPJGBDO3R3OJLIZUHD6TA7LW7",
+          "section": "命名空间使用实践",
+          "start_line": 14,
+          "end_line": 28,
+          "content": "- **按照不同环境划分命名空间**\n\n  一般情况下，工作负载发布会经历开发环境、联调环境、测试环境，最后到生产环境的过程。这个过程中不同环境部署的工作负载相同，只是在逻辑上进行了定义。分为两种做法：\n\n  - 分别创建不同集群。\n\n    不同集群之间，资源不能共享。同时，不同环境中的服务互访需要通过负载均衡才能实现。\n  - 不同环境创建对应命名空间。\n\n    同个命名空间下，通过服务名称（Service name）可直接访问。跨命名空间的可以通过服务名称、命名空间名称访问。\n\n    例如下图，开发环境/联调环境/测试环境分别创建了命名空间。\n\n    **图1** 不同环境创建对应命名空间\n     ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001199021298.png \"点击放大\")",
+          "content_hash": "c2ae96986867e82558359b74e00b5ea5ecbedfa41eece22b997004ec848f7384",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "按照不同环境划分命名空间时，有哪两种做法？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "不同集群之间资源能否共享？不同环境中的服务互访需要通过什么实现？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "同个命名空间下和跨命名空间的服务访问方式有何不同？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "开发环境、联调环境、测试环境分别创建命名空间的示例图是什么？"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片位于“命名空间使用实践”章节。 图片可见内容：示意图展示一个集群（顶部标注“集群”）内按环境划分的三个命名空间，用虚线框分隔。左侧虚线框底部标注“命名空间 Dev”，内含三个蓝色方块：APP 1-A、APP 1-B、APP 1-C；APP 1-A与APP 1-B之间有双向箭头，APP 1-A和APP 1-B分别有箭头指向APP 1-C。中间虚线框底部标注“命名空间 Integrated”，内含三个蓝色方块：APP 2-A、APP 2-B、APP 2-C；APP 2-A与APP 2-B之间有双向箭头，APP 2-A和APP 2-B分别有箭头指向APP 2-C；另有一条曲线从APP 1-C指向APP 2-A。右侧虚线框底部标注“命名空间 Test”，内含三个蓝色方块：APP 2-A、APP 2-B、APP 2-C；APP 2-A与APP 2-B之间有双向箭头，APP 2-A和APP 2-B分别有箭头指向APP 2-C。 图片相邻原文：例如下图，开发环境/联调环境/测试环境分别创建了命名空间。 图1 不同环境创建对应命名空间 - 按照应用划分命名空间 对于同个环境中，应用数量较多的情况，建议进一步按照工作负载类型划分命名空间。例如下图中，按照APP1和APP2划分不同命名空间，将不同工作负载在逻辑上当做一个工作负载组进行管理。且同一",
+              "start_line": 28,
+              "end_line": 28
+            },
+            {
+              "kind": "IMAGE",
+              "text": "名空间，将不同工作负载在逻辑上当做一个工作负载组进行管理。且同一个命名空间内的工作负载可以通过服务名称访问，不同命名空间下的通过服务名称、命名空间名称访问。",
+              "start_line": 28,
+              "end_line": 28
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "按照不同环境划分命名空间\n一般情况下，工作负载发布会经历开发环境、联调环境、测试环境，最后到生产环境的过程。这个过程中不同环境部署的工作负载相同，只是在逻辑上进行了定义。分为两种做法：\n分别创建不同集群。\n不同集群之间，资源不能共享。同时，不同环境中的服务互访需要通过负载均衡才能实现。\n不同环境创建对应命名空间。\n同个命名空间下，通过服务名称（Service name）可直接访问。跨命名空间的可以通过服务名称、命名空间名称访问。\n例如下图，开发环境/联调环境/测试环境分别创建了命名空间。\n图1 不同环境创建对应命名空间\n图片 点击放大\n[图片说明] 图片位于“命名空间使用实践”章节。 图片可见内容：示意图展示一个集群（顶部标注“集群”）内按环境划分的三个命名空间，用虚线框分隔。左侧虚线框底部标注“命名空间 Dev”，内含三个蓝色方块：APP 1-A、APP 1-B、APP 1-C；APP 1-A与APP 1-B之间有双向箭头，APP 1-A和APP 1-B分别有箭头指向APP 1-C。中间虚线框底部标注“命名空间 Integrated”，内含三个蓝色方块：APP 2-A、APP 2-B、APP 2-C；APP 2-A与APP 2-B之间有双向箭头，APP 2-A和APP 2-B"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "线框底部标注“命名空间 Integrated”，内含三个蓝色方块：APP 2-A、APP 2-B、APP 2-C；APP 2-A与APP 2-B之间有双向箭头，APP 2-A和APP 2-B分别有箭头指向APP 2-C；另有一条曲线从APP 1-C指向APP 2-A。右侧虚线框底部标注“命名空间 Test”，内含三个蓝色方块：APP 2-A、APP 2-B、APP 2-C；APP 2-A与APP 2-B之间有双向箭头，APP 2-A和APP 2-B分别有箭头指向APP 2-C。 图片相邻原文：例如下图，开发环境/联调环境/测试环境分别创建了命名空间。 图1 不同环境创建对应命名空间 - 按照应用划分命名空间 对于同个环境中，应用数量较多的情况，建议进一步按照工作负载类型划分命名空间。例如下图中，按照APP1和APP2划分不同命名空间，将不同工作负载在逻辑上当做一个工作负载组进行管理。且同一\n[图片说明] 名空间，将不同工作负载在逻辑上当做一个工作负载组进行管理。且同一个命名空间内的工作负载可以通过服务名称访问，不同命名空间下的通过服务名称、命名空间名称访问。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+          "title": "管理命名空间",
+          "document_context": "目录：用户指南 > 命名空间 > 管理命名空间\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.4,
+          "citation": {
+            "document_id": "KWGDZAK3T2WL5U7IWIFALP7WZP",
+            "revision_id": "3YPJGBDO3R3OJLIZUHD6TA7LW7",
+            "fragment_id": "UVOV7KLSA7FIDVERDQL3XLYZDO",
+            "title": "管理命名空间",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0285.html",
+            "section": "命名空间使用实践",
+            "document_context": "目录：用户指南 > 命名空间 > 管理命名空间\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "c2ae96986867e82558359b74e00b5ea5ecbedfa41eece22b997004ec848f7384",
+            "url": "/v1/knowledge/revisions/3YPJGBDO3R3OJLIZUHD6TA7LW7/fragments/UVOV7KLSA7FIDVERDQL3XLYZDO",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "Y5CN7FADEF65V5S524FGTTSHH3",
+          "revision_id": "GOHC6BCNAX5LS6F3HAQJ4M5VGW",
+          "section": "操作场景",
+          "start_line": 9,
+          "end_line": 11,
+          "content": "命名空间（Namespace）是对一组资源和对象的抽象整合。在同一个集群内可创建不同的命名空间，不同命名空间中的数据彼此隔离。使得它们既可以共享同一个集群的服务，也能够互不干扰。\n\n例如可以将开发环境、测试环境的业务分别放在不同的命名空间。",
+          "content_hash": "c0beecaca077cf8a011d7c1727cb73fad4fb57ace4f40d1cbd83ea27026bbd1a",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "命名空间（Namespace）在CCE中是对什么资源的抽象整合？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在同一个集群内创建不同命名空间后，不同命名空间中的数据是否隔离？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "命名空间如何帮助共享同一个集群的服务并互不干扰？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "可以将开发环境和测试环境的业务分别放在不同的命名空间吗？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0278.html",
+          "title": "创建命名空间",
+          "document_context": "目录：用户指南 > 命名空间 > 创建命名空间\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.2666666666666666,
+          "citation": {
+            "document_id": "QJKAIQHWZRD3RJRJQNJ75DOJJF",
+            "revision_id": "GOHC6BCNAX5LS6F3HAQJ4M5VGW",
+            "fragment_id": "Y5CN7FADEF65V5S524FGTTSHH3",
+            "title": "创建命名空间",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0278.html",
+            "section": "操作场景",
+            "document_context": "目录：用户指南 > 命名空间 > 创建命名空间\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "c0beecaca077cf8a011d7c1727cb73fad4fb57ace4f40d1cbd83ea27026bbd1a",
+            "url": "/v1/knowledge/revisions/GOHC6BCNAX5LS6F3HAQJ4M5VGW/fragments/Y5CN7FADEF65V5S524FGTTSHH3",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "LSQIUMXGMZNWX3KBNAGOKF5TWM",
+          "revision_id": "AE6VHZEDKJMAAXNLH7OSYJU32N",
+          "section": "云原生混部配置",
+          "start_line": 41,
+          "end_line": 45,
+          "content": "| 参数 | 默认行为 | 参数说明 |\n   | --- | --- | --- |\n   | CPU 弹性限流 | 开启 | 开启CPU Burst弹性限流后，当节点资源充足时，Pod的CPU实际使用量可以短暂突破CPU Limit值，以降低业务长尾响应时延，详情请参见[CPU Burst弹性限流](https://support.huaweicloud.com/usermanual-cce/cce_10_0700.html)。 |\n   | 出口网络带宽 | 开启 | 在CCE Turbo集群中，支持在线业务与离线业务的网络隔离，详情请参见[出口网络带宽保障](https://support.huaweicloud.com/usermanual-cce/cce_10_0701.html)。 |\n   | 资源超卖 | 开启 | 通过实时采集节点负载信息，挖掘节点已分配、但未使用的资源，实现动态超卖节点资源。您可以选择需要超卖的资源类型，默认同时开启CPU和内存资源超卖。详情请参见[动态资源超卖](https://support.huaweicloud.com/usermanual-cce/cce_10_0384.html)。  说明：  - 若集群版本不满足条件，资源超卖功能配置不会生效，详情请参见[表1](https://support.huaweicloud.com/usermanual-cce/cce_10_0384.html)。 - 修改超卖资源配置时：   - 对于增加超卖资源类型，如超卖资源由CPU变为CPU、内存，此时可以随时添加。   - 对于减少超卖资源类型，如由CPU、内存变为仅超卖CPU，此时需要在合适的时间进行更改，即分配率不超过100%时才可进行安全更改。 |",
+          "content_hash": "0ab3069d17d4ee3c4b1d13de87f15b6cafb4a6aaf0ac76db43aac7e130dbd5f3",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "开启CPU Burst弹性限流后，Pod的CPU实际使用量可以突破多少？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在CCE Turbo集群中，如何实现网络隔离？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何配置动态资源超卖功能？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "CPU弹性限流参数默认行为为开启。开启CPU Burst弹性限流后，当节点资源充足时，Pod的CPU实际使用量可以短暂突破CPU Limit值，以降低业务长尾响应时延，详情请参见CPU Burst弹性限流。",
+              "start_line": 43,
+              "end_line": 43
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "出口网络带宽参数默认行为为开启。在CCE Turbo集群中，支持在线业务与离线业务的网络隔离，详情请参见出口网络带宽保障。",
+              "start_line": 44,
+              "end_line": 44
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "资源超卖参数默认行为为开启。通过实时采集节点负载信息，挖掘节点已分配、但未使用的资源，实现动态超卖节点资源。您可以选择需要超卖的资源类型，默认同时开启CPU和内存资源超卖。详情请参见动态资源超卖。说明：若集群版本不满足条件，资源超卖功能配置不会生效，详情请参见表1。修改超卖资源配置时：对于增加超卖资源类型，如超卖资源由CPU变为CPU、内存，此时可以随时添加。对于减少超卖资源类型，如由CPU、内存变为仅超卖CPU，此时需要在合适的时间进行更改，即分配率不超过100%时才可进行安全更改。",
+              "start_line": 45,
+              "end_line": 45
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "参数 默认行为 参数说明\n--- --- ---\nCPU 弹性限流 开启 开启CPU Burst弹性限流后，当节点资源充足时，Pod的CPU实际使用量可以短暂突破CPU Limit值，以降低业务长尾响应时延，详情请参见 CPU Burst弹性限流 。\n[表格说明] CPU弹性限流参数默认行为为开启。开启CPU Burst弹性限流后，当节点资源充足时，Pod的CPU实际使用量可以短暂突破CPU Limit值，以降低业务长尾响应时延，详情请参见CPU Burst弹性限流。\n出口网络带宽 开启 在CCE Turbo集群中，支持在线业务与离线业务的网络隔离，详情请参见 出口网络带宽保障 。\n[表格说明] 出口网络带宽参数默认行为为开启。在CCE Turbo集群中，支持在线业务与离线业务的网络隔离，详情请参见出口网络带宽保障。\n资源超卖 开启 通过实时采集节点负载信息，挖掘节点已分配、但未使用的资源，实现动态超卖节点资源。您可以选择需要超卖的资源类型，默认同时开启CPU和内存资源超卖。详情请参见 动态资源超卖 。 说明： - 若集群版本不满足条件，资源超卖功能配置不会生效，详情请参见 表1 。 - 修改超卖资源配置时： - 对于增加超卖资源类型，如超卖资源由CPU变为CPU、内存，此时可以随时添加。 - 对于减少超卖资源类型，如由CPU、内存变为仅"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "超卖资源配置时： - 对于增加超卖资源类型，如超卖资源由CPU变为CPU、内存，此时可以随时添加。 - 对于减少超卖资源类型，如由CPU、内存变为仅超卖CPU，此时需要在合适的时间进行更改，即分配率不超过100%时才可进行安全更改。\n[表格说明] 资源超卖参数默认行为为开启。通过实时采集节点负载信息，挖掘节点已分配、但未使用的资源，实现动态超卖节点资源。您可以选择需要超卖的资源类型，默认同时开启CPU和内存资源超卖。详情请参见动态资源超卖。说明：若集群版本不满足条件，资源超卖功能配置不会生效，详情请参见表1。修改超卖资源配置时：对于增加超卖资源类型，如超卖资源由CPU变为CPU、内存，此时可以随时添加。对于减少超卖资源类型，如由CPU、内存变为仅超卖CPU，此时需要在合适的时间进行更改，即分配率不超过100%时才可进行安全更改。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0708.html",
+          "title": "开启云原生混部",
+          "document_context": "目录：用户指南 > 调度 > 云原生混部 > 开启云原生混部\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1,
+          "citation": {
+            "document_id": "RZTB6VYN64NLJHOZ7ZQHKH23IY",
+            "revision_id": "AE6VHZEDKJMAAXNLH7OSYJU32N",
+            "fragment_id": "LSQIUMXGMZNWX3KBNAGOKF5TWM",
+            "title": "开启云原生混部",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0708.html",
+            "section": "云原生混部配置",
+            "document_context": "目录：用户指南 > 调度 > 云原生混部 > 开启云原生混部\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "0ab3069d17d4ee3c4b1d13de87f15b6cafb4a6aaf0ac76db43aac7e130dbd5f3",
+            "url": "/v1/knowledge/revisions/AE6VHZEDKJMAAXNLH7OSYJU32N/fragments/LSQIUMXGMZNWX3KBNAGOKF5TWM",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "4DCPKQ2QBJKOFOUKCJLFTWGDVB",
+          "revision_id": "A2CX7L6EJCMX7MFYN33N7VU3Z3",
+          "section": "Volcano队列",
+          "start_line": 7,
+          "end_line": 17,
+          "content": "在共享异构算力资源（GPU/NPU） 集群中，算法开发、模型调优和生产训练等业务通常由不同团队共同使用同一批计算资源。如果所有训练任务都提交到同一个默认队列，容易出现以下问题：某个团队一次提交大量任务长期占用GPU/NPU，其他团队的任务无法及时运行；开发调试任务与生产训练任务相互竞争，关键训练缺少稳定的资源保障；某个队列空闲时，已分配给该队列的资源无法被其他队列利用，降低集群利用率。\n\n通过Volcano队列（Queue），可以为不同团队或训练环境创建独立队列，并按CPU、内存、GPU/NPU等资源维度配置预留资源、应得资源和使用上限。队列空闲时可借出资源，资源所有者需要时可通过reclaim回收，兼顾资源保障与集群利用率。\n\n典型使用场景如下：\n\n- **多团队共享训练集群**：按部门、租户或项目划分队列，避免单个团队无上限地消耗集群资源。\n- **开发与生产训练分级**：为生产队列配置更高的队列优先级或更多应得资源，使关键任务更容易获得资源。\n- **异构资源弹性共享**：允许繁忙队列借用其他队列的空闲资源，并在资源所有者需要时回收借出的资源。\n- **多维异构资源配额**：分别配置CPU、内存、nvidia.com/gpu或集群实际注册的其他扩展资源。\n- **分层组织管理**：启用分层队列后，可按业务层级组织队列结构，例如“部门 > 项目 > 环境”组织队列，并在父子队列之间继承和约束资源。",
+          "content_hash": "da1d9f1e2d0626356094b62f9ca2c5889d5e5bd91a3e4c3dddeabd37e1428390",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "在共享异构算力资源集群中，如果所有训练任务都提交到同一个默认队列，容易出现哪些问题？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "Volcano队列可以为不同团队或训练环境配置哪些资源维度的预留资源、应得资源和使用上限？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "Volcano队列的典型使用场景有哪些？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "队列空闲时如何借出资源，资源所有者需要时如何回收？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "启用分层队列后，可以按什么方式组织队列结构？"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "在共享异构算力资源（GPU/NPU） 集群中，算法开发、模型调优和生产训练等业务通常由不同团队共同使用同一批计算资源。如果所有训练任务都提交到同一个默认队列，容易出现以下问题：某个团队一次提交大量任务长期占用GPU/NPU，其他团队的任务无法及时运行；开发调试任务与生产训练任务相互竞争，关键训练缺少稳定的资源保障；某个队列空闲时，已分配给该队列的资源无法被其他队列利用，降低集群利用率。\n通过Volcano队列（Queue），可以为不同团队或训练环境创建独立队列，并按CPU、内存、GPU/NPU等资源维度配置预留资源、应得资源和使用上限。队列空闲时可借出资源，资源所有者需要时可通过reclaim回收，兼顾资源保障与集群利用率。\n典型使用场景如下：\n多团队共享训练集群 ：按部门、租户或项目划分队列，避免单个团队无上限地消耗集群资源。\n开发与生产训练分级 ：为生产队列配置更高的队列优先级或更多应得资源，使关键任务更容易获得资源。\n异构资源弹性共享 ：允许繁忙队列借用其他队列的空闲资源，并在资源所有者需要时回收借出的资源。\n多维异构资源配额 ：分别配置CPU、内存、nvidia.com/gpu或集群实际注册的其他扩展资源。\n分层组织管理 ：启"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "并在资源所有者需要时回收借出的资源。\n多维异构资源配额 ：分别配置CPU、内存、nvidia.com/gpu或集群实际注册的其他扩展资源。\n分层组织管理 ：启用分层队列后，可按业务层级组织队列结构，例如“部门 项目 环境”组织队列，并在父子队列之间继承和约束资源。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11521.html",
+          "title": "Volcano队列",
+          "document_context": "目录：用户指南 > AI容器 > 训练任务 > Volcano队列\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.5,
+          "citation": {
+            "document_id": "ZUVXJEZHG6GONGGGWTLADMU535",
+            "revision_id": "A2CX7L6EJCMX7MFYN33N7VU3Z3",
+            "fragment_id": "4DCPKQ2QBJKOFOUKCJLFTWGDVB",
+            "title": "Volcano队列",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_11521.html",
+            "section": "Volcano队列",
+            "document_context": "目录：用户指南 > AI容器 > 训练任务 > Volcano队列\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "da1d9f1e2d0626356094b62f9ca2c5889d5e5bd91a3e4c3dddeabd37e1428390",
+            "url": "/v1/knowledge/revisions/A2CX7L6EJCMX7MFYN33N7VU3Z3/fragments/4DCPKQ2QBJKOFOUKCJLFTWGDVB",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": {
+        "trace_id": "cdb32fa0afdd62fb91e784c0f78b6ed8",
+        "retrieval_queries": [
+          "想让开发、联调、测试环境共享同一CCE集群但逻辑隔离，可用什么方式组织？",
+          "如何让开发、联调、测试环境共用同一个CCE集群，同时实现逻辑隔离，应该采用什么方式组织？",
+          "在同一个CCE集群中，开发、联调、测试环境如何共享集群但保持逻辑隔离，有哪些组织方式？",
+          "开发、联调、测试环境需要共享同一CCE集群并做逻辑隔离，可以用什么方式来实现？"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 3890.2879169909284
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-064",
+      "group": "cce_10_0154",
+      "category": "插件",
+      "question_type": "scenario",
+      "question": "集群Pod因工作节点资源不足而调度失败，CCE集群弹性引擎会怎样处理，利用率低时呢？",
+      "answerable": true,
+      "required_facts": [
+        "基于Autoscaler扩容新节点",
+        "扩容节点资源利用率很低时自动删除节点",
+        "不保证其他原因导致的Pending都能靠扩容解决"
+      ],
+      "reference_answer": "基于Autoscaler扩容新节点；扩容节点资源利用率很低时自动删除节点；不保证其他原因导致的Pending都能靠扩容解决",
+      "evidence": [
+        {
+          "document_id": "cce_10_0154",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0154.html",
+          "title": "CCE集群弹性引擎",
+          "file": "documents/cce_10_0154.md",
+          "content_sha256": "e664cbe3cec1b3c7de3edff25704d2c0a01a8acf791499e2605594a026b130ef",
+          "start_line": 9,
+          "end_line": 9,
+          "section": "插件简介",
+          "anchor": "当集群中的Pod因为资源不足无法调度时",
+          "quote": "CCE集群弹性引擎插件基于社区Autoscaler组件，能够根据应用的资源需求自动调整集群节点数量，优化资源利用率和性能。作为Kubernetes中的核心控制器，Autoscaler具备根据资源需求情况自动扩展或缩减节点的能力。当集群中的Pod因为资源不足无法调度时，Autoscaler会扩容新的节点来提供更多的资源。同时，如果扩容的节点资源利用率很低，Autoscaler会自动删除这些节点。关于实现节点弹性伸缩的具体操作，请参见[创建节点弹性策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0209.html)。",
+          "quote_sha256": "2d489afd629520e44a761dcf51207efb8e7110ea5060cfb87c7ec1c9b6dfe99f"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-064",
+      "question": "集群Pod因工作节点资源不足而调度失败，CCE集群弹性引擎会怎样处理，利用率低时呢？",
+      "answerable": true,
+      "question_type": "scenario",
+      "category": "插件",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 0.0
+      },
+      "documents": [
+        {
+          "id": "3RWEDYNGLCSLK35JDVMS6QUX2X",
+          "revision_id": "EV7JDOTVNMX6A4ZMWQCKSRLFZG",
+          "section": "常见问题",
+          "start_line": 204,
+          "end_line": 205,
+          "content": "目前CCE集群弹性引擎插件由于会对节点池信息进行缓存，可能导致节点池出现“no scale task needed with desired node count n”的异常自动扩容事件，该事件实际无影响，请忽略。\n- 如果集群存在多个不可用节点，CCE集群弹性引擎插件可能会出现自动扩缩容失效，详情请参见[节点池自动扩缩容失效问题排查](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00505.html)。",
+          "content_hash": "bf120e6d7cab5658184bfecdf86f9de7160eb8170112628008a2118d0df145f4",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "节点池出现“no scale task needed with desired node count n”的异常自动扩容事件如何处理？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何排查CCE集群弹性引擎插件导致的节点池自动扩缩容失效问题？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "当集群存在多个不可用节点时，CCE集群弹性引擎插件会如何表现？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0209.html",
+          "title": "创建节点弹性策略",
+          "document_context": "目录：用户指南 > 弹性伸缩 > 节点弹性伸缩 > 创建节点弹性策略\n更新时间：2026-09-20 GMT+08:00",
+          "score": 2.5,
+          "citation": {
+            "document_id": "SYI4JI4V7W457X32ZDC4DYQRPY",
+            "revision_id": "EV7JDOTVNMX6A4ZMWQCKSRLFZG",
+            "fragment_id": "3RWEDYNGLCSLK35JDVMS6QUX2X",
+            "title": "创建节点弹性策略",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0209.html",
+            "section": "常见问题",
+            "document_context": "目录：用户指南 > 弹性伸缩 > 节点弹性伸缩 > 创建节点弹性策略\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "bf120e6d7cab5658184bfecdf86f9de7160eb8170112628008a2118d0df145f4",
+            "url": "/v1/knowledge/revisions/EV7JDOTVNMX6A4ZMWQCKSRLFZG/fragments/3RWEDYNGLCSLK35JDVMS6QUX2X",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "45AXGEM2EI4QI73HY4QJD2MWI4",
+          "revision_id": "RK7TV6DWN4PFNDM7OBU55VDYMO",
+          "section": "容器调度与弹性插件",
+          "start_line": 22,
+          "end_line": 28,
+          "content": "| 插件名称 | 插件简介 |\n| --- | --- |\n| [Volcano调度器](https://support.huaweicloud.com/usermanual-cce/cce_10_0193.html) | Volcano调度器提供了高性能任务调度引擎、高性能异构芯片管理、高性能任务运行管理等通用计算能力，通过接入AI、大数据、基因、渲染等诸多行业计算框架服务终端用户。 |\n| [CCE集群弹性引擎](https://support.huaweicloud.com/usermanual-cce/cce_10_0154.html) | 集群自动扩缩容插件Autoscaler，可根据Pod调度状态及资源使用情况对集群的工作节点进行自动扩容缩容。 |\n| [CCE容器弹性引擎](https://support.huaweicloud.com/usermanual-cce/cce_10_0240.html) | CCE容器弹性引擎插件是一款CCE自研的插件，能够基于CPU利用率、内存利用率等指标，对无状态工作负载进行弹性扩缩容。 |\n| [CCE突发弹性引擎（对接CCI）](https://support.huaweicloud.com/usermanual-cce/cce_10_0135.html) | CCE突发弹性引擎（对接CCI）是基于社区Virtual Kubelet开源项目开发的插件，该插件支持用户在短时高负载场景下，将部署在CCE上的无状态负载（Deployment）、有状态负载（StatefulSet）、普通任务（Job）、定时任务（CronJob）四种资源类型的容器实例（Pod），弹性创建到[云容器实例CCI](https://support.huaweicloud.com/intl/zh-cn/cci/index.html)服务上，以减少集群扩容带来的消耗。 |\n| [容器垂直弹性引擎](https://support.huaweicloud.com/usermanual-cce/cce_10_0920.html) | CCE容器垂直弹性引擎是一款支持应用垂直弹性伸缩（VPA，Vertical Pod Autoscaling）的插件，可以根据容器资源历史使用情况自动调整Pod的CPU、Memory资源申请量。 |",
+          "content_hash": "17060c6968ae7686ad235f01ed1818f520b87c3a131b95c3522cb478e8d7ef0e",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "容器调度与弹性插件包括哪些插件？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "Volcano调度器提供了哪些能力？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE集群弹性引擎的作用是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE容器弹性引擎基于哪些指标进行弹性扩缩容？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE突发弹性引擎（对接CCI）支持哪些资源类型的容器实例弹性创建到CCI？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "Volcano调度器提供了高性能任务调度引擎、高性能异构芯片管理、高性能任务运行管理等通用计算能力，通过接入AI、大数据、基因、渲染等诸多行业计算框架服务终端用户。",
+              "start_line": 24,
+              "end_line": 24
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "CCE集群弹性引擎是集群自动扩缩容插件Autoscaler，可根据Pod调度状态及资源使用情况对集群的工作节点进行自动扩容缩容。",
+              "start_line": 25,
+              "end_line": 25
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "CCE容器弹性引擎插件是一款CCE自研的插件，能够基于CPU利用率、内存利用率等指标，对无状态工作负载进行弹性扩缩容。",
+              "start_line": 26,
+              "end_line": 26
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "CCE突发弹性引擎（对接CCI）是基于社区Virtual Kubelet开源项目开发的插件，该插件支持用户在短时高负载场景下，将部署在CCE上的无状态负载（Deployment）、有状态负载（StatefulSet）、普通任务（Job）、定时任务（CronJob）四种资源类型的容器实例（Pod），弹性创建到云容器实例CCI服务上，以减少集群扩容带来的消耗。",
+              "start_line": 27,
+              "end_line": 27
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "容器垂直弹性引擎是一款支持应用垂直弹性伸缩（VPA，Vertical Pod Autoscaling）的插件，可以根据容器资源历史使用情况自动调整Pod的CPU、Memory资源申请量。",
+              "start_line": 28,
+              "end_line": 28
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "插件名称 插件简介\n--- ---\nVolcano调度器 Volcano调度器提供了高性能任务调度引擎、高性能异构芯片管理、高性能任务运行管理等通用计算能力，通过接入AI、大数据、基因、渲染等诸多行业计算框架服务终端用户。\n[表格说明] Volcano调度器提供了高性能任务调度引擎、高性能异构芯片管理、高性能任务运行管理等通用计算能力，通过接入AI、大数据、基因、渲染等诸多行业计算框架服务终端用户。\nCCE集群弹性引擎 集群自动扩缩容插件Autoscaler，可根据Pod调度状态及资源使用情况对集群的工作节点进行自动扩容缩容。\n[表格说明] CCE集群弹性引擎是集群自动扩缩容插件Autoscaler，可根据Pod调度状态及资源使用情况对集群的工作节点进行自动扩容缩容。\nCCE容器弹性引擎 CCE容器弹性引擎插件是一款CCE自研的插件，能够基于CPU利用率、内存利用率等指标，对无状态工作负载进行弹性扩缩容。\n[表格说明] CCE容器弹性引擎插件是一款CCE自研的插件，能够基于CPU利用率、内存利用率等指标，对无状态工作负载进行弹性扩缩容。\nCCE突发弹性引擎（对接CCI） CCE突发弹性引擎（对接CCI）是基于社区Virtual Kubelet开源项目开发的插件，该插件支持用户在短时高负载场景下，将部署在CCE上的无状"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "弹性引擎（对接CCI） CCE突发弹性引擎（对接CCI）是基于社区Virtual Kubelet开源项目开发的插件，该插件支持用户在短时高负载场景下，将部署在CCE上的无状态负载（Deployment）、有状态负载（StatefulSet）、普通任务（Job）、定时任务（CronJob）四种资源类型的容器实例（Pod），弹性创建到 云容器实例CCI 服务上，以减少集群扩容带来的消耗。\n[表格说明] CCE突发弹性引擎（对接CCI）是基于社区Virtual Kubelet开源项目开发的插件，该插件支持用户在短时高负载场景下，将部署在CCE上的无状态负载（Deployment）、有状态负载（StatefulSet）、普通任务（Job）、定时任务（CronJob）四种资源类型的容器实例（Pod），弹性创建到云容器实例CCI服务上，以减少集群扩容带来的消耗。\n容器垂直弹性引擎 CCE容器垂直弹性引擎是一款支持应用垂直弹性伸缩（VPA，Vertical Pod Autoscaling）的插件，可以根据容器资源历史使用情况自动调整Pod的CPU、Memory资源申请量。\n[表格说明] 容器垂直弹性引擎是一款支持应用垂直弹性伸缩（VPA，Vertical Pod Autoscaling）的插件，可以根据容器资源历史使用情况自动调整Pod的CPU、Memory资源申请量。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0277.html",
+          "title": "插件概述",
+          "document_context": "目录：用户指南 > 插件 > 插件概述\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.3666666666666667,
+          "citation": {
+            "document_id": "D6Z5Q7QV3IT2OQM42MZGBW43RN",
+            "revision_id": "RK7TV6DWN4PFNDM7OBU55VDYMO",
+            "fragment_id": "45AXGEM2EI4QI73HY4QJD2MWI4",
+            "title": "插件概述",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0277.html",
+            "section": "容器调度与弹性插件",
+            "document_context": "目录：用户指南 > 插件 > 插件概述\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "17060c6968ae7686ad235f01ed1818f520b87c3a131b95c3522cb478e8d7ef0e",
+            "url": "/v1/knowledge/revisions/RK7TV6DWN4PFNDM7OBU55VDYMO/fragments/45AXGEM2EI4QI73HY4QJD2MWI4",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "7VO5RPEKU34Z62DJVFAGZB6BKD",
+          "revision_id": "W6UMQKKTRVAIXCKINW6OXHG6IL",
+          "section": "步骤二：为节点池设置自定义缩容条件",
+          "start_line": 40,
+          "end_line": 43,
+          "content": "| 参数 | 说明 | 示例 |\n   | --- | --- | --- |\n   | 缩容条件中的“CPU与内存预分配量” | 运行在该节点上的所有Pod的CPU或内存总和除以该节点相应的可分配资源，当该比值低于此阈值时，该节点可被考虑进行缩容。  例如，设置为30%表示当资源利用率低于30%时，会触发缩容操作的评估。如果未设置该参数，CCE集群弹性引擎插件会使用默认的利用率阈值。 | 30% |\n   | 缩容条件中的“持续时间” | 该参数用于指定在确定可以进行缩容操作之前，节点处于不需要状态的持续时间。当节点在指定的这段时间内一直处于不需要的状态时，CCE集群弹性引擎插件才会考虑对其进行缩容操作。这样可以避免因资源的短暂波动而频繁触发缩容，增强系统的稳定性。如果未设置该参数，CCE集群弹性引擎插件会使用默认的时间阈值。 | 10分钟 |",
+          "content_hash": "ffe77a9ed5607462679e9e6b8d2e297f4c21f44a145ca07f599922f1d3498738",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "缩容条件中的“CPU与内存预分配量”参数的含义是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "缩容条件中的“持续时间”参数的作用是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如果未设置缩容条件中的“CPU与内存预分配量”参数，CCE集群弹性引擎插件会使用什么阈值？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如果未设置缩容条件中的“持续时间”参数，CCE集群弹性引擎插件会使用什么阈值？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在自定义节点池的缩容条件中，“CPU与内存预分配量”参数表示运行在该节点上的所有Pod的CPU或内存总和除以该节点相应的可分配资源，当该比值低于此阈值时，该节点可被考虑进行缩容；例如设置为30%表示当资源利用率低于30%时，会触发缩容操作的评估；如果未设置该参数，CCE集群弹性引擎插件会使用默认的利用率阈值。",
+              "start_line": 42,
+              "end_line": 42
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在自定义节点池的缩容条件中，“持续时间”参数用于指定在确定可以进行缩容操作之前，节点处于不需要状态的持续时间；当节点在指定的这段时间内一直处于不需要的状态时，CCE集群弹性引擎插件才会考虑对其进行缩容操作，这样可以避免因资源的短暂波动而频繁触发缩容，增强系统的稳定性；如果未设置该参数，CCE集群弹性引擎插件会使用默认的时间阈值；示例值为10分钟。",
+              "start_line": 43,
+              "end_line": 43
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "参数 说明 示例\n--- --- ---\n缩容条件中的“CPU与内存预分配量” 运行在该节点上的所有Pod的CPU或内存总和除以该节点相应的可分配资源，当该比值低于此阈值时，该节点可被考虑进行缩容。 例如，设置为30%表示当资源利用率低于30%时，会触发缩容操作的评估。如果未设置该参数，CCE集群弹性引擎插件会使用默认的利用率阈值。 30%\n[表格说明] 在自定义节点池的缩容条件中，“CPU与内存预分配量”参数表示运行在该节点上的所有Pod的CPU或内存总和除以该节点相应的可分配资源，当该比值低于此阈值时，该节点可被考虑进行缩容；例如设置为30%表示当资源利用率低于30%时，会触发缩容操作的评估；如果未设置该参数，CCE集群弹性引擎插件会使用默认的利用率阈值。\n缩容条件中的“持续时间” 该参数用于指定在确定可以进行缩容操作之前，节点处于不需要状态的持续时间。当节点在指定的这段时间内一直处于不需要的状态时，CCE集群弹性引擎插件才会考虑对其进行缩容操作。这样可以避免因资源的短暂波动而频繁触发缩容，增强系统的稳定性。如果未设置该参数，CCE集群弹性引擎插件会使用默认"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "虑对其进行缩容操作。这样可以避免因资源的短暂波动而频繁触发缩容，增强系统的稳定性。如果未设置该参数，CCE集群弹性引擎插件会使用默认的时间阈值。 10分钟\n[表格说明] 在自定义节点池的缩容条件中，“持续时间”参数用于指定在确定可以进行缩容操作之前，节点处于不需要状态的持续时间；当节点在指定的这段时间内一直处于不需要的状态时，CCE集群弹性引擎插件才会考虑对其进行缩容操作，这样可以避免因资源的短暂波动而频繁触发缩容，增强系统的稳定性；如果未设置该参数，CCE集群弹性引擎插件会使用默认的时间阈值；示例值为10分钟。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0967.html",
+          "title": "自定义节点池的节点缩容条件",
+          "document_context": "目录：用户指南 > 弹性伸缩 > 节点弹性伸缩 > 自定义节点池的节点缩容条件\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.0666666666666667,
+          "citation": {
+            "document_id": "A3LKYIN7BI77T6K4VWNZUE4ILX",
+            "revision_id": "W6UMQKKTRVAIXCKINW6OXHG6IL",
+            "fragment_id": "7VO5RPEKU34Z62DJVFAGZB6BKD",
+            "title": "自定义节点池的节点缩容条件",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0967.html",
+            "section": "步骤二：为节点池设置自定义缩容条件",
+            "document_context": "目录：用户指南 > 弹性伸缩 > 节点弹性伸缩 > 自定义节点池的节点缩容条件\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "ffe77a9ed5607462679e9e6b8d2e297f4c21f44a145ca07f599922f1d3498738",
+            "url": "/v1/knowledge/revisions/W6UMQKKTRVAIXCKINW6OXHG6IL/fragments/7VO5RPEKU34Z62DJVFAGZB6BKD",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "6QPKHBIWSFVPPMRV6R3USNRHUP",
+          "revision_id": "EV7JDOTVNMX6A4ZMWQCKSRLFZG",
+          "section": "配置集群弹性伸缩策略",
+          "start_line": 89,
+          "end_line": 93,
+          "content": "| 参数 | 说明 |\n   | --- | --- |\n   | 默认缩容条件 | 当节点的CPU和内存分配率（CPU和内存需同时满足）连续一段时间（默认10分钟）低于一定百分比（默认50%）时，或节点处于不可用状态下超过一定时间（默认20分钟）会触发集群缩容操作。  **分配率 = 所有Pod资源申请量之和 / 节点可用资源量 (Node Allocatable)**  如果勾选“忽略DaemonSet类容器预分配的CPU与内存”，在计算节点资源是否超过缩容阈值时，不会计算DaemonSet类容器的资源请求值。由于DaemonSet会在每个节点上预占一部分资源，如果未勾选该配置，对于某些小规格节点，即使节点上没有运行其他应用的Pod，DaemonSet类容器的资源请求值就已经超过缩容阈值，节点可能永远不被缩容。 |\n   | 自定义缩容条件（可选） | 支持为每个节点池配置缩容条件，当节点池中节点的CPU和内存分配率（CPU和内存需同时满足）连续一段时间（默认10分钟）低于一定百分比（默认50%）时，会触发该节点池缩容。  自定义缩容条件在CCE集群弹性引擎插件版本为1.25.181、1.27.152、1.28.120、1.29.81、1.30.48、1.31.10及以上支持。当节点池中的所有规格均未开启自动伸缩功能时，为节点池配置自定义缩容条件将不会生效，节点池开启自动伸缩功能请参见[配置节点池弹性伸缩策略](https://support.huaweicloud.com/usermanual-cce/cce_10_0209.html)。 |\n   | 缩容例外场景 | 节点满足以下例外场景时，即使节点资源或状态满足缩容条件，不会被CCE集群弹性引擎自动缩容。 - 集群其它节点资源不足时将不会触发非完全空闲节点缩容。 - 节点开启缩容保护时将不会触发节点缩容。如需开启或关闭节点缩容保护，请前往“节点管理 > 节点”页面，单击节点操作列的“更多 > 开启/关闭节点缩容保护”按钮操作。 - 节点上存在指定不缩容标记的Pod时，该节点将不会被缩容。 - 节点上的部分容器存在可靠性等配置策略时，将有可能不会自动缩容。 - 节点上存在kube-system命名空间下的非DaemonSet类容器时，该节点将不会被缩容。 - （可选）节点上如果存在已运行的容器由第三方Pod Controller进行管理，则该节点不会被缩容。第三方Pod Controller是指除Kubernetes原生的工作负载（如Deployment、StatefulSet等）外的自定义工作负载，可通过[自定义资源CRD](https://kubernetes.io/zh-cn/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions)进行创建。 |",
+          "content_hash": "ce7444ec838a45dd3acc6af110cf9593a50374c8cb35e651cc6f36299a4d9e4d",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "如何配置集群的自定义缩容条件？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "当节点池中的所有规格均未开启自动伸缩功能时，自定义缩容条件会生效吗？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在哪些情况下节点不会被CCE集群弹性引擎自动缩容？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "默认缩容条件：当节点的CPU和内存分配率（CPU和内存需同时满足）连续一段时间（默认10分钟）低于一定百分比（默认50%）时，或节点处于不可用状态下超过一定时间（默认20分钟）会触发集群缩容操作。分配率 = 所有Pod资源申请量之和 / 节点可用资源量 (Node Allocatable)。如果勾选“忽略DaemonSet类容器预分配的CPU与内存”，在计算节点资源是否超过缩容阈值时，不会计算DaemonSet类容器的资源请求值。由于DaemonSet会在每个节点上预占一部分资源，如果未勾选该配置，对于某些小规格节点，即使节点上没有运行其他应用的Pod，DaemonSet类容器的资源请求值就已经超过缩容阈值，节点可能永远不被缩容。",
+              "start_line": 91,
+              "end_line": 91
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "自定义缩容条件（可选）：支持为每个节点池配置缩容条件，当节点池中节点的CPU和内存分配率（CPU和内存需同时满足）连续一段时间（默认10分钟）低于一定百分比（默认50%）时，会触发该节点池缩容。自定义缩容条件在CCE集群弹性引擎插件版本为1.25.181、1.27.152、1.28.120、1.29.81、1.30.48、1.31.10及以上支持。当节点池中的所有规格均未开启自动伸缩功能时，为节点池配置自定义缩容条件将不会生效，节点池开启自动伸缩功能请参见配置节点池弹性伸缩策略。",
+              "start_line": 92,
+              "end_line": 92
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "缩容例外场景：节点满足以下例外场景时，即使节点资源或状态满足缩容条件，不会被CCE集群弹性引擎自动缩容。 - 集群其它节点资源不足时将不会触发非完全空闲节点缩容。 - 节点开启缩容保护时将不会触发节点缩容。如需开启或关闭节点缩容保护，请前往“节点管理 节点”页面，单击节点操作列的“更多 开启/关闭节点缩容保护”按钮操作。 - 节点上存在指定不缩容标记的Pod时，该节点将不会被缩容。 - 节点上的部分容器存在可靠性等配置策略时，将有可能不会自动缩容。 - 节点上存在kube-system命名空间下的非DaemonSet类容器时，该节点将不会被缩容。 - （可选）节点上如果存在已运行的容器由第三方Pod Controller进行管理，则该节点不会被缩容。第三方Pod Controller是指除Kubernetes原生的工作负载（如Deployment、StatefulSet等）外的自定义工作负载，可通过自定义资源CRD进行创建。",
+              "start_line": 93,
+              "end_line": 93
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "参数 说明\n--- ---\n默认缩容条件 当节点的CPU和内存分配率（CPU和内存需同时满足）连续一段时间（默认10分钟）低于一定百分比（默认50%）时，或节点处于不可用状态下超过一定时间（默认20分钟）会触发集群缩容操作。 分配率 = 所有Pod资源申请量之和 / 节点可用资源量 (Node Allocatable) 如果勾选“忽略DaemonSet类容器预分配的CPU与内存”，在计算节点资源是否超过缩容阈值时，不会计算DaemonSet类容器的资源请求值。由于DaemonSet会在每个节点上预占一部分资源，如果未勾选该配置，对于某些小规格节点，即使节点上没有运行其他应用的Pod，DaemonSet类容器的资源请求值就已经超过缩容阈值，节点可能永远不被缩容。\n[表格说明] 默认缩容条件：当节点的CPU和内存分配率（CPU和内存需同时满足）连续一段时间（默认10分钟）低于一定百分比（默认50%）时，或节点处于不可用状态下超过一定时间（默认20分钟）会触发集群缩容操作。分配率 = 所有Pod资源申请量之和 / 节点可用资源量 (Node Allocatable)。如果勾选“忽略DaemonSet类容器预分配的CPU与内存”，在计算节点资源是否超过缩容阈值时，不会计算DaemonSet类容器的资源请求值。由于DaemonSet会在每个节点上预占一部分资源，如果未勾"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "预分配的CPU与内存”，在计算节点资源是否超过缩容阈值时，不会计算DaemonSet类容器的资源请求值。由于DaemonSet会在每个节点上预占一部分资源，如果未勾选该配置，对于某些小规格节点，即使节点上没有运行其他应用的Pod，DaemonSet类容器的资源请求值就已经超过缩容阈值，节点可能永远不被缩容。\n自定义缩容条件（可选） 支持为每个节点池配置缩容条件，当节点池中节点的CPU和内存分配率（CPU和内存需同时满足）连续一段时间（默认10分钟）低于一定百分比（默认50%）时，会触发该节点池缩容。 自定义缩容条件在CCE集群弹性引擎插件版本为1.25.181、1.27.152、1.28.120、1.29.81、1.30.48、1.31.10及以上支持。当节点池中的所有规格均未开启自动伸缩功能时，为节点池配置自定义缩容条件将不会生效，节点池开启自动伸缩功能请参见 配置节点池弹性伸缩策略 。\n[表格说明] 自定义缩容条件（可选）：支持为每个节点池配置缩容条件，当节点池中节点的CPU和内存分配率（CPU和内存需同时满足）连续一段时间（默认10分钟）低于一定百分比（默认50%）时，会触发该节点池缩容。自定义缩容条件在CCE集群弹性引擎插件版本为1"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "同时满足）连续一段时间（默认10分钟）低于一定百分比（默认50%）时，会触发该节点池缩容。自定义缩容条件在CCE集群弹性引擎插件版本为1.25.181、1.27.152、1.28.120、1.29.81、1.30.48、1.31.10及以上支持。当节点池中的所有规格均未开启自动伸缩功能时，为节点池配置自定义缩容条件将不会生效，节点池开启自动伸缩功能请参见配置节点池弹性伸缩策略。\n缩容例外场景 节点满足以下例外场景时，即使节点资源或状态满足缩容条件，不会被CCE集群弹性引擎自动缩容。 - 集群其它节点资源不足时将不会触发非完全空闲节点缩容。 - 节点开启缩容保护时将不会触发节点缩容。如需开启或关闭节点缩容保护，请前往“节点管理 节点”页面，单击节点操作列的“更多 开启/关闭节点缩容保护”按钮操作。 - 节点上存在指定不缩容标记的Pod时，该节点将不会被缩容。 - 节点上的部分容器存在可靠性等配置策略时，将有可能不会自动缩容。 - 节点上存在kube-system命名空间下的非DaemonSet类容器时，该节点将不会被缩容。 - （可选）节点上如果存在已运行的容器由第三方Pod Controller进行管理，则该节点不会被缩容。第三方Pod Controller是指除"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "非DaemonSet类容器时，该节点将不会被缩容。 - （可选）节点上如果存在已运行的容器由第三方Pod Controller进行管理，则该节点不会被缩容。第三方Pod Controller是指除Kubernetes原生的工作负载（如Deployment、StatefulSet等）外的自定义工作负载，可通过 自定义资源CRD 进行创建。\n[表格说明] 缩容例外场景：节点满足以下例外场景时，即使节点资源或状态满足缩容条件，不会被CCE集群弹性引擎自动缩容。 - 集群其它节点资源不足时将不会触发非完全空闲节点缩容。 - 节点开启缩容保护时将不会触发节点缩容。如需开启或关闭节点缩容保护，请前往“节点管理 节点”页面，单击节点操作列的“更多 开启/关闭节点缩容保护”按钮操作。 - 节点上存在指定不缩容标记的Pod时，该节点将不会被缩容。 - 节点上的部分容器存在可靠性等配置策略时，将有可能不会自动缩容。 - 节点上存在kube-system命名空间下的非DaemonSet类容器时，该节点将不会被缩容。 - （可选）节点上如果存在已运行的容器由第三方Pod Controller进行管理，则该节点不会被缩容。第三方Pod Controller是指除Kubernetes原生的工作负载（如Deployment、StatefulSet等）外的自定义工作负载，可通过自定义资源CRD进行创建。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0209.html",
+          "title": "创建节点弹性策略",
+          "document_context": "目录：用户指南 > 弹性伸缩 > 节点弹性伸缩 > 创建节点弹性策略\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.75,
+          "citation": {
+            "document_id": "SYI4JI4V7W457X32ZDC4DYQRPY",
+            "revision_id": "EV7JDOTVNMX6A4ZMWQCKSRLFZG",
+            "fragment_id": "6QPKHBIWSFVPPMRV6R3USNRHUP",
+            "title": "创建节点弹性策略",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0209.html",
+            "section": "配置集群弹性伸缩策略",
+            "document_context": "目录：用户指南 > 弹性伸缩 > 节点弹性伸缩 > 创建节点弹性策略\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "ce7444ec838a45dd3acc6af110cf9593a50374c8cb35e651cc6f36299a4d9e4d",
+            "url": "/v1/knowledge/revisions/EV7JDOTVNMX6A4ZMWQCKSRLFZG/fragments/6QPKHBIWSFVPPMRV6R3USNRHUP",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "DZVDB4VZJQXBTWRP4NM6N64R4X",
+          "revision_id": "KQZGQF4WBLEUDJJ437CGATR55F",
+          "section": "前提条件 / 约束与限制",
+          "start_line": 19,
+          "end_line": 27,
+          "content": "- [Prometheus（停止维护）](https://support.huaweicloud.com/usermanual-cce/cce_10_0221.html)：如果集群中未安装[Kubernetes Metrics Server](https://support.huaweicloud.com/usermanual-cce/cce_10_0205.html)，需手动为Prometheus创建Metrics API，详见[通过Metrics API提供资源指标](https://support.huaweicloud.com/usermanual-cce/cce_10_0221.html)。该插件仅支持v1.21及之前的集群版本。在1.21以上版本集群中已经停止维护该插件。在CCE集群中不推荐使用该插件，推荐使用[云原生监控插件](https://support.huaweicloud.com/usermanual-cce/cce_10_0406.html)或者[Kubernetes Metrics Server](https://support.huaweicloud.com/usermanual-cce/cce_10_0205.html)。\n\n#### 约束与限制\n\n- HPA策略仅支持1.13及以上版本的集群创建。\n- 1.19.10以下版本的集群中，如果使用HPA策略对挂载了EVS卷的负载进行扩容，当新Pod被调度到另一个节点时，会导致之前Pod不能正常读写。\n\n  1.19.10及以上版本集群中，如果使用HPA策略对挂载了EVS卷的负载进行扩容，新Pod会因为无法挂载云硬盘导致无法成功启动。\n- 当集群中存在Pod通过CCE突发弹性引擎（对接CCI）插件弹性到CCI 2.0上时，Kubernetes Metrics Server插件无法采集这部分Pod的指标数据，可能导致HPA无法正常工作。为确保HPA功能正常可用，请使用云原生监控插件替换Kubernetes Metrics Server插件，详情请参见[弹性伸缩](https://support.huaweicloud.com/intl/zh-cn/usermanual-cci2/cci_01_0039.html)。",
+          "content_hash": "d9da5a1c23c2c8bf9314ec1756266a5abcfa78b8149c3ba78e5f48eb55ec316a",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "是否需要安装Kubernetes Metrics Server插件？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在哪些版本的集群中使用HPA策略会遇到问题？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "当集群中存在通过CCE突发弹性引擎插件弹性到CCI 2.0上的Pod时，如何解决HPA无法正常工作的问题？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0208.html",
+          "title": "创建HPA策略",
+          "document_context": "目录：用户指南 > 弹性伸缩 > 工作负载弹性伸缩 > 创建HPA策略\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.75,
+          "citation": {
+            "document_id": "AXHZ3K44WKBFQUXPWBLQW5GCWF",
+            "revision_id": "KQZGQF4WBLEUDJJ437CGATR55F",
+            "fragment_id": "DZVDB4VZJQXBTWRP4NM6N64R4X",
+            "title": "创建HPA策略",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0208.html",
+            "section": "前提条件 / 约束与限制",
+            "document_context": "目录：用户指南 > 弹性伸缩 > 工作负载弹性伸缩 > 创建HPA策略\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "d9da5a1c23c2c8bf9314ec1756266a5abcfa78b8149c3ba78e5f48eb55ec316a",
+            "url": "/v1/knowledge/revisions/KQZGQF4WBLEUDJJ437CGATR55F/fragments/DZVDB4VZJQXBTWRP4NM6N64R4X",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": {
+        "trace_id": "266490737a0719daff51974ca43714eb",
+        "retrieval_queries": [
+          "集群Pod因工作节点资源不足而调度失败，CCE集群弹性引擎会怎样处理，利用率低时呢？",
+          "在CCE集群中，当Pod因工作节点资源不足导致调度失败时，CCE集群弹性引擎会采取什么处理措施？当资源利用率较低时又会怎样？",
+          "CCE集群弹性引擎如何处理工作节点资源不足引起的Pod调度失败？在利用率偏低的情况下呢？",
+          "工作节点资源不足使Pod调度失败时，CCE集群弹性引擎会怎么应对？如果利用率低，又会如何处理？"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 4620.787291001761
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-084",
+      "group": "cce_10_0054",
+      "category": "高危操作一览",
+      "question_type": "comparison",
+      "question": "重装CCE控制节点和Node节点操作系统后，手册给出的恢复结论相同吗？",
+      "answerable": true,
+      "required_facts": [
+        "控制节点重装后组件删除，不可恢复",
+        "Node节点重装后可按文档重置节点"
+      ],
+      "reference_answer": "控制节点重装后组件删除，不可恢复；Node节点重装后可按文档重置节点",
+      "evidence": [
+        {
+          "document_id": "cce_10_0054",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+          "title": "高危操作一览",
+          "file": "documents/cce_10_0054.md",
+          "content_sha256": "74606d65851002a616dc9b9dc58670e72fa4a6370f23b4bb59ffe9b650fbe352",
+          "start_line": 18,
+          "end_line": 18,
+          "section": "集群/节点",
+          "anchor": "控制节点组件被删除",
+          "quote": "| 重装操作系统 | 控制节点组件被删除 | 不可恢复。 |",
+          "quote_sha256": "2ff4ec90e7efcab53451593181ed86b278e494dfa316c053499e550068f6901b"
+        },
+        {
+          "document_id": "cce_10_0054",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+          "title": "高危操作一览",
+          "file": "documents/cce_10_0054.md",
+          "content_sha256": "74606d65851002a616dc9b9dc58670e72fa4a6370f23b4bb59ffe9b650fbe352",
+          "start_line": 28,
+          "end_line": 28,
+          "section": "集群/节点",
+          "anchor": "节点组件被删除，节点不可用",
+          "quote": "| 重装操作系统 | 节点组件被删除，节点不可用 | 重置节点，具体请参见[重置节点](https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html)。 |",
+          "quote_sha256": "95df11dbbc1000590064d7e96fed5b3b44896be89611acb88f306e621f3c5186"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-084",
+      "question": "重装CCE控制节点和Node节点操作系统后，手册给出的恢复结论相同吗？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "高危操作一览",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "BBIYMMO3QI4SKA7FGRACQEWIG4",
+          "revision_id": "G6KYAQAEAHESMUGW5263VH3MYF",
+          "section": "约束限制 / 注意事项",
+          "start_line": 17,
+          "end_line": 25,
+          "content": "- 若节点在CCE集群移除后重装操作系统失败，请手动完成失败节点的操作系统重装，并在重装后登录节点执行清理脚本完成CCE组件清理，具体步骤参见[重装操作系统失败如何处理](https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html)。\n- 移除节点会导致与节点关联的[本地持久卷](https://support.huaweicloud.com/usermanual-cce/cce_10_0391.html)类型的PVC/PV数据丢失，无法恢复，且PVC/PV无法再正常使用。移除节点时使用了本地持久存储卷的Pod会从移除的节点上驱逐，并重新创建Pod，Pod会一直处于pending状态，因为Pod使用的PVC带有节点标签，由于冲突无法调度成功。\n\n#### 注意事项\n\n- 移除节点会涉及Pod迁移，可能会影响业务，建议您在移除节点之前为[节点排水](https://support.huaweicloud.com/usermanual-cce/cce_10_0605.html)，将容器优雅驱逐至其他可用节点，同时建议在业务低峰期操作。若移除节点时节点上仍有Pod存在，CCE会进行驱逐。如果您的Pod配置了PDB（Pod Disruption Budget，即[干扰预算](https://kubernetes.io/zh/docs/tasks/run-application/configure-pdb/)），可能会导致驱逐失败，此时将在等待一段时间后强制移除节点。\n- 操作过程中可能存在非预期风险，请提前做好相关的数据备份。\n- 操作过程中，后台会把当前节点设置为不可调度状态。\n- 移除节点重装操作系统后将清理原有的LVM分区，通过LVM管理的数据将会清空，请提前做好相关的数据备份。",
+          "content_hash": "06eb2b21a9fd3cefe413ca6223232aa863ea1d01fe9b341f77ec1904d73892ac",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "若节点在CCE集群移除后重装操作系统失败，应如何处理？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "移除节点对本地持久卷类型的PVC/PV有什么影响？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "移除节点时使用了本地持久存储卷的Pod会怎样？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "移除节点前为什么建议进行节点排水？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "移除节点重装操作系统后会清理哪些分区？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html",
+          "title": "移除节点",
+          "document_context": "目录：用户指南 > 节点 > 管理节点 > 移除节点\n更新时间：2026-09-20 GMT+08:00",
+          "score": 2.5,
+          "citation": {
+            "document_id": "KNE4GO545SD5PVH533DQWU3V3L",
+            "revision_id": "G6KYAQAEAHESMUGW5263VH3MYF",
+            "fragment_id": "BBIYMMO3QI4SKA7FGRACQEWIG4",
+            "title": "移除节点",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html",
+            "section": "约束限制 / 注意事项",
+            "document_context": "目录：用户指南 > 节点 > 管理节点 > 移除节点\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "06eb2b21a9fd3cefe413ca6223232aa863ea1d01fe9b341f77ec1904d73892ac",
+            "url": "/v1/knowledge/revisions/G6KYAQAEAHESMUGW5263VH3MYF/fragments/BBIYMMO3QI4SKA7FGRACQEWIG4",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "FT6GLGED5N5BXIYO4DANVG5GO2",
+          "revision_id": "G6KYAQAEAHESMUGW5263VH3MYF",
+          "section": "重装操作系统失败如何处理",
+          "start_line": 46,
+          "end_line": 76,
+          "content": "移除节点重装操作系统可能会失败，如果碰到这种情况，您可以执行如下步骤重装操作系统并清理节点上的CCE组件。\n\n1. 登录服务器的管理控制台，完成操作系统的重装，详细步骤请参见[切换操作系统](https://support.huaweicloud.com/intl/zh-cn/usermanual-ecs/zh-cn_topic_0031523135.html)。\n2. 登录服务器，执行如下命令完成CCE组件和LVM数据的清理。\n\n   将如下脚本写入**clean.sh**文件。\n\n   ```\n   lsblk\n   vgs --noheadings | awk '{print $1}' | xargs vgremove -f\n   pvs --noheadings | awk '{print $1}' | xargs pvremove -f\n   lvs --noheadings | awk '{print $1}' | xargs -i lvremove -f --select {}\n   function init_data_disk() {\n       all_devices=$(lsblk -o KNAME,TYPE | grep disk | grep -v nvme | awk '{print $1}' | awk '{ print \"/dev/\"$1}')\n       for device in ${all_devices[@]}; do\n           isRootDisk=$(lsblk -o KNAME,MOUNTPOINT $device 2>/dev/null| grep -E '[[:space:]]/$' | wc -l )\n           if [[ ${isRootDisk} != 0 ]]; then\n               continue\n           fi\n           dd if=/dev/urandom of=${device} bs=512 count=64\n           return\n       done\n       exit 1\n   }\n   init_data_disk\n   lsblk\n   ```\n\n   执行如下命令。\n\n   **bash clean.sh**",
+          "content_hash": "a63e16d298b3b14f05914a89ca2fe7b97a03bd3f4460bcdf48f044927dfa6cec",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "移除节点重装操作系统失败后，如何手动重装操作系统？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "重装操作系统失败后，如何清理节点上的CCE组件和LVM数据？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "clean.sh脚本的内容是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "执行clean.sh脚本的命令是什么？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html",
+          "title": "移除节点",
+          "document_context": "目录：用户指南 > 节点 > 管理节点 > 移除节点\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.6666666666666665,
+          "citation": {
+            "document_id": "KNE4GO545SD5PVH533DQWU3V3L",
+            "revision_id": "G6KYAQAEAHESMUGW5263VH3MYF",
+            "fragment_id": "FT6GLGED5N5BXIYO4DANVG5GO2",
+            "title": "移除节点",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0338.html",
+            "section": "重装操作系统失败如何处理",
+            "document_context": "目录：用户指南 > 节点 > 管理节点 > 移除节点\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "a63e16d298b3b14f05914a89ca2fe7b97a03bd3f4460bcdf48f044927dfa6cec",
+            "url": "/v1/knowledge/revisions/G6KYAQAEAHESMUGW5263VH3MYF/fragments/FT6GLGED5N5BXIYO4DANVG5GO2",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "YTEQEP5Q4ODUTUVI65WVFO6Z5L",
+          "revision_id": "SZOMWR5JNFNJZM57PSKUOIODZU",
+          "section": "节点自愈后残留node.cce.io/repair污点",
+          "start_line": 128,
+          "end_line": 131,
+          "content": "节点重启后，节点状态先恢复为可用，但部分组件尚未完全就绪，系统保留污点以防止业务调度到未就绪的节点。\n- 处理步骤\n\n  检查节点上的组件是否都恢复正常，如果组件都恢复正常，可以手动去除污点恢复节点调度。如果未恢复，请提交工单联系技术支持人员。",
+          "content_hash": "29707922dbb97ec9a69228d2a5c95e1ef98f91c6ac821a795574b47c950a3074",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "如何检查节点上的组件是否都恢复正常？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "节点自愈后如何手动去除污点恢复节点调度？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如果节点自愈后仍有组件未恢复正常，应该怎么做？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+          "title": "节点自愈功能",
+          "document_context": "目录：用户指南 > 节点池 > 管理节点池 > 节点自愈功能\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.0166666666666666,
+          "citation": {
+            "document_id": "GKDQVFZI3G4GQYUZHCN7POGQRQ",
+            "revision_id": "SZOMWR5JNFNJZM57PSKUOIODZU",
+            "fragment_id": "YTEQEP5Q4ODUTUVI65WVFO6Z5L",
+            "title": "节点自愈功能",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_1166.html",
+            "section": "节点自愈后残留node.cce.io/repair污点",
+            "document_context": "目录：用户指南 > 节点池 > 管理节点池 > 节点自愈功能\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "29707922dbb97ec9a69228d2a5c95e1ef98f91c6ac821a795574b47c950a3074",
+            "url": "/v1/knowledge/revisions/SZOMWR5JNFNJZM57PSKUOIODZU/fragments/YTEQEP5Q4ODUTUVI65WVFO6Z5L",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "TGSOIHCGYFG7MAWO4MSUAUC5AG",
+          "revision_id": "AVCHJGT7CWP5GKDO4VL5XT4HY6",
+          "section": "集群/节点",
+          "start_line": 11,
+          "end_line": 23,
+          "content": "**表1** 集群及节点高危操作\n\n| 分类 | 高危操作 | 导致后果 | 误操作后解决方案 |\n| --- | --- | --- | --- |\n| 集群 | 通过kube-apiserver一次性查询大量数据。例如一次性发起大量LIST请求，或单个LIST请求查询大量数据。 | 控制节点内存负载过高，影响系统稳定性。 | 停止大批量查询行为。  如果需要增强集群抗过载能力，您可以变更集群规格至更大的规模，详情请参见[变更集群规格](https://support.huaweicloud.com/usermanual-cce/cce_10_0403.html)。 |\n| 控制节点 | 修改集群控制节点安全组  说明：  控制节点安全组命名规则：集群名称-cce-control-随机数 | 可能导致控制节点无法使用 | 参照新建集群的安全组进行修复，放通安全组。详情请参见[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。 |\n| 节点到期或被销毁 | 该控制节点不可用 | 不可恢复。 |\n| 重装操作系统 | 控制节点组件被删除 | 不可恢复。 |\n| 自行升级控制节点或者etcd组件版本 | 可能导致集群无法使用 | 回退到原始版本。 |\n| 删除或格式化节点/etc/kubernetes等核心目录数据 | 该控制节点不可用 | 不可恢复。 |\n| 更改节点IP | 该控制节点不可用 | 改回原IP。 |\n| 自行修改核心组件（etcd、kube-apiserver、docker等）参数 | 可能导致控制节点不可用 | 按照推荐配置参数恢复，详情请参见[修改CCE集群配置](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)。 |\n| 自行更换控制节点或etcd证书 | 可能导致集群不可用 | 不可恢复。 |",
+          "content_hash": "13c1e47c2703dc6ae090be0be4e460f77484e6a3b997107ebb33f8fbbcaa1021",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "通过kube-apiserver一次性查询大量数据会导致什么后果？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "修改集群控制节点安全组可能导致什么问题？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "控制节点安全组的命名规则是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "自行升级控制节点或者etcd组件版本后如何回退？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "删除或格式化节点/etc/kubernetes等核心目录数据后可以恢复吗？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在集群中，通过kube-apiserver一次性查询大量数据（例如一次性发起大量LIST请求，或单个LIST请求查询大量数据）属于高危操作，会导致控制节点内存负载过高，影响系统稳定性；误操作后应停止大批量查询行为，如果需要增强集群抗过载能力，可以变更集群规格至更大的规模，详情请参见变更集群规格。",
+              "start_line": 15,
+              "end_line": 15
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "修改集群控制节点安全组（控制节点安全组命名规则：集群名称-cce-control-随机数）属于高危操作，可能导致控制节点无法使用；误操作后应参照新建集群的安全组进行修复，放通安全组，详情请参见集群安全组规则配置。",
+              "start_line": 16,
+              "end_line": 16
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "节点到期或被销毁属于高危操作，会导致该控制节点不可用，且不可恢复。",
+              "start_line": 17,
+              "end_line": 17
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "重装操作系统属于高危操作，会导致控制节点组件被删除，且不可恢复。",
+              "start_line": 18,
+              "end_line": 18
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "自行升级控制节点或者etcd组件版本属于高危操作，可能导致集群无法使用；误操作后应回退到原始版本。",
+              "start_line": 19,
+              "end_line": 19
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "删除或格式化节点/etc/kubernetes等核心目录数据属于高危操作，会导致该控制节点不可用，且不可恢复。",
+              "start_line": 20,
+              "end_line": 20
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "更改节点IP属于高危操作，会导致该控制节点不可用；误操作后应改回原IP。",
+              "start_line": 21,
+              "end_line": 21
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "自行修改核心组件（etcd、kube-apiserver、docker等）参数属于高危操作，可能导致控制节点不可用；误操作后应按照推荐配置参数恢复，详情请参见修改CCE集群配置。",
+              "start_line": 22,
+              "end_line": 22
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "自行更换控制节点或etcd证书属于高危操作，可能导致集群不可用，且不可恢复。",
+              "start_line": 23,
+              "end_line": 23
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "表1 集群及节点高危操作\n分类 高危操作 导致后果 误操作后解决方案\n--- --- --- ---\n集群 通过kube-apiserver一次性查询大量数据。例如一次性发起大量LIST请求，或单个LIST请求查询大量数据。 控制节点内存负载过高，影响系统稳定性。 停止大批量查询行为。 如果需要增强集群抗过载能力，您可以变更集群规格至更大的规模，详情请参见 变更集群规格 。\n[表格说明] 在集群中，通过kube-apiserver一次性查询大量数据（例如一次性发起大量LIST请求，或单个LIST请求查询大量数据）属于高危操作，会导致控制节点内存负载过高，影响系统稳定性；误操作后应停止大批量查询行为，如果需要增强集群抗过载能力，可以变更集群规格至更大的规模，详情请参见变更集群规格。\n控制节点 修改集群控制节点安全组 说明： 控制节点安全组命名规则：集群名称-cce-control-随机数 可能导致控制节点无法使用 参照新建集群的安全组进行修复，放通安全组。详情请参见 集群安全组规则配置 。\n[表格说明] 修改集群控制节点安全组（控制节点安全组命名规则：集群名称-cce-control-随机数）属于高危操作，可能导致控制节点无法使用；误操作后应参照新建集群的安全组进"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "组（控制节点安全组命名规则：集群名称-cce-control-随机数）属于高危操作，可能导致控制节点无法使用；误操作后应参照新建集群的安全组进行修复，放通安全组，详情请参见集群安全组规则配置。\n节点到期或被销毁 该控制节点不可用 不可恢复。\n[表格说明] 节点到期或被销毁属于高危操作，会导致该控制节点不可用，且不可恢复。\n重装操作系统 控制节点组件被删除 不可恢复。\n[表格说明] 重装操作系统属于高危操作，会导致控制节点组件被删除，且不可恢复。\n自行升级控制节点或者etcd组件版本 可能导致集群无法使用 回退到原始版本。\n[表格说明] 自行升级控制节点或者etcd组件版本属于高危操作，可能导致集群无法使用；误操作后应回退到原始版本。\n删除或格式化节点/etc/kubernetes等核心目录数据 该控制节点不可用 不可恢复。\n[表格说明] 删除或格式化节点/etc/kubernetes等核心目录数据属于高危操作，会导致该控制节点不可用，且不可恢复。\n更改节点IP 该控制节点不可用 改回原IP。\n[表格说明] 更改节点IP属于高危操作，会导致该控制节点不可用；误操作后应改回原IP。\n自行修改核心组件（etcd、kube-apiserver、docker等）参数 可能导"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "说明] 更改节点IP属于高危操作，会导致该控制节点不可用；误操作后应改回原IP。\n自行修改核心组件（etcd、kube-apiserver、docker等）参数 可能导致控制节点不可用 按照推荐配置参数恢复，详情请参见 修改CCE集群配置 。\n[表格说明] 自行修改核心组件（etcd、kube-apiserver、docker等）参数属于高危操作，可能导致控制节点不可用；误操作后应按照推荐配置参数恢复，详情请参见修改CCE集群配置。\n自行更换控制节点或etcd证书 可能导致集群不可用 不可恢复。\n[表格说明] 自行更换控制节点或etcd证书属于高危操作，可能导致集群不可用，且不可恢复。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+          "title": "高危操作一览",
+          "document_context": "目录：用户指南 > 高危操作一览\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.95,
+          "citation": {
+            "document_id": "RZI74NAG5NYTREU2YGQDLQAUBR",
+            "revision_id": "AVCHJGT7CWP5GKDO4VL5XT4HY6",
+            "fragment_id": "TGSOIHCGYFG7MAWO4MSUAUC5AG",
+            "title": "高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "集群/节点",
+            "document_context": "目录：用户指南 > 高危操作一览\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "13c1e47c2703dc6ae090be0be4e460f77484e6a3b997107ebb33f8fbbcaa1021",
+            "url": "/v1/knowledge/revisions/AVCHJGT7CWP5GKDO4VL5XT4HY6/fragments/TGSOIHCGYFG7MAWO4MSUAUC5AG",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "JLXVAFJMFQH5N5O54RMFW3APFH",
+          "revision_id": "OPDV6IIS7HN47HFMKUWQJRKLR3",
+          "section": "操作场景",
+          "start_line": 9,
+          "end_line": 11,
+          "content": "您可以通过重置节点修改节点的配置，比如修改节点操作系统、登录方式等。\n\n重置节点会重装节点操作系统，并重新安装节点上Kubernetes软件。如果您在使用过程中修改了节点上的配置等操作导致节点不可用，可以通过重置节点进行修复。",
+          "content_hash": "acbb5d3dbd85ccdf3ec13dc0dcf47c2ea769f6dff841e960909d69314e540cf7",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "重置节点可以修改哪些节点配置？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "重置节点会重装节点操作系统和Kubernetes软件吗？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "节点因修改配置导致不可用时，可以通过什么操作修复？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html",
+          "title": "重置节点",
+          "document_context": "目录：用户指南 > 节点 > 管理节点 > 重置节点\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.5,
+          "citation": {
+            "document_id": "YROXIXHSXCUUTHLD7PKSVFCHPP",
+            "revision_id": "OPDV6IIS7HN47HFMKUWQJRKLR3",
+            "fragment_id": "JLXVAFJMFQH5N5O54RMFW3APFH",
+            "title": "重置节点",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0003.html",
+            "section": "操作场景",
+            "document_context": "目录：用户指南 > 节点 > 管理节点 > 重置节点\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "acbb5d3dbd85ccdf3ec13dc0dcf47c2ea769f6dff841e960909d69314e540cf7",
+            "url": "/v1/knowledge/revisions/OPDV6IIS7HN47HFMKUWQJRKLR3/fragments/JLXVAFJMFQH5N5O54RMFW3APFH",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": {
+        "trace_id": "89577d9bc0e188c02a16f5e98680471c",
+        "retrieval_queries": [
+          "重装CCE控制节点和Node节点操作系统后，手册给出的恢复结论相同吗？",
+          "重装CCE控制节点和Node节点操作系统后，手册中的恢复结论是否一致？",
+          "对CCE控制节点与Node节点重装操作系统后，手册说明的恢复结论相同吗？",
+          "重装CCE控制节点、Node节点操作系统后，手册给出的恢复结论有没有区别？"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 4022.175916994456
+    }
+  },
+  {
+    "case": {
+      "id": "cce-manual-094",
+      "group": "family:cce_10_0191",
+      "category": "模板（Helm Chart）",
+      "question_type": "comparison",
+      "question": "Helm v2与v3默认用什么存release信息，v3允许跨命名空间重用release名字吗？",
+      "answerable": true,
+      "required_facts": [
+        "v2默认ConfigMap",
+        "v3默认Secret",
+        "v3可在不同命名空间重用release名称"
+      ],
+      "reference_answer": "v2默认ConfigMap；v3默认Secret；v3可在不同命名空间重用release名称",
+      "evidence": [
+        {
+          "document_id": "cce_10_0421",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0421.html",
+          "title": "Helm v2与Helm v3的差异及适配方案",
+          "file": "documents/cce_10_0421.md",
+          "content_sha256": "a536d66454b5f46899d03d6e9703738b111aae9759f2d0e2510df75a950474b5",
+          "start_line": 23,
+          "end_line": 23,
+          "section": "Helm v2与Helm v3的差异及适配方案",
+          "anchor": "Helm v2 默认情况下使用 ConfigMaps",
+          "quote": "   Helm v2 默认情况下使用 ConfigMaps 存储发行信息，而在 Helm v3 中默认使用 Secrets。",
+          "quote_sha256": "8c02d862c944da842a43b8d5a7966b414c6496070dd9c47879ff4f82f9e8024c"
+        },
+        {
+          "document_id": "cce_10_0421",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0421.html",
+          "title": "Helm v2与Helm v3的差异及适配方案",
+          "file": "documents/cce_10_0421.md",
+          "content_sha256": "a536d66454b5f46899d03d6e9703738b111aae9759f2d0e2510df75a950474b5",
+          "start_line": 26,
+          "end_line": 26,
+          "section": "Helm v2与Helm v3的差异及适配方案",
+          "anchor": "release名称可在不同命名空间重用",
+          "quote": "   Helm v2 只使用tiller 的namespace 作为release信息的存储，这样全集群的release名字都不能重复。Helm v3只会在release安装的所在namespace记录对应的信息，这样release名称可在不同命名空间重用。应用和release命名空间一致。",
+          "quote_sha256": "d74b7885eb81787b36304dae9f1e7962dc5f6b02b94731bdc1f4d30810e3e0ef"
+        }
+      ],
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false,
+      "split": "development"
+    },
+    "observed": {
+      "id": "cce-manual-094",
+      "question": "Helm v2与v3默认用什么存release信息，v3允许跨命名空间重用release名字吗？",
+      "answerable": true,
+      "question_type": "comparison",
+      "category": "模板（Helm Chart）",
+      "metrics": {
+        "evidence_recall_at_5": 0.5,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "YEIZ3YUAIDSLIMRJP6L4KDGGUL",
+          "revision_id": "ZOGWOBQYOAZ56ZMCWGWDM5RWAV",
+          "section": "Helm v2与Helm v3的差异及适配方案",
+          "start_line": 26,
+          "end_line": 29,
+          "content": "Helm v2 只使用tiller 的namespace 作为release信息的存储，这样全集群的release名字都不能重复。Helm v3只会在release安装的所在namespace记录对应的信息，这样release名称可在不同命名空间重用。应用和release命名空间一致。\n5. **校验方式改变**\n\n   Helm v3 对模板格式的校验更加严格，如Helm v3 将chart.yaml的apiVersion从v1切换到v2，针对Helm v2的chart.yaml，强要求指定apiVersion为v1。可安装Helm v3客户端后，通过执行helm lint命令校验模板格式是否符合v3规范。",
+          "content_hash": "1fc4f38f5075427855ac10ded98cf55933e5d6ea78a17d6d82c2693ba6bae660",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "Helm v2 中 release 名称为什么不能重复？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "Helm v3 中 release 名称可以在不同命名空间重用吗？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "Helm v3 对模板格式的校验有什么变化？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "Helm v3 中 chart.yaml 的 apiVersion 是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何校验模板格式是否符合 Helm v3 规范？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0421.html",
+          "title": "Helm v2与Helm v3的差异及适配方案",
+          "document_context": "目录：用户指南 > 模板（Helm Chart） > Helm v2与Helm v3的差异及适配方案\n更新时间：2025-04-25 GMT+08:00",
+          "score": 2.333333333333333,
+          "citation": {
+            "document_id": "KYKGNG3WUSXQ5E4Y7KPBJO6DJY",
+            "revision_id": "ZOGWOBQYOAZ56ZMCWGWDM5RWAV",
+            "fragment_id": "YEIZ3YUAIDSLIMRJP6L4KDGGUL",
+            "title": "Helm v2与Helm v3的差异及适配方案",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0421.html",
+            "section": "Helm v2与Helm v3的差异及适配方案",
+            "document_context": "目录：用户指南 > 模板（Helm Chart） > Helm v2与Helm v3的差异及适配方案\n更新时间：2025-04-25 GMT+08:00",
+            "content_hash": "1fc4f38f5075427855ac10ded98cf55933e5d6ea78a17d6d82c2693ba6bae660",
+            "url": "/v1/knowledge/revisions/ZOGWOBQYOAZ56ZMCWGWDM5RWAV/fragments/YEIZ3YUAIDSLIMRJP6L4KDGGUL",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "BMZNLK4PD4RW4J63VM56Q5WKTO",
+          "revision_id": "AXBO3FBN6TZDZS3IKNQDZXBX7R",
+          "section": "背景介绍 / 注意事项：",
+          "start_line": 9,
+          "end_line": 16,
+          "content": "当前CCE已全面支持Helm v3版本，用户可通过本指南将已创建的v2 release转换成v3 release，从而更好地使用v3的特性。因Helm v3底层相对于Helm v2来说，一些功能已被弃用或重构，因此转换会有一定风险，需转换前进行模拟转换。\n\n该指南参考社区文档：<https://github.com/helm/helm-2to3>\n\n#### 注意事项：\n\n- Helm v2 release信息存储在configmap中，Helm v3 release信息存储在secrets中。\n- 若用户通过前端console操作，在获取实例、更新实例等操作中CCE会自动尝试转换v2模板实例到v3模板实例。若用户仅在后台操作实例，需通过该指南进行转换操作。",
+          "content_hash": "02d79441bea749e6c68272e7b921780f6ac9e591dd512023258c1ff581e77b80",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "Helm v2 release和Helm v3 release的信息分别存储在哪里？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "为什么将Helm v2 release转换成Helm v3 release存在风险？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "用户通过前端console操作时，CCE会自动进行什么转换？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如果用户仅在后台操作实例，是否需要手动转换Helm v2 release到v3？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "转换Helm v2 release到v3前需要进行什么操作？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "document_context": "目录：用户指南 > 模板（Helm Chart） > Helm v2 Release转换成Helm v3 Release\n更新时间：2026-05-26 GMT+08:00",
+          "score": 1.833333333333333,
+          "citation": {
+            "document_id": "R44VKPBTREYVQA2DJCCMJS4PYH",
+            "revision_id": "AXBO3FBN6TZDZS3IKNQDZXBX7R",
+            "fragment_id": "BMZNLK4PD4RW4J63VM56Q5WKTO",
+            "title": "Helm v2 Release转换成Helm v3 Release",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+            "section": "背景介绍 / 注意事项：",
+            "document_context": "目录：用户指南 > 模板（Helm Chart） > Helm v2 Release转换成Helm v3 Release\n更新时间：2026-05-26 GMT+08:00",
+            "content_hash": "02d79441bea749e6c68272e7b921780f6ac9e591dd512023258c1ff581e77b80",
+            "url": "/v1/knowledge/revisions/AXBO3FBN6TZDZS3IKNQDZXBX7R/fragments/BMZNLK4PD4RW4J63VM56Q5WKTO",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "A43HHWOILV4KUTRYQDM2PXAJCE",
+          "revision_id": "AXBO3FBN6TZDZS3IKNQDZXBX7R",
+          "section": "转换流程（不使用Helm v3客户端）",
+          "start_line": 20,
+          "end_line": 84,
+          "content": "1. 在CCE节点上下载[helm 2to3](https://github.com/helm/helm-2to3/releases/download/v0.10.2/helm-2to3_0.10.2_linux_amd64.tar.gz)转换插件。\n\n   ```\n   wget https://github.com/helm/helm-2to3/releases/download/v0.10.2/helm-2to3_0.10.2_linux_amd64.tar.gz\n   ```\n\n2. 解压插件包。\n\n   ```\n   tar -xzvf helm-2to3_0.10.2_linux_amd64.tar.gz\n   ```\n\n3. 模拟转换。\n\n   以test-convert实例为例，执行以下命令进行转换的模拟。若出现以下提示，说明模拟转换成功。\n\n   ```\n   # ./2to3 convert --dry-run --tiller-out-cluster -s configmaps test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   ```\n4. 执行正式转换。若出现以下提示，说明转换成功。\n\n   ```\n   # ./2to3 convert --tiller-out-cluster -s configmaps test-convert\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" created.\n   [Helm 3] Release \"test-convert\" created.\n   Release \"test-convert\" was converted successfully from Helm v2 to Helm v3.\n   Note: The v2 release information still remains and should be removed to avoid conflicts with the migrated v3 release.\n   v2 release information should only be removed using `helm 2to3` cleanup and when all releases have been migrated over.\n   ```\n5. 转换完成后进行v2 release资源的清理，同样先进行模拟清理，成功后正式清理v2 release资源。\n\n   模拟清理：\n\n   ```\n   # ./2to3 cleanup --dry-run --tiller-out-cluster -s configmaps --name test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   ```\n\n   正式清理：\n\n   ```\n   # ./2to3 cleanup --tiller-out-cluster -s configmaps --name test-convert\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" d\n   ```",
+          "content_hash": "85b2aa66309d47422d664ca9e2203d9456e390900935fd4a1ad4d67e9aa82bae",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "不使用Helm v3客户端时，如何下载helm 2to3转换插件？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "模拟转换Helm v2 release到v3的命令是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "执行正式转换Helm v2 release到v3的命令是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "转换完成后，如何模拟清理v2 release资源？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "正式清理v2 release资源的命令是什么？"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "在CCE节点上下载 helm 2to3 转换插件。\nwget\n解压插件包。\ntar -xzvf helm-2to3 0.10.2 linux amd64.tar.gz\n模拟转换。\n以test-convert实例为例，执行以下命令进行转换的模拟。若出现以下提示，说明模拟转换成功。\n./2to3 convert --dry-run --tiller-out-cluster -s configmaps test-convert\nNOTE: This is in dry-run mode, the following actions will not be executed.\nRun without --dry-run to take the actions described below:\nRelease \"test-convert\" will be converted from Helm v2 to Helm v3.\n[Helm 3] Release \"test-convert\" will be created.\n[Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n执行正式转换。若出现以下提示，说明转换成功。\n./2to3 convert --tiller-out-cluster -s configmaps test-convert\nRelease \"test-convert\" will be converted from Helm v2 to Helm v3.\n[Helm 3] Release \"test-convert\" will be created.\n[Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n[Helm 3] ReleaseVersion \"test-convert.v1\" created.\n[Helm 3] Release \"test-convert\" created.\nRelease \"test-convert\" was converted successfully from Helm v2 to Helm v3.\nNote: The v2 release information still remains and should be removed to avoid conflicts with the migrated v3 release.\nv2 release information should only be removed using helm 2to3 cleanup and when all releases"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "v2 to Helm v3.\nNote: The v2 release information still remains and should be removed to avoid conflicts with the migrated v3 release.\nv2 release information should only be removed using helm 2to3 cleanup and when all releases have been migrated over.\n转换完成后进行v2 release资源的清理，同样先进行模拟清理，成功后正式清理v2 release资源。\n模拟清理：\n./2to3 cleanup --dry-run --tiller-out-cluster -s configmaps --name test-convert\nNOTE: This is in dry-run mode, the following actions will not be executed.\nRun without --dry-run to take the actions described below:\nWARNING: \"Release 'test-convert' Data\" will be removed.\n[Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\nHelm v2 data will be cleaned up.\n[Helm 2] Release 'test-convert' will be deleted.\n[Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n正式清理：\n./2to3 cleanup --tiller-out-cluster -s configmaps --name test-convert\nWARNING: \"Release 'test-convert' Data\" will be removed.\n[Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\nHelm v2 data will be cleaned up.\n[Helm 2] Release 'test-convert' will be deleted.\n[Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n[Helm 2] ReleaseVersion \"test-convert.v1\" d"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "document_context": "目录：用户指南 > 模板（Helm Chart） > Helm v2 Release转换成Helm v3 Release\n更新时间：2026-05-26 GMT+08:00",
+          "score": 1.2,
+          "citation": {
+            "document_id": "R44VKPBTREYVQA2DJCCMJS4PYH",
+            "revision_id": "AXBO3FBN6TZDZS3IKNQDZXBX7R",
+            "fragment_id": "A43HHWOILV4KUTRYQDM2PXAJCE",
+            "title": "Helm v2 Release转换成Helm v3 Release",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+            "section": "转换流程（不使用Helm v3客户端）",
+            "document_context": "目录：用户指南 > 模板（Helm Chart） > Helm v2 Release转换成Helm v3 Release\n更新时间：2026-05-26 GMT+08:00",
+            "content_hash": "85b2aa66309d47422d664ca9e2203d9456e390900935fd4a1ad4d67e9aa82bae",
+            "url": "/v1/knowledge/revisions/AXBO3FBN6TZDZS3IKNQDZXBX7R/fragments/A43HHWOILV4KUTRYQDM2PXAJCE",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "Q7QZJVGV5EIUGZEX33ZPBC5HG7",
+          "revision_id": "AXBO3FBN6TZDZS3IKNQDZXBX7R",
+          "section": "转换流程（使用Helm v3客户端）",
+          "start_line": 88,
+          "end_line": 165,
+          "content": "1. 安装Helm v3客户端，参见[安装Helm v3](https://support.huaweicloud.com/usermanual-cce/cce_10_0144.html)。\n2. 安装转换插件。\n\n   ```\n   # helm plugin install https://github.com/helm/helm-2to3\n   Downloading and installing helm-2to3 v0.10.2 ...\n   https://github.com/helm/helm-2to3/releases/download/v0.10.2/helm-2to3_0.10.2_linux_amd64.tar.gz\n   Installed plugin: 2to3\n   ```\n3. 查看已安装的插件，确认插件已安装。\n\n   ```\n   # helm plugin list\n   NAME VERSION DESCRIPTION\n   2to3  0.10.2      migrate and cleanup Helm v2 configuration and releases in-place to Helm v3\n   ```\n4. 模拟转换。\n\n   以test-convert实例为例，执行以下命令进行转换的模拟。若出现以下相关提示，说明模拟转换成功。\n\n   ```\n   # helm 2to3 convert --dry-run --tiller-out-cluster -s configmaps test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   ```\n5. 执行正式转换。若出现以下提示，说明转换成功。\n\n   ```\n   # helm 2to3 convert --tiller-out-cluster -s configmaps test-convert\n   Release \"test-convert\" will be converted from Helm v2 to Helm v3.\n   [Helm 3] Release \"test-convert\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n   [Helm 3] ReleaseVersion \"test-convert.v1\" created.\n   [Helm 3] Release \"test-convert\" created.\n   Release \"test-convert\" was converted successfully from Helm v2 to Helm v3.\n   Note: The v2 release information still remains and should be removed to avoid conflicts with the migrated v3 release.\n   v2 release information should only be removed using `helm 2to3` cleanup and when all releases have been migrated over.\n   ```\n6. 正式转换成功后，用户可通过helm list查看已转换成功的模板实例。\n\n   ```\n   # helm list\n   NAME                NAMESPACE    REVISION UPDATED                           STATUS      CHART              APP VERSION\n   test-convert      default   1                2022-08-29 06:56:28.166918487 +0000 UTC       deployed    test-helmold-1\n   ```\n7. 转换完成后进行V2 release资源的清理，同样先进行模拟清理，成功后正式清理V2 release资源。\n\n   模拟清理：\n\n   ```\n   # helm 2to3 cleanup --dry-run --tiller-out-cluster -s configmaps --name test-convert\n   NOTE: This is in dry-run mode, the following actions will not be executed.\n   Run without --dry-run to take the actions described below:\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   ```\n\n   正式清理：\n\n   ```\n   # helm 2to3 cleanup --tiller-out-cluster -s configmaps --name test-convert\n   WARNING: \"Release 'test-convert' Data\" will be removed.\n\n   [Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\n   Helm v2 data will be cleaned up.\n   [Helm 2] Release 'test-convert' will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n   [Helm 2] ReleaseVersion \"test-convert.v1\" deleted.\n   [Helm 2] Release 'test-convert' deleted.\n   Helm v2 data was cleaned up successfully.\n   ```",
+          "content_hash": "b7d93c20931e8e03d62d5eff246a7bf14949e59c44c27b4c72d067b23aaab1a9",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "使用Helm v3客户端时，如何安装转换插件？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何查看已安装的Helm插件以确认2to3插件已安装？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "使用Helm v3客户端模拟转换Helm v2 release的命令是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "使用Helm v3客户端执行正式转换Helm v2 release的命令是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "转换成功后，如何通过helm list查看已转换的模板实例？"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "安装Helm v3客户端，参见 安装Helm v3 。\n安装转换插件。\nhelm plugin install\nDownloading and installing helm-2to3 v0.10.2 ...\nInstalled plugin: 2to3\n查看已安装的插件，确认插件已安装。\nhelm plugin list\nNAME VERSION DESCRIPTION\n2to3 0.10.2 migrate and cleanup Helm v2 configuration and releases in-place to Helm v3\n模拟转换。\n以test-convert实例为例，执行以下命令进行转换的模拟。若出现以下相关提示，说明模拟转换成功。\nhelm 2to3 convert --dry-run --tiller-out-cluster -s configmaps test-convert\nNOTE: This is in dry-run mode, the following actions will not be executed.\nRun without --dry-run to take the actions described below:\nRelease \"test-convert\" will be converted from Helm v2 to Helm v3.\n[Helm 3] Release \"test-convert\" will be created.\n[Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n执行正式转换。若出现以下提示，说明转换成功。\nhelm 2to3 convert --tiller-out-cluster -s configmaps test-convert\nRelease \"test-convert\" will be converted from Helm v2 to Helm v3.\n[Helm 3] Release \"test-convert\" will be created.\n[Helm 3] ReleaseVersion \"test-convert.v1\" will be created.\n[Helm 3] ReleaseVersion \"test-convert.v1\" created.\n[Helm 3] Release \"test-convert\" created.\nRelease \"test-convert\" was converted successfully from Helm v2 to"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "convert.v1\" will be created.\n[Helm 3] ReleaseVersion \"test-convert.v1\" created.\n[Helm 3] Release \"test-convert\" created.\nRelease \"test-convert\" was converted successfully from Helm v2 to Helm v3.\nNote: The v2 release information still remains and should be removed to avoid conflicts with the migrated v3 release.\nv2 release information should only be removed using helm 2to3 cleanup and when all releases have been migrated over.\n正式转换成功后，用户可通过helm list查看已转换成功的模板实例。\nhelm list\nNAME NAMESPACE REVISION UPDATED STATUS CHART APP VERSION\ntest-convert default 1 2022-08-29 06:56:28.166918487 +0000 UTC deployed test-helmold-1\n转换完成后进行V2 release资源的清理，同样先进行模拟清理，成功后正式清理V2 release资源。\n模拟清理：\nhelm 2to3 cleanup --dry-run --tiller-out-cluster -s configmaps --name test-convert\nNOTE: This is in dry-run mode, the following actions will not be executed.\nRun without --dry-run to take the actions described below:\nWARNING: \"Release 'test-convert' Data\" will be removed.\n[Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\nHelm v2 data will be cleaned up.\n[Helm 2] Release 'test-convert' will be deleted.\n[Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n正式清理：\nhelm 2to3 cleanup --tiller-out-cluster -s"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "ed up.\n[Helm 2] Release 'test-convert' will be deleted.\n[Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n正式清理：\nhelm 2to3 cleanup --tiller-out-cluster -s configmaps --name test-convert\nWARNING: \"Release 'test-convert' Data\" will be removed.\n[Cleanup/confirm] Are you sure you want to cleanup Helm v2 data? [y/N]: y\nHelm v2 data will be cleaned up.\n[Helm 2] Release 'test-convert' will be deleted.\n[Helm 2] ReleaseVersion \"test-convert.v1\" will be deleted.\n[Helm 2] ReleaseVersion \"test-convert.v1\" deleted.\n[Helm 2] Release 'test-convert' deleted.\nHelm v2 data was cleaned up successfully."
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+          "title": "Helm v2 Release转换成Helm v3 Release",
+          "document_context": "目录：用户指南 > 模板（Helm Chart） > Helm v2 Release转换成Helm v3 Release\n更新时间：2026-05-26 GMT+08:00",
+          "score": 0.9666666666666667,
+          "citation": {
+            "document_id": "R44VKPBTREYVQA2DJCCMJS4PYH",
+            "revision_id": "AXBO3FBN6TZDZS3IKNQDZXBX7R",
+            "fragment_id": "Q7QZJVGV5EIUGZEX33ZPBC5HG7",
+            "title": "Helm v2 Release转换成Helm v3 Release",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0422.html",
+            "section": "转换流程（使用Helm v3客户端）",
+            "document_context": "目录：用户指南 > 模板（Helm Chart） > Helm v2 Release转换成Helm v3 Release\n更新时间：2026-05-26 GMT+08:00",
+            "content_hash": "b7d93c20931e8e03d62d5eff246a7bf14949e59c44c27b4c72d067b23aaab1a9",
+            "url": "/v1/knowledge/revisions/AXBO3FBN6TZDZS3IKNQDZXBX7R/fragments/Q7QZJVGV5EIUGZEX33ZPBC5HG7",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "5IZKGXPPKXAJUT4ZJGC4BMPRH7",
+          "revision_id": "ZOGWOBQYOAZ56ZMCWGWDM5RWAV",
+          "section": "Helm v2与Helm v3的差异及适配方案",
+          "start_line": 31,
+          "end_line": 34,
+          "content": "**适配方案**：根据Helm官方文档 <https://helm.sh/docs/topics/charts/>适配Helm v3模板，apiVersion字段必填。\n6. **废弃crd-install**\n\n   Helm v3删除了crd-install hook， 并用chart中的crds目录替换。需要注意的是，crds目录中的资源只有在release安装时会部署，升级时不会更新，删除时不会卸载crds目录中的资源。若crd已存在，则重复安装不会报错。",
+          "content_hash": "85522877d81c7929b5f8617be2868ee60770d56f96fe59f73786c5bb032f5ab6",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "Helm v3 删除了哪个 hook？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "Helm v3 中用什么替换 crd-install hook？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "crds 目录中的资源在 release 升级时会更新吗？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "crds 目录中的资源在 release 删除时会卸载吗？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "若 crd 已存在，重复安装会报错吗？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0421.html",
+          "title": "Helm v2与Helm v3的差异及适配方案",
+          "document_context": "目录：用户指南 > 模板（Helm Chart） > Helm v2与Helm v3的差异及适配方案\n更新时间：2025-04-25 GMT+08:00",
+          "score": 0.5,
+          "citation": {
+            "document_id": "KYKGNG3WUSXQ5E4Y7KPBJO6DJY",
+            "revision_id": "ZOGWOBQYOAZ56ZMCWGWDM5RWAV",
+            "fragment_id": "5IZKGXPPKXAJUT4ZJGC4BMPRH7",
+            "title": "Helm v2与Helm v3的差异及适配方案",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0421.html",
+            "section": "Helm v2与Helm v3的差异及适配方案",
+            "document_context": "目录：用户指南 > 模板（Helm Chart） > Helm v2与Helm v3的差异及适配方案\n更新时间：2025-04-25 GMT+08:00",
+            "content_hash": "85522877d81c7929b5f8617be2868ee60770d56f96fe59f73786c5bb032f5ab6",
+            "url": "/v1/knowledge/revisions/ZOGWOBQYOAZ56ZMCWGWDM5RWAV/fragments/5IZKGXPPKXAJUT4ZJGC4BMPRH7",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": {
+        "trace_id": "4471c18cd788a9f3ebffc6299a4b8c2a",
+        "retrieval_queries": [
+          "Helm v2与v3默认用什么存release信息，v3允许跨命名空间重用release名字吗？",
+          "Helm v2 和 v3 默认将 release 信息存储在哪里，v3 是否支持在不同命名空间重复使用同一个 release 名称？",
+          "Helm v2 与 Helm v3 默认使用什么后端保存 release 数据，v3 中 release 名称能否跨命名空间复用？",
+          "默认情况下 Helm v2 和 v3 分别用什么存储 release 信息，Helm v3 允许 release 名字在多个命名空间之间重用吗？"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 4146.867499977816
+    }
+  }
+]

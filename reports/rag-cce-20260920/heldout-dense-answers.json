@@ -1,0 +1,5354 @@
+{
+  "id": "RXhwZXJpbWVudDo2",
+  "name": "heldout-dense-answers",
+  "config": {
+    "split": "heldout",
+    "strategy": "dense",
+    "answers": true,
+    "top_k": 5,
+    "candidate_k": 20,
+    "rrf_constant": 60,
+    "data_mode": "LIVE",
+    "dataset_sha256": "c08c4b67938d20506a1e58aa278778ab65e907871ac95cb10bab41981ee2cc10"
+  },
+  "rows": [
+    {
+      "id": "cce-q001",
+      "question": "CCE 管理面内存突然升高，大量客户端在全量拉取资源列表，该怎么处理？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r01"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t7-r02",
+        "cce-t2-r05",
+        "cce-t4-r03",
+        "cce-t7-r01",
+        "cce-t2-r07"
+      ],
+      "latency_ms": 575.3042909927899,
+      "metrics": {
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "hit_at_5": 0.0,
+        "mrr_at_5": 0,
+        "ndcg_at_5": 0.0,
+        "processing_success": 1.0,
+        "answer_rate": 0.0,
+        "citation_recall": 0.0,
+        "citation_precision": 0,
+        "citation_hit": 0.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "VWCEZYXR2SZMNLWKCZKOY7EGJR",
+        "conversation_id": "P27QCYLFYFI4VE7EPINGWQELNH",
+        "question": "CCE 管理面内存突然升高，大量客户端在全量拉取资源列表，该怎么处理？",
+        "status": "UNRESOLVED",
+        "data_mode": "LIVE",
+        "answer": "",
+        "claims": [],
+        "citations": [],
+        "gaps": [
+          "已召回的资料不足以回答当前问题。"
+        ],
+        "created_at": "2026-09-19T21:52:42.860417Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "34d5738cd536a8f52c9815411853809f",
+        "retrieved_fragment_ids": [
+          "6QIDDFHBKYHBCDCQOYVHSVYYF2",
+          "C6VNW6GJJYBX6IECUMIH7QD4DU",
+          "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+          "TCWUTC2DCHWM7HMY7HKDL64QRY",
+          "GKOROF7KVEPGLLUB2RKFBDEL4F"
+        ],
+        "model_usage": {
+          "prompt_tokens": 876,
+          "completion_tokens": 5,
+          "total_tokens": 881,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:42.848924+00:00",
+      "ended_at": "2026-09-19T21:52:43.424240+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNDI=",
+      "judge": {
+        "scores": {
+          "correctness": 0,
+          "faithfulness": null,
+          "relevance": 0,
+          "explanation": "答案为空，未给出任何处理建议，而问题有明确可回答的参考内容；提供的资料也均与 CCE 管理面内存升高无关。"
+        },
+        "usage": {
+          "prompt_tokens": 1386,
+          "completion_tokens": 59,
+          "total_tokens": 1445,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1258
+        },
+        "trace_id": "1bb17becc49a0818ea44eaed1049db16",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 859.04183400271
+      }
+    },
+    {
+      "id": "cce-q002",
+      "question": "有人改了名字带 cce-control 的安全组，主控节点不可用了，应参照什么恢复？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r02"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r02",
+        "cce-t1-r07",
+        "cce-t1-r09",
+        "cce-t1-r04",
+        "cce-t4-r07"
+      ],
+      "latency_ms": 702.3397500015562,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "QZNC4ENO2VBHGIWKCFLO5GOYHC",
+        "conversation_id": "LVLSJAKKRWPSSVQK4RNIIXC6IZ",
+        "question": "有人改了名字带 cce-control 的安全组，主控节点不可用了，应参照什么恢复？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "修改集群控制节点安全组后，误操作解决方案是参照新建集群的安全组进行修复，放通安全组，详情参见集群安全组规则配置。",
+        "claims": [
+          {
+            "text": "修改集群控制节点安全组后，误操作解决方案是参照新建集群的安全组进行修复，放通安全组，详情参见集群安全组规则配置。",
+            "fragment_ids": [
+              "KEY3FPO4OBOW4K6F2TNDIXPT6J"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "KEY3FPO4OBOW4K6F2TNDIXPT6J",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r02 集群/节点 / 控制节点",
+            "content_hash": "0b7996d9fb8ba0f179499a3726a07bbb9a7b0ff2c3e43a544dda91bce55f39b5",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/KEY3FPO4OBOW4K6F2TNDIXPT6J",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:43.485963Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "23b0c7eba713aa212cc9d9a096e67aff",
+        "retrieved_fragment_ids": [
+          "KEY3FPO4OBOW4K6F2TNDIXPT6J",
+          "3AN4DP22X6DTGYMMIYOHO5WNLN",
+          "FWFO3HYYZQMXQR5M6MUDFEMSOD",
+          "274FGZVXA73JVT5DSNXG7R4AKE",
+          "TTLD25XCOIY3LVOSJ6XG2E7I4K"
+        ],
+        "model_usage": {
+          "prompt_tokens": 840,
+          "completion_tokens": 66,
+          "total_tokens": 906,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:43.473760+00:00",
+      "ended_at": "2026-09-19T21:52:44.176106+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNDM=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确复现了参考中修改控制节点安全组的误操作解决方案（参照新建集群的安全组修复、放通安全组、参见集群安全组规则配置），且所有断言均可在检索到的 cce-t1-r02 条目中找到依据。"
+        },
+        "usage": {
+          "prompt_tokens": 1360,
+          "completion_tokens": 80,
+          "total_tokens": 1440,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1232
+        },
+        "trace_id": "bde15b0e53973920720a7966a4e9f254",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 974.7984159912448
+      }
+    },
+    {
+      "id": "cce-q003",
+      "question": "控制节点过期销毁了，文档认为能恢复吗？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r03"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r03",
+        "cce-t1-r24",
+        "cce-t1-r04",
+        "cce-t1-r09",
+        "cce-t1-r06"
+      ],
+      "latency_ms": 890.9749580052448,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "SWS2CRBBABYOFO7DHLFCXMAE5U",
+        "conversation_id": "TD6LNOJXNIMIS6NMTOQ7D3YQEF",
+        "question": "控制节点过期销毁了，文档认为能恢复吗？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "控制节点到期或被销毁后，文档认为不可恢复。",
+        "claims": [
+          {
+            "text": "控制节点到期或被销毁后，文档认为不可恢复。",
+            "fragment_ids": [
+              "OAVSEEKGJFNKIVK6L2CEAEDSOO"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "OAVSEEKGJFNKIVK6L2CEAEDSOO",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r03 集群/节点 / 控制节点",
+            "content_hash": "723a15e3285deeb7db2b8b375df74f565011eef6fdccd3c5f9c13a1eaa7c7a5d",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/OAVSEEKGJFNKIVK6L2CEAEDSOO",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:44.23794Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "37277e490bba095cc2e4bb5f0278b7d2",
+        "retrieved_fragment_ids": [
+          "OAVSEEKGJFNKIVK6L2CEAEDSOO",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "274FGZVXA73JVT5DSNXG7R4AKE",
+          "FWFO3HYYZQMXQR5M6MUDFEMSOD",
+          "2KSPCFZZCTZKFQWEDDOR3GVY4A"
+        ],
+        "model_usage": {
+          "prompt_tokens": 774,
+          "completion_tokens": 42,
+          "total_tokens": 816,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:44.226967+00:00",
+      "ended_at": "2026-09-19T21:52:45.117948+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNDQ=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确对应参考内容：控制节点到期或被销毁属于高危操作，后果为节点不可用，解决方案为不可恢复，直接回答了“文档认为不可恢复”。检索上下文中的表格行也支持该结论。"
+        },
+        "usage": {
+          "prompt_tokens": 1228,
+          "completion_tokens": 71,
+          "total_tokens": 1299,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1100
+        },
+        "trace_id": "c2f01c94f255517f3eac9b25637f2929",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 787.4922499904642
+      }
+    },
+    {
+      "id": "cce-q006",
+      "question": "误格式化控制节点的 /etc/kubernetes 数据，文档给出的恢复结论是什么？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r06"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r06",
+        "cce-t1-r21",
+        "cce-t1-r09",
+        "cce-t1-r24",
+        "cce-t1-r22"
+      ],
+      "latency_ms": 794.7150840045651,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "YMIVAW5TAENOOY2YISIPBHT2IS",
+        "conversation_id": "WJC7VMTUH4FQCGYOSA62VNS573",
+        "question": "误格式化控制节点的 /etc/kubernetes 数据，文档给出的恢复结论是什么？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "误格式化控制节点的 /etc/kubernetes 数据会导致该控制节点不可用，误操作后不可恢复。",
+        "claims": [
+          {
+            "text": "误格式化控制节点的 /etc/kubernetes 数据会导致该控制节点不可用，误操作后不可恢复。",
+            "fragment_ids": [
+              "2KSPCFZZCTZKFQWEDDOR3GVY4A"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "2KSPCFZZCTZKFQWEDDOR3GVY4A",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r06 集群/节点 / 控制节点",
+            "content_hash": "fae6f10212eaafd852eb224e3ad409fb2b15e6993b55cad9c1fde80ebddd6793",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/2KSPCFZZCTZKFQWEDDOR3GVY4A",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:45.181977Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "07af2f08e717309c3730b20026f76e05",
+        "retrieved_fragment_ids": [
+          "2KSPCFZZCTZKFQWEDDOR3GVY4A",
+          "WU2TZZNKLVLIWI6CHKLMVKEHNM",
+          "FWFO3HYYZQMXQR5M6MUDFEMSOD",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "DL52JJRFWSTU7JHQRM2TUYHFFD"
+        ],
+        "model_usage": {
+          "prompt_tokens": 839,
+          "completion_tokens": 56,
+          "total_tokens": 895,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:45.171106+00:00",
+      "ended_at": "2026-09-19T21:52:45.965827+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNDU=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确复述了控制节点误格式化 /etc/kubernetes 的后果与恢复结论，且所有断言均来自对应检索片段，直接回答了问题。"
+        },
+        "usage": {
+          "prompt_tokens": 1304,
+          "completion_tokens": 61,
+          "total_tokens": 1365,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1176
+        },
+        "trace_id": "1a6ad527bd1a7a1f89c655b45536a819",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 808.9323339954717
+      }
+    },
+    {
+      "id": "cce-q007",
+      "question": "CCE 控制节点换 IP 后不可用，应该怎么恢复？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r07"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r07",
+        "cce-t1-r09",
+        "cce-t1-r16",
+        "cce-t1-r04",
+        "cce-t1-r24"
+      ],
+      "latency_ms": 680.0333330029389,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "LH5CUUF2KAMYTEGVJZUEF5RMWS",
+        "conversation_id": "MJDDK5GRE4HJ2GZKJJYSPGQAS2",
+        "question": "CCE 控制节点换 IP 后不可用，应该怎么恢复？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "CCE 控制节点更改节点IP会导致该控制节点不可用，误操作后的解决方案是改回原IP。",
+        "claims": [
+          {
+            "text": "CCE 控制节点更改节点IP会导致该控制节点不可用，误操作后的解决方案是改回原IP。",
+            "fragment_ids": [
+              "3AN4DP22X6DTGYMMIYOHO5WNLN"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "3AN4DP22X6DTGYMMIYOHO5WNLN",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r07 集群/节点 / 控制节点",
+            "content_hash": "e55cb7ea957529992c3e7f580375b84cfbf2ef009ba7c2eb51ef9d00b7d55c8f",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/3AN4DP22X6DTGYMMIYOHO5WNLN",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:46.027956Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "23e4c7ae2db896afd560c6f5877b9e1b",
+        "retrieved_fragment_ids": [
+          "3AN4DP22X6DTGYMMIYOHO5WNLN",
+          "FWFO3HYYZQMXQR5M6MUDFEMSOD",
+          "V2LLZOP3UCM3HHIUXII23GT7XO",
+          "274FGZVXA73JVT5DSNXG7R4AKE",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F"
+        ],
+        "model_usage": {
+          "prompt_tokens": 771,
+          "completion_tokens": 57,
+          "total_tokens": 828,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:46.017100+00:00",
+      "ended_at": "2026-09-19T21:52:46.697139+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNDY=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确指出控制节点更改IP导致不可用，并给出误操作后改回原IP的解决方案，与参考要点完全一致；所有断言均可在检索到的cce-t1-r07行中找到依据，回答直接针对问题且无多余内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1235,
+          "completion_tokens": 81,
+          "total_tokens": 1316,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1107
+        },
+        "trace_id": "fa460b5ea038a19e63c747ee17ca9c21",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 862.6401250076015
+      }
+    },
+    {
+      "id": "cce-q010",
+      "question": "工作节点 cce-node 安全组被调整后无法使用，应该如何修复？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r10"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r10",
+        "cce-t1-r12",
+        "cce-t1-r22",
+        "cce-t1-r18",
+        "cce-t1-r14"
+      ],
+      "latency_ms": 787.9093329975149,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "RZIQMQMWAMAVAOUF4QFSAXS35J",
+        "conversation_id": "PGXFHMGZAGJFEFTDOHE3J7UCSU",
+        "question": "工作节点 cce-node 安全组被调整后无法使用，应该如何修复？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "修改集群Node节点安全组可能导致节点无法使用，误操作后应参照新建集群的安全组进行修复并放通安全组（详见集群安全组规则配置）。",
+        "claims": [
+          {
+            "text": "修改集群Node节点安全组可能导致节点无法使用，误操作后应参照新建集群的安全组进行修复并放通安全组（详见集群安全组规则配置）。",
+            "fragment_ids": [
+              "HO3RS7J7YCG5KLQ2E2NTTW2LWJ"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "HO3RS7J7YCG5KLQ2E2NTTW2LWJ",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r10 集群/节点 / Node节点",
+            "content_hash": "c641a0fc2a8c5443abb345cfff7b899f9e5128f3f51b59d4bc2d1ed6d58b2fde",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/HO3RS7J7YCG5KLQ2E2NTTW2LWJ",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:46.76142Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "228e96356c2c25726df090ab88636d40",
+        "retrieved_fragment_ids": [
+          "HO3RS7J7YCG5KLQ2E2NTTW2LWJ",
+          "YJXSXOGSS2ZWKPTGPNGDLLVIMR",
+          "DL52JJRFWSTU7JHQRM2TUYHFFD",
+          "B7IUL7OSULLCR2EGTBHFHLFHZK",
+          "QUAG6SLXXOWY4TGYAA3XCPFJK6"
+        ],
+        "model_usage": {
+          "prompt_tokens": 842,
+          "completion_tokens": 70,
+          "total_tokens": 912,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:46.750311+00:00",
+      "ended_at": "2026-09-19T21:52:47.538228+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNDc=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确复述了参考资料中关于修改Node节点安全组的误操作后果和解决方案，核心断言均有依据，且直接回答所问。"
+        },
+        "usage": {
+          "prompt_tokens": 1350,
+          "completion_tokens": 57,
+          "total_tokens": 1407,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1222
+        },
+        "trace_id": "b3e23d948fb1ec9c4d516240c019c2bd",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 755.1930420013377
+      }
+    },
+    {
+      "id": "cce-q011",
+      "question": "想让业务用自建域名服务器，直接改宿主机 resolv.conf 有什么风险？正确做法是什么？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r11"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r11",
+        "cce-t3-r02",
+        "cce-t1-r23",
+        "cce-t2-r07",
+        "cce-t1-r15"
+      ],
+      "latency_ms": 893.4450830129208,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "SM3HBDTJLLRBWSWNZWXY7QXDXY",
+        "conversation_id": "BEMMXYU3ZXSEQ27QACPNTCHO34",
+        "question": "想让业务用自建域名服务器，直接改宿主机 resolv.conf 有什么风险？正确做法是什么？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "直接修改宿主机/节点上的DNS配置（/etc/resolv.conf）属于高危操作，会导致内部域名无法正常访问，可能出现插件异常、节点重置升级等基本功能异常。\n\n如果业务需要使用自建DNS，正确做法是在工作负载中配置DNS，请勿修改节点本身的DNS地址。\n\n误操作修改节点DNS后，可参考新建节点中的DNS配置进行还原。",
+        "claims": [
+          {
+            "text": "直接修改宿主机/节点上的DNS配置（/etc/resolv.conf）属于高危操作，会导致内部域名无法正常访问，可能出现插件异常、节点重置升级等基本功能异常。",
+            "fragment_ids": [
+              "6OQW65RZHH6R72YGFYOSIZVRRP"
+            ]
+          },
+          {
+            "text": "如果业务需要使用自建DNS，正确做法是在工作负载中配置DNS，请勿修改节点本身的DNS地址。",
+            "fragment_ids": [
+              "6OQW65RZHH6R72YGFYOSIZVRRP"
+            ]
+          },
+          {
+            "text": "误操作修改节点DNS后，可参考新建节点中的DNS配置进行还原。",
+            "fragment_ids": [
+              "6OQW65RZHH6R72YGFYOSIZVRRP"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "6OQW65RZHH6R72YGFYOSIZVRRP",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r11 集群/节点 / Node节点",
+            "content_hash": "92f9fca2f546380a7b99f6055b0938b7df0fad23fa934ec92e7e3e164ae88f5e",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/6OQW65RZHH6R72YGFYOSIZVRRP",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:47.603962Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "d7f43820e5825b5336c082f754ec1b79",
+        "retrieved_fragment_ids": [
+          "6OQW65RZHH6R72YGFYOSIZVRRP",
+          "7U64KZA4GIQSJRLS2WMRN33YNA",
+          "IZJEZRRCGV2KA7YAJZEXOCTH6S",
+          "GKOROF7KVEPGLLUB2RKFBDEL4F",
+          "GVSV4MVQ7ITNOLT4AUXSASIFL3"
+        ],
+        "model_usage": {
+          "prompt_tokens": 988,
+          "completion_tokens": 167,
+          "total_tokens": 1155,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:47.593209+00:00",
+      "ended_at": "2026-09-19T21:52:48.486661+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNDg=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确覆盖了风险与正确做法，且所有断言均可在检索到的文档中直接找到依据。"
+        },
+        "usage": {
+          "prompt_tokens": 1584,
+          "completion_tokens": 49,
+          "total_tokens": 1633,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1456
+        },
+        "trace_id": "36a7293f0f180d9705ff18523314e348",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 476.61504200368654
+      }
+    },
+    {
+      "id": "cce-q013",
+      "question": "节点绑定的弹性网卡删掉了会影响什么，还能恢复吗？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r13"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r13",
+        "cce-t4-r04",
+        "cce-t1-r24",
+        "cce-t4-r03",
+        "cce-t2-r05"
+      ],
+      "latency_ms": 588.954457998625,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "5PUNN3VI5MSACVMR7WCB56CZPM",
+        "conversation_id": "HEWWOM45BSNBXIUFZCYJEKBQG3",
+        "question": "节点绑定的弹性网卡删掉了会影响什么，还能恢复吗？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "节点使用的弹性网卡被删除会导致该节点上的容器网络不可用。\n\n节点使用的弹性网卡被删除后不可恢复。",
+        "claims": [
+          {
+            "text": "节点使用的弹性网卡被删除会导致该节点上的容器网络不可用。",
+            "fragment_ids": [
+              "LPZQM2PTFK4J3QFC5LBNSZ2I63"
+            ]
+          },
+          {
+            "text": "节点使用的弹性网卡被删除后不可恢复。",
+            "fragment_ids": [
+              "LPZQM2PTFK4J3QFC5LBNSZ2I63"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r13 集群/节点 / Node节点",
+            "content_hash": "5c7daa3178d37b1d7e0f7d4e063b26e3f19ff2b9212d56cdfa3532efba5f6ade",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/LPZQM2PTFK4J3QFC5LBNSZ2I63",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:48.552654Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "c8f105c3da2e4e887683f8dd626f9957",
+        "retrieved_fragment_ids": [
+          "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+          "53KETM5MBHQ3KBZYR4IZJRNXD4",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+          "C6VNW6GJJYBX6IECUMIH7QD4DU"
+        ],
+        "model_usage": {
+          "prompt_tokens": 846,
+          "completion_tokens": 88,
+          "total_tokens": 934,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:48.539517+00:00",
+      "ended_at": "2026-09-19T21:52:49.128477+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNDk=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确覆盖了参考要点的两个关键点：删除节点弹性网卡会导致该节点容器网络不可用，且不可恢复；所有断言均可在检索上下文中找到依据，无无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1329,
+          "completion_tokens": 69,
+          "total_tokens": 1398,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1201
+        },
+        "trace_id": "61875a976fcb63114692a68b5c361f93",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 836.9177499989746
+      }
+    },
+    {
+      "id": "cce-q016",
+      "question": "修改工作节点的地址后节点变为不可用，文档的解决办法是什么？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r16"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r16",
+        "cce-t1-r22",
+        "cce-t1-r18",
+        "cce-t1-r23",
+        "cce-t1-r14"
+      ],
+      "latency_ms": 807.9622499935795,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "CCUYPFXFQJ3EZ4IU5OWTEARM6H",
+        "conversation_id": "VEVJXCDB45DCYDP67V3AACLNUC",
+        "question": "修改工作节点的地址后节点变为不可用，文档的解决办法是什么？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "修改工作节点的地址（更改节点IP）会导致节点不可用，误操作后的解决办法是改回原IP。",
+        "claims": [
+          {
+            "text": "修改工作节点的地址（更改节点IP）会导致节点不可用，误操作后的解决办法是改回原IP。",
+            "fragment_ids": [
+              "V2LLZOP3UCM3HHIUXII23GT7XO"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "V2LLZOP3UCM3HHIUXII23GT7XO",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r16 集群/节点 / Node节点",
+            "content_hash": "bf3e04fb09d0544aa1508cf21333e82c1287796e263e3192074d38b796dc6b7f",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/V2LLZOP3UCM3HHIUXII23GT7XO",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:49.192653Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "ee5cda08efb11a65a693c38ac389cd67",
+        "retrieved_fragment_ids": [
+          "V2LLZOP3UCM3HHIUXII23GT7XO",
+          "DL52JJRFWSTU7JHQRM2TUYHFFD",
+          "B7IUL7OSULLCR2EGTBHFHLFHZK",
+          "IZJEZRRCGV2KA7YAJZEXOCTH6S",
+          "QUAG6SLXXOWY4TGYAA3XCPFJK6"
+        ],
+        "model_usage": {
+          "prompt_tokens": 800,
+          "completion_tokens": 56,
+          "total_tokens": 856,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:49.180988+00:00",
+      "ended_at": "2026-09-19T21:52:49.988956+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNTA=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "回答准确对应“更改节点IP”这一高危操作及其解决方案“改回原IP”，与参考资料和参考答案一致，且没有无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1246,
+          "completion_tokens": 57,
+          "total_tokens": 1303,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1118
+        },
+        "trace_id": "67d002aa9625b63a860d9423d8039fc1",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 690.2428750036051
+      }
+    },
+    {
+      "id": "cce-q019",
+      "question": "清理 /opt/cloud/cce 和 /var/paas 时误删了内容，节点不可用了怎么恢复？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r19"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r19",
+        "cce-t1-r24",
+        "cce-t1-r12",
+        "cce-t1-r13",
+        "cce-t1-r22"
+      ],
+      "latency_ms": 1014.3897910020314,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "YD3VEINVCS66GKRZKZSJ3SEPC5",
+        "conversation_id": "PLVQBY4ZSJRNCSI6LRYC7DHMVH",
+        "question": "清理 /opt/cloud/cce 和 /var/paas 时误删了内容，节点不可用了怎么恢复？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "删除或修改 /opt/cloud/cce、/var/paas 目录会导致节点不可用。\n\n该误操作的解决方案是重置节点。",
+        "claims": [
+          {
+            "text": "删除或修改 /opt/cloud/cce、/var/paas 目录会导致节点不可用。",
+            "fragment_ids": [
+              "JERYHXCYRILOIFKGNBJAQM7CNC"
+            ]
+          },
+          {
+            "text": "该误操作的解决方案是重置节点。",
+            "fragment_ids": [
+              "JERYHXCYRILOIFKGNBJAQM7CNC"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "JERYHXCYRILOIFKGNBJAQM7CNC",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r19 集群/节点 / Node节点",
+            "content_hash": "bffc0b33fa30a00dcbe30ec834325c116b1cb2f5562474f2c43f904a448f980d",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/JERYHXCYRILOIFKGNBJAQM7CNC",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:50.060197Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "3e68b268db2b2dce1d47a6d39e564ad0",
+        "retrieved_fragment_ids": [
+          "JERYHXCYRILOIFKGNBJAQM7CNC",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "YJXSXOGSS2ZWKPTGPNGDLLVIMR",
+          "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+          "DL52JJRFWSTU7JHQRM2TUYHFFD"
+        ],
+        "model_usage": {
+          "prompt_tokens": 835,
+          "completion_tokens": 87,
+          "total_tokens": 922,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:50.049209+00:00",
+      "ended_at": "2026-09-19T21:52:51.063605+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNTE=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确指出删除/修改 /opt/cloud/cce、/var/paas 目录会导致节点不可用，并给出唯一正确解决方案“重置节点”，与参考回答和检索上下文完全一致；没有多余或无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1325,
+          "completion_tokens": 76,
+          "total_tokens": 1401,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1197
+        },
+        "trace_id": "93e35ec84efd1654fe311f4aefded46c",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 784.3129999964731
+      }
+    },
+    {
+      "id": "cce-q020",
+      "question": "能自行更改 /etc/sudoers.d/sudoerspaas 和容器运行目录的权限吗？误改后怎么办？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r20"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r20",
+        "cce-t3-r02",
+        "cce-t4-r03",
+        "cce-t1-r15",
+        "cce-t2-r07"
+      ],
+      "latency_ms": 1137.4636250111507,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "EWTYEEEDLEKCERWM4EPEMXPI4S",
+        "conversation_id": "E5LRW3ZT2PM4NJQVMWIRK5GWNO",
+        "question": "能自行更改 /etc/sudoers.d/sudoerspaas 和容器运行目录的权限吗？误改后怎么办？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "修改节点内目录权限、容器目录权限等属于高危操作，涉及的目录包括 /etc/sudoers.d/sudoerspaas 和 /mnt/paas/runtime。\n\n此类权限修改可能导致权限异常。\n\n误操作后不建议修改，请自行恢复。",
+        "claims": [
+          {
+            "text": "修改节点内目录权限、容器目录权限等属于高危操作，涉及的目录包括 /etc/sudoers.d/sudoerspaas 和 /mnt/paas/runtime。",
+            "fragment_ids": [
+              "DO3ENFEABZGF3UUJ3DWVTZBE56"
+            ]
+          },
+          {
+            "text": "此类权限修改可能导致权限异常。",
+            "fragment_ids": [
+              "DO3ENFEABZGF3UUJ3DWVTZBE56"
+            ]
+          },
+          {
+            "text": "误操作后不建议修改，请自行恢复。",
+            "fragment_ids": [
+              "DO3ENFEABZGF3UUJ3DWVTZBE56"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "DO3ENFEABZGF3UUJ3DWVTZBE56",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r20 集群/节点 / Node节点",
+            "content_hash": "07c12924771bba53a5a666533bce660ff8edea41fd42d4c410e6b0d1bbd504ac",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/DO3ENFEABZGF3UUJ3DWVTZBE56",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:51.127126Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "b2b50f6b26ccbf8f5ff82869bf019e66",
+        "retrieved_fragment_ids": [
+          "DO3ENFEABZGF3UUJ3DWVTZBE56",
+          "7U64KZA4GIQSJRLS2WMRN33YNA",
+          "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+          "GVSV4MVQ7ITNOLT4AUXSASIFL3",
+          "GKOROF7KVEPGLLUB2RKFBDEL4F"
+        ],
+        "model_usage": {
+          "prompt_tokens": 1113,
+          "completion_tokens": 139,
+          "total_tokens": 1252,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:51.115923+00:00",
+      "ended_at": "2026-09-19T21:52:52.253394+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNTI=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确覆盖了问题核心：明确不能自行更改，属于高危操作，列出 /etc/sudoers.d/sudoerspaas 和 /mnt/paas/runtime 等目录，说明后果为权限异常，误操作后不建议修改并需自行恢复，与参考内容一致。"
+        },
+        "usage": {
+          "prompt_tokens": 1781,
+          "completion_tokens": 90,
+          "total_tokens": 1871,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1653
+        },
+        "trace_id": "fa8f404882831018467d1b10dc688177",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 1000.2405419945717
+      }
+    },
+    {
+      "id": "cce-q021",
+      "question": "给 kubelet 使用的数据盘重新分区可能造成什么后果，应如何恢复？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r21"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r21",
+        "cce-t1-r22",
+        "cce-t1-r19",
+        "cce-t7-r02",
+        "cce-t1-r24"
+      ],
+      "latency_ms": 1121.9280420045834,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "7YKQIO6JUYVSPX34HA3P2V5RLU",
+        "conversation_id": "AYBW3BKWDEKSGEUPQJW6B4LENJ",
+        "question": "给 kubelet 使用的数据盘重新分区可能造成什么后果，应如何恢复？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "对节点进行磁盘格式化或分区（包括系统盘、容器运行时和kubelet组件使用的数据盘）属于高危操作，可能导致节点不可用。\n\n该误操作后的解决方案是重置节点。",
+        "claims": [
+          {
+            "text": "对节点进行磁盘格式化或分区（包括系统盘、容器运行时和kubelet组件使用的数据盘）属于高危操作，可能导致节点不可用。",
+            "fragment_ids": [
+              "WU2TZZNKLVLIWI6CHKLMVKEHNM"
+            ]
+          },
+          {
+            "text": "该误操作后的解决方案是重置节点。",
+            "fragment_ids": [
+              "WU2TZZNKLVLIWI6CHKLMVKEHNM"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "WU2TZZNKLVLIWI6CHKLMVKEHNM",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r21 集群/节点 / Node节点",
+            "content_hash": "7a1ab9b1e7fece916c782d4344e7303cb2f0abcd71e1ac49f87b029079b80cb7",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/WU2TZZNKLVLIWI6CHKLMVKEHNM",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:52.317024Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "2b0eb34732ba148d901f08412a58fc2f",
+        "retrieved_fragment_ids": [
+          "WU2TZZNKLVLIWI6CHKLMVKEHNM",
+          "DL52JJRFWSTU7JHQRM2TUYHFFD",
+          "JERYHXCYRILOIFKGNBJAQM7CNC",
+          "6QIDDFHBKYHBCDCQOYVHSVYYF2",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F"
+        ],
+        "model_usage": {
+          "prompt_tokens": 859,
+          "completion_tokens": 100,
+          "total_tokens": 959,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:52.305741+00:00",
+      "ended_at": "2026-09-19T21:52:53.427677+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNTM=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确指出对kubelet数据盘所在范围的分区格式化会导致节点不可用，并给出重置节点的恢复方案，与参考资料cce-t1-r21完全一致，无额外无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1363,
+          "completion_tokens": 69,
+          "total_tokens": 1432,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1235
+        },
+        "trace_id": "8b3e5c1d550f10ef98373f8db423b58b",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 736.6157079959521
+      }
+    },
+    {
+      "id": "cce-q022",
+      "question": "在工作节点安装额外的软件以后调度不了工作负载，应该先做什么？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r22"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r22",
+        "cce-t3-r01",
+        "cce-t1-r15",
+        "cce-t4-r10",
+        "cce-t1-r23"
+      ],
+      "latency_ms": 1022.6403330016183,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "6AMED7RGR4UDHKA5QH2I4QBB5N",
+        "conversation_id": "QFHHDR6TTBMVNG2TXARAFCXDQY",
+        "question": "在工作节点安装额外的软件以后调度不了工作负载，应该先做什么？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "在节点上安装其他软件属于高危操作，会导致节点上的Kubernetes组件异常，节点状态变为不可用，无法部署工作负载到此节点。\n\n误操作后应先卸载已安装软件，再尝试恢复或重置节点，具体可参见重置节点。",
+        "claims": [
+          {
+            "text": "在节点上安装其他软件属于高危操作，会导致节点上的Kubernetes组件异常，节点状态变为不可用，无法部署工作负载到此节点。",
+            "fragment_ids": [
+              "DL52JJRFWSTU7JHQRM2TUYHFFD"
+            ]
+          },
+          {
+            "text": "误操作后应先卸载已安装软件，再尝试恢复或重置节点，具体可参见重置节点。",
+            "fragment_ids": [
+              "DL52JJRFWSTU7JHQRM2TUYHFFD"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "DL52JJRFWSTU7JHQRM2TUYHFFD",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r22 集群/节点 / Node节点",
+            "content_hash": "579b8fd0bad78e8f00859f3e1609226b302356c3a1bb5eee214ff090aef96335",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/DL52JJRFWSTU7JHQRM2TUYHFFD",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:53.48721Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "94481d113c1080907ebed44d26abd94c",
+        "retrieved_fragment_ids": [
+          "DL52JJRFWSTU7JHQRM2TUYHFFD",
+          "F32T7U5WIEY72AKXXE4E2BBB4Y",
+          "GVSV4MVQ7ITNOLT4AUXSASIFL3",
+          "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+          "IZJEZRRCGV2KA7YAJZEXOCTH6S"
+        ],
+        "model_usage": {
+          "prompt_tokens": 995,
+          "completion_tokens": 113,
+          "total_tokens": 1108,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:53.476036+00:00",
+      "ended_at": "2026-09-19T21:52:54.498684+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNTQ=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确覆盖了参考回答的关键点：先卸载已安装软件，再尝试恢复或重置节点，并说明可参见重置节点，与参考资料完全一致，没有遗漏或无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1514,
+          "completion_tokens": 67,
+          "total_tokens": 1581,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1386
+        },
+        "trace_id": "b0c46200681f5df9034d386815364eb6",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 736.9610000023386
+      }
+    },
+    {
+      "id": "cce-q024",
+      "question": "清理了 cce-pause 系统镜像后无法创建容器，而且拉不回来镜像，怎么办？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r24"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r24",
+        "cce-t3-r02",
+        "cce-t3-r01",
+        "cce-t1-r08",
+        "cce-t2-r05"
+      ],
+      "latency_ms": 717.4721670016879,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "TJRGDAIRNUZHKU7PEF5RLRWGFW",
+        "conversation_id": "4YNVQITG5O2M5GEXXLVKXWHJRW",
+        "question": "清理了 cce-pause 系统镜像后无法创建容器，而且拉不回来镜像，怎么办？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "删除节点上的 cce-pause 等系统镜像会导致无法正常创建容器，且无法拉取系统镜像。\n\n误操作后的解决方案是从其他正常节点复制该镜像恢复。",
+        "claims": [
+          {
+            "text": "删除节点上的 cce-pause 等系统镜像会导致无法正常创建容器，且无法拉取系统镜像。",
+            "fragment_ids": [
+              "I7DRU6FIQDNAMKI55BMR6MFJ6F"
+            ]
+          },
+          {
+            "text": "误操作后的解决方案是从其他正常节点复制该镜像恢复。",
+            "fragment_ids": [
+              "I7DRU6FIQDNAMKI55BMR6MFJ6F"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r24 集群/节点 / Node节点",
+            "content_hash": "5df7d8da94db00fc51e75ca9d7713360719f3bbd4a81e31443548abfc991ca80",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/I7DRU6FIQDNAMKI55BMR6MFJ6F",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:54.560636Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "de228169f310505359ea6adb9100bc71",
+        "retrieved_fragment_ids": [
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "7U64KZA4GIQSJRLS2WMRN33YNA",
+          "F32T7U5WIEY72AKXXE4E2BBB4Y",
+          "JPOR4PIIYKFIOHU4UWWOAXGTXY",
+          "C6VNW6GJJYBX6IECUMIH7QD4DU"
+        ],
+        "model_usage": {
+          "prompt_tokens": 935,
+          "completion_tokens": 98,
+          "total_tokens": 1033,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:54.549572+00:00",
+      "ended_at": "2026-09-19T21:52:55.267051+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNTU=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确涵盖了删除 cce-pause 系统镜像导致的后果及恢复方案，且所有断言均能在提供的检索上下文中找到依据。"
+        },
+        "usage": {
+          "prompt_tokens": 1429,
+          "completion_tokens": 56,
+          "total_tokens": 1485,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1301
+        },
+        "trace_id": "32c7bc61a6d48f9a7cb31ae4962a2223",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 628.2612499926472
+      }
+    },
+    {
+      "id": "cce-q026",
+      "question": "误删 /usr/local/bin/crictl 后 containerd 一直重启，是什么原因，如何修复？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r26"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r26",
+        "cce-t4-r03",
+        "cce-t3-r02",
+        "cce-t1-r11",
+        "cce-t5-r01"
+      ],
+      "latency_ms": 1014.1005000041332,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "AR7L5C632BCNVUGNZH5ITJJJVR",
+        "conversation_id": "HKBJOSVPJL4ZYRA5G46655SHGV",
+        "question": "误删 /usr/local/bin/crictl 后 containerd 一直重启，是什么原因，如何修复？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "删除 /usr/local/bin/crictl 会导致 containerd 健康检查异常，containerd 不断重启。\n\n误操作后的解决方案是重置节点，恢复 containerd 二进制和配置文件。",
+        "claims": [
+          {
+            "text": "删除 /usr/local/bin/crictl 会导致 containerd 健康检查异常，containerd 不断重启。",
+            "fragment_ids": [
+              "TESUHFOHXQBWRB5Z7CGGU3DR5N"
+            ]
+          },
+          {
+            "text": "误操作后的解决方案是重置节点，恢复 containerd 二进制和配置文件。",
+            "fragment_ids": [
+              "TESUHFOHXQBWRB5Z7CGGU3DR5N"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "TESUHFOHXQBWRB5Z7CGGU3DR5N",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r26 集群/节点 / Node节点",
+            "content_hash": "c12cbff94e59349d94562f0b6defacdb349c39b2ac22d46befa7a5dc49cf7fdb",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/TESUHFOHXQBWRB5Z7CGGU3DR5N",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:55.331273Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "14d092b105d23344b417a5179b650a04",
+        "retrieved_fragment_ids": [
+          "TESUHFOHXQBWRB5Z7CGGU3DR5N",
+          "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+          "7U64KZA4GIQSJRLS2WMRN33YNA",
+          "6OQW65RZHH6R72YGFYOSIZVRRP",
+          "J4J55SRQTELPSD7J5ZOUHSUGVT"
+        ],
+        "model_usage": {
+          "prompt_tokens": 1008,
+          "completion_tokens": 100,
+          "total_tokens": 1108,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:55.320368+00:00",
+      "ended_at": "2026-09-19T21:52:56.334477+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNTY=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案完整准确地说明了删除 /usr/local/bin/crictl 导致 containerd 健康检查异常并不断重启的原因，以及通过重置节点恢复二进制和配置文件的解决方案，与参考资料一致且直接回答问题。"
+        },
+        "usage": {
+          "prompt_tokens": 1611,
+          "completion_tokens": 70,
+          "total_tokens": 1681,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1483
+        },
+        "trace_id": "a6d05e9156e8bcc83319125d21211aa7",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 784.4715000101132
+      }
+    },
+    {
+      "id": "cce-q027",
+      "question": "自己创建或改动 paas 用户组，会影响哪些对象，应怎样恢复？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r27"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r27",
+        "cce-t1-r24",
+        "cce-t1-r08",
+        "cce-t1-r09",
+        "cce-t1-r13"
+      ],
+      "latency_ms": 809.7969999944326,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "TZTU2C63RLC64RDOMQ4AV2B74G",
+        "conversation_id": "UEPJLNRIZ7F6DA5QAG56AI2KNA",
+        "question": "自己创建或改动 paas 用户组，会影响哪些对象，应怎样恢复？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "修改或手动创建paas用户/用户组会影响CCE组件和业务Pod正常运行。\n\n误操作后解决方案为重置节点。",
+        "claims": [
+          {
+            "text": "修改或手动创建paas用户/用户组会影响CCE组件和业务Pod正常运行。",
+            "fragment_ids": [
+              "5OE4OST5LX3SWKTIUDXQB6XZAW"
+            ]
+          },
+          {
+            "text": "误操作后解决方案为重置节点。",
+            "fragment_ids": [
+              "5OE4OST5LX3SWKTIUDXQB6XZAW"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "5OE4OST5LX3SWKTIUDXQB6XZAW",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r27 集群/节点 / Node节点",
+            "content_hash": "9b87d83a7f56f14d409aea7cdcefa3e2aebc7bfa48a22ab0753afee049a78a7f",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/5OE4OST5LX3SWKTIUDXQB6XZAW",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:56.397431Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "902a0c1f7431d97aae36e22bee51b3b0",
+        "retrieved_fragment_ids": [
+          "5OE4OST5LX3SWKTIUDXQB6XZAW",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "JPOR4PIIYKFIOHU4UWWOAXGTXY",
+          "FWFO3HYYZQMXQR5M6MUDFEMSOD",
+          "LPZQM2PTFK4J3QFC5LBNSZ2I63"
+        ],
+        "model_usage": {
+          "prompt_tokens": 832,
+          "completion_tokens": 86,
+          "total_tokens": 918,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:56.386287+00:00",
+      "ended_at": "2026-09-19T21:52:57.196090+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNTc=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确回答了影响对象（CCE组件和业务Pod）和恢复方式（重置节点），与参考资料和参考答案一致，且无多余内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1340,
+          "completion_tokens": 58,
+          "total_tokens": 1398,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1212
+        },
+        "trace_id": "d0ddc20db4e9fad26a5a914eaf018960",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 755.6091669976013
+      }
+    },
+    {
+      "id": "cce-q029",
+      "question": "启用 tcp_tw_recycle 导致 NAT 出现异常，应该设回多少？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "网络",
+      "relevant_evidence_ids": [
+        "cce-t2-r02"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t2-r02",
+        "cce-t4-r03",
+        "cce-t2-r03",
+        "cce-t4-r04",
+        "cce-t2-r04"
+      ],
+      "latency_ms": 816.2775000091642,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "KZNUBZS6HZBXRLGIPNECLGUFTZ",
+        "conversation_id": "XWMLFV5FLQLPYJCWJO2TYQ7IM3",
+        "question": "启用 tcp_tw_recycle 导致 NAT 出现异常，应该设回多少？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "启用 net.ipv4.tcp_tw_recycle=1 会导致 NAT 异常，误操作后应将其修改为 net.ipv4.tcp_tw_recycle=0。",
+        "claims": [
+          {
+            "text": "启用 net.ipv4.tcp_tw_recycle=1 会导致 NAT 异常，误操作后应将其修改为 net.ipv4.tcp_tw_recycle=0。",
+            "fragment_ids": [
+              "APWPDQMZVOJAEAOI36GTI52MEW"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "APWPDQMZVOJAEAOI36GTI52MEW",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t2-r02 网络 / 网络",
+            "content_hash": "7e515f30d0afc72849ced4ed1ac0619e31cdc73dd2c78bb136437873f7400e0a",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/APWPDQMZVOJAEAOI36GTI52MEW",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:57.259345Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "c2cd4091eeabdb585e4c6b329747c083",
+        "retrieved_fragment_ids": [
+          "APWPDQMZVOJAEAOI36GTI52MEW",
+          "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+          "SR7ENK3HNC6YCW3FHRUNNO3YOL",
+          "53KETM5MBHQ3KBZYR4IZJRNXD4",
+          "P5TWVHLRF6LQB2EAOQGEG3KUUF"
+        ],
+        "model_usage": {
+          "prompt_tokens": 862,
+          "completion_tokens": 69,
+          "total_tokens": 931,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:57.248137+00:00",
+      "ended_at": "2026-09-19T21:52:58.064421+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNTg=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确指出了应设回 net.ipv4.tcp_tw_recycle=0，与参考一致；所有实质性断言均来自检索到的相关上下文；直接回答所问，无无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1356,
+          "completion_tokens": 69,
+          "total_tokens": 1425,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1228
+        },
+        "trace_id": "a66bcbb7d5ba69e3fd5cef1bb0a8b3e0",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 782.6051670126617
+      }
+    },
+    {
+      "id": "cce-q030",
+      "question": "tcp_tw_reuse 设置为 1 后出现网络异常，这篇文档建议如何处理？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "网络",
+      "relevant_evidence_ids": [
+        "cce-t2-r03"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t2-r03",
+        "cce-t2-r02",
+        "cce-t4-r03",
+        "cce-t2-r04",
+        "cce-t2-r05"
+      ],
+      "latency_ms": 911.8421660095919,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "IJA2L4LSN5I52GIQLBUQLHLIT4",
+        "conversation_id": "HXDFPYRE4IM6JPXCJIK3XCQWYA",
+        "question": "tcp_tw_reuse 设置为 1 后出现网络异常，这篇文档建议如何处理？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "修改内核参数 net.ipv4.tcp_tw_reuse=1 属于高危操作，会导致网络异常。\n\ntcp_tw_reuse 设置为 1 后出现网络异常，解决方案是修改内核参数 net.ipv4.tcp_tw_reuse=0。",
+        "claims": [
+          {
+            "text": "修改内核参数 net.ipv4.tcp_tw_reuse=1 属于高危操作，会导致网络异常。",
+            "fragment_ids": [
+              "SR7ENK3HNC6YCW3FHRUNNO3YOL"
+            ]
+          },
+          {
+            "text": "tcp_tw_reuse 设置为 1 后出现网络异常，解决方案是修改内核参数 net.ipv4.tcp_tw_reuse=0。",
+            "fragment_ids": [
+              "SR7ENK3HNC6YCW3FHRUNNO3YOL"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "SR7ENK3HNC6YCW3FHRUNNO3YOL",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t2-r03 网络 / 网络",
+            "content_hash": "96ae952a9953578c78a36aee3f1906d381251bae37d221f49633e51813f840f4",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/SR7ENK3HNC6YCW3FHRUNNO3YOL",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:58.131734Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "01cdeaf5b0342115d91b48041d7ecfd1",
+        "retrieved_fragment_ids": [
+          "SR7ENK3HNC6YCW3FHRUNNO3YOL",
+          "APWPDQMZVOJAEAOI36GTI52MEW",
+          "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+          "P5TWVHLRF6LQB2EAOQGEG3KUUF",
+          "C6VNW6GJJYBX6IECUMIH7QD4DU"
+        ],
+        "model_usage": {
+          "prompt_tokens": 851,
+          "completion_tokens": 119,
+          "total_tokens": 970,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:58.120005+00:00",
+      "ended_at": "2026-09-19T21:52:59.031853+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNTk=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确指出高危操作会导致网络异常，并正确给出恢复方案为修改tcp_tw_reuse=0，完全基于检索资料中对应tcp_tw_reuse的条目，无无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1367,
+          "completion_tokens": 71,
+          "total_tokens": 1438,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1239
+        },
+        "trace_id": "a0b14db4ab8e64ee585d97f30f559a49",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 726.6880419920199
+      }
+    },
+    {
+      "id": "cce-q031",
+      "question": "集群里 DNS 解析不正常，安全组应检查容器网段的哪个端口和协议？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "网络",
+      "relevant_evidence_ids": [
+        "cce-t2-r04"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t2-r04",
+        "cce-t1-r11",
+        "cce-t2-r05",
+        "cce-t1-r13",
+        "cce-t1-r23"
+      ],
+      "latency_ms": 1112.5854589918163,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "L2N2XKOHWTQN5SFOMMM6J6HLCC",
+        "conversation_id": "X4DSQAVASUR2NJP6XH5MBJBX3N",
+        "question": "集群里 DNS 解析不正常，安全组应检查容器网段的哪个端口和协议？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "节点安全组未放通容器网段（容器CIDR）的53端口UDP，会导致集群内DNS无法正常工作，需参照新建集群的安全组修复并放通安全组。",
+        "claims": [
+          {
+            "text": "节点安全组未放通容器网段（容器CIDR）的53端口UDP，会导致集群内DNS无法正常工作，需参照新建集群的安全组修复并放通安全组。",
+            "fragment_ids": [
+              "P5TWVHLRF6LQB2EAOQGEG3KUUF"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "P5TWVHLRF6LQB2EAOQGEG3KUUF",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t2-r04 网络 / 网络",
+            "content_hash": "e67049976bfac50a534f3e4e67a48b705e2a8e68f7619e88e741b3604a42a899",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/P5TWVHLRF6LQB2EAOQGEG3KUUF",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:52:59.094678Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "0d77f9202bd5b5083250a73b669754a2",
+        "retrieved_fragment_ids": [
+          "P5TWVHLRF6LQB2EAOQGEG3KUUF",
+          "6OQW65RZHH6R72YGFYOSIZVRRP",
+          "C6VNW6GJJYBX6IECUMIH7QD4DU",
+          "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+          "IZJEZRRCGV2KA7YAJZEXOCTH6S"
+        ],
+        "model_usage": {
+          "prompt_tokens": 871,
+          "completion_tokens": 72,
+          "total_tokens": 943,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:52:59.084005+00:00",
+      "ended_at": "2026-09-19T21:53:00.196598+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNjA=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确指出需检查节点安全组容器CIDR的53端口UDP，并说明后果和修复方式，与参考完全一致；所有实质断言均来自检索资料。"
+        },
+        "usage": {
+          "prompt_tokens": 1385,
+          "completion_tokens": 64,
+          "total_tokens": 1449,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1257
+        },
+        "trace_id": "ad7491a46365148413740340cfca0d47",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 646.9887499988545
+      }
+    },
+    {
+      "id": "cce-q032",
+      "question": "误删 default-network 的 network-attachment-definitions CRD，会影响什么，如何恢复？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "网络",
+      "relevant_evidence_ids": [
+        "cce-t2-r05"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t2-r05",
+        "cce-t1-r13",
+        "cce-t1-r23",
+        "cce-t4-r03",
+        "cce-t4-r04"
+      ],
+      "latency_ms": 809.1402499994729,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "X2AZKHGRLVVNKHZSYBDEXTGUPR",
+        "conversation_id": "I65I76II5C3UMRBMFP4QMYCEPX",
+        "question": "误删 default-network 的 network-attachment-definitions CRD，会影响什么，如何恢复？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "删除 default-network 的 network-attachment-definitions CRD 资源属于高危操作。\n\n会导致容器网络不通、集群删除失败等后果。\n\n误删后需使用正确的配置重新创建 default-network 资源来恢复。",
+        "claims": [
+          {
+            "text": "删除 default-network 的 network-attachment-definitions CRD 资源属于高危操作。",
+            "fragment_ids": [
+              "C6VNW6GJJYBX6IECUMIH7QD4DU"
+            ]
+          },
+          {
+            "text": "会导致容器网络不通、集群删除失败等后果。",
+            "fragment_ids": [
+              "C6VNW6GJJYBX6IECUMIH7QD4DU"
+            ]
+          },
+          {
+            "text": "误删后需使用正确的配置重新创建 default-network 资源来恢复。",
+            "fragment_ids": [
+              "C6VNW6GJJYBX6IECUMIH7QD4DU"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "C6VNW6GJJYBX6IECUMIH7QD4DU",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t2-r05 网络 / 网络",
+            "content_hash": "da324a516eb2e19b82a7b954304bebef3e695f72dfd677b33233c3eab969e0d7",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/C6VNW6GJJYBX6IECUMIH7QD4DU",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:00.263314Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "2a63973ac4a786662ed09f2d88efa0e2",
+        "retrieved_fragment_ids": [
+          "C6VNW6GJJYBX6IECUMIH7QD4DU",
+          "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+          "IZJEZRRCGV2KA7YAJZEXOCTH6S",
+          "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+          "53KETM5MBHQ3KBZYR4IZJRNXD4"
+        ],
+        "model_usage": {
+          "prompt_tokens": 837,
+          "completion_tokens": 134,
+          "total_tokens": 971,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:00.250815+00:00",
+      "ended_at": "2026-09-19T21:53:01.059962+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNjE=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确覆盖了误删 default-network 的 network-attachment-definitions CRD 的影响（容器网络不通、集群删除失败）及恢复方法（用正确配置重新创建 default-network），与参考资料完全一致，无多余或无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1350,
+          "completion_tokens": 78,
+          "total_tokens": 1428,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1222
+        },
+        "trace_id": "7a9609a371d5b6ed94afb1c60fa7330c",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 846.1385839909781
+      }
+    },
+    {
+      "id": "cce-q033",
+      "question": "节点打开 iptables 防火墙后容器之间不通，需要关闭什么并检查哪些规则文件？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "网络",
+      "relevant_evidence_ids": [
+        "cce-t2-r06"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t2-r06",
+        "cce-t2-r07",
+        "cce-t1-r16",
+        "cce-t1-r24",
+        "cce-t1-r23"
+      ],
+      "latency_ms": 802.2454159945482,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "4QEPG75B33GCTKKDFKK7LZOCON",
+        "conversation_id": "V6HPR6P4JYOUDHXHINFIYFMPQK",
+        "question": "节点打开 iptables 防火墙后容器之间不通，需要关闭什么并检查哪些规则文件？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "节点开启 iptables 防火墙可能导致网络不通；误操作后应关闭 iptables 防火墙，并检查 /etc/sysconfig/iptables 和 /etc/sysconfig/ip6tables 中配置的规则。",
+        "claims": [
+          {
+            "text": "节点开启 iptables 防火墙可能导致网络不通；误操作后应关闭 iptables 防火墙，并检查 /etc/sysconfig/iptables 和 /etc/sysconfig/ip6tables 中配置的规则。",
+            "fragment_ids": [
+              "24Z7UL56FJDKLWXWM7RRRBWG4W"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "24Z7UL56FJDKLWXWM7RRRBWG4W",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t2-r06 网络 / 网络",
+            "content_hash": "4c54e8f4e3bf83e3618c89654bc5b32acd67168b2146d937623e46625cdc6a24",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/24Z7UL56FJDKLWXWM7RRRBWG4W",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:01.12058Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "388106df3a8720a28be9b6046a607c2c",
+        "retrieved_fragment_ids": [
+          "24Z7UL56FJDKLWXWM7RRRBWG4W",
+          "GKOROF7KVEPGLLUB2RKFBDEL4F",
+          "V2LLZOP3UCM3HHIUXII23GT7XO",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "IZJEZRRCGV2KA7YAJZEXOCTH6S"
+        ],
+        "model_usage": {
+          "prompt_tokens": 911,
+          "completion_tokens": 82,
+          "total_tokens": 993,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:01.109258+00:00",
+      "ended_at": "2026-09-19T21:53:01.911511+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNjI=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确指出需关闭iptables防火墙，并检查/etc/sysconfig/iptables和/etc/sysconfig/ip6tables规则，与参考一致且有检索上下文支撑。"
+        },
+        "usage": {
+          "prompt_tokens": 1481,
+          "completion_tokens": 65,
+          "total_tokens": 1546,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1353
+        },
+        "trace_id": "996dab944e0263a8590930004712ca50",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 541.6578750009649
+      }
+    },
+    {
+      "id": "cce-q034",
+      "question": "隧道网络集群里能把 openvswitch 换成发行版自带的新版吗？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "网络",
+      "relevant_evidence_ids": [
+        "cce-t2-r07"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t2-r07",
+        "cce-t7-r02",
+        "cce-t4-r04",
+        "cce-t1-r13",
+        "cce-t1-r23"
+      ],
+      "latency_ms": 793.5588330001337,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "REP62RDYARQYWEGRJPGSOP2LKS",
+        "conversation_id": "JRGEJKT3ZQCLB46WWDPZS4SCDG",
+        "question": "隧道网络集群里能把 openvswitch 换成发行版自带的新版吗？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "容器隧道网络集群数据面组件采用的是华为优化后的openvswitch组件，不支持自行升级为操作系统自带的openvswitch。\n\n在容器隧道网络集群节点升级openvswitch属于高危操作，会导致容器网络不通。",
+        "claims": [
+          {
+            "text": "容器隧道网络集群数据面组件采用的是华为优化后的openvswitch组件，不支持自行升级为操作系统自带的openvswitch。",
+            "fragment_ids": [
+              "GKOROF7KVEPGLLUB2RKFBDEL4F"
+            ]
+          },
+          {
+            "text": "在容器隧道网络集群节点升级openvswitch属于高危操作，会导致容器网络不通。",
+            "fragment_ids": [
+              "GKOROF7KVEPGLLUB2RKFBDEL4F"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "GKOROF7KVEPGLLUB2RKFBDEL4F",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t2-r07 网络 / 网络",
+            "content_hash": "ca994cae09b8aa264e2f02e522c1cb8c0f5c8795e7b672a5850b810d129f3dd3",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/GKOROF7KVEPGLLUB2RKFBDEL4F",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:01.976132Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "bf1cf7f995d69714f44ec08647bfaf11",
+        "retrieved_fragment_ids": [
+          "GKOROF7KVEPGLLUB2RKFBDEL4F",
+          "6QIDDFHBKYHBCDCQOYVHSVYYF2",
+          "53KETM5MBHQ3KBZYR4IZJRNXD4",
+          "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+          "IZJEZRRCGV2KA7YAJZEXOCTH6S"
+        ],
+        "model_usage": {
+          "prompt_tokens": 851,
+          "completion_tokens": 103,
+          "total_tokens": 954,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:01.964564+00:00",
+      "ended_at": "2026-09-19T21:53:02.758128+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNjM=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确指出容器隧道网络集群不支持将华为优化后的 openvswitch 自行升级为系统自带版本，并补充了高危操作及后果，与参考要点一致，且所有断言均有检索资料支撑。"
+        },
+        "usage": {
+          "prompt_tokens": 1399,
+          "completion_tokens": 71,
+          "total_tokens": 1470,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1271
+        },
+        "trace_id": "7cd346ac0638b3c573b398b364f5a2ea",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 840.1598750060657
+      }
+    },
+    {
+      "id": "cce-q035",
+      "question": "特权容器运行 systemctl 后宿主机挂载点异常，可能是什么操作造成的，怎么恢复？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "容器",
+      "relevant_evidence_ids": [
+        "cce-t3-r01"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t3-r02",
+        "cce-t4-r03",
+        "cce-t3-r01",
+        "cce-t1-r24",
+        "cce-t1-r22"
+      ],
+      "latency_ms": 1028.5204999963753,
+      "metrics": {
+        "recall_at_1": 0.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 0.3333333333333333,
+        "ndcg_at_5": 0.5,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "KQJXAHXNUZLVHWJGFC6J2G3OSW",
+        "conversation_id": "QCRCCLV7O3DHZEXHLA6DVV3GEE",
+        "question": "特权容器运行 systemctl 后宿主机挂载点异常，可能是什么操作造成的，怎么恢复？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "将负载设置为特权容器、启动命令配置为/usr/sbin/init、在容器内使用systemctl操作，会影响节点/lib路径下的系统文件，可能导致节点所有挂载点被卸载，造成节点异常并影响节点上的Pod正常运行及存储插件功能。\n\n该误操作的恢复方式是禁止移除节点/lib路径下的挂载点，通过重置节点恢复。",
+        "claims": [
+          {
+            "text": "将负载设置为特权容器、启动命令配置为/usr/sbin/init、在容器内使用systemctl操作，会影响节点/lib路径下的系统文件，可能导致节点所有挂载点被卸载，造成节点异常并影响节点上的Pod正常运行及存储插件功能。",
+            "fragment_ids": [
+              "F32T7U5WIEY72AKXXE4E2BBB4Y"
+            ]
+          },
+          {
+            "text": "该误操作的恢复方式是禁止移除节点/lib路径下的挂载点，通过重置节点恢复。",
+            "fragment_ids": [
+              "F32T7U5WIEY72AKXXE4E2BBB4Y"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "F32T7U5WIEY72AKXXE4E2BBB4Y",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t3-r01 容器 / 容器",
+            "content_hash": "998264dc7e6ea6f8023528fc41171080303942c45ddd8cce6450cd3b570e343c",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/F32T7U5WIEY72AKXXE4E2BBB4Y",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:02.821026Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "c9264efabaf5066d5d88d1101f03c47d",
+        "retrieved_fragment_ids": [
+          "7U64KZA4GIQSJRLS2WMRN33YNA",
+          "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+          "F32T7U5WIEY72AKXXE4E2BBB4Y",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "DL52JJRFWSTU7JHQRM2TUYHFFD"
+        ],
+        "model_usage": {
+          "prompt_tokens": 959,
+          "completion_tokens": 139,
+          "total_tokens": 1098,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:02.809935+00:00",
+      "ended_at": "2026-09-19T21:53:03.838463+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNjQ=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确覆盖了参考回答中的原因、后果与恢复方式，且所有实质断言均能在提供的资料 cce-t3-r01 中找到依据，没有无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1553,
+          "completion_tokens": 63,
+          "total_tokens": 1616,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1425
+        },
+        "trace_id": "3149c39283669e6150349648c15b5bc5",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 583.008499990683
+      }
+    },
+    {
+      "id": "cce-q038",
+      "question": "暂时在 ELB 控制台停用已绑定 CCE 的实例，会影响 Service 和 Ingress 吗？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "负载均衡",
+      "relevant_evidence_ids": [
+        "cce-t4-r02"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r02",
+        "cce-t4-r01",
+        "cce-t4-r06",
+        "cce-t4-r05",
+        "cce-t4-r08"
+      ],
+      "latency_ms": 1120.8536659978563,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "JKKFBIJUDO42KDKX3AEMLCOJ2T",
+        "conversation_id": "UK2CJPU4LF3ULAGIYUIAS62GAE",
+        "question": "暂时在 ELB 控制台停用已绑定 CCE 的实例，会影响 Service 和 Ingress 吗？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "通过ELB控制台停用已绑定CCE集群的ELB实例，会导致Service/Ingress访问不通。\n\n针对该停用操作，不建议停用，需要自行恢复。",
+        "claims": [
+          {
+            "text": "通过ELB控制台停用已绑定CCE集群的ELB实例，会导致Service/Ingress访问不通。",
+            "fragment_ids": [
+              "UHA5GQBEA4VNTSUOE55KXLFH3Y"
+            ]
+          },
+          {
+            "text": "针对该停用操作，不建议停用，需要自行恢复。",
+            "fragment_ids": [
+              "UHA5GQBEA4VNTSUOE55KXLFH3Y"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "UHA5GQBEA4VNTSUOE55KXLFH3Y",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t4-r02 负载均衡 / 负载均衡",
+            "content_hash": "9a427a0fe6f35a2f8c0f7d4bd542b5976f1e9dcd3f7f32d5ff8f5caffb5976f2",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/UHA5GQBEA4VNTSUOE55KXLFH3Y",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:03.907999Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "9d307ebd9fe55b63d6cb79670e34b5ee",
+        "retrieved_fragment_ids": [
+          "UHA5GQBEA4VNTSUOE55KXLFH3Y",
+          "XJ3743I2YP4MMAZAH57FHDMD3A",
+          "XOLPYMR6BZQPKS3IFXLH4OYZS6",
+          "G3BDOMUT473X7NO3FJTWLWDVPV",
+          "KI6XHF5UKFL6YYJTU6AZBFNZNS"
+        ],
+        "model_usage": {
+          "prompt_tokens": 926,
+          "completion_tokens": 98,
+          "total_tokens": 1024,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:03.896620+00:00",
+      "ended_at": "2026-09-19T21:53:05.017481+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNjU=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确覆盖了停用已绑定CCE的ELB实例会导致Service/Ingress访问不通，以及不建议停用、需自行恢复两个关键点；所有实质性断言均有检索资料支持，且直接回应该问题。"
+        },
+        "usage": {
+          "prompt_tokens": 1427,
+          "completion_tokens": 75,
+          "total_tokens": 1502,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1299
+        },
+        "trace_id": "62c09afc1e5eb2f99ab4b129b923e903",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 557.2510420024628
+      }
+    },
+    {
+      "id": "cce-q040",
+      "question": "把 CCE 使用的负载均衡器公网 IP 解绑后，它会变成什么类型，公网流量还能转发吗？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "负载均衡",
+      "relevant_evidence_ids": [
+        "cce-t4-r04"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r04",
+        "cce-t4-r03",
+        "cce-t4-r10",
+        "cce-t4-r07",
+        "cce-t2-r07"
+      ],
+      "latency_ms": 694.7832500009099,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "EFDZ6KLKE3L6RFOFZMQDX6T465",
+        "conversation_id": "YTNBQDZLMSQMS6TMKFIQWJB2SA",
+        "question": "把 CCE 使用的负载均衡器公网 IP 解绑后，它会变成什么类型，公网流量还能转发吗？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "通过ELB的控制台解绑ELB的IPv4公网IP后，该弹性负载均衡器变更为私网类型，无法进行公网流量转发。",
+        "claims": [
+          {
+            "text": "通过ELB的控制台解绑ELB的IPv4公网IP后，该弹性负载均衡器变更为私网类型，无法进行公网流量转发。",
+            "fragment_ids": [
+              "53KETM5MBHQ3KBZYR4IZJRNXD4"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "53KETM5MBHQ3KBZYR4IZJRNXD4",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t4-r04 负载均衡 / 负载均衡",
+            "content_hash": "bbc51634c2d25be6d1fbc28963f21c9fc3cface213b49ae7b710ac7a8c310a9c",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/53KETM5MBHQ3KBZYR4IZJRNXD4",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:05.083377Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "c9d5ea93fd6f80a2552ecfb091806dc2",
+        "retrieved_fragment_ids": [
+          "53KETM5MBHQ3KBZYR4IZJRNXD4",
+          "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+          "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+          "TTLD25XCOIY3LVOSJ6XG2E7I4K",
+          "GKOROF7KVEPGLLUB2RKFBDEL4F"
+        ],
+        "model_usage": {
+          "prompt_tokens": 951,
+          "completion_tokens": 67,
+          "total_tokens": 1018,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:05.071946+00:00",
+      "ended_at": "2026-09-19T21:53:05.766735+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNjY=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案完整准确地回答了两个关键点：解绑后变为私网类型，且无法进行公网流量转发，均与参考资料一致，无额外无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1459,
+          "completion_tokens": 61,
+          "total_tokens": 1520,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1331
+        },
+        "trace_id": "b8956937f0231e48581f94dcb28e9f74",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 700.093959007063
+      }
+    },
+    {
+      "id": "cce-q041",
+      "question": "在 CCE 自动创建的 ELB 上手动加了监听器，删除 Service 时为什么 ELB 可能删不掉？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "负载均衡",
+      "relevant_evidence_ids": [
+        "cce-t4-r05"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r05",
+        "cce-t4-r01",
+        "cce-t4-r06",
+        "cce-t4-r10",
+        "cce-t4-r08"
+      ],
+      "latency_ms": 890.9931250091176,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "MKOTZRJANMK2ER75EWWRSWLIJF",
+        "conversation_id": "W2XPTJ3XRY37KKFK7DSE64FVXO",
+        "question": "在 CCE 自动创建的 ELB 上手动加了监听器，删除 Service 时为什么 ELB 可能删不掉？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "若ELB是创建Service/Ingress时自动创建的，在Service/Ingress删除时无法删除ELB的自定义监听器，会导致无法自动删除ELB。\n\n误操作后的解决方案：通过Service/Ingress自动创建监听器，否则需要手动删除ELB。",
+        "claims": [
+          {
+            "text": "若ELB是创建Service/Ingress时自动创建的，在Service/Ingress删除时无法删除ELB的自定义监听器，会导致无法自动删除ELB。",
+            "fragment_ids": [
+              "G3BDOMUT473X7NO3FJTWLWDVPV"
+            ]
+          },
+          {
+            "text": "误操作后的解决方案：通过Service/Ingress自动创建监听器，否则需要手动删除ELB。",
+            "fragment_ids": [
+              "G3BDOMUT473X7NO3FJTWLWDVPV"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "G3BDOMUT473X7NO3FJTWLWDVPV",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t4-r05 负载均衡 / 负载均衡",
+            "content_hash": "1ceb66dae0a041ff1155fbbc5fb6a3fbcdd5efa789d517c7331460ecbb50d414",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/G3BDOMUT473X7NO3FJTWLWDVPV",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:05.83244Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "32dc7b53ed5c3293c30f7d4b4f26936b",
+        "retrieved_fragment_ids": [
+          "G3BDOMUT473X7NO3FJTWLWDVPV",
+          "XJ3743I2YP4MMAZAH57FHDMD3A",
+          "XOLPYMR6BZQPKS3IFXLH4OYZS6",
+          "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+          "KI6XHF5UKFL6YYJTU6AZBFNZNS"
+        ],
+        "model_usage": {
+          "prompt_tokens": 961,
+          "completion_tokens": 115,
+          "total_tokens": 1076,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:05.821118+00:00",
+      "ended_at": "2026-09-19T21:53:06.712118+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNjc=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确说明了在CCE自动创建的ELB上手动添加监听器会导致删除Service时无法自动删除ELB，并给出了误操作后的解决方案，所有断言均有检索上下文依据。"
+        },
+        "usage": {
+          "prompt_tokens": 1508,
+          "completion_tokens": 66,
+          "total_tokens": 1574,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1380
+        },
+        "trace_id": "3a6442384ac2bc4535815e72524e0f38",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 779.8486249957932
+      }
+    },
+    {
+      "id": "cce-q045",
+      "question": "直接替换 CCE 监听器关联的整个后端服务器组，可能有什么后果，应该怎么处理？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "负载均衡",
+      "relevant_evidence_ids": [
+        "cce-t4-r09"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r09",
+        "cce-t4-r07",
+        "cce-t4-r08",
+        "cce-t4-r10",
+        "cce-t4-r06"
+      ],
+      "latency_ms": 1021.9131659978302,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "Z7Z3ZDYVFGWFLOAJW4OK7GNDC3",
+        "conversation_id": "Y6BDBEZHFKUIFU5R5MF2YJ6SD7",
+        "question": "直接替换 CCE 监听器关联的整个后端服务器组，可能有什么后果，应该怎么处理？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "通过ELB的控制台更换CCE创建的监听器后端服务器组属于高危操作，会导致Service/Ingress访问不通。\n\n在集群升级等需要重启控制节点的场景，后端服务器组中的后端服务器会被CCE侧重置。\n\n误操作后的解决方案是重新创建或更新Service/Ingress。",
+        "claims": [
+          {
+            "text": "通过ELB的控制台更换CCE创建的监听器后端服务器组属于高危操作，会导致Service/Ingress访问不通。",
+            "fragment_ids": [
+              "L7BT4SI3OP6IUZD5BCTUXK3YQR"
+            ]
+          },
+          {
+            "text": "在集群升级等需要重启控制节点的场景，后端服务器组中的后端服务器会被CCE侧重置。",
+            "fragment_ids": [
+              "L7BT4SI3OP6IUZD5BCTUXK3YQR"
+            ]
+          },
+          {
+            "text": "误操作后的解决方案是重新创建或更新Service/Ingress。",
+            "fragment_ids": [
+              "L7BT4SI3OP6IUZD5BCTUXK3YQR"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "L7BT4SI3OP6IUZD5BCTUXK3YQR",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t4-r09 负载均衡 / 负载均衡",
+            "content_hash": "b14edce4084825234ef1dcd31c9cebfcef826a7a326aef4700bfbf430d7390ad",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/L7BT4SI3OP6IUZD5BCTUXK3YQR",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:06.778488Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "3a443b1fd14e43f4978c21602a35525e",
+        "retrieved_fragment_ids": [
+          "L7BT4SI3OP6IUZD5BCTUXK3YQR",
+          "TTLD25XCOIY3LVOSJ6XG2E7I4K",
+          "KI6XHF5UKFL6YYJTU6AZBFNZNS",
+          "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+          "XOLPYMR6BZQPKS3IFXLH4OYZS6"
+        ],
+        "model_usage": {
+          "prompt_tokens": 969,
+          "completion_tokens": 151,
+          "total_tokens": 1120,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:06.766820+00:00",
+      "ended_at": "2026-09-19T21:53:07.788739+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNjg=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案完整准确地回答了直接替换整个后端服务器组的后果（Service/Ingress访问不通、后端服务器被CCE重置）及处理方法（重新创建或更新Service/Ingress），所有实质性断言均能在提供的资料中找到依据，且内容直接针对问题，没有无关信息。"
+        },
+        "usage": {
+          "prompt_tokens": 1506,
+          "completion_tokens": 85,
+          "total_tokens": 1591,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1378
+        },
+        "trace_id": "dbef59f0b281b2ddc3a456185680a74a",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 1321.9682500057388
+      }
+    },
+    {
+      "id": "cce-q046",
+      "question": "在 ELB 侧手工改了 Ingress 产生的转发规则，控制节点重启时会发生什么？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "负载均衡",
+      "relevant_evidence_ids": [
+        "cce-t4-r10"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r10",
+        "cce-t4-r06",
+        "cce-t1-r07",
+        "cce-t4-r09",
+        "cce-t1-r18"
+      ],
+      "latency_ms": 1260.7917499990435,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "F4YEIDQW62BVDNN3N6PR2OI6BS",
+        "conversation_id": "AJB7CERBPTLUJFZWQGS44I4MLR",
+        "question": "在 ELB 侧手工改了 Ingress 产生的转发规则，控制节点重启时会发生什么？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "通过ELB控制台修改CCE创建的监听器转发策略（添加、删除转发规则）会导致Service/Ingress访问不通。\n\n如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。\n\n误操作后不建议修改，请自行恢复。",
+        "claims": [
+          {
+            "text": "通过ELB控制台修改CCE创建的监听器转发策略（添加、删除转发规则）会导致Service/Ingress访问不通。",
+            "fragment_ids": [
+              "3CKLXXI7D6XJO6EDVF6WQKCOYS"
+            ]
+          },
+          {
+            "text": "如果该转发规则由Ingress添加，在集群升级等需要重启控制节点的场景，所做修改会被CCE侧重置。",
+            "fragment_ids": [
+              "3CKLXXI7D6XJO6EDVF6WQKCOYS"
+            ]
+          },
+          {
+            "text": "误操作后不建议修改，请自行恢复。",
+            "fragment_ids": [
+              "3CKLXXI7D6XJO6EDVF6WQKCOYS"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t4-r10 负载均衡 / 负载均衡",
+            "content_hash": "f5995e38cd71284bf2f658a272a5543f6e959e57c5c85274c1eb4d694dfb54a4",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/3CKLXXI7D6XJO6EDVF6WQKCOYS",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:07.85035Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "1612b4cad20ba254af5eae1419869d74",
+        "retrieved_fragment_ids": [
+          "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+          "XOLPYMR6BZQPKS3IFXLH4OYZS6",
+          "3AN4DP22X6DTGYMMIYOHO5WNLN",
+          "L7BT4SI3OP6IUZD5BCTUXK3YQR",
+          "B7IUL7OSULLCR2EGTBHFHLFHZK"
+        ],
+        "model_usage": {
+          "prompt_tokens": 885,
+          "completion_tokens": 157,
+          "total_tokens": 1042,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:07.839967+00:00",
+      "ended_at": "2026-09-19T21:53:09.100763+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNjk=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确回答了在ELB侧手工修改Ingress转发规则后，控制节点重启时所作修改会被CCE侧重置，并涵盖了访问不通和恢复建议，与参考一致且完全有据。"
+        },
+        "usage": {
+          "prompt_tokens": 1435,
+          "completion_tokens": 70,
+          "total_tokens": 1505,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1307
+        },
+        "trace_id": "282cf1da0b428d3467b657bb0796f09d",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 967.5302090035984
+      }
+    },
+    {
+      "id": "cce-q047",
+      "question": "要更换 CCE 监听器的服务器证书，怎样更新才能避免集群升级时被覆盖？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "负载均衡",
+      "relevant_evidence_ids": [
+        "cce-t4-r11"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t4-r11",
+        "cce-t4-r07",
+        "cce-t4-r10",
+        "cce-t4-r08",
+        "cce-t4-r09"
+      ],
+      "latency_ms": 793.4775830071885,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "V7FCMQFLTADR542CCDBUV3L6KN",
+        "conversation_id": "WVIHZTWXGEIKKGZXTZ2AAY33A6",
+        "question": "要更换 CCE 监听器的服务器证书，怎样更新才能避免集群升级时被覆盖？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "在ELB控制台给CCE创建的监听器更换证书，或在ELB证书管理界面修改CCE通过TLS密钥创建的服务器证书属于高危操作，在集群升级等需要重启控制节点的场景所做修改会被CCE侧重置，可能导致Service/Ingress访问不通。\n\n正确做法是通过CCE控制台或YAML方式更新Service/Ingress关联的证书，或者更新Service/Ingress关联的TLS密钥资源。",
+        "claims": [
+          {
+            "text": "在ELB控制台给CCE创建的监听器更换证书，或在ELB证书管理界面修改CCE通过TLS密钥创建的服务器证书属于高危操作，在集群升级等需要重启控制节点的场景所做修改会被CCE侧重置，可能导致Service/Ingress访问不通。",
+            "fragment_ids": [
+              "DVLHX3EFKXP6CYO5U56KH6AXBO"
+            ]
+          },
+          {
+            "text": "正确做法是通过CCE控制台或YAML方式更新Service/Ingress关联的证书，或者更新Service/Ingress关联的TLS密钥资源。",
+            "fragment_ids": [
+              "DVLHX3EFKXP6CYO5U56KH6AXBO"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "DVLHX3EFKXP6CYO5U56KH6AXBO",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t4-r11 负载均衡 / 负载均衡",
+            "content_hash": "1f4b9b2748fbf60f3ccae2df4e36d00087c4c18e606524244b82f574eabf06a1",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/DVLHX3EFKXP6CYO5U56KH6AXBO",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:09.152416Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "004fd91c7557699fabd72e45c8ad4266",
+        "retrieved_fragment_ids": [
+          "DVLHX3EFKXP6CYO5U56KH6AXBO",
+          "TTLD25XCOIY3LVOSJ6XG2E7I4K",
+          "3CKLXXI7D6XJO6EDVF6WQKCOYS",
+          "KI6XHF5UKFL6YYJTU6AZBFNZNS",
+          "L7BT4SI3OP6IUZD5BCTUXK3YQR"
+        ],
+        "model_usage": {
+          "prompt_tokens": 1009,
+          "completion_tokens": 153,
+          "total_tokens": 1162,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:09.141230+00:00",
+      "ended_at": "2026-09-19T21:53:09.934715+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNzA=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确指出应通过CCE控制台或YAML方式更新Service/Ingress关联的证书或TLS密钥资源，并说明ELB控制台修改会被CCE侧重置，完整匹配参考要点，所有实质性断言均有检索上下文依据。"
+        },
+        "usage": {
+          "prompt_tokens": 1615,
+          "completion_tokens": 80,
+          "total_tokens": 1695,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1487
+        },
+        "trace_id": "50125f7fe1c994ba0a870d9253919673",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 739.6031249954831
+      }
+    },
+    {
+      "id": "cce-q048",
+      "question": "删掉日志采集器的 pos 目录后日志为什么可能重复收集？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "日志",
+      "relevant_evidence_ids": [
+        "cce-t5-r01"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t5-r01",
+        "cce-t5-r02",
+        "cce-t1-r24",
+        "cce-t3-r02",
+        "cce-t1-r19"
+      ],
+      "latency_ms": 802.9174999974202,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "ZOZMDBI3EV7SMPTDL6T5GBSCRT",
+        "conversation_id": "4A53LSV32O54H6DB2LQT5Q3XDL",
+        "question": "删掉日志采集器的 pos 目录后日志为什么可能重复收集？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "删除宿主机/tmp/ccs-log-collector/pos目录属于高危操作，其导致的后果为日志重复采集。",
+        "claims": [
+          {
+            "text": "删除宿主机/tmp/ccs-log-collector/pos目录属于高危操作，其导致的后果为日志重复采集。",
+            "fragment_ids": [
+              "J4J55SRQTELPSD7J5ZOUHSUGVT"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "J4J55SRQTELPSD7J5ZOUHSUGVT",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t5-r01 日志 / 日志",
+            "content_hash": "53f8204b57fc2a5c541fb861aa0d64f5eb7459dfd161d87bde724eb6d973e4de",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/J4J55SRQTELPSD7J5ZOUHSUGVT",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:10.001168Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "07618cf96ee18584b885121e76c5a0bc",
+        "retrieved_fragment_ids": [
+          "J4J55SRQTELPSD7J5ZOUHSUGVT",
+          "D56WJ54JEFVBVKCDQXFMTNRU5H",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "7U64KZA4GIQSJRLS2WMRN33YNA",
+          "JERYHXCYRILOIFKGNBJAQM7CNC"
+        ],
+        "model_usage": {
+          "prompt_tokens": 824,
+          "completion_tokens": 60,
+          "total_tokens": 884,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:09.989438+00:00",
+      "ended_at": "2026-09-19T21:53:10.792361+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNzE=",
+      "judge": {
+        "scores": {
+          "correctness": 0.5,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案正确指出了删除pos目录会导致日志重复采集，但未解释问题中的“为什么”（即缺少机制说明），且参考资料本身仅列出后果，未提供原因。答案完全基于检索到的第一条证据，无编造内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1286,
+          "completion_tokens": 77,
+          "total_tokens": 1363,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1158
+        },
+        "trace_id": "f9a763401f4bfd67429d1df8ae938e64",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 814.5049590093549
+      }
+    },
+    {
+      "id": "cce-q049",
+      "question": "清理宿主机上的 ccs-log-collector/buffer 目录会丢失什么？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "日志",
+      "relevant_evidence_ids": [
+        "cce-t5-r02"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t5-r02",
+        "cce-t5-r01",
+        "cce-t3-r02",
+        "cce-t1-r24",
+        "cce-t7-r02"
+      ],
+      "latency_ms": 797.4201659963,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "CC4G4EBN5IUP35WIPUKOZXEYVV",
+        "conversation_id": "TOYQZ2NYEXJFPKIWBBO7R42SGY",
+        "question": "清理宿主机上的 ccs-log-collector/buffer 目录会丢失什么？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "删除宿主机/tmp/ccs-log-collector/buffer目录会导致日志丢失。\n\n删除宿主机/tmp/ccs-log-collector/buffer目录属于高危操作，误操作后无解决方案。",
+        "claims": [
+          {
+            "text": "删除宿主机/tmp/ccs-log-collector/buffer目录会导致日志丢失。",
+            "fragment_ids": [
+              "D56WJ54JEFVBVKCDQXFMTNRU5H"
+            ]
+          },
+          {
+            "text": "删除宿主机/tmp/ccs-log-collector/buffer目录属于高危操作，误操作后无解决方案。",
+            "fragment_ids": [
+              "D56WJ54JEFVBVKCDQXFMTNRU5H"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "D56WJ54JEFVBVKCDQXFMTNRU5H",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t5-r02 日志 / 日志",
+            "content_hash": "77a32ca9624e94a40583c04bc2c590e0b7dc806254f04553a12b4838995ed852",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/D56WJ54JEFVBVKCDQXFMTNRU5H",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:10.853607Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "752077774b5abf674b630029ca547c0a",
+        "retrieved_fragment_ids": [
+          "D56WJ54JEFVBVKCDQXFMTNRU5H",
+          "J4J55SRQTELPSD7J5ZOUHSUGVT",
+          "7U64KZA4GIQSJRLS2WMRN33YNA",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "6QIDDFHBKYHBCDCQOYVHSVYYF2"
+        ],
+        "model_usage": {
+          "prompt_tokens": 821,
+          "completion_tokens": 105,
+          "total_tokens": 926,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:10.842254+00:00",
+      "ended_at": "2026-09-19T21:53:11.639678+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNzI=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确回答删除宿主机/tmp/ccs-log-collector/buffer目录会导致日志丢失，并补充了高危操作及无解决方案的细节，与参考资料完全一致，无多余无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1305,
+          "completion_tokens": 76,
+          "total_tokens": 1381,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1177
+        },
+        "trace_id": "4f149df6c6d3b6c524dcde7e8b85b2cd",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 774.6795419952832
+      }
+    },
+    {
+      "id": "cce-q050",
+      "question": "100 个节点的集群，云原生监控采集分片通常该配多少，配太多有什么风险？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "监控",
+      "relevant_evidence_ids": [
+        "cce-t6-r01"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t6-r01",
+        "cce-t1-r02",
+        "cce-t1-r08",
+        "cce-t1-r07",
+        "cce-t1-r05"
+      ],
+      "latency_ms": 1114.292583995848,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "CVFJRIKVTZBOS4BA5HTNPN3YH3",
+        "conversation_id": "F2BBCN4SXGF4J2GZ5WXYWJCGEA",
+        "question": "100 个节点的集群，云原生监控采集分片通常该配多少，配太多有什么风险？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "云原生监控采集分片的推荐配置为每50个节点配置一个采集分片，因此100个节点的集群推荐配置约2个采集分片。\n\n采集分片数量超过推荐值会增加资源消耗，容易导致集群控制节点内存负载过高，影响系统稳定性。\n\n误操作后应将云原生监控插件的采集分片数调整为推荐值。",
+        "claims": [
+          {
+            "text": "云原生监控采集分片的推荐配置为每50个节点配置一个采集分片，因此100个节点的集群推荐配置约2个采集分片。",
+            "fragment_ids": [
+              "7MCPJKLCDYI4OTZTJLQJBSUXEF"
+            ]
+          },
+          {
+            "text": "采集分片数量超过推荐值会增加资源消耗，容易导致集群控制节点内存负载过高，影响系统稳定性。",
+            "fragment_ids": [
+              "7MCPJKLCDYI4OTZTJLQJBSUXEF"
+            ]
+          },
+          {
+            "text": "误操作后应将云原生监控插件的采集分片数调整为推荐值。",
+            "fragment_ids": [
+              "7MCPJKLCDYI4OTZTJLQJBSUXEF"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "7MCPJKLCDYI4OTZTJLQJBSUXEF",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t6-r01 监控 / 监控",
+            "content_hash": "09aa02d20d77fbe71c8e64f95e83a744165fd49fbf2b14779d7ad3c2517648ab",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/7MCPJKLCDYI4OTZTJLQJBSUXEF",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:11.689258Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "4d14f3f60bb8ac07dbed63bc2e961d0e",
+        "retrieved_fragment_ids": [
+          "7MCPJKLCDYI4OTZTJLQJBSUXEF",
+          "KEY3FPO4OBOW4K6F2TNDIXPT6J",
+          "JPOR4PIIYKFIOHU4UWWOAXGTXY",
+          "3AN4DP22X6DTGYMMIYOHO5WNLN",
+          "5JAXJXPC354A2HMCOE6D6JKQOW"
+        ],
+        "model_usage": {
+          "prompt_tokens": 882,
+          "completion_tokens": 160,
+          "total_tokens": 1042,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:11.679053+00:00",
+      "ended_at": "2026-09-19T21:53:12.793350+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNzM=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "回答准确给出了每50节点一个分片的推荐值，并据此为100节点集群建议约2个分片，同时正确说明了超过推荐值的风险（资源消耗增加、控制节点内存负载过高、影响稳定性），与参考信息完全一致，无多余无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1461,
+          "completion_tokens": 90,
+          "total_tokens": 1551,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1333
+        },
+        "trace_id": "84629e7decdcef3c8fa70384f5e5f01a",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 813.5863339994103
+      }
+    },
+    {
+      "id": "cce-q052",
+      "question": "在节点直接 umount 云盘挂载路径后，Pod 的数据可能写到哪儿，该怎么恢复？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "云硬盘",
+      "relevant_evidence_ids": [
+        "cce-t7-r02"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t7-r02",
+        "cce-t7-r01",
+        "cce-t7-r03",
+        "cce-t3-r02",
+        "cce-t1-r21"
+      ],
+      "latency_ms": 909.4444590009516,
+      "metrics": {
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "NUZUVDBQTZIULMOFNBHHMU2ZHU",
+        "conversation_id": "L7MTMSADJQUJO73DKR5TCZBUDP",
+        "question": "在节点直接 umount 云盘挂载路径后，Pod 的数据可能写到哪儿，该怎么恢复？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "在节点直接 umount 云盘挂载路径，会导致 Pod 写入本地磁盘。\n\n误操作后的解决方案是重新 mount 对应目录到 Pod 中。",
+        "claims": [
+          {
+            "text": "在节点直接 umount 云盘挂载路径，会导致 Pod 写入本地磁盘。",
+            "fragment_ids": [
+              "6QIDDFHBKYHBCDCQOYVHSVYYF2"
+            ]
+          },
+          {
+            "text": "误操作后的解决方案是重新 mount 对应目录到 Pod 中。",
+            "fragment_ids": [
+              "6QIDDFHBKYHBCDCQOYVHSVYYF2"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "6QIDDFHBKYHBCDCQOYVHSVYYF2",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t7-r02 云硬盘 / 云硬盘",
+            "content_hash": "d4d9d94b07d9434f3a207c70f1edd3655512855f187bd234abfceb73d2f8d95a",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/6QIDDFHBKYHBCDCQOYVHSVYYF2",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:12.851146Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "1d70de2bc675cdf1e9fa443b01c39b76",
+        "retrieved_fragment_ids": [
+          "6QIDDFHBKYHBCDCQOYVHSVYYF2",
+          "TCWUTC2DCHWM7HMY7HKDL64QRY",
+          "75UTS7WQ2KIW4CZ7XQ4LTOYCUA",
+          "7U64KZA4GIQSJRLS2WMRN33YNA",
+          "WU2TZZNKLVLIWI6CHKLMVKEHNM"
+        ],
+        "model_usage": {
+          "prompt_tokens": 843,
+          "completion_tokens": 91,
+          "total_tokens": 934,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:12.837288+00:00",
+      "ended_at": "2026-09-19T21:53:13.746736+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNzQ=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确回答了节点 umount 云盘挂载路径后 Pod 会写入本地磁盘，并给出重新 mount 对应目录到 Pod 中的恢复方案，与参考回答和检索资料完全一致，无无关内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1333,
+          "completion_tokens": 74,
+          "total_tokens": 1407,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1205
+        },
+        "trace_id": "0041dcf8113c9680728b74521377871b",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 778.1263329961803
+      }
+    },
+    {
+      "id": "cce-q053",
+      "question": "绕过容器平台在节点上直接操作 EVS，会让 Pod 写到哪里，文档是否提供恢复方法？",
+      "answerable": true,
+      "question_type": "single",
+      "section": "云硬盘",
+      "relevant_evidence_ids": [
+        "cce-t7-r03"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t7-r01",
+        "cce-t1-r27",
+        "cce-t1-r13",
+        "cce-t1-r24",
+        "cce-t7-r02"
+      ],
+      "latency_ms": 1006.1208340048324,
+      "metrics": {
+        "recall_at_1": 0.0,
+        "recall_at_3": 0.0,
+        "recall_at_5": 0.0,
+        "precision_at_5": 0.0,
+        "hit_at_5": 0.0,
+        "mrr_at_5": 0,
+        "ndcg_at_5": 0.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 0.0,
+        "citation_precision": 0.0,
+        "citation_hit": 0.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "JK5W2AQDQFFSJ7ONTDRB3I35JD",
+        "conversation_id": "I5ALWOYPXCGWWOS6EANSCCTBC2",
+        "question": "绕过容器平台在节点上直接操作 EVS，会让 Pod 写到哪里，文档是否提供恢复方法？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "绕过容器平台在节点上直接操作 EVS（如控制台手动解除挂载 EVS）会导致 Pod 写入出现 IO Error 故障。\n\n文档提供了恢复方法：删除节点上 mount 目录，重新调度 Pod。\n\n节点上 umount 磁盘挂载路径会导致 Pod 写入本地磁盘；恢复方法是重新 mount 对应目录到 Pod 中。",
+        "claims": [
+          {
+            "text": "绕过容器平台在节点上直接操作 EVS（如控制台手动解除挂载 EVS）会导致 Pod 写入出现 IO Error 故障。",
+            "fragment_ids": [
+              "TCWUTC2DCHWM7HMY7HKDL64QRY"
+            ]
+          },
+          {
+            "text": "文档提供了恢复方法：删除节点上 mount 目录，重新调度 Pod。",
+            "fragment_ids": [
+              "TCWUTC2DCHWM7HMY7HKDL64QRY"
+            ]
+          },
+          {
+            "text": "节点上 umount 磁盘挂载路径会导致 Pod 写入本地磁盘；恢复方法是重新 mount 对应目录到 Pod 中。",
+            "fragment_ids": [
+              "6QIDDFHBKYHBCDCQOYVHSVYYF2"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "TCWUTC2DCHWM7HMY7HKDL64QRY",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t7-r01 云硬盘 / 云硬盘",
+            "content_hash": "a0547f3aa1f38c705d7271c676e3ad107e39947180836aeb38ee0636dce55324",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/TCWUTC2DCHWM7HMY7HKDL64QRY",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          },
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "6QIDDFHBKYHBCDCQOYVHSVYYF2",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t7-r02 云硬盘 / 云硬盘",
+            "content_hash": "d4d9d94b07d9434f3a207c70f1edd3655512855f187bd234abfceb73d2f8d95a",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/6QIDDFHBKYHBCDCQOYVHSVYYF2",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:13.804881Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "785b71a7d8b540ccea6f62f0bffea4a5",
+        "retrieved_fragment_ids": [
+          "TCWUTC2DCHWM7HMY7HKDL64QRY",
+          "5OE4OST5LX3SWKTIUDXQB6XZAW",
+          "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "6QIDDFHBKYHBCDCQOYVHSVYYF2"
+        ],
+        "model_usage": {
+          "prompt_tokens": 838,
+          "completion_tokens": 158,
+          "total_tokens": 996,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:13.791425+00:00",
+      "ended_at": "2026-09-19T21:53:14.797550+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNzU=",
+      "judge": {
+        "scores": {
+          "correctness": 0,
+          "faithfulness": 0.5,
+          "relevance": 0.5,
+          "explanation": "问题问的是“节点上直接操作EVS”这一操作，对应参考资料 cce-t7-r03（节点上直接操作EVS，后果Pod写入本地磁盘，无恢复方法），而回答错误地引用了两条不同操作的后果（r01控制台手动解除挂载EVS和r02节点上umount磁盘挂载路径），并据此声称存在恢复方法，结论与参考要点（无恢复方法）相反，属核心结论错误；额外内容部分来源于资料但与所问操作对象不匹配。"
+        },
+        "usage": {
+          "prompt_tokens": 1364,
+          "completion_tokens": 140,
+          "total_tokens": 1504,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1236
+        },
+        "trace_id": "ba5917fba7cea0372d4c0db68c4d3145",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 1332.8240000118967
+      }
+    },
+    {
+      "id": "cce-q057",
+      "question": "修改控制节点 IP 和修改 Node 节点 IP 后，文档各建议怎样恢复？",
+      "answerable": true,
+      "question_type": "comparison",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r07",
+        "cce-t1-r16"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r16",
+        "cce-t1-r23",
+        "cce-t1-r12",
+        "cce-t1-r13",
+        "cce-t1-r18"
+      ],
+      "latency_ms": 686.3894999987679,
+      "metrics": {
+        "recall_at_1": 0.5,
+        "recall_at_3": 0.5,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 0.6131471927654584,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 0.5,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "UTKNQ5HVEDJA3VPZWJ3MG5UEPI",
+        "conversation_id": "MWIRVEJKLWBVRW7MV6GE5DYMN6",
+        "question": "修改控制节点 IP 和修改 Node 节点 IP 后，文档各建议怎样恢复？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "Node节点更改节点IP导致节点不可用，误操作后解决方案是改回原IP。",
+        "claims": [
+          {
+            "text": "Node节点更改节点IP导致节点不可用，误操作后解决方案是改回原IP。",
+            "fragment_ids": [
+              "V2LLZOP3UCM3HHIUXII23GT7XO"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "V2LLZOP3UCM3HHIUXII23GT7XO",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r16 集群/节点 / Node节点",
+            "content_hash": "bf3e04fb09d0544aa1508cf21333e82c1287796e263e3192074d38b796dc6b7f",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/V2LLZOP3UCM3HHIUXII23GT7XO",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:14.857313Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "fe430bc6553b72a087cfcae75b044a93",
+        "retrieved_fragment_ids": [
+          "V2LLZOP3UCM3HHIUXII23GT7XO",
+          "IZJEZRRCGV2KA7YAJZEXOCTH6S",
+          "YJXSXOGSS2ZWKPTGPNGDLLVIMR",
+          "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+          "B7IUL7OSULLCR2EGTBHFHLFHZK"
+        ],
+        "model_usage": {
+          "prompt_tokens": 768,
+          "completion_tokens": 52,
+          "total_tokens": 820,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:14.846037+00:00",
+      "ended_at": "2026-09-19T21:53:15.532432+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNzY=",
+      "judge": {
+        "scores": {
+          "correctness": 0.5,
+          "faithfulness": 1,
+          "relevance": 0.5,
+          "explanation": "答案只回答了 Node 节点的恢复方式（改回原 IP），完全遗漏了问题所问的控制节点 IP 修改后的恢复方式，因此只算部分正确；关于 Node 节点的断言在检索到的上下文中均有依据，忠实。但内容仅覆盖一半问题，存在明显遗漏。"
+        },
+        "usage": {
+          "prompt_tokens": 1263,
+          "completion_tokens": 92,
+          "total_tokens": 1355,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1135
+        },
+        "trace_id": "2f0637fd866998e05154215b53c0b384",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 863.8650409993716
+      }
+    },
+    {
+      "id": "cce-q058",
+      "question": "集群控制节点与工作节点的安全组分别按什么规则命名，误改后如何修复？",
+      "answerable": true,
+      "question_type": "comparison",
+      "section": "集群/节点",
+      "relevant_evidence_ids": [
+        "cce-t1-r02",
+        "cce-t1-r10"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t1-r02",
+        "cce-t1-r10",
+        "cce-t1-r07",
+        "cce-t1-r04",
+        "cce-t1-r09"
+      ],
+      "latency_ms": 1153.410790997441,
+      "metrics": {
+        "recall_at_1": 0.5,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "DHNBV3HBTV4QTOOPMTEEANNSW7",
+        "conversation_id": "RPD7JZJFF4UEST5QGGDIN633LO",
+        "question": "集群控制节点与工作节点的安全组分别按什么规则命名，误改后如何修复？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "控制节点安全组命名规则：集群名称-cce-control-随机数\n\nNode节点安全组命名规则：集群名称-cce-node-随机数\n\n修改集群控制节点安全组属高危操作，可能导致控制节点无法使用；误操作后应参照新建集群的安全组进行修复，放通安全组\n\n修改集群Node节点安全组属高危操作，可能导致节点无法使用；误操作后应参照新建集群的安全组进行修复，放通安全组",
+        "claims": [
+          {
+            "text": "控制节点安全组命名规则：集群名称-cce-control-随机数",
+            "fragment_ids": [
+              "KEY3FPO4OBOW4K6F2TNDIXPT6J"
+            ]
+          },
+          {
+            "text": "Node节点安全组命名规则：集群名称-cce-node-随机数",
+            "fragment_ids": [
+              "HO3RS7J7YCG5KLQ2E2NTTW2LWJ"
+            ]
+          },
+          {
+            "text": "修改集群控制节点安全组属高危操作，可能导致控制节点无法使用；误操作后应参照新建集群的安全组进行修复，放通安全组",
+            "fragment_ids": [
+              "KEY3FPO4OBOW4K6F2TNDIXPT6J"
+            ]
+          },
+          {
+            "text": "修改集群Node节点安全组属高危操作，可能导致节点无法使用；误操作后应参照新建集群的安全组进行修复，放通安全组",
+            "fragment_ids": [
+              "HO3RS7J7YCG5KLQ2E2NTTW2LWJ"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "KEY3FPO4OBOW4K6F2TNDIXPT6J",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r02 集群/节点 / 控制节点",
+            "content_hash": "0b7996d9fb8ba0f179499a3726a07bbb9a7b0ff2c3e43a544dda91bce55f39b5",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/KEY3FPO4OBOW4K6F2TNDIXPT6J",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          },
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "HO3RS7J7YCG5KLQ2E2NTTW2LWJ",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t1-r10 集群/节点 / Node节点",
+            "content_hash": "c641a0fc2a8c5443abb345cfff7b899f9e5128f3f51b59d4bc2d1ed6d58b2fde",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/HO3RS7J7YCG5KLQ2E2NTTW2LWJ",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:15.598575Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "6aeda6b4f6e6613abde67244587a0f31",
+        "retrieved_fragment_ids": [
+          "KEY3FPO4OBOW4K6F2TNDIXPT6J",
+          "HO3RS7J7YCG5KLQ2E2NTTW2LWJ",
+          "3AN4DP22X6DTGYMMIYOHO5WNLN",
+          "274FGZVXA73JVT5DSNXG7R4AKE",
+          "FWFO3HYYZQMXQR5M6MUDFEMSOD"
+        ],
+        "model_usage": {
+          "prompt_tokens": 848,
+          "completion_tokens": 214,
+          "total_tokens": 1062,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:15.586679+00:00",
+      "ended_at": "2026-09-19T21:53:16.740095+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNzc=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案完整准确回答了两个安全组的命名规则及误改后的修复方案，且所有内容均可在检索资料中找到依据，无冗余或无关信息。"
+        },
+        "usage": {
+          "prompt_tokens": 1528,
+          "completion_tokens": 59,
+          "total_tokens": 1587,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1400
+        },
+        "trace_id": "a8309c3be3a00fdb1a04ce6830e3c108",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 920.6962500029476
+      }
+    },
+    {
+      "id": "cce-q059",
+      "question": "日志采集器的 pos 和 buffer 目录误删后，造成的结果分别是什么？",
+      "answerable": true,
+      "question_type": "comparison",
+      "section": "日志",
+      "relevant_evidence_ids": [
+        "cce-t5-r01",
+        "cce-t5-r02"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t5-r01",
+        "cce-t5-r02",
+        "cce-t1-r24",
+        "cce-t1-r13",
+        "cce-t7-r02"
+      ],
+      "latency_ms": 925.4622089938493,
+      "metrics": {
+        "recall_at_1": 0.5,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "Z3HV7NEFROIS5DXKZF722YL37H",
+        "conversation_id": "EFTTX7AN56PJVJHNFHPZ3U52MU",
+        "question": "日志采集器的 pos 和 buffer 目录误删后，造成的结果分别是什么？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "删除宿主机/tmp/ccs-log-collector/pos目录会导致日志重复采集，且误操作后无解决方案。\n\n删除宿主机/tmp/ccs-log-collector/buffer目录会导致日志丢失，且误操作后无解决方案。",
+        "claims": [
+          {
+            "text": "删除宿主机/tmp/ccs-log-collector/pos目录会导致日志重复采集，且误操作后无解决方案。",
+            "fragment_ids": [
+              "J4J55SRQTELPSD7J5ZOUHSUGVT"
+            ]
+          },
+          {
+            "text": "删除宿主机/tmp/ccs-log-collector/buffer目录会导致日志丢失，且误操作后无解决方案。",
+            "fragment_ids": [
+              "D56WJ54JEFVBVKCDQXFMTNRU5H"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "J4J55SRQTELPSD7J5ZOUHSUGVT",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t5-r01 日志 / 日志",
+            "content_hash": "53f8204b57fc2a5c541fb861aa0d64f5eb7459dfd161d87bde724eb6d973e4de",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/J4J55SRQTELPSD7J5ZOUHSUGVT",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          },
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "D56WJ54JEFVBVKCDQXFMTNRU5H",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t5-r02 日志 / 日志",
+            "content_hash": "77a32ca9624e94a40583c04bc2c590e0b7dc806254f04553a12b4838995ed852",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/D56WJ54JEFVBVKCDQXFMTNRU5H",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:16.797091Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "0d06a9d6d5c0ec6cb879278acfb74baa",
+        "retrieved_fragment_ids": [
+          "J4J55SRQTELPSD7J5ZOUHSUGVT",
+          "D56WJ54JEFVBVKCDQXFMTNRU5H",
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "LPZQM2PTFK4J3QFC5LBNSZ2I63",
+          "6QIDDFHBKYHBCDCQOYVHSVYYF2"
+        ],
+        "model_usage": {
+          "prompt_tokens": 790,
+          "completion_tokens": 114,
+          "total_tokens": 904,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:16.784571+00:00",
+      "ended_at": "2026-09-19T21:53:17.710038+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNzg=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": 1,
+          "relevance": 1,
+          "explanation": "答案准确对应两个目录误删的后果（pos 目录导致日志重复采集，buffer 目录导致日志丢失），且与参考回答和检索上下文完全一致，无遗漏或多余内容。"
+        },
+        "usage": {
+          "prompt_tokens": 1334,
+          "completion_tokens": 68,
+          "total_tokens": 1402,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1206
+        },
+        "trace_id": "cb5c5f6660ff5db5bf4058a99ceaacae",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 901.4428750087973
+      }
+    },
+    {
+      "id": "cce-q061",
+      "question": "tcp_tw_recycle 和 tcp_tw_reuse 设成 1 后分别可能产生什么问题，文档建议的值是什么？",
+      "answerable": true,
+      "question_type": "comparison",
+      "section": "网络",
+      "relevant_evidence_ids": [
+        "cce-t2-r02",
+        "cce-t2-r03"
+      ],
+      "retrieved_evidence_ids": [
+        "cce-t2-r02",
+        "cce-t2-r03",
+        "cce-t4-r03",
+        "cce-t1-r16",
+        "cce-t2-r01"
+      ],
+      "latency_ms": 1242.2991250059567,
+      "metrics": {
+        "recall_at_1": 0.5,
+        "recall_at_3": 1.0,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "hit_at_5": 1.0,
+        "mrr_at_5": 1.0,
+        "ndcg_at_5": 1.0,
+        "processing_success": 1.0,
+        "answer_rate": 1.0,
+        "citation_recall": 1.0,
+        "citation_precision": 1.0,
+        "citation_hit": 1.0,
+        "citation_integrity": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "SMMEZ4D5ZEYGYNUBBCN53NYZEC",
+        "conversation_id": "KHQ56GCNQJYZNUHDVTKXCITPBM",
+        "question": "tcp_tw_recycle 和 tcp_tw_reuse 设成 1 后分别可能产生什么问题，文档建议的值是什么？",
+        "status": "ANSWERED",
+        "data_mode": "LIVE",
+        "answer": "修改内核参数 net.ipv4.tcp_tw_recycle=1 属高危操作，可能导致 NAT 异常；误操作后应将其改回 0（net.ipv4.tcp_tw_recycle=0）。\n\n修改内核参数 net.ipv4.tcp_tw_reuse=1 属高危操作，可能导致网络异常；误操作后应将其改回 0（net.ipv4.tcp_tw_reuse=0）。",
+        "claims": [
+          {
+            "text": "修改内核参数 net.ipv4.tcp_tw_recycle=1 属高危操作，可能导致 NAT 异常；误操作后应将其改回 0（net.ipv4.tcp_tw_recycle=0）。",
+            "fragment_ids": [
+              "APWPDQMZVOJAEAOI36GTI52MEW"
+            ]
+          },
+          {
+            "text": "修改内核参数 net.ipv4.tcp_tw_reuse=1 属高危操作，可能导致网络异常；误操作后应将其改回 0（net.ipv4.tcp_tw_reuse=0）。",
+            "fragment_ids": [
+              "SR7ENK3HNC6YCW3FHRUNNO3YOL"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "APWPDQMZVOJAEAOI36GTI52MEW",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t2-r02 网络 / 网络",
+            "content_hash": "7e515f30d0afc72849ced4ed1ac0619e31cdc73dd2c78bb136437873f7400e0a",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/APWPDQMZVOJAEAOI36GTI52MEW",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          },
+          {
+            "document_id": "4KQSU5JF6WRCVNEX3MMWYJVQS7",
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "fragment_id": "SR7ENK3HNC6YCW3FHRUNNO3YOL",
+            "title": "华为云 CCE 高危操作一览",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0054.html",
+            "section": "cce-t2-r03 网络 / 网络",
+            "content_hash": "96ae952a9953578c78a36aee3f1906d381251bae37d221f49633e51813f840f4",
+            "url": "/v1/knowledge/revisions/RUXOEMOVWG2QL4G4YZ37SM6357/fragments/SR7ENK3HNC6YCW3FHRUNNO3YOL",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [],
+        "created_at": "2026-09-19T21:53:17.774703Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "997249811f4d505e5eaa41da43b3f168",
+        "retrieved_fragment_ids": [
+          "APWPDQMZVOJAEAOI36GTI52MEW",
+          "SR7ENK3HNC6YCW3FHRUNNO3YOL",
+          "O7XAE7HVSMQBYPHDFX2MVQVWEO",
+          "V2LLZOP3UCM3HHIUXII23GT7XO",
+          "Q7JO7CXVIM56R2KCN2T5QK3UON"
+        ],
+        "model_usage": {
+          "prompt_tokens": 829,
+          "completion_tokens": 153,
+          "total_tokens": 982,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:17.762114+00:00",
+      "ended_at": "2026-09-19T21:53:19.004418+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxNzk=",
+      "judge": {
+        "scores": {
+          "correctness": 0.5,
+          "faithfulness": 1,
+          "relevance": 0.5,
+          "explanation": "答案准确覆盖了 tcp_tw_recycle 和 tcp_tw_reuse 设为 1 时的后果及误操作后改回 0 的解决方案，但完全没有回答文档建议的值是什么这一关键点，存在遗漏。"
+        },
+        "usage": {
+          "prompt_tokens": 1434,
+          "completion_tokens": 82,
+          "total_tokens": 1516,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1306
+        },
+        "trace_id": "a6f4f8118d907beb9af1dca5bc44cd83",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 867.6549579977291
+      }
+    },
+    {
+      "id": "cce-u003",
+      "question": "帮我判断生产集群现在的 CPU 使用率是否正常，并给出实时数值。",
+      "answerable": false,
+      "question_type": "unanswerable",
+      "section": "文档范围之外",
+      "relevant_evidence_ids": [],
+      "retrieved_evidence_ids": [
+        "cce-t1-r01",
+        "cce-t6-r01",
+        "cce-t1-r21",
+        "cce-t1-r08",
+        "cce-t1-r27"
+      ],
+      "latency_ms": 583.8844999962021,
+      "metrics": {
+        "processing_success": 1.0,
+        "answer_rate": 0.0,
+        "abstention_accuracy": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "NUP7Y4P4IAO72WYF7ZGCISUOLL",
+        "conversation_id": "KJJTMIIOPBNW5BXFV3RHKQKAER",
+        "question": "帮我判断生产集群现在的 CPU 使用率是否正常，并给出实时数值。",
+        "status": "UNRESOLVED",
+        "data_mode": "LIVE",
+        "answer": "",
+        "claims": [],
+        "citations": [],
+        "gaps": [
+          "已召回的资料不足以回答当前问题。"
+        ],
+        "created_at": "2026-09-19T21:53:19.065363Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "7ddbe469ed34ec57bc66d0be17782fed",
+        "retrieved_fragment_ids": [
+          "YVX4B6IBMDWBOWW3WAW3ZILBUC",
+          "7MCPJKLCDYI4OTZTJLQJBSUXEF",
+          "WU2TZZNKLVLIWI6CHKLMVKEHNM",
+          "JPOR4PIIYKFIOHU4UWWOAXGTXY",
+          "5OE4OST5LX3SWKTIUDXQB6XZAW"
+        ],
+        "model_usage": {
+          "prompt_tokens": 932,
+          "completion_tokens": 5,
+          "total_tokens": 937,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:19.053864+00:00",
+      "ended_at": "2026-09-19T21:53:19.637752+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxODA=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": null,
+          "relevance": 1,
+          "explanation": "问题无法根据提供的资料回答，答案为空且 status 为 UNRESOLVED，正确说明资料不足，未编造实时 CPU 使用率或正常性判断。检索资料仅涉及高危操作与节点管理，均无生产集群实时 CPU 使用率数据。"
+        },
+        "usage": {
+          "prompt_tokens": 1361,
+          "completion_tokens": 83,
+          "total_tokens": 1444,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1233
+        },
+        "trace_id": "da1d9c9dd984d2bed7995f5a4c21e477",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 840.1967079989845
+      }
+    },
+    {
+      "id": "cce-u004",
+      "question": "本文列出了所有地区节点操作系统镜像的 SHA256 校验值吗？请给出这些值。",
+      "answerable": false,
+      "question_type": "unanswerable",
+      "section": "文档范围之外",
+      "relevant_evidence_ids": [],
+      "retrieved_evidence_ids": [
+        "cce-t1-r24",
+        "cce-t1-r15",
+        "cce-t1-r18",
+        "cce-t1-r27",
+        "cce-t1-r21"
+      ],
+      "latency_ms": 576.5547079936368,
+      "metrics": {
+        "processing_success": 1.0,
+        "answer_rate": 0.0,
+        "abstention_accuracy": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "6EIARY5SL26QDKTHYKOXIQETXT",
+        "conversation_id": "5V5YIQKLVTKLQXC5ZDL46DUGAZ",
+        "question": "本文列出了所有地区节点操作系统镜像的 SHA256 校验值吗？请给出这些值。",
+        "status": "UNRESOLVED",
+        "data_mode": "LIVE",
+        "answer": "",
+        "claims": [],
+        "citations": [],
+        "gaps": [
+          "已召回的资料不足以回答当前问题。"
+        ],
+        "created_at": "2026-09-19T21:53:19.666881Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "6bf4a3df85fc73c0463ae5ac0d046f97",
+        "retrieved_fragment_ids": [
+          "I7DRU6FIQDNAMKI55BMR6MFJ6F",
+          "GVSV4MVQ7ITNOLT4AUXSASIFL3",
+          "B7IUL7OSULLCR2EGTBHFHLFHZK",
+          "5OE4OST5LX3SWKTIUDXQB6XZAW",
+          "WU2TZZNKLVLIWI6CHKLMVKEHNM"
+        ],
+        "model_usage": {
+          "prompt_tokens": 906,
+          "completion_tokens": 5,
+          "total_tokens": 911,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:19.654990+00:00",
+      "ended_at": "2026-09-19T21:53:20.231549+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxODE=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": null,
+          "relevance": 1,
+          "explanation": "该问题无依据回答，答案为空，正确拒答并说明召回资料不足以回答，符合要求；无答案故忠实度为null。"
+        },
+        "usage": {
+          "prompt_tokens": 1331,
+          "completion_tokens": 55,
+          "total_tokens": 1386,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1203
+        },
+        "trace_id": "687b6bfb2665a71b52c120337c574324",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 879.4895000028191
+      }
+    },
+    {
+      "id": "cce-u005",
+      "question": "我的集群现在有多少个故障 Pod？请直接报告实际数量。",
+      "answerable": false,
+      "question_type": "unanswerable",
+      "section": "文档范围之外",
+      "relevant_evidence_ids": [],
+      "retrieved_evidence_ids": [
+        "cce-t7-r01",
+        "cce-t1-r27",
+        "cce-t2-r04",
+        "cce-t1-r01",
+        "cce-t1-r02"
+      ],
+      "latency_ms": 471.750124997925,
+      "metrics": {
+        "processing_success": 1.0,
+        "answer_rate": 0.0,
+        "abstention_accuracy": 1.0
+      },
+      "result": {
+        "schema_version": 1,
+        "id": "Q26XKDRLRQSFMMLCMJFUVR5IGG",
+        "conversation_id": "SZMMUDALZCWKAZNUL3ARZLP25N",
+        "question": "我的集群现在有多少个故障 Pod？请直接报告实际数量。",
+        "status": "UNRESOLVED",
+        "data_mode": "LIVE",
+        "answer": "",
+        "claims": [],
+        "citations": [],
+        "gaps": [
+          "已召回的资料不足以回答当前问题。"
+        ],
+        "created_at": "2026-09-19T21:53:20.259799Z",
+        "applicability_checks": [
+          {
+            "revision_id": "RUXOEMOVWG2QL4G4YZ37SM6357",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "scope",
+                "status": "MATCH",
+                "reason": "资料声明为通用知识。"
+              }
+            ]
+          }
+        ],
+        "trace_id": "00091377732ccea18c3442a93764a934",
+        "retrieved_fragment_ids": [
+          "TCWUTC2DCHWM7HMY7HKDL64QRY",
+          "5OE4OST5LX3SWKTIUDXQB6XZAW",
+          "P5TWVHLRF6LQB2EAOQGEG3KUUF",
+          "YVX4B6IBMDWBOWW3WAW3ZILBUC",
+          "KEY3FPO4OBOW4K6F2TNDIXPT6J"
+        ],
+        "model_usage": {
+          "prompt_tokens": 920,
+          "completion_tokens": 5,
+          "total_tokens": 925,
+          "calls": 1
+        }
+      },
+      "started_at": "2026-09-19T21:53:20.247479+00:00",
+      "ended_at": "2026-09-19T21:53:20.719233+00:00",
+      "phoenix_run_id": "RXhwZXJpbWVudFJ1bjoxODI=",
+      "judge": {
+        "scores": {
+          "correctness": 1,
+          "faithfulness": null,
+          "relevance": 1,
+          "explanation": "问题无法从召回资料中获得答案，标准要求说明证据缺口并拒绝编造；空答案未包含任何可核验的实质性断言，故忠实度为 null，正确性与相关性按正确拒答处理。"
+        },
+        "usage": {
+          "prompt_tokens": 1349,
+          "completion_tokens": 70,
+          "total_tokens": 1419,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 1221
+        },
+        "trace_id": "ae87e6970050c3b3fd87af054a764fbd",
+        "model": "deepseek-flash",
+        "rubric_version": "v1",
+        "latency_ms": 826.4763749903068
+      }
+    }
+  ],
+  "summary": {
+    "count": 41,
+    "answerable_count": 38,
+    "means": {
+      "abstention_accuracy": 1.0,
+      "answer_rate": 0.9024390243902439,
+      "citation_hit": 0.9473684210526315,
+      "citation_integrity": 1.0,
+      "citation_precision": 0.9473684210526315,
+      "citation_recall": 0.9342105263157895,
+      "hit_at_5": 0.9473684210526315,
+      "mrr_at_5": 0.9298245614035088,
+      "ndcg_at_5": 0.9240301892833015,
+      "precision_at_5": 0.20526315789473684,
+      "processing_success": 1.0,
+      "recall_at_1": 0.868421052631579,
+      "recall_at_3": 0.9342105263157895,
+      "recall_at_5": 0.9342105263157895
+    },
+    "latency_ms": {
+      "mean": 875.2770527566232,
+      "p50": 816.2775000091642,
+      "p95": 1153.410790997441
+    }
+  }
+}

@@ -1,0 +1,716 @@
+[
+  {
+    "case": {
+      "id": "cce-asset-table-explanatory-015",
+      "group": "cce_10_0405",
+      "category": "TABLE_EXPLANATORY",
+      "question_type": "table_explanatory",
+      "question": "在CCE补丁版本发布记录的“v1.28版本”中，表9 v1.28补丁版本发布说明里，CCE集群补丁版本v1.28.15-r94对应哪个Kubernetes社区版本？",
+      "answerable": true,
+      "required_facts": [
+        "v1.28.15"
+      ],
+      "reference_answer": "v1.28.15",
+      "evidence": [
+        {
+          "document_id": "cce_10_0405",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+          "title": "CCE补丁版本发布记录",
+          "file": "documents/cce_10_0405.md",
+          "content_sha256": "636bed85a0b2983fc8b46942a7077a3d068e3a454447af7c021fcafb6d5d8dd1",
+          "start_line": 219,
+          "end_line": 219,
+          "section": "v1.28版本",
+          "anchor": "| v1.28.15-r94 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - | - | 修复部分安全问题。 |",
+          "quote": "| v1.28.15-r94 | [v1.28.15](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.28.md#v12815) | - | - | 修复部分安全问题。 |",
+          "quote_sha256": "9ea7a8cb71cd2d66875406f37ec012aad816b0e4602ca8cfd7468410d3316c0f"
+        }
+      ],
+      "split": "heldout",
+      "asset_id": "cce_10_0405:table-009-p01",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-table-explanatory-015",
+      "question": "在CCE补丁版本发布记录的“v1.28版本”中，表9 v1.28补丁版本发布说明里，CCE集群补丁版本v1.28.15-r94对应哪个Kubernetes社区版本？",
+      "answerable": true,
+      "question_type": "table_explanatory",
+      "category": "TABLE_EXPLANATORY",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "KBS37CWKY2QFFQXYAG6QQ5OROD",
+          "revision_id": "B4VSU6XZUS2DQFLOB6ZRISEVYD",
+          "section": "集群升级路径",
+          "start_line": 40,
+          "end_line": 48,
+          "content": "![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n  - 已停止维护的版本无法一步直接升级到最新版本，需要进行连续多次升级，例如v1.15 -> v1.19 -> v1.23 -> v1.27/v1.28。\n  - 补丁版本需要升级至最新补丁后方可进行Kubernetes版本升级，控制台将根据当前集群版本自动为您生成最佳升级路径。\n- 补丁版本升级\n\n  1.19及以上版本的CCE集群采取了补丁版本管理策略，旨在不进行大版本升级的情况下，为在维集群提供新的特性、Bugfix和漏洞修复。\n\n  新的补丁版本发布以后您可在任意补丁版本一次直升到最新补丁版本，补丁版本发布记录请参见[CCE补丁版本发布记录](https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html)。",
+          "content_hash": "733fed4c6b621bdb6e85e0000a63a11e5a1c6950bc18d88039bdb498511f66c0",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "已停止维护的版本如何升级到最新版本？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "补丁版本升级至最新补丁后，才能进行什么操作？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "1.19及以上版本的CCE集群补丁版本管理策略是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "新的补丁版本发布后，如何升级到最新补丁版本？"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片位于“集群升级路径”章节。 图片可见内容：一个说明图标，左侧为打开的书本图形，右侧为中文文字“说明”。 图片相邻原文：已停止维护的版本无法一步直接升级到最新版本，需要进行连续多次升级，例如v1.15 - v1.19 - v1.23 - v1.27/v1.28。 - 补丁版本需要升级至最新补丁后方可进行Kubernetes版本升级，控制台将根据当前集群版本自动为您生成最佳升级路径。",
+              "start_line": 40,
+              "end_line": 40
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0197.html",
+          "title": "集群升级",
+          "document_context": "目录：用户指南 > 集群 > 升级管理 > 集群升级\n更新时间：2026-09-20 GMT+08:00",
+          "score": 2.5,
+          "citation": {
+            "document_id": "A2MODI3GZQHA46MN4MPQFGK2W5",
+            "revision_id": "B4VSU6XZUS2DQFLOB6ZRISEVYD",
+            "fragment_id": "KBS37CWKY2QFFQXYAG6QQ5OROD",
+            "title": "集群升级",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0197.html",
+            "section": "集群升级路径",
+            "document_context": "目录：用户指南 > 集群 > 升级管理 > 集群升级\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "733fed4c6b621bdb6e85e0000a63a11e5a1c6950bc18d88039bdb498511f66c0",
+            "url": "/v1/knowledge/revisions/B4VSU6XZUS2DQFLOB6ZRISEVYD/fragments/KBS37CWKY2QFFQXYAG6QQ5OROD",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "P77ADYQ4TIOJGZX4NZS3TBJW2R",
+          "revision_id": "2BAWJQ6ORQKMM2L3GYKCMS7I3D",
+          "section": "v1.27版本",
+          "start_line": 287,
+          "end_line": 287,
+          "content": "| v1.27.1-r0 | [v1.27.2](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.27.md#v1272) | 首次发布CCE v1.27集群，有关更多信息请参见[Kubernetes 1.27版本说明](https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0059.html)。   - 节点池配置管理支持软驱逐和硬驱逐的设置。 - 支持为自动创建的EVS块存储添加TMS资源标签，以便于成本管理。 | 由于[社区安全加固](https://github.com/kubernetes/kubernetes/pull/108460)，v1.27及以上版本的集群中ClusterIP地址无法ping通。 | - |",
+          "content_hash": "4d0e277971bc3d15aafbbab2af6352b1e742a755298f4ee3da682e0c930e392a",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "v1.27.1-r0版本是CCE v1.27集群的首次发布吗？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "v1.27.1-r0版本中节点池配置管理支持什么功能？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "v1.27.1-r0版本中为什么ClusterIP地址无法ping通？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "v1.27.1-r0版本支持为自动创建的EVS块存储添加什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "v1.27.1-r0版本对应的Kubernetes社区版本是什么？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "CCE集群补丁版本v1.27.1-r0对应Kubernetes社区版本v1.27.2。特性更新：首次发布CCE v1.27集群，有关更多信息请参见Kubernetes 1.27版本说明；节点池配置管理支持软驱逐和硬驱逐的设置；支持为自动创建的EVS块存储添加TMS资源标签，以便于成本管理。优化增强：由于社区安全加固，v1.27及以上版本的集群中ClusterIP地址无法ping通。安全漏洞修复：无。",
+              "start_line": 287,
+              "end_line": 287
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+          "title": "CCE补丁版本发布记录",
+          "document_context": "目录：用户指南 > 集群 > 集群版本发布说明 > CCE补丁版本发布记录\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.6666666666666665,
+          "citation": {
+            "document_id": "4BDF7ZAIWE6EMTBSZATRWD4RPC",
+            "revision_id": "2BAWJQ6ORQKMM2L3GYKCMS7I3D",
+            "fragment_id": "P77ADYQ4TIOJGZX4NZS3TBJW2R",
+            "title": "CCE补丁版本发布记录",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+            "section": "v1.27版本",
+            "document_context": "目录：用户指南 > 集群 > 集群版本发布说明 > CCE补丁版本发布记录\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "4d0e277971bc3d15aafbbab2af6352b1e742a755298f4ee3da682e0c930e392a",
+            "url": "/v1/knowledge/revisions/2BAWJQ6ORQKMM2L3GYKCMS7I3D/fragments/P77ADYQ4TIOJGZX4NZS3TBJW2R",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "ARS22QQAVSDQGGXENNZMLJ6YXI",
+          "revision_id": "2BAWJQ6ORQKMM2L3GYKCMS7I3D",
+          "section": "更早版本 / v1.28版本",
+          "start_line": 211,
+          "end_line": 215,
+          "content": "更多更早的集群版本说明如下：\n\n#### v1.28版本\n\n**表9** v1.28补丁版本发布说明",
+          "content_hash": "532cee63d9b01d735fc1e588cb673b761a243309aeb707eefff5ac2ff2264ed6",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "更早的集群版本说明在哪里可以找到？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "v1.28版本补丁版本发布说明的表号是什么？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+          "title": "CCE补丁版本发布记录",
+          "document_context": "目录：用户指南 > 集群 > 集群版本发布说明 > CCE补丁版本发布记录\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.8500000000000001,
+          "citation": {
+            "document_id": "4BDF7ZAIWE6EMTBSZATRWD4RPC",
+            "revision_id": "2BAWJQ6ORQKMM2L3GYKCMS7I3D",
+            "fragment_id": "ARS22QQAVSDQGGXENNZMLJ6YXI",
+            "title": "CCE补丁版本发布记录",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+            "section": "更早版本 / v1.28版本",
+            "document_context": "目录：用户指南 > 集群 > 集群版本发布说明 > CCE补丁版本发布记录\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "532cee63d9b01d735fc1e588cb673b761a243309aeb707eefff5ac2ff2264ed6",
+            "url": "/v1/knowledge/revisions/2BAWJQ6ORQKMM2L3GYKCMS7I3D/fragments/ARS22QQAVSDQGGXENNZMLJ6YXI",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "PF5POGFKWVRN47YAKZZCV67TGT",
+          "revision_id": "2BAWJQ6ORQKMM2L3GYKCMS7I3D",
+          "section": "v1.36版本",
+          "start_line": 21,
+          "end_line": 26,
+          "content": "**表1** v1.36补丁版本发布说明\n\n| **CCE集群补丁版本号** | **Kubernetes社区版本** | **特性更新** | **优化增强** | **安全漏洞修复** |\n| --- | --- | --- | --- | --- |\n| v1.36.1-r10 | [v1.36.1](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.36.md#v1361) | - 重置节点时支持选择保留数据盘，挂载设置为指定目录或作为持久存储卷的普通数据盘的数据将被保留（**但系统盘和默认数据盘仍会被清空**）。 - 负载均衡类型的Service支持选择取消关联ELB的监听器托管，您可以在ELB侧独立管理监听器配置。 | - Containerd节点池配置中支持设置镜像下载后是否回收原始镜像层文件。 - 支持采集控制节点上kubelet-cadvisor-master组件的指标。 | 修复部分安全问题。 |\n| v1.36.1-r0 | [v1.36.1](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.36.md#v1361) | 首次发布CCE v1.36集群，有关更多信息请参见[Kubernetes 1.36版本说明](https://support.huaweicloud.com/usermanual-cce/cce_bulletin_0131.html)。 | 通过IAM 5.0的委托凭据访问时支持用户细粒度的审计日志。 | 修复部分安全问题。 |",
+          "content_hash": "74b4674e113c5b5eac56907fd299e42ed21b3914350271863868dbd303cb1ea1",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "CCE v1.36.1-r10补丁版本有哪些特性更新？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE v1.36.1-r0补丁版本首次发布时有哪些优化增强？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE v1.36.1-r10补丁版本中重置节点时保留数据盘的具体规则是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE v1.36.1-r10补丁版本在Containerd节点池配置中支持什么优化？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "CCE v1.36.1-r0补丁版本对应的Kubernetes社区版本是什么？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在CCE集群补丁版本v1.36.1-r10中，对应Kubernetes社区版本v1.36.1，特性更新包括：重置节点时支持选择保留数据盘，挂载设置为指定目录或作为持久存储卷的普通数据盘的数据将被保留（但系统盘和默认数据盘仍会被清空）；负载均衡类型的Service支持选择取消关联ELB的监听器托管，您可以在ELB侧独立管理监听器配置。优化增强包括：Containerd节点池配置中支持设置镜像下载后是否回收原始镜像层文件；支持采集控制节点上kubelet-cadvisor-master组件的指标。安全漏洞修复包括：修复部分安全问题。",
+              "start_line": 25,
+              "end_line": 25
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在CCE集群补丁版本v1.36.1-r0中，对应Kubernetes社区版本v1.36.1，特性更新包括：首次发布CCE v1.36集群，有关更多信息请参见Kubernetes 1.36版本说明。优化增强包括：通过IAM 5.0的委托凭据访问时支持用户细粒度的审计日志。安全漏洞修复包括：修复部分安全问题。",
+              "start_line": 26,
+              "end_line": 26
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "表1 v1.36补丁版本发布说明\nCCE集群补丁版本号 Kubernetes社区版本 特性更新 优化增强 安全漏洞修复\n--- --- --- --- ---\nv1.36.1-r10 v1.36.1 - 重置节点时支持选择保留数据盘，挂载设置为指定目录或作为持久存储卷的普通数据盘的数据将被保留（ 但系统盘和默认数据盘仍会被清空 ）。 - 负载均衡类型的Service支持选择取消关联ELB的监听器托管，您可以在ELB侧独立管理监听器配置。 - Containerd节点池配置中支持设置镜像下载后是否回收原始镜像层文件。 - 支持采集控制节点上kubelet-cadvisor-master组件的指标。 修复部分安全问题。\n[表格说明] 在CCE集群补丁版本v1.36.1-r10中，对应Kubernetes社区版本v1.36.1，特性更新包括：重置节点时支持选择保留数据盘，挂载设置为指定目录或作为持久存储卷的普通数据盘的数据将被保留（但系统盘和默认数据盘仍会被清空）；负载均衡类型的Service支持选择取消关联ELB的监听器托管，您可以在ELB侧独立管理监听器配置。优化增强包括：Containerd节点池配置中支持设置镜像下载后是否回收原始镜像层文件；支持采集控制节点上kubelet-cadvisor-master组件的指标。安全漏洞修复包括：修复部分安全问题。\nv1.36.1-"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "像下载后是否回收原始镜像层文件；支持采集控制节点上kubelet-cadvisor-master组件的指标。安全漏洞修复包括：修复部分安全问题。\nv1.36.1-r0 v1.36.1 首次发布CCE v1.36集群，有关更多信息请参见 Kubernetes 1.36版本说明 。 通过IAM 5.0的委托凭据访问时支持用户细粒度的审计日志。 修复部分安全问题。\n[表格说明] 在CCE集群补丁版本v1.36.1-r0中，对应Kubernetes社区版本v1.36.1，特性更新包括：首次发布CCE v1.36集群，有关更多信息请参见Kubernetes 1.36版本说明。优化增强包括：通过IAM 5.0的委托凭据访问时支持用户细粒度的审计日志。安全漏洞修复包括：修复部分安全问题。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+          "title": "CCE补丁版本发布记录",
+          "document_context": "目录：用户指南 > 集群 > 集群版本发布说明 > CCE补丁版本发布记录\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.75,
+          "citation": {
+            "document_id": "4BDF7ZAIWE6EMTBSZATRWD4RPC",
+            "revision_id": "2BAWJQ6ORQKMM2L3GYKCMS7I3D",
+            "fragment_id": "PF5POGFKWVRN47YAKZZCV67TGT",
+            "title": "CCE补丁版本发布记录",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+            "section": "v1.36版本",
+            "document_context": "目录：用户指南 > 集群 > 集群版本发布说明 > CCE补丁版本发布记录\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "74b4674e113c5b5eac56907fd299e42ed21b3914350271863868dbd303cb1ea1",
+            "url": "/v1/knowledge/revisions/2BAWJQ6ORQKMM2L3GYKCMS7I3D/fragments/PF5POGFKWVRN47YAKZZCV67TGT",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "XDROWUZ62E3GCOK7YKVHZUTDCZ",
+          "revision_id": "2BAWJQ6ORQKMM2L3GYKCMS7I3D",
+          "section": "v1.25版本",
+          "start_line": 323,
+          "end_line": 325,
+          "content": "| v1.25.4-r0 | [v1.25.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v1255) | - 节点池配置管理支持软驱逐和硬驱逐的设置。 - 支持为自动创建的EVS块存储添加TMS资源标签，以便于成本管理。 | - | 修复部分安全问题。 |\n| v1.25.3-r10 | [v1.25.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v1255) | - CCE集群支持对接使用弹性规格的独享型ELB。 - 负载均衡支持设置超时时间。 | kube-apiserver高频参数支持配置。 | 修复部分安全问题。 |\n| v1.25.3-r0 | [v1.25.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.25.md#v1255) | - CCE Turbo容器网卡支持固定IP。详情请参见[为Pod配置固定IP](https://support.huaweicloud.com/usermanual-cce/cce_10_0603.html)。 - CCE Turbo容器网卡支持自动创建和自动绑定EIP。详情请参见[为Pod配置固定EIP](https://support.huaweicloud.com/usermanual-cce/cce_10_0651.html)。  - CCE Turbo集群在离线混部增强：支持Pod网络优先级限制。详情请参见[出口网络带宽保障](https://support.huaweicloud.com/usermanual-cce/cce_10_0701.html)。 - CCE Turbo集群支持命名空间关联容器网段。详情请参见[网络配置（NetworkAttachmentDefinition）](https://support.huaweicloud.com/usermanual-cce/cce_10_0196.html)。 - 集群支持CPU Burst特性，避免CPU限流影响时延敏感型容器业务。详情请参见[CPU Burst弹性限流](https://support.huaweicloud.com/usermanual-cce/cce_10_0700.html)。 | 增强CCE Turbo集群在规格变更场景时网络的稳定性。 | 修复部分安全问题。 |",
+          "content_hash": "78de143348b29c7fd487cdf00421c93b85df15d248c791e543f1ba3a256659c0",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "CCE v1.25.4-r0补丁版本新增了哪些特性？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "v1.25.3-r10版本中kube-apiserver高频参数支持配置吗？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "v1.25.3-r0版本中CCE Turbo容器网卡支持固定IP吗？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "v1.25.3-r0版本中集群支持CPU Burst特性吗？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "v1.25.4-r0版本对应的Kubernetes社区版本是什么？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "CCE集群补丁版本v1.25.4-r0对应Kubernetes社区版本v1.25.5，其特性更新包括：节点池配置管理支持软驱逐和硬驱逐的设置，以及支持为自动创建的EVS块存储添加TMS资源标签以便于成本管理；优化增强无；安全漏洞修复为修复部分安全问题。",
+              "start_line": 323,
+              "end_line": 323
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "CCE集群补丁版本v1.25.3-r10对应Kubernetes社区版本v1.25.5，其特性更新包括：CCE集群支持对接使用弹性规格的独享型ELB，负载均衡支持设置超时时间；优化增强为kube-apiserver高频参数支持配置；安全漏洞修复为修复部分安全问题。",
+              "start_line": 324,
+              "end_line": 324
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "CCE集群补丁版本v1.25.3-r0对应Kubernetes社区版本v1.25.5，其特性更新包括：CCE Turbo容器网卡支持固定IP（详情请参见为Pod配置固定IP），CCE Turbo容器网卡支持自动创建和自动绑定EIP（详情请参见为Pod配置固定EIP），CCE Turbo集群在离线混部增强支持Pod网络优先级限制（详情请参见出口网络带宽保障），CCE Turbo集群支持命名空间关联容器网段（详情请参见网络配置（NetworkAttachmentDefinition）），集群支持CPU Burst特性以避免CPU限流影响时延敏感型容器业务（详情请参见CPU Burst弹性限流）；优化增强为增强CCE Turbo集群在规格变更场景时网络的稳定性；安全漏洞修复为修复部分安全问题。",
+              "start_line": 325,
+              "end_line": 325
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "v1.25.4-r0 v1.25.5 - 节点池配置管理支持软驱逐和硬驱逐的设置。 - 支持为自动创建的EVS块存储添加TMS资源标签，以便于成本管理。 - 修复部分安全问题。\n[表格说明] CCE集群补丁版本v1.25.4-r0对应Kubernetes社区版本v1.25.5，其特性更新包括：节点池配置管理支持软驱逐和硬驱逐的设置，以及支持为自动创建的EVS块存储添加TMS资源标签以便于成本管理；优化增强无；安全漏洞修复为修复部分安全问题。\nv1.25.3-r10 v1.25.5 - CCE集群支持对接使用弹性规格的独享型ELB。 - 负载均衡支持设置超时时间。 kube-apiserver高频参数支持配置。 修复部分安全问题。\n[表格说明] CCE集群补丁版本v1.25.3-r10对应Kubernetes社区版本v1.25.5，其特性更新包括：CCE集群支持对接使用弹性规格的独享型ELB，负载均衡支持设置超时时间；优化增强为kube-apiserver高频参数支持配置；安全漏洞修复为修复部分安全问题。\nv1.25.3-r0 v1.25.5 - CCE Turbo容器网卡支持固定IP。详情请参见 为Pod配置固定IP 。 - CCE Turbo容器网卡支持自动创建和自动绑定EIP。详情请参见 为Pod配置固定EIP 。 - CCE Turbo集群在离线混部增强：支持Pod网络优先级限制。详情请"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "固定IP 。 - CCE Turbo容器网卡支持自动创建和自动绑定EIP。详情请参见 为Pod配置固定EIP 。 - CCE Turbo集群在离线混部增强：支持Pod网络优先级限制。详情请参见 出口网络带宽保障 。 - CCE Turbo集群支持命名空间关联容器网段。详情请参见 网络配置（NetworkAttachmentDefinition） 。 - 集群支持CPU Burst特性，避免CPU限流影响时延敏感型容器业务。详情请参见 CPU Burst弹性限流 。 增强CCE Turbo集群在规格变更场景时网络的稳定性。 修复部分安全问题。\n[表格说明] CCE集群补丁版本v1.25.3-r0对应Kubernetes社区版本v1.25.5，其特性更新包括：CCE Turbo容器网卡支持固定IP（详情请参见为Pod配置固定IP），CCE Turbo容器网卡支持自动创建和自动绑定EIP（详情请参见为Pod配置固定EIP），CCE Turbo集群在离线混部增强支持Pod网络优先级限制（详情请参见出口网络带宽保障），CCE Turbo集群支持命名空间关联容器网段（详情请参见网络配置（NetworkAttachmentDefinition）），集群支持CPU Burst特性以避免CPU限流影响时延敏感型容器业务（详情请参见CPU Burst弹性限流）；优化增强为增强CCE Turbo集群在规格变更场景时网络的稳定性；安全漏洞修复为修复部分安全问题。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+          "title": "CCE补丁版本发布记录",
+          "document_context": "目录：用户指南 > 集群 > 集群版本发布说明 > CCE补丁版本发布记录\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.5333333333333333,
+          "citation": {
+            "document_id": "4BDF7ZAIWE6EMTBSZATRWD4RPC",
+            "revision_id": "2BAWJQ6ORQKMM2L3GYKCMS7I3D",
+            "fragment_id": "XDROWUZ62E3GCOK7YKVHZUTDCZ",
+            "title": "CCE补丁版本发布记录",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0405.html",
+            "section": "v1.25版本",
+            "document_context": "目录：用户指南 > 集群 > 集群版本发布说明 > CCE补丁版本发布记录\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "78de143348b29c7fd487cdf00421c93b85df15d248c791e543f1ba3a256659c0",
+            "url": "/v1/knowledge/revisions/2BAWJQ6ORQKMM2L3GYKCMS7I3D/fragments/XDROWUZ62E3GCOK7YKVHZUTDCZ",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": {
+        "trace_id": "0e566954ba75764e3fb2f9198e5880e8",
+        "retrieval_queries": [
+          "在CCE补丁版本发布记录的“v1.28版本”中，表9 v1.28补丁版本发布说明里，CCE集群补丁版本v1.28.15-r94对应哪个Kubernetes社区版本？",
+          "在CCE补丁版本发布记录的v1.28版本中，表9 v1.28补丁版本发布说明里，CCE集群补丁版本v1.28.15-r94对应哪个Kubernetes社区版本？",
+          "CCE补丁版本发布记录v1.28版本的表9 v1.28补丁版本发布说明中，CCE集群补丁版本v1.28.15-r94对应的Kubernetes社区版本是哪个？",
+          "在CCE补丁版本发布记录v1.28版本的“表9 v1.28补丁版本发布说明”中，CCE集群补丁版本v1.28.15-r94对应哪一个Kubernetes社区版本？"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 3427.1836249972694
+    }
+  },
+  {
+    "case": {
+      "id": "cce-asset-image-048",
+      "group": "cce_10_0905",
+      "category": "IMAGE",
+      "question_type": "image",
+      "question": "在《Prometheus插件平滑迁移实践》的“采集配置迁移”截图中，红框标注的配置项内容是什么？",
+      "answerable": true,
+      "required_facts": [
+        "红框标注的配置项内容是- drop:--no-collector.arp。"
+      ],
+      "reference_answer": "红框标注的配置项内容是- drop:--no-collector.arp。",
+      "evidence": [
+        {
+          "document_id": "cce_10_0905",
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0905.html",
+          "title": "Prometheus插件平滑迁移实践",
+          "file": "documents/cce_10_0905.md",
+          "content_sha256": "d19fff4892ffe070392dfe76220c9ffee295d73d44a02baa109643b444d67cd5",
+          "start_line": 232,
+          "end_line": 232,
+          "section": "采集配置迁移",
+          "anchor": "        ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001910718820.png \"点击放大\")",
+          "quote": "        ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/zh-cn_image_0000001910718820.png \"点击放大\")",
+          "quote_sha256": "a0581b22edb05386e2e57fb5500ced0ca11712968a5292e6939cba9081757652"
+        }
+      ],
+      "split": "heldout",
+      "asset_id": "cce_10_0905:image-010",
+      "author": "AI_SOURCE_CURATED",
+      "expert_verified": false
+    },
+    "observed": {
+      "id": "cce-asset-image-048",
+      "question": "在《Prometheus插件平滑迁移实践》的“采集配置迁移”截图中，红框标注的配置项内容是什么？",
+      "answerable": true,
+      "question_type": "image",
+      "category": "IMAGE",
+      "metrics": {
+        "evidence_recall_at_5": 0.0,
+        "all_evidence_at_5": 0.0,
+        "document_hit_at_5": 1.0
+      },
+      "documents": [
+        {
+          "id": "RDPR4ZQB55DWRUFKI2HO23OVKU",
+          "revision_id": "ZQCZLQSE6OEMBSXPD5X3FXY6KS",
+          "section": "采集配置迁移",
+          "start_line": 49,
+          "end_line": 53,
+          "content": "1. **迁移prometheus配置**\n\n   ![](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/public_sys-resources/note_3.0-zh-cn.png)\n\n   若您从未修改过monitoring命名空间下名为prometheus的ConfigMap，则无需关注本步骤。",
+          "content_hash": "5380164c94b667a9af6f8310aad382bb5a60df86fa1d2a4f39e3a705e02265f9",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "在采集配置迁移中，什么情况下无需关注迁移prometheus配置的步骤？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "迁移prometheus配置的步骤针对哪个ConfigMap？"
+            },
+            {
+              "kind": "IMAGE",
+              "text": "图片位于“采集配置迁移”章节。 图片可见内容：一个说明图标，左侧为打开的书本图形，右侧为中文文字“说明”。 图片相邻原文：采集配置迁移 1. 迁移prometheus配置 若您从未修改过monitoring命名空间下名为prometheus的ConfigMap，则无需关注本步骤。 1. 执行以下命令，备份prometheus。",
+              "start_line": 51,
+              "end_line": 51
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0905.html",
+          "title": "Prometheus插件平滑迁移实践",
+          "document_context": "目录：用户指南 > 云原生观测 > 云原生观测最佳实践 > Prometheus插件平滑迁移实践\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.6666666666666665,
+          "citation": {
+            "document_id": "HY2UJGY4C2OHPBARNSNQGUSYAJ",
+            "revision_id": "ZQCZLQSE6OEMBSXPD5X3FXY6KS",
+            "fragment_id": "RDPR4ZQB55DWRUFKI2HO23OVKU",
+            "title": "Prometheus插件平滑迁移实践",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0905.html",
+            "section": "采集配置迁移",
+            "document_context": "目录：用户指南 > 云原生观测 > 云原生观测最佳实践 > Prometheus插件平滑迁移实践\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "5380164c94b667a9af6f8310aad382bb5a60df86fa1d2a4f39e3a705e02265f9",
+            "url": "/v1/knowledge/revisions/ZQCZLQSE6OEMBSXPD5X3FXY6KS/fragments/RDPR4ZQB55DWRUFKI2HO23OVKU",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "Z4GDGSXICDSPNCGNJUKSAA7TG2",
+          "revision_id": "ZQCZLQSE6OEMBSXPD5X3FXY6KS",
+          "section": "Prometheus插件平滑迁移实践",
+          "start_line": 7,
+          "end_line": 13,
+          "content": "由于[Prometheus（停止维护）](https://support.huaweicloud.com/usermanual-cce/cce_10_0221.html)仅支持v1.21及之前的集群版本，若您需要将集群升级至v1.21以上，您需要将停止维护的Prometheus插件迁移至[云原生监控插件](https://support.huaweicloud.com/usermanual-cce/cce_10_0406.html)，以获取后续的技术支持。本文将指导您将已经停止维护的Prometheus插件迁移至云原生监控插件。\n\n云原生监控插件与Prometheus插件的对比如下：\n\n| 云原生监控插件 | Prometheus插件（停止维护） |\n| --- | --- |\n| - 云原生监控插件是基于Prometheus、VictoriaMetrics及PrometheusOperator社区构建的。 - 配置由Prometheus自定义资源配置，支持ServiceMonitor、PodMonitor、基于Annotations的自动发现机制以及静态配置的方式。 - 静态配置采集目标的方式完全兼容Prometheus插件的采集目标配置方式。 - 基于Annotations的自动发现机制更强，完全兼容Prometheus插件（为避免不必要的重复采集，自动发现默认忽略kube-system和monitoring命名空间下的Service和Pod）。 | - Prometheus插件是基于社区原生Prometheus构建的。 - 配置由monitoring命名空间下名为prometheus的ConfigMap统一配置。 - 不支持常见的ServiceMonitor或PodMonitor。 - 自定义配置仅支持手动配置或基于Annotations的自动发现机制。 |",
+          "content_hash": "9639f42a99db895e8bdea755ba526afb1d6d72d3fe1852e74ec2bdc4abbc1702",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "Prometheus插件（停止维护）支持哪些集群版本？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "将集群升级至v1.21以上时，需要将停止维护的Prometheus插件迁移至哪个插件？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "云原生监控插件与Prometheus插件在配置方式上有哪些主要区别？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "云原生监控插件基于哪些社区组件构建？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "Prometheus插件的配置由哪个ConfigMap统一管理？"
+            },
+            {
+              "kind": "TABLE_TEXT",
+              "text": "在Prometheus插件平滑迁移实践中，云原生监控插件与Prometheus插件（停止维护）的对比：云原生监控插件是基于Prometheus、VictoriaMetrics及PrometheusOperator社区构建的，配置由Prometheus自定义资源配置，支持ServiceMonitor、PodMonitor、基于Annotations的自动发现机制以及静态配置的方式，静态配置采集目标的方式完全兼容Prometheus插件的采集目标配置方式，基于Annotations的自动发现机制更强，完全兼容Prometheus插件（为避免不必要的重复采集，自动发现默认忽略kube-system和monitoring命名空间下的Service和Pod）；而Prometheus插件（停止维护）是基于社区原生Prometheus构建的，配置由monitoring命名空间下名为prometheus的ConfigMap统一配置，不支持常见的ServiceMonitor或PodMonitor，自定义配置仅支持手动配置或基于Annotations的自动发现机制。",
+              "start_line": 13,
+              "end_line": 13
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "由于 Prometheus（停止维护） 仅支持v1.21及之前的集群版本，若您需要将集群升级至v1.21以上，您需要将停止维护的Prometheus插件迁移至 云原生监控插件 ，以获取后续的技术支持。本文将指导您将已经停止维护的Prometheus插件迁移至云原生监控插件。\n云原生监控插件与Prometheus插件的对比如下：\n云原生监控插件 Prometheus插件（停止维护）\n--- ---\n云原生监控插件是基于Prometheus、VictoriaMetrics及PrometheusOperator社区构建的。 - 配置由Prometheus自定义资源配置，支持ServiceMonitor、PodMonitor、基于Annotations的自动发现机制以及静态配置的方式。 - 静态配置采集目标的方式完全兼容Prometheus插件的采集目标配置方式。 - 基于Annotations的自动发现机制更强，完全兼容Prometheus插件（为避免不必要的重复采集，自动发现默认忽略kube-system和monitoring命名空间下的Service和Pod）。 - Prometheus插件是基于社区原生Prometheus构建的。 - 配置由monitoring命名空间下名为prometheus的ConfigMap统一配置。 - 不支持常见的ServiceMonitor或PodMonitor。 - 自定义配置仅支持手动配置或基于Annotations的自动发现机制。\n[表格说明] 在Prometheus插件平滑迁移实践中，云原生监控插件与Prometheus插件（停止维护）的对比：云原生监控插件是基于Prometheus、VictoriaMetrics及PrometheusOperator社区构建的，配置由Prometheus自定义资源配置，支持ServiceMonitor、PodMonitor、基于Annotations的自动发现机制以及静态配置"
+            },
+            {
+              "kind": "PASSAGE",
+              "text": "停止维护）的对比：云原生监控插件是基于Prometheus、VictoriaMetrics及PrometheusOperator社区构建的，配置由Prometheus自定义资源配置，支持ServiceMonitor、PodMonitor、基于Annotations的自动发现机制以及静态配置的方式，静态配置采集目标的方式完全兼容Prometheus插件的采集目标配置方式，基于Annotations的自动发现机制更强，完全兼容Prometheus插件（为避免不必要的重复采集，自动发现默认忽略kube-system和monitoring命名空间下的Service和Pod）；而Prometheus插件（停止维护）是基于社区原生Prometheus构建的，配置由monitoring命名空间下名为prometheus的ConfigMap统一配置，不支持常见的ServiceMonitor或PodMonitor，自定义配置仅支持手动配置或基于Annotations的自动发现机制。"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0905.html",
+          "title": "Prometheus插件平滑迁移实践",
+          "document_context": "目录：用户指南 > 云原生观测 > 云原生观测最佳实践 > Prometheus插件平滑迁移实践\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.5833333333333333,
+          "citation": {
+            "document_id": "HY2UJGY4C2OHPBARNSNQGUSYAJ",
+            "revision_id": "ZQCZLQSE6OEMBSXPD5X3FXY6KS",
+            "fragment_id": "Z4GDGSXICDSPNCGNJUKSAA7TG2",
+            "title": "Prometheus插件平滑迁移实践",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0905.html",
+            "section": "Prometheus插件平滑迁移实践",
+            "document_context": "目录：用户指南 > 云原生观测 > 云原生观测最佳实践 > Prometheus插件平滑迁移实践\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "9639f42a99db895e8bdea755ba526afb1d6d72d3fe1852e74ec2bdc4abbc1702",
+            "url": "/v1/knowledge/revisions/ZQCZLQSE6OEMBSXPD5X3FXY6KS/fragments/Z4GDGSXICDSPNCGNJUKSAA7TG2",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "2OCICAP5CGSINSQ4ZXDIAFMPW6",
+          "revision_id": "ZQCZLQSE6OEMBSXPD5X3FXY6KS",
+          "section": "采集配置迁移",
+          "start_line": 55,
+          "end_line": 60,
+          "content": "1. 执行以下命令，备份prometheus。\n\n      ```\n      kubectl get cm prometheus -nmonitoring -oyaml > prometheus.backup.yaml\n      ```\n   2. 在monitoring命名空间下创建additional-scrape-configs的Secret，内容为prometheus中的scrape\\_configs部分中您自定义的采集配置（即：job\\_name为kubernetes-cadvisor、kubernetes-nodes、kubernetes-service-endpoints、kubernetes-pods、istio-mesh以外的部分，切勿配置以上几个Job至该Secret中，否则会导致指标采集出现重复，影响监控业务）。",
+          "content_hash": "3103634c79d3ce8f7df31eeb1ef7243e01f374b9e3e6147b76844e10ebc9672c",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "如何备份prometheus配置？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "创建additional-scrape-configs Secret时，需要包含哪些采集配置？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "为什么不能将kubernetes-cadvisor等Job配置到additional-scrape-configs Secret中？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "备份prometheus的命令是什么？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0905.html",
+          "title": "Prometheus插件平滑迁移实践",
+          "document_context": "目录：用户指南 > 云原生观测 > 云原生观测最佳实践 > Prometheus插件平滑迁移实践\n更新时间：2026-09-20 GMT+08:00",
+          "score": 1.5333333333333332,
+          "citation": {
+            "document_id": "HY2UJGY4C2OHPBARNSNQGUSYAJ",
+            "revision_id": "ZQCZLQSE6OEMBSXPD5X3FXY6KS",
+            "fragment_id": "2OCICAP5CGSINSQ4ZXDIAFMPW6",
+            "title": "Prometheus插件平滑迁移实践",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0905.html",
+            "section": "采集配置迁移",
+            "document_context": "目录：用户指南 > 云原生观测 > 云原生观测最佳实践 > Prometheus插件平滑迁移实践\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "3103634c79d3ce8f7df31eeb1ef7243e01f374b9e3e6147b76844e10ebc9672c",
+            "url": "/v1/knowledge/revisions/ZQCZLQSE6OEMBSXPD5X3FXY6KS/fragments/2OCICAP5CGSINSQ4ZXDIAFMPW6",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "6NUWDXWSPL5L7PKZON4VR3PVLZ",
+          "revision_id": "ZQCZLQSE6OEMBSXPD5X3FXY6KS",
+          "section": "采集配置迁移",
+          "start_line": 62,
+          "end_line": 90,
+          "content": "Secret内容示例如下：\n\n      ```\n      kind: Secret\n      apiVersion: v1\n      type: Opaque\n      metadata:\n        name: additional-scrape-configs\n        namespace: monitoring\n      stringData:\n        prometheus-additional.yaml: |-\n          - job_name: custom-job-tes\n            metrics_path: /metrics\n            relabel_configs:\n            - action: keep\n              source_labels:\n              - __meta_kubernetes_pod_label_app\n              - __meta_kubernetes_pod_labelpresent_app\n              regex: (prometheus-lightweight);true\n            - action: keep\n              source_labels:\n              - __meta_kubernetes_pod_container_port_name\n              regex: web\n            kubernetes_sd_configs:\n            - role: pod\n              namespaces:\n                names:\n                - monitoring\n      ```",
+          "content_hash": "f493c2f5c1f8e58a9371aafb014ee4ead6137a2c9d237330bb05b03db5ca7fb2",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "additional-scrape-configs Secret的示例内容是什么？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "Secret中prometheus-additional.yaml的格式是怎样的？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "如何定义自定义采集任务的job name？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0905.html",
+          "title": "Prometheus插件平滑迁移实践",
+          "document_context": "目录：用户指南 > 云原生观测 > 云原生观测最佳实践 > Prometheus插件平滑迁移实践\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.9,
+          "citation": {
+            "document_id": "HY2UJGY4C2OHPBARNSNQGUSYAJ",
+            "revision_id": "ZQCZLQSE6OEMBSXPD5X3FXY6KS",
+            "fragment_id": "6NUWDXWSPL5L7PKZON4VR3PVLZ",
+            "title": "Prometheus插件平滑迁移实践",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0905.html",
+            "section": "采集配置迁移",
+            "document_context": "目录：用户指南 > 云原生观测 > 云原生观测最佳实践 > Prometheus插件平滑迁移实践\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "f493c2f5c1f8e58a9371aafb014ee4ead6137a2c9d237330bb05b03db5ca7fb2",
+            "url": "/v1/knowledge/revisions/ZQCZLQSE6OEMBSXPD5X3FXY6KS/fragments/6NUWDXWSPL5L7PKZON4VR3PVLZ",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "C5UDBIZPFVHCWCFU6KBEQ64EWM",
+          "revision_id": "ZQCZLQSE6OEMBSXPD5X3FXY6KS",
+          "section": "采集数据迁移",
+          "start_line": 38,
+          "end_line": 45,
+          "content": "- 迁移至基于本地存储的传统模式时，数据库是自动迁移的，您只需继续执行后续采集配置迁移步骤即可。\n- 迁移至无本地存储的轻量化模式时，由于原本的数据存储于集群内的PVC中，后续新增数据存储于AOM，数据无法直接迁移，但是您仍旧可以利用历史数据老化机制将您的本地数据平滑过渡到AOM，具体步骤如下：\n  1. 您可以先迁移至基于本地存储的传统模式，并对接AOM普罗实例，作为平滑迁移的过渡。\n\n     历史数据您可以直接查询集群内的Prometheus，而新增数据不仅存在于集群内的Prometheus，也会同时存在于AOM中。\n  2. 随着历史数据的老化，集群内的Prometheus将会与AOM中数据完全相同（例如：您的Prometheus存储时长设置为7天，7天以后AOM中的数据将会和集群内的Prometheus数据完全相同）。\n  3. 编辑云原生监控插件，切换为无本地存储的轻量化模式，您可以节省较多的计算和存储资源，将监控数据存储于AOM中。\n  4. 确定AOM中数据符合预期并将您的Grafana对接至AOM后，删除monitoring命名空间下的PVC（名称中含有prometheus-server的PVC）。",
+          "content_hash": "8f2a810906db918711002817deef99b3c98f9d2ef732870c6db09a231ea2ed27",
+          "representations": [
+            {
+              "kind": "QUESTION",
+              "text": "迁移至基于本地存储的传统模式时，数据库是否需要手动迁移？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "迁移至无本地存储的轻量化模式时，如何平滑过渡历史数据？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "在平滑迁移过渡中，如何确保历史数据可查询？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "切换到无本地存储的轻量化模式后，需要删除哪些PVC？"
+            },
+            {
+              "kind": "QUESTION",
+              "text": "历史数据老化机制在迁移中起什么作用？"
+            }
+          ],
+          "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0905.html",
+          "title": "Prometheus插件平滑迁移实践",
+          "document_context": "目录：用户指南 > 云原生观测 > 云原生观测最佳实践 > Prometheus插件平滑迁移实践\n更新时间：2026-09-20 GMT+08:00",
+          "score": 0.8666666666666666,
+          "citation": {
+            "document_id": "HY2UJGY4C2OHPBARNSNQGUSYAJ",
+            "revision_id": "ZQCZLQSE6OEMBSXPD5X3FXY6KS",
+            "fragment_id": "C5UDBIZPFVHCWCFU6KBEQ64EWM",
+            "title": "Prometheus插件平滑迁移实践",
+            "source": "https://support.huaweicloud.com/usermanual-cce/cce_10_0905.html",
+            "section": "采集数据迁移",
+            "document_context": "目录：用户指南 > 云原生观测 > 云原生观测最佳实践 > Prometheus插件平滑迁移实践\n更新时间：2026-09-20 GMT+08:00",
+            "content_hash": "8f2a810906db918711002817deef99b3c98f9d2ef732870c6db09a231ea2ed27",
+            "url": "/v1/knowledge/revisions/ZQCZLQSE6OEMBSXPD5X3FXY6KS/fragments/C5UDBIZPFVHCWCFU6KBEQ64EWM",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "scope",
+                  "status": "MATCH",
+                  "reason": "资料声明为通用知识。"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "result": {
+        "trace_id": "0d0f628239fb3c3d6c3d7d6d21ee952b",
+        "retrieval_queries": [
+          "在《Prometheus插件平滑迁移实践》的“采集配置迁移”截图中，红框标注的配置项内容是什么？",
+          "《Prometheus插件平滑迁移实践》里“采集配置迁移”截图中，红框标出的配置项是什么内容？",
+          "在《Prometheus插件平滑迁移实践》的“采集配置迁移”部分，截图里红框标注的配置项具体是什么？",
+          "《Prometheus插件平滑迁移实践》的“采集配置迁移”截图中，被红框圈出的配置项内容是什么？"
+        ]
+      },
+      "citation_integrity": false,
+      "latency_ms": 3594.8575000220444
+    }
+  }
+]

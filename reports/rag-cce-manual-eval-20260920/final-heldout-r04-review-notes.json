@@ -1,0 +1,77 @@
+{
+  "reviewer": "GPT-6 Agent evidence review (not human expert)",
+  "decisions": {
+    "cce-manual-003": [
+      true,
+      "configz、healthz、pods三个独立RBAC子资源、保留nodes/proxy向下兼容、Kubernetes 1.36达到GA均与实际召回原文一致。"
+    ],
+    "cce-manual-004": [
+      true,
+      "PreferSameNode、优先同客户端节点端点、Kubernetes 1.35达到GA完整；废弃PreferClose的补充来自同段原文。"
+    ],
+    "cce-manual-005": [
+      true,
+      "RecoverVolumeExpansionFailure在1.34达到GA、仅前次扩容未完成时可减小PVC请求、Kubernetes自动修正均完整。另行指出底层EVS不支持缩容，没有把PVC请求修正等同于已缩小磁盘。"
+    ],
+    "cce-manual-007": [
+      true,
+      "kubelet经CRI管理镜像和容器、Containerd调用链短/组件少/稳定/资源占用少完整；版本调用链、命令与迁移差异补充均有实际召回支持。"
+    ],
+    "cce-manual-010": [
+      true,
+      "同一节点池为相同配置节点、不能单配某节点、改动影响全池完整；对新增/存量节点不同生效机制的补充明确是参数类型差异，不否定节点池配置边界。"
+    ],
+    "cce-manual-011": [
+      true,
+      "包周期节点不支持手动缩容、仅退订或移除，且弹性伸缩默认只处理按需节点、不缩容包周期节点，两项完整。"
+    ],
+    "cce-manual-014": [
+      true,
+      "Pod可含一个或多个容器、Volume、独立IP、运行策略四项完整；Controller、卷与临时存储补充来自实际召回，并明确示例数值不是实时或固定属性。"
+    ],
+    "cce-manual-015": [
+      true,
+      "需可用集群、工作负载必须运行在可用节点、无节点先创建节点完整；节点组件和后续创建入口补充均有实际原文支持。"
+    ],
+    "cce-manual-020": [
+      false,
+      "外部模型调用失败，结果为FAILED/MODEL_UNAVAILABLE，无答案和引用。服务失败按固定验收口径直接计失败，不重试、不使用参考答案替代。"
+    ],
+    "cce-manual-021": [
+      false,
+      "证据选择完成但生成输出未通过校验，结果为FAILED/INVALID_MODEL_OUTPUT，无答案和引用。按固定验收口径直接计失败。"
+    ],
+    "cce-manual-026": [
+      true,
+      "手动修改Controller安全组并放通新增容器子网网段完整；其他网络策略和外部服务白名单补充均来自实际召回且未替代核心操作。"
+    ],
+    "cce-manual-027": [
+      true,
+      "统一gRPC、out-of-tree独立构建发布、不嵌入Kubernetes核心、CCE对应Everest完整；in-tree对比和Everest组件职责有实际原文支持。"
+    ],
+    "cce-manual-037": [
+      true,
+      "备份/恢复保持稳态、变更后等待15分钟、单次所选命名空间EVS PVC/PV不超过10000个完整。"
+    ],
+    "cce-manual-056": [
+      true,
+      "多个ResourceQuota取配置的最小值生效，且直接说明不是最大值；删除多余配额的建议有同段原文支持。"
+    ],
+    "cce-manual-060": [
+      true,
+      "Secret通过文件挂载和环境变量注入、与镜像解耦并降低明文泄露风险完整；更新行为和系统Secret限制补充均有实际原文支持。"
+    ],
+    "cce-manual-061": [
+      true,
+      "kube-system下Secret及任意命名空间default-secret/paas.elb均不要操作，SWR拉镜像和服务对接ELB的用途完整；凭据更新说明有实际原文支持。"
+    ],
+    "cce-manual-075": [
+      true,
+      "公网暴露风险、控制节点安全组5443入方向、短暂重启kube-apiserver并更新kubeconfig、期间避免操作集群四项完整。"
+    ],
+    "cce-negative-runtime-pods": [
+      true,
+      "虽然正文为空，但gaps明确指出缺少payments命名空间实时Pod状态，无法给出CrashLoopBackOff实际数量，属于具体直接拒答且未编造数据；评审忽略了校准规则要求结合answer和gaps。"
+    ]
+  }
+}

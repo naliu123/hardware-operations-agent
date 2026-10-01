@@ -1,0 +1,34 @@
+[
+  {
+    "id": "cce-asset-table-explanatory-015",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "container_fs_reads_bytes_total的counter类型与原始指标表一致。",
+    "evidence_checked": ["原始表格行", "TABLE_TEXT派生文本", "引用哈希"],
+    "answer_sha256": "7d294ec0bb0d909b442a50bd30886b549218470963fa53fdf4e473dd58c32b39"
+  },
+  {
+    "id": "cce-asset-table-explanatory-020",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "kernel.pid_max对应/etc/sysctl.conf，与原始表格行一致。",
+    "evidence_checked": ["原始表格行", "TABLE_TEXT派生文本", "引用哈希"],
+    "answer_sha256": "2b286db0a92a8f6c3c295cb3577274c836d702f17063916160bf8c6bd41596f0"
+  },
+  {
+    "id": "cce-asset-image-035",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "“运维权限”选中状态由目标截图视觉描述直接支持。",
+    "evidence_checked": ["IMAGE视觉描述", "文档范围", "图片位置标记", "引用哈希"],
+    "answer_sha256": "18b1d32a9be5cb7d4fc3d09607014dffb99b0c6f331b37bbf0d6bb7cef344d5b"
+  },
+  {
+    "id": "cce-asset-image-058",
+    "passed": true,
+    "reviewer": "agent-source-audit",
+    "reason": "GPU 0的Memory-Usage值0MiB / 7680MiB由目标截图视觉描述直接支持。",
+    "evidence_checked": ["IMAGE视觉描述", "GPU编号限定", "图片位置标记", "引用哈希"],
+    "answer_sha256": "4de988b5f0710568b7e007d49cdbd1d68356fc98a3d9fa86ad7f3c0eacc22a3e"
+  }
+]

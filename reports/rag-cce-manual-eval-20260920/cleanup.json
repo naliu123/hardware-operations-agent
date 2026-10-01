@@ -1,0 +1,100 @@
+{
+  "checked_at": "2026-09-20T16:52:12.385350+00:00",
+  "before": [
+    {
+      "name": "elasticsearch",
+      "pid": 86961,
+      "created": 1789922303.519481,
+      "alive": true,
+      "rss_mib": 988.0,
+      "listeners": [
+        "::127.0.0.1:19300",
+        "::127.0.0.1:19200"
+      ]
+    },
+    {
+      "name": "phoenix",
+      "pid": 86962,
+      "created": 1789922303.523148,
+      "alive": true,
+      "rss_mib": 462.7,
+      "listeners": [
+        "127.0.0.1:16006"
+      ]
+    },
+    {
+      "name": "embedding",
+      "pid": 86963,
+      "created": 1789922303.526697,
+      "alive": true,
+      "rss_mib": 603.3,
+      "listeners": [
+        "127.0.0.1:18765"
+      ]
+    },
+    {
+      "name": "hwopsd",
+      "pid": 89342,
+      "created": 1789922742.986447,
+      "strategy": "hybrid",
+      "mode": "replay",
+      "index": "hwops-cce-manual-v1",
+      "state_path": ".local/rag/hwops-cce-manual-state.json",
+      "rrf_constant": 1,
+      "alive": true,
+      "rss_mib": 214.1,
+      "listeners": [
+        "127.0.0.1:18080"
+      ]
+    }
+  ],
+  "stop": {
+    "stopped": [
+      "elasticsearch",
+      "phoenix",
+      "embedding",
+      "hwopsd"
+    ],
+    "remaining": []
+  },
+  "after": [
+    {
+      "name": "elasticsearch",
+      "pid": 86961,
+      "created": 1789922303.519481,
+      "alive": false
+    },
+    {
+      "name": "phoenix",
+      "pid": 86962,
+      "created": 1789922303.523148,
+      "alive": false
+    },
+    {
+      "name": "embedding",
+      "pid": 86963,
+      "created": 1789922303.526697,
+      "alive": false
+    },
+    {
+      "name": "hwopsd",
+      "pid": 89342,
+      "created": 1789922742.986447,
+      "strategy": "hybrid",
+      "mode": "replay",
+      "index": "hwops-cce-manual-v1",
+      "state_path": ".local/rag/hwops-cce-manual-state.json",
+      "rrf_constant": 1,
+      "alive": false
+    }
+  ],
+  "released_ports": {
+    "19200": true,
+    "19300": true,
+    "16006": true,
+    "18765": true,
+    "18080": true
+  },
+  "key_file_present": false,
+  "all_released": true
+}
