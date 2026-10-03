@@ -42,7 +42,7 @@ func Open(ctx context.Context, dsn string) (*Store, error) {
 		s.Close()
 		return nil, errors.New("hwops requires one application instance per database")
 	}
-	if _, err = pool.Exec(ctx, migrations.Core+"\n"+migrations.Devices+"\n"+migrations.ResponseEvents); err != nil {
+	if _, err = pool.Exec(ctx, migrations.Core+"\n"+migrations.Devices+"\n"+migrations.ResponseEvents+"\n"+migrations.Diagnosis); err != nil {
 		s.Close()
 		return nil, fmt.Errorf("apply hwops schema: %w", err)
 	}

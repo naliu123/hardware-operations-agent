@@ -107,6 +107,7 @@ func NewRevision(in domain.RevisionInput) (domain.Revision, error) {
 		SchemaVersion: 1, ID: rand.Text(), DocumentID: rand.Text(),
 		Title: in.Title, Source: in.Source, Content: in.Content,
 		Applicability: in.Applicability, Status: "DRAFT", CreatedAt: time.Now().UTC(),
+		DiagnosticRules: in.DiagnosticRules,
 	}
 	if len(in.Fragments) > 0 {
 		fragments, err := validateEnrichedFragments(r.ID, in.Content, in.Fragments)
@@ -115,7 +116,7 @@ func NewRevision(in domain.RevisionInput) (domain.Revision, error) {
 		}
 		r.SchemaVersion = 2
 		r.Fragments = fragments
-		return r, nil
+		return r, validateDiagnosticRules(r)
 	}
 	section, start := "正文", 1
 	var body []string
@@ -155,7 +156,7 @@ func NewRevision(in domain.RevisionInput) (domain.Revision, error) {
 	if len(r.Fragments) == 0 {
 		return domain.Revision{}, fmt.Errorf("%w: no text fragments", domain.ErrInvalid)
 	}
-	return r, nil
+	return r, validateDiagnosticRules(r)
 }
 
 func validateEnrichedFragments(revisionID, content string, inputs []domain.FragmentInput) ([]domain.Fragment, error) {

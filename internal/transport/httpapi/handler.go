@@ -36,6 +36,11 @@ func New(app *application.App, token string) http.Handler {
 	mux.HandleFunc("PUT /v1/devices/{id}", h.putDevice)
 	mux.HandleFunc("POST /v1/devices/{id}/observations", h.observe)
 	mux.HandleFunc("GET /v1/devices/resolve", h.resolveDevice)
+	mux.HandleFunc("POST /v1/incidents", h.createIncident)
+	mux.HandleFunc("POST /v1/incidents/{id}/runs", h.createRun)
+	mux.HandleFunc("GET /v1/runs/{id}", h.run)
+	mux.HandleFunc("POST /v1/runs/{id}/resume", h.resumeRun)
+	mux.HandleFunc("POST /v1/runs/{id}/cancel", h.cancelRun)
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path != "/healthz" && (token == "" || subtle.ConstantTimeCompare(
 			[]byte(r.Header.Get("Authorization")), []byte("Bearer "+token)) != 1) {

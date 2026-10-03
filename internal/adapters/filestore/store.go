@@ -22,6 +22,8 @@ type state struct {
 	Conversations   map[string]domain.Conversation    `json:"conversations"`
 	Responses       map[string]domain.Response        `json:"responses"`
 	Events          map[string][]domain.ResponseEvent `json:"response_events"`
+	Incidents       map[string]domain.Incident        `json:"incidents"`
+	Runs            map[string]domain.DiagnosticRun   `json:"diagnostic_runs"`
 }
 
 type Store struct {
@@ -67,6 +69,12 @@ func Open(path string) (*Store, error) {
 	}
 	if s.data.Events == nil {
 		s.data.Events = map[string][]domain.ResponseEvent{}
+	}
+	if s.data.Incidents == nil {
+		s.data.Incidents = map[string]domain.Incident{}
+	}
+	if s.data.Runs == nil {
+		s.data.Runs = map[string]domain.DiagnosticRun{}
 	}
 	return s, nil
 }
@@ -160,6 +168,13 @@ func (s *Store) transact(ctx context.Context, write bool, fn func(*state) error)
 	if err != nil {
 		return err
 	}
+	// The callback may assign caller-owned slices or maps. Publish a detached
+	// snapshot so later worker mutations cannot bypass the transaction or race
+	// with readers. This also detaches values returned from write callbacks.
+	var published state
+	if err := json.Unmarshal(raw, &published); err != nil {
+		return err
+	}
 	f, err := os.CreateTemp(filepath.Dir(s.path), ".state-*")
 	if err != nil {
 		return err
@@ -179,7 +194,7 @@ func (s *Store) transact(ctx context.Context, write bool, fn func(*state) error)
 	if err = os.Rename(f.Name(), s.path); err != nil {
 		return err
 	}
-	s.data = next
+	s.data = published
 	dir, err := os.Open(filepath.Dir(s.path))
 	if err != nil {
 		return err

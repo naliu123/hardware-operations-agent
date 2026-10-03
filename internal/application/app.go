@@ -20,10 +20,12 @@ import (
 	"hwops/internal/adapters/chatmodel"
 	knowledgeagent "hwops/internal/agents/knowledge"
 	"hwops/internal/devices"
+	"hwops/internal/diagnosis"
 	"hwops/internal/domain"
 	"hwops/internal/einoflow"
 	"hwops/internal/evidence"
 	"hwops/internal/knowledge"
+	"hwops/internal/modelbudget"
 	"hwops/internal/observability"
 )
 
@@ -37,6 +39,7 @@ type App struct {
 	wg           sync.WaitGroup
 	retrieval    retriever.Retriever
 	observations *evidence.Service
+	diagnosis    *diagnosis.Engine
 }
 
 type Options struct {
@@ -45,6 +48,7 @@ type Options struct {
 	EvidenceSelection bool
 	QueryRewrite      bool
 	Observer          domain.Observer
+	DiagnosticBudget  domain.RunBudget
 }
 
 func New(store domain.Repository, cm model.BaseChatModel, mode string, options ...Options) (*App, error) {
@@ -57,6 +61,11 @@ func New(store domain.Repository, cm model.BaseChatModel, mode string, options .
 	if cm == nil {
 		cm = &chatmodel.Unconfigured{}
 	}
+	counted, err := modelbudget.Wrap(cm)
+	if err != nil {
+		return nil, err
+	}
+	cm = counted
 	config := Options{Retriever: &knowledge.LocalRetriever{Store: store}, ContextLimit: 8}
 	if len(options) > 0 {
 		if options[0].Retriever != nil {
@@ -68,6 +77,7 @@ func New(store domain.Repository, cm model.BaseChatModel, mode string, options .
 		config.EvidenceSelection = options[0].EvidenceSelection
 		config.QueryRewrite = options[0].QueryRewrite
 		config.Observer = options[0].Observer
+		config.DiagnosticBudget = options[0].DiagnosticBudget
 	}
 	if config.QueryRewrite {
 		if mode != "LIVE" {
@@ -95,9 +105,14 @@ func New(store domain.Repository, cm model.BaseChatModel, mode string, options .
 	if err != nil {
 		return nil, err
 	}
+	dx, err := diagnosis.New(store, cm, knowledgeTool, observations, mode, config.DiagnosticBudget)
+	if err != nil {
+		return nil, err
+	}
 	ctx, cancel := context.WithCancel(context.Background())
 	app := &App{store: store, qa: qa, mode: mode, ctx: ctx, cancel: cancel, wake: make(chan struct{}, 1), retrieval: config.Retriever}
 	app.observations = observations
+	app.diagnosis = dx
 	app.wg.Add(1)
 	go app.work()
 	return app, nil
@@ -105,6 +120,7 @@ func New(store domain.Repository, cm model.BaseChatModel, mode string, options .
 
 func (a *App) Close() {
 	a.cancel()
+	a.diagnosis.Close()
 	a.wg.Wait()
 }
 

@@ -12,3 +12,6 @@ var Devices string
 
 //go:embed 003_response_events.sql
 var ResponseEvents string
+
+//go:embed 004_diagnosis.sql
+var Diagnosis string

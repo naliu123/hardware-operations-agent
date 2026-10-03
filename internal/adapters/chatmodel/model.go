@@ -18,6 +18,7 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 
 	"hwops/internal/domain"
+	"hwops/internal/modelbudget"
 	"hwops/internal/observability"
 )
 
@@ -64,6 +65,9 @@ func (m *Replay) Generate(ctx context.Context, input []*schema.Message, _ ...mod
 	}
 	if len(input) == 0 {
 		return nil, errors.New("missing input")
+	}
+	if strings.Contains(input[0].Content, "诊断协议版本 dx-01") {
+		return replayDiagnostic(input[len(input)-1].Content)
 	}
 	var payload ContextInput
 	source := input[len(input)-1]
@@ -170,6 +174,11 @@ func (m *OpenAI) Generate(ctx context.Context, input []*schema.Message, opts ...
 		return nil, err
 	}
 	for attempt := 0; attempt < maxModelAttempts; attempt++ {
+		if attempt > 0 {
+			if err := modelbudget.Reserve(ctx); err != nil {
+				return nil, err
+			}
+		}
 		req, err := http.NewRequestWithContext(ctx, http.MethodPost, m.endpoint, bytes.NewReader(body))
 		if err != nil {
 			return nil, err

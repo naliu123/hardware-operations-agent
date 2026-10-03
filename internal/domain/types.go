@@ -117,24 +117,26 @@ type FragmentInput struct {
 }
 
 type Revision struct {
-	SchemaVersion int           `json:"schema_version"`
-	ID            string        `json:"id"`
-	DocumentID    string        `json:"document_id"`
-	Title         string        `json:"title"`
-	Source        string        `json:"source"`
-	Content       string        `json:"content"`
-	Applicability Applicability `json:"applicability"`
-	Status        string        `json:"status"`
-	Fragments     []Fragment    `json:"fragments"`
-	CreatedAt     time.Time     `json:"created_at"`
+	SchemaVersion   int              `json:"schema_version"`
+	ID              string           `json:"id"`
+	DocumentID      string           `json:"document_id"`
+	Title           string           `json:"title"`
+	Source          string           `json:"source"`
+	Content         string           `json:"content"`
+	Applicability   Applicability    `json:"applicability"`
+	Status          string           `json:"status"`
+	Fragments       []Fragment       `json:"fragments"`
+	CreatedAt       time.Time        `json:"created_at"`
+	DiagnosticRules []DiagnosticRule `json:"diagnostic_rules,omitempty"`
 }
 
 type RevisionInput struct {
-	Title         string          `json:"title"`
-	Source        string          `json:"source"`
-	Content       string          `json:"content"`
-	Applicability Applicability   `json:"applicability"`
-	Fragments     []FragmentInput `json:"fragments,omitempty"`
+	Title           string           `json:"title"`
+	Source          string           `json:"source"`
+	Content         string           `json:"content"`
+	Applicability   Applicability    `json:"applicability"`
+	Fragments       []FragmentInput  `json:"fragments,omitempty"`
+	DiagnosticRules []DiagnosticRule `json:"diagnostic_rules,omitempty"`
 }
 
 type Conversation struct {
@@ -244,6 +246,7 @@ type Response struct {
 }
 
 type Repository interface {
+	DiagnosisRepository
 	CreateVersionPolicy(context.Context, VersionPolicy) error
 	GetVersionPolicy(context.Context, string) (VersionPolicy, error)
 	PutDevice(context.Context, DeviceContext) error
