@@ -25,6 +25,11 @@
 另有6项外部集成测试默认SKIP。完整JSON事件见 [regression.jsonl](regression.jsonl)。
 `go vet ./...`、`go build ./...`、`git diff --check` 通过。
 
+合回主工作区并保留既有修改后，再次通过88项顶层race测试、vet及build，
+最终验证记录见 [integrated-regression.jsonl](integrated-regression.jsonl)。
+原有13个修改文件中10个逐字节保留；其余3个为工单进度和新字段附近的格式重叠，
+保留已完成状态与完整字段。原始副本保存在本地备份和Git stash中。
+
 验收中修正了文件存储的事务快照别名问题：发布的内存快照必须与调用方切片独立，
 防止后续计划/执行追加绕过事务并产生竞态。修复后诊断与全量race均通过。
 

@@ -1,0 +1,888 @@
+{"Time":"2026-10-03T16:39:17.508564+08:00","Action":"start","Package":"hwops/cmd/hwops-demo"}
+{"Time":"2026-10-03T16:39:17.508686+08:00","Action":"output","Package":"hwops/cmd/hwops-demo","Output":"?   \thwops/cmd/hwops-demo\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:17.508739+08:00","Action":"skip","Package":"hwops/cmd/hwops-demo","Elapsed":0}
+{"Time":"2026-10-03T16:39:17.508704+08:00","Action":"start","Package":"hwops/cmd/hwops-eval"}
+{"Time":"2026-10-03T16:39:17.508794+08:00","Action":"output","Package":"hwops/cmd/hwops-eval","Output":"?   \thwops/cmd/hwops-eval\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:17.50881+08:00","Action":"skip","Package":"hwops/cmd/hwops-eval","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539267+08:00","Action":"start","Package":"hwops/cmd/hwopsd"}
+{"Time":"2026-10-03T16:39:19.539299+08:00","Action":"output","Package":"hwops/cmd/hwopsd","Output":"?   \thwops/cmd/hwopsd\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539309+08:00","Action":"skip","Package":"hwops/cmd/hwopsd","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539314+08:00","Action":"start","Package":"hwops/internal/adapters/chatmodel"}
+{"Time":"2026-10-03T16:39:19.539347+08:00","Action":"output","Package":"hwops/internal/adapters/chatmodel","Output":"?   \thwops/internal/adapters/chatmodel\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.53936+08:00","Action":"skip","Package":"hwops/internal/adapters/chatmodel","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539369+08:00","Action":"start","Package":"hwops/internal/adapters/elasticsearch"}
+{"Time":"2026-10-03T16:39:19.539404+08:00","Action":"start","Package":"hwops/internal/adapters/filestore"}
+{"Time":"2026-10-03T16:39:19.539427+08:00","Action":"output","Package":"hwops/internal/adapters/filestore","Output":"?   \thwops/internal/adapters/filestore\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539434+08:00","Action":"skip","Package":"hwops/internal/adapters/filestore","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539443+08:00","Action":"start","Package":"hwops/internal/adapters/monitor"}
+{"Time":"2026-10-03T16:39:19.539461+08:00","Action":"output","Package":"hwops/internal/adapters/monitor","Output":"?   \thwops/internal/adapters/monitor\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539468+08:00","Action":"skip","Package":"hwops/internal/adapters/monitor","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539475+08:00","Action":"start","Package":"hwops/internal/adapters/postgres"}
+{"Time":"2026-10-03T16:39:19.53948+08:00","Action":"output","Package":"hwops/internal/adapters/postgres","Output":"?   \thwops/internal/adapters/postgres\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539486+08:00","Action":"skip","Package":"hwops/internal/adapters/postgres","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539498+08:00","Action":"start","Package":"hwops/internal/agents/knowledge"}
+{"Time":"2026-10-03T16:39:19.539532+08:00","Action":"start","Package":"hwops/internal/application"}
+{"Time":"2026-10-03T16:39:19.539552+08:00","Action":"output","Package":"hwops/internal/application","Output":"?   \thwops/internal/application\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539563+08:00","Action":"skip","Package":"hwops/internal/application","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539571+08:00","Action":"start","Package":"hwops/internal/devices"}
+{"Time":"2026-10-03T16:39:19.539594+08:00","Action":"output","Package":"hwops/internal/devices","Output":"?   \thwops/internal/devices\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539601+08:00","Action":"start","Package":"hwops/internal/diagnosis"}
+{"Time":"2026-10-03T16:39:19.539617+08:00","Action":"output","Package":"hwops/internal/diagnosis","Output":"?   \thwops/internal/diagnosis\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539629+08:00","Action":"skip","Package":"hwops/internal/diagnosis","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539603+08:00","Action":"skip","Package":"hwops/internal/devices","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539623+08:00","Action":"start","Package":"hwops/internal/domain"}
+{"Time":"2026-10-03T16:39:19.539667+08:00","Action":"output","Package":"hwops/internal/domain","Output":"?   \thwops/internal/domain\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539692+08:00","Action":"skip","Package":"hwops/internal/domain","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539706+08:00","Action":"start","Package":"hwops/internal/einoflow"}
+{"Time":"2026-10-03T16:39:19.539724+08:00","Action":"output","Package":"hwops/internal/einoflow","Output":"?   \thwops/internal/einoflow\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539731+08:00","Action":"skip","Package":"hwops/internal/einoflow","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539735+08:00","Action":"start","Package":"hwops/internal/evaluation"}
+{"Time":"2026-10-03T16:39:19.53974+08:00","Action":"output","Package":"hwops/internal/evaluation","Output":"?   \thwops/internal/evaluation\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539747+08:00","Action":"skip","Package":"hwops/internal/evaluation","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539748+08:00","Action":"start","Package":"hwops/internal/evidence"}
+{"Time":"2026-10-03T16:39:19.539763+08:00","Action":"output","Package":"hwops/internal/evidence","Output":"?   \thwops/internal/evidence\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539767+08:00","Action":"skip","Package":"hwops/internal/evidence","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539772+08:00","Action":"start","Package":"hwops/internal/knowledge"}
+{"Time":"2026-10-03T16:39:19.539814+08:00","Action":"start","Package":"hwops/internal/modelbudget"}
+{"Time":"2026-10-03T16:39:19.539832+08:00","Action":"output","Package":"hwops/internal/modelbudget","Output":"?   \thwops/internal/modelbudget\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539842+08:00","Action":"skip","Package":"hwops/internal/modelbudget","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539846+08:00","Action":"start","Package":"hwops/internal/observability"}
+{"Time":"2026-10-03T16:39:19.539856+08:00","Action":"output","Package":"hwops/internal/observability","Output":"?   \thwops/internal/observability\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539865+08:00","Action":"skip","Package":"hwops/internal/observability","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539875+08:00","Action":"start","Package":"hwops/internal/transport/httpapi"}
+{"Time":"2026-10-03T16:39:19.539886+08:00","Action":"output","Package":"hwops/internal/transport/httpapi","Output":"?   \thwops/internal/transport/httpapi\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.53989+08:00","Action":"skip","Package":"hwops/internal/transport/httpapi","Elapsed":0}
+{"Time":"2026-10-03T16:39:19.539899+08:00","Action":"start","Package":"hwops/migrations"}
+{"Time":"2026-10-03T16:39:19.539906+08:00","Action":"output","Package":"hwops/migrations","Output":"?   \thwops/migrations\t[no test files]\n"}
+{"Time":"2026-10-03T16:39:19.539914+08:00","Action":"skip","Package":"hwops/migrations","Elapsed":0}
+{"Time":"2026-10-03T16:39:20.325665+08:00","Action":"run","Package":"hwops/internal/adapters/elasticsearch","Test":"TestMultiVectorIndexBindsRepresentationsToSourceFragment"}
+{"Time":"2026-10-03T16:39:20.325725+08:00","Action":"output","Package":"hwops/internal/adapters/elasticsearch","Test":"TestMultiVectorIndexBindsRepresentationsToSourceFragment","Output":"=== RUN   TestMultiVectorIndexBindsRepresentationsToSourceFragment\n"}
+{"Time":"2026-10-03T16:39:20.337456+08:00","Action":"output","Package":"hwops/internal/adapters/elasticsearch","Test":"TestMultiVectorIndexBindsRepresentationsToSourceFragment","Output":"--- PASS: TestMultiVectorIndexBindsRepresentationsToSourceFragment (0.01s)\n"}
+{"Time":"2026-10-03T16:39:20.337486+08:00","Action":"pass","Package":"hwops/internal/adapters/elasticsearch","Test":"TestMultiVectorIndexBindsRepresentationsToSourceFragment","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:20.337497+08:00","Action":"run","Package":"hwops/internal/adapters/elasticsearch","Test":"TestEmbeddingTextRemovesImageAndMarkdownNoise"}
+{"Time":"2026-10-03T16:39:20.337502+08:00","Action":"output","Package":"hwops/internal/adapters/elasticsearch","Test":"TestEmbeddingTextRemovesImageAndMarkdownNoise","Output":"=== RUN   TestEmbeddingTextRemovesImageAndMarkdownNoise\n"}
+{"Time":"2026-10-03T16:39:20.337566+08:00","Action":"output","Package":"hwops/internal/adapters/elasticsearch","Test":"TestEmbeddingTextRemovesImageAndMarkdownNoise","Output":"--- PASS: TestEmbeddingTextRemovesImageAndMarkdownNoise (0.00s)\n"}
+{"Time":"2026-10-03T16:39:20.337576+08:00","Action":"pass","Package":"hwops/internal/adapters/elasticsearch","Test":"TestEmbeddingTextRemovesImageAndMarkdownNoise","Elapsed":0}
+{"Time":"2026-10-03T16:39:20.337583+08:00","Action":"output","Package":"hwops/internal/adapters/elasticsearch","Output":"PASS\n"}
+{"Time":"2026-10-03T16:39:20.339027+08:00","Action":"start","Package":"hwops/test/acceptance"}
+{"Time":"2026-10-03T16:39:20.339082+08:00","Action":"start","Package":"hwops/test/contracts"}
+{"Time":"2026-10-03T16:39:20.881694+08:00","Action":"run","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolReturnsPublishedEvidenceWithCitation"}
+{"Time":"2026-10-03T16:39:20.881801+08:00","Action":"output","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolReturnsPublishedEvidenceWithCitation","Output":"=== RUN   TestAgentToolReturnsPublishedEvidenceWithCitation\n"}
+{"Time":"2026-10-03T16:39:20.909316+08:00","Action":"output","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolReturnsPublishedEvidenceWithCitation","Output":"--- PASS: TestAgentToolReturnsPublishedEvidenceWithCitation (0.03s)\n"}
+{"Time":"2026-10-03T16:39:20.909368+08:00","Action":"pass","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolReturnsPublishedEvidenceWithCitation","Elapsed":0.03}
+{"Time":"2026-10-03T16:39:20.909396+08:00","Action":"run","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolReportsMissingDeviceContext"}
+{"Time":"2026-10-03T16:39:20.909413+08:00","Action":"output","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolReportsMissingDeviceContext","Output":"=== RUN   TestAgentToolReportsMissingDeviceContext\n"}
+{"Time":"2026-10-03T16:39:20.930042+08:00","Action":"output","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolReportsMissingDeviceContext","Output":"--- PASS: TestAgentToolReportsMissingDeviceContext (0.02s)\n"}
+{"Time":"2026-10-03T16:39:20.930069+08:00","Action":"pass","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolReportsMissingDeviceContext","Elapsed":0.02}
+{"Time":"2026-10-03T16:39:20.930078+08:00","Action":"run","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolRejectsUntrustedDeviceMode"}
+{"Time":"2026-10-03T16:39:20.930175+08:00","Action":"output","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolRejectsUntrustedDeviceMode","Output":"=== RUN   TestAgentToolRejectsUntrustedDeviceMode\n"}
+{"Time":"2026-10-03T16:39:20.933216+08:00","Action":"output","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolRejectsUntrustedDeviceMode","Output":"--- PASS: TestAgentToolRejectsUntrustedDeviceMode (0.00s)\n"}
+{"Time":"2026-10-03T16:39:20.933241+08:00","Action":"pass","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolRejectsUntrustedDeviceMode","Elapsed":0}
+{"Time":"2026-10-03T16:39:20.933251+08:00","Action":"run","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolRechecksPublicationAfterRetrieval"}
+{"Time":"2026-10-03T16:39:20.933258+08:00","Action":"output","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolRechecksPublicationAfterRetrieval","Output":"=== RUN   TestAgentToolRechecksPublicationAfterRetrieval\n"}
+{"Time":"2026-10-03T16:39:20.961573+08:00","Action":"output","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolRechecksPublicationAfterRetrieval","Output":"--- PASS: TestAgentToolRechecksPublicationAfterRetrieval (0.03s)\n"}
+{"Time":"2026-10-03T16:39:20.961591+08:00","Action":"pass","Package":"hwops/internal/agents/knowledge","Test":"TestAgentToolRechecksPublicationAfterRetrieval","Elapsed":0.03}
+{"Time":"2026-10-03T16:39:20.961599+08:00","Action":"output","Package":"hwops/internal/agents/knowledge","Output":"PASS\n"}
+{"Time":"2026-10-03T16:39:21.346949+08:00","Action":"output","Package":"hwops/internal/adapters/elasticsearch","Output":"ok  \thwops/internal/adapters/elasticsearch\t1.807s\n"}
+{"Time":"2026-10-03T16:39:21.347042+08:00","Action":"pass","Package":"hwops/internal/adapters/elasticsearch","Elapsed":1.808}
+{"Time":"2026-10-03T16:39:21.385091+08:00","Action":"run","Package":"hwops/internal/knowledge","Test":"TestNewRevisionBoundsLargeSections"}
+{"Time":"2026-10-03T16:39:21.3852+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestNewRevisionBoundsLargeSections","Output":"=== RUN   TestNewRevisionBoundsLargeSections\n"}
+{"Time":"2026-10-03T16:39:21.388372+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestNewRevisionBoundsLargeSections","Output":"--- PASS: TestNewRevisionBoundsLargeSections (0.00s)\n"}
+{"Time":"2026-10-03T16:39:21.388392+08:00","Action":"pass","Package":"hwops/internal/knowledge","Test":"TestNewRevisionBoundsLargeSections","Elapsed":0}
+{"Time":"2026-10-03T16:39:21.388405+08:00","Action":"run","Package":"hwops/internal/knowledge","Test":"TestNewRevisionKeepsShortSectionsUnchanged"}
+{"Time":"2026-10-03T16:39:21.388413+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestNewRevisionKeepsShortSectionsUnchanged","Output":"=== RUN   TestNewRevisionKeepsShortSectionsUnchanged\n"}
+{"Time":"2026-10-03T16:39:21.388473+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestNewRevisionKeepsShortSectionsUnchanged","Output":"--- PASS: TestNewRevisionKeepsShortSectionsUnchanged (0.00s)\n"}
+{"Time":"2026-10-03T16:39:21.388487+08:00","Action":"pass","Package":"hwops/internal/knowledge","Test":"TestNewRevisionKeepsShortSectionsUnchanged","Elapsed":0}
+{"Time":"2026-10-03T16:39:21.388495+08:00","Action":"run","Package":"hwops/internal/knowledge","Test":"TestNewRevisionAcceptsVerifiedSemanticFragments"}
+{"Time":"2026-10-03T16:39:21.388502+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestNewRevisionAcceptsVerifiedSemanticFragments","Output":"=== RUN   TestNewRevisionAcceptsVerifiedSemanticFragments\n"}
+{"Time":"2026-10-03T16:39:21.388623+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestNewRevisionAcceptsVerifiedSemanticFragments","Output":"--- PASS: TestNewRevisionAcceptsVerifiedSemanticFragments (0.00s)\n"}
+{"Time":"2026-10-03T16:39:21.388635+08:00","Action":"pass","Package":"hwops/internal/knowledge","Test":"TestNewRevisionAcceptsVerifiedSemanticFragments","Elapsed":0}
+{"Time":"2026-10-03T16:39:21.388642+08:00","Action":"run","Package":"hwops/internal/knowledge","Test":"TestNewRevisionRejectsUnverifiableSemanticFragments"}
+{"Time":"2026-10-03T16:39:21.388648+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestNewRevisionRejectsUnverifiableSemanticFragments","Output":"=== RUN   TestNewRevisionRejectsUnverifiableSemanticFragments\n"}
+{"Time":"2026-10-03T16:39:21.388736+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestNewRevisionRejectsUnverifiableSemanticFragments","Output":"--- PASS: TestNewRevisionRejectsUnverifiableSemanticFragments (0.00s)\n"}
+{"Time":"2026-10-03T16:39:21.388747+08:00","Action":"pass","Package":"hwops/internal/knowledge","Test":"TestNewRevisionRejectsUnverifiableSemanticFragments","Elapsed":0}
+{"Time":"2026-10-03T16:39:21.388756+08:00","Action":"run","Package":"hwops/internal/knowledge","Test":"TestRetrievalContextKeepsSourceAssetsAndInsertsDerivedTextAtTheirPositions"}
+{"Time":"2026-10-03T16:39:21.388764+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestRetrievalContextKeepsSourceAssetsAndInsertsDerivedTextAtTheirPositions","Output":"=== RUN   TestRetrievalContextKeepsSourceAssetsAndInsertsDerivedTextAtTheirPositions\n"}
+{"Time":"2026-10-03T16:39:21.388841+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestRetrievalContextKeepsSourceAssetsAndInsertsDerivedTextAtTheirPositions","Output":"--- PASS: TestRetrievalContextKeepsSourceAssetsAndInsertsDerivedTextAtTheirPositions (0.00s)\n"}
+{"Time":"2026-10-03T16:39:21.388871+08:00","Action":"pass","Package":"hwops/internal/knowledge","Test":"TestRetrievalContextKeepsSourceAssetsAndInsertsDerivedTextAtTheirPositions","Elapsed":0}
+{"Time":"2026-10-03T16:39:21.38889+08:00","Action":"run","Package":"hwops/internal/knowledge","Test":"TestNewRevisionRejectsAssetRepresentationWithWrongSourcePosition"}
+{"Time":"2026-10-03T16:39:21.388896+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestNewRevisionRejectsAssetRepresentationWithWrongSourcePosition","Output":"=== RUN   TestNewRevisionRejectsAssetRepresentationWithWrongSourcePosition\n"}
+{"Time":"2026-10-03T16:39:21.388921+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestNewRevisionRejectsAssetRepresentationWithWrongSourcePosition","Output":"--- PASS: TestNewRevisionRejectsAssetRepresentationWithWrongSourcePosition (0.00s)\n"}
+{"Time":"2026-10-03T16:39:21.388929+08:00","Action":"pass","Package":"hwops/internal/knowledge","Test":"TestNewRevisionRejectsAssetRepresentationWithWrongSourcePosition","Elapsed":0}
+{"Time":"2026-10-03T16:39:21.388934+08:00","Action":"run","Package":"hwops/internal/knowledge","Test":"TestMultiQueryRetrieverRewritesInParallelAndPreservesOptions"}
+{"Time":"2026-10-03T16:39:21.38894+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestMultiQueryRetrieverRewritesInParallelAndPreservesOptions","Output":"=== RUN   TestMultiQueryRetrieverRewritesInParallelAndPreservesOptions\n"}
+{"Time":"2026-10-03T16:39:21.389465+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestMultiQueryRetrieverRewritesInParallelAndPreservesOptions","Output":"--- PASS: TestMultiQueryRetrieverRewritesInParallelAndPreservesOptions (0.00s)\n"}
+{"Time":"2026-10-03T16:39:21.389499+08:00","Action":"pass","Package":"hwops/internal/knowledge","Test":"TestMultiQueryRetrieverRewritesInParallelAndPreservesOptions","Elapsed":0}
+{"Time":"2026-10-03T16:39:21.389511+08:00","Action":"run","Package":"hwops/internal/knowledge","Test":"TestDecodeRewritesRejectsDuplicatesAndUnknownFields"}
+{"Time":"2026-10-03T16:39:21.389519+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestDecodeRewritesRejectsDuplicatesAndUnknownFields","Output":"=== RUN   TestDecodeRewritesRejectsDuplicatesAndUnknownFields\n"}
+{"Time":"2026-10-03T16:39:21.389869+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestDecodeRewritesRejectsDuplicatesAndUnknownFields","Output":"--- PASS: TestDecodeRewritesRejectsDuplicatesAndUnknownFields (0.00s)\n"}
+{"Time":"2026-10-03T16:39:21.389882+08:00","Action":"pass","Package":"hwops/internal/knowledge","Test":"TestDecodeRewritesRejectsDuplicatesAndUnknownFields","Elapsed":0}
+{"Time":"2026-10-03T16:39:21.38989+08:00","Action":"run","Package":"hwops/internal/knowledge","Test":"TestMultiQueryRetrieverAccumulatesSingleRewriteResponses"}
+{"Time":"2026-10-03T16:39:21.389897+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestMultiQueryRetrieverAccumulatesSingleRewriteResponses","Output":"=== RUN   TestMultiQueryRetrieverAccumulatesSingleRewriteResponses\n"}
+{"Time":"2026-10-03T16:39:21.390051+08:00","Action":"output","Package":"hwops/internal/knowledge","Test":"TestMultiQueryRetrieverAccumulatesSingleRewriteResponses","Output":"--- PASS: TestMultiQueryRetrieverAccumulatesSingleRewriteResponses (0.00s)\n"}
+{"Time":"2026-10-03T16:39:21.390063+08:00","Action":"pass","Package":"hwops/internal/knowledge","Test":"TestMultiQueryRetrieverAccumulatesSingleRewriteResponses","Elapsed":0}
+{"Time":"2026-10-03T16:39:21.390071+08:00","Action":"output","Package":"hwops/internal/knowledge","Output":"PASS\n"}
+{"Time":"2026-10-03T16:39:21.972719+08:00","Action":"output","Package":"hwops/internal/agents/knowledge","Output":"ok  \thwops/internal/agents/knowledge\t2.433s\n"}
+{"Time":"2026-10-03T16:39:21.97277+08:00","Action":"pass","Package":"hwops/internal/agents/knowledge","Elapsed":2.433}
+{"Time":"2026-10-03T16:39:21.989539+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestUnresolvedAnswerPreservesSpecificKnowledgeGap"}
+{"Time":"2026-10-03T16:39:21.989602+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestUnresolvedAnswerPreservesSpecificKnowledgeGap","Output":"=== RUN   TestUnresolvedAnswerPreservesSpecificKnowledgeGap\n"}
+{"Time":"2026-10-03T16:39:22.064432+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestUnresolvedAnswerPreservesSpecificKnowledgeGap","Output":"--- PASS: TestUnresolvedAnswerPreservesSpecificKnowledgeGap (0.07s)\n"}
+{"Time":"2026-10-03T16:39:22.064453+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestUnresolvedAnswerPreservesSpecificKnowledgeGap","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:22.064468+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestPartialAnswerKeepsSupportedClaimAndSpecificGap"}
+{"Time":"2026-10-03T16:39:22.064473+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPartialAnswerKeepsSupportedClaimAndSpecificGap","Output":"=== RUN   TestPartialAnswerKeepsSupportedClaimAndSpecificGap\n"}
+{"Time":"2026-10-03T16:39:22.129466+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPartialAnswerKeepsSupportedClaimAndSpecificGap","Output":"--- PASS: TestPartialAnswerKeepsSupportedClaimAndSpecificGap (0.06s)\n"}
+{"Time":"2026-10-03T16:39:22.129491+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestPartialAnswerKeepsSupportedClaimAndSpecificGap","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:22.1295+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestAnswerAndCitationRetainHistoricalDirectory"}
+{"Time":"2026-10-03T16:39:22.129505+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestAnswerAndCitationRetainHistoricalDirectory","Output":"=== RUN   TestAnswerAndCitationRetainHistoricalDirectory\n"}
+{"Time":"2026-10-03T16:39:22.196511+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestAnswerAndCitationRetainHistoricalDirectory","Output":"--- PASS: TestAnswerAndCitationRetainHistoricalDirectory (0.07s)\n"}
+{"Time":"2026-10-03T16:39:22.196534+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestAnswerAndCitationRetainHistoricalDirectory","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:22.196543+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestAnswerRetainsSourceScopeEvenWhenModelOmitsIt"}
+{"Time":"2026-10-03T16:39:22.196549+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestAnswerRetainsSourceScopeEvenWhenModelOmitsIt","Output":"=== RUN   TestAnswerRetainsSourceScopeEvenWhenModelOmitsIt\n"}
+{"Time":"2026-10-03T16:39:22.259475+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestAnswerRetainsSourceScopeEvenWhenModelOmitsIt","Output":"--- PASS: TestAnswerRetainsSourceScopeEvenWhenModelOmitsIt (0.06s)\n"}
+{"Time":"2026-10-03T16:39:22.259503+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestAnswerRetainsSourceScopeEvenWhenModelOmitsIt","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:22.259512+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestAnswerRetainsDocumentTitleForAmbiguousSection"}
+{"Time":"2026-10-03T16:39:22.259517+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestAnswerRetainsDocumentTitleForAmbiguousSection","Output":"=== RUN   TestAnswerRetainsDocumentTitleForAmbiguousSection\n"}
+{"Time":"2026-10-03T16:39:22.337302+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestAnswerRetainsDocumentTitleForAmbiguousSection","Output":"--- PASS: TestAnswerRetainsDocumentTitleForAmbiguousSection (0.08s)\n"}
+{"Time":"2026-10-03T16:39:22.337327+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestAnswerRetainsDocumentTitleForAmbiguousSection","Elapsed":0.08}
+{"Time":"2026-10-03T16:39:22.337335+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestConversationIdempotencyContextAndRestart"}
+{"Time":"2026-10-03T16:39:22.33734+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestConversationIdempotencyContextAndRestart","Output":"=== RUN   TestConversationIdempotencyContextAndRestart\n"}
+{"Time":"2026-10-03T16:39:22.392455+08:00","Action":"output","Package":"hwops/internal/knowledge","Output":"ok  \thwops/internal/knowledge\t2.853s\n"}
+{"Time":"2026-10-03T16:39:22.392482+08:00","Action":"pass","Package":"hwops/internal/knowledge","Elapsed":2.8529999999999998}
+{"Time":"2026-10-03T16:39:22.480632+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestDeadlineWhileReadingModelBody"}
+{"Time":"2026-10-03T16:39:22.481565+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestDeadlineWhileReadingModelBody","Output":"=== RUN   TestDeadlineWhileReadingModelBody\n"}
+{"Time":"2026-10-03T16:39:22.541889+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestConversationIdempotencyContextAndRestart","Output":"--- PASS: TestConversationIdempotencyContextAndRestart (0.20s)\n"}
+{"Time":"2026-10-03T16:39:22.541909+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestConversationIdempotencyContextAndRestart","Elapsed":0.2}
+{"Time":"2026-10-03T16:39:22.541917+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestSSEDisconnectReplaysPersistedValidatedEvents"}
+{"Time":"2026-10-03T16:39:22.541922+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestSSEDisconnectReplaysPersistedValidatedEvents","Output":"=== RUN   TestSSEDisconnectReplaysPersistedValidatedEvents\n"}
+{"Time":"2026-10-03T16:39:22.59136+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestSSEDisconnectReplaysPersistedValidatedEvents","Output":"--- PASS: TestSSEDisconnectReplaysPersistedValidatedEvents (0.05s)\n"}
+{"Time":"2026-10-03T16:39:22.591378+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestSSEDisconnectReplaysPersistedValidatedEvents","Elapsed":0.05}
+{"Time":"2026-10-03T16:39:22.591386+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestExpiredQueuedMessageReportsTotalDeadline"}
+{"Time":"2026-10-03T16:39:22.591391+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestExpiredQueuedMessageReportsTotalDeadline","Output":"=== RUN   TestExpiredQueuedMessageReportsTotalDeadline\n"}
+{"Time":"2026-10-03T16:39:22.632892+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestExpiredQueuedMessageReportsTotalDeadline","Output":"--- PASS: TestExpiredQueuedMessageReportsTotalDeadline (0.04s)\n"}
+{"Time":"2026-10-03T16:39:22.632913+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestExpiredQueuedMessageReportsTotalDeadline","Elapsed":0.04}
+{"Time":"2026-10-03T16:39:22.632922+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestConcurrentMessagesKeepIndependentDeviceSnapshots"}
+{"Time":"2026-10-03T16:39:22.632928+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestConcurrentMessagesKeepIndependentDeviceSnapshots","Output":"=== RUN   TestConcurrentMessagesKeepIndependentDeviceSnapshots\n"}
+{"Time":"2026-10-03T16:39:22.733464+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestDeadlineWhileReadingModelBody","Output":"--- PASS: TestDeadlineWhileReadingModelBody (0.25s)\n"}
+{"Time":"2026-10-03T16:39:22.734593+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestDeadlineWhileReadingModelBody","Elapsed":0.25}
+{"Time":"2026-10-03T16:39:22.734607+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics"}
+{"Time":"2026-10-03T16:39:22.734613+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics","Output":"=== RUN   TestOpenAIProtocolAndFailureSemantics\n"}
+{"Time":"2026-10-03T16:39:22.734618+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/success"}
+{"Time":"2026-10-03T16:39:22.734623+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/success","Output":"=== RUN   TestOpenAIProtocolAndFailureSemantics/success\n"}
+{"Time":"2026-10-03T16:39:22.735238+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/success","Output":"--- PASS: TestOpenAIProtocolAndFailureSemantics/success (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.735277+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/success","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.735288+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/unavailable"}
+{"Time":"2026-10-03T16:39:22.735294+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/unavailable","Output":"=== RUN   TestOpenAIProtocolAndFailureSemantics/unavailable\n"}
+{"Time":"2026-10-03T16:39:22.837024+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/unavailable","Output":"--- PASS: TestOpenAIProtocolAndFailureSemantics/unavailable (0.10s)\n"}
+{"Time":"2026-10-03T16:39:22.837052+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/unavailable","Elapsed":0.1}
+{"Time":"2026-10-03T16:39:22.837064+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/redirect"}
+{"Time":"2026-10-03T16:39:22.83707+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/redirect","Output":"=== RUN   TestOpenAIProtocolAndFailureSemantics/redirect\n"}
+{"Time":"2026-10-03T16:39:22.838415+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/redirect","Output":"--- PASS: TestOpenAIProtocolAndFailureSemantics/redirect (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.838427+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/redirect","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.838436+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/malformed"}
+{"Time":"2026-10-03T16:39:22.838441+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/malformed","Output":"=== RUN   TestOpenAIProtocolAndFailureSemantics/malformed\n"}
+{"Time":"2026-10-03T16:39:22.839249+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/malformed","Output":"--- PASS: TestOpenAIProtocolAndFailureSemantics/malformed (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.839264+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/malformed","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.839269+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/no_choice"}
+{"Time":"2026-10-03T16:39:22.839277+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/no_choice","Output":"=== RUN   TestOpenAIProtocolAndFailureSemantics/no_choice\n"}
+{"Time":"2026-10-03T16:39:22.840037+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/no_choice","Output":"--- PASS: TestOpenAIProtocolAndFailureSemantics/no_choice (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.840052+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/no_choice","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.840067+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/oversized"}
+{"Time":"2026-10-03T16:39:22.840073+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/oversized","Output":"=== RUN   TestOpenAIProtocolAndFailureSemantics/oversized\n"}
+{"Time":"2026-10-03T16:39:22.843871+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/oversized","Output":"--- PASS: TestOpenAIProtocolAndFailureSemantics/oversized (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.843897+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics/oversized","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.843916+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics","Output":"--- PASS: TestOpenAIProtocolAndFailureSemantics (0.11s)\n"}
+{"Time":"2026-10-03T16:39:22.843922+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIProtocolAndFailureSemantics","Elapsed":0.11}
+{"Time":"2026-10-03T16:39:22.843933+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIClientIdentityHeaders"}
+{"Time":"2026-10-03T16:39:22.843938+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIClientIdentityHeaders","Output":"=== RUN   TestOpenAIClientIdentityHeaders\n"}
+{"Time":"2026-10-03T16:39:22.844753+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIClientIdentityHeaders","Output":"--- PASS: TestOpenAIClientIdentityHeaders (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.844767+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIClientIdentityHeaders","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.844773+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestDeepSeekNonThinkingAndActualUsage"}
+{"Time":"2026-10-03T16:39:22.844778+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestDeepSeekNonThinkingAndActualUsage","Output":"=== RUN   TestDeepSeekNonThinkingAndActualUsage\n"}
+{"Time":"2026-10-03T16:39:22.84553+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestDeepSeekNonThinkingAndActualUsage","Output":"--- PASS: TestDeepSeekNonThinkingAndActualUsage (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.845544+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestDeepSeekNonThinkingAndActualUsage","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.84555+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesTransientFailureAndReturnsSuccessfulUsage"}
+{"Time":"2026-10-03T16:39:22.845558+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesTransientFailureAndReturnsSuccessfulUsage","Output":"=== RUN   TestOpenAIRetriesTransientFailureAndReturnsSuccessfulUsage\n"}
+{"Time":"2026-10-03T16:39:22.847083+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesTransientFailureAndReturnsSuccessfulUsage","Output":"--- PASS: TestOpenAIRetriesTransientFailureAndReturnsSuccessfulUsage (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.847096+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesTransientFailureAndReturnsSuccessfulUsage","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.847103+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses"}
+{"Time":"2026-10-03T16:39:22.847107+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses","Output":"=== RUN   TestOpenAIRetriesSupportedTransientStatuses\n"}
+{"Time":"2026-10-03T16:39:22.847112+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Too_Many_Requests"}
+{"Time":"2026-10-03T16:39:22.847116+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Too_Many_Requests","Output":"=== RUN   TestOpenAIRetriesSupportedTransientStatuses/Too_Many_Requests\n"}
+{"Time":"2026-10-03T16:39:22.848266+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Too_Many_Requests","Output":"--- PASS: TestOpenAIRetriesSupportedTransientStatuses/Too_Many_Requests (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.848282+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Too_Many_Requests","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.848288+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Internal_Server_Error"}
+{"Time":"2026-10-03T16:39:22.848293+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Internal_Server_Error","Output":"=== RUN   TestOpenAIRetriesSupportedTransientStatuses/Internal_Server_Error\n"}
+{"Time":"2026-10-03T16:39:22.849343+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Internal_Server_Error","Output":"--- PASS: TestOpenAIRetriesSupportedTransientStatuses/Internal_Server_Error (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.849374+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Internal_Server_Error","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.84938+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Bad_Gateway"}
+{"Time":"2026-10-03T16:39:22.849386+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Bad_Gateway","Output":"=== RUN   TestOpenAIRetriesSupportedTransientStatuses/Bad_Gateway\n"}
+{"Time":"2026-10-03T16:39:22.850549+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Bad_Gateway","Output":"--- PASS: TestOpenAIRetriesSupportedTransientStatuses/Bad_Gateway (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.850559+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Bad_Gateway","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.850564+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Service_Unavailable"}
+{"Time":"2026-10-03T16:39:22.850569+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Service_Unavailable","Output":"=== RUN   TestOpenAIRetriesSupportedTransientStatuses/Service_Unavailable\n"}
+{"Time":"2026-10-03T16:39:22.851664+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Service_Unavailable","Output":"--- PASS: TestOpenAIRetriesSupportedTransientStatuses/Service_Unavailable (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.851677+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Service_Unavailable","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.851682+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Gateway_Timeout"}
+{"Time":"2026-10-03T16:39:22.851686+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Gateway_Timeout","Output":"=== RUN   TestOpenAIRetriesSupportedTransientStatuses/Gateway_Timeout\n"}
+{"Time":"2026-10-03T16:39:22.852826+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Gateway_Timeout","Output":"--- PASS: TestOpenAIRetriesSupportedTransientStatuses/Gateway_Timeout (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.852839+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses/Gateway_Timeout","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.852847+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses","Output":"--- PASS: TestOpenAIRetriesSupportedTransientStatuses (0.01s)\n"}
+{"Time":"2026-10-03T16:39:22.852852+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesSupportedTransientStatuses","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:22.852858+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesTransportFailure"}
+{"Time":"2026-10-03T16:39:22.852863+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesTransportFailure","Output":"=== RUN   TestOpenAIRetriesTransportFailure\n"}
+{"Time":"2026-10-03T16:39:22.955167+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesTransportFailure","Output":"--- PASS: TestOpenAIRetriesTransportFailure (0.10s)\n"}
+{"Time":"2026-10-03T16:39:22.955197+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIRetriesTransportFailure","Elapsed":0.1}
+{"Time":"2026-10-03T16:39:22.955212+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIDoesNotRetryNonTransientClientFailure"}
+{"Time":"2026-10-03T16:39:22.955217+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIDoesNotRetryNonTransientClientFailure","Output":"=== RUN   TestOpenAIDoesNotRetryNonTransientClientFailure\n"}
+{"Time":"2026-10-03T16:39:22.955819+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIDoesNotRetryNonTransientClientFailure","Output":"--- PASS: TestOpenAIDoesNotRetryNonTransientClientFailure (0.00s)\n"}
+{"Time":"2026-10-03T16:39:22.955833+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIDoesNotRetryNonTransientClientFailure","Elapsed":0}
+{"Time":"2026-10-03T16:39:22.955844+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIRetryRespectsContextDuringRetryAfter"}
+{"Time":"2026-10-03T16:39:22.955849+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetryRespectsContextDuringRetryAfter","Output":"=== RUN   TestOpenAIRetryRespectsContextDuringRetryAfter\n"}
+{"Time":"2026-10-03T16:39:23.007971+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetryRespectsContextDuringRetryAfter","Output":"--- PASS: TestOpenAIRetryRespectsContextDuringRetryAfter (0.05s)\n"}
+{"Time":"2026-10-03T16:39:23.007996+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIRetryRespectsContextDuringRetryAfter","Elapsed":0.05}
+{"Time":"2026-10-03T16:39:23.008004+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIRetryAttemptsAreBounded"}
+{"Time":"2026-10-03T16:39:23.008012+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetryAttemptsAreBounded","Output":"=== RUN   TestOpenAIRetryAttemptsAreBounded\n"}
+{"Time":"2026-10-03T16:39:23.009211+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIRetryAttemptsAreBounded","Output":"--- PASS: TestOpenAIRetryAttemptsAreBounded (0.00s)\n"}
+{"Time":"2026-10-03T16:39:23.009228+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIRetryAttemptsAreBounded","Elapsed":0}
+{"Time":"2026-10-03T16:39:23.009233+08:00","Action":"run","Package":"hwops/test/contracts","Test":"TestOpenAIToolCallingRoundTripAndImmutableBinding"}
+{"Time":"2026-10-03T16:39:23.009237+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIToolCallingRoundTripAndImmutableBinding","Output":"=== RUN   TestOpenAIToolCallingRoundTripAndImmutableBinding\n"}
+{"Time":"2026-10-03T16:39:23.011197+08:00","Action":"output","Package":"hwops/test/contracts","Test":"TestOpenAIToolCallingRoundTripAndImmutableBinding","Output":"--- PASS: TestOpenAIToolCallingRoundTripAndImmutableBinding (0.00s)\n"}
+{"Time":"2026-10-03T16:39:23.011215+08:00","Action":"pass","Package":"hwops/test/contracts","Test":"TestOpenAIToolCallingRoundTripAndImmutableBinding","Elapsed":0}
+{"Time":"2026-10-03T16:39:23.011221+08:00","Action":"output","Package":"hwops/test/contracts","Output":"PASS\n"}
+{"Time":"2026-10-03T16:39:23.337477+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestConcurrentMessagesKeepIndependentDeviceSnapshots","Output":"--- PASS: TestConcurrentMessagesKeepIndependentDeviceSnapshots (0.70s)\n"}
+{"Time":"2026-10-03T16:39:23.337505+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestConcurrentMessagesKeepIndependentDeviceSnapshots","Elapsed":0.7}
+{"Time":"2026-10-03T16:39:23.337514+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDeviceSnapshotsAndImmutableVersionRulesSurviveRestart"}
+{"Time":"2026-10-03T16:39:23.337519+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDeviceSnapshotsAndImmutableVersionRulesSurviveRestart","Output":"=== RUN   TestDeviceSnapshotsAndImmutableVersionRulesSurviveRestart\n"}
+{"Time":"2026-10-03T16:39:23.536535+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDeviceSnapshotsAndImmutableVersionRulesSurviveRestart","Output":"--- PASS: TestDeviceSnapshotsAndImmutableVersionRulesSurviveRestart (0.20s)\n"}
+{"Time":"2026-10-03T16:39:23.536562+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDeviceSnapshotsAndImmutableVersionRulesSurviveRestart","Elapsed":0.2}
+{"Time":"2026-10-03T16:39:23.53657+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestQA01FileCanAcceptDevicesAndPoliciesAfterUpgrade"}
+{"Time":"2026-10-03T16:39:23.536575+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestQA01FileCanAcceptDevicesAndPoliciesAfterUpgrade","Output":"=== RUN   TestQA01FileCanAcceptDevicesAndPoliciesAfterUpgrade\n"}
+{"Time":"2026-10-03T16:39:23.617991+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestQA01FileCanAcceptDevicesAndPoliciesAfterUpgrade","Output":"--- PASS: TestQA01FileCanAcceptDevicesAndPoliciesAfterUpgrade (0.08s)\n"}
+{"Time":"2026-10-03T16:39:23.61801+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestQA01FileCanAcceptDevicesAndPoliciesAfterUpgrade","Elapsed":0.08}
+{"Time":"2026-10-03T16:39:23.618018+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions"}
+{"Time":"2026-10-03T16:39:23.618024+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions","Output":"=== RUN   TestSameQuestionMatchesTwoModelsAndTwoVersions\n"}
+{"Time":"2026-10-03T16:39:23.736867+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/atlas-old"}
+{"Time":"2026-10-03T16:39:23.736892+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/atlas-old","Output":"=== RUN   TestSameQuestionMatchesTwoModelsAndTwoVersions/atlas-old\n"}
+{"Time":"2026-10-03T16:39:23.787854+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/atlas-old","Output":"--- PASS: TestSameQuestionMatchesTwoModelsAndTwoVersions/atlas-old (0.05s)\n"}
+{"Time":"2026-10-03T16:39:23.787875+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/atlas-old","Elapsed":0.05}
+{"Time":"2026-10-03T16:39:23.787885+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/atlas-new"}
+{"Time":"2026-10-03T16:39:23.787891+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/atlas-new","Output":"=== RUN   TestSameQuestionMatchesTwoModelsAndTwoVersions/atlas-new\n"}
+{"Time":"2026-10-03T16:39:23.850793+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/atlas-new","Output":"--- PASS: TestSameQuestionMatchesTwoModelsAndTwoVersions/atlas-new (0.06s)\n"}
+{"Time":"2026-10-03T16:39:23.850814+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/atlas-new","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:23.850822+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/boreal-old"}
+{"Time":"2026-10-03T16:39:23.850827+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/boreal-old","Output":"=== RUN   TestSameQuestionMatchesTwoModelsAndTwoVersions/boreal-old\n"}
+{"Time":"2026-10-03T16:39:23.923131+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/boreal-old","Output":"--- PASS: TestSameQuestionMatchesTwoModelsAndTwoVersions/boreal-old (0.07s)\n"}
+{"Time":"2026-10-03T16:39:23.923151+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/boreal-old","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:23.92316+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/boreal-new"}
+{"Time":"2026-10-03T16:39:23.923173+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/boreal-new","Output":"=== RUN   TestSameQuestionMatchesTwoModelsAndTwoVersions/boreal-new\n"}
+{"Time":"2026-10-03T16:39:24.003505+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/boreal-new","Output":"--- PASS: TestSameQuestionMatchesTwoModelsAndTwoVersions/boreal-new (0.08s)\n"}
+{"Time":"2026-10-03T16:39:24.003521+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions/boreal-new","Elapsed":0.08}
+{"Time":"2026-10-03T16:39:24.005476+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions","Output":"--- PASS: TestSameQuestionMatchesTwoModelsAndTwoVersions (0.39s)\n"}
+{"Time":"2026-10-03T16:39:24.005489+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestSameQuestionMatchesTwoModelsAndTwoVersions","Elapsed":0.39}
+{"Time":"2026-10-03T16:39:24.005495+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions"}
+{"Time":"2026-10-03T16:39:24.005499+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions","Output":"=== RUN   TestApplicabilityOutcomesAndMissingVersions\n"}
+{"Time":"2026-10-03T16:39:24.005507+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/match"}
+{"Time":"2026-10-03T16:39:24.005511+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/match","Output":"=== RUN   TestApplicabilityOutcomesAndMissingVersions/match\n"}
+{"Time":"2026-10-03T16:39:24.014884+08:00","Action":"output","Package":"hwops/test/contracts","Output":"ok  \thwops/test/contracts\t3.676s\n"}
+{"Time":"2026-10-03T16:39:24.015531+08:00","Action":"pass","Package":"hwops/test/contracts","Elapsed":3.676}
+{"Time":"2026-10-03T16:39:24.075791+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/match","Output":"--- PASS: TestApplicabilityOutcomesAndMissingVersions/match (0.07s)\n"}
+{"Time":"2026-10-03T16:39:24.075805+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/match","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:24.075811+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/wrong_firmware"}
+{"Time":"2026-10-03T16:39:24.075815+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/wrong_firmware","Output":"=== RUN   TestApplicabilityOutcomesAndMissingVersions/wrong_firmware\n"}
+{"Time":"2026-10-03T16:39:24.141631+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/wrong_firmware","Output":"--- PASS: TestApplicabilityOutcomesAndMissingVersions/wrong_firmware (0.07s)\n"}
+{"Time":"2026-10-03T16:39:24.141646+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/wrong_firmware","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:24.141653+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/wrong_model"}
+{"Time":"2026-10-03T16:39:24.141658+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/wrong_model","Output":"=== RUN   TestApplicabilityOutcomesAndMissingVersions/wrong_model\n"}
+{"Time":"2026-10-03T16:39:24.20976+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/wrong_model","Output":"--- PASS: TestApplicabilityOutcomesAndMissingVersions/wrong_model (0.07s)\n"}
+{"Time":"2026-10-03T16:39:24.209776+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/wrong_model","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:24.209789+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/missing_firmware"}
+{"Time":"2026-10-03T16:39:24.209795+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/missing_firmware","Output":"=== RUN   TestApplicabilityOutcomesAndMissingVersions/missing_firmware\n"}
+{"Time":"2026-10-03T16:39:24.28035+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/missing_firmware","Output":"--- PASS: TestApplicabilityOutcomesAndMissingVersions/missing_firmware (0.07s)\n"}
+{"Time":"2026-10-03T16:39:24.280379+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/missing_firmware","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:24.280391+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/missing_model"}
+{"Time":"2026-10-03T16:39:24.280398+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/missing_model","Output":"=== RUN   TestApplicabilityOutcomesAndMissingVersions/missing_model\n"}
+{"Time":"2026-10-03T16:39:24.355514+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/missing_model","Output":"--- PASS: TestApplicabilityOutcomesAndMissingVersions/missing_model (0.08s)\n"}
+{"Time":"2026-10-03T16:39:24.35556+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/missing_model","Elapsed":0.08}
+{"Time":"2026-10-03T16:39:24.355579+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/known_mismatch_wins_over_missing_version"}
+{"Time":"2026-10-03T16:39:24.355589+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/known_mismatch_wins_over_missing_version","Output":"=== RUN   TestApplicabilityOutcomesAndMissingVersions/known_mismatch_wins_over_missing_version\n"}
+{"Time":"2026-10-03T16:39:24.428485+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/known_mismatch_wins_over_missing_version","Output":"--- PASS: TestApplicabilityOutcomesAndMissingVersions/known_mismatch_wins_over_missing_version (0.07s)\n"}
+{"Time":"2026-10-03T16:39:24.428508+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions/known_mismatch_wins_over_missing_version","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:24.428518+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions","Output":"--- PASS: TestApplicabilityOutcomesAndMissingVersions (0.42s)\n"}
+{"Time":"2026-10-03T16:39:24.428525+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestApplicabilityOutcomesAndMissingVersions","Elapsed":0.42}
+{"Time":"2026-10-03T16:39:24.428532+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestAmbiguousDeviceAliasRequiresSelection"}
+{"Time":"2026-10-03T16:39:24.428538+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestAmbiguousDeviceAliasRequiresSelection","Output":"=== RUN   TestAmbiguousDeviceAliasRequiresSelection\n"}
+{"Time":"2026-10-03T16:39:24.535982+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestAmbiguousDeviceAliasRequiresSelection","Output":"--- PASS: TestAmbiguousDeviceAliasRequiresSelection (0.11s)\n"}
+{"Time":"2026-10-03T16:39:24.536016+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestAmbiguousDeviceAliasRequiresSelection","Elapsed":0.11}
+{"Time":"2026-10-03T16:39:24.536036+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder"}
+{"Time":"2026-10-03T16:39:24.536045+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder","Output":"=== RUN   TestVersionRangeUsesRegisteredProductOrder\n"}
+{"Time":"2026-10-03T16:39:24.547541+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/lower_boundary"}
+{"Time":"2026-10-03T16:39:24.547565+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/lower_boundary","Output":"=== RUN   TestVersionRangeUsesRegisteredProductOrder/lower_boundary\n"}
+{"Time":"2026-10-03T16:39:24.633103+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/lower_boundary","Output":"--- PASS: TestVersionRangeUsesRegisteredProductOrder/lower_boundary (0.09s)\n"}
+{"Time":"2026-10-03T16:39:24.633126+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/lower_boundary","Elapsed":0.09}
+{"Time":"2026-10-03T16:39:24.633138+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/product_order_not_lexical_or_semver"}
+{"Time":"2026-10-03T16:39:24.633144+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/product_order_not_lexical_or_semver","Output":"=== RUN   TestVersionRangeUsesRegisteredProductOrder/product_order_not_lexical_or_semver\n"}
+{"Time":"2026-10-03T16:39:24.741998+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/product_order_not_lexical_or_semver","Output":"--- PASS: TestVersionRangeUsesRegisteredProductOrder/product_order_not_lexical_or_semver (0.11s)\n"}
+{"Time":"2026-10-03T16:39:24.74202+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/product_order_not_lexical_or_semver","Elapsed":0.11}
+{"Time":"2026-10-03T16:39:24.742029+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/upper_boundary"}
+{"Time":"2026-10-03T16:39:24.742035+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/upper_boundary","Output":"=== RUN   TestVersionRangeUsesRegisteredProductOrder/upper_boundary\n"}
+{"Time":"2026-10-03T16:39:24.868973+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/upper_boundary","Output":"--- PASS: TestVersionRangeUsesRegisteredProductOrder/upper_boundary (0.13s)\n"}
+{"Time":"2026-10-03T16:39:24.869003+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/upper_boundary","Elapsed":0.13}
+{"Time":"2026-10-03T16:39:24.869011+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/below"}
+{"Time":"2026-10-03T16:39:24.869017+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/below","Output":"=== RUN   TestVersionRangeUsesRegisteredProductOrder/below\n"}
+{"Time":"2026-10-03T16:39:24.992998+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/below","Output":"--- PASS: TestVersionRangeUsesRegisteredProductOrder/below (0.12s)\n"}
+{"Time":"2026-10-03T16:39:24.993017+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/below","Elapsed":0.12}
+{"Time":"2026-10-03T16:39:24.993034+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/above"}
+{"Time":"2026-10-03T16:39:24.993039+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/above","Output":"=== RUN   TestVersionRangeUsesRegisteredProductOrder/above\n"}
+{"Time":"2026-10-03T16:39:25.124983+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/above","Output":"--- PASS: TestVersionRangeUsesRegisteredProductOrder/above (0.13s)\n"}
+{"Time":"2026-10-03T16:39:25.125009+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/above","Elapsed":0.13}
+{"Time":"2026-10-03T16:39:25.125016+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/unregistered_version"}
+{"Time":"2026-10-03T16:39:25.12503+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/unregistered_version","Output":"=== RUN   TestVersionRangeUsesRegisteredProductOrder/unregistered_version\n"}
+{"Time":"2026-10-03T16:39:25.269015+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/unregistered_version","Output":"--- PASS: TestVersionRangeUsesRegisteredProductOrder/unregistered_version (0.14s)\n"}
+{"Time":"2026-10-03T16:39:25.269034+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/unregistered_version","Elapsed":0.14}
+{"Time":"2026-10-03T16:39:25.269042+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/missing_rule"}
+{"Time":"2026-10-03T16:39:25.269048+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/missing_rule","Output":"=== RUN   TestVersionRangeUsesRegisteredProductOrder/missing_rule\n"}
+{"Time":"2026-10-03T16:39:25.421019+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/missing_rule","Output":"--- PASS: TestVersionRangeUsesRegisteredProductOrder/missing_rule (0.15s)\n"}
+{"Time":"2026-10-03T16:39:25.421049+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/missing_rule","Elapsed":0.15}
+{"Time":"2026-10-03T16:39:25.421058+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/unknown_rule"}
+{"Time":"2026-10-03T16:39:25.421062+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/unknown_rule","Output":"=== RUN   TestVersionRangeUsesRegisteredProductOrder/unknown_rule\n"}
+{"Time":"2026-10-03T16:39:25.590988+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/unknown_rule","Output":"--- PASS: TestVersionRangeUsesRegisteredProductOrder/unknown_rule (0.17s)\n"}
+{"Time":"2026-10-03T16:39:25.591009+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/unknown_rule","Elapsed":0.17}
+{"Time":"2026-10-03T16:39:25.591018+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/other_product_rule"}
+{"Time":"2026-10-03T16:39:25.591022+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/other_product_rule","Output":"=== RUN   TestVersionRangeUsesRegisteredProductOrder/other_product_rule\n"}
+{"Time":"2026-10-03T16:39:25.761942+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/other_product_rule","Output":"--- PASS: TestVersionRangeUsesRegisteredProductOrder/other_product_rule (0.17s)\n"}
+{"Time":"2026-10-03T16:39:25.761965+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/other_product_rule","Elapsed":0.17}
+{"Time":"2026-10-03T16:39:25.761973+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/unknown_boundary"}
+{"Time":"2026-10-03T16:39:25.761978+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/unknown_boundary","Output":"=== RUN   TestVersionRangeUsesRegisteredProductOrder/unknown_boundary\n"}
+{"Time":"2026-10-03T16:39:25.941896+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/unknown_boundary","Output":"--- PASS: TestVersionRangeUsesRegisteredProductOrder/unknown_boundary (0.18s)\n"}
+{"Time":"2026-10-03T16:39:25.941928+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/unknown_boundary","Elapsed":0.18}
+{"Time":"2026-10-03T16:39:25.941938+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/reversed_range"}
+{"Time":"2026-10-03T16:39:25.941949+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/reversed_range","Output":"=== RUN   TestVersionRangeUsesRegisteredProductOrder/reversed_range\n"}
+{"Time":"2026-10-03T16:39:26.130974+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/reversed_range","Output":"--- PASS: TestVersionRangeUsesRegisteredProductOrder/reversed_range (0.19s)\n"}
+{"Time":"2026-10-03T16:39:26.130997+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder/reversed_range","Elapsed":0.19}
+{"Time":"2026-10-03T16:39:26.132621+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder","Output":"--- PASS: TestVersionRangeUsesRegisteredProductOrder (1.60s)\n"}
+{"Time":"2026-10-03T16:39:26.132641+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestVersionRangeUsesRegisteredProductOrder","Elapsed":1.6}
+{"Time":"2026-10-03T16:39:26.132647+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext"}
+{"Time":"2026-10-03T16:39:26.132652+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext","Output":"=== RUN   TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext\n"}
+{"Time":"2026-10-03T16:39:26.193876+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/name_in_text"}
+{"Time":"2026-10-03T16:39:26.193897+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/name_in_text","Output":"=== RUN   TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/name_in_text\n"}
+{"Time":"2026-10-03T16:39:26.229348+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/name_in_text","Output":"--- PASS: TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/name_in_text (0.04s)\n"}
+{"Time":"2026-10-03T16:39:26.229369+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/name_in_text","Elapsed":0.04}
+{"Time":"2026-10-03T16:39:26.229378+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/whole_identifier"}
+{"Time":"2026-10-03T16:39:26.229384+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/whole_identifier","Output":"=== RUN   TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/whole_identifier\n"}
+{"Time":"2026-10-03T16:39:26.275618+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/whole_identifier","Output":"--- PASS: TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/whole_identifier (0.05s)\n"}
+{"Time":"2026-10-03T16:39:26.275638+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/whole_identifier","Elapsed":0.05}
+{"Time":"2026-10-03T16:39:26.275647+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/two_names"}
+{"Time":"2026-10-03T16:39:26.275652+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/two_names","Output":"=== RUN   TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/two_names\n"}
+{"Time":"2026-10-03T16:39:26.293919+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/two_names","Output":"--- PASS: TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/two_names (0.02s)\n"}
+{"Time":"2026-10-03T16:39:26.293938+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/two_names","Elapsed":0.02}
+{"Time":"2026-10-03T16:39:26.293945+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/conflicting_id"}
+{"Time":"2026-10-03T16:39:26.29395+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/conflicting_id","Output":"=== RUN   TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/conflicting_id\n"}
+{"Time":"2026-10-03T16:39:26.315327+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/conflicting_id","Output":"--- PASS: TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/conflicting_id (0.02s)\n"}
+{"Time":"2026-10-03T16:39:26.315342+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/conflicting_id","Elapsed":0.02}
+{"Time":"2026-10-03T16:39:26.315348+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/unknown_id"}
+{"Time":"2026-10-03T16:39:26.315353+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/unknown_id","Output":"=== RUN   TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/unknown_id\n"}
+{"Time":"2026-10-03T16:39:26.337253+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/unknown_id","Output":"--- PASS: TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/unknown_id (0.02s)\n"}
+{"Time":"2026-10-03T16:39:26.337271+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/unknown_id","Elapsed":0.02}
+{"Time":"2026-10-03T16:39:26.337278+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/unknown_alias"}
+{"Time":"2026-10-03T16:39:26.337284+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/unknown_alias","Output":"=== RUN   TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/unknown_alias\n"}
+{"Time":"2026-10-03T16:39:26.360375+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/unknown_alias","Output":"--- PASS: TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/unknown_alias (0.02s)\n"}
+{"Time":"2026-10-03T16:39:26.360391+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/unknown_alias","Elapsed":0.02}
+{"Time":"2026-10-03T16:39:26.360398+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/no_implicit_carry"}
+{"Time":"2026-10-03T16:39:26.360403+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/no_implicit_carry","Output":"=== RUN   TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/no_implicit_carry\n"}
+{"Time":"2026-10-03T16:39:26.382637+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/no_implicit_carry","Output":"--- PASS: TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/no_implicit_carry (0.02s)\n"}
+{"Time":"2026-10-03T16:39:26.382652+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext/no_implicit_carry","Elapsed":0.02}
+{"Time":"2026-10-03T16:39:26.384642+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext","Output":"--- PASS: TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext (0.25s)\n"}
+{"Time":"2026-10-03T16:39:26.384653+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestTextDeviceNamesAndExplicitConflictsDoNotReuseContext","Elapsed":0.25}
+{"Time":"2026-10-03T16:39:26.384659+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDeviceUpdateDuringGenerationDropsObsoleteGuidance"}
+{"Time":"2026-10-03T16:39:26.384663+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDeviceUpdateDuringGenerationDropsObsoleteGuidance","Output":"=== RUN   TestDeviceUpdateDuringGenerationDropsObsoleteGuidance\n"}
+{"Time":"2026-10-03T16:39:26.384671+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDeviceUpdateDuringGenerationDropsObsoleteGuidance/complete"}
+{"Time":"2026-10-03T16:39:26.384676+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDeviceUpdateDuringGenerationDropsObsoleteGuidance/complete","Output":"=== RUN   TestDeviceUpdateDuringGenerationDropsObsoleteGuidance/complete\n"}
+{"Time":"2026-10-03T16:39:26.545135+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDeviceUpdateDuringGenerationDropsObsoleteGuidance/complete","Output":"--- PASS: TestDeviceUpdateDuringGenerationDropsObsoleteGuidance/complete (0.16s)\n"}
+{"Time":"2026-10-03T16:39:26.545153+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDeviceUpdateDuringGenerationDropsObsoleteGuidance/complete","Elapsed":0.16}
+{"Time":"2026-10-03T16:39:26.545159+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDeviceUpdateDuringGenerationDropsObsoleteGuidance/partial"}
+{"Time":"2026-10-03T16:39:26.545163+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDeviceUpdateDuringGenerationDropsObsoleteGuidance/partial","Output":"=== RUN   TestDeviceUpdateDuringGenerationDropsObsoleteGuidance/partial\n"}
+{"Time":"2026-10-03T16:39:26.706978+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDeviceUpdateDuringGenerationDropsObsoleteGuidance/partial","Output":"--- PASS: TestDeviceUpdateDuringGenerationDropsObsoleteGuidance/partial (0.16s)\n"}
+{"Time":"2026-10-03T16:39:26.707+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDeviceUpdateDuringGenerationDropsObsoleteGuidance/partial","Elapsed":0.16}
+{"Time":"2026-10-03T16:39:26.707013+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDeviceUpdateDuringGenerationDropsObsoleteGuidance","Output":"--- PASS: TestDeviceUpdateDuringGenerationDropsObsoleteGuidance (0.32s)\n"}
+{"Time":"2026-10-03T16:39:26.707019+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDeviceUpdateDuringGenerationDropsObsoleteGuidance","Elapsed":0.32}
+{"Time":"2026-10-03T16:39:26.707027+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements"}
+{"Time":"2026-10-03T16:39:26.70704+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements","Output":"=== RUN   TestFirmwareDriverAndHardwareAreIndependentRequirements\n"}
+{"Time":"2026-10-03T16:39:26.732994+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/all_match"}
+{"Time":"2026-10-03T16:39:26.733011+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/all_match","Output":"=== RUN   TestFirmwareDriverAndHardwareAreIndependentRequirements/all_match\n"}
+{"Time":"2026-10-03T16:39:26.788979+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/all_match","Output":"--- PASS: TestFirmwareDriverAndHardwareAreIndependentRequirements/all_match (0.06s)\n"}
+{"Time":"2026-10-03T16:39:26.788999+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/all_match","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:26.78901+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/missing_driver"}
+{"Time":"2026-10-03T16:39:26.789016+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/missing_driver","Output":"=== RUN   TestFirmwareDriverAndHardwareAreIndependentRequirements/missing_driver\n"}
+{"Time":"2026-10-03T16:39:26.85254+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/missing_driver","Output":"--- PASS: TestFirmwareDriverAndHardwareAreIndependentRequirements/missing_driver (0.06s)\n"}
+{"Time":"2026-10-03T16:39:26.852561+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/missing_driver","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:26.85257+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/missing_hardware"}
+{"Time":"2026-10-03T16:39:26.852576+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/missing_hardware","Output":"=== RUN   TestFirmwareDriverAndHardwareAreIndependentRequirements/missing_hardware\n"}
+{"Time":"2026-10-03T16:39:26.927232+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/missing_hardware","Output":"--- PASS: TestFirmwareDriverAndHardwareAreIndependentRequirements/missing_hardware (0.07s)\n"}
+{"Time":"2026-10-03T16:39:26.927249+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/missing_hardware","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:26.927256+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/wrong_hardware"}
+{"Time":"2026-10-03T16:39:26.927261+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/wrong_hardware","Output":"=== RUN   TestFirmwareDriverAndHardwareAreIndependentRequirements/wrong_hardware\n"}
+{"Time":"2026-10-03T16:39:27.009715+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/wrong_hardware","Output":"--- PASS: TestFirmwareDriverAndHardwareAreIndependentRequirements/wrong_hardware (0.08s)\n"}
+{"Time":"2026-10-03T16:39:27.009736+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/wrong_hardware","Elapsed":0.08}
+{"Time":"2026-10-03T16:39:27.009751+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/wrong_driver"}
+{"Time":"2026-10-03T16:39:27.009756+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/wrong_driver","Output":"=== RUN   TestFirmwareDriverAndHardwareAreIndependentRequirements/wrong_driver\n"}
+{"Time":"2026-10-03T16:39:27.097473+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/wrong_driver","Output":"--- PASS: TestFirmwareDriverAndHardwareAreIndependentRequirements/wrong_driver (0.09s)\n"}
+{"Time":"2026-10-03T16:39:27.097492+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/wrong_driver","Elapsed":0.09}
+{"Time":"2026-10-03T16:39:27.0975+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/firmware_cannot_substitute_driver"}
+{"Time":"2026-10-03T16:39:27.097505+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/firmware_cannot_substitute_driver","Output":"=== RUN   TestFirmwareDriverAndHardwareAreIndependentRequirements/firmware_cannot_substitute_driver\n"}
+{"Time":"2026-10-03T16:39:27.191931+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/firmware_cannot_substitute_driver","Output":"--- PASS: TestFirmwareDriverAndHardwareAreIndependentRequirements/firmware_cannot_substitute_driver (0.09s)\n"}
+{"Time":"2026-10-03T16:39:27.19195+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements/firmware_cannot_substitute_driver","Elapsed":0.09}
+{"Time":"2026-10-03T16:39:27.193393+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements","Output":"--- PASS: TestFirmwareDriverAndHardwareAreIndependentRequirements (0.49s)\n"}
+{"Time":"2026-10-03T16:39:27.193402+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestFirmwareDriverAndHardwareAreIndependentRequirements","Elapsed":0.49}
+{"Time":"2026-10-03T16:39:27.193409+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestGeneralKnowledgeNeedsNoDeviceVersions"}
+{"Time":"2026-10-03T16:39:27.193414+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestGeneralKnowledgeNeedsNoDeviceVersions","Output":"=== RUN   TestGeneralKnowledgeNeedsNoDeviceVersions\n"}
+{"Time":"2026-10-03T16:39:27.331014+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestGeneralKnowledgeNeedsNoDeviceVersions","Output":"--- PASS: TestGeneralKnowledgeNeedsNoDeviceVersions (0.14s)\n"}
+{"Time":"2026-10-03T16:39:27.331035+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestGeneralKnowledgeNeedsNoDeviceVersions","Elapsed":0.14}
+{"Time":"2026-10-03T16:39:27.331043+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestIneligibleHighRankedFragmentsDoNotConsumeContextBudget"}
+{"Time":"2026-10-03T16:39:27.331056+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestIneligibleHighRankedFragmentsDoNotConsumeContextBudget","Output":"=== RUN   TestIneligibleHighRankedFragmentsDoNotConsumeContextBudget\n"}
+{"Time":"2026-10-03T16:39:27.64994+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestIneligibleHighRankedFragmentsDoNotConsumeContextBudget","Output":"--- PASS: TestIneligibleHighRankedFragmentsDoNotConsumeContextBudget (0.32s)\n"}
+{"Time":"2026-10-03T16:39:27.649966+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestIneligibleHighRankedFragmentsDoNotConsumeContextBudget","Elapsed":0.32}
+{"Time":"2026-10-03T16:39:27.649975+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDeviceObservationsRejectRollbackAndModeMixing"}
+{"Time":"2026-10-03T16:39:27.649986+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDeviceObservationsRejectRollbackAndModeMixing","Output":"=== RUN   TestDeviceObservationsRejectRollbackAndModeMixing\n"}
+{"Time":"2026-10-03T16:39:27.663022+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDeviceObservationsRejectRollbackAndModeMixing","Output":"--- PASS: TestDeviceObservationsRejectRollbackAndModeMixing (0.01s)\n"}
+{"Time":"2026-10-03T16:39:27.663044+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDeviceObservationsRejectRollbackAndModeMixing","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:27.663054+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence"}
+{"Time":"2026-10-03T16:39:27.663061+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence","Output":"=== RUN   TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence\n"}
+{"Time":"2026-10-03T16:39:27.663067+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/wrong_unit"}
+{"Time":"2026-10-03T16:39:27.663073+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/wrong_unit","Output":"=== RUN   TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/wrong_unit\n"}
+{"Time":"2026-10-03T16:39:27.889188+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/wrong_unit","Output":"--- PASS: TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/wrong_unit (0.23s)\n"}
+{"Time":"2026-10-03T16:39:27.889211+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/wrong_unit","Elapsed":0.23}
+{"Time":"2026-10-03T16:39:27.889219+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/newer_conflict"}
+{"Time":"2026-10-03T16:39:27.889225+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/newer_conflict","Output":"=== RUN   TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/newer_conflict\n"}
+{"Time":"2026-10-03T16:39:28.195894+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/newer_conflict","Output":"--- PASS: TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/newer_conflict (0.31s)\n"}
+{"Time":"2026-10-03T16:39:28.195918+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/newer_conflict","Elapsed":0.31}
+{"Time":"2026-10-03T16:39:28.195926+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/same_time_conflict"}
+{"Time":"2026-10-03T16:39:28.195932+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/same_time_conflict","Output":"=== RUN   TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/same_time_conflict\n"}
+{"Time":"2026-10-03T16:39:28.486596+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/same_time_conflict","Output":"--- PASS: TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/same_time_conflict (0.29s)\n"}
+{"Time":"2026-10-03T16:39:28.486624+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/ROOT_CAUSE/same_time_conflict","Elapsed":0.29}
+{"Time":"2026-10-03T16:39:28.486639+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/wrong_unit"}
+{"Time":"2026-10-03T16:39:28.486645+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/wrong_unit","Output":"=== RUN   TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/wrong_unit\n"}
+{"Time":"2026-10-03T16:39:28.700388+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/wrong_unit","Output":"--- PASS: TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/wrong_unit (0.21s)\n"}
+{"Time":"2026-10-03T16:39:28.700412+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/wrong_unit","Elapsed":0.21}
+{"Time":"2026-10-03T16:39:28.700426+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/newer_conflict"}
+{"Time":"2026-10-03T16:39:28.700432+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/newer_conflict","Output":"=== RUN   TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/newer_conflict\n"}
+{"Time":"2026-10-03T16:39:28.996459+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/newer_conflict","Output":"--- PASS: TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/newer_conflict (0.30s)\n"}
+{"Time":"2026-10-03T16:39:28.996486+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/newer_conflict","Elapsed":0.3}
+{"Time":"2026-10-03T16:39:28.996494+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/same_time_conflict"}
+{"Time":"2026-10-03T16:39:28.996498+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/same_time_conflict","Output":"=== RUN   TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/same_time_conflict\n"}
+{"Time":"2026-10-03T16:39:29.290046+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/same_time_conflict","Output":"--- PASS: TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/same_time_conflict (0.29s)\n"}
+{"Time":"2026-10-03T16:39:29.290074+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence/RECOVERY/same_time_conflict","Elapsed":0.29}
+{"Time":"2026-10-03T16:39:29.290082+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence","Output":"--- PASS: TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence (1.63s)\n"}
+{"Time":"2026-10-03T16:39:29.29009+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticCriteriaRejectUnitsAndUncitedCounterevidence","Elapsed":1.63}
+{"Time":"2026-10-03T16:39:29.290095+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestPostgreSQLDiagnosticWaitResumeAndHistory"}
+{"Time":"2026-10-03T16:39:29.290107+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPostgreSQLDiagnosticWaitResumeAndHistory","Output":"=== RUN   TestPostgreSQLDiagnosticWaitResumeAndHistory\n"}
+{"Time":"2026-10-03T16:39:29.290131+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPostgreSQLDiagnosticWaitResumeAndHistory","Output":"    diagnosis_integration_test.go:24: HWOPS_TEST_DATABASE_URL is unset; PostgreSQL diagnosis integration not verified\n"}
+{"Time":"2026-10-03T16:39:29.290141+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPostgreSQLDiagnosticWaitResumeAndHistory","Output":"--- SKIP: TestPostgreSQLDiagnosticWaitResumeAndHistory (0.00s)\n"}
+{"Time":"2026-10-03T16:39:29.290146+08:00","Action":"skip","Package":"hwops/test/acceptance","Test":"TestPostgreSQLDiagnosticWaitResumeAndHistory","Elapsed":0}
+{"Time":"2026-10-03T16:39:29.290154+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestLiveDiagnosticPlanningAndMissingObservation"}
+{"Time":"2026-10-03T16:39:29.290158+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestLiveDiagnosticPlanningAndMissingObservation","Output":"=== RUN   TestLiveDiagnosticPlanningAndMissingObservation\n"}
+{"Time":"2026-10-03T16:39:29.290173+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestLiveDiagnosticPlanningAndMissingObservation","Output":"    diagnosis_integration_test.go:92: LIVE diagnosis integration requires HWOPS_TEST_LIVE_MODEL=1\n"}
+{"Time":"2026-10-03T16:39:29.290185+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestLiveDiagnosticPlanningAndMissingObservation","Output":"--- SKIP: TestLiveDiagnosticPlanningAndMissingObservation (0.00s)\n"}
+{"Time":"2026-10-03T16:39:29.290191+08:00","Action":"skip","Package":"hwops/test/acceptance","Test":"TestLiveDiagnosticPlanningAndMissingObservation","Elapsed":0}
+{"Time":"2026-10-03T16:39:29.290196+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticCancelDuringPlanningDiscardsProposal"}
+{"Time":"2026-10-03T16:39:29.2902+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCancelDuringPlanningDiscardsProposal","Output":"=== RUN   TestDiagnosticCancelDuringPlanningDiscardsProposal\n"}
+{"Time":"2026-10-03T16:39:29.348968+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCancelDuringPlanningDiscardsProposal","Output":"--- PASS: TestDiagnosticCancelDuringPlanningDiscardsProposal (0.06s)\n"}
+{"Time":"2026-10-03T16:39:29.348986+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticCancelDuringPlanningDiscardsProposal","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:29.348994+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticSnapshotChangeDiscardsAndReplans"}
+{"Time":"2026-10-03T16:39:29.349+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticSnapshotChangeDiscardsAndReplans","Output":"=== RUN   TestDiagnosticSnapshotChangeDiscardsAndReplans\n"}
+{"Time":"2026-10-03T16:39:29.78875+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticSnapshotChangeDiscardsAndReplans","Output":"--- PASS: TestDiagnosticSnapshotChangeDiscardsAndReplans (0.44s)\n"}
+{"Time":"2026-10-03T16:39:29.788775+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticSnapshotChangeDiscardsAndReplans","Elapsed":0.44}
+{"Time":"2026-10-03T16:39:29.788782+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveTimeAndToolBudgets"}
+{"Time":"2026-10-03T16:39:29.788791+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveTimeAndToolBudgets","Output":"=== RUN   TestDiagnosticActiveTimeAndToolBudgets\n"}
+{"Time":"2026-10-03T16:39:29.788796+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveTimeAndToolBudgets/active"}
+{"Time":"2026-10-03T16:39:29.7888+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveTimeAndToolBudgets/active","Output":"=== RUN   TestDiagnosticActiveTimeAndToolBudgets/active\n"}
+{"Time":"2026-10-03T16:39:30.010789+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveTimeAndToolBudgets/active","Output":"--- PASS: TestDiagnosticActiveTimeAndToolBudgets/active (0.22s)\n"}
+{"Time":"2026-10-03T16:39:30.010853+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveTimeAndToolBudgets/active","Elapsed":0.22}
+{"Time":"2026-10-03T16:39:30.01087+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveTimeAndToolBudgets/tool"}
+{"Time":"2026-10-03T16:39:30.010881+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveTimeAndToolBudgets/tool","Output":"=== RUN   TestDiagnosticActiveTimeAndToolBudgets/tool\n"}
+{"Time":"2026-10-03T16:39:30.195048+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveTimeAndToolBudgets/tool","Output":"--- PASS: TestDiagnosticActiveTimeAndToolBudgets/tool (0.18s)\n"}
+{"Time":"2026-10-03T16:39:30.195079+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveTimeAndToolBudgets/tool","Elapsed":0.18}
+{"Time":"2026-10-03T16:39:30.19509+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveTimeAndToolBudgets","Output":"--- PASS: TestDiagnosticActiveTimeAndToolBudgets (0.41s)\n"}
+{"Time":"2026-10-03T16:39:30.195096+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveTimeAndToolBudgets","Elapsed":0.41}
+{"Time":"2026-10-03T16:39:30.195101+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticNestedModelCallsAndRetriesConsumeSameBudget"}
+{"Time":"2026-10-03T16:39:30.195106+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticNestedModelCallsAndRetriesConsumeSameBudget","Output":"=== RUN   TestDiagnosticNestedModelCallsAndRetriesConsumeSameBudget\n"}
+{"Time":"2026-10-03T16:39:30.505353+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticNestedModelCallsAndRetriesConsumeSameBudget","Output":"--- PASS: TestDiagnosticNestedModelCallsAndRetriesConsumeSameBudget (0.31s)\n"}
+{"Time":"2026-10-03T16:39:30.505383+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticNestedModelCallsAndRetriesConsumeSameBudget","Elapsed":0.31}
+{"Time":"2026-10-03T16:39:30.505394+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis"}
+{"Time":"2026-10-03T16:39:30.505401+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis","Output":"=== RUN   TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis\n"}
+{"Time":"2026-10-03T16:39:30.505408+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/no_voltage"}
+{"Time":"2026-10-03T16:39:30.505413+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/no_voltage","Output":"=== RUN   TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/no_voltage\n"}
+{"Time":"2026-10-03T16:39:30.72838+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/no_voltage","Output":"--- PASS: TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/no_voltage (0.22s)\n"}
+{"Time":"2026-10-03T16:39:30.728403+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/no_voltage","Elapsed":0.22}
+{"Time":"2026-10-03T16:39:30.728412+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/wrong_rule"}
+{"Time":"2026-10-03T16:39:30.728418+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/wrong_rule","Output":"=== RUN   TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/wrong_rule\n"}
+{"Time":"2026-10-03T16:39:30.944507+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/wrong_rule","Output":"--- PASS: TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/wrong_rule (0.22s)\n"}
+{"Time":"2026-10-03T16:39:30.944531+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/wrong_rule","Elapsed":0.22}
+{"Time":"2026-10-03T16:39:30.944541+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/wrong_conclusion"}
+{"Time":"2026-10-03T16:39:30.944546+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/wrong_conclusion","Output":"=== RUN   TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/wrong_conclusion\n"}
+{"Time":"2026-10-03T16:39:31.159433+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/wrong_conclusion","Output":"--- PASS: TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/wrong_conclusion (0.21s)\n"}
+{"Time":"2026-10-03T16:39:31.159456+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/wrong_conclusion","Elapsed":0.21}
+{"Time":"2026-10-03T16:39:31.159464+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/stale"}
+{"Time":"2026-10-03T16:39:31.159469+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/stale","Output":"=== RUN   TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/stale\n"}
+{"Time":"2026-10-03T16:39:31.375926+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/stale","Output":"--- PASS: TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/stale (0.22s)\n"}
+{"Time":"2026-10-03T16:39:31.375951+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis/stale","Elapsed":0.22}
+{"Time":"2026-10-03T16:39:31.37596+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis","Output":"--- PASS: TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis (0.87s)\n"}
+{"Time":"2026-10-03T16:39:31.375966+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis","Elapsed":0.87}
+{"Time":"2026-10-03T16:39:31.375972+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveRestartKeepsExecutionAndSpentBudget"}
+{"Time":"2026-10-03T16:39:31.375977+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveRestartKeepsExecutionAndSpentBudget","Output":"=== RUN   TestDiagnosticActiveRestartKeepsExecutionAndSpentBudget\n"}
+{"Time":"2026-10-03T16:39:31.719531+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveRestartKeepsExecutionAndSpentBudget","Output":"--- PASS: TestDiagnosticActiveRestartKeepsExecutionAndSpentBudget (0.34s)\n"}
+{"Time":"2026-10-03T16:39:31.719561+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticActiveRestartKeepsExecutionAndSpentBudget","Elapsed":0.34}
+{"Time":"2026-10-03T16:39:31.719571+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticCancelInFlightReadRetainsOriginalExecution"}
+{"Time":"2026-10-03T16:39:31.719577+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCancelInFlightReadRetainsOriginalExecution","Output":"=== RUN   TestDiagnosticCancelInFlightReadRetainsOriginalExecution\n"}
+{"Time":"2026-10-03T16:39:31.905506+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticCancelInFlightReadRetainsOriginalExecution","Output":"--- PASS: TestDiagnosticCancelInFlightReadRetainsOriginalExecution (0.19s)\n"}
+{"Time":"2026-10-03T16:39:31.905531+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticCancelInFlightReadRetainsOriginalExecution","Elapsed":0.19}
+{"Time":"2026-10-03T16:39:31.90554+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticWaitingReleasesWorkerAndActiveRunIsReused"}
+{"Time":"2026-10-03T16:39:31.905546+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticWaitingReleasesWorkerAndActiveRunIsReused","Output":"=== RUN   TestDiagnosticWaitingReleasesWorkerAndActiveRunIsReused\n"}
+{"Time":"2026-10-03T16:39:32.047185+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticWaitingReleasesWorkerAndActiveRunIsReused","Output":"--- PASS: TestDiagnosticWaitingReleasesWorkerAndActiveRunIsReused (0.14s)\n"}
+{"Time":"2026-10-03T16:39:32.047214+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticWaitingReleasesWorkerAndActiveRunIsReused","Elapsed":0.14}
+{"Time":"2026-10-03T16:39:32.047226+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations"}
+{"Time":"2026-10-03T16:39:32.047232+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations","Output":"=== RUN   TestDiagnosticReplansFromActualObservations\n"}
+{"Time":"2026-10-03T16:39:32.047238+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations/500"}
+{"Time":"2026-10-03T16:39:32.047244+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations/500","Output":"=== RUN   TestDiagnosticReplansFromActualObservations/500\n"}
+{"Time":"2026-10-03T16:39:32.368696+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations/500","Output":"--- PASS: TestDiagnosticReplansFromActualObservations/500 (0.32s)\n"}
+{"Time":"2026-10-03T16:39:32.368725+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations/500","Elapsed":0.32}
+{"Time":"2026-10-03T16:39:32.368734+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations/2000"}
+{"Time":"2026-10-03T16:39:32.36874+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations/2000","Output":"=== RUN   TestDiagnosticReplansFromActualObservations/2000\n"}
+{"Time":"2026-10-03T16:39:32.65332+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations/2000","Output":"--- PASS: TestDiagnosticReplansFromActualObservations/2000 (0.28s)\n"}
+{"Time":"2026-10-03T16:39:32.653347+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations/2000","Elapsed":0.28}
+{"Time":"2026-10-03T16:39:32.653355+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations/FAILED"}
+{"Time":"2026-10-03T16:39:32.65336+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations/FAILED","Output":"=== RUN   TestDiagnosticReplansFromActualObservations/FAILED\n"}
+{"Time":"2026-10-03T16:39:32.860445+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations/FAILED","Output":"--- PASS: TestDiagnosticReplansFromActualObservations/FAILED (0.21s)\n"}
+{"Time":"2026-10-03T16:39:32.860471+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations/FAILED","Elapsed":0.21}
+{"Time":"2026-10-03T16:39:32.860481+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations","Output":"--- PASS: TestDiagnosticReplansFromActualObservations (0.81s)\n"}
+{"Time":"2026-10-03T16:39:32.860488+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticReplansFromActualObservations","Elapsed":0.81}
+{"Time":"2026-10-03T16:39:32.8605+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch"}
+{"Time":"2026-10-03T16:39:32.860505+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch","Output":"=== RUN   TestDiagnosticRejectsInvalidPlansBeforeDispatch\n"}
+{"Time":"2026-10-03T16:39:32.860513+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/cycle"}
+{"Time":"2026-10-03T16:39:32.860518+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/cycle","Output":"=== RUN   TestDiagnosticRejectsInvalidPlansBeforeDispatch/cycle\n"}
+{"Time":"2026-10-03T16:39:32.919151+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/cycle","Output":"--- PASS: TestDiagnosticRejectsInvalidPlansBeforeDispatch/cycle (0.06s)\n"}
+{"Time":"2026-10-03T16:39:32.919173+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/cycle","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:32.919181+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/missing_dependency"}
+{"Time":"2026-10-03T16:39:32.919195+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/missing_dependency","Output":"=== RUN   TestDiagnosticRejectsInvalidPlansBeforeDispatch/missing_dependency\n"}
+{"Time":"2026-10-03T16:39:32.975803+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/missing_dependency","Output":"--- PASS: TestDiagnosticRejectsInvalidPlansBeforeDispatch/missing_dependency (0.06s)\n"}
+{"Time":"2026-10-03T16:39:32.975826+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/missing_dependency","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:32.975834+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/foreign_target"}
+{"Time":"2026-10-03T16:39:32.975838+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/foreign_target","Output":"=== RUN   TestDiagnosticRejectsInvalidPlansBeforeDispatch/foreign_target\n"}
+{"Time":"2026-10-03T16:39:33.029909+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/foreign_target","Output":"--- PASS: TestDiagnosticRejectsInvalidPlansBeforeDispatch/foreign_target (0.05s)\n"}
+{"Time":"2026-10-03T16:39:33.02993+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/foreign_target","Elapsed":0.05}
+{"Time":"2026-10-03T16:39:33.029937+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/command"}
+{"Time":"2026-10-03T16:39:33.029941+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/command","Output":"=== RUN   TestDiagnosticRejectsInvalidPlansBeforeDispatch/command\n"}
+{"Time":"2026-10-03T16:39:33.085969+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/command","Output":"--- PASS: TestDiagnosticRejectsInvalidPlansBeforeDispatch/command (0.06s)\n"}
+{"Time":"2026-10-03T16:39:33.085992+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/command","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:33.086+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/false_confirmation"}
+{"Time":"2026-10-03T16:39:33.086004+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/false_confirmation","Output":"=== RUN   TestDiagnosticRejectsInvalidPlansBeforeDispatch/false_confirmation\n"}
+{"Time":"2026-10-03T16:39:33.140997+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/false_confirmation","Output":"--- PASS: TestDiagnosticRejectsInvalidPlansBeforeDispatch/false_confirmation (0.05s)\n"}
+{"Time":"2026-10-03T16:39:33.141016+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/false_confirmation","Elapsed":0.05}
+{"Time":"2026-10-03T16:39:33.141022+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/false_recovery"}
+{"Time":"2026-10-03T16:39:33.141027+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/false_recovery","Output":"=== RUN   TestDiagnosticRejectsInvalidPlansBeforeDispatch/false_recovery\n"}
+{"Time":"2026-10-03T16:39:33.195919+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/false_recovery","Output":"--- PASS: TestDiagnosticRejectsInvalidPlansBeforeDispatch/false_recovery (0.05s)\n"}
+{"Time":"2026-10-03T16:39:33.195942+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/false_recovery","Elapsed":0.05}
+{"Time":"2026-10-03T16:39:33.195953+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/unknown_citation"}
+{"Time":"2026-10-03T16:39:33.195958+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/unknown_citation","Output":"=== RUN   TestDiagnosticRejectsInvalidPlansBeforeDispatch/unknown_citation\n"}
+{"Time":"2026-10-03T16:39:33.250816+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/unknown_citation","Output":"--- PASS: TestDiagnosticRejectsInvalidPlansBeforeDispatch/unknown_citation (0.05s)\n"}
+{"Time":"2026-10-03T16:39:33.250842+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/unknown_citation","Elapsed":0.05}
+{"Time":"2026-10-03T16:39:33.250855+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/bad_base"}
+{"Time":"2026-10-03T16:39:33.25086+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/bad_base","Output":"=== RUN   TestDiagnosticRejectsInvalidPlansBeforeDispatch/bad_base\n"}
+{"Time":"2026-10-03T16:39:33.306376+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/bad_base","Output":"--- PASS: TestDiagnosticRejectsInvalidPlansBeforeDispatch/bad_base (0.06s)\n"}
+{"Time":"2026-10-03T16:39:33.306408+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/bad_base","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:33.306417+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/wait_with_ready"}
+{"Time":"2026-10-03T16:39:33.306424+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/wait_with_ready","Output":"=== RUN   TestDiagnosticRejectsInvalidPlansBeforeDispatch/wait_with_ready\n"}
+{"Time":"2026-10-03T16:39:33.36841+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/wait_with_ready","Output":"--- PASS: TestDiagnosticRejectsInvalidPlansBeforeDispatch/wait_with_ready (0.06s)\n"}
+{"Time":"2026-10-03T16:39:33.368444+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch/wait_with_ready","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:33.368454+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch","Output":"--- PASS: TestDiagnosticRejectsInvalidPlansBeforeDispatch (0.51s)\n"}
+{"Time":"2026-10-03T16:39:33.36846+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticRejectsInvalidPlansBeforeDispatch","Elapsed":0.51}
+{"Time":"2026-10-03T16:39:33.368465+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticWaitRestartResumeAndBudget"}
+{"Time":"2026-10-03T16:39:33.368474+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticWaitRestartResumeAndBudget","Output":"=== RUN   TestDiagnosticWaitRestartResumeAndBudget\n"}
+{"Time":"2026-10-03T16:39:33.724084+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticWaitRestartResumeAndBudget","Output":"--- PASS: TestDiagnosticWaitRestartResumeAndBudget (0.36s)\n"}
+{"Time":"2026-10-03T16:39:33.724111+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticWaitRestartResumeAndBudget","Elapsed":0.36}
+{"Time":"2026-10-03T16:39:33.724119+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticModelBudgetSurvivesPause"}
+{"Time":"2026-10-03T16:39:33.724124+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticModelBudgetSurvivesPause","Output":"=== RUN   TestDiagnosticModelBudgetSurvivesPause\n"}
+{"Time":"2026-10-03T16:39:33.932569+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticModelBudgetSurvivesPause","Output":"--- PASS: TestDiagnosticModelBudgetSurvivesPause (0.21s)\n"}
+{"Time":"2026-10-03T16:39:33.932597+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticModelBudgetSurvivesPause","Elapsed":0.21}
+{"Time":"2026-10-03T16:39:33.932609+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestDiagnosticReusesEvidenceAndChecksPreconditions"}
+{"Time":"2026-10-03T16:39:33.932616+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticReusesEvidenceAndChecksPreconditions","Output":"=== RUN   TestDiagnosticReusesEvidenceAndChecksPreconditions\n"}
+{"Time":"2026-10-03T16:39:34.243845+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestDiagnosticReusesEvidenceAndChecksPreconditions","Output":"--- PASS: TestDiagnosticReusesEvidenceAndChecksPreconditions (0.31s)\n"}
+{"Time":"2026-10-03T16:39:34.243875+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestDiagnosticReusesEvidenceAndChecksPreconditions","Elapsed":0.31}
+{"Time":"2026-10-03T16:39:34.243884+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestElasticsearchPublicFlow"}
+{"Time":"2026-10-03T16:39:34.243889+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestElasticsearchPublicFlow","Output":"=== RUN   TestElasticsearchPublicFlow\n"}
+{"Time":"2026-10-03T16:39:34.243893+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestElasticsearchPublicFlow","Output":"    elasticsearch_test.go:23: real Elasticsearch integration requires HWOPS_TEST_ES_URL and HWOPS_TEST_EMBED_URL\n"}
+{"Time":"2026-10-03T16:39:34.243899+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestElasticsearchPublicFlow","Output":"--- SKIP: TestElasticsearchPublicFlow (0.00s)\n"}
+{"Time":"2026-10-03T16:39:34.243903+08:00","Action":"skip","Package":"hwops/test/acceptance","Test":"TestElasticsearchPublicFlow","Elapsed":0}
+{"Time":"2026-10-03T16:39:34.243908+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestElasticsearchMultiVectorPublicFlow"}
+{"Time":"2026-10-03T16:39:34.243912+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestElasticsearchMultiVectorPublicFlow","Output":"=== RUN   TestElasticsearchMultiVectorPublicFlow\n"}
+{"Time":"2026-10-03T16:39:34.243929+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestElasticsearchMultiVectorPublicFlow","Output":"    elasticsearch_test.go:69: real Elasticsearch integration requires HWOPS_TEST_ES_URL and HWOPS_TEST_EMBED_URL\n"}
+{"Time":"2026-10-03T16:39:34.243938+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestElasticsearchMultiVectorPublicFlow","Output":"--- SKIP: TestElasticsearchMultiVectorPublicFlow (0.00s)\n"}
+{"Time":"2026-10-03T16:39:34.243942+08:00","Action":"skip","Package":"hwops/test/acceptance","Test":"TestElasticsearchMultiVectorPublicFlow","Elapsed":0}
+{"Time":"2026-10-03T16:39:34.243947+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestAnswerSelectsDirectEvidenceAndAdjacentOverview"}
+{"Time":"2026-10-03T16:39:34.243951+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestAnswerSelectsDirectEvidenceAndAdjacentOverview","Output":"=== RUN   TestAnswerSelectsDirectEvidenceAndAdjacentOverview\n"}
+{"Time":"2026-10-03T16:39:34.365429+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestAnswerSelectsDirectEvidenceAndAdjacentOverview","Output":"--- PASS: TestAnswerSelectsDirectEvidenceAndAdjacentOverview (0.12s)\n"}
+{"Time":"2026-10-03T16:39:34.365458+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestAnswerSelectsDirectEvidenceAndAdjacentOverview","Elapsed":0.12}
+{"Time":"2026-10-03T16:39:34.365466+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestAnswerExpandsNonAdjacentParentSection"}
+{"Time":"2026-10-03T16:39:34.365471+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestAnswerExpandsNonAdjacentParentSection","Output":"=== RUN   TestAnswerExpandsNonAdjacentParentSection\n"}
+{"Time":"2026-10-03T16:39:34.480402+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestAnswerExpandsNonAdjacentParentSection","Output":"--- PASS: TestAnswerExpandsNonAdjacentParentSection (0.11s)\n"}
+{"Time":"2026-10-03T16:39:34.480427+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestAnswerExpandsNonAdjacentParentSection","Elapsed":0.11}
+{"Time":"2026-10-03T16:39:34.480435+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer"}
+{"Time":"2026-10-03T16:39:34.480449+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer","Output":"=== RUN   TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer\n"}
+{"Time":"2026-10-03T16:39:34.480455+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/unknown"}
+{"Time":"2026-10-03T16:39:34.480459+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/unknown","Output":"=== RUN   TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/unknown\n"}
+{"Time":"2026-10-03T16:39:34.592186+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/unknown","Output":"--- PASS: TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/unknown (0.11s)\n"}
+{"Time":"2026-10-03T16:39:34.592208+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/unknown","Elapsed":0.11}
+{"Time":"2026-10-03T16:39:34.592219+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/duplicate"}
+{"Time":"2026-10-03T16:39:34.592224+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/duplicate","Output":"=== RUN   TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/duplicate\n"}
+{"Time":"2026-10-03T16:39:34.705796+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/duplicate","Output":"--- PASS: TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/duplicate (0.11s)\n"}
+{"Time":"2026-10-03T16:39:34.705818+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/duplicate","Elapsed":0.11}
+{"Time":"2026-10-03T16:39:34.705826+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/too-many"}
+{"Time":"2026-10-03T16:39:34.705831+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/too-many","Output":"=== RUN   TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/too-many\n"}
+{"Time":"2026-10-03T16:39:34.818742+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/too-many","Output":"--- PASS: TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/too-many (0.11s)\n"}
+{"Time":"2026-10-03T16:39:34.818764+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer/too-many","Elapsed":0.11}
+{"Time":"2026-10-03T16:39:34.818772+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer","Output":"--- PASS: TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer (0.34s)\n"}
+{"Time":"2026-10-03T16:39:34.818777+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer","Elapsed":0.34}
+{"Time":"2026-10-03T16:39:34.818787+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestEvidenceSelectionRepairsMalformedModelOutputAndRetainsUsage"}
+{"Time":"2026-10-03T16:39:34.818797+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestEvidenceSelectionRepairsMalformedModelOutputAndRetainsUsage","Output":"=== RUN   TestEvidenceSelectionRepairsMalformedModelOutputAndRetainsUsage\n"}
+{"Time":"2026-10-03T16:39:34.956548+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestEvidenceSelectionRepairsMalformedModelOutputAndRetainsUsage","Output":"--- PASS: TestEvidenceSelectionRepairsMalformedModelOutputAndRetainsUsage (0.14s)\n"}
+{"Time":"2026-10-03T16:39:34.95657+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestEvidenceSelectionRepairsMalformedModelOutputAndRetainsUsage","Elapsed":0.14}
+{"Time":"2026-10-03T16:39:34.956589+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestEvidenceSelectionRejectsSecondMalformedOutputAndRetainsUsage"}
+{"Time":"2026-10-03T16:39:34.956595+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestEvidenceSelectionRejectsSecondMalformedOutputAndRetainsUsage","Output":"=== RUN   TestEvidenceSelectionRejectsSecondMalformedOutputAndRetainsUsage\n"}
+{"Time":"2026-10-03T16:39:35.066807+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestEvidenceSelectionRejectsSecondMalformedOutputAndRetainsUsage","Output":"--- PASS: TestEvidenceSelectionRejectsSecondMalformedOutputAndRetainsUsage (0.11s)\n"}
+{"Time":"2026-10-03T16:39:35.066832+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestEvidenceSelectionRejectsSecondMalformedOutputAndRetainsUsage","Elapsed":0.11}
+{"Time":"2026-10-03T16:39:35.066841+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources"}
+{"Time":"2026-10-03T16:39:35.066846+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources","Output":"=== RUN   TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources\n"}
+{"Time":"2026-10-03T16:39:35.066856+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources/conflict"}
+{"Time":"2026-10-03T16:39:35.066861+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources/conflict","Output":"=== RUN   TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources/conflict\n"}
+{"Time":"2026-10-03T16:39:35.157141+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources/conflict","Output":"--- PASS: TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources/conflict (0.09s)\n"}
+{"Time":"2026-10-03T16:39:35.157167+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources/conflict","Elapsed":0.09}
+{"Time":"2026-10-03T16:39:35.157177+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources/forged_source"}
+{"Time":"2026-10-03T16:39:35.157182+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources/forged_source","Output":"=== RUN   TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources/forged_source\n"}
+{"Time":"2026-10-03T16:39:35.246258+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources/forged_source","Output":"--- PASS: TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources/forged_source (0.09s)\n"}
+{"Time":"2026-10-03T16:39:35.246276+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources/forged_source","Elapsed":0.09}
+{"Time":"2026-10-03T16:39:35.246284+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources","Output":"--- PASS: TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources (0.18s)\n"}
+{"Time":"2026-10-03T16:39:35.24629+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestKnowledgeConflictWithholdsAffectedAdviceAndPreservesSources","Elapsed":0.18}
+{"Time":"2026-10-03T16:39:35.246298+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestPublicSearchExplainsMissingEvidenceAndCorpusGeneration"}
+{"Time":"2026-10-03T16:39:35.246302+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPublicSearchExplainsMissingEvidenceAndCorpusGeneration","Output":"=== RUN   TestPublicSearchExplainsMissingEvidenceAndCorpusGeneration\n"}
+{"Time":"2026-10-03T16:39:35.295886+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPublicSearchExplainsMissingEvidenceAndCorpusGeneration","Output":"--- PASS: TestPublicSearchExplainsMissingEvidenceAndCorpusGeneration (0.05s)\n"}
+{"Time":"2026-10-03T16:39:35.295912+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestPublicSearchExplainsMissingEvidenceAndCorpusGeneration","Elapsed":0.05}
+{"Time":"2026-10-03T16:39:35.295923+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestLiveMainAgentKnowledgeTool"}
+{"Time":"2026-10-03T16:39:35.295929+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestLiveMainAgentKnowledgeTool","Output":"=== RUN   TestLiveMainAgentKnowledgeTool\n"}
+{"Time":"2026-10-03T16:39:35.295934+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestLiveMainAgentKnowledgeTool","Output":"    main_agent_live_test.go:18: LIVE model integration requires HWOPS_TEST_LIVE_MODEL=1\n"}
+{"Time":"2026-10-03T16:39:35.295941+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestLiveMainAgentKnowledgeTool","Output":"--- SKIP: TestLiveMainAgentKnowledgeTool (0.00s)\n"}
+{"Time":"2026-10-03T16:39:35.295947+08:00","Action":"skip","Package":"hwops/test/acceptance","Test":"TestLiveMainAgentKnowledgeTool","Elapsed":0}
+{"Time":"2026-10-03T16:39:35.295953+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentRequeriesKnowledgeSubagentThroughPublicHTTP"}
+{"Time":"2026-10-03T16:39:35.29596+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRequeriesKnowledgeSubagentThroughPublicHTTP","Output":"=== RUN   TestMainAgentRequeriesKnowledgeSubagentThroughPublicHTTP\n"}
+{"Time":"2026-10-03T16:39:35.396002+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRequeriesKnowledgeSubagentThroughPublicHTTP","Output":"--- PASS: TestMainAgentRequeriesKnowledgeSubagentThroughPublicHTTP (0.10s)\n"}
+{"Time":"2026-10-03T16:39:35.396022+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentRequeriesKnowledgeSubagentThroughPublicHTTP","Elapsed":0.1}
+{"Time":"2026-10-03T16:39:35.39603+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentCanFinishWithoutRetrieval"}
+{"Time":"2026-10-03T16:39:35.396035+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentCanFinishWithoutRetrieval","Output":"=== RUN   TestMainAgentCanFinishWithoutRetrieval\n"}
+{"Time":"2026-10-03T16:39:35.456926+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentCanFinishWithoutRetrieval","Output":"--- PASS: TestMainAgentCanFinishWithoutRetrieval (0.06s)\n"}
+{"Time":"2026-10-03T16:39:35.456944+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentCanFinishWithoutRetrieval","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:35.456952+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops"}
+{"Time":"2026-10-03T16:39:35.456958+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops","Output":"=== RUN   TestMainAgentRejectsInvalidToolCallsAndBoundsLoops\n"}
+{"Time":"2026-10-03T16:39:35.456972+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/unknown"}
+{"Time":"2026-10-03T16:39:35.456984+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/unknown","Output":"=== RUN   TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/unknown\n"}
+{"Time":"2026-10-03T16:39:35.516597+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/unknown","Output":"--- PASS: TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/unknown (0.06s)\n"}
+{"Time":"2026-10-03T16:39:35.516623+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/unknown","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:35.516634+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/forged-device"}
+{"Time":"2026-10-03T16:39:35.516641+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/forged-device","Output":"=== RUN   TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/forged-device\n"}
+{"Time":"2026-10-03T16:39:35.578383+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/forged-device","Output":"--- PASS: TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/forged-device (0.06s)\n"}
+{"Time":"2026-10-03T16:39:35.578408+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/forged-device","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:35.57842+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/empty"}
+{"Time":"2026-10-03T16:39:35.578428+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/empty","Output":"=== RUN   TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/empty\n"}
+{"Time":"2026-10-03T16:39:35.641173+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/empty","Output":"--- PASS: TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/empty (0.06s)\n"}
+{"Time":"2026-10-03T16:39:35.641206+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/empty","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:35.641218+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/trailing-json"}
+{"Time":"2026-10-03T16:39:35.641226+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/trailing-json","Output":"=== RUN   TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/trailing-json\n"}
+{"Time":"2026-10-03T16:39:35.704229+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/trailing-json","Output":"--- PASS: TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/trailing-json (0.06s)\n"}
+{"Time":"2026-10-03T16:39:35.704273+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/trailing-json","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:35.704283+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/duplicate"}
+{"Time":"2026-10-03T16:39:35.704292+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/duplicate","Output":"=== RUN   TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/duplicate\n"}
+{"Time":"2026-10-03T16:39:35.771901+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/duplicate","Output":"--- PASS: TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/duplicate (0.07s)\n"}
+{"Time":"2026-10-03T16:39:35.77192+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/duplicate","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:35.771929+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/duplicate-id"}
+{"Time":"2026-10-03T16:39:35.771935+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/duplicate-id","Output":"=== RUN   TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/duplicate-id\n"}
+{"Time":"2026-10-03T16:39:35.837882+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/duplicate-id","Output":"--- PASS: TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/duplicate-id (0.07s)\n"}
+{"Time":"2026-10-03T16:39:35.837907+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/duplicate-id","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:35.837918+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/budget"}
+{"Time":"2026-10-03T16:39:35.837926+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/budget","Output":"=== RUN   TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/budget\n"}
+{"Time":"2026-10-03T16:39:35.909623+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/budget","Output":"--- PASS: TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/budget (0.07s)\n"}
+{"Time":"2026-10-03T16:39:35.909653+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/budget","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:35.909665+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/batch-budget"}
+{"Time":"2026-10-03T16:39:35.909673+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/batch-budget","Output":"=== RUN   TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/batch-budget\n"}
+{"Time":"2026-10-03T16:39:35.97306+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/batch-budget","Output":"--- PASS: TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/batch-budget (0.06s)\n"}
+{"Time":"2026-10-03T16:39:35.973082+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/batch-budget","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:35.973096+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/uncited"}
+{"Time":"2026-10-03T16:39:35.973106+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/uncited","Output":"=== RUN   TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/uncited\n"}
+{"Time":"2026-10-03T16:39:36.035277+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/uncited","Output":"--- PASS: TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/uncited (0.06s)\n"}
+{"Time":"2026-10-03T16:39:36.035303+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops/uncited","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:36.035315+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops","Output":"--- PASS: TestMainAgentRejectsInvalidToolCallsAndBoundsLoops (0.58s)\n"}
+{"Time":"2026-10-03T16:39:36.035324+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentRejectsInvalidToolCallsAndBoundsLoops","Elapsed":0.58}
+{"Time":"2026-10-03T16:39:36.035331+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentDeduplicatesAndBoundsCumulativeEvidence"}
+{"Time":"2026-10-03T16:39:36.035337+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentDeduplicatesAndBoundsCumulativeEvidence","Output":"=== RUN   TestMainAgentDeduplicatesAndBoundsCumulativeEvidence\n"}
+{"Time":"2026-10-03T16:39:36.035357+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentDeduplicatesAndBoundsCumulativeEvidence/cite-excluded-false"}
+{"Time":"2026-10-03T16:39:36.035364+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentDeduplicatesAndBoundsCumulativeEvidence/cite-excluded-false","Output":"=== RUN   TestMainAgentDeduplicatesAndBoundsCumulativeEvidence/cite-excluded-false\n"}
+{"Time":"2026-10-03T16:39:36.287199+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentDeduplicatesAndBoundsCumulativeEvidence/cite-excluded-false","Output":"--- PASS: TestMainAgentDeduplicatesAndBoundsCumulativeEvidence/cite-excluded-false (0.25s)\n"}
+{"Time":"2026-10-03T16:39:36.287233+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentDeduplicatesAndBoundsCumulativeEvidence/cite-excluded-false","Elapsed":0.25}
+{"Time":"2026-10-03T16:39:36.287243+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentDeduplicatesAndBoundsCumulativeEvidence/cite-excluded-true"}
+{"Time":"2026-10-03T16:39:36.287248+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentDeduplicatesAndBoundsCumulativeEvidence/cite-excluded-true","Output":"=== RUN   TestMainAgentDeduplicatesAndBoundsCumulativeEvidence/cite-excluded-true\n"}
+{"Time":"2026-10-03T16:39:36.521035+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentDeduplicatesAndBoundsCumulativeEvidence/cite-excluded-true","Output":"--- PASS: TestMainAgentDeduplicatesAndBoundsCumulativeEvidence/cite-excluded-true (0.23s)\n"}
+{"Time":"2026-10-03T16:39:36.521074+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentDeduplicatesAndBoundsCumulativeEvidence/cite-excluded-true","Elapsed":0.23}
+{"Time":"2026-10-03T16:39:36.521083+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentDeduplicatesAndBoundsCumulativeEvidence","Output":"--- PASS: TestMainAgentDeduplicatesAndBoundsCumulativeEvidence (0.49s)\n"}
+{"Time":"2026-10-03T16:39:36.521088+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentDeduplicatesAndBoundsCumulativeEvidence","Elapsed":0.49}
+{"Time":"2026-10-03T16:39:36.521097+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentFailureAfterToolRetainsEvidenceAndUsage"}
+{"Time":"2026-10-03T16:39:36.521102+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentFailureAfterToolRetainsEvidenceAndUsage","Output":"=== RUN   TestMainAgentFailureAfterToolRetainsEvidenceAndUsage\n"}
+{"Time":"2026-10-03T16:39:36.579146+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentFailureAfterToolRetainsEvidenceAndUsage","Output":"--- PASS: TestMainAgentFailureAfterToolRetainsEvidenceAndUsage (0.06s)\n"}
+{"Time":"2026-10-03T16:39:36.579169+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentFailureAfterToolRetainsEvidenceAndUsage","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:36.579177+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP"}
+{"Time":"2026-10-03T16:39:36.579182+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP","Output":"=== RUN   TestObservationContractThroughPublicHTTP\n"}
+{"Time":"2026-10-03T16:39:36.579187+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/OK"}
+{"Time":"2026-10-03T16:39:36.579192+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/OK","Output":"=== RUN   TestObservationContractThroughPublicHTTP/OK\n"}
+{"Time":"2026-10-03T16:39:36.593251+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/OK","Output":"--- PASS: TestObservationContractThroughPublicHTTP/OK (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.593274+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/OK","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.593284+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/NO_RECORD"}
+{"Time":"2026-10-03T16:39:36.593289+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/NO_RECORD","Output":"=== RUN   TestObservationContractThroughPublicHTTP/NO_RECORD\n"}
+{"Time":"2026-10-03T16:39:36.605979+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/NO_RECORD","Output":"--- PASS: TestObservationContractThroughPublicHTTP/NO_RECORD (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.605995+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/NO_RECORD","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.606003+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/PARTIAL"}
+{"Time":"2026-10-03T16:39:36.60601+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/PARTIAL","Output":"=== RUN   TestObservationContractThroughPublicHTTP/PARTIAL\n"}
+{"Time":"2026-10-03T16:39:36.619076+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/PARTIAL","Output":"--- PASS: TestObservationContractThroughPublicHTTP/PARTIAL (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.619097+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/PARTIAL","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.619103+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/FAILED"}
+{"Time":"2026-10-03T16:39:36.619107+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/FAILED","Output":"=== RUN   TestObservationContractThroughPublicHTTP/FAILED\n"}
+{"Time":"2026-10-03T16:39:36.63182+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/FAILED","Output":"--- PASS: TestObservationContractThroughPublicHTTP/FAILED (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.631833+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/FAILED","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.631839+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/STALE"}
+{"Time":"2026-10-03T16:39:36.631843+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/STALE","Output":"=== RUN   TestObservationContractThroughPublicHTTP/STALE\n"}
+{"Time":"2026-10-03T16:39:36.64502+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/STALE","Output":"--- PASS: TestObservationContractThroughPublicHTTP/STALE (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.645037+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/STALE","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.64505+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/UNSUPPORTED"}
+{"Time":"2026-10-03T16:39:36.645056+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/UNSUPPORTED","Output":"=== RUN   TestObservationContractThroughPublicHTTP/UNSUPPORTED\n"}
+{"Time":"2026-10-03T16:39:36.657879+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/UNSUPPORTED","Output":"--- PASS: TestObservationContractThroughPublicHTTP/UNSUPPORTED (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.657893+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/UNSUPPORTED","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.657898+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_device"}
+{"Time":"2026-10-03T16:39:36.657902+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_device","Output":"=== RUN   TestObservationContractThroughPublicHTTP/wrong_device\n"}
+{"Time":"2026-10-03T16:39:36.671719+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_device","Output":"--- PASS: TestObservationContractThroughPublicHTTP/wrong_device (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.671733+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_device","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.671739+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_snapshot"}
+{"Time":"2026-10-03T16:39:36.671745+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_snapshot","Output":"=== RUN   TestObservationContractThroughPublicHTTP/wrong_snapshot\n"}
+{"Time":"2026-10-03T16:39:36.684895+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_snapshot","Output":"--- PASS: TestObservationContractThroughPublicHTTP/wrong_snapshot (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.68491+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_snapshot","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.684916+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_mapping"}
+{"Time":"2026-10-03T16:39:36.684923+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_mapping","Output":"=== RUN   TestObservationContractThroughPublicHTTP/wrong_mapping\n"}
+{"Time":"2026-10-03T16:39:36.697962+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_mapping","Output":"--- PASS: TestObservationContractThroughPublicHTTP/wrong_mapping (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.697978+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_mapping","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.697984+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_window"}
+{"Time":"2026-10-03T16:39:36.697989+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_window","Output":"=== RUN   TestObservationContractThroughPublicHTTP/wrong_window\n"}
+{"Time":"2026-10-03T16:39:36.711923+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_window","Output":"--- PASS: TestObservationContractThroughPublicHTTP/wrong_window (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.711943+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_window","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.711955+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_mode"}
+{"Time":"2026-10-03T16:39:36.71196+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_mode","Output":"=== RUN   TestObservationContractThroughPublicHTTP/wrong_mode\n"}
+{"Time":"2026-10-03T16:39:36.725971+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_mode","Output":"--- PASS: TestObservationContractThroughPublicHTTP/wrong_mode (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.725986+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/wrong_mode","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.726002+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/outside_window"}
+{"Time":"2026-10-03T16:39:36.726008+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/outside_window","Output":"=== RUN   TestObservationContractThroughPublicHTTP/outside_window\n"}
+{"Time":"2026-10-03T16:39:36.739073+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/outside_window","Output":"--- PASS: TestObservationContractThroughPublicHTTP/outside_window (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.739087+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/outside_window","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.739094+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/missing_unit"}
+{"Time":"2026-10-03T16:39:36.739099+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/missing_unit","Output":"=== RUN   TestObservationContractThroughPublicHTTP/missing_unit\n"}
+{"Time":"2026-10-03T16:39:36.75219+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/missing_unit","Output":"--- PASS: TestObservationContractThroughPublicHTTP/missing_unit (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.752208+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/missing_unit","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.752215+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/missing_field"}
+{"Time":"2026-10-03T16:39:36.752221+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/missing_field","Output":"=== RUN   TestObservationContractThroughPublicHTTP/missing_field\n"}
+{"Time":"2026-10-03T16:39:36.765087+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/missing_field","Output":"--- PASS: TestObservationContractThroughPublicHTTP/missing_field (0.01s)\n"}
+{"Time":"2026-10-03T16:39:36.765103+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP/missing_field","Elapsed":0.01}
+{"Time":"2026-10-03T16:39:36.76511+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP","Output":"--- PASS: TestObservationContractThroughPublicHTTP (0.19s)\n"}
+{"Time":"2026-10-03T16:39:36.765118+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestObservationContractThroughPublicHTTP","Elapsed":0.19}
+{"Time":"2026-10-03T16:39:36.765126+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestMainAgentObservationOnlyAnswerPreservesScopeAndRestart"}
+{"Time":"2026-10-03T16:39:36.765132+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentObservationOnlyAnswerPreservesScopeAndRestart","Output":"=== RUN   TestMainAgentObservationOnlyAnswerPreservesScopeAndRestart\n"}
+{"Time":"2026-10-03T16:39:36.823662+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestMainAgentObservationOnlyAnswerPreservesScopeAndRestart","Output":"--- PASS: TestMainAgentObservationOnlyAnswerPreservesScopeAndRestart (0.06s)\n"}
+{"Time":"2026-10-03T16:39:36.823678+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestMainAgentObservationOnlyAnswerPreservesScopeAndRestart","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:36.823686+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestPostgreSQLAnswerSurvivesRestart"}
+{"Time":"2026-10-03T16:39:36.82369+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPostgreSQLAnswerSurvivesRestart","Output":"=== RUN   TestPostgreSQLAnswerSurvivesRestart\n"}
+{"Time":"2026-10-03T16:39:36.823715+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPostgreSQLAnswerSurvivesRestart","Output":"    postgres_test.go:23: HWOPS_TEST_DATABASE_URL is unset; PostgreSQL integration not verified\n"}
+{"Time":"2026-10-03T16:39:36.823731+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPostgreSQLAnswerSurvivesRestart","Output":"--- SKIP: TestPostgreSQLAnswerSurvivesRestart (0.00s)\n"}
+{"Time":"2026-10-03T16:39:36.823737+08:00","Action":"skip","Package":"hwops/test/acceptance","Test":"TestPostgreSQLAnswerSurvivesRestart","Elapsed":0}
+{"Time":"2026-10-03T16:39:36.823747+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestQABaseline"}
+{"Time":"2026-10-03T16:39:36.823752+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestQABaseline","Output":"=== RUN   TestQABaseline\n"}
+{"Time":"2026-10-03T16:39:38.325042+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestQABaseline","Output":"--- PASS: TestQABaseline (1.50s)\n"}
+{"Time":"2026-10-03T16:39:38.325071+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestQABaseline","Elapsed":1.5}
+{"Time":"2026-10-03T16:39:38.325081+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestPublishedKnowledgeAnswersWithRetrievableCitation"}
+{"Time":"2026-10-03T16:39:38.325089+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPublishedKnowledgeAnswersWithRetrievableCitation","Output":"=== RUN   TestPublishedKnowledgeAnswersWithRetrievableCitation\n"}
+{"Time":"2026-10-03T16:39:38.383178+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPublishedKnowledgeAnswersWithRetrievableCitation","Output":"--- PASS: TestPublishedKnowledgeAnswersWithRetrievableCitation (0.06s)\n"}
+{"Time":"2026-10-03T16:39:38.383203+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestPublishedKnowledgeAnswersWithRetrievableCitation","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:38.383211+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestWithdrawnCitationRemainsTraceableAfterRestart"}
+{"Time":"2026-10-03T16:39:38.383217+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestWithdrawnCitationRemainsTraceableAfterRestart","Output":"=== RUN   TestWithdrawnCitationRemainsTraceableAfterRestart\n"}
+{"Time":"2026-10-03T16:39:38.505062+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestWithdrawnCitationRemainsTraceableAfterRestart","Output":"--- PASS: TestWithdrawnCitationRemainsTraceableAfterRestart (0.12s)\n"}
+{"Time":"2026-10-03T16:39:38.505083+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestWithdrawnCitationRemainsTraceableAfterRestart","Elapsed":0.12}
+{"Time":"2026-10-03T16:39:38.505092+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer"}
+{"Time":"2026-10-03T16:39:38.505097+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer","Output":"=== RUN   TestOnlyPublishedGeneralKnowledgeCanAnswer\n"}
+{"Time":"2026-10-03T16:39:38.505102+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer/draft"}
+{"Time":"2026-10-03T16:39:38.505108+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer/draft","Output":"=== RUN   TestOnlyPublishedGeneralKnowledgeCanAnswer/draft\n"}
+{"Time":"2026-10-03T16:39:38.557209+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer/draft","Output":"--- PASS: TestOnlyPublishedGeneralKnowledgeCanAnswer/draft (0.05s)\n"}
+{"Time":"2026-10-03T16:39:38.557228+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer/draft","Elapsed":0.05}
+{"Time":"2026-10-03T16:39:38.557237+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer/withdrawn"}
+{"Time":"2026-10-03T16:39:38.557242+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer/withdrawn","Output":"=== RUN   TestOnlyPublishedGeneralKnowledgeCanAnswer/withdrawn\n"}
+{"Time":"2026-10-03T16:39:38.618074+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer/withdrawn","Output":"--- PASS: TestOnlyPublishedGeneralKnowledgeCanAnswer/withdrawn (0.06s)\n"}
+{"Time":"2026-10-03T16:39:38.618098+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer/withdrawn","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:38.618107+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer/device_specific"}
+{"Time":"2026-10-03T16:39:38.618114+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer/device_specific","Output":"=== RUN   TestOnlyPublishedGeneralKnowledgeCanAnswer/device_specific\n"}
+{"Time":"2026-10-03T16:39:38.681729+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer/device_specific","Output":"--- PASS: TestOnlyPublishedGeneralKnowledgeCanAnswer/device_specific (0.06s)\n"}
+{"Time":"2026-10-03T16:39:38.681751+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer/device_specific","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:38.681762+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer","Output":"--- PASS: TestOnlyPublishedGeneralKnowledgeCanAnswer (0.18s)\n"}
+{"Time":"2026-10-03T16:39:38.68177+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestOnlyPublishedGeneralKnowledgeCanAnswer","Elapsed":0.18}
+{"Time":"2026-10-03T16:39:38.681776+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestUnavailableModelDoesNotProduceReplayAnswer"}
+{"Time":"2026-10-03T16:39:38.681782+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestUnavailableModelDoesNotProduceReplayAnswer","Output":"=== RUN   TestUnavailableModelDoesNotProduceReplayAnswer\n"}
+{"Time":"2026-10-03T16:39:38.745583+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestUnavailableModelDoesNotProduceReplayAnswer","Output":"--- PASS: TestUnavailableModelDoesNotProduceReplayAnswer (0.06s)\n"}
+{"Time":"2026-10-03T16:39:38.745613+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestUnavailableModelDoesNotProduceReplayAnswer","Elapsed":0.06}
+{"Time":"2026-10-03T16:39:38.745627+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestTransientModelFailureRecoversThroughPublicHTTP"}
+{"Time":"2026-10-03T16:39:38.745635+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTransientModelFailureRecoversThroughPublicHTTP","Output":"=== RUN   TestTransientModelFailureRecoversThroughPublicHTTP\n"}
+{"Time":"2026-10-03T16:39:38.818459+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestTransientModelFailureRecoversThroughPublicHTTP","Output":"--- PASS: TestTransientModelFailureRecoversThroughPublicHTTP (0.07s)\n"}
+{"Time":"2026-10-03T16:39:38.818489+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestTransientModelFailureRecoversThroughPublicHTTP","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:38.818505+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestInventedCitationsMustBeRepairedBeforeAnswering"}
+{"Time":"2026-10-03T16:39:38.818513+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestInventedCitationsMustBeRepairedBeforeAnswering","Output":"=== RUN   TestInventedCitationsMustBeRepairedBeforeAnswering\n"}
+{"Time":"2026-10-03T16:39:38.818538+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestInventedCitationsMustBeRepairedBeforeAnswering/rejected"}
+{"Time":"2026-10-03T16:39:38.818568+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestInventedCitationsMustBeRepairedBeforeAnswering/rejected","Output":"=== RUN   TestInventedCitationsMustBeRepairedBeforeAnswering/rejected\n"}
+{"Time":"2026-10-03T16:39:38.889156+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestInventedCitationsMustBeRepairedBeforeAnswering/rejected","Output":"--- PASS: TestInventedCitationsMustBeRepairedBeforeAnswering/rejected (0.07s)\n"}
+{"Time":"2026-10-03T16:39:38.889179+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestInventedCitationsMustBeRepairedBeforeAnswering/rejected","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:38.889189+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestInventedCitationsMustBeRepairedBeforeAnswering/repaired"}
+{"Time":"2026-10-03T16:39:38.889196+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestInventedCitationsMustBeRepairedBeforeAnswering/repaired","Output":"=== RUN   TestInventedCitationsMustBeRepairedBeforeAnswering/repaired\n"}
+{"Time":"2026-10-03T16:39:38.959657+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestInventedCitationsMustBeRepairedBeforeAnswering/repaired","Output":"--- PASS: TestInventedCitationsMustBeRepairedBeforeAnswering/repaired (0.07s)\n"}
+{"Time":"2026-10-03T16:39:38.95968+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestInventedCitationsMustBeRepairedBeforeAnswering/repaired","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:38.959689+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestInventedCitationsMustBeRepairedBeforeAnswering","Output":"--- PASS: TestInventedCitationsMustBeRepairedBeforeAnswering (0.14s)\n"}
+{"Time":"2026-10-03T16:39:38.959696+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestInventedCitationsMustBeRepairedBeforeAnswering","Elapsed":0.14}
+{"Time":"2026-10-03T16:39:38.959703+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestWithdrawalDuringGenerationDropsAnswer"}
+{"Time":"2026-10-03T16:39:38.959708+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestWithdrawalDuringGenerationDropsAnswer","Output":"=== RUN   TestWithdrawalDuringGenerationDropsAnswer\n"}
+{"Time":"2026-10-03T16:39:39.03333+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestWithdrawalDuringGenerationDropsAnswer","Output":"--- PASS: TestWithdrawalDuringGenerationDropsAnswer (0.07s)\n"}
+{"Time":"2026-10-03T16:39:39.033351+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestWithdrawalDuringGenerationDropsAnswer","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:39.033359+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestInterruptedQuestionResumesAfterRestart"}
+{"Time":"2026-10-03T16:39:39.033365+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestInterruptedQuestionResumesAfterRestart","Output":"=== RUN   TestInterruptedQuestionResumesAfterRestart\n"}
+{"Time":"2026-10-03T16:39:39.10752+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestInterruptedQuestionResumesAfterRestart","Output":"--- PASS: TestInterruptedQuestionResumesAfterRestart (0.07s)\n"}
+{"Time":"2026-10-03T16:39:39.107542+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestInterruptedQuestionResumesAfterRestart","Elapsed":0.07}
+{"Time":"2026-10-03T16:39:39.107559+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestHTTPAuthenticationAndInputValidation"}
+{"Time":"2026-10-03T16:39:39.107566+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestHTTPAuthenticationAndInputValidation","Output":"=== RUN   TestHTTPAuthenticationAndInputValidation\n"}
+{"Time":"2026-10-03T16:39:39.112066+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestHTTPAuthenticationAndInputValidation","Output":"--- PASS: TestHTTPAuthenticationAndInputValidation (0.00s)\n"}
+{"Time":"2026-10-03T16:39:39.112081+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestHTTPAuthenticationAndInputValidation","Elapsed":0}
+{"Time":"2026-10-03T16:39:39.112088+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestHybridSearchCanRetainStrongSingleRouteEvidence"}
+{"Time":"2026-10-03T16:39:39.112094+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestHybridSearchCanRetainStrongSingleRouteEvidence","Output":"=== RUN   TestHybridSearchCanRetainStrongSingleRouteEvidence\n"}
+{"Time":"2026-10-03T16:39:39.112116+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestHybridSearchCanRetainStrongSingleRouteEvidence/60"}
+{"Time":"2026-10-03T16:39:39.112123+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestHybridSearchCanRetainStrongSingleRouteEvidence/60","Output":"=== RUN   TestHybridSearchCanRetainStrongSingleRouteEvidence/60\n"}
+{"Time":"2026-10-03T16:39:39.154466+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestHybridSearchCanRetainStrongSingleRouteEvidence/60","Output":"--- PASS: TestHybridSearchCanRetainStrongSingleRouteEvidence/60 (0.04s)\n"}
+{"Time":"2026-10-03T16:39:39.154483+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestHybridSearchCanRetainStrongSingleRouteEvidence/60","Elapsed":0.04}
+{"Time":"2026-10-03T16:39:39.154489+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestHybridSearchCanRetainStrongSingleRouteEvidence/1"}
+{"Time":"2026-10-03T16:39:39.154493+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestHybridSearchCanRetainStrongSingleRouteEvidence/1","Output":"=== RUN   TestHybridSearchCanRetainStrongSingleRouteEvidence/1\n"}
+{"Time":"2026-10-03T16:39:39.196285+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestHybridSearchCanRetainStrongSingleRouteEvidence/1","Output":"--- PASS: TestHybridSearchCanRetainStrongSingleRouteEvidence/1 (0.04s)\n"}
+{"Time":"2026-10-03T16:39:39.196304+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestHybridSearchCanRetainStrongSingleRouteEvidence/1","Elapsed":0.04}
+{"Time":"2026-10-03T16:39:39.196313+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestHybridSearchCanRetainStrongSingleRouteEvidence","Output":"--- PASS: TestHybridSearchCanRetainStrongSingleRouteEvidence (0.08s)\n"}
+{"Time":"2026-10-03T16:39:39.196318+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestHybridSearchCanRetainStrongSingleRouteEvidence","Elapsed":0.08}
+{"Time":"2026-10-03T16:39:39.196323+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestPublicRetrievalRespectsPublicationAndReturnsSource"}
+{"Time":"2026-10-03T16:39:39.196328+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPublicRetrievalRespectsPublicationAndReturnsSource","Output":"=== RUN   TestPublicRetrievalRespectsPublicationAndReturnsSource\n"}
+{"Time":"2026-10-03T16:39:39.225844+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPublicRetrievalRespectsPublicationAndReturnsSource","Output":"--- PASS: TestPublicRetrievalRespectsPublicationAndReturnsSource (0.03s)\n"}
+{"Time":"2026-10-03T16:39:39.225859+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestPublicRetrievalRespectsPublicationAndReturnsSource","Elapsed":0.03}
+{"Time":"2026-10-03T16:39:39.225866+08:00","Action":"run","Package":"hwops/test/acceptance","Test":"TestPublicRetrievalProvidesStableSessionForExternalQueryRewrite"}
+{"Time":"2026-10-03T16:39:39.22587+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPublicRetrievalProvidesStableSessionForExternalQueryRewrite","Output":"=== RUN   TestPublicRetrievalProvidesStableSessionForExternalQueryRewrite\n"}
+{"Time":"2026-10-03T16:39:39.249179+08:00","Action":"output","Package":"hwops/test/acceptance","Test":"TestPublicRetrievalProvidesStableSessionForExternalQueryRewrite","Output":"--- PASS: TestPublicRetrievalProvidesStableSessionForExternalQueryRewrite (0.02s)\n"}
+{"Time":"2026-10-03T16:39:39.249195+08:00","Action":"pass","Package":"hwops/test/acceptance","Test":"TestPublicRetrievalProvidesStableSessionForExternalQueryRewrite","Elapsed":0.02}
+{"Time":"2026-10-03T16:39:39.24921+08:00","Action":"output","Package":"hwops/test/acceptance","Output":"PASS\n"}
+{"Time":"2026-10-03T16:39:40.26153+08:00","Action":"output","Package":"hwops/test/acceptance","Output":"ok  \thwops/test/acceptance\t19.922s\n"}
+{"Time":"2026-10-03T16:39:40.261616+08:00","Action":"pass","Package":"hwops/test/acceptance","Elapsed":19.923000000000002}
