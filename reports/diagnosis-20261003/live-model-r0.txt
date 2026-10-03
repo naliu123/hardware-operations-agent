@@ -1,0 +1,8 @@
+=== RUN   TestLiveDiagnosticPlanningAndMissingObservation
+    diagnosis_integration_test.go:112: LIVE diagnostic protocol failed: status=PAUSED error=&{Code:INVALID_PLAN Message:[NodeRunError] invalid diagnostic proposal: hypothesis uses failed, stale or foreign evidence
+        ------------------------
+        node path: [validate_commit]} plans=2 result=&{Summary:已取得 FAN-001 知识片段（含 ROOT_CAUSE 规则 fan-fault 与 RECOVERY 规则 fan-recovered），需按规则采集 fan/1 的 rpm、voltage、temperature 只读指标以验证假设。 RootCauseStatus:UNKNOWN RecoveryStatus:UNKNOWN RecoveryRule:<nil> EvidenceIDs:[]}
+--- FAIL: TestLiveDiagnosticPlanningAndMissingObservation (14.60s)
+FAIL
+FAIL	hwops/test/acceptance	16.578s
+FAIL

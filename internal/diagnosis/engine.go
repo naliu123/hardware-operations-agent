@@ -146,6 +146,7 @@ func (e *Engine) Resume(ctx context.Context, id string, in domain.RunResumeInput
 		r.Knowledge = nil
 	}
 	r.Device, r.Status, r.ActiveSince, r.Error, r.Result = d, "QUEUED", nil, nil, nil
+	r.Hypotheses = nil // Revalidate current judgments; immutable plans retain the history.
 	r.WaitReasons, r.Gaps = nil, nil
 	r.AddEvent("RESUMED", in.Reason)
 	err = e.save(ctx, &r, d.SnapshotID)

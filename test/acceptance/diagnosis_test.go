@@ -184,8 +184,12 @@ func publishDiagnosticManual(t *testing.T, s *httptest.Server) {
 }
 
 func submitDiagnostic(t *testing.T, s *httptest.Server) string {
+	return submitDiagnosticForDevice(t, s, "target")
+}
+
+func submitDiagnosticForDevice(t *testing.T, s *httptest.Server, deviceID string) string {
 	t.Helper()
-	in := request(t, s.Client(), "POST", s.URL+"/v1/incidents", domain.IncidentInput{DeviceID: "target", ErrorCode: "FAN-001",
+	in := request(t, s.Client(), "POST", s.URL+"/v1/incidents", domain.IncidentInput{DeviceID: deviceID, ErrorCode: "FAN-001",
 		Description: "风扇低速告警", OccurredAt: time.Now().Add(-2 * time.Minute)}, http.StatusCreated)
 	out := request(t, s.Client(), "POST", s.URL+"/v1/incidents/"+in["id"].(string)+"/runs", map[string]any{}, http.StatusAccepted)
 	return out["id"].(string)
@@ -203,8 +207,12 @@ func getDiagnostic(t *testing.T, s *httptest.Server, id string) domain.Diagnosti
 }
 
 func awaitDiagnostic(t *testing.T, s *httptest.Server, id string) domain.DiagnosticRun {
+	return awaitDiagnosticWithin(t, s, id, 10*time.Second)
+}
+
+func awaitDiagnosticWithin(t *testing.T, s *httptest.Server, id string, timeout time.Duration) domain.DiagnosticRun {
 	t.Helper()
-	deadline := time.Now().Add(10 * time.Second)
+	deadline := time.Now().Add(timeout)
 	for time.Now().Before(deadline) {
 		r := getDiagnostic(t, s, id)
 		if !r.Pending() {

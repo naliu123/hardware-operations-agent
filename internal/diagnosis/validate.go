@@ -371,9 +371,7 @@ func conditionsHold(r domain.DiagnosticRun, conditions []domain.MetricCondition,
 					newest = v.ObservedAt
 				}
 			}
-			if slices.Contains(ids, ev.ID) {
-				candidates = append(candidates, ev)
-			}
+			candidates = append(candidates, ev)
 		}
 		matched := false
 		for _, ev := range candidates {
@@ -386,7 +384,12 @@ func conditionsHold(r domain.DiagnosticRun, conditions []domain.MetricCondition,
 				all = all && !v.ObservedAt.Before(occurred) && !v.ObservedAt.Before(now.Add(-time.Duration(c.MaxAgeSeconds)*time.Second)) &&
 					v.Unit == c.Unit && compare(v.Value, c.Operator, c.Value)
 			}
-			matched = matched || (found && all)
+			// All observations at the newest sample time must agree, including
+			// those the proposal omitted. A selected ID cannot hide a tie.
+			if found && !all {
+				return false
+			}
+			matched = matched || (found && all && slices.Contains(ids, ev.ID))
 		}
 		if !matched {
 			return false

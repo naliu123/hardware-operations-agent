@@ -87,6 +87,7 @@ func (e *Engine) load(ctx context.Context, t *turn) (*turn, error) {
 		t.run.Device = d
 		t.run.Knowledge = nil
 		t.run.Result = nil
+		t.run.Hypotheses = nil
 		t.run.AddEvent("DEVICE_REFRESHED", "设备快照发生变化，旧观察需重新校验。")
 	}
 	for i := range t.run.Executions {
@@ -117,6 +118,8 @@ base_state_version 和 base_plan_version 必须取 diagnostic_run 的实际值�
 decision 只能 CONTINUE/WAIT/PAUSE/COMPLETE；reason 是决策理由，supporting_refs 仅引用已返回的证据 ID 或知识 fragment_id。
 hypotheses 是当前候选原因列表；每项 id,description,status,evidence_ids,rule,reason。
 status 只能 CANDIDATE/SUPPORTED/EXCLUDED/CONFIRMED。SUPPORTED/EXCLUDED 需要当前新鲜的 OK 观测，失败不能推断故障。
+所有 hypotheses[].evidence_ids 和 result.evidence_ids 只能引用当前快照、新鲜且 status=OK 的观测，包括 CANDIDATE 也一样。
+FAILED/UNSUPPORTED/STALE/PARTIAL/NO_RECORD 只能放在 supporting_refs 中解释 gaps 或 wait_reasons；不得放入任何 evidence_ids。没有 OK 观测时保留 CANDIDATE 且 evidence_ids=[]。
 CONFIRMED 必须引用已检索知识中的 ROOT_CAUSE 规则：rule={"revision_id":"实际修订","rule_id":"实际规则"}；
 description 必须等于规则 conclusion，error_code 匹配事件，所有 conditions 必须由实际证据满足。没有可执行规则就不能确认。
 steps 是完整的新计划视图。每项字段为 id,kind,target_ref,hypothesis_refs,depends_on,preconditions,query,observation,knowledge_refs,purpose,expected_observation,retry_reason。

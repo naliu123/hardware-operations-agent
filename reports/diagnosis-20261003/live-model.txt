@@ -1,0 +1,5 @@
+=== RUN   TestLiveDiagnosticPlanningAndMissingObservation
+    diagnosis_integration_test.go:122: LIVE model=deepseek-v4.1-flash status=PAUSED plan_versions=3 model_calls=3 tool_calls=2 observations=UNSUPPORTED root_cause=UNKNOWN recovery=UNKNOWN
+--- PASS: TestLiveDiagnosticPlanningAndMissingObservation (11.33s)
+PASS
+ok  	hwops/test/acceptance	12.112s

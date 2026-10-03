@@ -192,7 +192,7 @@ func TestDiagnosticNestedModelCallsAndRetriesConsumeSameBudget(t *testing.T) {
 	}
 }
 
-func TestDiagnosticPublishedCriteriaRejectWrongUnitsAndStaleEvidence(t *testing.T) {
+func TestDiagnosticPublishedCriteriaRejectMissingOrInvalidBasis(t *testing.T) {
 	for _, scenario := range []string{"no_voltage", "wrong_rule", "wrong_conclusion", "stale"} {
 		t.Run(scenario, func(t *testing.T) {
 			plan := func(in diagnosisInput) domain.PlanProposal {
