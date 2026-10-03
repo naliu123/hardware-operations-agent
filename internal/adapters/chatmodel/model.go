@@ -38,6 +38,7 @@ type ContextInput struct {
 	Question  string                `json:"question"`
 	Documents []*schema.Document    `json:"documents"`
 	Device    *domain.DeviceContext `json:"device_context,omitempty"`
+	Now       time.Time             `json:"now,omitempty"`
 }
 
 // Replay is an explicitly selected extractive demonstration, never a fallback.

@@ -125,13 +125,13 @@ func (x *Index) request(ctx context.Context, method, endpoint string, body any, 
 
 func (x *Index) Ensure(ctx context.Context) error {
 	properties := map[string]any{
-		"content":      map[string]any{"type": "text", "analyzer": "cjk"},
+		"content":           map[string]any{"type": "text", "analyzer": "cjk"},
 		"retrieval_content": map[string]any{"type": "text", "analyzer": "cjk"},
-		"section":      map[string]any{"type": "text", "analyzer": "cjk"},
-		"title":        map[string]any{"type": "text", "analyzer": "cjk"},
-		"revision_id":  map[string]any{"type": "keyword"},
-		"fragment_id":  map[string]any{"type": "keyword"},
-		"content_hash": map[string]any{"type": "keyword"},
+		"section":           map[string]any{"type": "text", "analyzer": "cjk"},
+		"title":             map[string]any{"type": "text", "analyzer": "cjk"},
+		"revision_id":       map[string]any{"type": "keyword"},
+		"fragment_id":       map[string]any{"type": "keyword"},
+		"content_hash":      map[string]any{"type": "keyword"},
 		"embedding": map[string]any{"type": "dense_vector", "dims": 512, "index": true,
 			"similarity": "cosine", "index_options": map[string]any{"type": "int8_hnsw"}},
 	}
@@ -236,7 +236,7 @@ func (x *Index) IndexRevision(ctx context.Context, revision domain.Revision) err
 				map[string]any{"fragment_id": f.ID, "revision_id": revision.ID,
 					"title": revision.Title, "section": f.Section, "content": f.Content,
 					"retrieval_content": knowledge.RetrievalContext(f),
-					"content_hash": f.ContentHash, "source": revision.Source, "embedding": vectors[i]}, nil); err != nil {
+					"content_hash":      f.ContentHash, "source": revision.Source, "embedding": vectors[i]}, nil); err != nil {
 				return err
 			}
 		}
@@ -289,8 +289,8 @@ func (x *Index) indexMultiVectorRevision(ctx context.Context, revision domain.Re
 			map[string]any{
 				"fragment_id": fragment.ID, "revision_id": revision.ID,
 				"title": revision.Title, "section": fragment.Section, "content": fragment.Content,
-					"retrieval_content": knowledge.RetrievalContext(fragment),
-				"content_hash": fragment.ContentHash, "source": revision.Source,
+				"retrieval_content": knowledge.RetrievalContext(fragment),
+				"content_hash":      fragment.ContentHash, "source": revision.Source,
 				"representations":      representations[i],
 				"representation_count": len(representations[i]),
 			}, nil); err != nil {
@@ -305,6 +305,7 @@ func (x *Index) search(ctx context.Context, body any) ([]*schema.Document, error
 		Hits struct {
 			Hits []struct {
 				ID     string  `json:"_id"`
+				Index  string  `json:"_index"`
 				Score  float64 `json:"_score"`
 				Source struct {
 					Content    string `json:"content"`
@@ -324,7 +325,8 @@ func (x *Index) search(ctx context.Context, body any) ([]*schema.Document, error
 			id = hit.ID
 		}
 		docs = append(docs, &schema.Document{ID: id, Content: hit.Source.Content,
-			MetaData: map[string]any{"revision_id": hit.Source.RevisionID, "score": hit.Score}})
+			MetaData: map[string]any{"revision_id": hit.Source.RevisionID, "score": hit.Score,
+				"index_generation": hit.Index}})
 	}
 	return docs, nil
 }
@@ -367,9 +369,9 @@ func (x *Index) retrieve(ctx context.Context, query string, candidates bool, opt
 	if strategy != "dense" {
 		docs, err := x.search(ctx, map[string]any{"size": 20, "_source": []string{"content", "revision_id", "fragment_id"},
 			"sort": []any{map[string]any{"_score": "desc"}, map[string]any{"fragment_id": "asc"}},
-				"query": map[string]any{"bool": map[string]any{"filter": filter,
-					"must": []any{map[string]any{"multi_match": map[string]any{"query": query,
-						"fields": []string{"retrieval_content^2", "content", "section", "title"}}}}}}})
+			"query": map[string]any{"bool": map[string]any{"filter": filter,
+				"must": []any{map[string]any{"multi_match": map[string]any{"query": query,
+					"fields": []string{"retrieval_content^2", "content", "section", "title"}}}}}}})
 		if err != nil {
 			return nil, err
 		}

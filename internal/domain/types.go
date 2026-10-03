@@ -52,6 +52,7 @@ type DeviceInput struct {
 	Source           string    `json:"source"`
 	ObservedAt       time.Time `json:"observed_at"`
 	DataMode         string    `json:"data_mode"`
+	MonitoringID     string    `json:"monitoring_id,omitempty"`
 }
 
 type DeviceContext struct {
@@ -62,9 +63,10 @@ type DeviceContext struct {
 }
 
 type MessageInput struct {
-	Text        string `json:"text"`
-	DeviceID    string `json:"device_id,omitempty"`
-	DeviceQuery string `json:"device_query,omitempty"`
+	Text            string `json:"text"`
+	DeviceID        string `json:"device_id,omitempty"`
+	DeviceQuery     string `json:"device_query,omitempty"`
+	ContextRevision string `json:"context_revision,omitempty"`
 }
 
 type DeviceResolution struct {
@@ -136,10 +138,13 @@ type RevisionInput struct {
 }
 
 type Conversation struct {
-	SchemaVersion int       `json:"schema_version"`
-	ID            string    `json:"id"`
-	Owner         string    `json:"owner"`
-	CreatedAt     time.Time `json:"created_at"`
+	SchemaVersion   int       `json:"schema_version"`
+	ID              string    `json:"id"`
+	Owner           string    `json:"owner"`
+	CreatedAt       time.Time `json:"created_at"`
+	DeviceID        string    `json:"device_id,omitempty"`
+	ContextRevision string    `json:"context_revision,omitempty"`
+	ContextVersion  int64     `json:"context_version,omitempty"`
 }
 
 type Claim struct {
@@ -148,8 +153,15 @@ type Claim struct {
 }
 
 type Draft struct {
-	Claims []Claim  `json:"claims"`
-	Gaps   []string `json:"gaps,omitempty"`
+	Claims       []Claim                `json:"claims"`
+	Gaps         []string               `json:"gaps,omitempty"`
+	Conflicts    []KnowledgeConflict    `json:"conflicts,omitempty"`
+	Observations []ObservationSelection `json:"observations,omitempty"`
+}
+
+type KnowledgeConflict struct {
+	Subject     string   `json:"subject"`
+	FragmentIDs []string `json:"fragment_ids"`
 }
 
 type Citation struct {
@@ -192,6 +204,9 @@ type KnowledgeToolCall struct {
 	Status            string             `json:"status"`
 	FragmentIDs       []string           `json:"fragment_ids,omitempty"`
 	RetrievalQueries  []string           `json:"retrieval_queries,omitempty"`
+	CorpusGeneration  string             `json:"corpus_generation,omitempty"`
+	IndexGenerations  []string           `json:"index_generations,omitempty"`
+	GapReason         string             `json:"gap_reason,omitempty"`
 	Gaps              []string           `json:"gaps,omitempty"`
 	TraceID           string             `json:"trace_id,omitempty"`
 	EvidenceSelection *EvidenceSelection `json:"evidence_selection,omitempty"`
@@ -200,27 +215,32 @@ type KnowledgeToolCall struct {
 }
 
 type Response struct {
-	SchemaVersion        int                 `json:"schema_version"`
-	ID                   string              `json:"id"`
-	ConversationID       string              `json:"conversation_id"`
-	Question             string              `json:"question"`
-	Status               string              `json:"status"`
-	DataMode             string              `json:"data_mode"`
-	Answer               string              `json:"answer"`
-	Claims               []Claim             `json:"claims"`
-	Citations            []Citation          `json:"citations"`
-	Gaps                 []string            `json:"gaps"`
-	Error                *Failure            `json:"error,omitempty"`
-	CreatedAt            time.Time           `json:"created_at"`
-	DeviceContext        *DeviceContext      `json:"device_context,omitempty"`
-	DeviceResolution     *DeviceResolution   `json:"device_resolution,omitempty"`
-	ContextRevision      string              `json:"context_revision,omitempty"`
-	ApplicabilityChecks  []KnowledgeCheck    `json:"applicability_checks,omitempty"`
-	TraceID              string              `json:"trace_id,omitempty"`
-	RetrievedFragmentIDs []string            `json:"retrieved_fragment_ids,omitempty"`
-	ModelUsage           *ModelUsage         `json:"model_usage,omitempty"`
-	EvidenceSelection    *EvidenceSelection  `json:"evidence_selection,omitempty"`
-	KnowledgeToolCalls   []KnowledgeToolCall `json:"knowledge_tool_calls,omitempty"`
+	SchemaVersion        int                    `json:"schema_version"`
+	ID                   string                 `json:"id"`
+	ConversationID       string                 `json:"conversation_id"`
+	Question             string                 `json:"question"`
+	Status               string                 `json:"status"`
+	DataMode             string                 `json:"data_mode"`
+	Answer               string                 `json:"answer"`
+	Claims               []Claim                `json:"claims"`
+	Citations            []Citation             `json:"citations"`
+	Gaps                 []string               `json:"gaps"`
+	Error                *Failure               `json:"error,omitempty"`
+	CreatedAt            time.Time              `json:"created_at"`
+	DeviceContext        *DeviceContext         `json:"device_context,omitempty"`
+	DeviceResolution     *DeviceResolution      `json:"device_resolution,omitempty"`
+	ContextRevision      string                 `json:"context_revision,omitempty"`
+	ApplicabilityChecks  []KnowledgeCheck       `json:"applicability_checks,omitempty"`
+	TraceID              string                 `json:"trace_id,omitempty"`
+	RetrievedFragmentIDs []string               `json:"retrieved_fragment_ids,omitempty"`
+	ModelUsage           *ModelUsage            `json:"model_usage,omitempty"`
+	EvidenceSelection    *EvidenceSelection     `json:"evidence_selection,omitempty"`
+	KnowledgeToolCalls   []KnowledgeToolCall    `json:"knowledge_tool_calls,omitempty"`
+	Conflicts            []KnowledgeConflict    `json:"conflicts,omitempty"`
+	Evidence             []Evidence             `json:"evidence,omitempty"`
+	Observations         []ObservationSelection `json:"observations,omitempty"`
+	RequestKey           string                 `json:"request_key,omitempty"`
+	RequestHash          string                 `json:"request_hash,omitempty"`
 }
 
 type Repository interface {
@@ -235,7 +255,10 @@ type Repository interface {
 	ListPublished(context.Context) ([]Revision, error)
 	CreateConversation(context.Context, Conversation) error
 	GetConversation(context.Context, string) (Conversation, error)
+	FindResponseRequest(context.Context, string, string, string) (Response, error)
+	CreateResponse(context.Context, Response, int64) (Response, error)
 	SaveResponse(context.Context, Response) error
 	GetResponse(context.Context, string) (Response, error)
 	PendingResponses(context.Context) ([]Response, error)
+	ResponseEvents(context.Context, string, int64) ([]ResponseEvent, error)
 }

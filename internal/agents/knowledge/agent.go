@@ -52,6 +52,9 @@ type Result struct {
 	EvidenceSelection   *domain.EvidenceSelection  `json:"evidence_selection,omitempty"`
 	ModelUsage          *domain.ModelUsage         `json:"model_usage,omitempty"`
 	Error               *domain.Failure            `json:"error,omitempty"`
+	CorpusGeneration    string                     `json:"corpus_generation,omitempty"`
+	IndexGenerations    []string                   `json:"index_generations,omitempty"`
+	GapReason           string                     `json:"gap_reason,omitempty"`
 }
 
 func (r Result) EinoDocuments() []*schema.Document {
@@ -288,6 +291,8 @@ func (a *Agent) retrieve(ctx context.Context, query string, device *domain.Devic
 		Query: query,
 		TopK:  a.contextLimit,
 	}, device)
+	result.CorpusGeneration, result.IndexGenerations, result.GapReason = found.CorpusGeneration, found.IndexGenerations, found.GapReason
+	result.ApplicabilityChecks, result.RetrievalQueries, result.TraceID = found.Checks, found.RetrievalQueries, found.TraceID
 	if err != nil {
 		return result, err
 	}
@@ -309,7 +314,16 @@ func (a *Agent) retrieve(ctx context.Context, query string, device *domain.Devic
 		result.Status = StatusFound
 		return result, nil
 	}
-	result.Gaps = append(result.Gaps, "未召回已发布且适用的资料，请核对设备型号版本、知识发布状态及适用性检查。")
+	reason := map[string]string{
+		"NO_PUBLISHED_KNOWLEDGE": "当前没有已发布知识，请先导入并发布适用资料。",
+		"UNKNOWN_APPLICABILITY":  "缺少判断资料适用性所需的设备信息或版本规则。",
+		"VERSION_MISMATCH":       "当前已发布资料均不适用于本次设备型号版本。",
+		"NO_RETRIEVAL_HIT":       "存在适用的已发布资料，但本次问题未召回证据；可调整检索问题。",
+	}[result.GapReason]
+	if reason == "" {
+		reason = "未选出足够证据，请核对知识范围与检索问题。"
+	}
+	result.Gaps = append(result.Gaps, reason)
 	seen := map[string]bool{}
 	for _, assessment := range result.ApplicabilityChecks {
 		if assessment.Status != "UNKNOWN" {

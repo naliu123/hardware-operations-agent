@@ -2,7 +2,9 @@ package knowledge
 
 import (
 	"context"
+	"crypto/sha256"
 	"fmt"
+	"sort"
 	"strings"
 
 	"github.com/cloudwego/eino/components/retriever"
@@ -35,6 +37,9 @@ type SearchResult struct {
 	TraceID             string                  `json:"trace_id,omitempty"`
 	ExpandedFragmentIDs []string                `json:"expanded_fragment_ids,omitempty"`
 	RetrievalQueries    []string                `json:"retrieval_queries,omitempty"`
+	CorpusGeneration    string                  `json:"corpus_generation"`
+	IndexGenerations    []string                `json:"index_generations,omitempty"`
+	GapReason           string                  `json:"gap_reason,omitempty"`
 }
 
 func (r SearchResult) EinoDocuments() []*schema.Document {
@@ -89,6 +94,19 @@ func search(ctx context.Context, store domain.Repository, backend retriever.Retr
 	if err != nil {
 		return result, err
 	}
+	result.RetrievalQueries = []string{in.Query}
+	ids := make([]string, 0, len(revisions))
+	for _, rev := range revisions {
+		ids = append(ids, rev.ID)
+	}
+	sort.Strings(ids)
+	result.CorpusGeneration = fmt.Sprintf("%x", sha256.Sum256([]byte(strings.Join(ids, "\n"))))
+	result.GapReason = "NO_RETRIEVAL_HIT"
+	if len(revisions) == 0 {
+		// This diagnoses the searchable corpus, not an unobservable claim that
+		// a particular manual was never submitted as a draft.
+		result.GapReason = "NO_PUBLISHED_KNOWLEDGE"
+	}
 	eligible := []string{}
 	published := make(map[string]domain.Revision, len(revisions))
 	for _, rev := range revisions {
@@ -103,6 +121,14 @@ func search(ctx context.Context, store domain.Repository, backend retriever.Retr
 		}
 	}
 	if len(eligible) == 0 {
+		if len(revisions) > 0 {
+			result.GapReason = "VERSION_MISMATCH"
+			for _, check := range result.Checks {
+				if check.Status == "UNKNOWN" {
+					result.GapReason = "UNKNOWN_APPLICABILITY"
+				}
+			}
+		}
 		return result, nil
 	}
 	retrieve := backend.Retrieve
@@ -116,6 +142,7 @@ func search(ctx context.Context, store domain.Repository, backend retriever.Retr
 	docs, err := retrieve(ctx, in.Query, retriever.WithTopK(in.TopK),
 		retriever.WithDSLInfo(map[string]any{"revision_ids": eligible, "strategy": in.Strategy}))
 	if err != nil {
+		result.GapReason = "RETRIEVAL_FAILED"
 		return result, err
 	}
 	total := 0
@@ -132,9 +159,16 @@ func search(ctx context.Context, store domain.Repository, backend retriever.Retr
 		if !ok {
 			return result, fmt.Errorf("retrieval hit lacks revision identity")
 		}
-		if len(result.RetrievalQueries) == 0 {
-			if queries, ok := doc.MetaData["retrieval_queries"].([]string); ok {
-				result.RetrievalQueries = append([]string(nil), queries...)
+		if queries, ok := doc.MetaData["retrieval_queries"].([]string); ok {
+			result.RetrievalQueries = append([]string(nil), queries...)
+		}
+		if index, ok := doc.MetaData["index_generation"].(string); ok && index != "" {
+			found := false
+			for _, existing := range result.IndexGenerations {
+				found = found || existing == index
+			}
+			if !found {
+				result.IndexGenerations = append(result.IndexGenerations, index)
 			}
 		}
 		_, ok = published[id]
@@ -191,7 +225,7 @@ func search(ctx context.Context, store domain.Repository, backend retriever.Retr
 				if fragment.ID != root.ID {
 					continue
 				}
-				for _, j := range []int{i - 1, i + 1} {
+				for _, j := range relatedFragmentIndexes(rev, i) {
 					if j < 0 || j >= len(rev.Fragments) || len(result.ExpandedFragmentIDs) >= 8 {
 						continue
 					}
@@ -208,7 +242,48 @@ func search(ctx context.Context, store domain.Repository, backend retriever.Retr
 			}
 		}
 	}
+	if len(result.Documents) > 0 {
+		result.GapReason = ""
+	}
 	return result, nil
+}
+
+// Parent prose may be separated from a hit by several sibling sections. Locate
+// it from immutable source headings rather than assuming the previous fragment
+// is the parent. Candidate expansion still shares the eight-fragment budget.
+func relatedFragmentIndexes(rev domain.Revision, root int) []int {
+	type heading struct{ level, line int }
+	var stack []heading
+	fenced := false
+	for i, line := range strings.Split(rev.Content, "\n") {
+		if i+1 >= rev.Fragments[root].StartLine {
+			break
+		}
+		if strings.HasPrefix(strings.TrimSpace(line), "```") {
+			fenced = !fenced
+		}
+		if fenced || !strings.HasPrefix(line, "#") {
+			continue
+		}
+		level := len(line) - len(strings.TrimLeft(line, "#"))
+		if level > 6 || len(line) <= level || line[level] != ' ' {
+			continue
+		}
+		for len(stack) > 0 && stack[len(stack)-1].level >= level {
+			stack = stack[:len(stack)-1]
+		}
+		stack = append(stack, heading{level, i + 1})
+	}
+	indexes := []int{}
+	for ancestor := len(stack) - 2; ancestor >= 0; ancestor-- {
+		for j, fragment := range rev.Fragments {
+			if fragment.StartLine > stack[ancestor].line && fragment.StartLine < stack[ancestor+1].line {
+				indexes = append(indexes, j)
+				break
+			}
+		}
+	}
+	return append(indexes, root-1, root+1)
 }
 
 func BuildCitation(revision domain.Revision, fragment domain.Fragment, assessment domain.Assessment, device *domain.DeviceContext) domain.Citation {

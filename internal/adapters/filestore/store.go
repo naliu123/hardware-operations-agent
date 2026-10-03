@@ -16,11 +16,12 @@ import (
 )
 
 type state struct {
-	VersionPolicies map[string]domain.VersionPolicy `json:"version_policies"`
-	Devices         map[string]domain.DeviceContext `json:"devices"`
-	Revisions       map[string]domain.Revision      `json:"revisions"`
-	Conversations   map[string]domain.Conversation  `json:"conversations"`
-	Responses       map[string]domain.Response      `json:"responses"`
+	VersionPolicies map[string]domain.VersionPolicy   `json:"version_policies"`
+	Devices         map[string]domain.DeviceContext   `json:"devices"`
+	Revisions       map[string]domain.Revision        `json:"revisions"`
+	Conversations   map[string]domain.Conversation    `json:"conversations"`
+	Responses       map[string]domain.Response        `json:"responses"`
+	Events          map[string][]domain.ResponseEvent `json:"response_events"`
 }
 
 type Store struct {
@@ -63,6 +64,9 @@ func Open(path string) (*Store, error) {
 	}
 	if s.data.VersionPolicies == nil {
 		s.data.VersionPolicies = map[string]domain.VersionPolicy{}
+	}
+	if s.data.Events == nil {
+		s.data.Events = map[string][]domain.ResponseEvent{}
 	}
 	return s, nil
 }
@@ -242,12 +246,18 @@ func (s *Store) GetConversation(ctx context.Context, id string) (c domain.Conver
 
 func (s *Store) SaveResponse(ctx context.Context, r domain.Response) error {
 	return s.transact(ctx, true, func(st *state) error {
-		if r.DeviceContext != nil {
-			r.CheckDeviceSnapshot(st.Devices[r.DeviceContext.DeviceID].SnapshotID)
-		}
-		st.Responses[r.ID] = r
+		saveResponse(st, r)
 		return nil
 	})
+}
+
+func saveResponse(st *state, r domain.Response) {
+	if r.DeviceContext != nil {
+		r.CheckDeviceSnapshot(st.Devices[r.DeviceContext.DeviceID].SnapshotID)
+	}
+	events := st.Events[r.ID]
+	st.Events[r.ID] = append(events, domain.NewResponseEvents(st.Responses[r.ID].Status, r, int64(len(events)))...)
+	st.Responses[r.ID] = r
 }
 
 func (s *Store) GetResponse(ctx context.Context, id string) (r domain.Response, err error) {

@@ -32,7 +32,9 @@ func New(app *application.App, token string) http.Handler {
 	mux.HandleFunc("POST /v1/conversations", h.conversation)
 	mux.HandleFunc("POST /v1/conversations/{id}/messages", h.message)
 	mux.HandleFunc("GET /v1/responses/{id}", h.response)
+	mux.HandleFunc("GET /v1/responses/{id}/events", h.events)
 	mux.HandleFunc("PUT /v1/devices/{id}", h.putDevice)
+	mux.HandleFunc("POST /v1/devices/{id}/observations", h.observe)
 	mux.HandleFunc("GET /v1/devices/resolve", h.resolveDevice)
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path != "/healthz" && (token == "" || subtle.ConstantTimeCompare(
@@ -169,7 +171,7 @@ func (h *handler) message(w http.ResponseWriter, r *http.Request) {
 	if !decode(w, r, &input) {
 		return
 	}
-	response, err := h.app.Submit(r.Context(), r.PathValue("id"), input)
+	response, err := h.app.Submit(r.Context(), r.PathValue("id"), input, r.Header.Get("Idempotency-Key"))
 	result(w, http.StatusAccepted, response, err)
 }
 
@@ -190,4 +192,13 @@ func (h *handler) resolveDevice(w http.ResponseWriter, r *http.Request) {
 func (h *handler) response(w http.ResponseWriter, r *http.Request) {
 	response, err := h.app.Response(r.Context(), r.PathValue("id"))
 	result(w, http.StatusOK, response, err)
+}
+
+func (h *handler) observe(w http.ResponseWriter, r *http.Request) {
+	var input domain.ObservationRequest
+	if !decode(w, r, &input) {
+		return
+	}
+	observation, err := h.app.Observe(r.Context(), r.PathValue("id"), input)
+	result(w, http.StatusOK, observation, err)
 }

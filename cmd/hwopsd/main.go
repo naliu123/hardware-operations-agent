@@ -19,6 +19,7 @@ import (
 	"hwops/internal/adapters/chatmodel"
 	"hwops/internal/adapters/elasticsearch"
 	"hwops/internal/adapters/filestore"
+	"hwops/internal/adapters/monitor"
 	"hwops/internal/adapters/postgres"
 	"hwops/internal/application"
 	"hwops/internal/domain"
@@ -84,6 +85,12 @@ func run() error {
 	}
 	defer store.Close()
 	options := application.Options{}
+	if endpoint := os.Getenv("HWOPS_MONITOR_ENDPOINT"); endpoint != "" {
+		options.Observer, err = monitor.New(endpoint, os.Getenv("HWOPS_MONITOR_API_KEY"), mode, 10*time.Second, 4)
+		if err != nil {
+			return err
+		}
+	}
 	options.EvidenceSelection, err = envBool("HWOPS_EVIDENCE_SELECTION", false)
 	if err != nil {
 		return errors.New("HWOPS_EVIDENCE_SELECTION must be true or false")

@@ -24,6 +24,10 @@ func TestAnswerSelectsDirectEvidenceAndAdjacentOverview(t *testing.T) {
 	testEvidenceSelection(t, "")
 }
 
+func TestAnswerExpandsNonAdjacentParentSection(t *testing.T) {
+	testEvidenceSelection(t, "parent")
+}
+
 func TestRejectedEvidenceSelectionRetainsUsageWithoutPublishingAnswer(t *testing.T) {
 	for _, invalid := range []string{"unknown", "duplicate", "too-many"} {
 		t.Run(invalid, func(t *testing.T) { testEvidenceSelection(t, invalid) })
@@ -106,10 +110,13 @@ func testEvidenceSelection(t *testing.T, invalid string) {
 		}
 		if strings.HasSuffix(r.URL.Path, "/_search") {
 			order := []string{"背景1", "背景2", "背景3", "背景4", "背景5", "直接依据"}
+			if invalid == "parent" {
+				order = []string{"背景5", "直接依据"}
+			}
 			hits := []any{}
 			for i, section := range order {
 				doc := indexed[section]
-				hits = append(hits, map[string]any{"_id": doc["fragment_id"], "_score": 100 - i, "_source": doc})
+				hits = append(hits, map[string]any{"_id": doc["fragment_id"], "_index": "selection-test-v1", "_score": 100 - i, "_source": doc})
 			}
 			_ = json.NewEncoder(w).Encode(map[string]any{"hits": map[string]any{"hits": hits}})
 			return
@@ -140,7 +147,7 @@ func testEvidenceSelection(t *testing.T, invalid string) {
 	defer s.Close()
 	content := "# 概述\n创建负载时选择命名空间。\n"
 	for i := 1; i <= 5; i++ {
-		content += fmt.Sprintf("# 背景%d\n相关操作背景。\n", i)
+		content += fmt.Sprintf("## 背景%d\n相关操作背景。\n", i)
 	}
 	revision := request(t, s.Client(), "POST", s.URL+"/v1/knowledge/revisions", map[string]any{
 		"title": "命名空间手册", "source": "fixture://namespace", "content": content,
@@ -158,7 +165,7 @@ func testEvidenceSelection(t *testing.T, invalid string) {
 	pending := request(t, s.Client(), "POST", s.URL+"/v1/conversations/"+conversation["id"].(string)+"/messages",
 		map[string]any{"text": "如何按环境隔离工作负载，并在创建时指定环境？"}, http.StatusAccepted)
 	answer := awaitResponse(t, s, pending["id"].(string))
-	if invalid != "" && invalid != "malformed-once" {
+	if invalid != "" && invalid != "malformed-once" && invalid != "parent" {
 		expectedTokens, expectedCalls := 15, 1
 		if invalid == "malformed-twice" {
 			expectedTokens, expectedCalls = 30, 2
@@ -185,10 +192,18 @@ func testEvidenceSelection(t *testing.T, invalid string) {
 		answer.ModelUsage.Calls != expectedCalls {
 		t.Fatalf("selection must retain citations, final limit and total model usage: %+v", answer)
 	}
+	if len(answer.KnowledgeToolCalls) != 1 ||
+		strings.Join(answer.KnowledgeToolCalls[0].IndexGenerations, ",") != "selection-test-v1" {
+		t.Fatalf("index generation missing: %+v", answer.KnowledgeToolCalls)
+	}
 	// Candidate expansion is internal to the knowledge sub-agent; the public search contract is unchanged.
 	search := request(t, s.Client(), "POST", s.URL+"/v1/knowledge/search",
 		map[string]any{"query": "环境隔离", "top_k": 5}, http.StatusOK)
-	if len(search["documents"].([]any)) != 5 {
+	expectedDocuments := 5
+	if invalid == "parent" {
+		expectedDocuments = 2
+	}
+	if len(search["documents"].([]any)) != expectedDocuments {
 		t.Fatalf("public search changed its limit: %+v", search)
 	}
 }

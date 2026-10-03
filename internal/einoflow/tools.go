@@ -58,6 +58,7 @@ func invokeKnowledge(ctx context.Context, t *turn, knowledgeTool tool.InvokableT
 		current.Status, current.Error = result.Status, result.Error
 		current.RetrievalQueries, current.Gaps = result.RetrievalQueries, result.Gaps
 		current.TraceID, current.ModelUsage = result.TraceID, result.ModelUsage
+		current.CorpusGeneration, current.IndexGenerations, current.GapReason = result.CorpusGeneration, result.IndexGenerations, result.GapReason
 		current.EvidenceSelection = result.EvidenceSelection
 		t.Response.ApplicabilityChecks = append(t.Response.ApplicabilityChecks, result.ApplicabilityChecks...)
 		t.Response.EvidenceSelection = result.EvidenceSelection
@@ -109,12 +110,14 @@ func invokeKnowledge(ctx context.Context, t *turn, knowledgeTool tool.InvokableT
 		// evidence is referenced by ID instead of duplicating its context bytes.
 		payload, err := json.Marshal(struct {
 			chatmodel.ContextInput
-			Status string   `json:"status"`
-			Gaps   []string `json:"gaps"`
-			Known  []string `json:"previously_returned_fragment_ids,omitempty"`
+			Status    string   `json:"status"`
+			Gaps      []string `json:"gaps"`
+			Known     []string `json:"previously_returned_fragment_ids,omitempty"`
+			GapReason string   `json:"gap_reason,omitempty"`
 		}{
 			ContextInput: chatmodel.ContextInput{Question: current.Request, Documents: docs, Device: t.Response.DeviceContext},
 			Status:       result.Status, Gaps: gaps, Known: known,
+			GapReason: result.GapReason,
 		})
 		if err != nil {
 			return err

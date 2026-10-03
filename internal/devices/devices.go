@@ -19,7 +19,7 @@ func NewSnapshot(id string, in domain.DeviceInput) (domain.DeviceContext, error)
 		(in.DataMode != "LIVE" && in.DataMode != "REPLAY") || len(in.Aliases) > 32 {
 		return domain.DeviceContext{}, fmt.Errorf("%w: device ID, source, observed_at and LIVE/REPLAY data_mode are required; at most 32 aliases", domain.ErrInvalid)
 	}
-	for _, value := range append([]string{in.Name, in.Model, in.Firmware, in.Driver, in.HardwareRevision}, in.Aliases...) {
+	for _, value := range append([]string{in.Name, in.Model, in.Firmware, in.Driver, in.HardwareRevision, in.MonitoringID}, in.Aliases...) {
 		if len(value) > 256 || strings.TrimSpace(value) != value {
 			return domain.DeviceContext{}, fmt.Errorf("%w: device fields must be at most 256 bytes without surrounding whitespace", domain.ErrInvalid)
 		}

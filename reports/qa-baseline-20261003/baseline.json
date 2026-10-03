@@ -1,0 +1,2267 @@
+{
+  "schema_version": 1,
+  "data_mode": "REPLAY",
+  "created_at": "2026-10-03T08:16:57.647921Z",
+  "model": "fixture-extractive-v1，经真实OpenAI HTTP适配器；本地词项检索；外部监控桩",
+  "live_status": "本轮未评估；既有DeepSeek协议烟测与文档质量见03h/03f报告",
+  "revisions": [
+    {
+      "schema_version": 1,
+      "id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+      "document_id": "FI5KWCFUKMF7CR6AWX5QPXMX6O",
+      "title": "atlas-old",
+      "source": "fixture://qa06/atlas-old",
+      "content": "E42 蓝灯表示待机；CFG8 配置前需记录原参数。",
+      "applicability": {
+        "scope": "DEVICE",
+        "model": "fixture/Atlas",
+        "firmware": "R2"
+      },
+      "status": "PUBLISHED",
+      "fragments": [
+        {
+          "id": "K5JA6WREUDO52LYWAVBVWCSE24",
+          "revision_id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+          "section": "正文",
+          "start_line": 1,
+          "end_line": 1,
+          "content": "E42 蓝灯表示待机；CFG8 配置前需记录原参数。",
+          "content_hash": "42820374ca122039fc8ef3bf94525af88daddc4d85e74cf75a59905f4ccd0b42"
+        }
+      ],
+      "created_at": "2026-10-03T08:16:57.662548Z"
+    },
+    {
+      "schema_version": 1,
+      "id": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+      "document_id": "WAMZN5J6YLXNNXT7BEKAG76Z7K",
+      "title": "atlas-new",
+      "source": "fixture://qa06/atlas-new",
+      "content": "E42 蓝灯表示维护。",
+      "applicability": {
+        "scope": "DEVICE",
+        "model": "fixture/Atlas",
+        "firmware": "R10"
+      },
+      "status": "PUBLISHED",
+      "fragments": [
+        {
+          "id": "XWSVJ6BSIO4B4FUITXZIFNFZHJ",
+          "revision_id": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+          "section": "正文",
+          "start_line": 1,
+          "end_line": 1,
+          "content": "E42 蓝灯表示维护。",
+          "content_hash": "36e26621f453c698dbf9888ff7a8f7e1e338b822369b90bce23ccb357bdbd844"
+        }
+      ],
+      "created_at": "2026-10-03T08:16:57.689314Z"
+    },
+    {
+      "schema_version": 1,
+      "id": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+      "document_id": "6PNBF4ZPNGJSQ2WEMIPHKN5GYR",
+      "title": "boreal-old",
+      "source": "fixture://qa06/boreal-old",
+      "content": "E42 蓝灯表示升级。",
+      "applicability": {
+        "scope": "DEVICE",
+        "model": "fixture/Boreal",
+        "firmware": "B-9"
+      },
+      "status": "PUBLISHED",
+      "fragments": [
+        {
+          "id": "ZKZVBKDOJ4ZWZNBLRKV4HIDI7D",
+          "revision_id": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+          "section": "正文",
+          "start_line": 1,
+          "end_line": 1,
+          "content": "E42 蓝灯表示升级。",
+          "content_hash": "35928031f9628ee1496f49d72ca9553a97a3cb89aefc4177d038586a28fcff73"
+        }
+      ],
+      "created_at": "2026-10-03T08:16:57.713256Z"
+    },
+    {
+      "schema_version": 1,
+      "id": "LM5SACA73D36HNWVLB2D4UMXK2",
+      "document_id": "N7YO4FAOEBQ27MPOTXOQUUQMZ3",
+      "title": "boreal-new",
+      "source": "fixture://qa06/boreal-new",
+      "content": "E42 蓝灯表示自检。",
+      "applicability": {
+        "scope": "DEVICE",
+        "model": "fixture/Boreal",
+        "firmware": "B-10"
+      },
+      "status": "PUBLISHED",
+      "fragments": [
+        {
+          "id": "YAX7VSQJ5Y34Q2SM4G35SHQ6Q5",
+          "revision_id": "LM5SACA73D36HNWVLB2D4UMXK2",
+          "section": "正文",
+          "start_line": 1,
+          "end_line": 1,
+          "content": "E42 蓝灯表示自检。",
+          "content_hash": "13258b4b04e69b4566a87dbe4bd4627d63f3b659b781e4832a4903dcfd7d1979"
+        }
+      ],
+      "created_at": "2026-10-03T08:16:57.737422Z"
+    },
+    {
+      "schema_version": 1,
+      "id": "HBH2OCHJZKQ5MPHVIPJDAL7FKS",
+      "document_id": "32MOGXLBMH2MQQD3LMVUUO655W",
+      "title": "conflict",
+      "source": "fixture://qa06/conflict",
+      "content": "C99要求立即重启。",
+      "applicability": {
+        "scope": "DEVICE",
+        "model": "fixture/Atlas",
+        "firmware": "R2"
+      },
+      "status": "PUBLISHED",
+      "fragments": [
+        {
+          "id": "MZR3Y6WZZAGDRUX3QIXM7GS7KG",
+          "revision_id": "HBH2OCHJZKQ5MPHVIPJDAL7FKS",
+          "section": "正文",
+          "start_line": 1,
+          "end_line": 1,
+          "content": "C99要求立即重启。",
+          "content_hash": "260c9b6037ad4b79ac9b00d47b38c31c0490f8dcbbf99ee0b00e3712e1abda4a"
+        }
+      ],
+      "created_at": "2026-10-03T08:16:57.762746Z"
+    },
+    {
+      "schema_version": 1,
+      "id": "QFFUA74BY7GNVBVZTFZVPME52F",
+      "document_id": "FK32WROYKXCMUNMQVWAXT2NDQ3",
+      "title": "conflict",
+      "source": "fixture://qa06/conflict",
+      "content": "C99禁止重启。",
+      "applicability": {
+        "scope": "DEVICE",
+        "model": "fixture/Atlas",
+        "firmware": "R2"
+      },
+      "status": "PUBLISHED",
+      "fragments": [
+        {
+          "id": "7HMJUGSWDOCB7IAZ2QCBQ22E4Y",
+          "revision_id": "QFFUA74BY7GNVBVZTFZVPME52F",
+          "section": "正文",
+          "start_line": 1,
+          "end_line": 1,
+          "content": "C99禁止重启。",
+          "content_hash": "9861ed88c107ca6b7545416d8bc8daec2ba336d71e78f3047330f961ffd164db"
+        }
+      ],
+      "created_at": "2026-10-03T08:16:57.77957Z"
+    }
+  ],
+  "samples": [
+    {
+      "id": "atlas-r2-led",
+      "input": {
+        "text": "蓝灯表示什么？",
+        "device_id": "atlas-old"
+      },
+      "expected_status": "ANSWERED",
+      "expected_text": "待机",
+      "forbidden_answer": "维护",
+      "expected_device": "atlas-old",
+      "expected_revision": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+      "elapsed_ms": 30.708,
+      "metrics": {
+        "召回参考片段": true,
+        "引用原文支持性": true,
+        "版本适用性": true,
+        "确定性答案规则": true,
+        "设备上下文": true
+      },
+      "actual": {
+        "schema_version": 1,
+        "id": "M54XAX7D52P6CCQXDS5363P3TF",
+        "conversation_id": "EBEGRYXYDP2KGOP6T422F24RNM",
+        "question": "蓝灯表示什么？",
+        "status": "ANSWERED",
+        "data_mode": "REPLAY",
+        "answer": "E42 蓝灯表示待机；CFG8 配置前需记录原参数。",
+        "claims": [
+          {
+            "text": "E42 蓝灯表示待机；CFG8 配置前需记录原参数。",
+            "fragment_ids": [
+              "K5JA6WREUDO52LYWAVBVWCSE24"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "FI5KWCFUKMF7CR6AWX5QPXMX6O",
+            "revision_id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+            "fragment_id": "K5JA6WREUDO52LYWAVBVWCSE24",
+            "title": "atlas-old",
+            "source": "fixture://qa06/atlas-old",
+            "section": "正文",
+            "content_hash": "42820374ca122039fc8ef3bf94525af88daddc4d85e74cf75a59905f4ccd0b42",
+            "url": "/v1/knowledge/revisions/Q6U7IVLOROWPHYIHDJRHIZMKB6/fragments/K5JA6WREUDO52LYWAVBVWCSE24",
+            "device_snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "model",
+                  "status": "MATCH",
+                  "reason": "精确匹配 fixture/Atlas。"
+                },
+                {
+                  "field": "firmware",
+                  "status": "MATCH",
+                  "reason": "精确匹配 R2。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": null,
+        "created_at": "2026-10-03T08:16:57.806988Z",
+        "device_context": {
+          "name": "atlas-old",
+          "model": "fixture/Atlas",
+          "firmware": "R2",
+          "source": "fixture://qa06/inventory",
+          "observed_at": "2026-10-03T08:16:57.647922Z",
+          "data_mode": "REPLAY",
+          "monitoring_id": "monitor/atlas-old",
+          "schema_version": 1,
+          "device_id": "atlas-old",
+          "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN"
+        },
+        "context_revision": "R7JUWFPCASWYAE3THKIPFR6QVN",
+        "applicability_checks": [
+          {
+            "revision_id": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Atlas 与资料要求 fixture/Boreal 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R2 与资料要求 B-9 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "HBH2OCHJZKQ5MPHVIPJDAL7FKS",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R2。"
+              }
+            ]
+          },
+          {
+            "revision_id": "LM5SACA73D36HNWVLB2D4UMXK2",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Atlas 与资料要求 fixture/Boreal 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R2 与资料要求 B-10 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R2。"
+              }
+            ]
+          },
+          {
+            "revision_id": "QFFUA74BY7GNVBVZTFZVPME52F",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R2。"
+              }
+            ]
+          },
+          {
+            "revision_id": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R2 与资料要求 R10 不一致。"
+              }
+            ]
+          }
+        ],
+        "retrieved_fragment_ids": [
+          "K5JA6WREUDO52LYWAVBVWCSE24"
+        ],
+        "model_usage": {
+          "prompt_tokens": 14,
+          "completion_tokens": 6,
+          "total_tokens": 20,
+          "calls": 2
+        },
+        "knowledge_tool_calls": [
+          {
+            "id": "knowledge",
+            "name": "retrieve_hardware_knowledge",
+            "request": "蓝灯表示什么？",
+            "status": "FOUND",
+            "fragment_ids": [
+              "K5JA6WREUDO52LYWAVBVWCSE24"
+            ],
+            "retrieval_queries": [
+              "蓝灯表示什么？"
+            ],
+            "corpus_generation": "f8ca2eb9bdfa9b91676cea7bc3707d2cad40ee254ced8555b6b47f719f5cdad1"
+          }
+        ],
+        "request_key": "atlas-r2-led",
+        "request_hash": "19fbf2c2e083d8766d4d777194060d119c9ced6b8c3de13481aa1418d15131a2"
+      }
+    },
+    {
+      "id": "atlas-r10-error",
+      "input": {
+        "text": "E42表示什么？",
+        "device_id": "atlas-new"
+      },
+      "expected_status": "ANSWERED",
+      "expected_text": "维护",
+      "forbidden_answer": "待机",
+      "expected_device": "atlas-new",
+      "expected_revision": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+      "elapsed_ms": 30.022,
+      "metrics": {
+        "召回参考片段": true,
+        "引用原文支持性": true,
+        "版本适用性": true,
+        "确定性答案规则": true,
+        "设备上下文": true
+      },
+      "actual": {
+        "schema_version": 1,
+        "id": "NKJGQ7OYQWVYR2HHGWRWAB5YXK",
+        "conversation_id": "EBEGRYXYDP2KGOP6T422F24RNM",
+        "question": "E42表示什么？",
+        "status": "ANSWERED",
+        "data_mode": "REPLAY",
+        "answer": "E42 蓝灯表示维护。",
+        "claims": [
+          {
+            "text": "E42 蓝灯表示维护。",
+            "fragment_ids": [
+              "XWSVJ6BSIO4B4FUITXZIFNFZHJ"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "WAMZN5J6YLXNNXT7BEKAG76Z7K",
+            "revision_id": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+            "fragment_id": "XWSVJ6BSIO4B4FUITXZIFNFZHJ",
+            "title": "atlas-new",
+            "source": "fixture://qa06/atlas-new",
+            "section": "正文",
+            "content_hash": "36e26621f453c698dbf9888ff7a8f7e1e338b822369b90bce23ccb357bdbd844",
+            "url": "/v1/knowledge/revisions/ZGMAK5W7S5A7JBHV25AAK6Y3PK/fragments/XWSVJ6BSIO4B4FUITXZIFNFZHJ",
+            "device_snapshot_id": "W7XKRBSXCSVH5EGMLCSGK3W6Q3",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "model",
+                  "status": "MATCH",
+                  "reason": "精确匹配 fixture/Atlas。"
+                },
+                {
+                  "field": "firmware",
+                  "status": "MATCH",
+                  "reason": "精确匹配 R10。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": null,
+        "created_at": "2026-10-03T08:16:57.83764Z",
+        "device_context": {
+          "name": "atlas-new",
+          "model": "fixture/Atlas",
+          "firmware": "R10",
+          "source": "fixture://qa06/inventory",
+          "observed_at": "2026-10-03T08:16:57.681266Z",
+          "data_mode": "REPLAY",
+          "monitoring_id": "monitor/atlas-new",
+          "schema_version": 1,
+          "device_id": "atlas-new",
+          "snapshot_id": "W7XKRBSXCSVH5EGMLCSGK3W6Q3"
+        },
+        "context_revision": "W7XKRBSXCSVH5EGMLCSGK3W6Q3",
+        "applicability_checks": [
+          {
+            "revision_id": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Atlas 与资料要求 fixture/Boreal 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R10 与资料要求 B-9 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "HBH2OCHJZKQ5MPHVIPJDAL7FKS",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R10 与资料要求 R2 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "LM5SACA73D36HNWVLB2D4UMXK2",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Atlas 与资料要求 fixture/Boreal 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R10 与资料要求 B-10 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R10 与资料要求 R2 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "QFFUA74BY7GNVBVZTFZVPME52F",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R10 与资料要求 R2 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R10。"
+              }
+            ]
+          }
+        ],
+        "retrieved_fragment_ids": [
+          "XWSVJ6BSIO4B4FUITXZIFNFZHJ"
+        ],
+        "model_usage": {
+          "prompt_tokens": 14,
+          "completion_tokens": 6,
+          "total_tokens": 20,
+          "calls": 2
+        },
+        "knowledge_tool_calls": [
+          {
+            "id": "knowledge",
+            "name": "retrieve_hardware_knowledge",
+            "request": "E42表示什么？",
+            "status": "FOUND",
+            "fragment_ids": [
+              "XWSVJ6BSIO4B4FUITXZIFNFZHJ"
+            ],
+            "retrieval_queries": [
+              "E42表示什么？"
+            ],
+            "corpus_generation": "f8ca2eb9bdfa9b91676cea7bc3707d2cad40ee254ced8555b6b47f719f5cdad1"
+          }
+        ],
+        "request_key": "atlas-r10-error",
+        "request_hash": "2ec2a6a55e1dbe25852fb2b049c016d801d9e40457ef9138e5e0d40ff41ebb03"
+      }
+    },
+    {
+      "id": "boreal-b9-led",
+      "input": {
+        "text": "蓝灯表示什么？",
+        "device_id": "boreal-old"
+      },
+      "expected_status": "ANSWERED",
+      "expected_text": "升级",
+      "forbidden_answer": "维护",
+      "expected_device": "boreal-old",
+      "expected_revision": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+      "elapsed_ms": 35.298,
+      "metrics": {
+        "召回参考片段": true,
+        "引用原文支持性": true,
+        "版本适用性": true,
+        "确定性答案规则": true,
+        "设备上下文": true
+      },
+      "actual": {
+        "schema_version": 1,
+        "id": "WUA2RP3WJR6AUFY3WETC4D5NC5",
+        "conversation_id": "EBEGRYXYDP2KGOP6T422F24RNM",
+        "question": "蓝灯表示什么？",
+        "status": "ANSWERED",
+        "data_mode": "REPLAY",
+        "answer": "E42 蓝灯表示升级。",
+        "claims": [
+          {
+            "text": "E42 蓝灯表示升级。",
+            "fragment_ids": [
+              "ZKZVBKDOJ4ZWZNBLRKV4HIDI7D"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "6PNBF4ZPNGJSQ2WEMIPHKN5GYR",
+            "revision_id": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+            "fragment_id": "ZKZVBKDOJ4ZWZNBLRKV4HIDI7D",
+            "title": "boreal-old",
+            "source": "fixture://qa06/boreal-old",
+            "section": "正文",
+            "content_hash": "35928031f9628ee1496f49d72ca9553a97a3cb89aefc4177d038586a28fcff73",
+            "url": "/v1/knowledge/revisions/BN3IVRT2CQZXOIEZN7FMGDEM2I/fragments/ZKZVBKDOJ4ZWZNBLRKV4HIDI7D",
+            "device_snapshot_id": "OD5EON4IIQUXXDOAVEHPZTWRFM",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "model",
+                  "status": "MATCH",
+                  "reason": "精确匹配 fixture/Boreal。"
+                },
+                {
+                  "field": "firmware",
+                  "status": "MATCH",
+                  "reason": "精确匹配 B-9。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": null,
+        "created_at": "2026-10-03T08:16:57.867976Z",
+        "device_context": {
+          "name": "boreal-old",
+          "model": "fixture/Boreal",
+          "firmware": "B-9",
+          "source": "fixture://qa06/inventory",
+          "observed_at": "2026-10-03T08:16:57.70521Z",
+          "data_mode": "REPLAY",
+          "monitoring_id": "monitor/boreal-old",
+          "schema_version": 1,
+          "device_id": "boreal-old",
+          "snapshot_id": "OD5EON4IIQUXXDOAVEHPZTWRFM"
+        },
+        "context_revision": "OD5EON4IIQUXXDOAVEHPZTWRFM",
+        "applicability_checks": [
+          {
+            "revision_id": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Boreal。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 B-9。"
+              }
+            ]
+          },
+          {
+            "revision_id": "HBH2OCHJZKQ5MPHVIPJDAL7FKS",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Boreal 与资料要求 fixture/Atlas 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-9 与资料要求 R2 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "LM5SACA73D36HNWVLB2D4UMXK2",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Boreal。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-9 与资料要求 B-10 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Boreal 与资料要求 fixture/Atlas 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-9 与资料要求 R2 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "QFFUA74BY7GNVBVZTFZVPME52F",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Boreal 与资料要求 fixture/Atlas 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-9 与资料要求 R2 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Boreal 与资料要求 fixture/Atlas 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-9 与资料要求 R10 不一致。"
+              }
+            ]
+          }
+        ],
+        "retrieved_fragment_ids": [
+          "ZKZVBKDOJ4ZWZNBLRKV4HIDI7D"
+        ],
+        "model_usage": {
+          "prompt_tokens": 14,
+          "completion_tokens": 6,
+          "total_tokens": 20,
+          "calls": 2
+        },
+        "knowledge_tool_calls": [
+          {
+            "id": "knowledge",
+            "name": "retrieve_hardware_knowledge",
+            "request": "蓝灯表示什么？",
+            "status": "FOUND",
+            "fragment_ids": [
+              "ZKZVBKDOJ4ZWZNBLRKV4HIDI7D"
+            ],
+            "retrieval_queries": [
+              "蓝灯表示什么？"
+            ],
+            "corpus_generation": "f8ca2eb9bdfa9b91676cea7bc3707d2cad40ee254ced8555b6b47f719f5cdad1"
+          }
+        ],
+        "request_key": "boreal-b9-led",
+        "request_hash": "4de2fee7dd754a7e29bf1c0032b1aad2d508effc8e4a03cacc74ffb291b3ddd9"
+      }
+    },
+    {
+      "id": "boreal-b10-led",
+      "input": {
+        "text": "蓝灯表示什么？",
+        "device_id": "boreal-new"
+      },
+      "expected_status": "ANSWERED",
+      "expected_text": "自检",
+      "forbidden_answer": "升级",
+      "expected_device": "boreal-new",
+      "expected_revision": "LM5SACA73D36HNWVLB2D4UMXK2",
+      "elapsed_ms": 33.885,
+      "metrics": {
+        "召回参考片段": true,
+        "引用原文支持性": true,
+        "版本适用性": true,
+        "确定性答案规则": true,
+        "设备上下文": true
+      },
+      "actual": {
+        "schema_version": 1,
+        "id": "YI4AUMGVKA5HIU2O4SGJ7WG2WG",
+        "conversation_id": "EBEGRYXYDP2KGOP6T422F24RNM",
+        "question": "蓝灯表示什么？",
+        "status": "ANSWERED",
+        "data_mode": "REPLAY",
+        "answer": "E42 蓝灯表示自检。",
+        "claims": [
+          {
+            "text": "E42 蓝灯表示自检。",
+            "fragment_ids": [
+              "YAX7VSQJ5Y34Q2SM4G35SHQ6Q5"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "N7YO4FAOEBQ27MPOTXOQUUQMZ3",
+            "revision_id": "LM5SACA73D36HNWVLB2D4UMXK2",
+            "fragment_id": "YAX7VSQJ5Y34Q2SM4G35SHQ6Q5",
+            "title": "boreal-new",
+            "source": "fixture://qa06/boreal-new",
+            "section": "正文",
+            "content_hash": "13258b4b04e69b4566a87dbe4bd4627d63f3b659b781e4832a4903dcfd7d1979",
+            "url": "/v1/knowledge/revisions/LM5SACA73D36HNWVLB2D4UMXK2/fragments/YAX7VSQJ5Y34Q2SM4G35SHQ6Q5",
+            "device_snapshot_id": "B2RYZL4IMBPT5FGVBTKX4QGXF5",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "model",
+                  "status": "MATCH",
+                  "reason": "精确匹配 fixture/Boreal。"
+                },
+                {
+                  "field": "firmware",
+                  "status": "MATCH",
+                  "reason": "精确匹配 B-10。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": null,
+        "created_at": "2026-10-03T08:16:57.904117Z",
+        "device_context": {
+          "name": "boreal-new",
+          "model": "fixture/Boreal",
+          "firmware": "B-10",
+          "source": "fixture://qa06/inventory",
+          "observed_at": "2026-10-03T08:16:57.729321Z",
+          "data_mode": "REPLAY",
+          "monitoring_id": "monitor/boreal-new",
+          "schema_version": 1,
+          "device_id": "boreal-new",
+          "snapshot_id": "B2RYZL4IMBPT5FGVBTKX4QGXF5"
+        },
+        "context_revision": "B2RYZL4IMBPT5FGVBTKX4QGXF5",
+        "applicability_checks": [
+          {
+            "revision_id": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Boreal。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-10 与资料要求 B-9 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "HBH2OCHJZKQ5MPHVIPJDAL7FKS",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Boreal 与资料要求 fixture/Atlas 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-10 与资料要求 R2 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "LM5SACA73D36HNWVLB2D4UMXK2",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Boreal。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 B-10。"
+              }
+            ]
+          },
+          {
+            "revision_id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Boreal 与资料要求 fixture/Atlas 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-10 与资料要求 R2 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "QFFUA74BY7GNVBVZTFZVPME52F",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Boreal 与资料要求 fixture/Atlas 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-10 与资料要求 R2 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Boreal 与资料要求 fixture/Atlas 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-10 与资料要求 R10 不一致。"
+              }
+            ]
+          }
+        ],
+        "retrieved_fragment_ids": [
+          "YAX7VSQJ5Y34Q2SM4G35SHQ6Q5"
+        ],
+        "model_usage": {
+          "prompt_tokens": 14,
+          "completion_tokens": 6,
+          "total_tokens": 20,
+          "calls": 2
+        },
+        "knowledge_tool_calls": [
+          {
+            "id": "knowledge",
+            "name": "retrieve_hardware_knowledge",
+            "request": "蓝灯表示什么？",
+            "status": "FOUND",
+            "fragment_ids": [
+              "YAX7VSQJ5Y34Q2SM4G35SHQ6Q5"
+            ],
+            "retrieval_queries": [
+              "蓝灯表示什么？"
+            ],
+            "corpus_generation": "f8ca2eb9bdfa9b91676cea7bc3707d2cad40ee254ced8555b6b47f719f5cdad1"
+          }
+        ],
+        "request_key": "boreal-b10-led",
+        "request_hash": "ef123a894f5e3b15030f7a845e2cec2b392554efca057bc859c91bf0bfac7952"
+      }
+    },
+    {
+      "id": "follow-up-pronoun",
+      "input": {
+        "text": "它的E42表示什么？"
+      },
+      "expected_status": "ANSWERED",
+      "expected_text": "自检",
+      "forbidden_answer": "维护",
+      "expected_device": "boreal-new",
+      "expected_revision": "LM5SACA73D36HNWVLB2D4UMXK2",
+      "elapsed_ms": 37.021,
+      "metrics": {
+        "召回参考片段": true,
+        "引用原文支持性": true,
+        "版本适用性": true,
+        "确定性答案规则": true,
+        "设备上下文": true
+      },
+      "actual": {
+        "schema_version": 1,
+        "id": "7EK5D5B6LMVI7UFYZFGNOCVWNL",
+        "conversation_id": "EBEGRYXYDP2KGOP6T422F24RNM",
+        "question": "它的E42表示什么？",
+        "status": "ANSWERED",
+        "data_mode": "REPLAY",
+        "answer": "E42 蓝灯表示自检。",
+        "claims": [
+          {
+            "text": "E42 蓝灯表示自检。",
+            "fragment_ids": [
+              "YAX7VSQJ5Y34Q2SM4G35SHQ6Q5"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "N7YO4FAOEBQ27MPOTXOQUUQMZ3",
+            "revision_id": "LM5SACA73D36HNWVLB2D4UMXK2",
+            "fragment_id": "YAX7VSQJ5Y34Q2SM4G35SHQ6Q5",
+            "title": "boreal-new",
+            "source": "fixture://qa06/boreal-new",
+            "section": "正文",
+            "content_hash": "13258b4b04e69b4566a87dbe4bd4627d63f3b659b781e4832a4903dcfd7d1979",
+            "url": "/v1/knowledge/revisions/LM5SACA73D36HNWVLB2D4UMXK2/fragments/YAX7VSQJ5Y34Q2SM4G35SHQ6Q5",
+            "device_snapshot_id": "B2RYZL4IMBPT5FGVBTKX4QGXF5",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "model",
+                  "status": "MATCH",
+                  "reason": "精确匹配 fixture/Boreal。"
+                },
+                {
+                  "field": "firmware",
+                  "status": "MATCH",
+                  "reason": "精确匹配 B-10。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": null,
+        "created_at": "2026-10-03T08:16:57.937516Z",
+        "device_context": {
+          "name": "boreal-new",
+          "model": "fixture/Boreal",
+          "firmware": "B-10",
+          "source": "fixture://qa06/inventory",
+          "observed_at": "2026-10-03T08:16:57.729321Z",
+          "data_mode": "REPLAY",
+          "monitoring_id": "monitor/boreal-new",
+          "schema_version": 1,
+          "device_id": "boreal-new",
+          "snapshot_id": "B2RYZL4IMBPT5FGVBTKX4QGXF5"
+        },
+        "context_revision": "B2RYZL4IMBPT5FGVBTKX4QGXF5",
+        "applicability_checks": [
+          {
+            "revision_id": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Boreal。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-10 与资料要求 B-9 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "HBH2OCHJZKQ5MPHVIPJDAL7FKS",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Boreal 与资料要求 fixture/Atlas 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-10 与资料要求 R2 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "LM5SACA73D36HNWVLB2D4UMXK2",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Boreal。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 B-10。"
+              }
+            ]
+          },
+          {
+            "revision_id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Boreal 与资料要求 fixture/Atlas 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-10 与资料要求 R2 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "QFFUA74BY7GNVBVZTFZVPME52F",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Boreal 与资料要求 fixture/Atlas 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-10 与资料要求 R2 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Boreal 与资料要求 fixture/Atlas 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 B-10 与资料要求 R10 不一致。"
+              }
+            ]
+          }
+        ],
+        "retrieved_fragment_ids": [
+          "YAX7VSQJ5Y34Q2SM4G35SHQ6Q5"
+        ],
+        "model_usage": {
+          "prompt_tokens": 14,
+          "completion_tokens": 6,
+          "total_tokens": 20,
+          "calls": 2
+        },
+        "knowledge_tool_calls": [
+          {
+            "id": "knowledge",
+            "name": "retrieve_hardware_knowledge",
+            "request": "它的E42表示什么？",
+            "status": "FOUND",
+            "fragment_ids": [
+              "YAX7VSQJ5Y34Q2SM4G35SHQ6Q5"
+            ],
+            "retrieval_queries": [
+              "它的E42表示什么？"
+            ],
+            "corpus_generation": "f8ca2eb9bdfa9b91676cea7bc3707d2cad40ee254ced8555b6b47f719f5cdad1"
+          }
+        ],
+        "request_key": "follow-up-pronoun",
+        "request_hash": "5c9ddfac2aacc5d1276536bc289481e68200b7c2b02ccf912cb71de1efc54dba"
+      }
+    },
+    {
+      "id": "switch-device-config",
+      "input": {
+        "text": "CFG8配置有哪些前提？",
+        "device_id": "atlas-old"
+      },
+      "expected_status": "ANSWERED",
+      "expected_text": "记录原参数",
+      "forbidden_answer": "自检",
+      "expected_device": "atlas-old",
+      "expected_revision": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+      "elapsed_ms": 36.534,
+      "metrics": {
+        "召回参考片段": true,
+        "引用原文支持性": true,
+        "版本适用性": true,
+        "确定性答案规则": true,
+        "设备上下文": true
+      },
+      "actual": {
+        "schema_version": 1,
+        "id": "4VG3YSKA4P5LSCUVW42LYCXMNG",
+        "conversation_id": "EBEGRYXYDP2KGOP6T422F24RNM",
+        "question": "CFG8配置有哪些前提？",
+        "status": "ANSWERED",
+        "data_mode": "REPLAY",
+        "answer": "E42 蓝灯表示待机；CFG8 配置前需记录原参数。",
+        "claims": [
+          {
+            "text": "E42 蓝灯表示待机；CFG8 配置前需记录原参数。",
+            "fragment_ids": [
+              "K5JA6WREUDO52LYWAVBVWCSE24"
+            ]
+          }
+        ],
+        "citations": [
+          {
+            "document_id": "FI5KWCFUKMF7CR6AWX5QPXMX6O",
+            "revision_id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+            "fragment_id": "K5JA6WREUDO52LYWAVBVWCSE24",
+            "title": "atlas-old",
+            "source": "fixture://qa06/atlas-old",
+            "section": "正文",
+            "content_hash": "42820374ca122039fc8ef3bf94525af88daddc4d85e74cf75a59905f4ccd0b42",
+            "url": "/v1/knowledge/revisions/Q6U7IVLOROWPHYIHDJRHIZMKB6/fragments/K5JA6WREUDO52LYWAVBVWCSE24",
+            "device_snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "model",
+                  "status": "MATCH",
+                  "reason": "精确匹配 fixture/Atlas。"
+                },
+                {
+                  "field": "firmware",
+                  "status": "MATCH",
+                  "reason": "精确匹配 R2。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": null,
+        "created_at": "2026-10-03T08:16:57.974832Z",
+        "device_context": {
+          "name": "atlas-old",
+          "model": "fixture/Atlas",
+          "firmware": "R2",
+          "source": "fixture://qa06/inventory",
+          "observed_at": "2026-10-03T08:16:57.647922Z",
+          "data_mode": "REPLAY",
+          "monitoring_id": "monitor/atlas-old",
+          "schema_version": 1,
+          "device_id": "atlas-old",
+          "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN"
+        },
+        "context_revision": "R7JUWFPCASWYAE3THKIPFR6QVN",
+        "applicability_checks": [
+          {
+            "revision_id": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Atlas 与资料要求 fixture/Boreal 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R2 与资料要求 B-9 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "HBH2OCHJZKQ5MPHVIPJDAL7FKS",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R2。"
+              }
+            ]
+          },
+          {
+            "revision_id": "LM5SACA73D36HNWVLB2D4UMXK2",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Atlas 与资料要求 fixture/Boreal 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R2 与资料要求 B-10 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R2。"
+              }
+            ]
+          },
+          {
+            "revision_id": "QFFUA74BY7GNVBVZTFZVPME52F",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R2。"
+              }
+            ]
+          },
+          {
+            "revision_id": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R2 与资料要求 R10 不一致。"
+              }
+            ]
+          }
+        ],
+        "retrieved_fragment_ids": [
+          "K5JA6WREUDO52LYWAVBVWCSE24"
+        ],
+        "model_usage": {
+          "prompt_tokens": 14,
+          "completion_tokens": 6,
+          "total_tokens": 20,
+          "calls": 2
+        },
+        "knowledge_tool_calls": [
+          {
+            "id": "knowledge",
+            "name": "retrieve_hardware_knowledge",
+            "request": "CFG8配置有哪些前提？",
+            "status": "FOUND",
+            "fragment_ids": [
+              "K5JA6WREUDO52LYWAVBVWCSE24"
+            ],
+            "retrieval_queries": [
+              "CFG8配置有哪些前提？"
+            ],
+            "corpus_generation": "f8ca2eb9bdfa9b91676cea7bc3707d2cad40ee254ced8555b6b47f719f5cdad1"
+          }
+        ],
+        "request_key": "switch-device-config",
+        "request_hash": "aebba1a65d75c9d0b01b75aa6d41ee6e0f12e5aebc4c49eaadaccb6ab8bbf2da"
+      }
+    },
+    {
+      "id": "unknown-version",
+      "input": {
+        "text": "E42表示什么？",
+        "device_id": "unknown-version"
+      },
+      "expected_status": "NEEDS_CLARIFICATION",
+      "expected_text": "",
+      "forbidden_answer": "待机",
+      "expected_device": "unknown-version",
+      "elapsed_ms": 36.218,
+      "metrics": {
+        "确定性答案规则": true,
+        "设备上下文": true
+      },
+      "actual": {
+        "schema_version": 1,
+        "id": "VEXC2N7QKRTOSBLQMJYU7DDRRH",
+        "conversation_id": "EBEGRYXYDP2KGOP6T422F24RNM",
+        "question": "E42表示什么？",
+        "status": "NEEDS_CLARIFICATION",
+        "data_mode": "REPLAY",
+        "answer": "",
+        "claims": [],
+        "citations": null,
+        "gaps": [
+          "没有适用的已检索资料。"
+        ],
+        "created_at": "2026-10-03T08:16:58.011487Z",
+        "device_context": {
+          "name": "unknown-version",
+          "model": "fixture/Atlas",
+          "source": "fixture://inventory",
+          "observed_at": "2026-10-03T08:16:57.75345Z",
+          "data_mode": "REPLAY",
+          "schema_version": 1,
+          "device_id": "unknown-version",
+          "snapshot_id": "YCDKSEA5CWYJW4ZY3YDW5VDUKJ"
+        },
+        "context_revision": "YCDKSEA5CWYJW4ZY3YDW5VDUKJ",
+        "applicability_checks": [
+          {
+            "revision_id": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Atlas 与资料要求 fixture/Boreal 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "UNKNOWN",
+                "reason": "设备快照缺少 firmware。"
+              }
+            ]
+          },
+          {
+            "revision_id": "HBH2OCHJZKQ5MPHVIPJDAL7FKS",
+            "status": "UNKNOWN",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "UNKNOWN",
+                "reason": "设备快照缺少 firmware。"
+              }
+            ]
+          },
+          {
+            "revision_id": "LM5SACA73D36HNWVLB2D4UMXK2",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Atlas 与资料要求 fixture/Boreal 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "UNKNOWN",
+                "reason": "设备快照缺少 firmware。"
+              }
+            ]
+          },
+          {
+            "revision_id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+            "status": "UNKNOWN",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "UNKNOWN",
+                "reason": "设备快照缺少 firmware。"
+              }
+            ]
+          },
+          {
+            "revision_id": "QFFUA74BY7GNVBVZTFZVPME52F",
+            "status": "UNKNOWN",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "UNKNOWN",
+                "reason": "设备快照缺少 firmware。"
+              }
+            ]
+          },
+          {
+            "revision_id": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+            "status": "UNKNOWN",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "UNKNOWN",
+                "reason": "设备快照缺少 firmware。"
+              }
+            ]
+          }
+        ],
+        "model_usage": {
+          "prompt_tokens": 14,
+          "completion_tokens": 6,
+          "total_tokens": 20,
+          "calls": 2
+        },
+        "knowledge_tool_calls": [
+          {
+            "id": "knowledge",
+            "name": "retrieve_hardware_knowledge",
+            "request": "E42表示什么？",
+            "status": "NEEDS_CONTEXT",
+            "retrieval_queries": [
+              "E42表示什么？"
+            ],
+            "corpus_generation": "f8ca2eb9bdfa9b91676cea7bc3707d2cad40ee254ced8555b6b47f719f5cdad1",
+            "gap_reason": "UNKNOWN_APPLICABILITY",
+            "gaps": [
+              "缺少判断资料适用性所需的设备信息或版本规则。",
+              "设备快照缺少 firmware。"
+            ]
+          }
+        ],
+        "request_key": "unknown-version",
+        "request_hash": "1f598621c0cda65e2b5093700299ce9ca2e3ab12959870fb19d7ee8162a1ccdb"
+      }
+    },
+    {
+      "id": "retrieval-miss",
+      "input": {
+        "text": "zzqqvvxx",
+        "device_id": "atlas-old"
+      },
+      "expected_status": "UNRESOLVED",
+      "expected_text": "",
+      "forbidden_answer": "正常",
+      "expected_device": "atlas-old",
+      "elapsed_ms": 39.063,
+      "metrics": {
+        "确定性答案规则": true,
+        "设备上下文": true
+      },
+      "actual": {
+        "schema_version": 1,
+        "id": "LUWJG6BO6XWIX6YYLECJIS5246",
+        "conversation_id": "EBEGRYXYDP2KGOP6T422F24RNM",
+        "question": "zzqqvvxx",
+        "status": "UNRESOLVED",
+        "data_mode": "REPLAY",
+        "answer": "",
+        "claims": [],
+        "citations": null,
+        "gaps": [
+          "没有适用的已检索资料。"
+        ],
+        "created_at": "2026-10-03T08:16:58.047808Z",
+        "device_context": {
+          "name": "atlas-old",
+          "model": "fixture/Atlas",
+          "firmware": "R2",
+          "source": "fixture://qa06/inventory",
+          "observed_at": "2026-10-03T08:16:57.647922Z",
+          "data_mode": "REPLAY",
+          "monitoring_id": "monitor/atlas-old",
+          "schema_version": 1,
+          "device_id": "atlas-old",
+          "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN"
+        },
+        "context_revision": "R7JUWFPCASWYAE3THKIPFR6QVN",
+        "applicability_checks": [
+          {
+            "revision_id": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Atlas 与资料要求 fixture/Boreal 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R2 与资料要求 B-9 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "HBH2OCHJZKQ5MPHVIPJDAL7FKS",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R2。"
+              }
+            ]
+          },
+          {
+            "revision_id": "LM5SACA73D36HNWVLB2D4UMXK2",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Atlas 与资料要求 fixture/Boreal 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R2 与资料要求 B-10 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R2。"
+              }
+            ]
+          },
+          {
+            "revision_id": "QFFUA74BY7GNVBVZTFZVPME52F",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R2。"
+              }
+            ]
+          },
+          {
+            "revision_id": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R2 与资料要求 R10 不一致。"
+              }
+            ]
+          }
+        ],
+        "model_usage": {
+          "prompt_tokens": 14,
+          "completion_tokens": 6,
+          "total_tokens": 20,
+          "calls": 2
+        },
+        "knowledge_tool_calls": [
+          {
+            "id": "knowledge",
+            "name": "retrieve_hardware_knowledge",
+            "request": "zzqqvvxx",
+            "status": "NOT_FOUND",
+            "retrieval_queries": [
+              "zzqqvvxx"
+            ],
+            "corpus_generation": "f8ca2eb9bdfa9b91676cea7bc3707d2cad40ee254ced8555b6b47f719f5cdad1",
+            "gap_reason": "NO_RETRIEVAL_HIT",
+            "gaps": [
+              "存在适用的已发布资料，但本次问题未召回证据；可调整检索问题。"
+            ]
+          }
+        ],
+        "request_key": "retrieval-miss",
+        "request_hash": "dab04aef8a9ba204139b5877f1b45e98c62c106645f412a9e862b47cf5161dc2"
+      }
+    },
+    {
+      "id": "knowledge-conflict",
+      "input": {
+        "text": "C99应该怎么处理？",
+        "device_id": "atlas-old"
+      },
+      "expected_status": "UNRESOLVED",
+      "expected_text": "",
+      "forbidden_answer": "立即重启",
+      "expected_device": "atlas-old",
+      "elapsed_ms": 38.959,
+      "metrics": {
+        "冲突出处与阻断": true,
+        "确定性答案规则": true,
+        "设备上下文": true
+      },
+      "actual": {
+        "schema_version": 1,
+        "id": "JXNDOESOIOZ7SODNXN7ISYETTL",
+        "conversation_id": "EBEGRYXYDP2KGOP6T422F24RNM",
+        "question": "C99应该怎么处理？",
+        "status": "UNRESOLVED",
+        "data_mode": "REPLAY",
+        "answer": "",
+        "claims": [],
+        "citations": [
+          {
+            "document_id": "FK32WROYKXCMUNMQVWAXT2NDQ3",
+            "revision_id": "QFFUA74BY7GNVBVZTFZVPME52F",
+            "fragment_id": "7HMJUGSWDOCB7IAZ2QCBQ22E4Y",
+            "title": "conflict",
+            "source": "fixture://qa06/conflict",
+            "section": "正文",
+            "content_hash": "9861ed88c107ca6b7545416d8bc8daec2ba336d71e78f3047330f961ffd164db",
+            "url": "/v1/knowledge/revisions/QFFUA74BY7GNVBVZTFZVPME52F/fragments/7HMJUGSWDOCB7IAZ2QCBQ22E4Y",
+            "device_snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "model",
+                  "status": "MATCH",
+                  "reason": "精确匹配 fixture/Atlas。"
+                },
+                {
+                  "field": "firmware",
+                  "status": "MATCH",
+                  "reason": "精确匹配 R2。"
+                }
+              ]
+            }
+          },
+          {
+            "document_id": "32MOGXLBMH2MQQD3LMVUUO655W",
+            "revision_id": "HBH2OCHJZKQ5MPHVIPJDAL7FKS",
+            "fragment_id": "MZR3Y6WZZAGDRUX3QIXM7GS7KG",
+            "title": "conflict",
+            "source": "fixture://qa06/conflict",
+            "section": "正文",
+            "content_hash": "260c9b6037ad4b79ac9b00d47b38c31c0490f8dcbbf99ee0b00e3712e1abda4a",
+            "url": "/v1/knowledge/revisions/HBH2OCHJZKQ5MPHVIPJDAL7FKS/fragments/MZR3Y6WZZAGDRUX3QIXM7GS7KG",
+            "device_snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN",
+            "applicability": {
+              "status": "MATCH",
+              "checks": [
+                {
+                  "field": "model",
+                  "status": "MATCH",
+                  "reason": "精确匹配 fixture/Atlas。"
+                },
+                {
+                  "field": "firmware",
+                  "status": "MATCH",
+                  "reason": "精确匹配 R2。"
+                }
+              ]
+            }
+          }
+        ],
+        "gaps": [
+          "资料冲突，已暂停受影响建议：C99处置要求相互冲突"
+        ],
+        "created_at": "2026-10-03T08:16:58.086888Z",
+        "device_context": {
+          "name": "atlas-old",
+          "model": "fixture/Atlas",
+          "firmware": "R2",
+          "source": "fixture://qa06/inventory",
+          "observed_at": "2026-10-03T08:16:57.647922Z",
+          "data_mode": "REPLAY",
+          "monitoring_id": "monitor/atlas-old",
+          "schema_version": 1,
+          "device_id": "atlas-old",
+          "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN"
+        },
+        "context_revision": "R7JUWFPCASWYAE3THKIPFR6QVN",
+        "applicability_checks": [
+          {
+            "revision_id": "BN3IVRT2CQZXOIEZN7FMGDEM2I",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Atlas 与资料要求 fixture/Boreal 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R2 与资料要求 B-9 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "HBH2OCHJZKQ5MPHVIPJDAL7FKS",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R2。"
+              }
+            ]
+          },
+          {
+            "revision_id": "LM5SACA73D36HNWVLB2D4UMXK2",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MISMATCH",
+                "reason": "设备值 fixture/Atlas 与资料要求 fixture/Boreal 不一致。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R2 与资料要求 B-10 不一致。"
+              }
+            ]
+          },
+          {
+            "revision_id": "Q6U7IVLOROWPHYIHDJRHIZMKB6",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R2。"
+              }
+            ]
+          },
+          {
+            "revision_id": "QFFUA74BY7GNVBVZTFZVPME52F",
+            "status": "MATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MATCH",
+                "reason": "精确匹配 R2。"
+              }
+            ]
+          },
+          {
+            "revision_id": "ZGMAK5W7S5A7JBHV25AAK6Y3PK",
+            "status": "MISMATCH",
+            "checks": [
+              {
+                "field": "model",
+                "status": "MATCH",
+                "reason": "精确匹配 fixture/Atlas。"
+              },
+              {
+                "field": "firmware",
+                "status": "MISMATCH",
+                "reason": "设备值 R2 与资料要求 R10 不一致。"
+              }
+            ]
+          }
+        ],
+        "retrieved_fragment_ids": [
+          "7HMJUGSWDOCB7IAZ2QCBQ22E4Y",
+          "MZR3Y6WZZAGDRUX3QIXM7GS7KG"
+        ],
+        "model_usage": {
+          "prompt_tokens": 14,
+          "completion_tokens": 6,
+          "total_tokens": 20,
+          "calls": 2
+        },
+        "knowledge_tool_calls": [
+          {
+            "id": "knowledge",
+            "name": "retrieve_hardware_knowledge",
+            "request": "C99应该怎么处理？",
+            "status": "FOUND",
+            "fragment_ids": [
+              "7HMJUGSWDOCB7IAZ2QCBQ22E4Y",
+              "MZR3Y6WZZAGDRUX3QIXM7GS7KG"
+            ],
+            "retrieval_queries": [
+              "C99应该怎么处理？"
+            ],
+            "corpus_generation": "f8ca2eb9bdfa9b91676cea7bc3707d2cad40ee254ced8555b6b47f719f5cdad1"
+          }
+        ],
+        "conflicts": [
+          {
+            "subject": "C99处置要求相互冲突",
+            "fragment_ids": [
+              "7HMJUGSWDOCB7IAZ2QCBQ22E4Y",
+              "MZR3Y6WZZAGDRUX3QIXM7GS7KG"
+            ]
+          }
+        ],
+        "request_key": "knowledge-conflict",
+        "request_hash": "230c1b2bc7947dd0393a6a322669eaa2510ce64274a185f91f6fe4f85c7bd083"
+      }
+    },
+    {
+      "id": "partial-observation",
+      "input": {
+        "text": "运行观测 partial",
+        "device_id": "atlas-old"
+      },
+      "expected_status": "PARTIAL",
+      "expected_text": "rpm = 500 rpm",
+      "forbidden_answer": "整机正常",
+      "expected_device": "atlas-old",
+      "elapsed_ms": 36.872,
+      "metrics": {
+        "确定性答案规则": true,
+        "设备上下文": true
+      },
+      "actual": {
+        "schema_version": 1,
+        "id": "SRIANFT5WT7NJEEDGRBZYLJWNK",
+        "conversation_id": "EBEGRYXYDP2KGOP6T422F24RNM",
+        "question": "运行观测 partial",
+        "status": "PARTIAL",
+        "data_mode": "REPLAY",
+        "answer": "【REPLAY】设备 atlas-old / fan/1；PARTIAL；范围 2026-10-03T08:15:58Z 至 2026-10-03T08:16:58Z；来源 fixture://monitor；证据 4YAYHA3ZHMQ3QS6PAKQF75FS2R。\nrpm = 500 rpm（2026-10-03T08:16:58Z）\n结论仅限所列字段与观察范围。",
+        "claims": [],
+        "citations": null,
+        "gaps": [
+          "仅取得部分观测，缺少：temperature；不能判断整台设备正常。"
+        ],
+        "created_at": "2026-10-03T08:16:58.126019Z",
+        "device_context": {
+          "name": "atlas-old",
+          "model": "fixture/Atlas",
+          "firmware": "R2",
+          "source": "fixture://qa06/inventory",
+          "observed_at": "2026-10-03T08:16:57.647922Z",
+          "data_mode": "REPLAY",
+          "monitoring_id": "monitor/atlas-old",
+          "schema_version": 1,
+          "device_id": "atlas-old",
+          "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN"
+        },
+        "context_revision": "R7JUWFPCASWYAE3THKIPFR6QVN",
+        "model_usage": {
+          "prompt_tokens": 14,
+          "completion_tokens": 6,
+          "total_tokens": 20,
+          "calls": 2
+        },
+        "evidence": [
+          {
+            "schema_version": 1,
+            "id": "4YAYHA3ZHMQ3QS6PAKQF75FS2R",
+            "query": {
+              "capability": "metrics",
+              "component": "fan/1",
+              "fields": [
+                "rpm",
+                "temperature"
+              ],
+              "parameters": {
+                "scenario": "partial"
+              },
+              "window_start": "2026-10-03T08:15:58Z",
+              "window_end": "2026-10-03T08:16:58Z",
+              "max_age_seconds": 120,
+              "device_context": {
+                "name": "atlas-old",
+                "model": "fixture/Atlas",
+                "firmware": "R2",
+                "source": "fixture://qa06/inventory",
+                "observed_at": "2026-10-03T08:16:57.647922Z",
+                "data_mode": "REPLAY",
+                "monitoring_id": "monitor/atlas-old",
+                "schema_version": 1,
+                "device_id": "atlas-old",
+                "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN"
+              }
+            },
+            "status": "PARTIAL",
+            "data_mode": "REPLAY",
+            "device_id": "atlas-old",
+            "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN",
+            "monitoring_id": "monitor/atlas-old",
+            "window_start": "2026-10-03T08:15:58Z",
+            "window_end": "2026-10-03T08:16:58Z",
+            "source": "fixture://monitor",
+            "raw_ref": "fixture://samples/1",
+            "values": [
+              {
+                "field": "rpm",
+                "value": "500",
+                "unit": "rpm",
+                "observed_at": "2026-10-03T08:16:58Z"
+              }
+            ],
+            "missing": [
+              "temperature"
+            ],
+            "fetched_at": "2026-10-03T08:16:58.147775Z"
+          }
+        ],
+        "observations": [
+          {
+            "evidence_id": "4YAYHA3ZHMQ3QS6PAKQF75FS2R"
+          }
+        ],
+        "request_key": "partial-observation",
+        "request_hash": "5768b210d82db6c15415742238b250e145de203f83adff2b50b8b3ea092d7526"
+      }
+    },
+    {
+      "id": "no-record",
+      "input": {
+        "text": "运行观测 no-record",
+        "device_id": "atlas-old"
+      },
+      "expected_status": "ANSWERED",
+      "expected_text": "此查询范围内无记录",
+      "forbidden_answer": "设备已恢复",
+      "expected_device": "atlas-old",
+      "elapsed_ms": 36.39,
+      "metrics": {
+        "确定性答案规则": true,
+        "设备上下文": true
+      },
+      "actual": {
+        "schema_version": 1,
+        "id": "JKTN36ER64NCVEH5N3XYJA2YDY",
+        "conversation_id": "EBEGRYXYDP2KGOP6T422F24RNM",
+        "question": "运行观测 no-record",
+        "status": "ANSWERED",
+        "data_mode": "REPLAY",
+        "answer": "【REPLAY】设备 atlas-old / fan/1；NO_RECORD；范围 2026-10-03T08:15:58Z 至 2026-10-03T08:16:58Z；来源 fixture://monitor；证据 BQSZGZOEAJEPQLH3GELSAGPYDH。 此查询范围内无记录，不代表整台设备正常。",
+        "claims": [],
+        "citations": null,
+        "gaps": null,
+        "created_at": "2026-10-03T08:16:58.162973Z",
+        "device_context": {
+          "name": "atlas-old",
+          "model": "fixture/Atlas",
+          "firmware": "R2",
+          "source": "fixture://qa06/inventory",
+          "observed_at": "2026-10-03T08:16:57.647922Z",
+          "data_mode": "REPLAY",
+          "monitoring_id": "monitor/atlas-old",
+          "schema_version": 1,
+          "device_id": "atlas-old",
+          "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN"
+        },
+        "context_revision": "R7JUWFPCASWYAE3THKIPFR6QVN",
+        "model_usage": {
+          "prompt_tokens": 14,
+          "completion_tokens": 6,
+          "total_tokens": 20,
+          "calls": 2
+        },
+        "evidence": [
+          {
+            "schema_version": 1,
+            "id": "BQSZGZOEAJEPQLH3GELSAGPYDH",
+            "query": {
+              "capability": "metrics",
+              "component": "fan/1",
+              "fields": [
+                "rpm",
+                "temperature"
+              ],
+              "parameters": {
+                "scenario": "no-record"
+              },
+              "window_start": "2026-10-03T08:15:58Z",
+              "window_end": "2026-10-03T08:16:58Z",
+              "max_age_seconds": 120,
+              "device_context": {
+                "name": "atlas-old",
+                "model": "fixture/Atlas",
+                "firmware": "R2",
+                "source": "fixture://qa06/inventory",
+                "observed_at": "2026-10-03T08:16:57.647922Z",
+                "data_mode": "REPLAY",
+                "monitoring_id": "monitor/atlas-old",
+                "schema_version": 1,
+                "device_id": "atlas-old",
+                "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN"
+              }
+            },
+            "status": "NO_RECORD",
+            "data_mode": "REPLAY",
+            "device_id": "atlas-old",
+            "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN",
+            "monitoring_id": "monitor/atlas-old",
+            "window_start": "2026-10-03T08:15:58Z",
+            "window_end": "2026-10-03T08:16:58Z",
+            "source": "fixture://monitor",
+            "raw_ref": "fixture://samples/1",
+            "values": null,
+            "fetched_at": "2026-10-03T08:16:58.184794Z"
+          }
+        ],
+        "observations": [
+          {
+            "evidence_id": "BQSZGZOEAJEPQLH3GELSAGPYDH"
+          }
+        ],
+        "request_key": "no-record",
+        "request_hash": "71b3eb2f07d5ed1ceb4700f4204ae22cc42d850930e4fe3b2f667368979f081c"
+      }
+    },
+    {
+      "id": "monitor-failure",
+      "input": {
+        "text": "运行观测 failed",
+        "device_id": "atlas-old"
+      },
+      "expected_status": "UNRESOLVED",
+      "expected_text": "",
+      "forbidden_answer": "设备故障已确认",
+      "expected_device": "atlas-old",
+      "elapsed_ms": 36.119,
+      "metrics": {
+        "确定性答案规则": true,
+        "设备上下文": true,
+        "调用失败不是设备故障": true
+      },
+      "actual": {
+        "schema_version": 1,
+        "id": "7ROFLY2QRRR2FKO32TAL6WIZ3Z",
+        "conversation_id": "EBEGRYXYDP2KGOP6T422F24RNM",
+        "question": "运行观测 failed",
+        "status": "UNRESOLVED",
+        "data_mode": "REPLAY",
+        "answer": "",
+        "claims": [],
+        "citations": null,
+        "gaps": [
+          "监控查询失败，不能据此判断设备故障。"
+        ],
+        "created_at": "2026-10-03T08:16:58.199467Z",
+        "device_context": {
+          "name": "atlas-old",
+          "model": "fixture/Atlas",
+          "firmware": "R2",
+          "source": "fixture://qa06/inventory",
+          "observed_at": "2026-10-03T08:16:57.647922Z",
+          "data_mode": "REPLAY",
+          "monitoring_id": "monitor/atlas-old",
+          "schema_version": 1,
+          "device_id": "atlas-old",
+          "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN"
+        },
+        "context_revision": "R7JUWFPCASWYAE3THKIPFR6QVN",
+        "model_usage": {
+          "prompt_tokens": 14,
+          "completion_tokens": 6,
+          "total_tokens": 20,
+          "calls": 2
+        },
+        "evidence": [
+          {
+            "schema_version": 1,
+            "id": "DR3LNLGC4EPV2TML2KIX6NBUCY",
+            "query": {
+              "capability": "metrics",
+              "component": "fan/1",
+              "fields": [
+                "rpm",
+                "temperature"
+              ],
+              "parameters": {
+                "scenario": "failed"
+              },
+              "window_start": "2026-10-03T08:15:58Z",
+              "window_end": "2026-10-03T08:16:58Z",
+              "max_age_seconds": 120,
+              "device_context": {
+                "name": "atlas-old",
+                "model": "fixture/Atlas",
+                "firmware": "R2",
+                "source": "fixture://qa06/inventory",
+                "observed_at": "2026-10-03T08:16:57.647922Z",
+                "data_mode": "REPLAY",
+                "monitoring_id": "monitor/atlas-old",
+                "schema_version": 1,
+                "device_id": "atlas-old",
+                "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN"
+              }
+            },
+            "status": "FAILED",
+            "data_mode": "REPLAY",
+            "device_id": "atlas-old",
+            "snapshot_id": "R7JUWFPCASWYAE3THKIPFR6QVN",
+            "monitoring_id": "monitor/atlas-old",
+            "window_start": "2026-10-03T08:15:58Z",
+            "window_end": "2026-10-03T08:16:58Z",
+            "source": "",
+            "raw_ref": "",
+            "values": [],
+            "error": {
+              "code": "OBSERVATION_FAILED",
+              "message": "监控调用失败或设备、快照、数据模式、范围及字段校验未通过。"
+            },
+            "fetched_at": "2026-10-03T08:16:58.220742Z"
+          }
+        ],
+        "observations": [
+          {
+            "evidence_id": "DR3LNLGC4EPV2TML2KIX6NBUCY"
+          }
+        ],
+        "request_key": "monitor-failure",
+        "request_hash": "56cec7a0797e84d8ae4b705950687ccdc216f96c40a1e6b7e3e640d8b7f4e430"
+      }
+    }
+  ]
+}

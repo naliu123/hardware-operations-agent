@@ -11,5 +11,7 @@ func (r *Response) CheckDeviceSnapshot(currentID string) {
 	r.Answer = ""
 	r.Claims = []Claim{}
 	r.Citations = []Citation{}
+	r.Observations = nil
+	r.Conflicts = nil
 	r.Gaps = []string{"生成期间设备快照已更新，请基于最新型号和版本重新提问。"}
 }

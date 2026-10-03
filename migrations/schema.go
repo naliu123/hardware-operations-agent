@@ -9,3 +9,6 @@ var Core string
 
 //go:embed 002_devices.sql
 var Devices string
+
+//go:embed 003_response_events.sql
+var ResponseEvents string

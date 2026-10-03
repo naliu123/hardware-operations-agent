@@ -42,7 +42,7 @@ func Open(ctx context.Context, dsn string) (*Store, error) {
 		s.Close()
 		return nil, errors.New("hwops requires one application instance per database")
 	}
-	if _, err = pool.Exec(ctx, migrations.Core+"\n"+migrations.Devices); err != nil {
+	if _, err = pool.Exec(ctx, migrations.Core+"\n"+migrations.Devices+"\n"+migrations.ResponseEvents); err != nil {
 		s.Close()
 		return nil, fmt.Errorf("apply hwops schema: %w", err)
 	}
@@ -184,31 +184,15 @@ func (s *Store) GetConversation(ctx context.Context, id string) (c domain.Conver
 }
 
 func (s *Store) SaveResponse(ctx context.Context, r domain.Response) error {
-	if (r.Status == "ANSWERED" || r.Status == "PARTIAL") && r.DeviceContext != nil {
-		tx, err := s.pool.Begin(ctx)
-		if err != nil {
-			return err
-		}
-		defer tx.Rollback(ctx)
-		var snapshotID string
-		err = tx.QueryRow(ctx, "SELECT payload->>'snapshot_id' FROM device_snapshots WHERE id=$1 FOR UPDATE",
-			r.DeviceContext.DeviceID).Scan(&snapshotID)
-		if err != nil && !errors.Is(err, pgx.ErrNoRows) {
-			return err
-		}
-		r.CheckDeviceSnapshot(snapshotID)
-		raw, err := json.Marshal(r)
-		if err != nil {
-			return err
-		}
-		_, err = tx.Exec(ctx, `INSERT INTO responses (id,payload) VALUES ($1,$2)
-			ON CONFLICT (id) DO UPDATE SET payload=EXCLUDED.payload`, r.ID, raw)
-		if err != nil {
-			return err
-		}
-		return tx.Commit(ctx)
+	tx, err := s.pool.Begin(ctx)
+	if err != nil {
+		return err
 	}
-	return s.insert(ctx, "responses", r.ID, r, true)
+	defer tx.Rollback(ctx)
+	if err := saveResponse(ctx, tx, &r); err != nil {
+		return err
+	}
+	return tx.Commit(ctx)
 }
 
 func (s *Store) GetResponse(ctx context.Context, id string) (r domain.Response, err error) {

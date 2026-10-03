@@ -4,9 +4,11 @@ import (
 	"context"
 	"crypto/rand"
 	"crypto/sha256"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"log"
+	"regexp"
 	"strings"
 	"sync"
 	"time"
@@ -20,19 +22,21 @@ import (
 	"hwops/internal/devices"
 	"hwops/internal/domain"
 	"hwops/internal/einoflow"
+	"hwops/internal/evidence"
 	"hwops/internal/knowledge"
 	"hwops/internal/observability"
 )
 
 type App struct {
-	store     domain.Repository
-	qa        *einoflow.QA
-	mode      string
-	ctx       context.Context
-	cancel    context.CancelFunc
-	wake      chan struct{}
-	wg        sync.WaitGroup
-	retrieval retriever.Retriever
+	store        domain.Repository
+	qa           *einoflow.QA
+	mode         string
+	ctx          context.Context
+	cancel       context.CancelFunc
+	wake         chan struct{}
+	wg           sync.WaitGroup
+	retrieval    retriever.Retriever
+	observations *evidence.Service
 }
 
 type Options struct {
@@ -40,6 +44,7 @@ type Options struct {
 	ContextLimit      int
 	EvidenceSelection bool
 	QueryRewrite      bool
+	Observer          domain.Observer
 }
 
 func New(store domain.Repository, cm model.BaseChatModel, mode string, options ...Options) (*App, error) {
@@ -62,6 +67,7 @@ func New(store domain.Repository, cm model.BaseChatModel, mode string, options .
 		}
 		config.EvidenceSelection = options[0].EvidenceSelection
 		config.QueryRewrite = options[0].QueryRewrite
+		config.Observer = options[0].Observer
 	}
 	if config.QueryRewrite {
 		if mode != "LIVE" {
@@ -84,12 +90,14 @@ func New(store domain.Repository, cm model.BaseChatModel, mode string, options .
 	if err != nil {
 		return nil, err
 	}
-	qa, err := einoflow.New(context.Background(), store, knowledgeTool, cm)
+	observations := &evidence.Service{Observer: config.Observer, Mode: mode}
+	qa, err := einoflow.New(context.Background(), store, knowledgeTool, cm, observations)
 	if err != nil {
 		return nil, err
 	}
 	ctx, cancel := context.WithCancel(context.Background())
 	app := &App{store: store, qa: qa, mode: mode, ctx: ctx, cancel: cancel, wake: make(chan struct{}, 1), retrieval: config.Retriever}
+	app.observations = observations
 	app.wg.Add(1)
 	go app.work()
 	return app, nil
@@ -113,6 +121,14 @@ func (a *App) PutDevice(ctx context.Context, id string, input domain.DeviceInput
 
 func (a *App) ResolveDevice(ctx context.Context, query string) (domain.DeviceResolution, error) {
 	return devices.Resolve(ctx, a.store, query)
+}
+
+func (a *App) Observe(ctx context.Context, deviceID string, query domain.ObservationRequest) (domain.Evidence, error) {
+	device, err := a.store.GetDevice(ctx, deviceID)
+	if err != nil {
+		return domain.Evidence{}, err
+	}
+	return a.observations.Observe(ctx, device, query)
 }
 
 func (a *App) CreateVersionPolicy(ctx context.Context, input domain.VersionPolicyInput) (domain.VersionPolicy, error) {
@@ -181,7 +197,7 @@ func (a *App) CreateConversation(ctx context.Context, owner string) (domain.Conv
 	return conversation, err
 }
 
-func (a *App) Submit(ctx context.Context, conversationID string, input domain.MessageInput) (domain.Response, error) {
+func (a *App) Submit(ctx context.Context, conversationID string, input domain.MessageInput, keys ...string) (domain.Response, error) {
 	text := input.Text
 	if err := a.ctx.Err(); err != nil {
 		return domain.Response{}, err
@@ -189,13 +205,37 @@ func (a *App) Submit(ctx context.Context, conversationID string, input domain.Me
 	if strings.TrimSpace(text) == "" || len(text) > 16000 {
 		return domain.Response{}, fmt.Errorf("%w: text is required (16 KiB max)", domain.ErrInvalid)
 	}
-	if _, err := a.store.GetConversation(ctx, conversationID); err != nil {
+	key := ""
+	if len(keys) > 0 {
+		key = keys[0]
+	}
+	if len(key) > 128 || strings.TrimSpace(key) != key {
+		return domain.Response{}, fmt.Errorf("%w: Idempotency-Key must be at most 128 bytes without surrounding whitespace", domain.ErrInvalid)
+	}
+	raw, _ := json.Marshal(input)
+	hash := fmt.Sprintf("%x", sha256.Sum256(raw))
+	if key != "" {
+		existing, err := a.store.FindResponseRequest(ctx, conversationID, key, hash)
+		if !errors.Is(err, domain.ErrNotFound) {
+			return existing, err
+		}
+	}
+	conversation, err := a.store.GetConversation(ctx, conversationID)
+	if err != nil {
 		return domain.Response{}, err
+	}
+	expectedVersion := int64(-1)
+	if input.ContextRevision != "" {
+		if input.ContextRevision != conversation.ContextRevision {
+			return domain.Response{}, fmt.Errorf("%w: conversation context changed", domain.ErrConflict)
+		}
+		expectedVersion = conversation.ContextVersion
 	}
 	response := domain.Response{
 		SchemaVersion: 1, ID: rand.Text(), ConversationID: conversationID,
 		Question: text, Status: "QUEUED", DataMode: a.mode, CreatedAt: time.Now().UTC(),
 		Claims: []domain.Claim{}, Citations: []domain.Citation{}, Gaps: []string{},
+		RequestKey: key, RequestHash: hash,
 	}
 	if input.DeviceID != "" && input.DeviceQuery != "" {
 		return domain.Response{}, fmt.Errorf("%w: choose device_id or device_query", domain.ErrInvalid)
@@ -256,6 +296,20 @@ func (a *App) Submit(ctx context.Context, conversationID string, input domain.Me
 			}
 		}
 	}
+	if selected == nil && response.Status == "QUEUED" && input.DeviceID == "" && input.DeviceQuery == "" &&
+		mentioned.Status == "NO_RECORD" && devicePronoun.MatchString(text) {
+		expectedVersion = conversation.ContextVersion
+		if conversation.DeviceID == "" {
+			response.Status = "NEEDS_CLARIFICATION"
+			response.Gaps = []string{"当前没有唯一确认的设备，无法解析设备指代，请选择 device_id。"}
+		} else {
+			device, err := a.store.GetDevice(ctx, conversation.DeviceID)
+			if err != nil {
+				return domain.Response{}, err
+			}
+			selected = &device
+		}
+	}
 	if selected != nil {
 		if selected.DataMode != a.mode {
 			return domain.Response{}, fmt.Errorf("%w: device data_mode differs from application mode", domain.ErrInvalid)
@@ -263,7 +317,8 @@ func (a *App) Submit(ctx context.Context, conversationID string, input domain.Me
 		response.DeviceContext = selected
 		response.ContextRevision = selected.SnapshotID
 	}
-	if err := a.store.SaveResponse(ctx, response); err != nil {
+	response, err = a.store.CreateResponse(ctx, response, expectedVersion)
+	if err != nil {
 		return domain.Response{}, err
 	}
 	select {
@@ -271,6 +326,12 @@ func (a *App) Submit(ctx context.Context, conversationID string, input domain.Me
 	default:
 	}
 	return response, nil
+}
+
+var devicePronoun = regexp.MustCompile(`(?i)(它|这台|该设备|这条告警|\bit\b|\bthat device\b|\bthis device\b)`)
+
+func (a *App) ResponseEvents(ctx context.Context, id string, after int64) ([]domain.ResponseEvent, error) {
+	return a.store.ResponseEvents(ctx, id, after)
 }
 
 func (a *App) Response(ctx context.Context, id string) (domain.Response, error) {
@@ -340,6 +401,7 @@ func (a *App) answer(response domain.Response) {
 		response.ApplicabilityChecks = result.ApplicabilityChecks
 		response.RetrievedFragmentIDs = result.RetrievedFragmentIDs
 		response.KnowledgeToolCalls = result.KnowledgeToolCalls
+		response.Evidence = result.Evidence
 		result = response
 		result.Status = "FAILED"
 		code, message := "PROCESSING_FAILED", "问答处理失败，请稍后重试。"
