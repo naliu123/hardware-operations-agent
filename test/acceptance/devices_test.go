@@ -224,74 +224,74 @@ func TestDeviceUpdateDuringGenerationDropsObsoleteGuidance(t *testing.T) {
 			name = "partial"
 		}
 		t.Run(name, func(t *testing.T) {
-			started, release := make(chan chatmodel.ContextInput, 1), make(chan struct{})
-			modelServer := httptest.NewServer(replayKnowledgeChoice(func(w http.ResponseWriter, r *http.Request) {
-				var input struct {
-					Messages []*schema.Message `json:"messages"`
-				}
-				if err := json.NewDecoder(r.Body).Decode(&input); err != nil || len(input.Messages) < 2 {
-					http.Error(w, "invalid model input", 400)
-					return
-				}
-				var payload chatmodel.ContextInput
-				if err := json.Unmarshal([]byte(input.Messages[1].Content), &payload); err != nil || len(payload.Documents) == 0 {
-					http.Error(w, "no documents", 400)
-					return
-				}
-				started <- payload
-				select {
-				case <-release:
-				case <-r.Context().Done():
-					return
-				}
-				draft := domain.Draft{Claims: []domain.Claim{
-					{Text: payload.Documents[0].Content, FragmentIDs: []string{payload.Documents[0].ID}},
-				}}
-				if partial {
-					draft.Gaps = []string{"缺少该设备的实时温度读数。"}
-				}
-				content, _ := json.Marshal(draft)
-				_ = json.NewEncoder(w).Encode(map[string]any{
-					"choices": []any{map[string]any{"message": map[string]any{"content": string(content)}}},
-				})
-			}))
-			defer modelServer.Close()
-			cm, err := chatmodel.NewOpenAI(modelServer.URL, "fixture-model", "")
-			if err != nil {
-				t.Fatal(err)
-			}
-			s, closeServer := startServer(t, filepath.Join(tempDir(t), "state.json"), cm, "REPLAY")
-			defer closeServer()
-			old := putDevice(t, s, "target", "fixture/Atlas", "R2")
-			publishFor(t, s, map[string]any{"scope": "DEVICE", "model": "fixture/Atlas", "firmware": "R2"}, "蓝灯表示待机。")
-			publishFor(t, s, map[string]any{"scope": "DEVICE", "model": "fixture/Atlas", "firmware": "R10"}, "蓝灯表示维护。")
-			conversation := request(t, s.Client(), "POST", s.URL+"/v1/conversations", map[string]any{}, http.StatusCreated)
-			path := s.URL + "/v1/conversations/" + conversation["id"].(string) + "/messages"
-			pending := request(t, s.Client(), "POST", path, map[string]any{"text": "蓝灯表示什么？", "device_id": "target"}, http.StatusAccepted)
-			select {
-			case payload := <-started:
-				if payload.Device == nil || payload.Device.Firmware != "R2" || len(payload.Documents) != 1 ||
-					payload.Documents[0].Content != "蓝灯表示待机。" {
-					t.Fatalf("model received wrong device or ineligible content: %+v", payload)
-				}
-			case <-time.After(3 * time.Second):
-				t.Fatal("generation did not start")
-			}
-			putDevice(t, s, "target", "fixture/Atlas", "R10")
-			close(release)
-			answer := awaitResponse(t, s, pending["id"].(string))
-			if answer.Status != "UNRESOLVED" || answer.Answer != "" || len(answer.Citations) != 0 ||
-				answer.ContextRevision != old["snapshot_id"] || len(answer.Gaps) == 0 {
-				t.Fatalf("obsolete device guidance published: %+v", answer)
-			}
-			next := askDevice(t, s, "target")
-			wantStatus := "ANSWERED"
-			if partial {
-				wantStatus = "PARTIAL"
-			}
-			if next.Status != wantStatus || next.Answer != "蓝灯表示维护。" || next.DeviceContext.Firmware != "R10" {
-				t.Fatalf("new question did not use upgraded device: %+v", next)
-			}
+	started, release := make(chan chatmodel.ContextInput, 1), make(chan struct{})
+	modelServer := httptest.NewServer(replayKnowledgeChoice(func(w http.ResponseWriter, r *http.Request) {
+		var input struct {
+			Messages []*schema.Message `json:"messages"`
+		}
+		if err := json.NewDecoder(r.Body).Decode(&input); err != nil || len(input.Messages) < 2 {
+			http.Error(w, "invalid model input", 400)
+			return
+		}
+		var payload chatmodel.ContextInput
+		if err := json.Unmarshal([]byte(input.Messages[1].Content), &payload); err != nil || len(payload.Documents) == 0 {
+			http.Error(w, "no documents", 400)
+			return
+		}
+		started <- payload
+		select {
+		case <-release:
+		case <-r.Context().Done():
+			return
+		}
+		draft := domain.Draft{Claims: []domain.Claim{
+			{Text: payload.Documents[0].Content, FragmentIDs: []string{payload.Documents[0].ID}},
+		}}
+		if partial {
+			draft.Gaps = []string{"缺少该设备的实时温度读数。"}
+		}
+		content, _ := json.Marshal(draft)
+		_ = json.NewEncoder(w).Encode(map[string]any{
+			"choices": []any{map[string]any{"message": map[string]any{"content": string(content)}}},
+		})
+	}))
+	defer modelServer.Close()
+	cm, err := chatmodel.NewOpenAI(modelServer.URL, "fixture-model", "")
+	if err != nil {
+		t.Fatal(err)
+	}
+	s, closeServer := startServer(t, filepath.Join(tempDir(t), "state.json"), cm, "REPLAY")
+	defer closeServer()
+	old := putDevice(t, s, "target", "fixture/Atlas", "R2")
+	publishFor(t, s, map[string]any{"scope": "DEVICE", "model": "fixture/Atlas", "firmware": "R2"}, "蓝灯表示待机。")
+	publishFor(t, s, map[string]any{"scope": "DEVICE", "model": "fixture/Atlas", "firmware": "R10"}, "蓝灯表示维护。")
+	conversation := request(t, s.Client(), "POST", s.URL+"/v1/conversations", map[string]any{}, http.StatusCreated)
+	path := s.URL + "/v1/conversations/" + conversation["id"].(string) + "/messages"
+	pending := request(t, s.Client(), "POST", path, map[string]any{"text": "蓝灯表示什么？", "device_id": "target"}, http.StatusAccepted)
+	select {
+	case payload := <-started:
+		if payload.Device == nil || payload.Device.Firmware != "R2" || len(payload.Documents) != 1 ||
+			payload.Documents[0].Content != "蓝灯表示待机。" {
+			t.Fatalf("model received wrong device or ineligible content: %+v", payload)
+		}
+	case <-time.After(3 * time.Second):
+		t.Fatal("generation did not start")
+	}
+	putDevice(t, s, "target", "fixture/Atlas", "R10")
+	close(release)
+	answer := awaitResponse(t, s, pending["id"].(string))
+	if answer.Status != "UNRESOLVED" || answer.Answer != "" || len(answer.Citations) != 0 ||
+		answer.ContextRevision != old["snapshot_id"] || len(answer.Gaps) == 0 {
+		t.Fatalf("obsolete device guidance published: %+v", answer)
+	}
+	next := askDevice(t, s, "target")
+	wantStatus := "ANSWERED"
+	if partial {
+		wantStatus = "PARTIAL"
+	}
+	if next.Status != wantStatus || next.Answer != "蓝灯表示维护。" || next.DeviceContext.Firmware != "R10" {
+		t.Fatalf("new question did not use upgraded device: %+v", next)
+	}
 		})
 	}
 }

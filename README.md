@@ -4,6 +4,22 @@ QA-01～QA-06 与 DX-01 已实现：适用知识问答、只读状态查询、�
 
 当前版本是单实例 HTTP 后端，支持通用知识和适用设备资料。演示采用合成资料和明确标记的 `REPLAY` 摘录，不代表模型效果或真实设备状态。
 
+多用户聊天前端的[规格](docs/design/chat-workbench-spec.md)、
+[技术方案](docs/design/chat-workbench-technical-design.md)与
+[实施工单](docs/design/hardware-operations-agent-implementation-plan.md#8-多用户聊天工作台)
+已完成 WB-01～WB-08。交付包括账号隔离、私有多会话、持久历史、真实流式草稿、
+图片/PDF/日志、实际 Linux + gVisor Python、模型自动分析、Claude 风格界面、
+10 会话/2 执行容量及备份恢复。分阶段证据见
+[WB-01](reports/workbench-wb01-20261004/README.md)、
+[WB-02](reports/workbench-wb02-20261004/README.md)、
+[WB-03](reports/workbench-wb03-20261004/README.md)、
+[WB-04](reports/workbench-wb04-20261004/README.md)、
+[WB-05](reports/workbench-wb05-20261004/README.md)、
+[WB-06](reports/workbench-wb06-20261004/README.md)、
+[WB-07](reports/workbench-wb07-20261004/README.md)与
+[WB-08](reports/workbench-wb08-20261004/README.md)。团队构建、账号引导、HTTPS、
+runner、备份和恢复见[工作台部署说明](docs/workbench-development.md)。
+
 ## 内部知识检索工具
 
 `internal/agents/knowledge` 将查询改写、混合召回、适用性复核、证据选择、引用构造和缺口分类封装为 Eino `adk.Agent`，并通过 `adk.NewAgentTool` 提供 `retrieve_hardware_knowledge`。工具输入只有 `request` 字符串；设备快照由主流程通过可信上下文注入，不能由模型参数覆盖。
@@ -61,7 +77,20 @@ HWOPS_API_TOKEN='local-demo-token' ./scripts/go.sh run ./cmd/hwops-demo -qa02
 
 | 环境变量 | 默认值 / 作用 |
 | --- | --- |
-| `HWOPS_API_TOKEN` | 必填；本地单操作者令牌 |
+| `HWOPS_AUTH_MODE` | `local_token`；团队账号模式为 `users`，强制 PostgreSQL |
+| `HWOPS_API_TOKEN` | `local_token` 模式必填；`users` 模式禁止设置 |
+| `HWOPS_PUBLIC_ORIGIN` | `users` 必填；浏览器同域 HTTPS Origin |
+| `HWOPS_WEB_DIR` | `web/dist`；`users` 模式的前端构建目录 |
+| `HWOPS_TRACE_PRIVATE_CONTENT` | `false`；团队模式默认不外发私有输入输出 |
+| `HWOPS_FILES_DIR` | `.local/workbench-files`；团队私有附件和产物目录 |
+| `HWOPS_FILE_QUOTA_BYTES` | `10000000000`；私有文件总额度 |
+| `HWOPS_FILE_RESERVE_BYTES` | `1000000000`；磁盘最小保留空间 |
+| `HWOPS_RUNNER_URL` | 团队模式的独立 Python runner HTTPS 地址；未配置时拒绝 Python |
+| `HWOPS_RUNNER_TOKEN_FILE` | Python runner 独立 token 文件，权限不得向其他用户开放 |
+| `HWOPS_PARSER_RUNNER_URL` | 独立附件 parser runner HTTPS 地址 |
+| `HWOPS_PARSER_RUNNER_TOKEN_FILE` | parser 独立 token 文件，不得与 Python runner 复用 |
+| `HWOPS_MODEL_CONTEXT_TOKENS` | `131072`；必须不高于实际模型上下文 |
+| `HWOPS_INPUT_TOKEN_BUDGET` | `98304`；加 8192 输出预算后必须严格低于模型上下文 |
 | `HWOPS_LISTEN_ADDR` | `127.0.0.1:8080` |
 | `HWOPS_STATE_PATH` | `.local/state.json`；开发文件存储 |
 | `HWOPS_DATABASE_URL` | 设置后改用 PostgreSQL，不回退到文件 |
@@ -82,17 +111,22 @@ HWOPS_API_TOKEN='local-demo-token' ./scripts/go.sh run ./cmd/hwops-demo -qa02
 
 真实主模型通过 Eino `ToolCallingChatModel` 适配器调用，上游须支持 OpenAI 兼容的 `tools`、`tool_calls` 和 `tool_call_id`。设置 `HWOPS_MODEL_MODE=LIVE`、模型地址和模型名即可接入；单次调用上限 30 秒，问答总预算 60 秒（含排队、工具循环和一次输出修正）。未配置或调用失败返回 `MODEL_UNAVAILABLE`，不自动切换为演示模式。`LIVE` 表示真实模型调用路径；只读监控 HTTP 契约已实现，生产监控尚未联调。
 
-模型请求显式设置 `temperature=0`，`deepseek-*` 另设 `thinking.type=disabled`。主模型使用 `tool_choice=auto`、`parallel_tool_calls=false`；答案修正时禁止调用工具。工具绑定不改变 RAG 改写和证据选择使用的基础模型。当前本地 LIVE 配置通过 OpenCode Go 的 `https://opencode.ai/zen/go/v1/chat/completions` 调用 `deepseek-v4.1-flash`；请求携带项目专用 `User-Agent`，同一业务会话使用稳定的 `x-opencode-session`。主模型及证据选择已返回的实际 usage 随响应保存，包括后续校验失败的请求。Phoenix 仅在显式配置后导出问题、知识片段和答案，不导出认证 header 或密钥。
+模型请求显式设置 `temperature=0`，`deepseek-*` 默认设置 `thinking.type=enabled`（思考模式忽略 temperature/top_p）。主回答的 `reasoning_content` 在独立思考区实时展示，生成时展开、完成后折叠，刷新可恢复；不进入正文、历史摘要或追踪导出。工具循环完整回传 assistant 的思考字段。主模型使用 `tool_choice=auto`、`parallel_tool_calls=false`；答案修正时禁止调用工具。工具绑定不改变 RAG 改写和证据选择使用的基础模型。当前本地 LIVE 配置通过 OpenCode Go 的 `https://opencode.ai/zen/go/v1/chat/completions` 调用 `deepseek-v4.1-flash`；请求携带项目专用 `User-Agent`，同一业务会话使用稳定的 `x-opencode-session`。主模型及证据选择已返回的实际 usage 随响应保存，包括后续校验失败的请求。Phoenix 仅在显式配置后导出问题、知识片段和答案，不导出认证 header 或密钥。
 
 启用证据选择时每次 RAG 工具检索增加一次模型调用（输出无效可修正一次）：候选预览整体最多256 KiB，最终完整证据JSON最多48 KiB。响应的`evidence_selection`记录最后一次检索的选择结果，逐次记录位于`knowledge_tool_calls[].evidence_selection`；公共搜索接口继续遵守原有top_k限制。引用及原文接口的`document_context`保留文档头中的目录和更新时间，最终答案按引用修订列出来源范围。
 
-PostgreSQL 使用 `pgx/v5`，启动时应用 `migrations/001`～`004` 的幂等建表语句，覆盖问答、设备、多轮事件与诊断运行。该版本尚未引入迁移版本管理；后续表结构演进需增加正式迁移。数据库需允许建表和建索引，连接池至少两个连接；一个连接持有实例锁。同一数据库只运行一个应用实例，暂不支持分布式 worker 或运行租约故障恢复。文件存储也通过文件锁限制单实例，兼容已有 QA-01 文件。
+PostgreSQL 使用 `pgx/v5`，启动时核对实际 schema 并应用版本化迁移 001～006；
+迁移记录带 SQL 校验和，结构漂移直接拒绝。数据库需允许建 schema、表和索引，
+连接池至少两个连接；一个连接持有实例锁。同一数据库只运行一个应用实例，
+暂不支持分布式 worker 或运行租约故障恢复。文件存储继续用于隔离的 `local_token` 模式。
 
-本地令牌对应固定的 `local-operator`，知识发布和查询共用该权限；团队身份、专家角色权限和生产部署尚未接入。
+本地令牌对应固定的 `local-operator`。团队模式由管理员开通账号，管理权限不包含
+他人聊天；知识写入限管理员，旧诊断入口关闭。旧会话归属需要显式离线映射。
 
 ## HTTP 接口
 
-除 `/healthz` 外，所有接口需要 `Authorization: Bearer <token>`。JSON 请求体只接受支持的字段。
+以下原接口在 `local_token` 模式需要 `Authorization: Bearer <token>`（`/healthz` 除外）。
+团队模式使用 Cookie 与 CSRF，并按用户归属和管理员权限检查。JSON 只接受支持字段。
 
 | 方法与路径 | 行为 |
 | --- | --- |

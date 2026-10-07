@@ -1,0 +1,10 @@
+
+> hwops-workbench@0.1.0 test:e2e
+> playwright test
+
+
+Running 1 test using 1 worker
+
+  ✓  1 tests/workbench.spec.ts:3:1 › REPLAY: private accounts, persistent conversations, history, cancellation and deletion (2.8s)
+
+  1 passed (3.7s)

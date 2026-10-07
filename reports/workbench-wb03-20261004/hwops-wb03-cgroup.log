@@ -1,0 +1,14 @@
+=== RUN   TestWB03ActualResourceLimits
+    workbench_python_test.go:311: ACTUAL SANDBOX: runtime=gVisor 20260928.0 kernel=Linux 6.8.0-117-generic image=sha256:8ca31a2511a3d13428b7d10b5d181f9edb90da9dcf0d25a95e9cf80252511572 probe=99cdf08ad42a780f10927982ce8470bae397b6641151929b7f1d495eceed91f0
+=== RUN   TestWB03ActualResourceLimits/cpu
+    workbench_python_test.go:367: ACTUAL SANDBOX execution=7CGMXG2PEWLCXYJUG3AODY5ZLF state=SUCCEEDED code_hash=3917efac0a293950d43b89e11ee25919c7600da8cef7e1a0197a53768d7eb979 duration_ms=4265 exit=0x3d3444c28ef0 error= usage={CPUUsec:4126512 MemoryPeakBytes:46051328 ProcessesPeak:44 ProcessLimitEvents:0} stdout_bytes=100 stdout_preview="{\"cpu_seconds\": 2.2199999999999998, \"wall_seconds\": 4.050717666000001, \"cores\": 0.5480510326932273}\n"
+=== RUN   TestWB03ActualResourceLimits/processes
+    workbench_python_test.go:367: ACTUAL SANDBOX execution=ZFRBW7EV5O72J3LRALKKZ667ZF state=FAILED code_hash=e6ebac43007fabcb2c542a725109c68e3ce5cbd1809a0586a84de2adf98e0c3b duration_ms=235 exit=0x3d3445002aa8 error=PROCESS_LIMIT_EXCEEDED usage={CPUUsec:109862 MemoryPeakBytes:112242688 ProcessesPeak:64 ProcessLimitEvents:1} stdout_bytes=0 stdout_preview=""
+=== RUN   TestWB03ActualResourceLimits/memory
+    workbench_python_test.go:367: ACTUAL SANDBOX execution=IUURLCOSHJ2W73VIHFWLRUFKST state=FAILED code_hash=b252c4422346e5095c0a4eb566487f7fa32ffc4544d47296262f83030bc50440 duration_ms=398 exit=0x3d3444d90dd0 error=MEMORY_LIMIT_EXCEEDED usage={CPUUsec:268164 MemoryPeakBytes:1073741824 ProcessesPeak:32 ProcessLimitEvents:0} stdout_bytes=0 stdout_preview=""
+--- PASS: TestWB03ActualResourceLimits (7.49s)
+    --- PASS: TestWB03ActualResourceLimits/cpu (4.68s)
+    --- PASS: TestWB03ActualResourceLimits/processes (0.44s)
+    --- PASS: TestWB03ActualResourceLimits/memory (0.54s)
+PASS
+ok  	hwops/test/acceptance	8.311s

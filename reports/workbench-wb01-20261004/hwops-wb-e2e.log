@@ -1,0 +1,10 @@
+
+> hwops-workbench@0.1.0 test:e2e
+> playwright test
+
+
+Running 1 test using 1 worker
+
+  ✓  1 tests/workbench.spec.ts:3:1 › REPLAY: administrator provisions a private account and the user asks with citations (1.6s)
+
+  1 passed (2.5s)

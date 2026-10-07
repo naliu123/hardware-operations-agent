@@ -20,9 +20,9 @@ func replayKnowledgeChoice(answer http.HandlerFunc) http.HandlerFunc {
 		raw, _ := io.ReadAll(r.Body)
 		r.Body = io.NopCloser(bytes.NewReader(raw))
 		var input struct {
-			Messages   []*schema.Message `json:"messages"`
-			Tools      []json.RawMessage `json:"tools"`
-			ToolChoice string            `json:"tool_choice"`
+			Messages []*schema.Message `json:"messages"`
+			Tools []json.RawMessage `json:"tools"`
+			ToolChoice string `json:"tool_choice"`
 		}
 		if json.Unmarshal(raw, &input) != nil || len(input.Tools) == 0 || len(input.Messages) < 2 {
 			answer(w, r)

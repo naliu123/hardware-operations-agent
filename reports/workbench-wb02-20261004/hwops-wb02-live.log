@@ -1,0 +1,6 @@
+=== RUN   TestWB02LiveHistory
+    workbench_conversations_test.go:462: LIVE turn 1: model=deepseek-v4.1-flash usage=map[calls:2 completion_tokens:127 prompt_tokens:3103 total_tokens:3230]
+    workbench_conversations_test.go:462: LIVE turn 2: model=deepseek-v4.1-flash usage=map[calls:2 completion_tokens:137 prompt_tokens:3679 total_tokens:3816]
+--- PASS: TestWB02LiveHistory (8.84s)
+PASS
+ok  	hwops/test/acceptance	9.622s

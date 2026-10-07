@@ -17,24 +17,24 @@ func TestOpenAIToolCallingRoundTripAndImmutableBinding(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		var input struct {
 			Messages []struct {
-				Role       string            `json:"role"`
-				Content    string            `json:"content"`
-				ToolCalls  []schema.ToolCall `json:"tool_calls"`
-				ToolCallID string            `json:"tool_call_id"`
+				Role string `json:"role"`
+				Content string `json:"content"`
+				ToolCalls []schema.ToolCall `json:"tool_calls"`
+				ToolCallID string `json:"tool_call_id"`
 			} `json:"messages"`
 			Tools []struct {
-				Type     string `json:"type"`
+				Type string `json:"type"`
 				Function struct {
-					Name       string `json:"name"`
+					Name string `json:"name"`
 					Parameters struct {
-						Type       string         `json:"type"`
+						Type string `json:"type"`
 						Properties map[string]any `json:"properties"`
-						Required   []string       `json:"required"`
+						Required []string `json:"required"`
 					} `json:"parameters"`
 				} `json:"function"`
 			} `json:"tools"`
 			ToolChoice string `json:"tool_choice"`
-			Parallel   *bool  `json:"parallel_tool_calls"`
+			Parallel *bool `json:"parallel_tool_calls"`
 		}
 		if err := json.NewDecoder(r.Body).Decode(&input); err != nil {
 			t.Error(err)

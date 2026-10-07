@@ -1,0 +1,25 @@
+[Unit]
+Description=Hardware operations isolated Python runner
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+EnvironmentFile=/etc/hwops/runner.env
+ExecStart=/usr/local/bin/hwops-runner \
+  -root /var/lib/hwops-runner \
+  -image ${HWOPS_RUNNER_IMAGE_DIGEST} \
+  -token-file /etc/hwops/runner-token \
+  -listen ${HWOPS_RUNNER_LISTEN} \
+  -tls-cert /etc/hwops/runner.crt \
+  -tls-key /etc/hwops/runner.key
+Restart=on-failure
+RestartSec=2
+UMask=0077
+LimitNOFILE=4096
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

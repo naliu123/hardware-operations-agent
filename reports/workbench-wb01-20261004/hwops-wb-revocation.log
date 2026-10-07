@@ -1,0 +1,7 @@
+=== RUN   TestWB01IdentityPrivateHTTPAndRestart
+    workbench_identity_test.go:294: REPLAY: real temporary PostgreSQL; external model adapter; 2 users + admin; auth, CSRF, isolation, resets, revocation and restart passed
+--- PASS: TestWB01IdentityPrivateHTTPAndRestart (4.03s)
+=== RUN   TestWB01RevocationClosesActiveStream
+--- PASS: TestWB01RevocationClosesActiveStream (1.68s)
+PASS
+ok  	hwops/test/acceptance	6.224s

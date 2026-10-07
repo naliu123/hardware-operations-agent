@@ -17,6 +17,7 @@ import (
 type Store struct {
 	pool  *pgxpool.Pool
 	lease *pgxpool.Conn
+	users bool
 }
 
 func Open(ctx context.Context, dsn string) (*Store, error) {
@@ -42,12 +43,17 @@ func Open(ctx context.Context, dsn string) (*Store, error) {
 		s.Close()
 		return nil, errors.New("hwops requires one application instance per database")
 	}
-	if _, err = pool.Exec(ctx, migrations.Core+"\n"+migrations.Devices+"\n"+migrations.ResponseEvents+"\n"+migrations.Diagnosis); err != nil {
+	if err = migrations.Apply(ctx, pool); err != nil {
 		s.Close()
 		return nil, fmt.Errorf("apply hwops schema: %w", err)
 	}
 	return s, nil
 }
+
+func (s *Store) Pool() *pgxpool.Pool { return s.pool }
+
+// EnableUsers must run before any application workers start.
+func (s *Store) EnableUsers() error { s.users = true; return nil }
 
 func (s *Store) PutDevice(ctx context.Context, d domain.DeviceContext) error {
 	raw, err := json.Marshal(d)
@@ -175,11 +181,29 @@ func (s *Store) ListPublished(ctx context.Context) ([]domain.Revision, error) {
 }
 
 func (s *Store) CreateConversation(ctx context.Context, c domain.Conversation) error {
-	return s.insert(ctx, "conversations", c.ID, c, false)
+	raw, err := json.Marshal(c)
+	if err != nil {
+		return err
+	}
+	var owner any
+	if s.users {
+		if c.Owner != domain.Owner(ctx) || c.Owner == "" {
+			return domain.ErrForbidden
+		}
+		owner = c.Owner
+	}
+	_, err = s.pool.Exec(ctx, "INSERT INTO conversations(id,payload,owner_id) VALUES ($1,$2,$3)", c.ID, raw, owner)
+	return err
 }
 
 func (s *Store) GetConversation(ctx context.Context, id string) (c domain.Conversation, err error) {
-	err = s.get(ctx, "conversations", id, &c)
+	var raw []byte
+	err = s.pool.QueryRow(ctx, "SELECT payload FROM conversations WHERE id=$1 AND deleted_at IS NULL AND ($2='' OR owner_id=$2)", id, domain.Owner(ctx)).Scan(&raw)
+	if errors.Is(err, pgx.ErrNoRows) {
+		err = domain.ErrNotFound
+	} else if err == nil {
+		err = json.Unmarshal(raw, &c)
+	}
 	return
 }
 
@@ -189,6 +213,26 @@ func (s *Store) SaveResponse(ctx context.Context, r domain.Response) error {
 		return err
 	}
 	defer tx.Rollback(ctx)
+	// Always lock the conversation before the response, including cancellation
+	// and cleanup. A late worker cannot recreate a deleted conversation.
+	var id string
+	err = tx.QueryRow(ctx, `SELECT id FROM conversations WHERE id=$1 AND deleted_at IS NULL
+		AND ($2='' OR owner_id=$2) FOR UPDATE`, r.ConversationID, domain.Owner(ctx)).Scan(&id)
+	if errors.Is(err, pgx.ErrNoRows) {
+		return domain.ErrNotFound
+	}
+	if err != nil {
+		return err
+	}
+	if r.Workbench {
+		var exists bool
+		if err = tx.QueryRow(ctx, "SELECT EXISTS(SELECT 1 FROM responses WHERE id=$1)", r.ID).Scan(&exists); err != nil {
+			return err
+		}
+		if !exists {
+			return domain.ErrNotFound
+		}
+	}
 	if err := saveResponse(ctx, tx, &r); err != nil {
 		return err
 	}
@@ -196,12 +240,21 @@ func (s *Store) SaveResponse(ctx context.Context, r domain.Response) error {
 }
 
 func (s *Store) GetResponse(ctx context.Context, id string) (r domain.Response, err error) {
-	err = s.get(ctx, "responses", id, &r)
+	var raw []byte
+	err = s.pool.QueryRow(ctx, `SELECT r.payload FROM responses r JOIN conversations c ON c.id=r.payload->>'conversation_id'
+		WHERE r.id=$1 AND c.deleted_at IS NULL AND ($2='' OR c.owner_id=$2)`, id, domain.Owner(ctx)).Scan(&raw)
+	if errors.Is(err, pgx.ErrNoRows) {
+		err = domain.ErrNotFound
+	} else if err == nil {
+		err = json.Unmarshal(raw, &r)
+	}
 	return
 }
 
 func (s *Store) PendingResponses(ctx context.Context) ([]domain.Response, error) {
-	rows, err := s.pool.Query(ctx, "SELECT payload FROM responses WHERE payload->>'status' IN ('QUEUED','RUNNING')")
+	rows, err := s.pool.Query(ctx, `SELECT r.payload FROM responses r JOIN conversations c ON c.id=r.payload->>'conversation_id'
+		WHERE r.payload->>'status' IN ('QUEUED','RUNNING','CANCELING') AND c.deleted_at IS NULL
+		AND (NOT $1 OR c.owner_id IS NOT NULL) ORDER BY r.payload->>'created_at' LIMIT 100`, s.users)
 	if err != nil {
 		return nil, err
 	}

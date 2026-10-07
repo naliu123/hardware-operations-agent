@@ -2,11 +2,12 @@
 
 | 项目 | 内容 |
 | --- | --- |
-| 版本与日期 | V1.5 / 2026-10-01 |
+| 版本与日期 | V1.6 / 2026-10-04 |
 | 总体方案 | [总体设计](hardware-operations-agent-overall-design.md) |
 | 技术依据 | [技术设计](hardware-operations-agent-technical-design.md) |
-| 实现技术栈 | 整体应用使用 Go，问答与持续诊断采用 CloudWeGo Eino |
+| 实现技术栈 | 应用后端使用 Go，问答与持续诊断采用 CloudWeGo Eino；待实施工作台使用 React + TypeScript + Vite |
 | 当前进度 | QA-01、QA-02、03a文档RAG实验、03b全目录入库、03d语义增强、03e知识检索子Agent、03f表格图片专项处理、03g Phoenix统一评测平台及03h主Agent自主工具调用完成；DeepSeek真实文档问答已评测，资产、PostgreSQL和生产硬件联调待完成 |
+| 工作台进度 | WB-01～WB-08 done；AC01～AC14 综合验收见第8节 |
 | 首个交付目标 | 在一个会话中，根据已发布知识回答问题，并提供可核对的引用 |
 
 ## 1. 交付顺序
@@ -18,6 +19,7 @@
 | 阶段 | 任务 | 完成后可验收的能力 |
 | --- | --- | --- |
 | M1：普通问答 | QA-01～QA-06 | 知识问答、配置指导、设备状态查询、多轮澄清和首批评测 |
+| WB：多用户聊天工作台 | WB-01～WB-08 | 私有多会话、真实流式、多模态附件、隔离Python分析；不依赖DX-02 |
 | M2：只读持续诊断 | DX-01～DX-02 | 根据实际证据重规划、并行检查、持久化与恢复 |
 | M3：主动排查与协作 | EV-01、EX-01～EX-02、HC-01 | 高优先级告警触发、拓扑关联、动态 CLI 审核、现场协作 |
 | M4：综合验收 | PF-01～PF-02 | 历史回放、三类诊断路径、128/256 活跃诊断容量评估 |
@@ -50,6 +52,14 @@
 | HC-01 | DX-02 | 待实施 |
 | PF-01 | EV-01、EX-02、HC-01 | 待实施 |
 | PF-02 | PF-01 | 待实施 |
+| WB-01 | QA-05、03h；整体评审已通过 | done |
+| WB-02 | WB-01 | done |
+| WB-03 | WB-01 | done |
+| WB-04 | WB-02、WB-03 | done |
+| WB-05 | WB-02、WB-04 | done |
+| WB-06 | WB-03、WB-04、WB-05 | done |
+| WB-07 | WB-06 | done |
+| WB-08 | WB-07 | done |
 
 QA-03、QA-04 和 QA-05 在各自前置任务完成后可并行。EV-01、EX-01 和 HC-01 可并行，统一使用 DX-02 确定的事件推进与恢复约定。
 
@@ -333,3 +343,51 @@ Monty Python Code Evaluator并绑定全部10个dataset，重复注册数量不�
 | 模型与监控的容量环境 | 128/256 负载评估 | 先测任务调度和持久化开销，分别报告覆盖范围 |
 
 开发首先执行 QA-01，之后按依赖表推进。上述真实资料只阻塞对应接入或效果验收，接口、状态和回放流程可以提前实现。
+
+## 8. 多用户聊天工作台
+
+2026-10-04 通过需求访谈确认：管理员开通账号、用户私有会话、真正的正文增量、
+图片/文字版PDF/日志附件和自动Python分析。视觉对齐Claude，团队内网以约10个
+活跃会话验收。知识库管理后续另做；本期不增加诊断工作台或设备命令执行。
+
+完整行为以[工作台规格](chat-workbench-spec.md)为准，实现按
+[工作台技术设计](chat-workbench-technical-design.md)推进。2026-10-04用户明确确认
+“按这份完整规格开始实现”。WB-01 已完成真实 PostgreSQL、REPLAY 浏览器及真实
+模型原生工具问答验收，见[记录](../../reports/workbench-wb01-20261004/README.md)；
+WB-02 已完成多会话、历史上下文、取消及删除，见[记录](../../reports/workbench-wb02-20261004/README.md)。
+WB-03 已完成持久化执行和实际 Linux + gVisor 隔离验收，见
+[记录](../../reports/workbench-wb03-20261004/README.md)。WB-04 已完成私有附件、独立
+gVisor 解析、来源预览和浏览器验收，见
+[记录](../../reports/workbench-wb04-20261004/README.md)。WB-05 已完成真实正文流、
+草稿撤回、原子定稿和真实模型原生流验收，见
+[记录](../../reports/workbench-wb05-20261004/README.md)。WB-06 已完成模型自动
+附件分析、实际 gVisor Python、产物展示和跨轮复用，见
+[记录](../../reports/workbench-wb06-20261004/README.md)。WB-07 已完成 Claude 风格
+完整界面、长内容、安全 Markdown 和浏览器验收，见
+[记录](../../reports/workbench-wb07-20261004/README.md)。WB-08 已完成部署资产、
+备份恢复、10 会话/2 Python 容量、真实视觉及 AC01～AC14 综合验收，见
+[记录](../../reports/workbench-wb08-20261004/README.md)。
+
+| 工单 | 完整交付行为 | 验收重点 |
+| --- | --- | --- |
+| [15 / WB-01](../../.scratch/hardware-operations-agent/issues/15-wb-01-identity.md)（done） | 登录、管理账号和首条私有知识问答 | PostgreSQL迁移、归属、旧入口隔离与浏览器流程 |
+| [16 / WB-02](../../.scratch/hardware-operations-agent/issues/16-wb-02-conversations.md)（done） | 多会话管理、历史上下文与删除 | 跨浏览器恢复、串行、幂等、摘要与清理 |
+| [17 / WB-03](../../.scratch/hardware-operations-agent/issues/17-wb-03-sandbox.md)（done） | 持久化的真实Python沙箱执行 | Linux + gVisor、实际资源限制、取消与进程回收 |
+| [18 / WB-04](../../.scratch/hardware-operations-agent/issues/18-wb-04-attachments.md)（done） | 私有多模态上传、预览与来源 | 页码/行号、部分解析、文件与视觉真实接入 |
+| [19 / WB-05](../../.scratch/hardware-operations-agent/issues/19-wb-05-streaming.md)（done） | 真实增量、草稿撤回与最终答案 | 原生流、结构分片、引用校验及事件重放 |
+| [20 / WB-06](../../.scratch/hardware-operations-agent/issues/20-wb-06-code-analysis.md)（done） | 模型自动分析、绘图和跨轮使用产物 | 三次执行/五分钟预算、停止、重试与来源 |
+| [21 / WB-07](../../.scratch/hardware-operations-agent/issues/21-wb-07-chat-ui.md)（done） | Claude风格完整工作台 | 浏览器全流程、状态、长内容和无障碍 |
+| [22 / WB-08](../../.scratch/hardware-operations-agent/issues/22-wb-08-integration.md)（done） | 团队部署与真实联调 | 十会话、二执行并发、隔离与完整验收矩阵 |
+| [23 / WB-09](../../.scratch/hardware-operations-agent/issues/23-wb-09-conversational-replies.md)（done） | 修复自我介绍与澄清只有缺口说明、没有正文 | 会话回复增量、终态、历史与引用校验回归 |
+| [24 / WB-10](../../.scratch/hardware-operations-agent/issues/24-wb-10-thinking.md)（done） | 默认开启 DeepSeek 思考，页面独立实时展示、折叠与恢复 | 工具回传、持久化重放、取消/重启、正文隔离及 LIVE 模型 |
+
+WB-10 于 2026-10-07 完成：真实临时 PostgreSQL + 公开 HTTP/SSE 的 REPLAY
+回归与 race、Chrome 专项测试、LIVE DeepSeek 思考及原生工具调用均通过；
+本地持续预览已更新。见[验收报告](../../reports/workbench-wb10-20261007/README.md)。
+
+WB-02和WB-03可在WB-01完成后并行。每项工单先完成自己的可观察流程，
+依赖未完成时不得标记为已交付。前序工单保留可使用的基础界面，WB-07负责完整
+视觉及状态整合，避免直到最后阶段才验证浏览器入口。
+
+每个阶段分开记录REPLAY、真实模型、真实PostgreSQL和实际Linux沙箱结果。
+缺少对应环境只影响能验证的范围，不得用协议桩替代实际隔离或真实模型验收。

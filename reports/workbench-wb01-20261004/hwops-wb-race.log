@@ -1,0 +1,25 @@
+?   	hwops/cmd/hwops-admin	[no test files]
+?   	hwops/cmd/hwops-demo	[no test files]
+?   	hwops/cmd/hwops-eval	[no test files]
+?   	hwops/cmd/hwopsd	[no test files]
+?   	hwops/internal/adapters/chatmodel	[no test files]
+ok  	hwops/internal/adapters/elasticsearch	1.710s
+?   	hwops/internal/adapters/filestore	[no test files]
+?   	hwops/internal/adapters/monitor	[no test files]
+?   	hwops/internal/adapters/postgres	[no test files]
+ok  	hwops/internal/agents/knowledge	2.375s
+?   	hwops/internal/application	[no test files]
+?   	hwops/internal/devices	[no test files]
+?   	hwops/internal/diagnosis	[no test files]
+?   	hwops/internal/domain	[no test files]
+?   	hwops/internal/einoflow	[no test files]
+?   	hwops/internal/evaluation	[no test files]
+?   	hwops/internal/evidence	[no test files]
+?   	hwops/internal/identity	[no test files]
+ok  	hwops/internal/knowledge	2.844s
+?   	hwops/internal/modelbudget	[no test files]
+?   	hwops/internal/observability	[no test files]
+?   	hwops/internal/transport/httpapi	[no test files]
+?   	hwops/migrations	[no test files]
+ok  	hwops/test/acceptance	81.474s
+ok  	hwops/test/contracts	3.584s

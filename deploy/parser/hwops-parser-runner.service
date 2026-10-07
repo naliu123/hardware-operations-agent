@@ -1,0 +1,25 @@
+[Unit]
+Description=Hardware operations isolated attachment parser
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+EnvironmentFile=/etc/hwops/parser.env
+ExecStart=/usr/local/bin/hwops-runner \
+  -root /var/lib/hwops-parser-runner \
+  -image ${HWOPS_PARSER_IMAGE_DIGEST} \
+  -token-file /etc/hwops/parser-runner-token \
+  -listen ${HWOPS_PARSER_LISTEN} \
+  -tls-cert /etc/hwops/parser-runner.crt \
+  -tls-key /etc/hwops/parser-runner.key
+Restart=on-failure
+RestartSec=2
+UMask=0077
+LimitNOFILE=4096
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

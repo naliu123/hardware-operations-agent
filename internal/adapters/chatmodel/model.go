@@ -1,14 +1,17 @@
 package chatmodel
 
 import (
+	"bufio"
 	"bytes"
 	"context"
 	"encoding/json"
 	"errors"
 	"fmt"
 	"io"
+	"mime"
 	"net/http"
 	"net/url"
+	"sort"
 	"strconv"
 	"strings"
 	"time"
@@ -36,10 +39,12 @@ func WithSessionID(ctx context.Context, sessionID string) context.Context {
 }
 
 type ContextInput struct {
-	Question  string                `json:"question"`
-	Documents []*schema.Document    `json:"documents"`
-	Device    *domain.DeviceContext `json:"device_context,omitempty"`
-	Now       time.Time             `json:"now,omitempty"`
+	Question    string                       `json:"question"`
+	Documents   []*schema.Document           `json:"documents"`
+	Attachments []domain.AttachmentReference `json:"attachments,omitempty"`
+	Device      *domain.DeviceContext        `json:"device_context,omitempty"`
+	Now         time.Time                    `json:"now,omitempty"`
+	History     *domain.ConversationHistory  `json:"conversation_history,omitempty"`
 }
 
 // Replay is an explicitly selected extractive demonstration, never a fallback.
@@ -155,7 +160,6 @@ func NewOpenAI(endpoint, name, key string) (*OpenAI, error) {
 		return nil, errors.New("invalid model endpoint or model name")
 	}
 	return &OpenAI{endpoint: endpoint, name: name, key: key, client: &http.Client{
-		Timeout: 30 * time.Second,
 		CheckRedirect: func(*http.Request, []*http.Request) error {
 			return http.ErrUseLastResponse
 		},
@@ -169,7 +173,7 @@ func (m *OpenAI) Generate(ctx context.Context, input []*schema.Message, opts ...
 		span.SetAttributes(attribute.String("llm.provider", "deepseek"), attribute.String("llm.system", "deepseek"))
 	}
 	defer func() { observability.End(span, messageOut, callErr) }()
-	body, err := m.requestBody(input, opts...)
+	body, err := m.requestBody(input, false, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -225,26 +229,15 @@ func (m *OpenAI) Generate(ctx context.Context, input []*schema.Message, opts ...
 		if err != nil || len(raw) > 1024*1024 {
 			return nil, fmt.Errorf("%w: unreadable response", ErrUnavailable)
 		}
-		var result struct {
-			Usage   *schema.TokenUsage `json:"usage"`
-			Choices []struct {
-				Message struct {
-					Content   string            `json:"content"`
-					ToolCalls []schema.ToolCall `json:"tool_calls"`
-				} `json:"message"`
-				FinishReason string `json:"finish_reason"`
-			} `json:"choices"`
-		}
-		if err := json.Unmarshal(raw, &result); err != nil || len(result.Choices) == 0 ||
-			(strings.TrimSpace(result.Choices[0].Message.Content) == "" && len(result.Choices[0].Message.ToolCalls) == 0) {
+		out, err := decodeCompletion(raw)
+		if err != nil {
 			return nil, fmt.Errorf("%w: invalid response", ErrUnavailable)
 		}
-		out := schema.AssistantMessage(result.Choices[0].Message.Content, result.Choices[0].Message.ToolCalls)
-		out.ResponseMeta = &schema.ResponseMeta{Usage: result.Usage, FinishReason: result.Choices[0].FinishReason}
-		if result.Usage != nil {
-			span.SetAttributes(attribute.Int("llm.token_count.prompt", result.Usage.PromptTokens),
-				attribute.Int("llm.token_count.completion", result.Usage.CompletionTokens),
-				attribute.Int("llm.token_count.total", result.Usage.TotalTokens))
+		if out.ResponseMeta != nil && out.ResponseMeta.Usage != nil {
+			usage := out.ResponseMeta.Usage
+			span.SetAttributes(attribute.Int("llm.token_count.prompt", usage.PromptTokens),
+				attribute.Int("llm.token_count.completion", usage.CompletionTokens),
+				attribute.Int("llm.token_count.total", usage.TotalTokens))
 		}
 		return out, nil
 	}
@@ -290,10 +283,327 @@ func waitForRetry(ctx context.Context, delay time.Duration) bool {
 }
 
 func (m *OpenAI) Stream(ctx context.Context, in []*schema.Message, opts ...model.Option) (*schema.StreamReader[*schema.Message], error) {
-	// QA-01 validates a complete answer before exposing it to the client.
-	out, err := m.Generate(ctx, in, opts...)
-	if err != nil {
+	ctx, span := observability.Start(ctx, "chat.stream", "LLM", in)
+	span.SetAttributes(attribute.String("llm.model_name", m.name))
+	if strings.HasPrefix(m.name, "deepseek-") {
+		span.SetAttributes(attribute.String("llm.provider", "deepseek"), attribute.String("llm.system", "deepseek"))
+	}
+	fail := func(err error) (*schema.StreamReader[*schema.Message], error) {
+		observability.End(span, nil, err)
 		return nil, err
 	}
-	return schema.StreamReaderFromArray([]*schema.Message{out}), nil
+	body, err := m.requestBody(in, true, opts...)
+	if err != nil {
+		return fail(err)
+	}
+	for attempt := 0; attempt < maxModelAttempts; attempt++ {
+		if attempt > 0 {
+			if err = modelbudget.Reserve(ctx); err != nil {
+				return fail(err)
+			}
+		}
+		req, requestErr := http.NewRequestWithContext(ctx, http.MethodPost, m.endpoint, bytes.NewReader(body))
+		if requestErr != nil {
+			return fail(requestErr)
+		}
+		req.Header.Set("Content-Type", "application/json")
+		req.Header.Set("Accept", "text/event-stream")
+		req.Header.Set("User-Agent", userAgent)
+		if m.key != "" {
+			req.Header.Set("Authorization", "Bearer "+m.key)
+		}
+		if sessionID, ok := ctx.Value(sessionIDKey{}).(string); ok {
+			req.Header.Set("x-opencode-session", sessionID)
+		}
+		response, requestErr := m.client.Do(req)
+		if requestErr != nil {
+			if ctx.Err() != nil {
+				return fail(ctx.Err())
+			}
+			if attempt+1 < maxModelAttempts && waitForRetry(ctx, defaultRetryWait) {
+				span.SetAttributes(attribute.Int("llm.retry_count", attempt+1))
+				continue
+			}
+			return fail(ErrUnavailable)
+		}
+		if response.StatusCode != http.StatusOK {
+			status := response.StatusCode
+			retryAfter := response.Header.Get("Retry-After")
+			_ = response.Body.Close()
+			if attempt+1 < maxModelAttempts && retryableStatus(status) {
+				if delay, ok := retryDelay(retryAfter); ok && waitForRetry(ctx, delay) {
+					span.SetAttributes(attribute.Int("llm.retry_count", attempt+1))
+					continue
+				}
+				if ctx.Err() != nil {
+					return fail(ctx.Err())
+				}
+			}
+			return fail(fmt.Errorf("%w: HTTP %d", ErrUnavailable, status))
+		}
+		reader, writer := schema.Pipe[*schema.Message](8)
+		go func() {
+			defer response.Body.Close()
+			defer writer.Close()
+			send := func(message *schema.Message) bool {
+				if message.ResponseMeta != nil && message.ResponseMeta.Usage != nil {
+					usage := message.ResponseMeta.Usage
+					span.SetAttributes(attribute.Int("llm.token_count.prompt", usage.PromptTokens),
+						attribute.Int("llm.token_count.completion", usage.CompletionTokens),
+						attribute.Int("llm.token_count.total", usage.TotalTokens))
+				}
+				return !writer.Send(message, nil)
+			}
+			parseErr := decodeStreamResponse(response, send)
+			if ctx.Err() != nil {
+				parseErr = ctx.Err()
+			}
+			if errors.Is(parseErr, errStreamConsumerClosed) {
+				parseErr = nil
+			}
+			if parseErr != nil {
+				if !errors.Is(parseErr, context.Canceled) && !errors.Is(parseErr, context.DeadlineExceeded) {
+					parseErr = fmt.Errorf("%w: invalid stream", ErrUnavailable)
+				}
+				_ = writer.Send(nil, parseErr)
+			}
+			observability.End(span, nil, parseErr)
+		}()
+		return reader, nil
+	}
+	return fail(ErrUnavailable)
+}
+
+func decodeCompletion(raw []byte) (*schema.Message, error) {
+	var result struct {
+		Usage   *schema.TokenUsage `json:"usage"`
+		Choices []struct {
+			Message struct {
+				Content          string            `json:"content"`
+				ReasoningContent string            `json:"reasoning_content"`
+				ToolCalls        []schema.ToolCall `json:"tool_calls"`
+			} `json:"message"`
+			FinishReason string `json:"finish_reason"`
+		} `json:"choices"`
+	}
+	if err := json.Unmarshal(raw, &result); err != nil || len(result.Choices) != 1 ||
+		(strings.TrimSpace(result.Choices[0].Message.Content) == "" && len(result.Choices[0].Message.ToolCalls) == 0) {
+		return nil, errors.New("invalid completion")
+	}
+	out := schema.AssistantMessage(result.Choices[0].Message.Content, result.Choices[0].Message.ToolCalls)
+	out.ReasoningContent = result.Choices[0].Message.ReasoningContent
+	if result.Usage != nil || result.Choices[0].FinishReason != "" {
+		out.ResponseMeta = &schema.ResponseMeta{Usage: result.Usage, FinishReason: result.Choices[0].FinishReason}
+	}
+	return out, nil
+}
+
+var errStreamConsumerClosed = errors.New("stream consumer closed")
+
+func decodeStreamResponse(response *http.Response, send func(*schema.Message) bool) error {
+	mediaType, _, _ := mime.ParseMediaType(response.Header.Get("Content-Type"))
+	if mediaType != "text/event-stream" {
+		raw, err := io.ReadAll(io.LimitReader(response.Body, 1024*1024+1))
+		if err != nil || len(raw) > 1024*1024 {
+			return errors.New("unreadable buffered stream response")
+		}
+		message, err := decodeCompletion(raw)
+		if err != nil {
+			return err
+		}
+		if !send(message) {
+			return errStreamConsumerClosed
+		}
+		return nil
+	}
+	return decodeServerSentEvents(response.Body, send)
+}
+
+type streamChoice struct {
+	Index int `json:"index"`
+	Delta struct {
+		Role             schema.RoleType   `json:"role"`
+		Content          *string           `json:"content"`
+		ReasoningContent *string           `json:"reasoning_content"`
+		ToolCalls        []schema.ToolCall `json:"tool_calls"`
+	} `json:"delta"`
+	FinishReason *string `json:"finish_reason"`
+}
+
+type streamEnvelope struct {
+	Choices []streamChoice     `json:"choices"`
+	Usage   *schema.TokenUsage `json:"usage"`
+}
+
+type toolCallAccumulator struct {
+	id        strings.Builder
+	kind      strings.Builder
+	name      strings.Builder
+	arguments strings.Builder
+}
+
+func decodeServerSentEvents(source io.Reader, send func(*schema.Message) bool) error {
+	scanner := bufio.NewScanner(source)
+	scanner.Buffer(make([]byte, 64*1024), 1024*1024+1024)
+	var data []string
+	var dataBytes int
+	var finished, done, sawOutput bool
+	tools := map[int]*toolCallAccumulator{}
+	totalBytes := 0
+
+	process := func() error {
+		if len(data) == 0 {
+			return nil
+		}
+		payload := strings.Join(data, "\n")
+		data, dataBytes = data[:0], 0
+		if payload == "[DONE]" {
+			done = true
+			return nil
+		}
+		var envelope streamEnvelope
+		if json.Unmarshal([]byte(payload), &envelope) != nil || len(envelope.Choices) > 1 {
+			return errors.New("invalid stream frame")
+		}
+		if len(envelope.Choices) == 0 {
+			if envelope.Usage == nil || !finished {
+				return errors.New("unexpected empty stream frame")
+			}
+			if !send(&schema.Message{Role: schema.Assistant,
+				ResponseMeta: &schema.ResponseMeta{Usage: envelope.Usage}}) {
+				return errStreamConsumerClosed
+			}
+			return nil
+		}
+		choice := envelope.Choices[0]
+		if choice.Index != 0 || finished {
+			return errors.New("unexpected stream choice")
+		}
+		message := &schema.Message{Role: schema.Assistant}
+		if choice.Delta.ReasoningContent != nil {
+			message.ReasoningContent = *choice.Delta.ReasoningContent
+			totalBytes += len(message.ReasoningContent)
+		}
+		if choice.Delta.Content != nil {
+			message.Content = *choice.Delta.Content
+			totalBytes += len(message.Content)
+			if message.Content != "" {
+				sawOutput = true
+			}
+		}
+		for _, fragment := range choice.Delta.ToolCalls {
+			index := 0
+			if fragment.Index != nil {
+				index = *fragment.Index
+			}
+			if index < 0 || index > 7 {
+				return errors.New("invalid tool call index")
+			}
+			accumulator := tools[index]
+			if accumulator == nil {
+				accumulator = &toolCallAccumulator{}
+				tools[index] = accumulator
+			}
+			accumulator.id.WriteString(fragment.ID)
+			accumulator.kind.WriteString(fragment.Type)
+			accumulator.name.WriteString(fragment.Function.Name)
+			accumulator.arguments.WriteString(fragment.Function.Arguments)
+			totalBytes += len(fragment.ID) + len(fragment.Type) + len(fragment.Function.Name) +
+				len(fragment.Function.Arguments)
+			sawOutput = true
+		}
+		if totalBytes > 1024*1024 {
+			return errors.New("stream response is too large")
+		}
+		if choice.FinishReason != nil {
+			finished = true
+			message.ResponseMeta = &schema.ResponseMeta{FinishReason: *choice.FinishReason, Usage: envelope.Usage}
+			calls, err := finishToolCalls(tools)
+			if err != nil {
+				return err
+			}
+			if (*choice.FinishReason == "tool_calls") != (len(calls) > 0) {
+				return errors.New("tool finish reason mismatch")
+			}
+			message.ToolCalls = calls
+		} else if envelope.Usage != nil {
+			message.ResponseMeta = &schema.ResponseMeta{Usage: envelope.Usage}
+		}
+		if message.Content != "" || message.ReasoningContent != "" || len(message.ToolCalls) > 0 || message.ResponseMeta != nil {
+			if !send(message) {
+				return errStreamConsumerClosed
+			}
+		}
+		return nil
+	}
+
+	for scanner.Scan() {
+		line := strings.TrimSuffix(scanner.Text(), "\r")
+		if line == "" {
+			if err := process(); err != nil {
+				return err
+			}
+			if done {
+				break
+			}
+			continue
+		}
+		if strings.HasPrefix(line, ":") {
+			continue
+		}
+		if line == "data" {
+			data = append(data, "")
+			continue
+		}
+		if strings.HasPrefix(line, "data:") {
+			value := strings.TrimPrefix(line, "data:")
+			value = strings.TrimPrefix(value, " ")
+			dataBytes += len(value)
+			if dataBytes > 1024*1024 {
+				return errors.New("stream frame is too large")
+			}
+			data = append(data, value)
+		}
+	}
+	if err := scanner.Err(); err != nil {
+		return err
+	}
+	if !done && len(data) > 0 {
+		if err := process(); err != nil {
+			return err
+		}
+	}
+	if !finished || !sawOutput {
+		return errors.New("stream ended before a complete choice")
+	}
+	return nil
+}
+
+func finishToolCalls(values map[int]*toolCallAccumulator) ([]schema.ToolCall, error) {
+	if len(values) == 0 {
+		return nil, nil
+	}
+	indexes := make([]int, 0, len(values))
+	for index := range values {
+		indexes = append(indexes, index)
+	}
+	sort.Ints(indexes)
+	out := make([]schema.ToolCall, 0, len(indexes))
+	for expected, index := range indexes {
+		if expected != index {
+			return nil, errors.New("tool call indexes are not contiguous")
+		}
+		value := values[index]
+		call := schema.ToolCall{
+			ID: value.id.String(), Type: value.kind.String(),
+			Function: schema.FunctionCall{Name: value.name.String(), Arguments: value.arguments.String()},
+		}
+		if call.ID == "" || len(call.ID) > 256 || call.Type != "function" ||
+			call.Function.Name == "" || len(call.Function.Name) > 256 ||
+			len(call.Function.Arguments) > 64*1024 || !json.Valid([]byte(call.Function.Arguments)) {
+			return nil, errors.New("invalid completed tool call")
+		}
+		out = append(out, call)
+	}
+	return out, nil
 }

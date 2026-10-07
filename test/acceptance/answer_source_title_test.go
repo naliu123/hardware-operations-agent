@@ -35,7 +35,7 @@ func TestAnswerRetainsDocumentTitleForAmbiguousSection(t *testing.T) {
 			if strings.Contains(doc.Content, "蓝灯") {
 				title, _ := doc.MetaData["title"].(string)
 				claims = append(claims, map[string]any{
-					"text":         title + "：蓝灯规则。",
+					"text": title + "：蓝灯规则。",
 					"fragment_ids": []string{doc.ID},
 				})
 			}
@@ -55,7 +55,7 @@ func TestAnswerRetainsDocumentTitleForAmbiguousSection(t *testing.T) {
 	for _, title := range []string{"旧设备手册（已弃用）", "新设备手册"} {
 		revision := request(t, s.Client(), "POST", s.URL+"/v1/knowledge/revisions", map[string]any{
 			"title": title, "source": "fixture://title-provenance",
-			"content":       "# 前提条件\n蓝灯仅在该手册指定设备中表示维护模式。",
+			"content": "# 前提条件\n蓝灯仅在该手册指定设备中表示维护模式。",
 			"applicability": map[string]any{"scope": "GENERAL"},
 		}, http.StatusCreated)
 		request(t, s.Client(), "POST", s.URL+"/v1/knowledge/revisions/"+revision["id"].(string)+"/publication",

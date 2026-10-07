@@ -124,14 +124,14 @@ func TestOpenAIClientIdentityHeaders(t *testing.T) {
 	}
 }
 
-func TestDeepSeekNonThinkingAndActualUsage(t *testing.T) {
+func TestDeepSeekDefaultThinkingAndActualUsage(t *testing.T) {
 	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		var body map[string]any
 		if err := json.NewDecoder(r.Body).Decode(&body); err != nil {
 			t.Error(err)
 		}
 		thinking, _ := body["thinking"].(map[string]any)
-		if thinking["type"] != "disabled" || body["model"] != "deepseek-flash" {
+		if thinking["type"] != "enabled" || body["model"] != "deepseek-flash" {
 			t.Errorf("DeepSeek thinking configuration missing: %v", body)
 		}
 		w.Write([]byte(`{"choices":[{"message":{"content":"真实适配器协议测试 REPLAY"}}],"usage":{"prompt_tokens":17,"completion_tokens":9,"total_tokens":26}}`))

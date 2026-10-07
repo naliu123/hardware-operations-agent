@@ -1,0 +1,6 @@
+=== RUN   TestWB10LiveReasoningAndNativeTool
+    workbench_reasoning_live_test.go:70: LIVE model=deepseek-v4.1-flash response=VWSUEZBHXIJSTIHGTCTPJB2UHK status=ANSWERED reasoning_deltas=6 reasoning_bytes=65 body_deltas=30 tool_calls=0 first_reasoning=2.002s total=2.802s
+    workbench_reasoning_live_test.go:70: LIVE model=deepseek-v4.1-flash response=JKIVEGNOA2HFZVGLCUZOHWKX2E status=ANSWERED reasoning_deltas=40 reasoning_bytes=465 body_deltas=16 tool_calls=1 first_reasoning=1.001s total=4.602s
+--- PASS: TestWB10LiveReasoningAndNativeTool (8.54s)
+PASS
+ok  	hwops/test/acceptance	9.525s

@@ -9,15 +9,30 @@ import (
 
 	"hwops/internal/application"
 	"hwops/internal/domain"
+	"hwops/internal/identity"
 	"hwops/internal/knowledge"
 )
 
 type handler struct {
-	app *application.App
+	app      *application.App
+	identity *identity.Service
+	origin   string
 }
 
 func New(app *application.App, token string) http.Handler {
 	h := &handler{app: app}
+	mux := h.routes()
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if r.URL.Path != "/healthz" && (token == "" || subtle.ConstantTimeCompare(
+			[]byte(r.Header.Get("Authorization")), []byte("Bearer "+token)) != 1) {
+			reply(w, http.StatusUnauthorized, domain.Failure{Code: "UNAUTHORIZED", Message: "缺少有效访问令牌。"})
+			return
+		}
+		mux.ServeHTTP(w, r)
+	})
+}
+
+func (h *handler) routes() *http.ServeMux {
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /healthz", func(w http.ResponseWriter, r *http.Request) {
 		reply(w, http.StatusOK, map[string]string{"status": "ok"})
@@ -30,9 +45,23 @@ func New(app *application.App, token string) http.Handler {
 	mux.HandleFunc("POST /v1/knowledge/version-policies", h.createVersionPolicy)
 	mux.HandleFunc("GET /v1/knowledge/version-policies/{id}", h.versionPolicy)
 	mux.HandleFunc("POST /v1/conversations", h.conversation)
+	mux.HandleFunc("GET /v1/conversations", h.listConversations)
+	mux.HandleFunc("GET /v1/conversations/search", h.listConversations)
+	mux.HandleFunc("GET /v1/conversations/{id}", h.getConversation)
+	mux.HandleFunc("PATCH /v1/conversations/{id}", h.renameConversation)
+	mux.HandleFunc("DELETE /v1/conversations/{id}", h.deleteConversation)
+	mux.HandleFunc("GET /v1/conversations/{id}/messages", h.messages)
 	mux.HandleFunc("POST /v1/conversations/{id}/messages", h.message)
+	mux.HandleFunc("POST /v1/conversations/{id}/attachments", h.uploadAttachment)
+	mux.HandleFunc("GET /v1/attachments/{id}", h.attachment)
+	mux.HandleFunc("GET /v1/attachments/{id}/content", h.attachmentContent)
+	mux.HandleFunc("GET /v1/attachments/{id}/pages/{page}", h.attachmentPage)
+	mux.HandleFunc("GET /v1/attachments/{id}/assets/{asset}", h.attachmentAsset)
+	mux.HandleFunc("POST /v1/responses/{id}/cancel", h.cancelResponse)
 	mux.HandleFunc("GET /v1/responses/{id}", h.response)
 	mux.HandleFunc("GET /v1/responses/{id}/events", h.events)
+	mux.HandleFunc("GET /v1/executions/{id}", h.pythonExecution)
+	mux.HandleFunc("GET /v1/artifacts/{id}/content", h.artifact)
 	mux.HandleFunc("PUT /v1/devices/{id}", h.putDevice)
 	mux.HandleFunc("POST /v1/devices/{id}/observations", h.observe)
 	mux.HandleFunc("GET /v1/devices/resolve", h.resolveDevice)
@@ -41,14 +70,7 @@ func New(app *application.App, token string) http.Handler {
 	mux.HandleFunc("GET /v1/runs/{id}", h.run)
 	mux.HandleFunc("POST /v1/runs/{id}/resume", h.resumeRun)
 	mux.HandleFunc("POST /v1/runs/{id}/cancel", h.cancelRun)
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if r.URL.Path != "/healthz" && (token == "" || subtle.ConstantTimeCompare(
-			[]byte(r.Header.Get("Authorization")), []byte("Bearer "+token)) != 1) {
-			reply(w, http.StatusUnauthorized, domain.Failure{Code: "UNAUTHORIZED", Message: "缺少有效访问令牌。"})
-			return
-		}
-		mux.ServeHTTP(w, r)
-	})
+	return mux
 }
 
 func reply(w http.ResponseWriter, status int, value any) {
@@ -80,12 +102,23 @@ func result(w http.ResponseWriter, status int, value any, err error) {
 		return
 	}
 	switch {
+	case errors.Is(err, domain.ErrUnauthorized):
+		reply(w, http.StatusUnauthorized, domain.Failure{Code: "UNAUTHORIZED", Message: "登录凭据无效或已失效。"})
+	case errors.Is(err, domain.ErrForbidden):
+		reply(w, http.StatusForbidden, domain.Failure{Code: "FORBIDDEN", Message: "没有执行此操作的权限。"})
+	case errors.Is(err, domain.ErrRateLimited):
+		w.Header().Set("Retry-After", "900")
+		reply(w, http.StatusTooManyRequests, domain.Failure{Code: "RATE_LIMITED", Message: "登录尝试过多，请 15 分钟后重试。"})
 	case errors.Is(err, domain.ErrNotFound):
 		reply(w, http.StatusNotFound, domain.Failure{Code: "NOT_FOUND", Message: "记录不存在。"})
 	case errors.Is(err, domain.ErrInvalid):
 		reply(w, http.StatusBadRequest, domain.Failure{Code: "INVALID_INPUT", Message: err.Error()})
 	case errors.Is(err, domain.ErrConflict):
 		reply(w, http.StatusConflict, domain.Failure{Code: "CONFLICT", Message: err.Error()})
+	case errors.Is(err, domain.ErrResourceExhausted):
+		reply(w, http.StatusInsufficientStorage, domain.Failure{Code: "RESOURCE_EXHAUSTED", Message: err.Error()})
+	case errors.Is(err, domain.ErrUnavailable):
+		reply(w, http.StatusServiceUnavailable, domain.Failure{Code: "UNAVAILABLE", Message: "附件解析或隔离执行服务不可用。"})
 	default:
 		reply(w, http.StatusInternalServerError, domain.Failure{Code: "INTERNAL_ERROR", Message: "处理失败。"})
 	}
@@ -167,8 +200,17 @@ func (h *handler) conversation(w http.ResponseWriter, r *http.Request) {
 	if !decode(w, r, &input) {
 		return
 	}
-	conversation, err := h.app.CreateConversation(r.Context(), "local-operator")
+	owner := domain.Owner(r.Context())
+	if owner == "" {
+		owner = "local-operator"
+	}
+	conversation, err := h.app.CreateConversation(r.Context(), owner)
 	result(w, http.StatusCreated, conversation, err)
+}
+
+func (h *handler) getConversation(w http.ResponseWriter, r *http.Request) {
+	c, err := h.app.Conversation(r.Context(), r.PathValue("id"))
+	result(w, http.StatusOK, c, err)
 }
 
 func (h *handler) message(w http.ResponseWriter, r *http.Request) {

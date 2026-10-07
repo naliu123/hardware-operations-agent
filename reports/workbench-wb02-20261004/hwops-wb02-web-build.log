@@ -1,0 +1,13 @@
+
+> hwops-workbench@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 284 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.47 kB │ gzip:   0.33 kB
+dist/assets/index-CUZ1Ia7h.css    9.48 kB │ gzip:   2.94 kB
+dist/assets/index-Dk4E5mqu.js   360.21 kB │ gzip: 112.00 kB
+✓ built in 1m 30s

@@ -1,0 +1,12 @@
+=== RUN   TestPostgreSQLDiagnosticWaitResumeAndHistory
+--- PASS: TestPostgreSQLDiagnosticWaitResumeAndHistory (0.45s)
+=== RUN   TestPostgreSQLAnswerSurvivesRestart
+--- PASS: TestPostgreSQLAnswerSurvivesRestart (0.13s)
+=== RUN   TestWB01IdentityPrivateHTTPAndRestart
+    workbench_identity_test.go:278: REPLAY: real temporary PostgreSQL; external model adapter; 2 users + admin; auth, CSRF, isolation, resets, revocation and restart passed
+--- PASS: TestWB01IdentityPrivateHTTPAndRestart (4.81s)
+=== RUN   TestWB01LegacyAdoptionAndMigrationDrift
+    workbench_identity_test.go:335: real PostgreSQL: legacy adoption, hidden history, explicit mapping and fail-closed schema drift passed
+--- PASS: TestWB01LegacyAdoptionAndMigrationDrift (0.84s)
+PASS
+ok  	hwops/test/acceptance	7.014s

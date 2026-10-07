@@ -1,0 +1,6 @@
+ok  	hwops/internal/sandbox	1.684s
+ok  	hwops/internal/blobstore	(cached)
+?   	hwops/internal/execution	[no test files]
+?   	hwops/internal/application	[no test files]
+?   	hwops/internal/adapters/postgres	[no test files]
+?   	hwops/internal/transport/httpapi	[no test files]

@@ -7,9 +7,11 @@ import (
 )
 
 var (
-	ErrNotFound = errors.New("not found")
-	ErrInvalid  = errors.New("invalid input")
-	ErrConflict = errors.New("conflict")
+	ErrNotFound          = errors.New("not found")
+	ErrInvalid           = errors.New("invalid input")
+	ErrConflict          = errors.New("conflict")
+	ErrResourceExhausted = errors.New("resource exhausted")
+	ErrUnavailable       = errors.New("unavailable")
 )
 
 type Applicability struct {
@@ -63,10 +65,12 @@ type DeviceContext struct {
 }
 
 type MessageInput struct {
-	Text            string `json:"text"`
-	DeviceID        string `json:"device_id,omitempty"`
-	DeviceQuery     string `json:"device_query,omitempty"`
-	ContextRevision string `json:"context_revision,omitempty"`
+	Text            string   `json:"text"`
+	RetryOf         string   `json:"retry_of,omitempty"`
+	DeviceID        string   `json:"device_id,omitempty"`
+	DeviceQuery     string   `json:"device_query,omitempty"`
+	ContextRevision string   `json:"context_revision,omitempty"`
+	AttachmentIDs   []string `json:"attachment_ids,omitempty"`
 }
 
 type DeviceResolution struct {
@@ -144,6 +148,11 @@ type Conversation struct {
 	ID              string    `json:"id"`
 	Owner           string    `json:"owner"`
 	CreatedAt       time.Time `json:"created_at"`
+	UpdatedAt       time.Time `json:"updated_at"`
+	Title           string    `json:"title"`
+	TitleSource     string    `json:"title_source"`
+	StateVersion    int64     `json:"state_version"`
+	LastSequence    int64     `json:"last_sequence"`
 	DeviceID        string    `json:"device_id,omitempty"`
 	ContextRevision string    `json:"context_revision,omitempty"`
 	ContextVersion  int64     `json:"context_version,omitempty"`
@@ -151,10 +160,19 @@ type Conversation struct {
 
 type Claim struct {
 	Text        string   `json:"text"`
-	FragmentIDs []string `json:"fragment_ids"`
+	FragmentIDs []string `json:"fragment_ids,omitempty"`
+	SourceIDs   []string `json:"source_ids,omitempty"`
+}
+
+// ConversationalReply is a user-facing introduction, greeting or clarification.
+// Evidence-backed conclusions and observations remain separate fields.
+type ConversationalReply struct {
+	Kind string `json:"kind"`
+	Text string `json:"text"`
 }
 
 type Draft struct {
+	Reply        *ConversationalReply   `json:"reply,omitempty"`
 	Claims       []Claim                `json:"claims"`
 	Gaps         []string               `json:"gaps,omitempty"`
 	Conflicts    []KnowledgeConflict    `json:"conflicts,omitempty"`
@@ -163,7 +181,8 @@ type Draft struct {
 
 type KnowledgeConflict struct {
 	Subject     string   `json:"subject"`
-	FragmentIDs []string `json:"fragment_ids"`
+	FragmentIDs []string `json:"fragment_ids,omitempty"`
+	SourceIDs   []string `json:"source_ids,omitempty"`
 }
 
 type Citation struct {
@@ -224,6 +243,8 @@ type Response struct {
 	Status               string                 `json:"status"`
 	DataMode             string                 `json:"data_mode"`
 	Answer               string                 `json:"answer"`
+	Reply                *ConversationalReply   `json:"reply,omitempty"`
+	Reasoning            *ResponseReasoning     `json:"reasoning,omitempty"`
 	Claims               []Claim                `json:"claims"`
 	Citations            []Citation             `json:"citations"`
 	Gaps                 []string               `json:"gaps"`
@@ -243,6 +264,14 @@ type Response struct {
 	Observations         []ObservationSelection `json:"observations,omitempty"`
 	RequestKey           string                 `json:"request_key,omitempty"`
 	RequestHash          string                 `json:"request_hash,omitempty"`
+	Sequence             int64                  `json:"sequence,omitempty"`
+	RetryOf              string                 `json:"retry_of,omitempty"`
+	Workbench            bool                   `json:"workbench,omitempty"`
+	Deadline             time.Time              `json:"deadline,omitempty"`
+	ContextSelection     *ContextSelection      `json:"context_selection,omitempty"`
+	Attachments          []AttachmentReference  `json:"attachments,omitempty"`
+	Sources              []SourceRef            `json:"sources,omitempty"`
+	Executions           []PythonExecution      `json:"executions,omitempty"`
 }
 
 type Repository interface {

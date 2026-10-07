@@ -1,0 +1,5 @@
+=== RUN   TestWB01LiveModel
+    workbench_identity_test.go:413: LIVE: real PostgreSQL + username login + model native tools + cited answer; model=deepseek-v4.1-flash usage=map[calls:2 completion_tokens:137 prompt_tokens:2959 total_tokens:3096]
+--- PASS: TestWB01LiveModel (8.90s)
+PASS
+ok  	hwops/test/acceptance	9.674s

@@ -1,0 +1,62 @@
+=== RUN   TestWB03ActualStatisticsArtifactsAndPrivacy
+    workbench_python_test.go:185: ACTUAL SANDBOX: runtime=gVisor 20260928.0 kernel=Linux 6.8.0-117-generic image=sha256:8ca31a2511a3d13428b7d10b5d181f9edb90da9dcf0d25a95e9cf80252511572 probe=8d08c5041dc129bf44b866c462975c46745915fc302bcd671afbaa50e8a31ee5
+    workbench_python_test.go:187: ACTUAL SANDBOX execution=T7BXWFGTXGD6AJKFNSKJVEYRCW state=SUCCEEDED code_hash=9b3ce3ce2c6f63decf62979c7a8f9b66b98d3e5017327ae48bc1b90e75032c9e duration_ms=808 exit=0xc0005000e8 error= usage={CPUUsec:705170 MemoryPeakBytes:93184000 ProcessesPeak:35 ProcessLimitEvents:0} stdout_bytes=9 stdout_preview="TOTAL=10\n"
+    workbench_python_test.go:201: ACTUAL ARTIFACT execution=T7BXWFGTXGD6AJKFNSKJVEYRCW id=BC27CSIOTLL4Z4W7CDQW2Z4AGO name=chart.png sha256=39bfa0325a14abd6e46294d4785cc68effd558112920f60ca88f7d524f8c05d8 bytes=22363 media_type=image/png
+    workbench_python_test.go:201: ACTUAL ARTIFACT execution=T7BXWFGTXGD6AJKFNSKJVEYRCW id=LR7AQZKSCAYJJXI4HBRF5O6GQJ name=errors.csv sha256=cfdc701b22acb8fc6cd0523298b9d7a3e8f0dba603394b904760f0cdd4b36a23 bytes=24 media_type=text/plain; charset=utf-8
+    workbench_python_test.go:224: ACTUAL SANDBOX execution=4S6VY3LFZ2DRJRXA6DEHGEGHQC state=SUCCEEDED code_hash=0768de13ef2f9506e06596d0ba958217cc2bf279a3ff2f32eb47676b7245cd1e duration_ms=463 exit=0xc000189948 error= usage={CPUUsec:349899 MemoryPeakBytes:63193088 ProcessesPeak:32 ProcessLimitEvents:0} stdout_bytes=24 stdout_preview="MEAN=3.3333333333333335\n"
+    workbench_python_test.go:229: ACTUAL INPUT execution=4S6VY3LFZ2DRJRXA6DEHGEGHQC id=LR7AQZKSCAYJJXI4HBRF5O6GQJ sha256=cfdc701b22acb8fc6cd0523298b9d7a3e8f0dba603394b904760f0cdd4b36a23 bytes=24
+    workbench_python_test.go:242: actual runner journals/files and application artifacts cleaned after deletion
+--- PASS: TestWB03ActualStatisticsArtifactsAndPrivacy (16.99s)
+=== RUN   TestWB03UnavailableNeverFallsBackToHostPython
+--- PASS: TestWB03UnavailableNeverFallsBackToHostPython (0.85s)
+=== RUN   TestWB03ActualRunnerIdentityAndCancellation
+    workbench_python_test.go:273: ACTUAL SANDBOX: runtime=gVisor 20260928.0 kernel=Linux 6.8.0-117-generic image=sha256:8ca31a2511a3d13428b7d10b5d181f9edb90da9dcf0d25a95e9cf80252511572 probe=8d08c5041dc129bf44b866c462975c46745915fc302bcd671afbaa50e8a31ee5
+--- PASS: TestWB03ActualRunnerIdentityAndCancellation (0.41s)
+=== RUN   TestWB03ActualResourceLimits
+    workbench_python_test.go:315: ACTUAL SANDBOX: runtime=gVisor 20260928.0 kernel=Linux 6.8.0-117-generic image=sha256:8ca31a2511a3d13428b7d10b5d181f9edb90da9dcf0d25a95e9cf80252511572 probe=8d08c5041dc129bf44b866c462975c46745915fc302bcd671afbaa50e8a31ee5
+=== RUN   TestWB03ActualResourceLimits/cpu
+    workbench_python_test.go:371: ACTUAL SANDBOX execution=HXVB2OKARZU2HZPTCKU47J5SUE state=SUCCEEDED code_hash=3917efac0a293950d43b89e11ee25919c7600da8cef7e1a0197a53768d7eb979 duration_ms=4214 exit=0xc000189e98 error= usage={CPUUsec:4096810 MemoryPeakBytes:46342144 ProcessesPeak:43 ProcessLimitEvents:0} stdout_bytes=80 stdout_preview="{\"cpu_seconds\": 2.33, \"wall_seconds\": 4.023573123, \"cores\": 0.5790872761031712}\n"
+=== RUN   TestWB03ActualResourceLimits/processes
+    workbench_python_test.go:371: ACTUAL SANDBOX execution=ACKWB3325CX4ERWA3W3QMRIELD state=FAILED code_hash=e6ebac43007fabcb2c542a725109c68e3ce5cbd1809a0586a84de2adf98e0c3b duration_ms=204 exit=0xc0002de538 error=PROCESS_LIMIT_EXCEEDED usage={CPUUsec:101641 MemoryPeakBytes:97009664 ProcessesPeak:64 ProcessLimitEvents:1} stdout_bytes=0 stdout_preview=""
+=== RUN   TestWB03ActualResourceLimits/workspace
+    workbench_python_test.go:371: ACTUAL SANDBOX execution=FC3QVIOVL5HADMZK7OYT3RLIIJ state=SUCCEEDED code_hash=9fc6a456d79e715c332f8e925d9a89f984a39082c36010067fb93d0a8c967fa6 duration_ms=197 exit=0xc0003fa578 error= usage={CPUUsec:92390 MemoryPeakBytes:290140160 ProcessesPeak:31 ProcessLimitEvents:0} stdout_bytes=17 stdout_preview="ENOSPC 268435456\n"
+=== RUN   TestWB03ActualResourceLimits/memory
+    workbench_python_test.go:371: ACTUAL SANDBOX execution=CBB2GBNQXVES6ZJGV24BO7PUAI state=FAILED code_hash=b252c4422346e5095c0a4eb566487f7fa32ffc4544d47296262f83030bc50440 duration_ms=375 exit=0xc000500568 error=MEMORY_LIMIT_EXCEEDED usage={CPUUsec:263043 MemoryPeakBytes:1073741824 ProcessesPeak:32 ProcessLimitEvents:0} stdout_bytes=0 stdout_preview=""
+=== RUN   TestWB03ActualResourceLimits/logs
+    workbench_python_test.go:371: ACTUAL SANDBOX execution=VV2YDAK4SW7NTT6K2UYNKX4OOT state=FAILED code_hash=87991e0105cd77c9f8794738d7ce4f56923ef4081200300c1a8c22790e1bf566 duration_ms=175 exit=<nil> error=OUTPUT_LIMIT_EXCEEDED usage={CPUUsec:52977 MemoryPeakBytes:19808256 ProcessesPeak:31 ProcessLimitEvents:0} stdout_bytes=1048576 stdout_preview="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+=== RUN   TestWB03ActualResourceLimits/symlink
+    workbench_python_test.go:371: ACTUAL SANDBOX execution=VCFHBKPVZ2UAQJNMAE63FOFFO2 state=FAILED code_hash=f652479c3747227708edb6a62c7aaad8f5833cb7fd248719a10ebdbc3fcd6911 duration_ms=167 exit=0xc00031c328 error=ARTIFACT_VALIDATION_FAILED usage={CPUUsec:48144 MemoryPeakBytes:19525632 ProcessesPeak:26 ProcessLimitEvents:0} stdout_bytes=0 stdout_preview=""
+=== RUN   TestWB03ActualResourceLimits/hardlink
+    workbench_python_test.go:371: ACTUAL SANDBOX execution=AJC7QGNTPIL4XQ27W4WGGIXKQN state=FAILED code_hash=517f10834797aa2ef720271072c40eb8604691fcc965a585e8f1c352c0374ba4 duration_ms=159 exit=0xc00031cca8 error=ARTIFACT_VALIDATION_FAILED usage={CPUUsec:49650 MemoryPeakBytes:20451328 ProcessesPeak:31 ProcessLimitEvents:0} stdout_bytes=0 stdout_preview=""
+=== RUN   TestWB03ActualResourceLimits/artifact-count
+    workbench_python_test.go:371: ACTUAL SANDBOX execution=TZZ63MG4BN2E4ZNKWPMHCOMIKD state=FAILED code_hash=67d21636209b55ca2403b40c71f0b1a30e9bb2d995426ddcd4ac3b90e41db2c1 duration_ms=184 exit=0xc0002f48b8 error=ARTIFACT_VALIDATION_FAILED usage={CPUUsec:54805 MemoryPeakBytes:20193280 ProcessesPeak:31 ProcessLimitEvents:0} stdout_bytes=0 stdout_preview=""
+=== RUN   TestWB03ActualResourceLimits/artifact-bytes
+    workbench_python_test.go:371: ACTUAL SANDBOX execution=MVFMLPVKFDLCNMDPCX65B4Z2QO state=FAILED code_hash=ef4a466f81e898479c6d5284657926e3b2d0f6172f16b72efa19fde4b82b1a1d duration_ms=171 exit=0xc0002f5c08 error=ARTIFACT_VALIDATION_FAILED usage={CPUUsec:44548 MemoryPeakBytes:19947520 ProcessesPeak:27 ProcessLimitEvents:0} stdout_bytes=0 stdout_preview=""
+=== RUN   TestWB03ActualResourceLimits/wall-time
+    workbench_python_test.go:371: ACTUAL SANDBOX execution=3TYOMJEFIY4LLUK74YANTZLV5B state=FAILED code_hash=8033866c821fbf608af70ca99769d2d45278169ed00a4f4ce055927566d68b31 duration_ms=60112 exit=<nil> error=TIME_LIMIT_EXCEEDED usage={CPUUsec:51823 MemoryPeakBytes:19386368 ProcessesPeak:30 ProcessLimitEvents:0} stdout_bytes=0 stdout_preview=""
+--- PASS: TestWB03ActualResourceLimits (83.53s)
+    --- PASS: TestWB03ActualResourceLimits/cpu (4.46s)
+    --- PASS: TestWB03ActualResourceLimits/processes (0.56s)
+    --- PASS: TestWB03ActualResourceLimits/workspace (0.44s)
+    --- PASS: TestWB03ActualResourceLimits/memory (0.53s)
+    --- PASS: TestWB03ActualResourceLimits/logs (0.57s)
+    --- PASS: TestWB03ActualResourceLimits/symlink (0.43s)
+    --- PASS: TestWB03ActualResourceLimits/hardlink (0.54s)
+    --- PASS: TestWB03ActualResourceLimits/artifact-count (0.43s)
+    --- PASS: TestWB03ActualResourceLimits/artifact-bytes (0.33s)
+    --- PASS: TestWB03ActualResourceLimits/wall-time (60.43s)
+=== RUN   TestWB03ActualQueueAndPerResponseBudget
+    workbench_python_test.go:396: ACTUAL SANDBOX: runtime=gVisor 20260928.0 kernel=Linux 6.8.0-117-generic image=sha256:8ca31a2511a3d13428b7d10b5d181f9edb90da9dcf0d25a95e9cf80252511572 probe=8d08c5041dc129bf44b866c462975c46745915fc302bcd671afbaa50e8a31ee5
+    workbench_python_test.go:441: ACTUAL SANDBOX execution=IGVIKVKQLL6YM3F2QPXKRNS535 state=SUCCEEDED code_hash=491eb2b1a3b96ede0149f0500a9a88c1a4225f42f7feeb31f981741808171161 duration_ms=191 exit=0xc0003fb2f8 error= usage={CPUUsec:54952 MemoryPeakBytes:19570688 ProcessesPeak:31 ProcessLimitEvents:0} stdout_bytes=18 stdout_preview="CAPACITY_RELEASED\n"
+    workbench_python_test.go:449: ACTUAL SANDBOX: three durable requests, two running, one queued; fourth rejected; stop reaped both processes and canceled queue
+--- PASS: TestWB03ActualQueueAndPerResponseBudget (15.80s)
+=== RUN   TestWB03ApplicationRestartInterruptsWithoutRerun
+    workbench_python_test.go:453: ACTUAL SANDBOX: runtime=gVisor 20260928.0 kernel=Linux 6.8.0-117-generic image=sha256:8ca31a2511a3d13428b7d10b5d181f9edb90da9dcf0d25a95e9cf80252511572 probe=8d08c5041dc129bf44b866c462975c46745915fc302bcd671afbaa50e8a31ee5
+    workbench_python_test.go:488: ACTUAL SANDBOX: application restart preserved execution identity, interrupted without rerun, and reaped the original container
+--- PASS: TestWB03ApplicationRestartInterruptsWithoutRerun (19.78s)
+=== RUN   TestWB03RunnerLossAndRestartReapsOrphan
+    workbench_python_test.go:519: ACTUAL SANDBOX: runtime=gVisor 20260928.0 kernel=Linux 6.8.0-117-generic image=sha256:8ca31a2511a3d13428b7d10b5d181f9edb90da9dcf0d25a95e9cf80252511572 probe=8d08c5041dc129bf44b866c462975c46745915fc302bcd671afbaa50e8a31ee5
+    workbench_python_test.go:553: ACTUAL SANDBOX: runner loss stayed unknown; restart reconciled original ID and reaped the orphan
+--- PASS: TestWB03RunnerLossAndRestartReapsOrphan (1.28s)
+PASS
+ok  	hwops/test/acceptance	140.434s

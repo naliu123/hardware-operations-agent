@@ -22,8 +22,11 @@ import (
 	"hwops/internal/adapters/monitor"
 	"hwops/internal/adapters/postgres"
 	"hwops/internal/application"
+	"hwops/internal/blobstore"
 	"hwops/internal/domain"
+	"hwops/internal/identity"
 	"hwops/internal/observability"
+	"hwops/internal/sandbox"
 	"hwops/internal/transport/httpapi"
 )
 
@@ -35,9 +38,16 @@ func main() {
 }
 
 func run() error {
+	authMode := env("HWOPS_AUTH_MODE", "local_token")
+	if authMode != "local_token" && authMode != "users" {
+		return errors.New("HWOPS_AUTH_MODE must be local_token or users")
+	}
 	token := os.Getenv("HWOPS_API_TOKEN")
-	if strings.TrimSpace(token) == "" {
+	if authMode == "local_token" && strings.TrimSpace(token) == "" {
 		return errors.New("HWOPS_API_TOKEN is required")
+	}
+	if authMode == "users" && (token != "" || os.Getenv("HWOPS_DATABASE_URL") == "") {
+		return errors.New("users mode requires HWOPS_DATABASE_URL and rejects HWOPS_API_TOKEN")
 	}
 	mode := strings.ToUpper(env("HWOPS_MODEL_MODE", "LIVE"))
 	var cm model.BaseChatModel
@@ -84,7 +94,45 @@ func run() error {
 		return fmt.Errorf("open %s repository: %w", backend, err)
 	}
 	defer store.Close()
-	options := application.Options{}
+	options := application.Options{UsersMode: authMode == "users"}
+	if options.UsersMode {
+		options.ModelContextTokens, err = strconv.Atoi(env("HWOPS_MODEL_CONTEXT_TOKENS", "131072"))
+		if err != nil {
+			return errors.New("HWOPS_MODEL_CONTEXT_TOKENS must be an integer")
+		}
+		options.InputTokenBudget, err = strconv.Atoi(env("HWOPS_INPUT_TOKEN_BUDGET", "98304"))
+		if err != nil {
+			return errors.New("HWOPS_INPUT_TOKEN_BUDGET must be an integer")
+		}
+		quota, parseErr := strconv.ParseInt(env("HWOPS_FILE_QUOTA_BYTES", "10000000000"), 10, 64)
+		if parseErr != nil {
+			return errors.New("invalid private file quota")
+		}
+		reserve, parseErr := strconv.ParseInt(env("HWOPS_FILE_RESERVE_BYTES", "1000000000"), 10, 64)
+		if parseErr != nil {
+			return errors.New("invalid private file reserve")
+		}
+		options.Files, err = blobstore.Open(env("HWOPS_FILES_DIR", ".local/workbench-files"), quota, reserve)
+		if err != nil {
+			return err
+		}
+		if endpoint := os.Getenv("HWOPS_RUNNER_URL"); endpoint != "" {
+			options.Runner, err = runnerClient(endpoint, os.Getenv("HWOPS_RUNNER_TOKEN_FILE"), "Python")
+			if err != nil {
+				return err
+			}
+		}
+		if endpoint := os.Getenv("HWOPS_PARSER_RUNNER_URL"); endpoint != "" {
+			options.AttachmentRunner, err = runnerClient(endpoint, os.Getenv("HWOPS_PARSER_RUNNER_TOKEN_FILE"), "attachment parser")
+			if err != nil {
+				return err
+			}
+		}
+	}
+	options.TracePrivateContent, err = envBool("HWOPS_TRACE_PRIVATE_CONTENT", false)
+	if err != nil {
+		return errors.New("HWOPS_TRACE_PRIVATE_CONTENT must be true or false")
+	}
 	if endpoint := os.Getenv("HWOPS_MONITOR_ENDPOINT"); endpoint != "" {
 		options.Observer, err = monitor.New(endpoint, os.Getenv("HWOPS_MONITOR_API_KEY"), mode, 10*time.Second, 4)
 		if err != nil {
@@ -127,13 +175,33 @@ func run() error {
 	}
 	defer app.Close()
 
+	var handler http.Handler
+	if authMode == "users" {
+		accounts, err := identity.New(store.(*postgres.Store).Pool())
+		if err != nil {
+			return err
+		}
+		handler, err = httpapi.NewUsers(app, accounts, httpapi.UsersConfig{
+			Origin: os.Getenv("HWOPS_PUBLIC_ORIGIN"), StaticDir: env("HWOPS_WEB_DIR", "web/dist"),
+			TracePrivateContent: options.TracePrivateContent,
+		})
+		if err != nil {
+			return err
+		}
+	} else {
+		handler = httpapi.New(app, token)
+	}
 	listener, err := net.Listen("tcp", env("HWOPS_LISTEN_ADDR", "127.0.0.1:8080"))
 	if err != nil {
 		return err
 	}
+	readTimeout, writeTimeout := 15*time.Second, 15*time.Second
+	if authMode == "users" {
+		readTimeout, writeTimeout = 2*time.Minute, 2*time.Minute
+	}
 	server := &http.Server{
-		Handler: httpapi.New(app, token), ReadHeaderTimeout: 5 * time.Second,
-		ReadTimeout: 15 * time.Second, WriteTimeout: 15 * time.Second, IdleTimeout: time.Minute,
+		Handler: handler, ReadHeaderTimeout: 5 * time.Second,
+		ReadTimeout: readTimeout, WriteTimeout: writeTimeout, IdleTimeout: time.Minute,
 	}
 	finished := make(chan error, 1)
 	go func() { finished <- server.Serve(listener) }()
@@ -153,6 +221,22 @@ func run() error {
 		}
 		return nil
 	}
+}
+
+func runnerClient(endpoint, tokenFile, label string) (sandbox.Runner, error) {
+	info, err := os.Stat(tokenFile)
+	if err != nil || info.Mode().Perm()&0077 != 0 {
+		return nil, fmt.Errorf("%s token file must be private", label)
+	}
+	raw, err := os.ReadFile(tokenFile)
+	if err != nil {
+		return nil, fmt.Errorf("%s token unavailable", label)
+	}
+	runner, err := sandbox.NewClient(endpoint, strings.TrimSpace(string(raw)))
+	if err != nil {
+		return nil, fmt.Errorf("%s runner: %w", label, err)
+	}
+	return runner, nil
 }
 
 func env(key, fallback string) string {

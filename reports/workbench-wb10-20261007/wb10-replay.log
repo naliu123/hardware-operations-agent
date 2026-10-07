@@ -1,0 +1,157 @@
+=== RUN   TestWB02HistorySearchSummaryAndIsolation
+    workbench_conversations_test.go:168: REPLAY: real PostgreSQL + external adapter; history, bounded summary/range/citations, summary failure, search isolation, pagination, title CAS and explicit retries passed
+--- PASS: TestWB02HistorySearchSummaryAndIsolation (14.32s)
+=== RUN   TestWB02ConcurrentCancelDeleteAndRestart
+2026/10/07 12:20:19 conversation cleanup will retry
+    workbench_conversations_test.go:316: REPLAY: PostgreSQL concurrent admission, per-conversation serialization, cross-conversation parallelism, cancel, restart without rerun, immediate deletion and durable cleanup retry passed
+--- PASS: TestWB02ConcurrentCancelDeleteAndRestart (12.37s)
+=== RUN   TestWB02ContextOverflowIsExplicit
+    workbench_conversations_test.go:343: REPLAY: oversized context rejected explicitly; raw history retained
+--- PASS: TestWB02ContextOverflowIsExplicit (6.39s)
+=== RUN   TestWB02DeleteRunningConversation
+2026/10/07 12:20:34 conversation cleanup will retry
+--- PASS: TestWB02DeleteRunningConversation (6.07s)
+=== RUN   TestWB02HistoryDoesNotReuseDeviceReadings
+--- PASS: TestWB02HistoryDoesNotReuseDeviceReadings (6.15s)
+=== RUN   TestWB02LiveHistory
+    workbench_conversations_test.go:441: real model integration is separate
+--- SKIP: TestWB02LiveHistory (0.00s)
+=== RUN   TestWB10LiveReasoningAndNativeTool
+    workbench_reasoning_live_test.go:14: LIVE model opt-in required
+--- SKIP: TestWB10LiveReasoningAndNativeTool (0.00s)
+=== RUN   TestWB10ReasoningToolLoopPersistenceReplayAndHistory
+    workbench_reasoning_test.go:75: REPLAY: public HTTP/SSE, external model adapter and real temporary PostgreSQL
+--- PASS: TestWB10ReasoningToolLoopPersistenceReplayAndHistory (10.76s)
+=== RUN   TestWB10ReasoningSurvivesFailureCancellationAndRestart
+=== RUN   TestWB10ReasoningSurvivesFailureCancellationAndRestart/disconnect
+    workbench_reasoning_test.go:204: REPLAY: public response lifecycle with actual PostgreSQL
+=== RUN   TestWB10ReasoningSurvivesFailureCancellationAndRestart/reasoning_only
+    workbench_reasoning_test.go:204: REPLAY: public response lifecycle with actual PostgreSQL
+=== RUN   TestWB10ReasoningSurvivesFailureCancellationAndRestart/cancel
+    workbench_reasoning_test.go:204: REPLAY: public response lifecycle with actual PostgreSQL
+=== RUN   TestWB10ReasoningSurvivesFailureCancellationAndRestart/restart
+    workbench_reasoning_test.go:204: REPLAY: public response lifecycle with actual PostgreSQL
+=== RUN   TestWB10ReasoningSurvivesFailureCancellationAndRestart/limit
+    workbench_reasoning_test.go:204: REPLAY: public response lifecycle with actual PostgreSQL
+--- PASS: TestWB10ReasoningSurvivesFailureCancellationAndRestart (36.73s)
+    --- PASS: TestWB10ReasoningSurvivesFailureCancellationAndRestart/disconnect (6.22s)
+    --- PASS: TestWB10ReasoningSurvivesFailureCancellationAndRestart/reasoning_only (6.54s)
+    --- PASS: TestWB10ReasoningSurvivesFailureCancellationAndRestart/cancel (6.48s)
+    --- PASS: TestWB10ReasoningSurvivesFailureCancellationAndRestart/restart (10.62s)
+    --- PASS: TestWB10ReasoningSurvivesFailureCancellationAndRestart/limit (6.86s)
+=== RUN   TestWorkbenchConversationalReplyStreamAndHistory
+    workbench_reply_test.go:16: REPLAY: external model stream, public HTTP and real temporary PostgreSQL
+--- PASS: TestWorkbenchConversationalReplyStreamAndHistory (7.13s)
+=== RUN   TestWorkbenchConversationalReplyCannotBypassAnswerValidation
+    workbench_reply_test.go:117: REPLAY: malformed replies and unsourced claims must fail through public HTTP
+=== RUN   TestWorkbenchConversationalReplyCannotBypassAnswerValidation/long_text
+=== RUN   TestWorkbenchConversationalReplyCannotBypassAnswerValidation/unknown_kind
+=== RUN   TestWorkbenchConversationalReplyCannotBypassAnswerValidation/empty_text
+=== RUN   TestWorkbenchConversationalReplyCannotBypassAnswerValidation/mixed_claim
+=== RUN   TestWorkbenchConversationalReplyCannotBypassAnswerValidation/mixed_observation
+=== RUN   TestWorkbenchConversationalReplyCannotBypassAnswerValidation/mixed_conflict
+=== RUN   TestWorkbenchConversationalReplyCannotBypassAnswerValidation/unsourced_claim
+--- PASS: TestWorkbenchConversationalReplyCannotBypassAnswerValidation (6.77s)
+    --- PASS: TestWorkbenchConversationalReplyCannotBypassAnswerValidation/long_text (0.03s)
+    --- PASS: TestWorkbenchConversationalReplyCannotBypassAnswerValidation/unknown_kind (0.03s)
+    --- PASS: TestWorkbenchConversationalReplyCannotBypassAnswerValidation/empty_text (0.03s)
+    --- PASS: TestWorkbenchConversationalReplyCannotBypassAnswerValidation/mixed_claim (0.03s)
+    --- PASS: TestWorkbenchConversationalReplyCannotBypassAnswerValidation/mixed_observation (0.03s)
+    --- PASS: TestWorkbenchConversationalReplyCannotBypassAnswerValidation/mixed_conflict (0.03s)
+    --- PASS: TestWorkbenchConversationalReplyCannotBypassAnswerValidation/unsourced_claim (0.01s)
+=== RUN   TestWB05PublicSSEReceivesRealDraftBeforeModelFinishAndReplays
+    workbench_streaming_test.go:296: REPLAY: public HTTPS/SSE + real PostgreSQL + external streaming adapter delivered multiple persisted deltas before finish, then retracted and atomically finalized
+--- PASS: TestWB05PublicSSEReceivesRealDraftBeforeModelFinishAndReplays (7.51s)
+=== RUN   TestWB05InvalidCitationRetractsOldDraftBeforeCorrection
+    workbench_streaming_test.go:360: REPLAY: invalid citation draft was retracted before corrected draft version 2 and final commit
+--- PASS: TestWB05InvalidCitationRetractsOldDraftBeforeCorrection (6.18s)
+=== RUN   TestWB05WithdrawnKnowledgeRetractsDraftInsteadOfPublishingIt
+    workbench_streaming_test.go:414: REPLAY: knowledge withdrawn during generation invalidated the draft before an unresolved final response
+--- PASS: TestWB05WithdrawnKnowledgeRetractsDraftInsteadOfPublishingIt (6.54s)
+=== RUN   TestWB05CancelRetractsDraftAndStopsUpstream
+    workbench_streaming_test.go:474: REPLAY: stop atomically retracted the draft, canceled the external model stream and rejected late output
+--- PASS: TestWB05CancelRetractsDraftAndStopsUpstream (6.45s)
+=== RUN   TestWB05FinalEventFailureDoesNotPromiseOrRerunAnswer
+2026/10/07 12:22:15 response result could not be persisted
+    workbench_streaming_test.go:574: REPLAY: injected PostgreSQL final-event failure rolled back retraction and answer, did not rerun, then restart atomically interrupted the draft
+--- PASS: TestWB05FinalEventFailureDoesNotPromiseOrRerunAnswer (11.13s)
+=== RUN   TestWB05DeviceSnapshotChangeRetractsGeneratedGuidance
+    workbench_streaming_test.go:631: REPLAY: a newer device snapshot prevented generated guidance from becoming final and retracted its draft
+--- PASS: TestWB05DeviceSnapshotChangeRetractsGeneratedGuidance (6.56s)
+PASS
+ok  	hwops/test/acceptance	154.821s
+=== RUN   TestReasoningBufferedAndToolRoundTrip
+=== RUN   TestReasoningBufferedAndToolRoundTrip/generate
+=== RUN   TestReasoningBufferedAndToolRoundTrip/buffered_stream
+--- PASS: TestReasoningBufferedAndToolRoundTrip (0.00s)
+    --- PASS: TestReasoningBufferedAndToolRoundTrip/generate (0.00s)
+    --- PASS: TestReasoningBufferedAndToolRoundTrip/buffered_stream (0.00s)
+=== RUN   TestReasoningNativeStreamArrivesBeforeAnswer
+--- PASS: TestReasoningNativeStreamArrivesBeforeAnswer (0.00s)
+=== RUN   TestReasoningOnlyAndOversizeStreamsFail
+=== RUN   TestReasoningOnlyAndOversizeStreamsFail/reasoning_only
+=== RUN   TestReasoningOnlyAndOversizeStreamsFail/oversize
+--- PASS: TestReasoningOnlyAndOversizeStreamsFail (0.05s)
+    --- PASS: TestReasoningOnlyAndOversizeStreamsFail/reasoning_only (0.00s)
+    --- PASS: TestReasoningOnlyAndOversizeStreamsFail/oversize (0.05s)
+=== RUN   TestReasoningOmittedFromTracing
+--- PASS: TestReasoningOmittedFromTracing (0.00s)
+=== RUN   TestOpenAINativeStreamDeliversBeforeFinishAndPreservesUsage
+--- PASS: TestOpenAINativeStreamDeliversBeforeFinishAndPreservesUsage (0.00s)
+=== RUN   TestOpenAIStreamAssemblesToolFragmentsBeforeExposure
+--- PASS: TestOpenAIStreamAssemblesToolFragmentsBeforeExposure (0.00s)
+=== RUN   TestOpenAIStreamReportsAbruptEndAndCancellation
+=== RUN   TestOpenAIStreamReportsAbruptEndAndCancellation/abrupt_end
+=== RUN   TestOpenAIStreamReportsAbruptEndAndCancellation/cancellation
+--- PASS: TestOpenAIStreamReportsAbruptEndAndCancellation (0.00s)
+    --- PASS: TestOpenAIStreamReportsAbruptEndAndCancellation/abrupt_end (0.00s)
+    --- PASS: TestOpenAIStreamReportsAbruptEndAndCancellation/cancellation (0.00s)
+=== RUN   TestOpenAIStreamRetriesOnlyBeforeDelivery
+--- PASS: TestOpenAIStreamRetriesOnlyBeforeDelivery (0.00s)
+=== RUN   TestOpenAIProtocolAndFailureSemantics
+=== RUN   TestOpenAIProtocolAndFailureSemantics/success
+=== RUN   TestOpenAIProtocolAndFailureSemantics/unavailable
+=== RUN   TestOpenAIProtocolAndFailureSemantics/redirect
+=== RUN   TestOpenAIProtocolAndFailureSemantics/malformed
+=== RUN   TestOpenAIProtocolAndFailureSemantics/no_choice
+=== RUN   TestOpenAIProtocolAndFailureSemantics/oversized
+--- PASS: TestOpenAIProtocolAndFailureSemantics (0.11s)
+    --- PASS: TestOpenAIProtocolAndFailureSemantics/success (0.00s)
+    --- PASS: TestOpenAIProtocolAndFailureSemantics/unavailable (0.10s)
+    --- PASS: TestOpenAIProtocolAndFailureSemantics/redirect (0.00s)
+    --- PASS: TestOpenAIProtocolAndFailureSemantics/malformed (0.00s)
+    --- PASS: TestOpenAIProtocolAndFailureSemantics/no_choice (0.00s)
+    --- PASS: TestOpenAIProtocolAndFailureSemantics/oversized (0.00s)
+=== RUN   TestOpenAIClientIdentityHeaders
+--- PASS: TestOpenAIClientIdentityHeaders (0.00s)
+=== RUN   TestDeepSeekDefaultThinkingAndActualUsage
+--- PASS: TestDeepSeekDefaultThinkingAndActualUsage (0.00s)
+=== RUN   TestOpenAIRetriesTransientFailureAndReturnsSuccessfulUsage
+--- PASS: TestOpenAIRetriesTransientFailureAndReturnsSuccessfulUsage (0.00s)
+=== RUN   TestOpenAIRetriesSupportedTransientStatuses
+=== RUN   TestOpenAIRetriesSupportedTransientStatuses/Too_Many_Requests
+=== RUN   TestOpenAIRetriesSupportedTransientStatuses/Internal_Server_Error
+=== RUN   TestOpenAIRetriesSupportedTransientStatuses/Bad_Gateway
+=== RUN   TestOpenAIRetriesSupportedTransientStatuses/Service_Unavailable
+=== RUN   TestOpenAIRetriesSupportedTransientStatuses/Gateway_Timeout
+--- PASS: TestOpenAIRetriesSupportedTransientStatuses (0.01s)
+    --- PASS: TestOpenAIRetriesSupportedTransientStatuses/Too_Many_Requests (0.00s)
+    --- PASS: TestOpenAIRetriesSupportedTransientStatuses/Internal_Server_Error (0.00s)
+    --- PASS: TestOpenAIRetriesSupportedTransientStatuses/Bad_Gateway (0.00s)
+    --- PASS: TestOpenAIRetriesSupportedTransientStatuses/Service_Unavailable (0.00s)
+    --- PASS: TestOpenAIRetriesSupportedTransientStatuses/Gateway_Timeout (0.00s)
+=== RUN   TestOpenAIRetriesTransportFailure
+--- PASS: TestOpenAIRetriesTransportFailure (0.10s)
+=== RUN   TestOpenAIDoesNotRetryNonTransientClientFailure
+--- PASS: TestOpenAIDoesNotRetryNonTransientClientFailure (0.00s)
+=== RUN   TestOpenAIRetryRespectsContextDuringRetryAfter
+--- PASS: TestOpenAIRetryRespectsContextDuringRetryAfter (0.05s)
+=== RUN   TestOpenAIRetryAttemptsAreBounded
+--- PASS: TestOpenAIRetryAttemptsAreBounded (0.00s)
+=== RUN   TestOpenAIToolCallingRoundTripAndImmutableBinding
+--- PASS: TestOpenAIToolCallingRoundTripAndImmutableBinding (0.00s)
+PASS
+ok  	hwops/test/contracts	4.223s
+testing: warning: no tests to run
+PASS
+ok  	hwops/internal/einoflow	4.064s [no tests to run]

@@ -1,0 +1,19 @@
+=== RUN   TestWB02HistorySearchSummaryAndIsolation
+    workbench_conversations_test.go:168: REPLAY: real PostgreSQL + external adapter; history, bounded summary/range/citations, summary failure, search isolation, pagination, title CAS and explicit retries passed
+--- PASS: TestWB02HistorySearchSummaryAndIsolation (15.74s)
+=== RUN   TestWB02ConcurrentCancelDeleteAndRestart
+2026/10/04 08:53:07 conversation cleanup will retry
+    workbench_conversations_test.go:316: REPLAY: PostgreSQL concurrent admission, per-conversation serialization, cross-conversation parallelism, cancel, restart without rerun, immediate deletion and durable cleanup retry passed
+--- PASS: TestWB02ConcurrentCancelDeleteAndRestart (13.79s)
+=== RUN   TestWB02ContextOverflowIsExplicit
+    workbench_conversations_test.go:343: REPLAY: oversized context rejected explicitly; raw history retained
+--- PASS: TestWB02ContextOverflowIsExplicit (7.26s)
+=== RUN   TestWB02DeleteRunningConversation
+--- PASS: TestWB02DeleteRunningConversation (6.84s)
+=== RUN   TestWB02HistoryDoesNotReuseDeviceReadings
+--- PASS: TestWB02HistoryDoesNotReuseDeviceReadings (7.39s)
+=== RUN   TestWB02LiveHistory
+    workbench_conversations_test.go:441: real model integration is separate
+--- SKIP: TestWB02LiveHistory (0.00s)
+PASS
+ok  	hwops/test/acceptance	52.902s

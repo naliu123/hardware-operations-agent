@@ -1,0 +1,10 @@
+
+> hwops-workbench@0.1.0 test:e2e
+> playwright test tests/reasoning.spec.ts
+
+
+Running 1 test using 1 worker
+
+  ✓  1 tests/reasoning.spec.ts:3:1 › REPLAY: thinking streams separately, survives refresh without duplication, folds and stops (10.1s)
+
+  1 passed (11.8s)

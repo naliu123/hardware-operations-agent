@@ -34,12 +34,17 @@ func (h *handler) events(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	w.Header().Set("Content-Type", "text/event-stream")
-	w.Header().Set("Cache-Control", "no-cache")
+	w.Header().Set("Cache-Control", "private, no-store")
 	w.Header().Set("X-Content-Type-Options", "nosniff")
 	controller := http.NewResponseController(w)
 	ticker := time.NewTicker(200 * time.Millisecond)
 	defer ticker.Stop()
 	for {
+		if h.identity != nil {
+			if _, err := h.authenticate(r); err != nil {
+				return
+			}
+		}
 		for _, event := range events {
 			if event.ID <= after {
 				continue

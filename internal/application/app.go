@@ -11,6 +11,7 @@ import (
 	"regexp"
 	"strings"
 	"sync"
+	"sync/atomic"
 	"time"
 
 	"github.com/cloudwego/eino/components/model"
@@ -19,14 +20,18 @@ import (
 
 	"hwops/internal/adapters/chatmodel"
 	knowledgeagent "hwops/internal/agents/knowledge"
+	"hwops/internal/attachments"
+	"hwops/internal/blobstore"
 	"hwops/internal/devices"
 	"hwops/internal/diagnosis"
 	"hwops/internal/domain"
 	"hwops/internal/einoflow"
 	"hwops/internal/evidence"
+	"hwops/internal/execution"
 	"hwops/internal/knowledge"
 	"hwops/internal/modelbudget"
 	"hwops/internal/observability"
+	"hwops/internal/sandbox"
 )
 
 type App struct {
@@ -40,15 +45,31 @@ type App struct {
 	retrieval    retriever.Retriever
 	observations *evidence.Service
 	diagnosis    *diagnosis.Engine
+	workbench    domain.WorkbenchRepository
+	draftEvents  domain.DraftEventRepository
+	model        model.BaseChatModel
+	runningMu    sync.Mutex
+	running      map[string]context.CancelFunc
+	inputLimit   int
+	python       *execution.Service
+	attachments  *attachments.Service
 }
 
 type Options struct {
-	Retriever         retriever.Retriever
-	ContextLimit      int
-	EvidenceSelection bool
-	QueryRewrite      bool
-	Observer          domain.Observer
-	DiagnosticBudget  domain.RunBudget
+	UsersMode           bool
+	TracePrivateContent bool
+	Retriever           retriever.Retriever
+	ContextLimit        int
+	EvidenceSelection   bool
+	QueryRewrite        bool
+	Observer            domain.Observer
+	DiagnosticBudget    domain.RunBudget
+	ModelContextTokens  int
+	InputTokenBudget    int
+	Runner              sandbox.Runner
+	AttachmentRunner    sandbox.Runner
+	Files               *blobstore.Store
+	ExecutionInputs     execution.InputResolver
 }
 
 func New(store domain.Repository, cm model.BaseChatModel, mode string, options ...Options) (*App, error) {
@@ -78,6 +99,23 @@ func New(store domain.Repository, cm model.BaseChatModel, mode string, options .
 		config.QueryRewrite = options[0].QueryRewrite
 		config.Observer = options[0].Observer
 		config.DiagnosticBudget = options[0].DiagnosticBudget
+		config.UsersMode = options[0].UsersMode
+		config.TracePrivateContent = options[0].TracePrivateContent
+		config.ModelContextTokens = options[0].ModelContextTokens
+		config.InputTokenBudget = options[0].InputTokenBudget
+		config.Runner = options[0].Runner
+		config.AttachmentRunner = options[0].AttachmentRunner
+		config.Files = options[0].Files
+		config.ExecutionInputs = options[0].ExecutionInputs
+	}
+	if config.UsersMode {
+		team, ok := store.(interface{ EnableUsers() error })
+		if !ok {
+			return nil, errors.New("users mode requires the PostgreSQL repository")
+		}
+		if err := team.EnableUsers(); err != nil {
+			return nil, err
+		}
 	}
 	if config.QueryRewrite {
 		if mode != "LIVE" {
@@ -101,16 +139,99 @@ func New(store domain.Repository, cm model.BaseChatModel, mode string, options .
 		return nil, err
 	}
 	observations := &evidence.Service{Observer: config.Observer, Mode: mode}
-	qa, err := einoflow.New(context.Background(), store, knowledgeTool, cm, observations)
-	if err != nil {
-		return nil, err
-	}
-	dx, err := diagnosis.New(store, cm, knowledgeTool, observations, mode, config.DiagnosticBudget)
-	if err != nil {
-		return nil, err
+	var dx *diagnosis.Engine
+	if !config.UsersMode {
+		dx, err = diagnosis.New(store, cm, knowledgeTool, observations, mode, config.DiagnosticBudget)
+		if err != nil {
+			return nil, err
+		}
 	}
 	ctx, cancel := context.WithCancel(context.Background())
-	app := &App{store: store, qa: qa, mode: mode, ctx: ctx, cancel: cancel, wake: make(chan struct{}, 1), retrieval: config.Retriever}
+	if config.UsersMode && !config.TracePrivateContent {
+		ctx = observability.WithoutContent(ctx)
+	}
+	app := &App{store: store, mode: mode, ctx: ctx, cancel: cancel, wake: make(chan struct{}, 1), retrieval: config.Retriever,
+		model: cm, running: map[string]context.CancelFunc{}}
+	if config.UsersMode {
+		app.workbench, _ = store.(domain.WorkbenchRepository)
+		if app.workbench == nil {
+			cancel()
+			return nil, errors.New("workbench repository is required")
+		}
+		app.draftEvents, _ = store.(domain.DraftEventRepository)
+		if app.draftEvents == nil {
+			cancel()
+			return nil, errors.New("workbench draft event repository is required")
+		}
+		if config.ModelContextTokens == 0 {
+			config.ModelContextTokens = 131072
+		}
+		if config.InputTokenBudget == 0 {
+			config.InputTokenBudget = 98304
+		}
+		if config.InputTokenBudget < 4096 || config.InputTokenBudget+8192 >= config.ModelContextTokens {
+			cancel()
+			return nil, errors.New("input budget plus 8192 output tokens must be below the configured model context capacity")
+		}
+		app.inputLimit = config.InputTokenBudget
+		pythonRepo, ok := store.(execution.Repository)
+		if !ok {
+			cancel()
+			return nil, errors.New("Python execution repository is required")
+		}
+		attachmentRepo, ok := store.(domain.AttachmentRepository)
+		if !ok {
+			cancel()
+			return nil, errors.New("attachment repository is required")
+		}
+		if config.AttachmentRunner != nil {
+			app.attachments, err = attachments.New(attachmentRepo, config.AttachmentRunner, config.Files)
+			if err != nil {
+				cancel()
+				return nil, err
+			}
+			if config.ExecutionInputs == nil {
+				config.ExecutionInputs = app.attachments.ResolveInputs
+			}
+		} else if pending, readErr := attachmentRepo.PendingAttachmentParses(ctx); readErr != nil || len(pending) != 0 {
+			cancel()
+			return nil, errors.New("pending attachment parses require the configured parser runner for reconciliation")
+		}
+		if config.Runner != nil {
+			app.python, err = execution.New(pythonRepo, config.Runner, config.Files, config.ExecutionInputs)
+			if err != nil {
+				cancel()
+				if app.attachments != nil {
+					app.attachments.Close()
+				}
+				return nil, err
+			}
+		} else if pending, readErr := pythonRepo.PendingPythonExecutions(ctx); readErr != nil || len(pending) != 0 {
+			cancel()
+			if app.attachments != nil {
+				app.attachments.Close()
+			}
+			return nil, errors.New("pending Python executions require the configured runner for reconciliation")
+		}
+	}
+	privateTools := app.workbenchAgentTools()
+	if !config.UsersMode {
+		privateTools = nil
+	}
+	app.qa, err = einoflow.New(context.Background(), store, knowledgeTool, cm, privateTools, observations)
+	if err == nil && config.UsersMode {
+		err = app.interruptWorkbenchResponses(ctx)
+	}
+	if err != nil {
+		cancel()
+		if app.python != nil {
+			app.python.Close()
+		}
+		if app.attachments != nil {
+			app.attachments.Close()
+		}
+		return nil, err
+	}
 	app.observations = observations
 	app.diagnosis = dx
 	app.wg.Add(1)
@@ -120,7 +241,15 @@ func New(store domain.Repository, cm model.BaseChatModel, mode string, options .
 
 func (a *App) Close() {
 	a.cancel()
-	a.diagnosis.Close()
+	if a.python != nil {
+		a.python.Close()
+	}
+	if a.attachments != nil {
+		a.attachments.Close()
+	}
+	if a.diagnosis != nil {
+		a.diagnosis.Close()
+	}
 	a.wg.Wait()
 }
 
@@ -204,11 +333,33 @@ func (a *App) Search(ctx context.Context, input knowledge.SearchInput) (knowledg
 }
 
 func (a *App) Revision(ctx context.Context, id string) (domain.Revision, error) {
-	return a.store.GetRevision(ctx, id)
+	r, err := a.store.GetRevision(ctx, id)
+	if err == nil && domain.Owner(ctx) != "" && !domain.IsAdmin(ctx) && r.Status != "PUBLISHED" {
+		reader, ok := a.store.(interface {
+			HasCitedRevision(context.Context, string) (bool, error)
+		})
+		if !ok {
+			return domain.Revision{}, domain.ErrNotFound
+		}
+		allowed, err := reader.HasCitedRevision(ctx, id)
+		if err != nil {
+			return domain.Revision{}, err
+		}
+		if !allowed {
+			return domain.Revision{}, domain.ErrNotFound
+		}
+	}
+	return r, err
+}
+
+func (a *App) Conversation(ctx context.Context, id string) (domain.Conversation, error) {
+	return a.store.GetConversation(ctx, id)
 }
 
 func (a *App) CreateConversation(ctx context.Context, owner string) (domain.Conversation, error) {
-	conversation := domain.Conversation{SchemaVersion: 1, ID: rand.Text(), Owner: owner, CreatedAt: time.Now().UTC()}
+	now := time.Now().UTC()
+	conversation := domain.Conversation{SchemaVersion: 1, ID: rand.Text(), Owner: owner, CreatedAt: now,
+		UpdatedAt: now, Title: "新会话", TitleSource: "AUTO", StateVersion: 1}
 	err := a.store.CreateConversation(ctx, conversation)
 	return conversation, err
 }
@@ -218,8 +369,18 @@ func (a *App) Submit(ctx context.Context, conversationID string, input domain.Me
 	if err := a.ctx.Err(); err != nil {
 		return domain.Response{}, err
 	}
-	if strings.TrimSpace(text) == "" || len(text) > 16000 {
-		return domain.Response{}, fmt.Errorf("%w: text is required (16 KiB max)", domain.ErrInvalid)
+	if (strings.TrimSpace(text) == "" && len(input.AttachmentIDs) == 0) || len(text) > 16000 {
+		return domain.Response{}, fmt.Errorf("%w: text or an attachment is required (text is 16 KiB max)", domain.ErrInvalid)
+	}
+	if len(input.AttachmentIDs) > domain.AttachmentMessageCount {
+		return domain.Response{}, fmt.Errorf("%w: each message accepts at most 5 attachments", domain.ErrInvalid)
+	}
+	seenAttachments := map[string]bool{}
+	for _, id := range input.AttachmentIDs {
+		if id == "" || seenAttachments[id] {
+			return domain.Response{}, fmt.Errorf("%w: attachment_ids must be non-empty and unique", domain.ErrInvalid)
+		}
+		seenAttachments[id] = true
 	}
 	key := ""
 	if len(keys) > 0 {
@@ -240,6 +401,22 @@ func (a *App) Submit(ctx context.Context, conversationID string, input domain.Me
 	if err != nil {
 		return domain.Response{}, err
 	}
+	if input.RetryOf != "" {
+		original, err := a.store.GetResponse(ctx, input.RetryOf)
+		if err != nil {
+			return domain.Response{}, err
+		}
+		if original.ConversationID != conversationID {
+			return domain.Response{}, domain.ErrNotFound
+		}
+		if original.DeviceContext != nil {
+			if input.DeviceQuery != "" || (input.DeviceID != "" && input.DeviceID != original.DeviceContext.DeviceID) {
+				return domain.Response{}, fmt.Errorf("%w: retry must retain the original device", domain.ErrInvalid)
+			}
+			// Re-resolve the device below to obtain a fresh snapshot.
+			input.DeviceID = original.DeviceContext.DeviceID
+		}
+	}
 	expectedVersion := int64(-1)
 	if input.ContextRevision != "" {
 		if input.ContextRevision != conversation.ContextRevision {
@@ -251,7 +428,16 @@ func (a *App) Submit(ctx context.Context, conversationID string, input domain.Me
 		SchemaVersion: 1, ID: rand.Text(), ConversationID: conversationID,
 		Question: text, Status: "QUEUED", DataMode: a.mode, CreatedAt: time.Now().UTC(),
 		Claims: []domain.Claim{}, Citations: []domain.Citation{}, Gaps: []string{},
-		RequestKey: key, RequestHash: hash,
+		RequestKey: key, RequestHash: hash, RetryOf: input.RetryOf,
+	}
+	for _, id := range input.AttachmentIDs {
+		response.Attachments = append(response.Attachments, domain.AttachmentReference{ID: id})
+	}
+	if a.workbench != nil {
+		response.Workbench = true
+		response.Deadline = response.CreatedAt.Add(5 * time.Minute)
+	} else if input.RetryOf != "" {
+		return domain.Response{}, fmt.Errorf("%w: retry_of requires users mode", domain.ErrInvalid)
 	}
 	if input.DeviceID != "" && input.DeviceQuery != "" {
 		return domain.Response{}, fmt.Errorf("%w: choose device_id or device_query", domain.ErrInvalid)
@@ -365,10 +551,56 @@ func (a *App) work() {
 				if a.ctx.Err() != nil {
 					return
 				}
-				a.answer(response)
+				if a.workbench != nil {
+					switch response.Status {
+					case "CANCELING":
+						// Cancellation cleanup may outlive the model worker. Poll
+						// only the durable cleanup state; never rerun the graph.
+						a.finishCancellation(response)
+						continue
+					case "RUNNING":
+						// If a worker cannot commit a terminal result, preserve
+						// the identity for restart reconciliation.
+						continue
+					}
+				}
+				if a.workbench == nil {
+					a.answer(a.ctx, response)
+					continue
+				}
+				a.runningMu.Lock()
+				_, busy := a.running[response.ID]
+				if busy || len(a.running) >= 10 {
+					a.runningMu.Unlock()
+					continue
+				}
+				ctx, cancel := context.WithCancel(a.ctx)
+				a.running[response.ID] = cancel
+				a.wg.Add(1)
+				a.runningMu.Unlock()
+				go func() {
+					defer a.wg.Done()
+					defer cancel()
+					a.answer(ctx, response)
+					a.runningMu.Lock()
+					delete(a.running, response.ID)
+					a.runningMu.Unlock()
+					a.notify()
+				}()
 			}
 		} else if a.ctx.Err() == nil {
 			log.Print("response queue could not be read")
+		}
+		if a.workbench != nil {
+			a.runningMu.Lock()
+			ids := make([]string, 0, len(a.running))
+			for id := range a.running {
+				ids = append(ids, id)
+			}
+			a.runningMu.Unlock()
+			if err = a.workbench.CleanupConversations(a.ctx, ids); err != nil && a.ctx.Err() == nil {
+				log.Print("conversation cleanup will retry")
+			}
 		}
 		select {
 		case <-a.ctx.Done():
@@ -379,12 +611,54 @@ func (a *App) work() {
 	}
 }
 
-func (a *App) answer(response domain.Response) {
+func (a *App) answer(parent context.Context, response domain.Response) {
+	if response.Status == "CANCELING" {
+		a.finishCancellation(response)
+		return
+	}
 	// Queued time and retries count toward the same request deadline.
 	deadline := response.CreatedAt.Add(time.Minute)
-	ctx, cancel := context.WithDeadline(a.ctx, deadline)
+	if a.workbench != nil {
+		deadline = response.Deadline
+	}
+	ctx, cancel := context.WithDeadline(parent, deadline)
 	defer cancel()
+	if a.workbench != nil {
+		// Use the scheduler lifetime for the authority read so a request that
+		// expired while queued can still be persisted as a terminal timeout.
+		c, err := a.store.GetConversation(a.ctx, response.ConversationID)
+		if err != nil {
+			return
+		}
+		ctx = domain.WithUser(ctx, domain.User{ID: c.Owner, Role: "USER", Active: true})
+		ctx = modelbudget.WithContextLimit(ctx, a.inputLimit)
+		var calls atomic.Int32
+		ctx = modelbudget.WithReservation(ctx, func(ctx context.Context) error {
+			saved, err := a.store.GetResponse(ctx, response.ID)
+			if err != nil {
+				return err
+			}
+			if domain.ResponseTerminal(saved.Status) || saved.Status == "CANCELING" {
+				return context.Canceled
+			}
+			if calls.Add(1) > 20 {
+				return modelbudget.ErrExceeded
+			}
+			return nil
+		})
+	}
 	ctx = chatmodel.WithSessionID(ctx, response.ConversationID)
+	if a.draftEvents != nil {
+		ctx = withWorkbenchTurn(ctx, response)
+		ctx = einoflow.WithDraftEmitter(ctx, &responseDraftEmitter{
+			repo: a.draftEvents, responseID: response.ID,
+		})
+		if repo, ok := a.store.(domain.ReasoningEventRepository); ok {
+			ctx = einoflow.WithReasoningEmitter(ctx, &responseReasoningEmitter{
+				repo: repo, responseID: response.ID,
+			})
+		}
+	}
 	ctx, span := observability.Start(ctx, "qa.answer", "CHAIN", response.Question)
 	response.TraceID = observability.TraceID(ctx)
 	span.SetAttributes(attribute.String("session.id", response.ConversationID),
@@ -404,34 +678,88 @@ func (a *App) answer(response domain.Response) {
 	if response.DataMode != a.mode {
 		err = errors.New("model mode changed during restart")
 	} else {
-		result, err = a.qa.Answer(ctx, response)
+		if a.workbench != nil {
+			ctx, err = a.prepareHistory(ctx, &response)
+		}
+		if err == nil {
+			result, err = a.qa.Answer(ctx, response)
+		}
 	}
 	// Leave the durable task pending when shutdown interrupts execution.
 	if a.ctx.Err() != nil {
 		return
 	}
+	if a.workbench != nil {
+		saved, readErr := a.store.GetResponse(a.ctx, response.ID)
+		if readErr != nil || domain.ResponseTerminal(saved.Status) {
+			return
+		}
+		if saved.Status == "CANCELING" {
+			saved.ModelUsage = result.ModelUsage
+			saved.KnowledgeToolCalls = result.KnowledgeToolCalls
+			saved.Evidence = result.Evidence
+			saved.Sources = result.Sources
+			saved.Executions = result.Executions
+			if saved.ModelUsage == nil {
+				saved.ModelUsage = response.ModelUsage
+			}
+			a.finishCancellation(saved)
+			return
+		}
+	}
 	if err != nil {
 		traceErr = err
-		response.ModelUsage = result.ModelUsage
+		if result.ModelUsage != nil {
+			response.ModelUsage = result.ModelUsage
+		}
 		response.EvidenceSelection = result.EvidenceSelection
 		response.ApplicabilityChecks = result.ApplicabilityChecks
 		response.RetrievedFragmentIDs = result.RetrievedFragmentIDs
 		response.KnowledgeToolCalls = result.KnowledgeToolCalls
 		response.Evidence = result.Evidence
+		response.Sources = result.Sources
+		response.Executions = result.Executions
 		result = response
 		result.Status = "FAILED"
 		code, message := "PROCESSING_FAILED", "问答处理失败，请稍后重试。"
 		switch {
 		case errors.Is(err, context.DeadlineExceeded):
 			code, message = "DEADLINE_EXCEEDED", "请求总时限已到，未生成有效答案。"
+		case errors.Is(err, ErrHistory):
+			code, message = "CONTEXT_LIMIT", "历史压缩失败或超出上下文预算；原始记录已保留，本轮未省略历史继续生成。"
 		case errors.Is(err, chatmodel.ErrUnavailable):
 			code, message = "MODEL_UNAVAILABLE", "模型未配置或调用失败，未使用模拟答案替代。"
+		case errors.Is(err, modelbudget.ErrExceeded):
+			code, message = "MODEL_BUDGET_EXCEEDED", "模型上下文或调用预算已用尽，未继续生成。"
 		case errors.Is(err, einoflow.ErrToolBudget):
-			code, message = "TOOL_BUDGET_EXCEEDED", "知识查询重复或已达到调用次数上限，未发布待校验答案。"
+			code, message = "TOOL_BUDGET_EXCEEDED", "知识或分析工具重复调用或已达到次数上限，未发布待校验答案。"
 		case errors.Is(err, einoflow.ErrInvalidAnswer), errors.Is(err, knowledgeagent.ErrInvalidResult):
 			code, message = "INVALID_MODEL_OUTPUT", "模型输出或引用未通过校验，未发布该答案。"
 		}
 		result.Error = &domain.Failure{Code: code, Message: message}
+	}
+	if a.python != nil {
+		ticker := time.NewTicker(250 * time.Millisecond)
+		defer ticker.Stop()
+		for {
+			settled, checkErr := a.store.(domain.PythonRepository).ResponsePythonSettled(a.ctx, response.ID)
+			if checkErr == nil && settled {
+				break
+			}
+			select {
+			case <-a.ctx.Done():
+				return
+			case <-ticker.C:
+			}
+		}
+		executions, listErr := a.store.(domain.PythonRepository).ResponsePythonExecutions(
+			context.WithoutCancel(ctx), response.ID)
+		if listErr != nil {
+			traceErr = listErr
+			log.Print("response executions could not be read")
+			return
+		}
+		result.Executions = compactExecutions(executions)
 	}
 	if err := a.store.SaveResponse(a.ctx, result); err != nil {
 		traceErr = err
@@ -439,4 +767,32 @@ func (a *App) answer(response domain.Response) {
 	} else if saved, err := a.store.GetResponse(a.ctx, result.ID); err == nil {
 		response = saved
 	}
+}
+
+func (a *App) finishCancellation(r domain.Response) {
+	if repo, ok := a.store.(domain.PythonRepository); ok {
+		settled, err := repo.ResponsePythonSettled(a.ctx, r.ID)
+		if err != nil || !settled {
+			return
+		}
+		executions, err := repo.ResponsePythonExecutions(a.ctx, r.ID)
+		if err != nil {
+			return
+		}
+		r.Executions = compactExecutions(executions)
+	}
+	r.Status = "CANCELED"
+	r.Error = &domain.Failure{Code: "CANCELED", Message: "本轮已停止。"}
+	if err := a.store.SaveResponse(a.ctx, r); err != nil && a.ctx.Err() == nil {
+		log.Print("response cancellation could not be persisted")
+	}
+}
+
+func compactExecutions(executions []domain.PythonExecution) []domain.PythonExecution {
+	out := make([]domain.PythonExecution, 0, len(executions))
+	for _, execution := range executions {
+		compact, _, _ := compactExecution(execution)
+		out = append(out, compact)
+	}
+	return out
 }
