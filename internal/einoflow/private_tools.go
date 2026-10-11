@@ -20,11 +20,21 @@ const (
 )
 
 func invokePrivate(ctx context.Context, t *turn, tools map[string]tool.InvokableTool) error {
-	if len(t.Last.ToolCalls) == 0 ||
-		t.PrivateCalls+len(t.Last.ToolCalls) > maxPrivateToolCalls {
-		return ErrToolBudget
+	if len(t.Last.ToolCalls) == 0 {
+		return ErrInvalidAnswer
+	}
+	ids := map[string]bool{}
+	for _, call := range t.Last.ToolCalls {
+		if tools[call.Function.Name] == nil || call.Type != "function" || strings.TrimSpace(call.ID) == "" ||
+			t.CallIDs[call.ID] || ids[call.ID] || len(call.Function.Arguments) > 80*1024 {
+			return ErrInvalidAnswer
+		}
+		ids[call.ID] = true
 	}
 	for _, call := range t.Last.ToolCalls {
+		if t.PrivateCalls >= maxPrivateToolCalls {
+			return ErrToolBudget
+		}
 		if err := invokeOnePrivate(ctx, t, tools, call); err != nil {
 			return err
 		}

@@ -26,7 +26,13 @@ runner、备份和恢复见[工作台部署说明](docs/workbench-development.md
 
 工具返回 `FOUND`、`NEEDS_CONTEXT`、`NOT_FOUND` 或 `FAILED` 及结构化证据、引用、实际检索问题、适用性检查、trace、数据模式和模型usage。主 Agent 通过 Eino `ToolCallingChatModel.WithTools` 注册该 AgentTool，由模型决定是否检索、查询内容及是否继续检索。问答 Graph 为 `agent → tools → agent` 循环，模型输出答案后进入 `validate`；无证据时只能返回具体缺口。
 
-每次问答最多调用三次知识工具；大小写和空白归一化后的重复查询、未知工具或非法参数均明确失败。累计提供给主模型的证据 JSON 不超过 48 KiB，重复片段只返回已提供的 ID。响应的 `knowledge_tool_calls` 保存每次请求、状态、片段 ID、缺口和错误，失败后也保留。最终答案生成、原文与引用复核、设备快照更新检查由主 Agent 和业务层完成。
+每次问答最多执行三次知识检索。达到次数上限或遇到归一化后的重复查询时，停止工具、
+在原预算内以 `tool_choice=none` 收尾，再进入正常答案复核。资料充分返回答案，部分充分
+返回 `PARTIAL`，无依据返回具体缺口；超出预算的批量请求只执行有效前缀，其余请求
+保存拒绝原因。未知工具、非法参数、重复调用 ID、模型不遵守禁止工具要求或服务故障
+仍明确失败。累计证据 JSON 不超过 48 KiB，重复片段只返回已提供的 ID。
+`knowledge_tool_calls` 保留实际查询、拒绝记录、证据、缺口和用量。详见
+[03j 工单](.scratch/hardware-operations-agent/issues/03j-tool-limit-finalization.md)。
 
 在线 RAG 回答在 `LIVE` 模式默认增加原文支撑复核：独立的无工具模型调用逐条检查
 结论及其引用，支持原句与原始行范围须精确一致。格式、引用和语义修正共用一次
@@ -167,7 +173,7 @@ PostgreSQL 使用 `pgx/v5`，启动时核对实际 schema 并应用版本化迁�
 | `POST /v1/runs/{id}/resume` | `state_version`、`reason`；恢复 WAITING/PAUSED，HTTP 202 |
 | `POST /v1/runs/{id}/cancel` | `state_version`、`reason`；停止新步骤并归档正在返回的只读结果 |
 
-响应从 `QUEUED`、`RUNNING` 进入 `ANSWERED`、`PARTIAL`、`UNRESOLVED` 或 `FAILED`；设备有歧义或缺少必要版本时返回 `NEEDS_CLARIFICATION`。有依据的结论与具体缺口并存时返回`PARTIAL`；无适用知识返回 `UNRESOLVED` 和缺口。输出或引用经一次修正仍无效返回 `INVALID_MODEL_OUTPUT`；重复知识查询或超过三次调用返回 `TOOL_BUDGET_EXCEEDED`；总时限到达返回 `DEADLINE_EXCEEDED`。最终答案在校验后一次性保存。
+响应从 `QUEUED`、`RUNNING` 进入 `ANSWERED`、`PARTIAL`、`UNRESOLVED` 或 `FAILED`；设备有歧义或缺少必要版本时返回 `NEEDS_CLARIFICATION`。有依据的结论与具体缺口并存时返回`PARTIAL`；无适用知识返回 `UNRESOLVED` 和缺口。输出或引用经一次修正仍无效返回 `INVALID_MODEL_OUTPUT`；知识重复查询或次数耗尽停止工具并进入有界收尾，拒绝的工具记录保留具体错误码；总时限到达返回 `DEADLINE_EXCEEDED`。最终答案在校验后一次性保存。
 
 消息接口的 `Idempotency-Key` 在会话内生效，同键同请求返回原响应，内容不同返回409。
 明确指代设备时可传 `context_revision` 拒绝旧上下文。SSE 断线不取消已受理的任务。

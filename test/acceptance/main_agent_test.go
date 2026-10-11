@@ -186,11 +186,11 @@ func TestMainAgentRejectsInvalidToolCallsAndBoundsLoops(t *testing.T) {
 			code, modelCalls := "INVALID_MODEL_OUTPUT", int32(1)
 			switch scenario {
 			case "duplicate":
-				code, modelCalls = "TOOL_BUDGET_EXCEEDED", 2
+				modelCalls = 3
 			case "budget":
-				code, modelCalls = "TOOL_BUDGET_EXCEEDED", 4
+				modelCalls = 4
 			case "batch-budget":
-				code = "TOOL_BUDGET_EXCEEDED"
+				modelCalls = 2
 			case "duplicate-id":
 				modelCalls = 2
 			case "uncited":
@@ -205,8 +205,12 @@ func TestMainAgentRejectsInvalidToolCallsAndBoundsLoops(t *testing.T) {
 				t.Error("untrusted device argument reached retrieval")
 			}
 			if scenario == "budget" || scenario == "batch-budget" {
-				if len(answer.KnowledgeToolCalls) != 4 || answer.KnowledgeToolCalls[3].Error == nil ||
-					answer.KnowledgeToolCalls[3].Error.Code != "TOOL_BUDGET_EXCEEDED" {
+				want := 3
+				if scenario == "batch-budget" {
+					want = 4
+				}
+				if len(answer.KnowledgeToolCalls) != want ||
+					(scenario == "batch-budget" && answer.KnowledgeToolCalls[3].Error == nil) {
 					t.Error("rejected tool budget attempt was not recorded")
 				}
 			}

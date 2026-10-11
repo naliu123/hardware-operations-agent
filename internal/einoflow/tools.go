@@ -21,15 +21,7 @@ const maxKnowledgeCalls = 3
 const maxEvidenceBytes = 48 * 1024
 
 func invokeKnowledge(ctx context.Context, t *turn, knowledgeTool tool.InvokableTool) error {
-	if len(t.Last.ToolCalls) > maxKnowledgeCalls-t.Calls {
-		for _, call := range t.Last.ToolCalls {
-			t.Response.KnowledgeToolCalls = append(t.Response.KnowledgeToolCalls, domain.KnowledgeToolCall{
-				ID: call.ID, Name: call.Function.Name, Status: "FAILED",
-				Error: &domain.Failure{Code: "TOOL_BUDGET_EXCEEDED", Message: "知识检索调用超过三次预算。"},
-			})
-		}
-		return ErrToolBudget
-	}
+	limited := false
 	for _, call := range t.Last.ToolCalls {
 		record := domain.KnowledgeToolCall{ID: call.ID, Name: call.Function.Name, Status: "FAILED"}
 		t.Response.KnowledgeToolCalls = append(t.Response.KnowledgeToolCalls, record)
@@ -46,12 +38,19 @@ func invokeKnowledge(ctx context.Context, t *turn, knowledgeTool tool.InvokableT
 			return ErrInvalidAnswer
 		}
 		current.Request = strings.TrimSpace(args.Request)
+		t.CallIDs[call.ID] = true
 		queryKey := strings.ToLower(strings.Join(strings.Fields(args.Request), " "))
-		if t.Queries[queryKey] {
-			current.Error = &domain.Failure{Code: "REPEATED_TOOL_CALL", Message: "相同设备上下文下不得重复知识查询。"}
-			return ErrToolBudget
+		if limited || t.Calls >= maxKnowledgeCalls || t.Queries[queryKey] {
+			current.Error = &domain.Failure{Code: "TOOL_BUDGET_EXCEEDED", Message: "知识检索调用超过三次预算，未执行该查询。"}
+			if t.Queries[queryKey] {
+				current.Error = &domain.Failure{Code: "REPEATED_TOOL_CALL", Message: "相同设备上下文下不得重复知识查询，未执行该查询。"}
+			}
+			limited = true
+			raw, _ := json.Marshal(map[string]any{"status": "NOT_EXECUTED", "error": current.Error})
+			t.Messages = append(t.Messages, schema.ToolMessage(string(raw), call.ID))
+			continue
 		}
-		t.Queries[queryKey], t.CallIDs[call.ID] = true, true
+		t.Queries[queryKey] = true
 		t.Calls++
 		result, err := knowledgeagent.Invoke(ctx, knowledgeTool, current.Request,
 			t.Response.DeviceContext, t.Response.DataMode)
@@ -123,6 +122,9 @@ func invokeKnowledge(ctx context.Context, t *turn, knowledgeTool tool.InvokableT
 			return err
 		}
 		t.Messages = append(t.Messages, schema.ToolMessage(string(payload), call.ID))
+	}
+	if limited {
+		return ErrToolBudget
 	}
 	return nil
 }

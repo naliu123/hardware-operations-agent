@@ -41,6 +41,7 @@
 | PHOENIX-EVALUATION-PLATFORM（03g） | 03f | 已完成（全量历史迁移及后续评测默认同步） |
 | MAIN-AGENT-RAG-TOOL（03h） | 03e | 已完成（主模型自主调用RAG工具；真实模型协议烟测通过） |
 | ONLINE-ANSWER-GROUNDING（03i） | 03h、WB-05 | done（在线原文支撑复核、公开HTTP/PostgreSQL/SSE回归、真实模型烟测与双轴审查通过） |
+| TOOL-LIMIT-FINALIZATION（03j） | 03h、03i、WB-05 | done（工具限额后禁工具收尾，HTTP/PostgreSQL/SSE及LIVE烟测通过，本地工作台已更新） |
 | QA-03 | QA-02 | 已完成（缺口与代次、父章节扩展、冲突出处及建议阻断；REPLAY验收） |
 | QA-04 | QA-02 | 已完成（只读观测契约及问答工具；生产监控未联调） |
 | QA-05 | QA-01 | 已完成（设备指代、消息幂等、持久化SSE；PostgreSQL待联调） |
@@ -159,6 +160,12 @@ Monty Python Code Evaluator并绑定全部10个dataset，重复注册数量不�
 **实施记录（2026-10-01）：** OpenAI适配器实现不可变`WithTools`及原生工具请求/响应协议；主循环最多三次知识调用、累计证据48 KiB，拒绝重复查询和非法参数。响应持久化逐次`knowledge_tool_calls`及失败记录。公开HTTP与外部模型桩验证改问重查、无检索、设备身份、调用预算、证据去重、引用和重启记录，结果标记REPLAY；全量race、vet、构建通过。
 
 真实`deepseek-v4.1-flash`通过隔离临时库和公开HTTP完成一次知识工具调用、两次模型调用，答案引用可回读。该烟测使用合成手册和本地词项检索，不代表CCE全量质量或生产设备验收；查询改写及证据选择未在此次真实烟测启用。证据与复现见[03h工单](../../.scratch/hardware-operations-agent/issues/03h-main-agent-rag-tool.md)。
+
+### 03j：工具次数耗尽后收尾
+
+停止重复或超预算工具调用，在原预算内禁止工具生成收尾答案；已有证据继续经过
+原文、语义、适用性及保存事务校验。批量请求只执行有效前缀并保留拒绝记录。
+验收与本地工作台部署见[03j 工单](../../.scratch/hardware-operations-agent/issues/03j-tool-limit-finalization.md)。
 
 ### QA-03：召回不足时纠偏，资料冲突时说明缺口
 
