@@ -62,6 +62,7 @@ type Options struct {
 	ContextLimit        int
 	EvidenceSelection   bool
 	QueryRewrite        bool
+	GroundingModel      model.BaseChatModel
 	Observer            domain.Observer
 	DiagnosticBudget    domain.RunBudget
 	ModelContextTokens  int
@@ -82,6 +83,23 @@ func New(store domain.Repository, cm model.BaseChatModel, mode string, options .
 	if cm == nil {
 		cm = &chatmodel.Unconfigured{}
 	}
+	var grounding model.BaseChatModel
+	if mode == "LIVE" {
+		grounding = cm
+	}
+	if len(options) > 0 && options[0].GroundingModel != nil {
+		grounding = options[0].GroundingModel
+	}
+	if grounding != nil {
+		wrapped, err := modelbudget.Wrap(grounding)
+		if err != nil {
+			return nil, err
+		}
+		grounding, err = wrapped.WithTools(nil)
+		if err != nil {
+			return nil, err
+		}
+	}
 	counted, err := modelbudget.Wrap(cm)
 	if err != nil {
 		return nil, err
@@ -97,6 +115,7 @@ func New(store domain.Repository, cm model.BaseChatModel, mode string, options .
 		}
 		config.EvidenceSelection = options[0].EvidenceSelection
 		config.QueryRewrite = options[0].QueryRewrite
+		config.GroundingModel = options[0].GroundingModel
 		config.Observer = options[0].Observer
 		config.DiagnosticBudget = options[0].DiagnosticBudget
 		config.UsersMode = options[0].UsersMode
@@ -218,7 +237,7 @@ func New(store domain.Repository, cm model.BaseChatModel, mode string, options .
 	if !config.UsersMode {
 		privateTools = nil
 	}
-	app.qa, err = einoflow.New(context.Background(), store, knowledgeTool, cm, privateTools, observations)
+	app.qa, err = einoflow.New(context.Background(), store, knowledgeTool, cm, grounding, privateTools, observations)
 	if err == nil && config.UsersMode {
 		err = app.interruptWorkbenchResponses(ctx)
 	}
@@ -697,6 +716,7 @@ func (a *App) answer(parent context.Context, response domain.Response) {
 		if saved.Status == "CANCELING" {
 			saved.ModelUsage = result.ModelUsage
 			saved.KnowledgeToolCalls = result.KnowledgeToolCalls
+			saved.GroundingReviews = result.GroundingReviews
 			saved.Evidence = result.Evidence
 			saved.Sources = result.Sources
 			saved.Executions = result.Executions
@@ -713,6 +733,7 @@ func (a *App) answer(parent context.Context, response domain.Response) {
 			response.ModelUsage = result.ModelUsage
 		}
 		response.EvidenceSelection = result.EvidenceSelection
+		response.GroundingReviews = result.GroundingReviews
 		response.ApplicabilityChecks = result.ApplicabilityChecks
 		response.RetrievedFragmentIDs = result.RetrievedFragmentIDs
 		response.KnowledgeToolCalls = result.KnowledgeToolCalls
@@ -725,12 +746,16 @@ func (a *App) answer(parent context.Context, response domain.Response) {
 		switch {
 		case errors.Is(err, context.DeadlineExceeded):
 			code, message = "DEADLINE_EXCEEDED", "请求总时限已到，未生成有效答案。"
+		case errors.Is(err, einoflow.ErrGroundingReview) && errors.Is(err, chatmodel.ErrUpstreamTimeout):
+			code, message = "GROUNDING_REVIEW_TIMEOUT", "原文支撑复核上游超时，未发布该答案。"
 		case errors.Is(err, ErrHistory):
 			code, message = "CONTEXT_LIMIT", "历史压缩失败或超出上下文预算；原始记录已保留，本轮未省略历史继续生成。"
-		case errors.Is(err, chatmodel.ErrUnavailable):
-			code, message = "MODEL_UNAVAILABLE", "模型未配置或调用失败，未使用模拟答案替代。"
 		case errors.Is(err, modelbudget.ErrExceeded):
 			code, message = "MODEL_BUDGET_EXCEEDED", "模型上下文或调用预算已用尽，未继续生成。"
+		case errors.Is(err, einoflow.ErrGroundingReview):
+			code, message = "GROUNDING_REVIEW_FAILED", "答案原文支撑复核失败，未发布该答案。"
+		case errors.Is(err, chatmodel.ErrUnavailable):
+			code, message = "MODEL_UNAVAILABLE", "模型未配置或调用失败，未使用模拟答案替代。"
 		case errors.Is(err, einoflow.ErrToolBudget):
 			code, message = "TOOL_BUDGET_EXCEEDED", "知识或分析工具重复调用或已达到次数上限，未发布待校验答案。"
 		case errors.Is(err, einoflow.ErrInvalidAnswer), errors.Is(err, knowledgeagent.ErrInvalidResult):

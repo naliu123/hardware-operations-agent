@@ -62,6 +62,13 @@ type counted struct {
 	toolBytes int
 }
 
+func (m *counted) ModelName() string {
+	if named, ok := m.base.(interface{ ModelName() string }); ok {
+		return named.ModelName()
+	}
+	return "configured-model"
+}
+
 func Wrap(base model.BaseChatModel) (model.ToolCallingChatModel, error) {
 	caller, ok := base.(model.ToolCallingChatModel)
 	if !ok {

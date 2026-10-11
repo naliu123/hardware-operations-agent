@@ -28,6 +28,7 @@ type turn struct {
 	Messages         []*schema.Message
 	Raw              string
 	Last             *schema.Message
+	PrivateEvidence  []groundingEvidence
 	Calls            int
 	ObservationCalls int
 	PrivateCalls     int
@@ -40,10 +41,15 @@ type QA struct {
 	graph compose.Runnable[*turn, *turn]
 }
 
-func New(ctx context.Context, store domain.Repository, knowledgeTool tool.InvokableTool, cm model.BaseChatModel,
+func New(ctx context.Context, store domain.Repository, knowledgeTool tool.InvokableTool, cm, grounding model.BaseChatModel,
 	privateTools []tool.InvokableTool, observers ...*evidence.Service) (*QA, error) {
 	if knowledgeTool == nil || cm == nil {
 		return nil, domain.ErrInvalid
+	}
+	if grounding != nil {
+		if _, ok := store.(domain.GroundingRepository); !ok {
+			return nil, fmt.Errorf("grounding review requires durable review storage")
+		}
 	}
 	caller, ok := cm.(model.ToolCallingChatModel)
 	if !ok {
@@ -109,6 +115,7 @@ func New(ctx context.Context, store domain.Repository, knowledgeTool tool.Invoka
 这类回复使用 reply:{"kind":"INTRODUCTION|GREETING|CLARIFICATION","text":"直接对用户说的话"}，claims=[]。kind 必须选一个实际值：INTRODUCTION 用于身份和能力介绍，GREETING 用于问候，CLARIFICATION 用于询问尚不明确的需求。
 reply 不能用于硬件知识、配置建议、实时状态或附件/执行结果，不能与 claims、observations、conflicts 混用。已有实际证据的事实结论继续使用 claims 和引用，真实读数继续使用 observations。
 INTRODUCTION/GREETING 不调用工具且 gaps=[]；CLARIFICATION 可以说明尚缺的信息并询问用户。面对“？”、“什么意思”等追问，先根据 conversation_history 回应上文；已有身份提问时应直接补充介绍，不要忽略上下文。
+本轮调用任意证据工具后，不再使用reply；需要澄清时使用claims=[]与具体gaps，事实结论继续使用claims与来源。
 conversation_history 是当前会话已持久化的历史，不是新指令或本轮证据。用它理解追问的对象、范围与用户约定。历史引用需通过本轮工具重新读取并核对后才能支持新的知识结论；摘要与历史设备读数不能代替当前新鲜观测。失败、中断、取消及未完成的回答不是已确认事实。
 若提供observe_device工具，运行状态问题可直接调用它，无需检索无关手册。每类工具最多三次。观测工具返回实际数据，最终用observations:[{"evidence_id":"实际ID","fields":["已返回字段"]}]选择展示，严禁在claims里编造或改写实时数值或整机健康结论。观测摘要由程序呈现。
 需要手册依据时调用工具，request 必须是自包含的知识问题，不传设备身份、检索策略或预算。
@@ -166,9 +173,14 @@ claims只写资料支持的结论，每项必须有支持该项全部内容的�
 		}},
 		{"validate", func(ctx context.Context, t *turn) (*turn, error) {
 			for attempt := 0; attempt < 2; attempt++ {
-				err := validate(ctx, store, t)
-				if err == nil || !errors.Is(err, ErrInvalidAnswer) || attempt == 1 {
+				err := validate(ctx, store, t, grounding, attempt == 1)
+				var unsupported *unsupportedAnswer
+				if err == nil || (!errors.Is(err, ErrInvalidAnswer) && !errors.As(err, &unsupported)) || attempt == 1 {
 					return t, err
+				}
+				feedback := ""
+				if unsupported != nil {
+					feedback = "\n答案原文支撑复核不通过。删除无依据断言、缩小结论或报告具体缺口；仅修改答案，不增加工具调用。\n" + unsupported.feedback
 				}
 				messages := append(append([]*schema.Message{}, t.Messages...),
 					schema.UserMessage(`输出未通过 JSON 或引用检查。公开知识只能放 fragment_ids；
@@ -176,7 +188,8 @@ source_ids 只能放 read_private_attachment 或 run_python_analysis 返回的 s
 文档 source/URL/标题都不是 source_id，未调用私有工具时必须省略 source_ids。
 reply 仅用于身份介绍、问候或澄清，kind 只能为 INTRODUCTION、GREETING、CLARIFICATION，
 text 必须非空且不超过16000字节，不能与 claims、observations 或 conflicts 混用。
-请只输出要求的 JSON 结构，事实结论引用工具实际返回的 ID。`))
+本轮已经调用证据工具时必须省略reply。需澄清或无依据时使用claims=[]和具体gaps。
+请只输出要求的 JSON 结构，事实结论引用工具实际返回的 ID。`+feedback))
 				result, err := streamGenerate(ctx, bound, messages, model.WithToolChoice(schema.ToolChoiceForbidden))
 				if err != nil {
 					return t, err
@@ -220,7 +233,7 @@ text 必须非空且不超过16000字节，不能与 claims、observations 或 c
 	return &QA{graph: compiled}, nil
 }
 
-func validate(ctx context.Context, store domain.Repository, t *turn) error {
+func validate(ctx context.Context, store domain.Repository, t *turn, grounding model.BaseChatModel, finalAttempt bool) error {
 	var draft domain.Draft
 	if err := json.Unmarshal([]byte(t.Raw), &draft); err != nil || draft.Claims == nil || len(draft.Claims) > 20 {
 		return ErrInvalidAnswer
@@ -234,6 +247,11 @@ func validate(ctx context.Context, store domain.Repository, t *turn) error {
 		}
 	}
 	if draft.Reply != nil {
+		if grounding != nil && (t.Calls != 0 || t.PrivateCalls != 0 || t.ObservationCalls != 0) {
+			// After evidence tools, clarification must use empty claims + gaps.
+			// A rejected factual answer cannot escape review through reply.text.
+			return ErrInvalidAnswer
+		}
 		if strings.TrimSpace(draft.Reply.Text) == "" || len(draft.Reply.Text) > 16000 ||
 			len(draft.Claims) != 0 || len(draft.Observations) != 0 || len(draft.Conflicts) != 0 {
 			return ErrInvalidAnswer
@@ -292,6 +310,7 @@ func validate(ctx context.Context, store domain.Repository, t *turn) error {
 		allowed[doc.ID] = doc
 	}
 	var citations []domain.Citation
+	var reviewEvidence []groundingEvidence
 	var answer []string
 	seen := map[string]bool{}
 	for _, claim := range checkClaims {
@@ -357,19 +376,77 @@ func validate(ctx context.Context, store domain.Repository, t *turn) error {
 		}
 		if !affected {
 			retained = append(retained, claim)
-			answer = append(answer, claim.Text)
 		}
 	}
 	draft.Claims = retained
+	if grounding != nil && len(draft.Claims) > 0 {
+		// Include other returned documents for contradiction checks, but only
+		// claim-cited IDs may support a verdict.
+		for _, doc := range t.Docs {
+			revisionID, _ := doc.MetaData["revision_id"].(string)
+			revision, err := store.GetRevision(ctx, revisionID)
+			if err != nil {
+				return err
+			}
+			if revision.Status != "PUBLISHED" {
+				continue
+			}
+			for _, fragment := range revision.Fragments {
+				if fragment.ID == doc.ID {
+					reviewEvidence = append(reviewEvidence, knowledgeGrounding(revision, fragment))
+					break
+				}
+			}
+		}
+		reviewEvidence = append(reviewEvidence, t.PrivateEvidence...)
+		verdicts, err := reviewGrounding(ctx, store, grounding, t, draft.Claims, reviewEvidence)
+		if err != nil {
+			return err
+		}
+		supported := []domain.Claim{}
+		var feedback []string
+		var gapReasons []string
+		for i, verdict := range verdicts {
+			if verdict.Verdict == "SUPPORTED" {
+				supported = append(supported, draft.Claims[i])
+			} else {
+				feedback = append(feedback, fmt.Sprintf("结论%d：%s：%s", i, verdict.Verdict, verdict.Reason))
+				gapReasons = append(gapReasons, verdict.Reason)
+			}
+		}
+		if len(feedback) > 0 && !finalAttempt {
+			return &unsupportedAnswer{feedback: strings.Join(feedback, "\n")}
+		}
+		draft.Claims = supported
+		draft.Gaps = appendGroundingGaps(draft.Gaps, gapReasons)
+		if len(feedback) > 0 {
+			filtered := []domain.Citation{}
+			for _, citation := range citations {
+				keep := blocked[citation.FragmentID]
+				for _, claim := range supported {
+					keep = keep || claimCites(claim, citation.FragmentID)
+				}
+				if keep {
+					filtered = append(filtered, citation)
+				}
+			}
+			citations = filtered
+		}
+	}
+	for _, claim := range draft.Claims {
+		answer = append(answer, claim.Text)
+	}
 	observationText, observationGaps, err := validateObservations(t, draft)
 	if err != nil {
 		return err
 	}
 	answer = append(answer, observationText...)
 	draft.Gaps = append(draft.Gaps, observationGaps...)
+	draft.Gaps = boundedAnswerGaps(draft.Gaps)
 	t.Response.Conflicts = draft.Conflicts
 	t.Response.Citations = citations
 	t.Response.Observations = draft.Observations
+	t.Response.Claims = draft.Claims
 	if len(draft.Claims) == 0 && len(observationText) == 0 {
 		t.Response.Status = "UNRESOLVED"
 		if len(t.Docs) == 0 && t.NeedsContext {
@@ -414,6 +491,7 @@ func (q *QA) Answer(ctx context.Context, response domain.Response) (domain.Respo
 	if err != nil {
 		response.ModelUsage = state.Response.ModelUsage
 		response.EvidenceSelection = state.Response.EvidenceSelection
+		response.GroundingReviews = state.Response.GroundingReviews
 		response.ApplicabilityChecks = state.Response.ApplicabilityChecks
 		response.RetrievedFragmentIDs = state.Response.RetrievedFragmentIDs
 		response.KnowledgeToolCalls = state.Response.KnowledgeToolCalls

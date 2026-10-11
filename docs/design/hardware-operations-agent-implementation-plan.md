@@ -40,6 +40,7 @@
 | CCE-RAG-MULTIMODAL-ASSETS（03f） | 03d | 已完成（表格分类改写、图片视觉描述、专项评测） |
 | PHOENIX-EVALUATION-PLATFORM（03g） | 03f | 已完成（全量历史迁移及后续评测默认同步） |
 | MAIN-AGENT-RAG-TOOL（03h） | 03e | 已完成（主模型自主调用RAG工具；真实模型协议烟测通过） |
+| ONLINE-ANSWER-GROUNDING（03i） | 03h、WB-05 | done（在线原文支撑复核、公开HTTP/PostgreSQL/SSE回归、真实模型烟测与双轴审查通过） |
 | QA-03 | QA-02 | 已完成（缺口与代次、父章节扩展、冲突出处及建议阻断；REPLAY验收） |
 | QA-04 | QA-02 | 已完成（只读观测契约及问答工具；生产监控未联调） |
 | QA-05 | QA-01 | 已完成（设备指代、消息幂等、持久化SSE；PostgreSQL待联调） |

@@ -341,6 +341,26 @@ Go 单元测试与被测代码放在同一包目录，使用 `*_test.go`；跨�
 
 ## 4. 首期问答实现
 
+2026-10-11，03i 在线原文支撑复核接入现有 `validate`：LIVE 默认使用独立的无工具
+模型调用逐条检查结论，默认复用生成模型，可配置 `HWOPS_GROUNDING_ENDPOINT`、
+`HWOPS_GROUNDING_MODEL` 与对应密钥。返回 SUPPORTED / UNSUPPORTED / CONTRADICTED，
+SUPPORTED 必须覆盖完整结论并提供精确匹配原文行范围的摘录。其他已返回来源用于
+核对反证，不能替该结论未引用的证据补票；表格和图片派生描述仅作辅助。
+
+格式、引用及语义修正共用一次机会；修正后再次完整校验。仍无依据时仅保留通过且
+可独立成立的结论，返回 PARTIAL 或 UNRESOLVED；复核协议/服务失败、时间或调用
+预算耗尽不放行。复核不进入页面正文或思考，草稿继续按既有版本撤回；最终保存
+事务再核对引用修订仍发布以及设备快照。响应的 `grounding_reviews` 绑定结论与输入
+哈希、原文出处/哈希、逐条判定、实际 usage 和 trace，失败与重启保留。
+每次完成复核即通过 `GroundingRepository` 保存记录与累计用量，保持 RUNNING、
+归属、取消和删除限制，不等待最终答案。PDF 以原页身份及页内行号核对摘录；
+没有原文的视觉描述不能独立放行。复核上游超时单列 `GROUNDING_REVIEW_TIMEOUT`。
+证据工具调用后澄清必须用空 claims 与 gaps，避免 reply 字段绕过事实门禁。
+
+REPLAY 默认沿用协议与摘录回放，可显式注入外部复核模型验证门禁。所有模型复核
+仍是语义判断，默认同模型存在相关偏差，不能视为人工认证或全量质量验收。见
+[03i 工单](../../.scratch/hardware-operations-agent/issues/03i-online-answer-grounding.md)。
+
 ### 4.1 请求处理
 
 ```mermaid

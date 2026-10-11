@@ -26,6 +26,20 @@ import (
 )
 
 var ErrUnavailable = errors.New("model unavailable")
+var ErrUpstreamTimeout = errors.New("model upstream timed out")
+
+type invalidCompletion struct{ usage *schema.TokenUsage }
+
+func (*invalidCompletion) Error() string { return "invalid model completion" }
+
+// ReportedUsage recovers usage from a rejected but parseable provider envelope.
+func ReportedUsage(err error) *schema.TokenUsage {
+	var completion *invalidCompletion
+	if errors.As(err, &completion) {
+		return completion.usage
+	}
+	return nil
+}
 
 const userAgent = "hwops/1.0"
 
@@ -147,6 +161,8 @@ type OpenAI struct {
 
 var _ model.BaseChatModel = (*OpenAI)(nil)
 
+func (m *OpenAI) ModelName() string { return m.name }
+
 const (
 	maxModelAttempts = 2
 	defaultRetryWait = 100 * time.Millisecond
@@ -219,6 +235,9 @@ func (m *OpenAI) Generate(ctx context.Context, input []*schema.Message, opts ...
 					return nil, ctx.Err()
 				}
 			}
+			if status == http.StatusGatewayTimeout || status == http.StatusRequestTimeout {
+				return nil, errors.Join(ErrUnavailable, ErrUpstreamTimeout)
+			}
 			return nil, fmt.Errorf("%w: HTTP %d", ErrUnavailable, status)
 		}
 		raw, err := io.ReadAll(io.LimitReader(response.Body, 1024*1024+1))
@@ -231,7 +250,7 @@ func (m *OpenAI) Generate(ctx context.Context, input []*schema.Message, opts ...
 		}
 		out, err := decodeCompletion(raw)
 		if err != nil {
-			return nil, fmt.Errorf("%w: invalid response", ErrUnavailable)
+			return nil, errors.Join(ErrUnavailable, err)
 		}
 		if out.ResponseMeta != nil && out.ResponseMeta.Usage != nil {
 			usage := out.ResponseMeta.Usage
@@ -388,7 +407,7 @@ func decodeCompletion(raw []byte) (*schema.Message, error) {
 	}
 	if err := json.Unmarshal(raw, &result); err != nil || len(result.Choices) != 1 ||
 		(strings.TrimSpace(result.Choices[0].Message.Content) == "" && len(result.Choices[0].Message.ToolCalls) == 0) {
-		return nil, errors.New("invalid completion")
+		return nil, &invalidCompletion{usage: result.Usage}
 	}
 	out := schema.AssistantMessage(result.Choices[0].Message.Content, result.Choices[0].Message.ToolCalls)
 	out.ReasoningContent = result.Choices[0].Message.ReasoningContent

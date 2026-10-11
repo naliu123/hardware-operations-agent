@@ -44,10 +44,18 @@ func TestLiveMainAgentKnowledgeTool(t *testing.T) {
 			t.Fatalf("LIVE tool call lacks successful audit: %+v", call)
 		}
 	}
+	if len(answer.GroundingReviews) == 0 {
+		t.Fatal("LIVE answer bypassed the default semantic gate")
+	}
+	for _, review := range answer.GroundingReviews {
+		if review.Status != "VERIFIED" || review.Model != name || len(review.Claims) == 0 {
+			t.Fatalf("LIVE grounding incomplete: %+v", review)
+		}
+	}
 	original := request(t, s.Client(), "GET", s.URL+answer.Citations[0].URL, nil, http.StatusOK)
 	if original["content_hash"] != answer.Citations[0].ContentHash {
 		t.Fatal("LIVE answer citation differs from authoritative source")
 	}
-	t.Logf("LIVE model=%s status=%s knowledge_calls=%d model_calls=%d total_tokens=%d",
-		name, answer.Status, len(answer.KnowledgeToolCalls), answer.ModelUsage.Calls, answer.ModelUsage.TotalTokens)
+	t.Logf("LIVE model=%s status=%s knowledge_calls=%d model_calls=%d total_tokens=%d grounding_reviews=%d",
+		name, answer.Status, len(answer.KnowledgeToolCalls), answer.ModelUsage.Calls, answer.ModelUsage.TotalTokens, len(answer.GroundingReviews))
 }

@@ -64,6 +64,23 @@ func invokeOnePrivate(ctx context.Context, t *turn, tools map[string]tool.Invoka
 			if err = appendSource(&t.Response, *result.Source); err != nil {
 				return err
 			}
+			if result.Text != "" {
+				if hashGrounding([]byte(result.Text)) != result.Source.ContentSHA256 {
+					return ErrInvalidAnswer
+				}
+				start, end := result.Source.StartLine, result.Source.EndLine
+				if start == 0 && end == 0 && result.Source.Page > 0 {
+					start, end = 1, len(strings.Split(result.Text, "\n"))
+				}
+				if start < 1 || end < start {
+					return ErrInvalidAnswer
+				}
+				t.PrivateEvidence = append(t.PrivateEvidence, groundingEvidence{
+					ID: result.Source.SourceID, Title: result.Name, Content: result.Text,
+					ContentHash: result.Source.ContentSHA256,
+					StartLine:   start, EndLine: end,
+				})
+			}
 		}
 		mergeUsage(t, result.ModelUsage)
 	case RunPythonToolName:
@@ -85,6 +102,18 @@ func invokeOnePrivate(ctx context.Context, t *turn, tools map[string]tool.Invoka
 			}
 			if err = appendSource(&t.Response, *result.Source); err != nil {
 				return err
+			}
+			if !result.StdoutTruncated && !result.StderrTruncated {
+				content := result.Execution.Result.Stdout
+				if result.Execution.Result.Stderr != "" {
+					content += "\n" + result.Execution.Result.Stderr
+				}
+				artifactRaw, _ := json.Marshal(result.Execution.Result.Artifacts)
+				content += "\n执行产物：" + string(artifactRaw)
+				t.PrivateEvidence = append(t.PrivateEvidence, groundingEvidence{
+					ID: result.Source.SourceID, Title: "Python执行输出", Content: content,
+					ContentHash: hashGrounding([]byte(content)), StartLine: 1, EndLine: len(strings.Split(content, "\n")),
+				})
 			}
 		}
 	default:

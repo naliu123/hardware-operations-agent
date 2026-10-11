@@ -15,3 +15,17 @@ func (r *Response) CheckDeviceSnapshot(currentID string) {
 	r.Conflicts = nil
 	r.Gaps = []string{"生成期间设备快照已更新，请基于最新型号和版本重新提问。"}
 }
+
+// CheckKnowledgePublication is called inside the final response transaction.
+func (r *Response) CheckKnowledgePublication(published bool) {
+	if published || (r.Status != "ANSWERED" && r.Status != "PARTIAL") {
+		return
+	}
+	r.Status = "UNRESOLVED"
+	r.Answer = ""
+	r.Claims = []Claim{}
+	r.Citations = []Citation{}
+	r.Observations = nil
+	r.Conflicts = nil
+	r.Gaps = []string{"复核期间资料已撤回，请重新查询。"}
+}

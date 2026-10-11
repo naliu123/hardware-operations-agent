@@ -15,7 +15,10 @@ func (s *Store) HasCitedRevision(ctx context.Context, revisionID string) (bool, 
 	var exists bool
 	err := s.pool.QueryRow(ctx, `SELECT EXISTS(SELECT 1 FROM responses r
 		JOIN conversations c ON c.id=r.payload->>'conversation_id'
-		WHERE c.owner_id=$1 AND c.deleted_at IS NULL AND r.payload->'citations' @> $2::jsonb)`,
+		WHERE c.owner_id=$1 AND c.deleted_at IS NULL AND (
+			r.payload->'citations' @> $2::jsonb OR EXISTS (
+				SELECT 1 FROM jsonb_array_elements(COALESCE(r.payload->'grounding_reviews','[]'::jsonb)) review
+				WHERE review->'evidence' @> $2::jsonb)))`,
 		domain.Owner(ctx), fmt.Sprintf(`[{"revision_id":%q}]`, revisionID)).Scan(&exists)
 	return exists, err
 }

@@ -267,6 +267,11 @@ func (s *Store) SaveResponse(ctx context.Context, r domain.Response) error {
 }
 
 func saveResponse(st *state, r domain.Response) {
+	published := true
+	for _, citation := range r.Citations {
+		published = published && st.Revisions[citation.RevisionID].Status == "PUBLISHED"
+	}
+	r.CheckKnowledgePublication(published)
 	if r.DeviceContext != nil {
 		r.CheckDeviceSnapshot(st.Devices[r.DeviceContext.DeviceID].SnapshotID)
 	}

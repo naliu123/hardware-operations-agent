@@ -258,6 +258,7 @@ type Response struct {
 	RetrievedFragmentIDs []string               `json:"retrieved_fragment_ids,omitempty"`
 	ModelUsage           *ModelUsage            `json:"model_usage,omitempty"`
 	EvidenceSelection    *EvidenceSelection     `json:"evidence_selection,omitempty"`
+	GroundingReviews     []GroundingReview      `json:"grounding_reviews,omitempty"`
 	KnowledgeToolCalls   []KnowledgeToolCall    `json:"knowledge_tool_calls,omitempty"`
 	Conflicts            []KnowledgeConflict    `json:"conflicts,omitempty"`
 	Evidence             []Evidence             `json:"evidence,omitempty"`

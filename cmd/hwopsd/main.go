@@ -95,6 +95,17 @@ func run() error {
 	}
 	defer store.Close()
 	options := application.Options{UsersMode: authMode == "users"}
+	reviewEndpoint, reviewName, reviewKey := os.Getenv("HWOPS_GROUNDING_ENDPOINT"),
+		os.Getenv("HWOPS_GROUNDING_MODEL"), os.Getenv("HWOPS_GROUNDING_API_KEY")
+	if reviewEndpoint != "" || reviewName != "" || reviewKey != "" {
+		if reviewEndpoint == "" || reviewName == "" || mode != "LIVE" {
+			return errors.New("grounding model requires LIVE mode, HWOPS_GROUNDING_ENDPOINT and HWOPS_GROUNDING_MODEL")
+		}
+		options.GroundingModel, err = chatmodel.NewOpenAI(reviewEndpoint, reviewName, reviewKey)
+		if err != nil {
+			return errors.New("invalid grounding model endpoint or name")
+		}
+	}
 	if options.UsersMode {
 		options.ModelContextTokens, err = strconv.Atoi(env("HWOPS_MODEL_CONTEXT_TOKENS", "131072"))
 		if err != nil {

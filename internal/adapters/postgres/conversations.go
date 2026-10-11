@@ -220,6 +220,25 @@ func saveResponse(ctx context.Context, tx pgx.Tx, r *domain.Response) error {
 		}
 		r.CheckDeviceSnapshot(snapshotID)
 	}
+	if r.Status == "ANSWERED" || r.Status == "PARTIAL" {
+		seen := map[string]bool{}
+		for _, citation := range r.Citations {
+			if seen[citation.RevisionID] {
+				continue
+			}
+			seen[citation.RevisionID] = true
+			var status string
+			err = tx.QueryRow(ctx, "SELECT payload->>'status' FROM knowledge_revisions WHERE id=$1 FOR SHARE",
+				citation.RevisionID).Scan(&status)
+			if err != nil && !errors.Is(err, pgx.ErrNoRows) {
+				return err
+			}
+			if status != "PUBLISHED" {
+				r.CheckKnowledgePublication(false)
+				break
+			}
+		}
+	}
 	sequence, _, activeDraft, err := responseEventState(ctx, tx, r.ID)
 	if err != nil {
 		return err

@@ -28,6 +28,22 @@ runner、备份和恢复见[工作台部署说明](docs/workbench-development.md
 
 每次问答最多调用三次知识工具；大小写和空白归一化后的重复查询、未知工具或非法参数均明确失败。累计提供给主模型的证据 JSON 不超过 48 KiB，重复片段只返回已提供的 ID。响应的 `knowledge_tool_calls` 保存每次请求、状态、片段 ID、缺口和错误，失败后也保留。最终答案生成、原文与引用复核、设备快照更新检查由主 Agent 和业务层完成。
 
+在线 RAG 回答在 `LIVE` 模式默认增加原文支撑复核：独立的无工具模型调用逐条检查
+结论及其引用，支持原句与原始行范围须精确一致。格式、引用和语义修正共用一次
+机会；仍无支撑时仅保留可独立成立的正确部分并报告缺口，复核失败不发布答案。
+`REPLAY` 默认保持既有协议回放，不计为语义验证。
+
+默认复核模型复用生成模型。可同时设置 `HWOPS_GROUNDING_ENDPOINT`、
+`HWOPS_GROUNDING_MODEL`，以及需要时的 `HWOPS_GROUNDING_API_KEY`，使用不同复核模型；
+配置不完整或在非 LIVE 服务模式配置会直接报错。复核计入原有总时限和模型预算，
+不会进入页面正文/思考。`grounding_reviews` 保存逐条判定、支持原句、输入及证据哈希、
+实际用量与 trace。每次完成复核即持久化记录，修正期间停机也不会丢失已有复核。
+`GROUNDING_REVIEW_TIMEOUT` 表示上游复核超时；其他复核协议/服务故障为
+`GROUNDING_REVIEW_FAILED`。图片派生描述仅作辅助，文本门禁不能证明像素事实。
+
+复核依赖模型语义判断，默认同模型存在相关偏差；真实引用和精确摘录不等于绝对正确。
+本次协议与失败路径验收见 [03i 工单](.scratch/hardware-operations-agent/issues/03i-online-answer-grounding.md)。
+
 ## 本地运行
 
 需要 Go 1.25 以上，建议使用已验证的 Go 1.26.8。`scripts/go.sh` 优先使用 PATH 中的 Go；此工作区未安装系统 Go 时，使用 `.tools/go1.26.8/go`。依赖锁定在 `go.mod` 和 `go.sum`，缓存位于 `.cache/`。
